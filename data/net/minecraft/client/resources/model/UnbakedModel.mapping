@@ -41,3 +41,5 @@ CLASS net/minecraft/client/resources/model/UnbakedModel
 	CLASS Resolver
 		METHOD resolve (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
 			ARG 1 modelLocation
+		METHOD resolveForOverride (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
+			ARG 1 modelLocation

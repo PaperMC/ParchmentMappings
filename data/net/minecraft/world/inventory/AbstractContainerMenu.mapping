@@ -47,7 +47,7 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 player
 		ARG 2 container
 	METHOD clickMenuButton (Lnet/minecraft/world/entity/player/Player;I)Z
-		COMMENT Handles the given Button-click on the server, currently used by enchanting table, loom, lectern and stonecutter. Name is for legacy.
+		COMMENT Handles the given Button-click on the server, currently only used by enchanting. Name is for legacy.
 		ARG 1 player
 		ARG 2 id
 	METHOD clicked (IILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V
@@ -132,12 +132,17 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 slotId
 		ARG 2 stateId
 		ARG 3 stack
+	METHOD setRemoteCarried (Lnet/minecraft/network/HashedStack;)V
+		ARG 1 stack
 	METHOD setRemoteCarried (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 remoteCarried
 	METHOD setRemoteSlot (ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slot
 		ARG 2 stack
 	METHOD setRemoteSlotNoCopy (ILnet/minecraft/world/item/ItemStack;)V
+		ARG 1 slot
+		ARG 2 stack
+	METHOD setRemoteSlotUnsafe (ILnet/minecraft/network/HashedStack;)V
 		ARG 1 slot
 		ARG 2 stack
 	METHOD setSelectedBundleItemIndex (II)V

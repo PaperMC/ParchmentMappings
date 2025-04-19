@@ -27,6 +27,8 @@ CLASS net/minecraft/client/player/LocalPlayer
 	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
 		ARG 1 chatComponent
 		ARG 2 actionBar
+	METHOD distanceToUnitSquare (Lnet/minecraft/world/phys/Vec2;)F
+		ARG 0 moveVector
 	METHOD drop (Z)Z
 		ARG 1 fullStack
 	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
@@ -39,6 +41,8 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 1 partialTick
 	METHOD handleConfusionTransitionEffect (Z)V
 		ARG 1 useConfusion
+	METHOD handlePortalTransitionEffect (Z)V
+		ARG 1 inPortal
 	METHOD heal (F)V
 		COMMENT Heal living entity (param: amount of half-hearts)
 		ARG 1 healAmount
@@ -53,6 +57,10 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 0 voxelShape
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entityHit
+	METHOD modifyInput (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec2;
+		ARG 1 moveVector
+	METHOD modifyInputSpeedForSquareMovement (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec2;
+		ARG 0 moveVector
 	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 type
 		ARG 2 pos

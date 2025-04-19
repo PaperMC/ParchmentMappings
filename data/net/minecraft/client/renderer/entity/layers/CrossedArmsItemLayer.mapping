@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/renderer/entity/layers/CrossedArmsItemLayer
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/renderer/ItemInHandRenderer;)V
+		ARG 1 renderer
+		ARG 2 itemInHandRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/renderer/entity/ItemRenderer;)V
 		ARG 1 renderer
 		ARG 2 itemRenderer

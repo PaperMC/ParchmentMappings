@@ -10,6 +10,9 @@ CLASS net/minecraft/nbt/NbtUtils
 		ARG 2 compareListTag
 	METHOD createUUID (Ljava/util/UUID;)Lnet/minecraft/nbt/IntArrayTag;
 		ARG 0 uuid
+	METHOD getDataVersion (Lcom/mojang/serialization/Dynamic;I)I
+		ARG 0 tag
+		ARG 1 defaultValue
 	METHOD getDataVersion (Lnet/minecraft/nbt/CompoundTag;I)I
 		ARG 0 tag
 		ARG 1 defaultValue
@@ -89,3 +92,5 @@ CLASS net/minecraft/nbt/NbtUtils
 		ARG 0 state
 	METHOD writeFluidState (Lnet/minecraft/world/level/material/FluidState;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 state
+	METHOD writeVec3i (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/nbt/Tag;
+		ARG 0 vector

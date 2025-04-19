@@ -33,6 +33,9 @@ CLASS net/minecraft/commands/arguments/item/ItemPredicateArgument
 			ARG 0 reader
 			ARG 1 id
 			ARG 2 componentType
+		METHOD decode (Lcom/mojang/brigadier/ImmutableStringReader;Lcom/mojang/serialization/Dynamic;)Ljava/util/function/Predicate;
+			ARG 1 reader
+			ARG 2 data
 		METHOD decode (Lcom/mojang/brigadier/ImmutableStringReader;Lnet/minecraft/resources/RegistryOps;Lnet/minecraft/nbt/Tag;)Ljava/util/function/Predicate;
 			ARG 1 reader
 			ARG 2 ops
@@ -40,6 +43,9 @@ CLASS net/minecraft/commands/arguments/item/ItemPredicateArgument
 	CLASS PredicateWrapper
 		METHOD <init> (Lnet/minecraft/core/Holder$Reference;)V
 			ARG 1 predicate
+		METHOD decode (Lcom/mojang/brigadier/ImmutableStringReader;Lcom/mojang/serialization/Dynamic;)Ljava/util/function/Predicate;
+			ARG 1 reader
+			ARG 2 data
 		METHOD decode (Lcom/mojang/brigadier/ImmutableStringReader;Lnet/minecraft/resources/RegistryOps;Lnet/minecraft/nbt/Tag;)Ljava/util/function/Predicate;
 			ARG 1 reader
 			ARG 2 ops

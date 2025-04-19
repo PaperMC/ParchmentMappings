@@ -127,16 +127,52 @@ CLASS net/minecraft/Util
 	METHOD getRegisteredName (Lnet/minecraft/core/Registry;Ljava/lang/Object;)Ljava/lang/String;
 		ARG 0 registry
 		ARG 1 value
+	METHOD growByHalf (II)I
+		ARG 0 value
+		ARG 1 minValue
 	METHOD ifElse (Ljava/util/Optional;Ljava/util/function/Consumer;Ljava/lang/Runnable;)Ljava/util/Optional;
-		ARG 0 opt
-		ARG 1 consumer
-		ARG 2 orElse
+		ARG 0 optional
+		ARG 1 ifPresent
+		ARG 2 ifEmpty
 	METHOD isSymmetrical (IILjava/util/List;)Z
 		ARG 0 width
 		ARG 1 height
 		ARG 2 list
+	METHOD lambda$allOf$10 ([Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 1 input
+	METHOD lambda$allOf$5 (Ljava/lang/Object;)Z
+		ARG 0 input
+	METHOD lambda$allOf$6 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 2 input
+	METHOD lambda$allOf$7 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 3 input
+	METHOD lambda$allOf$8 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 4 input
+	METHOD lambda$allOf$9 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 5 input
+	METHOD lambda$anyOf$12 (Ljava/lang/Object;)Z
+		ARG 0 input
+	METHOD lambda$anyOf$13 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 2 input
+	METHOD lambda$anyOf$14 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 3 input
+	METHOD lambda$anyOf$15 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 4 input
+	METHOD lambda$anyOf$16 (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 5 input
+	METHOD lambda$anyOf$17 ([Ljava/util/function/Predicate;Ljava/lang/Object;)Z
+		ARG 1 input
+	METHOD lambda$fallibleSequence$23 (Ljava/util/function/Consumer;Ljava/util/List;ILjava/lang/Object;Ljava/lang/Throwable;)V
+		ARG 3 result
+		ARG 4 throwable
+	METHOD lambda$fallibleSequence$24 (Ljava/util/List;[Ljava/util/concurrent/CompletableFuture;Ljava/util/function/Consumer;Ljava/util/concurrent/CompletableFuture;)V
+		ARG 3 future
 	METHOD lambda$getVmArguments$19 (Ljava/lang/String;)Z
 		ARG 0 argument
+	METHOD lambda$makeIoExecutor$4 (Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;ZLjava/lang/Runnable;)Ljava/lang/Thread;
+		ARG 3 task
+	METHOD lambda$static$0 (Ljava/nio/file/spi/FileSystemProvider;)Z
+		ARG 0 provider
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V
@@ -155,11 +191,25 @@ CLASS net/minecraft/Util
 	METHOD makeEnumMap (Ljava/lang/Class;Ljava/util/function/Function;)Ljava/util/EnumMap;
 		ARG 0 enumClass
 		ARG 1 valueGetter
+	METHOD makeEnumMap (Ljava/lang/Class;Ljava/util/function/Function;)Ljava/util/Map;
+		ARG 0 enumClass
+		ARG 1 valueGetter
+	METHOD makeExecutor (Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
+		ARG 0 serviceName
 	METHOD makeExecutor (Ljava/lang/String;)Lnet/minecraft/TracingExecutor;
 		ARG 0 name
+	METHOD makeIoExecutor (Ljava/lang/String;Z)Ljava/util/concurrent/ExecutorService;
+		ARG 0 name
+		ARG 1 daemon
 	METHOD makeIoExecutor (Ljava/lang/String;Z)Lnet/minecraft/TracingExecutor;
 		ARG 0 name
 		ARG 1 daemon
+	METHOD mapValues (Ljava/util/Map;Ljava/util/function/Function;)Ljava/util/Map;
+		ARG 0 map
+		ARG 1 mapper
+	METHOD mapValuesLazy (Ljava/util/Map;Lcom/google/common/base/Function;)Ljava/util/Map;
+		ARG 0 map
+		ARG 1 mapper
 	METHOD memoize (Ljava/util/function/BiFunction;)Ljava/util/function/BiFunction;
 		ARG 0 memoBiFunction
 	METHOD memoize (Ljava/util/function/Function;)Ljava/util/function/Function;
@@ -228,6 +278,8 @@ CLASS net/minecraft/Util
 	METHOD shuffledCopy ([Ljava/lang/Object;Lnet/minecraft/util/RandomSource;)Ljava/util/List;
 		ARG 0 array
 		ARG 1 random
+	METHOD shutdownExecutor (Ljava/util/concurrent/ExecutorService;)V
+		ARG 0 service
 	METHOD singleKeyCache (Ljava/util/function/Function;)Lnet/minecraft/util/SingleKeyCache;
 		ARG 0 computeValue
 	METHOD throwAsRuntime (Ljava/lang/Throwable;)V
@@ -238,6 +290,12 @@ CLASS net/minecraft/Util
 	METHOD toShuffledList (Ljava/util/stream/Stream;Lnet/minecraft/util/RandomSource;)Ljava/util/List;
 		ARG 0 stream
 		ARG 1 random
+	METHOD wrapThreadWithTaskName (Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Runnable;
+		ARG 0 name
+		ARG 1 task
+	METHOD wrapThreadWithTaskName (Ljava/lang/String;Ljava/util/function/Supplier;)Ljava/util/function/Supplier;
+		ARG 0 name
+		ARG 1 task
 	METHOD writeAndReadTypedOrThrow (Lcom/mojang/datafixers/Typed;Lcom/mojang/datafixers/types/Type;Ljava/util/function/UnaryOperator;)Lcom/mojang/datafixers/Typed;
 		ARG 0 typed
 		ARG 1 type

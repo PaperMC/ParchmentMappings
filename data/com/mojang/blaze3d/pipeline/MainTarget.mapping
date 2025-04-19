@@ -5,7 +5,11 @@ CLASS com/mojang/blaze3d/pipeline/MainTarget
 	METHOD allocateAttachments (II)Lcom/mojang/blaze3d/pipeline/MainTarget$Dimension;
 		ARG 1 width
 		ARG 2 height
+	METHOD allocateColorAttachment (Lcom/mojang/blaze3d/pipeline/MainTarget$Dimension;)Lcom/mojang/blaze3d/textures/GpuTexture;
+		ARG 1 dimension
 	METHOD allocateColorAttachment (Lcom/mojang/blaze3d/pipeline/MainTarget$Dimension;)Z
+		ARG 1 dimension
+	METHOD allocateDepthAttachment (Lcom/mojang/blaze3d/pipeline/MainTarget$Dimension;)Lcom/mojang/blaze3d/textures/GpuTexture;
 		ARG 1 dimension
 	METHOD allocateDepthAttachment (Lcom/mojang/blaze3d/pipeline/MainTarget$Dimension;)Z
 		ARG 1 dimension

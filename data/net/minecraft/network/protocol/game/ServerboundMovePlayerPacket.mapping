@@ -1,4 +1,13 @@
 CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
+	METHOD <init> (DDDFFZZZ)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
+		ARG 9 onGround
+		ARG 10 hasPos
+		ARG 11 hasRot
 	METHOD <init> (DDDFFZZZZ)V
 		ARG 1 x
 		ARG 3 y
@@ -30,18 +39,31 @@ CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
 	METHOD unpackOnGround (I)Z
 		ARG 0 flags
 	CLASS Pos
+		METHOD <init> (DDDZ)V
+			ARG 1 x
+			ARG 3 y
+			ARG 5 z
+			ARG 7 onGround
 		METHOD <init> (DDDZZ)V
 			ARG 1 x
 			ARG 3 y
 			ARG 5 z
 			ARG 7 onGround
 			ARG 8 horizontalCollision
+		METHOD <init> (Lnet/minecraft/world/phys/Vec3;ZZ)V
+			ARG 1 pos
+			ARG 2 onGround
+			ARG 3 horizonralCollision
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$Pos;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
 	CLASS Rot
+		METHOD <init> (FFZ)V
+			ARG 1 yRot
+			ARG 2 xRot
+			ARG 3 onGround
 		METHOD <init> (FFZZ)V
 			ARG 1 yRot
 			ARG 2 xRot
@@ -53,6 +75,13 @@ CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
 	CLASS PosRot
+		METHOD <init> (DDDFFZ)V
+			ARG 1 x
+			ARG 3 y
+			ARG 5 z
+			ARG 7 yRot
+			ARG 8 xRot
+			ARG 9 onGround
 		METHOD <init> (DDDFFZZ)V
 			ARG 1 x
 			ARG 3 y
@@ -61,12 +90,20 @@ CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
 			ARG 8 xRot
 			ARG 9 onGround
 			ARG 10 horizontalCollision
+		METHOD <init> (Lnet/minecraft/world/phys/Vec3;FFZZ)V
+			ARG 1 pos
+			ARG 2 yRot
+			ARG 3 xRot
+			ARG 4 onGround
+			ARG 5 horizontalCollision
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$PosRot;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
 	CLASS StatusOnly
+		METHOD <init> (Z)V
+			ARG 1 onGround
 		METHOD <init> (ZZ)V
 			ARG 1 onGround
 			ARG 2 horizontalCollision

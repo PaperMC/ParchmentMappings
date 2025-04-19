@@ -1,6 +1,9 @@
 CLASS net/minecraft/world/entity/player/Inventory
 	METHOD <init> (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
+	METHOD <init> (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/EntityEquipment;)V
+		ARG 1 player
+		ARG 2 equipment
 	METHOD add (ILnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Adds the stack to the specified slot in the player's inventory. Returns {@code false} if it's not possible to place the entire stack in the inventory.
 		ARG 1 slot
@@ -31,6 +34,8 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 slot
 	METHOD dropAll ()V
 		COMMENT Drop all armor and main inventory items.
+	METHOD fillStackedContents (Lnet/minecraft/world/entity/player/StackedContents;)V
+		ARG 1 stackedContent
 	METHOD fillStackedContents (Lnet/minecraft/world/entity/player/StackedItemContents;)V
 		ARG 1 contents
 	METHOD findSlotMatchingCraftingIngredient (Lnet/minecraft/core/Holder;)I
@@ -40,6 +45,8 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 2 stack
 	METHOD findSlotMatchingItem (Lnet/minecraft/world/item/ItemStack;)I
 		COMMENT Finds the stack or an equivalent one in the main inventory
+		ARG 1 stack
+	METHOD findSlotMatchingUnusedItem (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 stack
 	METHOD getArmor (I)Lnet/minecraft/world/item/ItemStack;
 		COMMENT @return a player armor item (as an {@code ItemStack}) contained in specified armor slot
@@ -105,8 +112,15 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 stack
 	METHOD setSelectedHotbarSlot (I)V
 		ARG 1 selectedHotbarSlot
+	METHOD setSelectedItem (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 stack
+	METHOD setSelectedSlot (I)V
+		ARG 1 slot
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
 		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player
+	METHOD swapPaint (D)V
+		COMMENT Change the selected item in the hotbar after a mouse scroll. Select the slot to the left if {@code direction} is positive, or to the right if negative.
+		ARG 1 direction
 	METHOD tick ()V
 		COMMENT Ticks every item in inventory. Used for animations. Is called on client and server.

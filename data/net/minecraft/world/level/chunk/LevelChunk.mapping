@@ -35,10 +35,16 @@ CLASS net/minecraft/world/level/chunk/LevelChunk
 		ARG 3 z
 	METHOD isTicking (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
+	METHOD lambda$clearAllBlockEntities$4 (Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;)V
+		ARG 0 blockEntityWrapper
 	METHOD lambda$clearAllBlockEntities$5 (Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;)V
 		ARG 0 ticker
+	METHOD lambda$getListenerRegistry$0 (Lnet/minecraft/server/level/ServerLevel;II)Lnet/minecraft/world/level/gameevent/GameEventListenerRegistry;
+		ARG 3 key
 	METHOD lambda$new$0 (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 0 chunkPos
+	METHOD lambda$registerAllBlockEntitiesAfterLevelLoad$5 (Lnet/minecraft/world/level/block/entity/BlockEntity;)V
+		ARG 1 blockEntity
 	METHOD lambda$registerAllBlockEntitiesAfterLevelLoad$6 (Lnet/minecraft/world/level/block/entity/BlockEntity;)V
 		ARG 1 blockEntity
 	METHOD lambda$replaceWithPacketData$3 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/nbt/CompoundTag;)V
@@ -71,6 +77,10 @@ CLASS net/minecraft/world/level/chunk/LevelChunk
 		ARG 1 sectionY
 	METHOD replaceBiomes (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
+	METHOD replaceWithPacketData (Lnet/minecraft/network/FriendlyByteBuf;Ljava/util/Map;Ljava/util/function/Consumer;)V
+		ARG 1 buffer
+		ARG 2 heightmaps
+		ARG 3 outputTagConsumer
 	METHOD replaceWithPacketData (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/nbt/CompoundTag;Ljava/util/function/Consumer;)V
 		ARG 1 buffer
 		ARG 2 tag

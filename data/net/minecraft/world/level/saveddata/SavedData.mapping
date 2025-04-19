@@ -1,6 +1,9 @@
 CLASS net/minecraft/world/level/saveddata/SavedData
 	METHOD isDirty ()Z
 		COMMENT Whether this {@code SavedData} needs saving to disk.
+	METHOD save (Ljava/io/File;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 file
+		ARG 2 registries
 	METHOD save (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 registries
 	METHOD save (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
@@ -11,3 +14,6 @@ CLASS net/minecraft/world/level/saveddata/SavedData
 	METHOD setDirty (Z)V
 		COMMENT Sets the dirty state of this {@code SavedData}, whether it needs saving to disk.
 		ARG 1 dirty
+	CLASS Context
+		METHOD <init> (Lnet/minecraft/server/level/ServerLevel;)V
+			ARG 1 level

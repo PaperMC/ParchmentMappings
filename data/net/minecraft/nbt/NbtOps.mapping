@@ -97,6 +97,15 @@ CLASS net/minecraft/nbt/NbtOps
 			ARG 1 value
 		METHOD <init> ([J)V
 			ARG 1 values
+	CLASS GenericListCollector
+		METHOD <init> (Lit/unimi/dsi/fastutil/bytes/ByteArrayList;)V
+			ARG 1 list
+		METHOD <init> (Lit/unimi/dsi/fastutil/ints/IntArrayList;)V
+			ARG 1 list
+		METHOD <init> (Lit/unimi/dsi/fastutil/longs/LongArrayList;)V
+			ARG 1 list
+		METHOD <init> (Lnet/minecraft/nbt/ListTag;)V
+			ARG 1 list
 	CLASS HomogenousListCollector
 		METHOD <init> (Lnet/minecraft/nbt/ListTag;)V
 			ARG 1 values

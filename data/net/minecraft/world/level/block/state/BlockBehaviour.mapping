@@ -5,6 +5,11 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		COMMENT Whether this blocks receives random ticks
 	METHOD <init> (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 		ARG 1 properties
+	METHOD affectNeighborsAfterRemoval (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Z)V
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 movedByPiston
 	METHOD attack (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 state
 		ARG 2 level
@@ -25,6 +30,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 entity
+	METHOD entityInside (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/InsideBlockEffectApplier;)V
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 entity
+		ARG 5 effectApplier
 	METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
 		COMMENT Returns the analog signal this block emits. This is the signal a comparator can read from it.
 		ARG 1 state
@@ -67,6 +78,11 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 	METHOD getDrops (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/storage/loot/LootParams$Builder;)Ljava/util/List;
 		ARG 1 state
 		ARG 2 params
+	METHOD getEntityInsideCollisionShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 entity
 	METHOD getEntityInsideCollisionShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 1 state
 		ARG 2 level
@@ -79,12 +95,20 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 3 pos
 	METHOD getLightBlock (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 1 state
+	METHOD getLightBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
 	METHOD getMenuProvider (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/MenuProvider;
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
 	METHOD getOcclusionShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 1 state
+	METHOD getOcclusionShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
 	METHOD getRenderShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;
 		COMMENT The type of render function called. MODEL for mixed tesr and static model, MODELBLOCK_ANIMATED for TESR-only, LIQUID for vanilla liquids, INVISIBLE to skip all rendering
 		ARG 1 state
@@ -124,6 +148,10 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
+	METHOD isOcclusionShapeFullBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
 	METHOD isPathfindable (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/pathfinder/PathComputationType;)Z
 		ARG 1 state
 		ARG 2 pathComputationType
@@ -140,6 +168,13 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		COMMENT Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed blockstate.
 		ARG 1 state
 		ARG 2 mirror
+	METHOD neighborChanged (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 neighborBlock
+		ARG 5 neighborPos
+		ARG 6 movedByPiston
 	METHOD neighborChanged (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/redstone/Orientation;Z)V
 		ARG 1 state
 		ARG 2 level
@@ -148,6 +183,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 5 orientation
 		ARG 6 movedByPiston
 	METHOD onExplosionHit (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;Ljava/util/function/BiConsumer;)V
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 explosion
+		ARG 5 dropConsumer
+	METHOD onExplosionHit (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;Ljava/util/function/BiConsumer;)V
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
@@ -172,6 +213,10 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 5 movedByPiston
 	METHOD propagatesSkylightDown (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	METHOD propagatesSkylightDown (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
 	METHOD randomTick (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V
 		COMMENT Performs a random tick on a block.
 		ARG 1 state
@@ -221,6 +266,16 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 3 pos
 		ARG 4 flags
 		ARG 5 recursionLeft
+	METHOD updateShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+		COMMENT Update the provided state given the provided neighbor direction and neighbor state, returning a new state.
+		COMMENT For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately returns its solidified counterpart.
+		COMMENT Note that this method should ideally consider only the specific direction passed in.
+		ARG 1 state
+		ARG 2 direction
+		ARG 3 neighborState
+		ARG 4 level
+		ARG 5 pos
+		ARG 6 neighborPos
 	METHOD updateShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/world/level/ScheduledTickAccess;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 level
@@ -231,6 +286,14 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 7 neighborState
 		ARG 8 random
 	METHOD useItemOn (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;
+		ARG 1 stack
+		ARG 2 state
+		ARG 3 level
+		ARG 4 pos
+		ARG 5 player
+		ARG 6 hand
+		ARG 7 hitResult
+	METHOD useItemOn (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/ItemInteractionResult;
 		ARG 1 stack
 		ARG 2 state
 		ARG 3 level
@@ -253,6 +316,8 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			COMMENT If it blocks vision on the client side.
 		METHOD destroyTime (F)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 destroyTime
+		METHOD dropsLike (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+			ARG 1 block
 		METHOD emissiveRendering (Lnet/minecraft/world/level/block/state/BlockBehaviour$StatePredicate;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 emissiveRendering
 		METHOD explosionResistance (F)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
@@ -286,6 +351,14 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 0 key
 		METHOD lambda$new$4 (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/String;
 			ARG 0 key
+		METHOD lambda$new$4 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+			ARG 0 state
+			ARG 1 level
+			ARG 2 pos
+		METHOD lambda$new$5 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+			ARG 0 state
+			ARG 1 level
+			ARG 2 pos
 		METHOD lambda$new$5 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/EntityType;)Z
 			ARG 0 state
 			ARG 1 level
@@ -351,6 +424,10 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 1 owner
 			ARG 2 values
 			ARG 3 propertiesCodec
+		METHOD affectNeighborsAfterRemoval (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Z)V
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 movedByPiston
 		METHOD attack (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)V
 			ARG 1 level
 			ARG 2 pos
@@ -379,6 +456,11 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 1 level
 			ARG 2 pos
 			ARG 3 entity
+		METHOD entityInside (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/InsideBlockEffectApplier;)V
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 entity
+			ARG 4 effectApplier
 		METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
 			ARG 1 level
 			ARG 2 pos
@@ -412,12 +494,23 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 3 direction
 		METHOD getDrops (Lnet/minecraft/world/level/storage/loot/LootParams$Builder;)Ljava/util/List;
 			ARG 1 lootParams
+		METHOD getEntityInsideCollisionShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 entity
 		METHOD getEntityInsideCollisionShape (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 			ARG 1 level
 			ARG 2 pos
 		METHOD getFaceOcclusionShape (Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 			ARG 1 face
+		METHOD getFaceOcclusionShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 direction
 		METHOD getInteractionShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+			ARG 1 level
+			ARG 2 pos
+		METHOD getLightBlock (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I
 			ARG 1 level
 			ARG 2 pos
 		METHOD getMapColor (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/material/MapColor;
@@ -426,8 +519,14 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		METHOD getMenuProvider (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/MenuProvider;
 			ARG 1 level
 			ARG 2 pos
+		METHOD getOcclusionShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+			ARG 1 level
+			ARG 2 pos
 		METHOD getOffset (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
 			ARG 1 pos
+		METHOD getOffset (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
+			ARG 1 level
+			ARG 2 pos
 		METHOD getSeed (Lnet/minecraft/core/BlockPos;)J
 			ARG 1 pos
 		METHOD getShadeBrightness (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)F
@@ -451,6 +550,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 1 level
 			ARG 2 pos
 			ARG 3 context
+		METHOD handleNeighborChanged (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 block
+			ARG 4 fromPos
+			ARG 5 isMoving
 		METHOD handleNeighborChanged (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/redstone/Orientation;Z)V
 			ARG 1 level
 			ARG 2 pos
@@ -490,6 +595,9 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		METHOD isRedstoneConductor (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 level
 			ARG 2 pos
+		METHOD isSolidRender (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+			ARG 1 level
+			ARG 2 pos
 		METHOD isSuffocating (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 level
 			ARG 2 pos
@@ -512,6 +620,11 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 2 pos
 			ARG 3 explosion
 			ARG 4 dropConsumer
+		METHOD onExplosionHit (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;Ljava/util/function/BiConsumer;)V
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 explosion
+			ARG 4 dropConsumer
 		METHOD onPlace (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V
 			ARG 1 level
 			ARG 2 pos
@@ -527,6 +640,9 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 2 pos
 			ARG 3 newState
 			ARG 4 movedByPiston
+		METHOD propagatesSkylightDown (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+			ARG 1 level
+			ARG 2 pos
 		METHOD randomTick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V
 			ARG 1 level
 			ARG 2 pos
@@ -569,6 +685,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 2 pos
 			ARG 3 flags
 			ARG 4 recursionLeft
+		METHOD updateShape (Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+			ARG 1 direction
+			ARG 2 neighborState
+			ARG 3 level
+			ARG 4 pos
+			ARG 5 neighborPos
 		METHOD updateShape (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/world/level/ScheduledTickAccess;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/state/BlockState;
 			ARG 1 level
 			ARG 2 scheduledTickAccess
@@ -578,6 +700,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 6 neighborState
 			ARG 7 random
 		METHOD useItemOn (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;
+			ARG 1 stack
+			ARG 2 level
+			ARG 3 player
+			ARG 4 hand
+			ARG 5 hitResult
+		METHOD useItemOn (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/ItemInteractionResult;
 			ARG 1 stack
 			ARG 2 level
 			ARG 3 player
@@ -602,6 +730,10 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		METHOD evaluate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
 			ARG 1 state
 			ARG 2 pos
+		METHOD evaluate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
+			ARG 1 state
+			ARG 2 level
+			ARG 3 pos
 	CLASS StatePredicate
 		METHOD test (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 state

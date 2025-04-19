@@ -84,9 +84,14 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 3 numberOfItems
 			ARG 4 maxUses
 			ARG 5 villagerXp
+		METHOD lambda$getOffer$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/util/RandomSource;Lnet/minecraft/resources/ResourceKey;)V
+			ARG 4 key
 	CLASS TypeSpecificTrade
 		METHOD <init> (Ljava/util/Map;)V
 			ARG 1 trades
+		METHOD oneTradeInBiomes (Lnet/minecraft/world/entity/npc/VillagerTrades$ItemListing;[Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/entity/npc/VillagerTrades$TypeSpecificTrade;
+			ARG 0 listing
+			ARG 1 villagerTypes
 		METHOD oneTradeInBiomes (Lnet/minecraft/world/entity/npc/VillagerTrades$ItemListing;[Lnet/minecraft/world/entity/npc/VillagerType;)Lnet/minecraft/world/entity/npc/VillagerTrades$TypeSpecificTrade;
 			ARG 0 listing
 			ARG 1 types
@@ -155,6 +160,8 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 7 villagerXp
 			ARG 8 priceMultiplier
 			ARG 9 enchantmentProvider
+		METHOD lambda$getOffer$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/util/RandomSource;Lnet/minecraft/resources/ResourceKey;)V
+			ARG 4 key
 	CLASS EnchantedItemForEmeralds
 		METHOD <init> (Lnet/minecraft/world/item/Item;III)V
 			ARG 1 item
@@ -182,8 +189,12 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 2 maxUses
 			ARG 3 villagerXp
 			ARG 4 trades
+		METHOD lambda$new$0 (Ljava/util/Map;Lnet/minecraft/resources/ResourceKey;)Z
+			ARG 1 key
 		METHOD lambda$new$0 (Ljava/util/Map;Lnet/minecraft/world/entity/npc/VillagerType;)Z
 			ARG 1 type
+		METHOD lambda$new$1 (Lnet/minecraft/resources/ResourceKey;)V
+			ARG 0 key
 		METHOD lambda$new$1 (Lnet/minecraft/world/entity/npc/VillagerType;)V
 			ARG 0 type
 	CLASS TippedArrowForItemsAndEmeralds
@@ -197,3 +208,5 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 5 emeraldCost
 			ARG 6 maxUses
 			ARG 7 villagerXp
+		METHOD lambda$getOffer$0 (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/Holder$Reference;)Z
+			ARG 1 potion

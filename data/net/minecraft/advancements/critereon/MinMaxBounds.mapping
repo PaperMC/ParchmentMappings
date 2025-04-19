@@ -2,6 +2,9 @@ CLASS net/minecraft/advancements/critereon/MinMaxBounds
 	METHOD createCodec (Lcom/mojang/serialization/Codec;Lnet/minecraft/advancements/critereon/MinMaxBounds$BoundsFactory;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
 		ARG 1 boundsFactory
+	METHOD createStreamCodec (Lnet/minecraft/network/codec/StreamCodec;Lnet/minecraft/advancements/critereon/MinMaxBounds$BoundsFactory;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 streamCodec
+		ARG 1 boundsFactory
 	METHOD fromReader (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/advancements/critereon/MinMaxBounds$BoundsFromReaderFactory;Ljava/util/function/Function;Ljava/util/function/Supplier;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/MinMaxBounds;
 		ARG 0 reader
 		ARG 1 boundedFactory
@@ -24,6 +27,11 @@ CLASS net/minecraft/advancements/critereon/MinMaxBounds
 		ARG 0 reader
 		ARG 1 stringToValueFunction
 		ARG 2 commandExceptionSupplier
+	CLASS 1
+		METHOD lambda$encode$0 (Lnet/minecraft/network/codec/StreamCodec;Lio/netty/buffer/ByteBuf;Ljava/lang/Number;)V
+			ARG 2 min
+		METHOD lambda$encode$1 (Lnet/minecraft/network/codec/StreamCodec;Lio/netty/buffer/ByteBuf;Ljava/lang/Number;)V
+			ARG 2 max
 	CLASS Ints
 		METHOD <init> (Ljava/util/Optional;Ljava/util/Optional;)V
 			ARG 1 min
@@ -80,6 +88,8 @@ CLASS net/minecraft/advancements/critereon/MinMaxBounds
 		METHOD fromReader (Lcom/mojang/brigadier/StringReader;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/MinMaxBounds$Doubles;
 			ARG 0 reader
 			ARG 1 formatter
+		METHOD lambda$fromReader$1 (Ljava/lang/Double;)Ljava/lang/Double;
+			ARG 0 value
 		METHOD lambda$squareOpt$0 (Ljava/lang/Double;)Ljava/lang/Double;
 			ARG 0 val
 		METHOD matches (D)Z

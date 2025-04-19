@@ -32,6 +32,8 @@ CLASS net/minecraft/world/entity/animal/horse/Llama
 		ARG 1 random
 	METHOD setStrength (I)V
 		ARG 1 strength
+	METHOD setVariant (Lnet/minecraft/world/entity/animal/horse/Llama$Variant;)V
+		ARG 1 variant
 	METHOD spit (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 target
 	CLASS Variant

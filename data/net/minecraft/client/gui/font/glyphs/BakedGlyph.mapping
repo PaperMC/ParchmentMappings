@@ -68,6 +68,16 @@ CLASS net/minecraft/client/gui/font/glyphs/BakedGlyph
 	METHOD renderType (Lnet/minecraft/client/gui/Font$DisplayMode;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 1 displayMode
 	CLASS Effect
+		METHOD <init> (FFFFFFFFF)V
+			ARG 1 x0
+			ARG 2 y0
+			ARG 3 x1
+			ARG 4 y1
+			ARG 5 depth
+			ARG 6 r
+			ARG 7 g
+			ARG 8 b
+			ARG 9 a
 		METHOD <init> (FFFFFI)V
 			ARG 1 x0
 			ARG 2 y0

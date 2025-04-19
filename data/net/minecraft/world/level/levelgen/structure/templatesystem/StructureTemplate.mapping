@@ -52,6 +52,8 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 	METHOD getBoundingBox (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		ARG 1 settings
 		ARG 2 startPos
+	METHOD getDefaultJointType (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/JigsawBlockEntity$JointType;
+		ARG 0 state
 	METHOD getJigsaws (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;)Ljava/util/List;
 		ARG 1 pos
 		ARG 2 rotation

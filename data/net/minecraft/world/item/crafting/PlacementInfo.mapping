@@ -15,5 +15,13 @@ CLASS net/minecraft/world/item/crafting/PlacementInfo
 		ARG 0 ingredient
 	METHOD createFromOptionals (Ljava/util/List;)Lnet/minecraft/world/item/crafting/PlacementInfo;
 		ARG 0 optionals
+	METHOD createPossibleItems (Lnet/minecraft/world/item/crafting/Ingredient;)Ljava/util/List;
+		ARG 0 ingredient
+	METHOD createStackedContents (Ljava/util/List;)Lnet/minecraft/world/entity/player/StackedContents$IngredientInfo;
+		ARG 0 items
 	METHOD ingredientToContents (Lnet/minecraft/world/item/crafting/Ingredient;)Lnet/minecraft/world/entity/player/StackedContents$IngredientInfo;
 		ARG 0 ingredient
+	CLASS SlotInfo
+		METHOD <init> (Ljava/util/List;I)V
+			ARG 1 possibleItems
+			ARG 2 placerOutputPosition

@@ -12,6 +12,9 @@ CLASS net/minecraft/world/level/chunk/ChunkAccess
 	METHOD addPackedPostProcess (Lit/unimi/dsi/fastutil/shorts/ShortList;I)V
 		ARG 1 offsets
 		ARG 2 index
+	METHOD addPackedPostProcess (SI)V
+		ARG 1 packedPosition
+		ARG 2 index
 	METHOD carverBiome (Ljava/util/function/Supplier;)Lnet/minecraft/world/level/biome/BiomeGenerationSettings;
 		ARG 1 caverBiomeSettingsSupplier
 	METHOD fillBiomesFromNoise (Lnet/minecraft/world/level/biome/BiomeResolver;Lnet/minecraft/world/level/biome/Climate$Sampler;)V
@@ -66,10 +69,19 @@ CLASS net/minecraft/world/level/chunk/ChunkAccess
 		ARG 1 sections
 	METHOD setAllStarts (Ljava/util/Map;)V
 		ARG 1 structureStarts
+	METHOD setBlendingData (Lnet/minecraft/world/level/levelgen/blending/BlendingData;)V
+		ARG 1 blendingData
 	METHOD setBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;)V
 		ARG 1 blockEntity
 	METHOD setBlockEntityNbt (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 tag
+	METHOD setBlockState (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 pos
+		ARG 2 state
+	METHOD setBlockState (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 pos
+		ARG 2 state
+		ARG 3 flags
 	METHOD setBlockState (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 pos
 		ARG 2 state
@@ -81,3 +93,5 @@ CLASS net/minecraft/world/level/chunk/ChunkAccess
 		ARG 1 inhabitedTime
 	METHOD setLightCorrect (Z)V
 		ARG 1 lightCorrect
+	METHOD setUnsaved (Z)V
+		ARG 1 unsaved

@@ -2,6 +2,10 @@ CLASS net/minecraft/server/level/DistanceManager
 	METHOD <init> (Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;)V
 		ARG 1 dispatcher
 		ARG 2 mainThreadExecutor
+	METHOD <init> (Lnet/minecraft/world/level/TicketStorage;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;)V
+		ARG 1 ticketStorage
+		ARG 2 dispatcher
+		ARG 3 mainThreadExecutor
 	METHOD addPlayer (Lnet/minecraft/core/SectionPos;Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 sectionPos
 		ARG 2 player
@@ -20,8 +24,15 @@ CLASS net/minecraft/server/level/DistanceManager
 		ARG 4 value
 	METHOD dumpTickets (Ljava/lang/String;)V
 		ARG 1 filename
+	METHOD forEachBlockTickingChunks (Lit/unimi/dsi/fastutil/longs/LongConsumer;)V
+		ARG 1 action
+	METHOD forEachEntityTickingChunk (Lit/unimi/dsi/fastutil/longs/LongConsumer;)V
+		ARG 1 action
 	METHOD getChunk (J)Lnet/minecraft/server/level/ChunkHolder;
 		ARG 1 chunkPos
+	METHOD getChunkLevel (JZ)I
+		ARG 1 chunkPos
+		ARG 3 simulate
 	METHOD getNaturalSpawnChunkCount ()I
 		COMMENT Returns the number of chunks taken into account when calculating the mob cap
 	METHOD getTicketDebugString (J)Ljava/lang/String;
@@ -30,6 +41,8 @@ CLASS net/minecraft/server/level/DistanceManager
 		COMMENT Gets the {@linkplain net.minecraft.server.level.Ticket#getTicketLevel level} of the ticket.
 		ARG 0 tickets
 	METHOD getTickets (J)Lnet/minecraft/util/SortedArraySet;
+		ARG 1 chunkPos
+	METHOD hasPlayersNearby (J)Lnet/minecraft/util/TriState;
 		ARG 1 chunkPos
 	METHOD hasPlayersNearby (J)Z
 		ARG 1 chunkPos

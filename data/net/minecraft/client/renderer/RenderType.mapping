@@ -1,4 +1,11 @@
 CLASS net/minecraft/client/renderer/RenderType
+	METHOD <init> (Ljava/lang/String;IZZLjava/lang/Runnable;Ljava/lang/Runnable;)V
+		ARG 1 name
+		ARG 2 bufferSize
+		ARG 3 affectsCrumbling
+		ARG 4 sortOnUpload
+		ARG 5 setupState
+		ARG 6 clearState
 	METHOD <init> (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLjava/lang/Runnable;Ljava/lang/Runnable;)V
 		ARG 1 name
 		ARG 2 format
@@ -25,6 +32,18 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 2 v
 	METHOD celestial (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 texture
+	METHOD create (Ljava/lang/String;ILcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+		ARG 0 name
+		ARG 1 bufferSize
+		ARG 2 renderPipeline
+		ARG 3 state
+	METHOD create (Ljava/lang/String;IZZLcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+		ARG 0 name
+		ARG 1 bufferSize
+		ARG 2 affectsCrumbling
+		ARG 3 sortOnUpload
+		ARG 4 renderPipeline
+		ARG 5 state
 	METHOD create (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;ILnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
 		ARG 0 name
 		ARG 1 format
@@ -45,9 +64,15 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 2 equalDepthTest
 	METHOD createArmorDecalCutoutNoCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
+	METHOD createClouds (Lcom/mojang/blaze3d/pipeline/RenderPipeline;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+		ARG 0 renderPipeline
+	METHOD createClouds (Z)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+		ARG 0 color
 	METHOD createClouds (ZZ)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
 		ARG 0 color
 		ARG 1 cull
+	METHOD createWeather (Lcom/mojang/blaze3d/pipeline/RenderPipeline;)Ljava/util/function/Function;
+		ARG 0 renderPipeline
 	METHOD createWeather (Z)Ljava/util/function/Function;
 		ARG 0 depthWrite
 	METHOD createWorldBorder (Z)Lnet/minecraft/client/renderer/RenderType;
@@ -56,6 +81,8 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 location
 	METHOD crumbling (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
+	METHOD debugLine (D)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 width
 	METHOD debugLineStrip (D)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 width
 	METHOD dragonExplosionAlpha (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
@@ -95,6 +122,8 @@ CLASS net/minecraft/client/renderer/RenderType
 	METHOD entityTranslucent (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
 		ARG 1 outline
+	METHOD entityTranslucentCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 location
 	METHOD entityTranslucentEmissive (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
 	METHOD entityTranslucentEmissive (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/RenderType;
@@ -114,11 +143,18 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 location
 	METHOD lambda$createWeather$27 (ZLnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 1 texture
+	METHOD lambda$createWeather$28 (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 1 texture
 	METHOD lambda$static$0 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$1 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$10 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
+	METHOD lambda$static$10 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
+		ARG 1 effectsOutline
+	METHOD lambda$static$11 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$11 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
@@ -130,6 +166,8 @@ CLASS net/minecraft/client/renderer/RenderType
 	METHOD lambda$static$14 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$15 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
+	METHOD lambda$static$16 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$16 (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/RenderStateShard$TransparencyStateShard;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
@@ -148,6 +186,8 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 id
 	METHOD lambda$static$22 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
+	METHOD lambda$static$23 (Ljava/lang/Double;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
+		ARG 0 width
 	METHOD lambda$static$23 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$24 (Ljava/lang/Double;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
@@ -179,25 +219,43 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 texture
 	METHOD lambda$static$35 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 texture
+	METHOD lambda$static$36 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 texture
+	METHOD lambda$static$37 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 texture
 	METHOD lambda$static$4 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
+	METHOD lambda$static$4 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
+		ARG 1 affectsOutline
+	METHOD lambda$static$5 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$5 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 		ARG 1 affectsOutline
+	METHOD lambda$static$6 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
 	METHOD lambda$static$6 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 		ARG 1 affectsOutline
 	METHOD lambda$static$7 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
+	METHOD lambda$static$7 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
+		ARG 1 affectsOutline
 	METHOD lambda$static$8 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 		ARG 1 affectsOutline
+	METHOD lambda$static$9 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 id
 	METHOD lambda$static$9 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 		ARG 1 affectsOutline
 	METHOD opaqueParticle (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 texture
 	METHOD outline (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 location
+	METHOD panorama (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
 	METHOD text (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
@@ -223,6 +281,15 @@ CLASS net/minecraft/client/renderer/RenderType
 	METHOD worldBorder (Z)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 depthWrite
 	CLASS CompositeState
+		METHOD <init> (Lnet/minecraft/client/renderer/RenderStateShard$EmptyTextureStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LightmapStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OverlayStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LayeringStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OutputStateShard;Lnet/minecraft/client/renderer/RenderStateShard$TexturingStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LineStateShard;Lnet/minecraft/client/renderer/RenderType$OutlineProperty;)V
+			ARG 1 textureState
+			ARG 2 lightmapState
+			ARG 3 overlayState
+			ARG 4 layeringState
+			ARG 5 outputState
+			ARG 6 texturingState
+			ARG 7 lineState
+			ARG 8 outlineProperty
 		METHOD <init> (Lnet/minecraft/client/renderer/RenderStateShard$EmptyTextureStateShard;Lnet/minecraft/client/renderer/RenderStateShard$ShaderStateShard;Lnet/minecraft/client/renderer/RenderStateShard$TransparencyStateShard;Lnet/minecraft/client/renderer/RenderStateShard$DepthTestStateShard;Lnet/minecraft/client/renderer/RenderStateShard$CullStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LightmapStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OverlayStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LayeringStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OutputStateShard;Lnet/minecraft/client/renderer/RenderStateShard$TexturingStateShard;Lnet/minecraft/client/renderer/RenderStateShard$WriteMaskStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LineStateShard;Lnet/minecraft/client/renderer/RenderStateShard$ColorLogicStateShard;Lnet/minecraft/client/renderer/RenderType$OutlineProperty;)V
 			ARG 1 textureState
 			ARG 2 shaderState
@@ -273,6 +340,13 @@ CLASS net/minecraft/client/renderer/RenderType
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 name
 	CLASS CompositeRenderType
+		METHOD <init> (Ljava/lang/String;IZZLcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/client/renderer/RenderType$CompositeState;)V
+			ARG 1 name
+			ARG 2 bufferSize
+			ARG 3 affectsCrumbling
+			ARG 4 sortOnUpload
+			ARG 5 renderPipeline
+			ARG 6 state
 		METHOD <init> (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;IZZLnet/minecraft/client/renderer/RenderType$CompositeState;)V
 			ARG 1 name
 			ARG 2 format
@@ -281,6 +355,8 @@ CLASS net/minecraft/client/renderer/RenderType
 			ARG 5 affectsCrumbling
 			ARG 6 sortOnUpload
 			ARG 7 state
+		METHOD lambda$new$3 (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+			ARG 1 location
 		METHOD lambda$new$3 (Lnet/minecraft/client/renderer/RenderType$CompositeState;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 			ARG 1 id
 		METHOD lambda$static$0 (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/RenderStateShard$CullStateShard;)Lnet/minecraft/client/renderer/RenderType;

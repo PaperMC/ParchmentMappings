@@ -57,6 +57,10 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		COMMENT Gets whether this potion effect will show ambient particles or not.
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD lambda$tickDownDuration$3 (I)I
+		ARG 0 duration
+	METHOD lambda$withScaledDuration$2 (FI)I
+		ARG 1 duration
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/effect/MobEffectInstance;
 		COMMENT Read a custom potion effect from a potion item's NBT data.
 		ARG 0 nbt
@@ -71,17 +75,30 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		ARG 2 entity
 		ARG 3 damageSource
 		ARG 4 amount
+	METHOD onMobHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;F)V
+		ARG 1 livingEntity
+		ARG 2 damageSource
+		ARG 3 amount
 	METHOD onMobRemoved (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity$RemovalReason;)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 reason
+	METHOD onMobRemoved (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity$RemovalReason;)V
+		ARG 1 livingEntity
+		ARG 2 reason
 	METHOD setDetailsFrom (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effectInstance
 	METHOD tick (Lnet/minecraft/world/entity/LivingEntity;Ljava/lang/Runnable;)Z
 		ARG 1 entity
 		ARG 2 onExpirationRunnable
+	METHOD tickServer (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Ljava/lang/Runnable;)Z
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 onEffectUpdated
 	METHOD update (Lnet/minecraft/world/effect/MobEffectInstance;)Z
 		ARG 1 other
+	METHOD withScaledDuration (F)Lnet/minecraft/world/effect/MobEffectInstance;
+		ARG 1 scale
 	CLASS Details
 		METHOD create (IIZZLjava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/world/effect/MobEffectInstance$Details;
 			ARG 0 amplifier
@@ -108,6 +125,8 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		METHOD getFactor (Lnet/minecraft/world/entity/LivingEntity;F)F
 			ARG 1 entity
 			ARG 2 delta
+		METHOD hasEffect (Lnet/minecraft/world/effect/MobEffectInstance;)Z
+			ARG 0 effect
 		METHOD setImmediate (Lnet/minecraft/world/effect/MobEffectInstance;)V
 			ARG 1 effectInstance
 		METHOD tick (Lnet/minecraft/world/effect/MobEffectInstance;)V

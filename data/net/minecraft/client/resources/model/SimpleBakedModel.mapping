@@ -36,6 +36,10 @@ CLASS net/minecraft/client/resources/model/SimpleBakedModel
 		ARG 1 textureSlots
 		ARG 2 material
 	CLASS Builder
+		METHOD <init> (Lnet/minecraft/client/renderer/block/model/BlockModel;Lnet/minecraft/client/renderer/block/model/ItemOverrides;Z)V
+			ARG 1 blockModel
+			ARG 2 overrides
+			ARG 3 isGui3d
 		METHOD <init> (Lnet/minecraft/client/renderer/block/model/BlockModel;Z)V
 			ARG 1 model
 			ARG 2 isGui3d

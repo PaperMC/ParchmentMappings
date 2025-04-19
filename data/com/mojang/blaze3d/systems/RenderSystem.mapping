@@ -1,4 +1,15 @@
 CLASS com/mojang/blaze3d/systems/RenderSystem
+	METHOD _setShaderColor (FFFF)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+		ARG 3 alpha
+	METHOD _setShaderTexture (II)V
+		ARG 0 shaderTexture
+		ARG 1 textureId
+	METHOD _setShaderTexture (ILnet/minecraft/resources/ResourceLocation;)V
+		ARG 0 shaderTexture
+		ARG 1 textureId
 	METHOD activeTexture (I)V
 		ARG 0 texture
 	METHOD bindTexture (I)V
@@ -25,6 +36,9 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 3 destFactorAlpha
 	METHOD clear (I)V
 		ARG 0 mask
+	METHOD clear (IZ)V
+		ARG 0 mask
+		ARG 1 checkError
 	METHOD clearColor (FFFF)V
 		ARG 0 red
 		ARG 1 green
@@ -54,13 +68,19 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 1 y
 		ARG 2 width
 		ARG 3 height
+	METHOD flipFrame (J)V
+		ARG 0 windowId
 	METHOD flipFrame (JLcom/mojang/blaze3d/TracyFrameCapture;)V
 		ARG 0 window
 		ARG 2 tracyFrameCapture
+	METHOD getQuadVertexBuffer (Ljava/util/function/Supplier;)Lcom/mojang/blaze3d/buffers/GpuBuffer;
+		ARG 0 label
 	METHOD getSequentialBuffer (Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;)Lcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer;
 		ARG 0 formatMode
 	METHOD getShaderTexture (I)I
 		ARG 0 shaderTexture
+	METHOD getShaderTexture (I)Lcom/mojang/blaze3d/textures/GpuTexture;
+		ARG 0 index
 	METHOD getString (ILjava/util/function/Consumer;)V
 		ARG 0 name
 		ARG 1 consumer
@@ -77,6 +97,10 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 0 buffer
 	METHOD glDeleteVertexArrays (I)V
 		ARG 0 array
+	METHOD glGenBuffers (Ljava/util/function/Consumer;)V
+		ARG 0 bufferIdConsumer
+	METHOD glGenVertexArrays (Ljava/util/function/Consumer;)V
+		ARG 0 arrayObjectIdConsumer
 	METHOD glUniform1 (ILjava/nio/FloatBuffer;)V
 		ARG 0 location
 		ARG 1 value
@@ -112,6 +136,9 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 0 location
 		ARG 1 transpose
 		ARG 2 value
+	METHOD glUniformMatrix4 (ILjava/nio/FloatBuffer;)V
+		ARG 0 location
+		ARG 1 value
 	METHOD glUniformMatrix4 (IZLjava/nio/FloatBuffer;)V
 		ARG 0 location
 		ARG 1 transpose
@@ -119,6 +146,12 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 	METHOD initRenderer (IZ)V
 		ARG 0 debugVerbosity
 		ARG 1 synchronous
+	METHOD initRenderer (JIZLjava/util/function/BiFunction;Z)V
+		ARG 0 window
+		ARG 2 glDebugVerbosity
+		ARG 3 synchronous
+		ARG 4 defaultShaderSource
+		ARG 5 renderDebugLabels
 	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/ints/IntConsumer;I)V
 		ARG 0 consumer
 		ARG 1 index
@@ -140,6 +173,8 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 	METHOD polygonOffset (FF)V
 		ARG 0 factor
 		ARG 1 units
+	METHOD queueFencedTask (Ljava/lang/Runnable;)V
+		ARG 0 task
 	METHOD readPixels (IIIIIILjava/nio/ByteBuffer;)V
 		ARG 0 x
 		ARG 1 y
@@ -152,11 +187,22 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 0 renderCall
 	METHOD renderCrosshair (I)V
 		ARG 0 lineLength
+	METHOD runAsFancy (Ljava/lang/Runnable;)V
+		ARG 0 fancyRunnable
 	METHOD setErrorCallback (Lorg/lwjgl/glfw/GLFWErrorCallbackI;)V
 		ARG 0 callback
+	METHOD setModelOffset (FFF)V
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
 	METHOD setProjectionMatrix (Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/ProjectionType;)V
 		ARG 0 projectionMatrix
 		ARG 1 projectionType
+	METHOD setProjectionMatrix (Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexSorting;)V
+		ARG 0 projectionMatrix
+		ARG 1 vertexSorting
+	METHOD setShader (Ljava/util/function/Supplier;)V
+		ARG 0 shaderSupplier
 	METHOD setShader (Lnet/minecraft/client/renderer/CompiledShaderProgram;)V
 		ARG 0 shader
 	METHOD setShader (Lnet/minecraft/client/renderer/ShaderProgram;)Lnet/minecraft/client/renderer/CompiledShaderProgram;
@@ -168,6 +214,21 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 3 alpha
 	METHOD setShaderFog (Lnet/minecraft/client/renderer/FogParameters;)V
 		ARG 0 shaderFog
+	METHOD setShaderFogColor (FFF)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+	METHOD setShaderFogColor (FFFF)V
+		ARG 0 red
+		ARG 1 green
+		ARG 2 blue
+		ARG 3 alpha
+	METHOD setShaderFogEnd (F)V
+		ARG 0 shaderFogEnd
+	METHOD setShaderFogShape (Lcom/mojang/blaze3d/shaders/FogShape;)V
+		ARG 0 shaderFogShape
+	METHOD setShaderFogStart (F)V
+		ARG 0 shaderFogStart
 	METHOD setShaderGameTime (JF)V
 		ARG 0 tickTime
 		ARG 2 partialTicks
@@ -181,8 +242,11 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 	METHOD setShaderTexture (II)V
 		ARG 0 shaderTexture
 		ARG 1 textureId
+	METHOD setShaderTexture (ILcom/mojang/blaze3d/textures/GpuTexture;)V
+		ARG 0 index
+		ARG 1 texture
 	METHOD setShaderTexture (ILnet/minecraft/resources/ResourceLocation;)V
-		ARG 0 shaderTexture
+		ARG 0 index
 		ARG 1 textureId
 	METHOD setTextureMatrix (Lorg/joml/Matrix4f;)V
 		ARG 0 textureMatrix
@@ -203,8 +267,12 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 	METHOD setupOverlayColor (II)V
 		ARG 0 textureId
 		ARG 1 color
+	METHOD setupOverlayColor (Lcom/mojang/blaze3d/textures/GpuTexture;)V
+		ARG 0 overlayColor
 	METHOD setupShaderLights (Lnet/minecraft/client/renderer/CompiledShaderProgram;)V
 		ARG 0 shader
+	METHOD setupShaderLights (Lnet/minecraft/client/renderer/ShaderInstance;)V
+		ARG 0 instance
 	METHOD stencilFunc (III)V
 		ARG 0 func
 		ARG 1 ref
@@ -233,6 +301,8 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 			ARG 1 index
 		METHOD ensureStorage (I)V
 			ARG 1 neededIndexCount
+		METHOD getBuffer (I)Lcom/mojang/blaze3d/buffers/GpuBuffer;
+			ARG 1 index
 		METHOD hasStorage (I)Z
 			ARG 1 index
 		METHOD intConsumer (Ljava/nio/ByteBuffer;)Lit/unimi/dsi/fastutil/ints/IntConsumer;

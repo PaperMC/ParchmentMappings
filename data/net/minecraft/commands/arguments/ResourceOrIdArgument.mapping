@@ -25,8 +25,18 @@ CLASS net/minecraft/commands/arguments/ResourceOrIdArgument
 		ARG 0 context
 	METHOD parse (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/core/Holder;
 		ARG 1 reader
+	METHOD parse (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/nbt/TagParser;)Lnet/minecraft/core/Holder;
+		ARG 1 reader
+		ARG 2 parser
 	METHOD parseInlineOrId (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/nbt/Tag;
 		ARG 0 reader
+	METHOD parseInlineOrId (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/brigadier/StringReader;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 ops
+		ARG 1 reader
+	METHOD parseInlineOrId (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/nbt/TagParser;Lcom/mojang/brigadier/StringReader;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 ops
+		ARG 1 tagParser
+		ARG 2 reader
 	CLASS LootTableArgument
 		METHOD <init> (Lnet/minecraft/commands/CommandBuildContext;)V
 			ARG 1 context

@@ -8,10 +8,13 @@ CLASS net/minecraft/world/entity/AnimationState
 		ARG 1 duration
 		ARG 2 speed
 	METHOD getTimeInMillis (F)J
-		ARG 1 gameTime
+		ARG 1 gmaetime
 	METHOD ifStarted (Ljava/util/function/Consumer;)V
 		ARG 1 action
 	METHOD start (I)V
 		ARG 1 tickCount
 	METHOD startIfStopped (I)V
 		ARG 1 tickCount
+	METHOD updateTime (FF)V
+		ARG 1 ageInTicks
+		ARG 2 speed

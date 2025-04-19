@@ -6,6 +6,12 @@ CLASS net/minecraft/client/main/GameConfig
 		ARG 4 game
 		ARG 5 quickPlay
 	CLASS GameData
+		METHOD <init> (ZLjava/lang/String;Ljava/lang/String;ZZ)V
+			ARG 1 demo
+			ARG 2 launchVersion
+			ARG 3 versionType
+			ARG 4 disableMultiplayer
+			ARG 5 disableChat
 		METHOD <init> (ZLjava/lang/String;Ljava/lang/String;ZZZ)V
 			ARG 1 demo
 			ARG 2 launchVersion
@@ -13,6 +19,14 @@ CLASS net/minecraft/client/main/GameConfig
 			ARG 4 disableMultiplayer
 			ARG 5 disableChat
 			ARG 6 captureTracyImages
+		METHOD <init> (ZLjava/lang/String;Ljava/lang/String;ZZZZ)V
+			ARG 1 demo
+			ARG 2 launchVersion
+			ARG 3 versionType
+			ARG 4 disableMultiplayer
+			ARG 5 disableChat
+			ARG 6 captureTracyImages
+			ARG 7 renderDebugLabels
 	CLASS UserData
 		METHOD <init> (Lnet/minecraft/client/User;Lcom/mojang/authlib/properties/PropertyMap;Lcom/mojang/authlib/properties/PropertyMap;Ljava/net/Proxy;)V
 			ARG 1 user
