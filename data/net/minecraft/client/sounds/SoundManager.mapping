@@ -1,8 +1,9 @@
 CLASS net/minecraft/client/sounds/SoundManager
 	COMMENT The SoundManager class is responsible for managing sound events and playing sounds.
 	COMMENT It handles sound event registrations, caching of sound resources, and sound playback.
-	METHOD <init> (Lnet/minecraft/client/Options;)V
+	METHOD <init> (Lnet/minecraft/client/Options;Lnet/minecraft/client/sounds/MusicManager;)V
 		ARG 1 options
+		ARG 2 musicManager
 	METHOD addListener (Lnet/minecraft/client/sounds/SoundEventListener;)V
 		ARG 1 listener
 	METHOD apply (Lnet/minecraft/client/sounds/SoundManager$Preparations;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V
@@ -26,8 +27,9 @@ CLASS net/minecraft/client/sounds/SoundManager
 		COMMENT @return {@code true} if the sound is active, {@code false} otherwise
 		ARG 1 sound
 			COMMENT The sound instance to check
-	METHOD play (Lnet/minecraft/client/resources/sounds/SoundInstance;)V
-		COMMENT Play a sound
+	METHOD pauseAllExcept ([Lnet/minecraft/sounds/SoundSource;)V
+		ARG 1 soundSources
+	METHOD play (Lnet/minecraft/client/resources/sounds/SoundInstance;)Lnet/minecraft/client/sounds/SoundEngine$PlayResult;
 		ARG 1 sound
 	METHOD playDelayed (Lnet/minecraft/client/resources/sounds/SoundInstance;I)V
 		COMMENT Plays a sound with a delay in ticks.

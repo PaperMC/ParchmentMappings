@@ -3,9 +3,6 @@ CLASS net/minecraft/server/ServerScoreboard
 		ARG 1 server
 	METHOD addDirtyListener (Ljava/lang/Runnable;)V
 		ARG 1 runnable
-	METHOD createData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/scores/ScoreboardSaveData;
-		ARG 1 tag
-		ARG 2 registries
 	METHOD createData (Lnet/minecraft/world/scores/ScoreboardSaveData$Packed;)Lnet/minecraft/world/scores/ScoreboardSaveData;
 		ARG 1 data
 	METHOD getObjectiveDisplaySlotCount (Lnet/minecraft/world/scores/Objective;)I
@@ -38,3 +35,7 @@ CLASS net/minecraft/server/ServerScoreboard
 		ARG 1 objective
 	METHOD stopTrackingObjective (Lnet/minecraft/world/scores/Objective;)V
 		ARG 1 objective
+	METHOD updatePlayerWaypoint (Ljava/lang/String;)V
+		ARG 1 playerName
+	METHOD updateTeamWaypoints (Lnet/minecraft/world/scores/PlayerTeam;)V
+		ARG 1 team

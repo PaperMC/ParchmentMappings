@@ -22,12 +22,10 @@ CLASS net/minecraft/client/gui/screens/advancements/AdvancementsScreen
 		ARG 5 button
 		ARG 6 dragX
 		ARG 8 dragY
-	METHOD renderInside (Lnet/minecraft/client/gui/GuiGraphics;IIII)V
+	METHOD renderInside (Lnet/minecraft/client/gui/GuiGraphics;II)V
 		ARG 1 guiGraphics
-		ARG 2 mouseX
-		ARG 3 mouseY
-		ARG 4 offsetX
-		ARG 5 offsetY
+		ARG 2 x
+		ARG 3 y
 	METHOD renderTooltips (Lnet/minecraft/client/gui/GuiGraphics;IIII)V
 		ARG 1 guiGraphics
 		ARG 2 mouseX

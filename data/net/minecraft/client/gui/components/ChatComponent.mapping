@@ -35,6 +35,12 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 2 left
 		ARG 3 bottom
 		ARG 4 tagIcon
+	METHOD forEachLine (IIZILnet/minecraft/client/gui/components/ChatComponent$LineConsumer;)I
+		ARG 1 linesPerPage
+		ARG 2 tickCount
+		ARG 3 focused
+		ARG 4 bottomY
+		ARG 5 action
 	METHOD getClickedComponentStyleAt (DD)Lnet/minecraft/network/chat/Style;
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -64,8 +70,6 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 4 tag
 	METHOD isChatFocused ()Z
 		COMMENT Returns {@code true} if the chat GUI is open
-	METHOD lambda$processMessageDeletionQueue$0 (ILnet/minecraft/client/gui/components/ChatComponent$DelayedMessageDeletion;)Z
-		ARG 2 message
 	METHOD logChatMessage (Lnet/minecraft/client/GuiMessage;)V
 		ARG 1 message
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIIZ)V
@@ -89,3 +93,11 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 			ARG 1 messages
 			ARG 2 history
 			ARG 3 delayedMessageDeletions
+	CLASS LineConsumer
+		METHOD accept (IIILnet/minecraft/client/GuiMessage$Line;IF)V
+			ARG 1 x
+			ARG 2 startY
+			ARG 3 endY
+			ARG 4 line
+			ARG 5 index
+			ARG 6 fade

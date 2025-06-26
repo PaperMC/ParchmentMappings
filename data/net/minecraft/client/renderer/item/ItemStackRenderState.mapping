@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/renderer/item/ItemStackRenderState
+	METHOD appendModelIdentityElement (Ljava/lang/Object;)V
+		ARG 1 modelIdentityElement
 	METHOD ensureCapacity (I)V
 		ARG 1 expectedSize
 	METHOD pickParticleIcon (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
@@ -8,6 +10,8 @@ CLASS net/minecraft/client/renderer/item/ItemStackRenderState
 		ARG 2 bufferSource
 		ARG 3 packedLight
 		ARG 4 packedOverlay
+	METHOD setOversizedInGui (Z)V
+		ARG 1 oversizedInGui
 	METHOD visitExtents (Ljava/util/function/Consumer;)V
 		ARG 1 visitor
 	CLASS LayerRenderState
@@ -32,13 +36,6 @@ CLASS net/minecraft/client/renderer/item/ItemStackRenderState
 			ARG 1 transform
 		METHOD setUsesBlockLight (Z)V
 			ARG 1 usesBlockLight
-		METHOD setupBlockModel (Lnet/minecraft/client/resources/model/BakedModel;Lnet/minecraft/client/renderer/RenderType;)V
-			ARG 1 model
-			ARG 2 renderType
 		METHOD setupSpecialModel (Lnet/minecraft/client/renderer/special/SpecialModelRenderer;Ljava/lang/Object;)V
 			ARG 1 renderer
 			ARG 2 argument
-		METHOD setupSpecialModel (Lnet/minecraft/client/renderer/special/SpecialModelRenderer;Ljava/lang/Object;Lnet/minecraft/client/resources/model/BakedModel;)V
-			ARG 1 specialRenderer
-			ARG 2 argumentForSpecialRendering
-			ARG 3 model

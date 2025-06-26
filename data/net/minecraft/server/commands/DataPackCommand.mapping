@@ -1,4 +1,8 @@
 CLASS net/minecraft/server/commands/DataPackCommand
+	METHOD createPack (Lnet/minecraft/commands/CommandSourceStack;Ljava/lang/String;Lnet/minecraft/network/chat/Component;)I
+		ARG 0 source
+		ARG 1 id
+		ARG 2 description
 	METHOD disablePack (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/packs/repository/Pack;)I
 		COMMENT Disables the given pack.
 		COMMENT
@@ -16,39 +20,11 @@ CLASS net/minecraft/server/commands/DataPackCommand
 		ARG 0 context
 		ARG 1 name
 		ARG 2 enabling
-	METHOD lambda$listAvailablePacks$25 (Ljava/util/Collection;Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/server/packs/repository/Pack;)Z
-		ARG 2 pack
-	METHOD lambda$listAvailablePacks$27 (Lnet/minecraft/server/packs/repository/Pack;)Lnet/minecraft/network/chat/Component;
-		ARG 0 pack
-	METHOD lambda$listEnabledPacks$30 (Lnet/minecraft/server/packs/repository/Pack;)Lnet/minecraft/network/chat/Component;
-		ARG 0 pack
-	METHOD lambda$register$10 (Ljava/util/List;Lnet/minecraft/server/packs/repository/Pack;)V
-		ARG 0 enabledPacks
-		ARG 1 packToEnable
-	METHOD lambda$register$11 (Lcom/mojang/brigadier/context/CommandContext;)I
-		ARG 0 context
-	METHOD lambda$register$12 (Lcom/mojang/brigadier/context/CommandContext;Ljava/util/List;Lnet/minecraft/server/packs/repository/Pack;)V
-		ARG 1 enabledPacks
-		ARG 2 packToEnable
-	METHOD lambda$register$13 (Lcom/mojang/brigadier/context/CommandContext;)I
-		ARG 0 context
-	METHOD lambda$register$14 (Lcom/mojang/brigadier/context/CommandContext;Ljava/util/List;Lnet/minecraft/server/packs/repository/Pack;)V
-		ARG 1 enabledPacks
-		ARG 2 packToEnable
 	METHOD lambda$register$15 (Lcom/mojang/brigadier/context/CommandContext;)I
-		ARG 0 context
-	METHOD lambda$register$16 (Lcom/mojang/brigadier/context/CommandContext;)I
-		ARG 0 context
-	METHOD lambda$register$17 (Ljava/util/List;Lnet/minecraft/server/packs/repository/Pack;)V
-		ARG 0 enabledPacks
-		ARG 1 packToEnable
-	METHOD lambda$register$18 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$19 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$20 (Lcom/mojang/brigadier/context/CommandContext;)I
-		ARG 0 context
-	METHOD lambda$register$21 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$22 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
@@ -58,6 +34,15 @@ CLASS net/minecraft/server/commands/DataPackCommand
 		ARG 0 pack
 	METHOD lambda$static$2 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 pack
+	METHOD lambda$static$3 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 pack
+	METHOD lambda$static$4 (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 pack
+		ARG 1 flags
+	METHOD lambda$static$5 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 name
+	METHOD lambda$static$6 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 name
 	METHOD listAvailablePacks (Lnet/minecraft/commands/CommandSourceStack;)I
 		COMMENT Sends a list of available packs to the user.
 		COMMENT
@@ -73,8 +58,9 @@ CLASS net/minecraft/server/commands/DataPackCommand
 		COMMENT
 		COMMENT @return The total number of packs.
 		ARG 0 source
-	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
+	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
+		ARG 1 buildContext
 	CLASS Inserter
 		METHOD apply (Ljava/util/List;Lnet/minecraft/server/packs/repository/Pack;)V
 			ARG 1 currentPacks

@@ -129,10 +129,12 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 size
 	METHOD lambda$limitValue$4 (ILjava/util/function/IntFunction;I)Ljava/lang/Object;
 		ARG 2 value
-	METHOD lambda$readJsonWithCodec$2 (Ljava/lang/String;)Lio/netty/handler/codec/DecoderException;
-		ARG 0 exception
 	METHOD lambda$readWithCodec$0 (Lnet/minecraft/nbt/Tag;Ljava/lang/String;)Lio/netty/handler/codec/DecoderException;
 		ARG 1 exception
+	METHOD lambda$writeEither$6 (Lnet/minecraft/network/codec/StreamEncoder;Ljava/lang/Object;)V
+		ARG 2 value
+	METHOD lambda$writeEither$7 (Lnet/minecraft/network/codec/StreamEncoder;Ljava/lang/Object;)V
+		ARG 2 value
 	METHOD lambda$writeJsonWithCodec$3 (Ljava/lang/Object;Ljava/lang/String;)Lio/netty/handler/codec/EncoderException;
 		ARG 1 exception
 	METHOD lambda$writeMap$5 (Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;Ljava/lang/Object;Ljava/lang/Object;)V
@@ -221,6 +223,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Read a timestamp as milliseconds since the unix epoch.
 		COMMENT
 		COMMENT @see #writeDate
+	METHOD readEither (Lnet/minecraft/network/codec/StreamDecoder;Lnet/minecraft/network/codec/StreamDecoder;)Lcom/mojang/datafixers/util/Either;
+		ARG 1 leftReader
+		ARG 2 rightReader
 	METHOD readEnum (Ljava/lang/Class;)Ljava/lang/Enum;
 		COMMENT Reads an enum of the given type T using the ordinal encoded as a VarInt from the buffer.
 		COMMENT
@@ -239,7 +244,7 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Read an IntList of VarInts from this buffer.
 		COMMENT
 		COMMENT @see #writeIntIdList
-	METHOD readJsonWithCodec (Lcom/mojang/serialization/Codec;)Ljava/lang/Object;
+	METHOD readLenientJsonWithCodec (Lcom/mojang/serialization/Codec;)Ljava/lang/Object;
 		ARG 1 codec
 	METHOD readList (Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/List;
 		ARG 1 elementReader
@@ -247,15 +252,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a length-prefixed array of longs from the buffer.
 	METHOD readLongArray (Lio/netty/buffer/ByteBuf;)[J
 		ARG 0 buffer
-	METHOD readLongArray ([J)[J
-		COMMENT Reads a length-prefixed array of longs from the buffer.
-		COMMENT Will try to use the given long[] if possible. Note that if an array with the correct size is given, maxLength is ignored.
-		ARG 1 array
-	METHOD readLongArray ([JI)[J
-		COMMENT Reads a length-prefixed array of longs with a maximum length from the buffer.
-		COMMENT Will try to use the given long[] if possible. Note that if an array with the correct size is given, maxLength is ignored.
-		ARG 1 array
-		ARG 2 maxLength
 	METHOD readMap (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamDecoder;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Map;
 		ARG 1 mapFactory
 		ARG 2 keyReader
@@ -541,6 +537,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 time
 	METHOD writeDouble (D)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
+	METHOD writeEither (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;)V
+		ARG 1 either
+		ARG 2 leftWriter
+		ARG 3 rightWriter
 	METHOD writeEnum (Ljava/lang/Enum;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes an enum of the given type T using the ordinal encoded as a VarInt to the buffer.
 		COMMENT

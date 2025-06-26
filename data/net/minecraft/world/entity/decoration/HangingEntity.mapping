@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/decoration/HangingEntity
-	FIELD direction Lnet/minecraft/core/Direction;
-		COMMENT The direction the entity is facing
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 entityType
 		ARG 2 level
@@ -23,5 +21,7 @@ CLASS net/minecraft/world/entity/decoration/HangingEntity
 	METHOD setDirection (Lnet/minecraft/core/Direction;)V
 		COMMENT Updates facing and bounding box based on it
 		ARG 1 facingDirection
+	METHOD setDirectionRaw (Lnet/minecraft/core/Direction;)V
+		ARG 1 direction
 	METHOD survives ()Z
 		COMMENT Checks to make sure the {@code HangingEntity} can be placed there.

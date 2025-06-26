@@ -1,8 +1,8 @@
 CLASS net/minecraft/client/gui/components/SplashRenderer
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 splash
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;ILnet/minecraft/client/gui/Font;I)V
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;ILnet/minecraft/client/gui/Font;F)V
 		ARG 1 guiGraphics
-		ARG 2 screenWidth
+		ARG 2 width
 		ARG 3 font
-		ARG 4 color
+		ARG 4 fade

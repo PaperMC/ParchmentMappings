@@ -2,66 +2,40 @@ CLASS net/minecraft/client/gui/Font
 	METHOD <init> (Ljava/util/function/Function;Z)V
 		ARG 1 fonts
 		ARG 2 filterFishyGlyphs
-	METHOD adjustColor (I)I
-		ARG 0 color
 	METHOD bidirectionalShaping (Ljava/lang/String;)Ljava/lang/String;
 		COMMENT Apply Unicode Bidirectional Algorithm to string and return a new possibly reordered string for visual rendering.
 		ARG 1 text
-	METHOD drawInBatch (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)I
+	METHOD drawInBatch (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)V
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
-		ARG 5 dropShadow
+		ARG 5 drawShadow
 		ARG 6 pose
 		ARG 7 bufferSource
-		ARG 8 displayMode
+		ARG 8 mode
 		ARG 9 backgroundColor
 		ARG 10 packedLightCoords
-	METHOD drawInBatch (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;IIZ)I
+	METHOD drawInBatch (Lnet/minecraft/network/chat/Component;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)V
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 matrix
-		ARG 7 buffer
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-		ARG 11 bidirectional
-	METHOD drawInBatch (Lnet/minecraft/network/chat/Component;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)I
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
+		ARG 5 drawShadow
 		ARG 6 pose
 		ARG 7 bufferSource
-		ARG 8 displayMode
+		ARG 8 mode
 		ARG 9 backgroundColor
 		ARG 10 packedLightCoords
-	METHOD drawInBatch (Lnet/minecraft/network/chat/Component;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;IIZ)I
+	METHOD drawInBatch (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)V
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
-		ARG 5 dropShadow
+		ARG 5 drawShadow
 		ARG 6 pose
 		ARG 7 bufferSource
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-		ARG 11 inverseDepth
-	METHOD drawInBatch (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)I
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 pose
-		ARG 7 bufferSource
-		ARG 8 displayMode
+		ARG 8 mode
 		ARG 9 backgroundColor
 		ARG 10 packedLightCoords
 	METHOD drawInBatch8xOutline (Lnet/minecraft/util/FormattedCharSequence;FFIILorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
@@ -73,49 +47,10 @@ CLASS net/minecraft/client/gui/Font
 		ARG 6 pose
 		ARG 7 bufferSource
 		ARG 8 packedLightCoords
-	METHOD drawInternal (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;IIZ)I
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 pose
-		ARG 7 bufferSource
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-		ARG 11 inverseDepth
-	METHOD drawInternal (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)I
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 matrix
-		ARG 7 buffer
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-	METHOD drawInternal (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;IIZ)I
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 pose
-		ARG 7 bufferSource
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-		ARG 11 inverseDepth
 	METHOD getFontSet (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
 		ARG 1 fontLocation
 	METHOD isBidirectional ()Z
 		COMMENT Get bidiFlag that controls if the Unicode Bidirectional Algorithm should be run before rendering any string
-	METHOD lambda$drawInBatch8xOutline$1 (Lnet/minecraft/client/gui/Font$StringRenderOutput;[FIFIIILnet/minecraft/network/chat/Style;I)Z
-		ARG 7 index
-		ARG 8 style
-		ARG 9 codePoint
 	METHOD lambda$new$0 (ILnet/minecraft/network/chat/Style;)F
 		ARG 1 codePoint
 		ARG 2 style
@@ -126,78 +61,24 @@ CLASS net/minecraft/client/gui/Font
 		ARG 1 text
 		ARG 2 maxWidth
 		ARG 3 tail
-	METHOD renderChar (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;ZZFFFLorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFI)V
-		ARG 1 glyph
-		ARG 2 bold
-		ARG 3 italic
-		ARG 4 boldOffset
-		ARG 5 x
-		ARG 6 y
-		ARG 7 matrix
-		ARG 8 buffer
-		ARG 9 red
-		ARG 10 green
-		ARG 11 blue
-		ARG 12 alpha
-		ARG 13 packedLight
-	METHOD renderChar (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;ZZFFFLorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V
-		ARG 1 glyph
-		ARG 2 bold
-		ARG 3 italic
-		ARG 4 boldOffset
-		ARG 5 x
-		ARG 6 y
-		ARG 7 pose
-		ARG 8 buffer
-		ARG 9 color
-		ARG 10 packedLightCoords
-	METHOD renderText (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)F
+	METHOD prepareText (Ljava/lang/String;FFIZI)Lnet/minecraft/client/gui/Font$PreparedText;
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
 		ARG 5 dropShadow
-		ARG 6 matrix
-		ARG 7 buffer
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-	METHOD renderText (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;IIZ)F
+		ARG 6 backgroundColor
+	METHOD prepareText (Lnet/minecraft/util/FormattedCharSequence;FFIZI)Lnet/minecraft/client/gui/Font$PreparedText;
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
 		ARG 5 dropShadow
-		ARG 6 pose
-		ARG 7 bufferSource
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-		ARG 11 inverseDepth
-	METHOD renderText (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)F
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 matrix
-		ARG 7 buffer
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-	METHOD renderText (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;IIZ)F
-		ARG 1 text
-		ARG 2 x
-		ARG 3 y
-		ARG 4 color
-		ARG 5 dropShadow
-		ARG 6 pose
-		ARG 7 bufferSource
-		ARG 8 displayMode
-		ARG 9 backgroundColor
-		ARG 10 packedLightCoords
-		ARG 11 inverseDepth
+		ARG 6 backgroundColor
 	METHOD split (Lnet/minecraft/network/chat/FormattedText;I)Ljava/util/List;
+		ARG 1 text
+		ARG 2 maxWidth
+	METHOD splitIgnoringLanguage (Lnet/minecraft/network/chat/FormattedText;I)Ljava/util/List;
 		ARG 1 text
 		ARG 2 maxWidth
 	METHOD substrByWidth (Lnet/minecraft/network/chat/FormattedText;I)Lnet/minecraft/network/chat/FormattedText;
@@ -217,49 +98,47 @@ CLASS net/minecraft/client/gui/Font
 	METHOD wordWrapHeight (Lnet/minecraft/network/chat/FormattedText;I)I
 		ARG 1 text
 		ARG 2 maxWidth
-	CLASS StringRenderOutput
-		METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/renderer/MultiBufferSource;FFIIZLorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;I)V
-			ARG 1 font
-			ARG 2 bufferSource
-			ARG 3 x
-			ARG 4 y
-			ARG 5 color
-			ARG 6 backgroundColor
-			ARG 7 dropShadow
-			ARG 8 pose
-			ARG 9 mode
-			ARG 10 packedLightCoords
-		METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/renderer/MultiBufferSource;FFIIZLorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;IZ)V
-			ARG 1 font
-			ARG 2 buferSource
-			ARG 3 x
-			ARG 4 y
-			ARG 5 color
-			ARG 6 backgroundColor
-			ARG 7 dropShadow
-			ARG 8 pose
-			ARG 9 displayMode
-			ARG 10 packedLightCoords
-			ARG 11 inverseDepth
-		METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/renderer/MultiBufferSource;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;I)V
-			ARG 1 font
-			ARG 2 bufferSource
-			ARG 3 x
-			ARG 4 y
-			ARG 5 color
+	CLASS GlyphVisitor
+		METHOD acceptEffect (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$Effect;)V
+			ARG 1 glyph
+			ARG 2 effect
+		METHOD acceptGlyph (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$GlyphInstance;)V
+			ARG 1 glyph
+		METHOD forMultiBufferSource (Lnet/minecraft/client/renderer/MultiBufferSource;Lorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;I)Lnet/minecraft/client/gui/Font$GlyphVisitor;
+			ARG 0 bufferSource
+			ARG 1 pose
+			ARG 2 displayMode
+			ARG 3 packedLight
+	CLASS PreparedText
+		METHOD visit (Lnet/minecraft/client/gui/Font$GlyphVisitor;)V
+			ARG 1 visitor
+	CLASS PreparedTextBuilder
+		METHOD <init> (Lnet/minecraft/client/gui/Font;FFIIZ)V
+			ARG 2 x
+			ARG 3 y
+			ARG 4 color
+			ARG 5 backgroundColor
 			ARG 6 dropShadow
-			ARG 7 pose
-			ARG 8 mode
-			ARG 9 packedLightCoords
+		METHOD <init> (Lnet/minecraft/client/gui/Font;FFIZ)V
+			ARG 2 x
+			ARG 3 y
+			ARG 4 color
+			ARG 5 dropShadow
 		METHOD addEffect (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$Effect;)V
 			ARG 1 effect
-		METHOD finish (F)F
-			ARG 1 x
-		METHOD finish (IF)F
-			ARG 1 backgroundColor
-			ARG 2 x
+		METHOD addGlyph (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$GlyphInstance;)V
+			ARG 1 glyph
 		METHOD getShadowColor (Lnet/minecraft/network/chat/Style;I)I
 			ARG 1 style
 			ARG 2 textColor
 		METHOD getTextColor (Lnet/minecraft/network/chat/TextColor;)I
 			ARG 1 textColor
+		METHOD markBackground (FFF)V
+			ARG 1 x
+			ARG 2 y
+			ARG 3 advance
+		METHOD markSize (FFFF)V
+			ARG 1 left
+			ARG 2 top
+			ARG 3 right
+			ARG 4 bottom

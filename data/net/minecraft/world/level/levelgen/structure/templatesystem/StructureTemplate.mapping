@@ -16,19 +16,21 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 	METHOD calculateRelativePosition (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
 		ARG 0 decorator
 		ARG 1 pos
-	METHOD createEntityIgnoreException (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
-		ARG 0 level
-		ARG 1 tag
-	METHOD fillEntityList (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)V
+	METHOD createEntityIgnoreException (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+		ARG 0 problemReporter
 		ARG 1 level
-		ARG 2 startPos
-		ARG 3 endPos
-	METHOD fillFromWorld (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;ZLnet/minecraft/world/level/block/Block;)V
+		ARG 2 tag
+	METHOD fillEntityList (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/ProblemReporter;)V
+		ARG 1 level
+		ARG 2 pos1
+		ARG 3 pos2
+		ARG 4 problemReporter
+	METHOD fillFromWorld (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;ZLjava/util/List;)V
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 size
-		ARG 4 withEntities
-		ARG 5 toIgnore
+		ARG 4 includeEntities
+		ARG 5 ignoredBlocks
 	METHOD filterBlocks (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/world/level/block/Block;)Ljava/util/List;
 		ARG 1 pos
 		ARG 2 settings
@@ -98,14 +100,15 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 		ARG 1 values
 	METHOD newIntegerList ([I)Lnet/minecraft/nbt/ListTag;
 		ARG 1 values
-	METHOD placeEntities (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Z)V
-		ARG 1 serverLevel
+	METHOD placeEntities (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;ZLnet/minecraft/util/ProblemReporter;)V
+		ARG 1 level
 		ARG 2 pos
 		ARG 3 mirror
 		ARG 4 rotation
 		ARG 5 offset
 		ARG 6 boundingBox
-		ARG 7 withEntities
+		ARG 7 finalize
+		ARG 8 problemReporter
 	METHOD placeInWorld (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/util/RandomSource;I)Z
 		ARG 1 serverLevel
 		ARG 2 offset

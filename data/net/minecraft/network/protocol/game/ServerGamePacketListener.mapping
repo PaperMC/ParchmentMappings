@@ -12,6 +12,8 @@ CLASS net/minecraft/network/protocol/game/ServerGamePacketListener
 		ARG 1 packet
 	METHOD handleChangeDifficulty (Lnet/minecraft/network/protocol/game/ServerboundChangeDifficultyPacket;)V
 		ARG 1 packet
+	METHOD handleChangeGameMode (Lnet/minecraft/network/protocol/game/ServerboundChangeGameModePacket;)V
+		ARG 1 packet
 	METHOD handleChat (Lnet/minecraft/network/protocol/game/ServerboundChatPacket;)V
 		COMMENT Process chat messages (broadcast back to clients) and commands (executes)
 		ARG 1 packet
@@ -63,8 +65,6 @@ CLASS net/minecraft/network/protocol/game/ServerGamePacketListener
 	METHOD handleMoveVehicle (Lnet/minecraft/network/protocol/game/ServerboundMoveVehiclePacket;)V
 		ARG 1 packet
 	METHOD handlePaddleBoat (Lnet/minecraft/network/protocol/game/ServerboundPaddleBoatPacket;)V
-		ARG 1 packet
-	METHOD handlePickItem (Lnet/minecraft/network/protocol/game/ServerboundPickItemPacket;)V
 		ARG 1 packet
 	METHOD handlePickItemFromBlock (Lnet/minecraft/network/protocol/game/ServerboundPickItemFromBlockPacket;)V
 		ARG 1 packet
