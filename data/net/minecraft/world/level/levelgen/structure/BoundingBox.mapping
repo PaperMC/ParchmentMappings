@@ -17,6 +17,9 @@ CLASS net/minecraft/world/level/levelgen/structure/BoundingBox
 	METHOD encapsulate (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		COMMENT Expands this box to be at least large enough to contain {@code box}.
 		ARG 1 box
+	METHOD encapsulating (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
+		ARG 0 box1
+		ARG 1 box2
 	METHOD encapsulatingBoxes (Ljava/lang/Iterable;)Ljava/util/Optional;
 		ARG 0 boxes
 	METHOD encapsulatingPositions (Ljava/lang/Iterable;)Ljava/util/Optional;

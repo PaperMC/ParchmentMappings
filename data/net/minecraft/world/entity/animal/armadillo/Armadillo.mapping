@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/entity/animal/armadillo/Armadillo
+	METHOD brushOffScute (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 entity
+		ARG 2 stack
 	METHOD checkArmadilloSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 entityType
 		ARG 1 level

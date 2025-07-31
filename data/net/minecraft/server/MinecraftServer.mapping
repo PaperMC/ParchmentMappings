@@ -8,6 +8,15 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 6 fixerUpper
 		ARG 7 services
 		ARG 8 progressListenerFactory
+	METHOD <init> (Ljava/lang/Thread;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Ljava/net/Proxy;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/LevelLoadListener;)V
+		ARG 1 serverThread
+		ARG 2 storageSource
+		ARG 3 packRepository
+		ARG 4 worldStem
+		ARG 5 proxy
+		ARG 6 fixerUpper
+		ARG 7 services
+		ARG 8 levelLoadListener
 	METHOD addTickable (Ljava/lang/Runnable;)V
 		ARG 1 tickable
 	METHOD configurePackRepository (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/level/WorldDataConfiguration;ZZ)Lnet/minecraft/world/level/WorldDataConfiguration;
@@ -22,6 +31,8 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 3 safeMode
 	METHOD constructOrExtractCrashReport (Ljava/lang/Throwable;)Lnet/minecraft/CrashReport;
 		ARG 0 cause
+	METHOD createChunkLoadStatusView (I)Lnet/minecraft/server/level/progress/ChunkLoadStatusView;
+		ARG 1 radius
 	METHOD createGameModeForPlayer (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/server/level/ServerPlayerGameMode;
 		ARG 1 player
 	METHOD createLevels (Lnet/minecraft/server/level/progress/ChunkProgressListener;)V
@@ -70,6 +81,8 @@ CLASS net/minecraft/server/MinecraftServer
 		COMMENT Gets serverPort.
 	METHOD getProfilePermissions (Lcom/mojang/authlib/GameProfile;)I
 		ARG 1 profile
+	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)I
+		ARG 1 user
 	METHOD getScaledTrackingDistance (I)I
 		ARG 1 trackingDistance
 	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;Z)Lnet/minecraft/world/level/DataPackConfig;
@@ -105,6 +118,8 @@ CLASS net/minecraft/server/MinecraftServer
 		COMMENT Returns {@code true} if this integrated server is open to LAN
 	METHOD isSingleplayerOwner (Lcom/mojang/authlib/GameProfile;)Z
 		ARG 1 profile
+	METHOD isSingleplayerOwner (Lnet/minecraft/server/players/NameAndId;)Z
+		ARG 1 player
 	METHOD isUnderSpawnProtection (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 level
 		ARG 2 pos
@@ -194,6 +209,12 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 levelData
 		ARG 2 generateBonusChest
 		ARG 3 debug
+	METHOD setInitialSpawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/ServerLevelData;ZZLnet/minecraft/server/level/progress/LevelLoadListener;)V
+		ARG 0 level
+		ARG 1 levelData
+		ARG 2 generateBonusChest
+		ARG 3 debug
+		ARG 4 listener
 	METHOD setLocalIp (Ljava/lang/String;)V
 		ARG 1 localIp
 	METHOD setMotd (Ljava/lang/String;)V

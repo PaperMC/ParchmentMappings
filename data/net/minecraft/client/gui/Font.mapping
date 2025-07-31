@@ -2,6 +2,8 @@ CLASS net/minecraft/client/gui/Font
 	METHOD <init> (Ljava/util/function/Function;Z)V
 		ARG 1 fonts
 		ARG 2 filterFishyGlyphs
+	METHOD <init> (Lnet/minecraft/client/gui/Font$Provider;)V
+		ARG 1 provider
 	METHOD bidirectionalShaping (Ljava/lang/String;)Ljava/lang/String;
 		COMMENT Apply Unicode Bidirectional Algorithm to string and return a new possibly reordered string for visual rendering.
 		ARG 1 text
@@ -49,6 +51,11 @@ CLASS net/minecraft/client/gui/Font
 		ARG 8 packedLightCoords
 	METHOD getFontSet (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
 		ARG 1 fontLocation
+	METHOD getGlyph (ILnet/minecraft/network/chat/Style;)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
+		ARG 1 character
+		ARG 2 style
+	METHOD getGlyphSource (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/GlyphSource;
+		ARG 1 glyphSource
 	METHOD isBidirectional ()Z
 		COMMENT Get bidiFlag that controls if the Unicode Bidirectional Algorithm should be run before rendering any string
 	METHOD lambda$new$0 (ILnet/minecraft/network/chat/Style;)F
@@ -124,6 +131,10 @@ CLASS net/minecraft/client/gui/Font
 			ARG 3 y
 			ARG 4 color
 			ARG 5 dropShadow
+		METHOD accept (ILnet/minecraft/network/chat/Style;Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;)Z
+			ARG 1 positionInCurrentSequence
+			ARG 2 style
+			ARG 3 glyph
 		METHOD addEffect (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$Effect;)V
 			ARG 1 effect
 		METHOD addGlyph (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$GlyphInstance;)V
@@ -142,3 +153,6 @@ CLASS net/minecraft/client/gui/Font
 			ARG 2 top
 			ARG 3 right
 			ARG 4 bottom
+	CLASS Provider
+		METHOD glyphs (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/GlyphSource;
+			ARG 1 name

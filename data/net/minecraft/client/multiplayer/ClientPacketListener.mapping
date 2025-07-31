@@ -18,6 +18,10 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 information
 	METHOD createEntityFromPacket (Lnet/minecraft/network/protocol/game/ClientboundAddEntityPacket;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 packet
+	METHOD determineLevelLoadingReason (ZLnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/client/gui/screens/LevelLoadingScreen$Reason;
+		ARG 1 fromDeath
+		ARG 2 spawnDimension
+		ARG 3 playerDimension
 	METHOD determineLevelLoadingReason (ZLnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;
 		ARG 1 dying
 		ARG 2 spawnDimension
@@ -243,6 +247,10 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 relatives
 		ARG 2 entity
 		ARG 3 lerp
+	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/LevelLoadingScreen$Reason;)V
+		ARG 1 player
+		ARG 2 level
+		ARG 3 reason
 	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 player
 		ARG 2 level

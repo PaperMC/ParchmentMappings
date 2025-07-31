@@ -1,7 +1,12 @@
 CLASS net/minecraft/client/renderer/blockentity/DecoratedPotRenderer
 	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;)V
 		ARG 1 modelSet
+	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/MaterialSet;)V
+		ARG 1 modelSet
+		ARG 2 materials
 	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
+		ARG 1 context
+	METHOD <init> (Lnet/minecraft/client/renderer/special/SpecialModelRenderer$BakingContext;)V
 		ARG 1 context
 	METHOD getExtents (Ljava/util/Set;)V
 		ARG 1 output
@@ -26,3 +31,11 @@ CLASS net/minecraft/client/renderer/blockentity/DecoratedPotRenderer
 		ARG 4 packedLight
 		ARG 5 packedOverlay
 		ARG 6 material
+	METHOD renderSide (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/resources/model/Material;)V
+		ARG 1 modelPart
+		ARG 2 materials
+		ARG 3 poseStack
+		ARG 4 bufferSource
+		ARG 5 packedLight
+		ARG 6 packedOverlay
+		ARG 7 material

@@ -1,0 +1,13 @@
+CLASS net/minecraft/server/players/UserNameToIdResolver
+	METHOD add (Lcom/mojang/authlib/GameProfile;)V
+		ARG 1 profile
+	METHOD add (Lnet/minecraft/server/players/NameAndId;)V
+		ARG 1 nameAndId
+	METHOD get (Ljava/lang/String;)Ljava/util/Optional;
+		ARG 1 username
+	METHOD get (Ljava/util/UUID;)Ljava/util/Optional;
+		ARG 1 uuid
+	METHOD getAsync (Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 username
+	METHOD resolveOfflineUsers (Z)V
+		ARG 1 resolveOfflineUsers

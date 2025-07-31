@@ -1,8 +1,13 @@
 CLASS net/minecraft/client/resources/model/ModelManager
+	METHOD <init> (Lnet/minecraft/client/color/block/BlockColors;Lnet/minecraft/client/resources/model/AtlasManager;)V
+		ARG 1 blockColors
+		ARG 2 atlasManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/color/block/BlockColors;I)V
 		ARG 1 textureManager
 		ARG 2 blockColors
 		ARG 3 maxMipmapLevels
+	METHOD apply (Lnet/minecraft/client/resources/model/ModelManager$ReloadState;)V
+		ARG 1 state
 	METHOD apply (Lnet/minecraft/client/resources/model/ModelManager$ReloadState;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 reloadState
 		ARG 2 profiler
@@ -31,6 +36,13 @@ CLASS net/minecraft/client/resources/model/ModelManager
 		ARG 1 executor
 	METHOD loadModels (Ljava/util/Map;Lnet/minecraft/client/resources/model/ModelBakery;Lit/unimi/dsi/fastutil/objects/Object2IntMap;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/renderer/SpecialBlockModelRenderer;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 stitchResults
+		ARG 1 modelBakery
+		ARG 2 modelGroups
+		ARG 3 entityModelSet
+		ARG 4 specialBlockModelRenderer
+		ARG 5 executor
+	METHOD loadModels (Lnet/minecraft/client/renderer/texture/SpriteLoader$Preparations;Lnet/minecraft/client/resources/model/ModelBakery;Lit/unimi/dsi/fastutil/objects/Object2IntMap;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/renderer/SpecialBlockModelRenderer;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 preperations
 		ARG 1 modelBakery
 		ARG 2 modelGroups
 		ARG 3 entityModelSet

@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/gui/font/GlyphStitcher
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 textureManager
+		ARG 2 texturePrefix
+	METHOD stitch (Lcom/mojang/blaze3d/font/SheetGlyphInfo;)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
+		ARG 1 info
+	METHOD textureName (I)Lnet/minecraft/resources/ResourceLocation;
+		ARG 1 name

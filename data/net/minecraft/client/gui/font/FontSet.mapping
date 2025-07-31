@@ -1,10 +1,17 @@
 CLASS net/minecraft/client/gui/font/FontSet
+	METHOD <init> (Lnet/minecraft/client/gui/font/GlyphStitcher;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 stitcher
+		ARG 2 name
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 textureManager
 		ARG 2 name
 	METHOD computeBakedGlyph (I)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
 		ARG 1 character
 	METHOD computeGlyphInfo (I)Lnet/minecraft/client/gui/font/FontSet$GlyphInfoFilter;
+		ARG 1 character
+	METHOD computeGlyphInfo (I)Lnet/minecraft/client/gui/font/FontSet$SelectedGlyphs;
+		ARG 1 character
+	METHOD getGlyph (I)Lnet/minecraft/client/gui/font/FontSet$SelectedGlyphs;
 		ARG 1 character
 	METHOD getGlyph (I)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
 		ARG 1 character
@@ -13,6 +20,9 @@ CLASS net/minecraft/client/gui/font/FontSet
 		ARG 2 filterFishyGlyphs
 	METHOD getRandomGlyph (Lcom/mojang/blaze3d/font/GlyphInfo;)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
 		ARG 1 glyph
+	METHOD getRandomGlyph (Lnet/minecraft/util/RandomSource;I)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
+		ARG 1 random
+		ARG 2 width
 	METHOD hasFishyAdvance (Lcom/mojang/blaze3d/font/GlyphInfo;)Z
 		ARG 0 glyph
 	METHOD reload (Ljava/util/List;Ljava/util/Set;)V
@@ -23,8 +33,19 @@ CLASS net/minecraft/client/gui/font/FontSet
 	METHOD selectProviders (Ljava/util/List;Ljava/util/Set;)Ljava/util/List;
 		ARG 1 providers
 		ARG 2 options
+	METHOD source (Z)Lnet/minecraft/client/gui/GlyphSource;
+		ARG 1 filterFishyGlyphs
 	METHOD stitch (Lcom/mojang/blaze3d/font/SheetGlyphInfo;)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
 		ARG 1 glyphInfo
+	CLASS BakeableGlyphImpl
+		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Lcom/mojang/blaze3d/font/GlyphInfo;)V
+			ARG 2 info
 	CLASS GlyphInfoFilter
 		METHOD select (Z)Lcom/mojang/blaze3d/font/GlyphInfo;
 			ARG 1 filterFishyGlyphs
+	CLASS SelectedGlyphs
+		METHOD select (Z)Lnet/minecraft/client/gui/font/FontSet$BakeableGlyphImpl;
+			ARG 1 filterFishy
+	CLASS Source
+		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Z)V
+			ARG 2 filterFishyGlyphs

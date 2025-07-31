@@ -2,6 +2,10 @@ CLASS net/minecraft/client/renderer/ScreenEffectRenderer
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/MultiBufferSource;)V
 		ARG 1 minecraft
 		ARG 2 bufferSource
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/renderer/MultiBufferSource;)V
+		ARG 1 minecraft
+		ARG 2 materials
+		ARG 3 bufferSource
 	METHOD displayItemActivation (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/util/RandomSource;)V
 		ARG 1 item
 		ARG 2 random
@@ -10,6 +14,10 @@ CLASS net/minecraft/client/renderer/ScreenEffectRenderer
 	METHOD renderFire (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;)V
 		ARG 0 poseStack
 		ARG 1 bufferSource
+	METHOD renderFire (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
+		ARG 0 poseStack
+		ARG 1 bufferSource
+		ARG 2 sprite
 	METHOD renderItemActivationAnimation (Lcom/mojang/blaze3d/vertex/PoseStack;F)V
 		ARG 1 poseStack
 		ARG 2 partialTick

@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/renderer/special/ShieldSpecialRenderer
 	METHOD <init> (Lnet/minecraft/client/model/ShieldModel;)V
 		ARG 1 model
+	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/model/ShieldModel;)V
+		ARG 1 materials
+		ARG 2 model

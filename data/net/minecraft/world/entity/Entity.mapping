@@ -436,6 +436,10 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD killedEntity (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 level
 		ARG 2 entity
+	METHOD killedEntity (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;)Z
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 damageSource
 	METHOD lambda$checkFallDamage$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 supportingPos
 	METHOD lambda$checkInsideBlocks$0 (Lit/unimi/dsi/fastutil/longs/LongSet;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/InsideBlockEffectApplier$StepBasedCollector;Lnet/minecraft/core/BlockPos;I)Z
@@ -772,6 +776,10 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD startRiding (Lnet/minecraft/world/entity/Entity;Z)Z
 		ARG 1 vehicle
 		ARG 2 force
+	METHOD startRiding (Lnet/minecraft/world/entity/Entity;ZZ)Z
+		ARG 1 vehicle
+		ARG 2 force
+		ARG 3 sendGameEvent
 	METHOD startSeenByPlayer (Lnet/minecraft/server/level/ServerPlayer;)V
 		COMMENT Add the given player to the list of players tracking this entity. For instance, a player may track a boss in order to view its associated boss bar.
 		ARG 1 serverPlayer
@@ -845,11 +853,11 @@ CLASS net/minecraft/world/entity/Entity
 			ARG 2 x
 			ARG 4 y
 			ARG 6 z
-	CLASS RemovalReason
-		METHOD <init> (Ljava/lang/String;IZZ)V
-			ARG 3 destroy
-			ARG 4 save
 	CLASS MovementEmission
 		METHOD <init> (Ljava/lang/String;IZZ)V
 			ARG 3 sounds
 			ARG 4 events
+	CLASS RemovalReason
+		METHOD <init> (Ljava/lang/String;IZZ)V
+			ARG 3 destroy
+			ARG 4 save

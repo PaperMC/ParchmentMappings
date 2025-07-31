@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/GlyphSource
+	METHOD getGlyph (I)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
+		ARG 1 character
+	METHOD getRandomGlyph (Lnet/minecraft/util/RandomSource;I)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
+		ARG 1 random
+		ARG 2 width

@@ -12,6 +12,18 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 11 customSpawners
 		ARG 12 tickTime
 		ARG 13 randomSequences
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/world/level/storage/ServerLevelData;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/dimension/LevelStem;ZJLjava/util/List;ZLnet/minecraft/world/RandomSequences;)V
+		ARG 1 server
+		ARG 2 dispatcher
+		ARG 3 storageSource
+		ARG 4 levelData
+		ARG 5 dimension
+		ARG 6 levelStem
+		ARG 7 isDebug
+		ARG 8 biomeZoomSeed
+		ARG 10 customSpawners
+		ARG 11 tickTime
+		ARG 12 randomSequences
 	METHOD addDuringTeleport (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD addEntity (Lnet/minecraft/world/entity/Entity;)Z
@@ -280,5 +292,8 @@ CLASS net/minecraft/server/level/ServerLevel
 	METHOD updateSleepingPlayerList ()V
 		COMMENT Updates the flag that indicates whether all players in the world are sleeping.
 	METHOD waitForChunkAndEntities (Lnet/minecraft/world/level/ChunkPos;I)V
+		ARG 1 chunkPos
+		ARG 2 radius
+	METHOD waitForEntities (Lnet/minecraft/world/level/ChunkPos;I)V
 		ARG 1 chunkPos
 		ARG 2 radius

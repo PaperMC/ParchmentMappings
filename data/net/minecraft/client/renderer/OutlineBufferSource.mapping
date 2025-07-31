@@ -1,6 +1,8 @@
 CLASS net/minecraft/client/renderer/OutlineBufferSource
 	METHOD <init> (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 bufferSource
+	METHOD setColor (I)V
+		ARG 1 color
 	METHOD setColor (IIII)V
 		ARG 1 red
 		ARG 2 green

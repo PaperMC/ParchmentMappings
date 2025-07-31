@@ -23,5 +23,9 @@ CLASS net/minecraft/client/model/geom/builders/PartDefinition
 		ARG 1 modelPart
 	METHOD lambda$bake$2 (IILnet/minecraft/client/model/geom/builders/CubeDefinition;)Lnet/minecraft/client/model/geom/ModelPart$Cube;
 		ARG 2 cube
+	METHOD retainExactParts (Ljava/util/Set;)V
+		ARG 1 parts
+	METHOD retainPartsAndChildren (Ljava/util/Set;)V
+		ARG 1 parts
 	METHOD transformed (Ljava/util/function/UnaryOperator;)Lnet/minecraft/client/model/geom/builders/PartDefinition;
 		ARG 1 transformer

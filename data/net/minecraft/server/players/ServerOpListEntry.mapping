@@ -5,6 +5,10 @@ CLASS net/minecraft/server/players/ServerOpListEntry
 		ARG 1 user
 		ARG 2 level
 		ARG 3 bypassesPlayerLimit
+	METHOD <init> (Lnet/minecraft/server/players/NameAndId;IZ)V
+		ARG 1 user
+		ARG 2 level
+		ARG 3 bypassesPlayerLimit
 	METHOD createGameProfile (Lcom/google/gson/JsonObject;)Lcom/mojang/authlib/GameProfile;
 		ARG 0 profileData
 	METHOD getLevel ()I

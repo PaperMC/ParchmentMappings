@@ -1,0 +1,30 @@
+CLASS net/minecraft/client/resources/model/AtlasManager
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;I)V
+		ARG 1 textureManager
+		ARG 2 maxMipmapLevels
+	METHOD getAtlas (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/TextureAtlas;
+		ARG 1 name
+	METHOD getAtlasEntry (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/AtlasManager$AtlasEntry;
+		ARG 1 name
+	METHOD updateMaxMipLevel (I)V
+		ARG 1 maxMipLevel
+	CLASS AtlasConfig
+		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Z)V
+			ARG 1 textureId
+			ARG 2 definitionLocation
+			ARG 3 createMipmaps
+	CLASS AtlasEntry
+		METHOD scheduleLoad (Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;I)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 resourceManager
+			ARG 2 executor
+			ARG 3 mipLevel
+	CLASS PendingStitch
+		METHOD joinAndUpload (Ljava/util/Map;)V
+			ARG 1 output
+	CLASS PendingStitchResults
+		METHOD <init> (Ljava/util/List;Ljava/util/Map;Ljava/util/concurrent/CompletableFuture;)V
+			ARG 1 pendingStitches
+			ARG 2 stitchFutureById
+			ARG 3 allReadyToUpload
+		METHOD get (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 id

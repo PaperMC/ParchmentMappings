@@ -12,3 +12,8 @@ CLASS net/minecraft/client/renderer/item/properties/numeric/Time
 			ARG 2 stack
 			ARG 3 entity
 			ARG 4 random
+		METHOD get (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/ItemOwner;Lnet/minecraft/util/RandomSource;)F
+			ARG 1 level
+			ARG 2 stack
+			ARG 3 owner
+			ARG 4 random

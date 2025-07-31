@@ -6,3 +6,5 @@ CLASS net/minecraft/server/players/UserBanList
 		ARG 1 obj
 	METHOD isBanned (Lcom/mojang/authlib/GameProfile;)Z
 		ARG 1 profile
+	METHOD isBanned (Lnet/minecraft/server/players/NameAndId;)Z
+		ARG 1 user

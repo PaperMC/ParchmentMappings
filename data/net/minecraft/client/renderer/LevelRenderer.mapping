@@ -4,6 +4,13 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 2 entityRenderDispatcher
 		ARG 3 blockEntityRenderDispatcher
 		ARG 4 renderBuffers
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/entity/EntityRenderDispatcher;Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;Lnet/minecraft/client/renderer/RenderBuffers;Lnet/minecraft/client/renderer/LevelRenderState;Lnet/minecraft/client/renderer/feature/FeatureRenderDispatcher;)V
+		ARG 1 minecraft
+		ARG 2 entityRenderDispatcher
+		ARG 3 blockEntityRenderDispatcher
+		ARG 4 renderBuffers
+		ARG 5 levelRenderState
+		ARG 6 featureRenderDispatcher
 	METHOD addCloudsPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/CloudStatus;Lnet/minecraft/world/phys/Vec3;FIF)V
 		ARG 1 frameGraphBuilder
 		ARG 2 cloudStatus
@@ -15,6 +22,16 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 frameGraphBuilder
 		ARG 2 cameraPosition
 		ARG 3 shaderFog
+	METHOD addMainPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/Camera;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;ZLnet/minecraft/client/renderer/LevelRenderState;Lnet/minecraft/client/DeltaTracker;Lnet/minecraft/util/profiling/ProfilerFiller;)V
+		ARG 1 frameGraphBuilder
+		ARG 2 frustum
+		ARG 3 camera
+		ARG 4 frustumMatrix
+		ARG 5 shaderFof
+		ARG 6 renderBlockOutline
+		ARG 7 renderState
+		ARG 8 deltaTracker
+		ARG 9 profiler
 	METHOD addMainPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/Camera;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;ZZLnet/minecraft/client/DeltaTracker;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 frameGraphBuilder
 		ARG 2 frustum
@@ -122,6 +139,14 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 3 progress
 	METHOD doesMobEffectBlockSky (Lnet/minecraft/client/Camera;)Z
 		ARG 1 camera
+	METHOD extractEntity (Lnet/minecraft/world/entity/Entity;F)Lnet/minecraft/client/renderer/entity/state/EntityRenderState;
+		ARG 1 entity
+		ARG 2 partialTick
+	METHOD extractVisibleEntities (Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/DeltaTracker;Lnet/minecraft/client/renderer/LevelRenderState;)V
+		ARG 1 camera
+		ARG 2 frustum
+		ARG 3 deltaTracker
+		ARG 4 renderState
 	METHOD getEntityStatistics ()Ljava/lang/String;
 		COMMENT @return entity rendering statistics to display on the {@linkplain net.minecraft.client.gui.components.DebugScreenOverlay debug overlay}
 	METHOD getLightColor (Lnet/minecraft/client/renderer/LevelRenderer$BrightnessGetter;Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)I
@@ -260,6 +285,11 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 4 isSpectator
 	METHOD shouldRenderDarkDisc (F)Z
 		ARG 1 partialTick
+	METHOD submitEntities (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/LevelRenderState;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 poseStack
+		ARG 2 camera
+		ARG 3 renderState
+		ARG 4 nodeCollector
 	METHOD tickParticles (Lnet/minecraft/client/Camera;)V
 		ARG 1 camera
 	CLASS BrightnessGetter

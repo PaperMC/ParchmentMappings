@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/level/block/CopperChestBlock
+	METHOD <init> (Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+		ARG 1 weatherState
+		ARG 2 openSound
+		ARG 3 closeSound
+		ARG 4 properties
+	METHOD getFromCopperBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
+		ARG 0 block
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD unwaxBlock (Lnet/minecraft/world/level/block/CopperChestBlock;Lnet/minecraft/world/level/block/state/BlockState;)Ljava/util/Optional;
+		ARG 1 block
+		ARG 2 state

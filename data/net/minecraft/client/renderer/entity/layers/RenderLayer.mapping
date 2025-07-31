@@ -9,6 +9,15 @@ CLASS net/minecraft/client/renderer/entity/layers/RenderLayer
 		ARG 4 packedLight
 		ARG 5 renderState
 		ARG 6 color
+	METHOD coloredCutoutModelCopyLayerRender (Lnet/minecraft/client/model/Model;Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;II)V
+		ARG 0 model
+		ARG 1 textureLocation
+		ARG 2 poseStack
+		ARG 3 nodeCollector
+		ARG 4 packedLight
+		ARG 5 renderState
+		ARG 6 tintColor
+		ARG 7 outlineColor
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/renderer/entity/state/EntityRenderState;FF)V
 		ARG 1 poseStack
 		ARG 2 bufferSource
@@ -24,3 +33,19 @@ CLASS net/minecraft/client/renderer/entity/layers/RenderLayer
 		ARG 4 packedLight
 		ARG 5 renderState
 		ARG 6 color
+	METHOD renderColoredCutoutModel (Lnet/minecraft/client/model/Model;Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;II)V
+		ARG 0 model
+		ARG 1 textureLocation
+		ARG 2 poseStack
+		ARG 3 nodeCollector
+		ARG 4 packedLight
+		ARG 5 renderState
+		ARG 6 tintColor
+		ARG 7 outlineColor
+	METHOD submit (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/EntityRenderState;FF)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 renderState
+		ARG 5 yRot
+		ARG 6 xRot

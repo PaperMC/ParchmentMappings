@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/particle/ParticleEngine
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;)V
+		ARG 1 level
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/texture/TextureManager;)V
 		ARG 1 level
 		ARG 2 textureManager

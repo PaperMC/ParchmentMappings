@@ -3,6 +3,11 @@ CLASS net/minecraft/client/renderer/blockentity/BedRenderer
 		ARG 1 modelSet
 	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
 		ARG 1 context
+	METHOD <init> (Lnet/minecraft/client/renderer/special/SpecialModelRenderer$BakingContext;)V
+		ARG 1 context
+	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/model/geom/EntityModelSet;)V
+		ARG 1 materials
+		ARG 2 modelSet
 	METHOD getExtents (Ljava/util/Set;)V
 		ARG 1 output
 	METHOD lambda$render$0 (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Z
@@ -18,6 +23,15 @@ CLASS net/minecraft/client/renderer/blockentity/BedRenderer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 		ARG 5 material
+	METHOD renderPiece (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZ)V
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 model
+		ARG 4 direction
+		ARG 5 material
+		ARG 6 packedLight
+		ARG 7 packedOverlay
+		ARG 8 isFeet
 	METHOD renderPiece (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/model/Model;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZ)V
 		ARG 1 poseStack
 		ARG 2 bufferSource

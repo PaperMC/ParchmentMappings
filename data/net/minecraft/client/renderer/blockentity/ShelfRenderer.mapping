@@ -1,0 +1,15 @@
+CLASS net/minecraft/client/renderer/blockentity/ShelfRenderer
+	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
+		ARG 1 context
+	METHOD renderItem (Lnet/minecraft/world/level/block/entity/ShelfBlockEntity;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IIILnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;FLnet/minecraft/world/item/ItemStack;I)V
+		ARG 1 blockEntity
+		ARG 2 poseStack
+		ARG 3 bufferSource
+		ARG 4 packedLight
+		ARG 5 packedOverlay
+		ARG 6 index
+		ARG 7 pos
+		ARG 8 direction
+		ARG 9 rotation
+		ARG 10 stack
+		ARG 11 seed

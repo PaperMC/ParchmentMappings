@@ -14,3 +14,5 @@ CLASS net/minecraft/client/renderer/special/SpecialModelRenderer
 	CLASS Unbaked
 		METHOD bake (Lnet/minecraft/client/model/geom/EntityModelSet;)Lnet/minecraft/client/renderer/special/SpecialModelRenderer;
 			ARG 1 modelSet
+		METHOD bake (Lnet/minecraft/client/renderer/special/SpecialModelRenderer$BakingContext;)Lnet/minecraft/client/renderer/special/SpecialModelRenderer;
+			ARG 1 context

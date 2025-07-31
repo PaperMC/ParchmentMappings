@@ -7,6 +7,14 @@ CLASS net/minecraft/client/server/IntegratedServer
 		ARG 5 worldStem
 		ARG 6 services
 		ARG 7 progressListenerFactory
+	METHOD <init> (Ljava/lang/Thread;Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/LevelLoadListener;)V
+		ARG 1 serverThread
+		ARG 2 minecraft
+		ARG 3 storageSource
+		ARG 4 packRepository
+		ARG 5 worldStem
+		ARG 6 services
+		ARG 7 levelLoadListener
 	METHOD getPort ()I
 		COMMENT Gets serverPort.
 	METHOD halt (Z)V

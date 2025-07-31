@@ -47,6 +47,8 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 			ARG 5 minY
 			ARG 6 height
 			ARG 7 globalFluidPicker
+		METHOD adjustSurfaceLevel (I)I
+			ARG 1 level
 		METHOD calculatePressure (Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;Lorg/apache/commons/lang3/mutable/MutableDouble;Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;)D
 			ARG 1 context
 			ARG 2 substance
@@ -74,6 +76,17 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 			ARG 4 fluidStatus
 			ARG 5 maxSurfaceLevel
 			ARG 6 fluidPresent
+		METHOD fromGridX (II)I
+			ARG 0 gridX
+			ARG 1 offset
+		METHOD fromGridY (II)I
+			ARG 0 gridY
+			ARG 1 offset
+		METHOD fromGridZ (II)I
+			ARG 0 gridZ
+			ARG 1 offset
+		METHOD getAquiferStatus (I)Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;
+			ARG 1 index
 		METHOD getAquiferStatus (J)Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;
 			COMMENT Calculates the aquifer at a given location. Internally references a cache using the grid positions as an index. If the cache is not populated, computes a new aquifer at that grid location using {@link #computeFluid}.
 			ARG 1 packedPos
@@ -84,11 +97,11 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 			ARG 2 gridY
 			ARG 3 gridZ
 		METHOD gridX (I)I
-			ARG 1 x
+			ARG 0 x
 		METHOD gridY (I)I
-			ARG 1 y
+			ARG 0 y
 		METHOD gridZ (I)I
-			ARG 1 z
+			ARG 0 z
 		METHOD similarity (II)D
 			COMMENT Compares two distances (between aquifers).
 			COMMENT @return {@code 1.0} if the distances are equal, and returns smaller values the more different in absolute value the two distances are.

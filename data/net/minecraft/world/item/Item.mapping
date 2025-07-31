@@ -199,6 +199,8 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 material
 			ARG 2 attackDamage
 			ARG 3 attackSpeed
+		METHOD spawnEgg (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 entityType
 		METHOD stacksTo (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 maxStackSize
 		METHOD sword (Lnet/minecraft/world/item/ToolMaterial;FF)Lnet/minecraft/world/item/Item$Properties;

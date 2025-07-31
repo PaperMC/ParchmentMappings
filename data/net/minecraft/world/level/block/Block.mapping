@@ -69,9 +69,22 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
+	METHOD dropFromBlockInteractLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Ljava/util/function/BiConsumer;)Z
+		ARG 0 level
+		ARG 1 lootTable
+		ARG 2 state
+		ARG 3 blockEntity
+		ARG 4 tool
+		ARG 5 entity
+		ARG 6 dropConsumer
 	METHOD dropFromExplosion (Lnet/minecraft/world/level/Explosion;)Z
 		COMMENT @return whether this block should drop its drops when destroyed by the given explosion
 		ARG 1 explosion
+	METHOD dropFromLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;Ljava/util/function/BiConsumer;)Z
+		ARG 0 level
+		ARG 1 lootTable
+		ARG 2 params
+		ARG 3 dropConsumer
 	METHOD dropResources (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 state
 		ARG 1 level

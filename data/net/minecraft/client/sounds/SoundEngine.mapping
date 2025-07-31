@@ -146,6 +146,8 @@ CLASS net/minecraft/client/sounds/SoundEngine
 	METHOD tick (Z)V
 		COMMENT Ticks all active instances of  {@code TickableSoundInstance}
 		ARG 1 isGamePaused
+	METHOD updateCategoryVolume (Lnet/minecraft/sounds/SoundSource;)V
+		ARG 1 category
 	METHOD updateCategoryVolume (Lnet/minecraft/sounds/SoundSource;F)V
 		COMMENT Updates the volume for a specific sound category.
 		COMMENT <p>

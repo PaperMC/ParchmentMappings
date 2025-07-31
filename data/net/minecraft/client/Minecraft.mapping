@@ -135,6 +135,8 @@ CLASS net/minecraft/client/Minecraft
 		ARG 1 viewingEntity
 	METHOD setLastInputType (Lnet/minecraft/client/InputType;)V
 		ARG 1 lastInputType
+	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
+		ARG 1 level
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 level
 		ARG 2 reason

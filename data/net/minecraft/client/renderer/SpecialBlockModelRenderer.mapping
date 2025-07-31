@@ -10,3 +10,5 @@ CLASS net/minecraft/client/renderer/SpecialBlockModelRenderer
 		ARG 6 packedOverlay
 	METHOD vanilla (Lnet/minecraft/client/model/geom/EntityModelSet;)Lnet/minecraft/client/renderer/SpecialBlockModelRenderer;
 		ARG 0 modelSet
+	METHOD vanilla (Lnet/minecraft/client/renderer/special/SpecialModelRenderer$BakingContext;)Lnet/minecraft/client/renderer/SpecialBlockModelRenderer;
+		ARG 0 context

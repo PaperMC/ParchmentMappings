@@ -7,3 +7,5 @@ CLASS net/minecraft/server/players/UserWhiteList
 	METHOD isWhiteListed (Lcom/mojang/authlib/GameProfile;)Z
 		COMMENT Returns {@code true} if the profile is in the whitelist.
 		ARG 1 profile
+	METHOD isWhiteListed (Lnet/minecraft/server/players/NameAndId;)Z
+		ARG 1 user

@@ -35,6 +35,16 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 		ARG 1 entity
 		ARG 2 reusedState
 		ARG 3 partialTick
+	METHOD extractShadow (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/Level;)V
+		ARG 1 renderState
+		ARG 2 minecraft
+		ARG 3 level
+	METHOD extractShadowPiece (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/world/level/Level;FLnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/chunk/ChunkAccess;)V
+		ARG 1 renderState
+		ARG 2 level
+		ARG 3 shadowStrength
+		ARG 4 pos
+		ARG 5 chunk
 	METHOD getBlockLightLevel (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 entity
 		ARG 2 pos
@@ -82,3 +92,11 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 	METHOD shouldShowName (Lnet/minecraft/world/entity/Entity;D)Z
 		ARG 1 entity
 		ARG 2 distanceToCameraSq
+	METHOD submit (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 renderState
+		ARG 2 poseStack
+		ARG 3 nodeCollector
+	METHOD submitNameTag (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 renderState
+		ARG 2 poseStack
+		ARG 3 nodeCollector

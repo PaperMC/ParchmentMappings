@@ -4,3 +4,6 @@ CLASS net/minecraft/server/packs/repository/PackCompatibility
 	METHOD forVersion (Lnet/minecraft/util/InclusiveRange;I)Lnet/minecraft/server/packs/repository/PackCompatibility;
 		ARG 0 range
 		ARG 1 version
+	METHOD forVersion (Lnet/minecraft/util/InclusiveRange;Lnet/minecraft/server/packs/metadata/pack/PackFormat;)Lnet/minecraft/server/packs/repository/PackCompatibility;
+		ARG 0 supportedVersions
+		ARG 1 currentVersion

@@ -68,6 +68,8 @@ CLASS net/minecraft/client/sounds/SoundManager
 		COMMENT Updates the sound source position based on the active render info.
 		ARG 1 activeRenderInfo
 			COMMENT The active render info
+	METHOD updateSourceVolume (Lnet/minecraft/sounds/SoundSource;)V
+		ARG 1 source
 	METHOD updateSourceVolume (Lnet/minecraft/sounds/SoundSource;F)V
 		COMMENT Updates the volume of the specified sound source category.
 		ARG 1 category

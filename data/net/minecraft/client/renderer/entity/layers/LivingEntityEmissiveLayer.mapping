@@ -1,4 +1,11 @@
 CLASS net/minecraft/client/renderer/entity/layers/LivingEntityEmissiveLayer
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Ljava/util/function/Function;Lnet/minecraft/client/renderer/entity/layers/LivingEntityEmissiveLayer$AlphaFunction;Lnet/minecraft/client/model/EntityModel;Ljava/util/function/Function;Z)V
+		ARG 1 renderer
+		ARG 2 textureProvider
+		ARG 3 alphaFunction
+		ARG 4 model
+		ARG 5 bufferProvider
+		ARG 6 alwaysVisible
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/entity/layers/LivingEntityEmissiveLayer$AlphaFunction;Lnet/minecraft/client/renderer/entity/layers/LivingEntityEmissiveLayer$DrawSelector;Ljava/util/function/Function;Z)V
 		ARG 1 renderer
 		ARG 2 texture
@@ -14,11 +21,11 @@ CLASS net/minecraft/client/renderer/entity/layers/LivingEntityEmissiveLayer
 		ARG 0 part
 	METHOD onlyDrawSelectedParts (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Z
 		ARG 1 renderState
-	CLASS DrawSelector
-		METHOD getPartsToDraw (Lnet/minecraft/client/model/EntityModel;Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Ljava/util/List;
-			ARG 1 model
-			ARG 2 renderState
 	CLASS AlphaFunction
 		METHOD apply (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;F)F
 			ARG 1 renderState
 			ARG 2 alpha
+	CLASS DrawSelector
+		METHOD getPartsToDraw (Lnet/minecraft/client/model/EntityModel;Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Ljava/util/List;
+			ARG 1 model
+			ARG 2 renderState

@@ -3,6 +3,8 @@ CLASS net/minecraft/data/loot/packs/VanillaBlockLoot
 		ARG 1 registries
 	METHOD createDecoratedPotTable (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
+	METHOD createMobSkullDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
+		ARG 1 block
 	METHOD lambda$generate$0 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 	METHOD lambda$generate$10 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;

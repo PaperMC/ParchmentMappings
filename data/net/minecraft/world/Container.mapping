@@ -43,6 +43,8 @@ CLASS net/minecraft/world/Container
 		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 		ARG 1 slot
 		ARG 2 stack
+	METHOD startOpen (Lnet/minecraft/world/entity/ContainerUser;)V
+		ARG 1 user
 	METHOD startOpen (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
@@ -55,5 +57,10 @@ CLASS net/minecraft/world/Container
 		ARG 0 blockEntity
 		ARG 1 player
 		ARG 2 distance
+	METHOD stopOpen (Lnet/minecraft/world/entity/ContainerUser;)V
+		ARG 1 user
 	METHOD stopOpen (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
+	CLASS ContainerIterator
+		METHOD <init> (Lnet/minecraft/world/Container;)V
+			ARG 1 container

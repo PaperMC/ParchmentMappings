@@ -16,5 +16,21 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 		ARG 1 profile
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD lambda$static$1 (Ljava/lang/String;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 0 name
+	METHOD setupResolver (Lnet/minecraft/server/Services;Ljava/util/concurrent/Executor;)V
+		ARG 0 services
+		ARG 1 mainThreadExecutor
+	CLASS Resolver
+		METHOD <init> (Lnet/minecraft/server/Services;)V
+			ARG 1 services
+		METHOD fetchProfile (Lnet/minecraft/world/item/component/ResolvableProfile;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 profile
+		CLASS 1
+			METHOD load (Ljava/lang/Object;)Ljava/lang/Object;
+				ARG 1 uuid
+		CLASS 2
+			METHOD load (Ljava/lang/Object;)Ljava/lang/Object;
+				ARG 1 username

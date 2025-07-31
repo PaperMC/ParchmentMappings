@@ -34,6 +34,8 @@ CLASS net/minecraft/world/level/levelgen/NoiseRouterData
 	METHOD noodle (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 densityFunctions
 		ARG 1 noiseParameters
+	METHOD offsetToDepth (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
+		ARG 0 depth
 	METHOD overworld (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;ZZ)Lnet/minecraft/world/level/levelgen/NoiseRouter;
 		ARG 0 densityFunctionRegistry
 		ARG 1 noiseParameters
@@ -47,6 +49,10 @@ CLASS net/minecraft/world/level/levelgen/NoiseRouterData
 		ARG 0 noiseParameters
 	METHOD postProcess (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 densityFunction
+	METHOD preliminarySurfaceLevel (Lnet/minecraft/world/level/levelgen/DensityFunction;Lnet/minecraft/world/level/levelgen/DensityFunction;Z)Lnet/minecraft/world/level/levelgen/DensityFunction;
+		ARG 0 offset
+		ARG 1 factor
+		ARG 2 amplified
 	METHOD registerAndWrap (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 context
 		ARG 1 key
@@ -63,6 +69,12 @@ CLASS net/minecraft/world/level/levelgen/NoiseRouterData
 		ARG 8 depthKey
 		ARG 9 slopedCheeseKey
 		ARG 10 amplified
+	METHOD remap (Lnet/minecraft/world/level/levelgen/DensityFunction;DDDD)Lnet/minecraft/world/level/levelgen/DensityFunction;
+		ARG 0 function
+		ARG 1 inMin
+		ARG 3 inMax
+		ARG 5 outMin
+		ARG 7 outMax
 	METHOD slide (Lnet/minecraft/world/level/levelgen/DensityFunction;IIIIDIID)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 input
 		ARG 1 minY

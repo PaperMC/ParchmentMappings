@@ -19,3 +19,5 @@ CLASS net/minecraft/util/InclusiveRange
 		ARG 1 value
 	METHOD lambda$codec$2 (Ljava/lang/Comparable;Ljava/lang/Comparable;Lnet/minecraft/util/InclusiveRange;)Lcom/mojang/serialization/DataResult;
 		ARG 2 value
+	METHOD map (Ljava/util/function/Function;)Lnet/minecraft/util/InclusiveRange;
+		ARG 1 mapper

@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/CopperGolemModel
+	METHOD poseStatue (Lnet/minecraft/core/Direction;)V
+		ARG 1 direction

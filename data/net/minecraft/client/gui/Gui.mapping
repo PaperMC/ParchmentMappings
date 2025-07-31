@@ -121,6 +121,8 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD renderCrosshair (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
+	METHOD renderDebugOverlay (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
 	METHOD renderDebugOverlay (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
@@ -216,6 +218,9 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD renderSubtitleOverlay (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
+	METHOD renderSubtitleOverlay (Lnet/minecraft/client/gui/GuiGraphics;Z)V
+		ARG 1 guiGraphics
+		ARG 2 deferred
 	METHOD renderTabList (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker

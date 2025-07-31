@@ -16,6 +16,15 @@ CLASS net/minecraft/client/model/HumanoidModel
 		ARG 2 renderType
 	METHOD copyPropertiesTo (Lnet/minecraft/client/model/HumanoidModel;)V
 		ARG 1 model
+	METHOD createArmorMeshSet (Ljava/util/function/Function;Lnet/minecraft/client/model/geom/builders/CubeDeformation;Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/renderer/entity/ArmorModelSet;
+		ARG 0 meshCreator
+		ARG 1 innerCubeDeformation
+		ARG 2 outerCubeDeformation
+	METHOD createArmorMeshSet (Lnet/minecraft/client/model/geom/builders/CubeDeformation;Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/renderer/entity/ArmorModelSet;
+		ARG 0 innerArmorCubeDeformation
+		ARG 1 outerArmorCubeDeformation
+	METHOD createBaseArmorMesh (Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/model/geom/builders/MeshDefinition;
+		ARG 0 cubeDeformation
 	METHOD createMesh (Lnet/minecraft/client/model/geom/builders/CubeDeformation;F)Lnet/minecraft/client/model/geom/builders/MeshDefinition;
 		ARG 0 cubeDeformation
 		ARG 1 yOffset

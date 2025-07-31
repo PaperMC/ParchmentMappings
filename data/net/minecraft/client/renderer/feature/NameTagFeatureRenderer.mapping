@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/renderer/feature/NameTagFeatureRenderer
+	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeStorage;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/gui/Font;)V
+		ARG 1 nodeStorage
+		ARG 2 bufferSource
+		ARG 3 font

@@ -208,6 +208,8 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 message
 	METHOD destroyBlock (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
+	METHOD fail (Ljava/lang/String;)V
+		ARG 1 message
 	METHOD fail (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 message
 	METHOD fail (Lnet/minecraft/network/chat/Component;Lnet/minecraft/core/BlockPos;)V
@@ -364,9 +366,17 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 pos
 		ARG 2 block
+	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;)V
+		ARG 1 pos
+		ARG 2 block
+		ARG 3 facing
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state
+	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)V
+		ARG 1 pos
+		ARG 2 state
+		ARG 3 facing
 	METHOD setDayTime (I)V
 		ARG 1 time
 	METHOD spawn (Lnet/minecraft/world/entity/EntityType;FFF)Lnet/minecraft/world/entity/Entity;
@@ -382,9 +392,17 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 	METHOD spawn (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 type
 		ARG 2 pos
+	METHOD spawn (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/core/BlockPos;I)Ljava/util/List;
+		ARG 1 type
+		ARG 2 pos
+		ARG 3 count
 	METHOD spawn (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 type
 		ARG 2 pos
+	METHOD spawn (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/phys/Vec3;I)Ljava/util/List;
+		ARG 1 type
+		ARG 2 pos
+		ARG 3 count
 	METHOD spawnItem (Lnet/minecraft/world/item/Item;FFF)Lnet/minecraft/world/entity/item/ItemEntity;
 		ARG 1 item
 		ARG 2 x

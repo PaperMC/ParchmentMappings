@@ -3,6 +3,10 @@ CLASS net/minecraft/world/level/levelgen/Beardifier
 	METHOD <init> (Lit/unimi/dsi/fastutil/objects/ObjectListIterator;Lit/unimi/dsi/fastutil/objects/ObjectListIterator;)V
 		ARG 1 pieceIterator
 		ARG 2 junctionIterator
+	METHOD <init> (Ljava/util/List;Ljava/util/List;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
+		ARG 1 pieces
+		ARG 2 junctions
+		ARG 3 affectedBox
 	METHOD computeBeardContribution (IDI)D
 		ARG 0 x
 		ARG 1 y
@@ -23,6 +27,9 @@ CLASS net/minecraft/world/level/levelgen/Beardifier
 		ARG 0 x
 		ARG 2 y
 		ARG 4 z
+	METHOD includeBoundingBox (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
+		ARG 0 current
+		ARG 1 toInclude
 	METHOD isInKernelRange (I)Z
 		ARG 0 value
 	METHOD lambda$static$0 ([F)V

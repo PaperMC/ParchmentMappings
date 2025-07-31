@@ -7,6 +7,15 @@ CLASS net/minecraft/gametest/framework/GameTestRunner
 		ARG 5 existingStructureSpawner
 		ARG 6 newStructureSpawner
 		ARG 7 haltOnError
+	METHOD <init> (Lnet/minecraft/gametest/framework/GameTestRunner$GameTestBatcher;Ljava/util/Collection;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/gametest/framework/GameTestTicker;Lnet/minecraft/gametest/framework/GameTestRunner$StructureSpawner;Lnet/minecraft/gametest/framework/GameTestRunner$StructureSpawner;ZZ)V
+		ARG 1 testBatcher
+		ARG 2 batches
+		ARG 3 level
+		ARG 4 testTicker
+		ARG 5 existingStructureSpawner
+		ARG 6 newStructureSpawner
+		ARG 7 haltOnError
+		ARG 8 clearBetweenBatches
 	METHOD addListener (Lnet/minecraft/gametest/framework/GameTestBatchListener;)V
 		ARG 1 listener
 	METHOD clearMarkers (Lnet/minecraft/server/level/ServerLevel;)V

@@ -5,6 +5,13 @@ CLASS net/minecraft/client/resources/model/ModelBakery
 		ARG 3 clientInfos
 		ARG 4 resolvedModels
 		ARG 5 missingModel
+	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/MaterialSet;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/client/resources/model/ResolvedModel;)V
+		ARG 1 entityModelSet
+		ARG 2 materials
+		ARG 3 unbakedBlockStateModels
+		ARG 4 clientInfos
+		ARG 5 resolvedModels
+		ARG 6 missingModel
 	METHOD bakeModels (Lnet/minecraft/client/resources/model/SpriteGetter;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 sprites
 		ARG 2 executor

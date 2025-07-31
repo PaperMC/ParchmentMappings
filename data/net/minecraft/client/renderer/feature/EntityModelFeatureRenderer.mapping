@@ -1,0 +1,10 @@
+CLASS net/minecraft/client/renderer/feature/EntityModelFeatureRenderer
+	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeStorage;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/OutlineBufferSource;)V
+		ARG 1 nodeStoage
+		ARG 2 bufferSource
+		ARG 3 outlineBufferSource
+	METHOD renderModel (Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/OutlineBufferSource;)V
+		ARG 1 submit
+		ARG 2 renderType
+		ARG 3 consumer
+		ARG 4 outlineBufferSource

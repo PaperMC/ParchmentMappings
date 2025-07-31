@@ -12,6 +12,10 @@ CLASS net/minecraft/world/level/TicketStorage
 		ARG 1 ticketType
 		ARG 2 chunkPos
 		ARG 3 radius
+	METHOD canTicketExpire (Lnet/minecraft/server/level/ChunkMap;Lnet/minecraft/server/level/Ticket;J)Z
+		ARG 1 chunkMap
+		ARG 2 ticket
+		ARG 3 chunkPos
 	METHOD forEachTicket (Ljava/util/function/BiConsumer;)V
 		ARG 1 action
 	METHOD forEachTicket (Ljava/util/function/BiConsumer;Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap;)V
@@ -63,6 +67,9 @@ CLASS net/minecraft/world/level/TicketStorage
 	METHOD removeTicketIf (Ljava/util/function/BiPredicate;Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap;)V
 		ARG 1 predicate
 		ARG 2 tickets
+	METHOD removeTicketIf (Lnet/minecraft/world/level/TicketStorage$TicketPredicate;Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap;)V
+		ARG 1 predicate
+		ARG 2 tickets
 	METHOD removeTicketWithRadius (Lnet/minecraft/server/level/TicketType;Lnet/minecraft/world/level/ChunkPos;I)V
 		ARG 1 ticketType
 		ARG 2 chunkPos
@@ -82,3 +89,7 @@ CLASS net/minecraft/world/level/TicketStorage
 			ARG 1 chunkPos
 			ARG 3 ticketLevel
 			ARG 4 isDecreasing
+	CLASS TicketPredicate
+		METHOD test (Lnet/minecraft/server/level/Ticket;J)Z
+			ARG 1 ticket
+			ARG 2 chunkPos

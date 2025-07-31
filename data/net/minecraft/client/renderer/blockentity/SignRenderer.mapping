@@ -5,6 +5,10 @@ CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 		ARG 0 poseStack
 	METHOD createSignLayer (Z)Lnet/minecraft/client/model/geom/builders/LayerDefinition;
 		ARG 0 standingSign
+	METHOD createSignModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/state/properties/WoodType;Z)Lnet/minecraft/client/model/Model$Simple;
+		ARG 0 modelSet
+		ARG 1 woodType
+		ARG 2 standingSign
 	METHOD createSignModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/state/properties/WoodType;Z)Lnet/minecraft/client/model/Model;
 		ARG 0 modelSet
 		ARG 1 woodType
@@ -22,6 +26,14 @@ CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 		ARG 3 packedOverlay
 		ARG 4 model
 		ARG 5 material
+	METHOD renderInHand (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/resources/model/Material;)V
+		ARG 0 materials
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 model
+		ARG 6 material
 	METHOD translateBase (Lcom/mojang/blaze3d/vertex/PoseStack;F)V
 		ARG 0 poseStack
 		ARG 1 yRot

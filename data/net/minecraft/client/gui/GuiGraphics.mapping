@@ -336,6 +336,10 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the starting color of the gradient.
 		ARG 6 colorTo
 			COMMENT the ending color of the gradient.
+	METHOD getSprite (Lnet/minecraft/client/resources/model/Material;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
+		ARG 1 material
+	METHOD getSpriteScaling (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling;
+		ARG 0 sprite
 	METHOD guiHeight ()I
 		COMMENT {@return returns the height of the GUI screen in pixels}
 	METHOD guiWidth ()I
@@ -615,6 +619,14 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 3 y0
 		ARG 4 x1
 		ARG 5 y1
+	METHOD submitSignRenderState (Lnet/minecraft/client/model/Model$Simple;FLnet/minecraft/world/level/block/state/properties/WoodType;IIII)V
+		ARG 1 signModel
+		ARG 2 acale
+		ARG 3 woodType
+		ARG 4 x0
+		ARG 5 y0
+		ARG 6 x1
+		ARG 7 y1
 	METHOD submitSignRenderState (Lnet/minecraft/client/model/Model;FLnet/minecraft/world/level/block/state/properties/WoodType;IIII)V
 		ARG 1 signModel
 		ARG 2 scale

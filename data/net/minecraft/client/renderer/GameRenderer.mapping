@@ -3,6 +3,11 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 minecraft
 		ARG 2 itemInHandRenderer
 		ARG 3 renderBuffers
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/ItemInHandRenderer;Lnet/minecraft/client/renderer/RenderBuffers;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;)V
+		ARG 1 minecraft
+		ARG 2 itemInHandRenderer
+		ARG 3 renderBuffers
+		ARG 4 blockRenderDispatcher
 	METHOD bobHurt (Lcom/mojang/blaze3d/vertex/PoseStack;F)V
 		ARG 1 poseStack
 		ARG 2 partialTicks
