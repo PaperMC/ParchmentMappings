@@ -1,3 +1,5 @@
 CLASS com/mojang/blaze3d/font/GlyphProvider
+	METHOD getGlyph (I)Lcom/mojang/blaze3d/font/GlyphInfo$Stitched;
+		ARG 1 character
 	METHOD getGlyph (I)Lcom/mojang/blaze3d/font/GlyphInfo;
 		ARG 1 character

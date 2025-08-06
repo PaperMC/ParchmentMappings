@@ -73,6 +73,19 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 1 block
 		ARG 2 wallBlock
 		ARG 3 color
+	METHOD createBars (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 block
+		ARG 2 postEnds
+		ARG 3 post
+		ARG 4 cap
+		ARG 5 capAlt
+		ARG 6 postSide
+		ARG 7 postSideAlt
+	METHOD createBarsAndItem (Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 block
+	METHOD createBarsAndItem (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 block
+		ARG 2 waxedBlock
 	METHOD createBed (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/DyeColor;)V
 		ARG 1 block
 		ARG 2 particleBlock
@@ -116,10 +129,19 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 2 unlitPowered
 		ARG 3 lit
 		ARG 4 litPowered
+	METHOD createCopperChain (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 chain
+		ARG 2 waxed
+	METHOD createCopperChainItem (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;)V
+		ARG 1 item
+		ARG 2 waxedItem
 	METHOD createCopperGolemStatue (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;)V
 		ARG 1 statueBlock
 		ARG 2 copperBlock
 		ARG 3 weatherState
+	METHOD createCopperLantern (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 lanternBlock
+		ARG 2 waxed
 	METHOD createCoral (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 coralBlock
 		ARG 2 deadCoralBlock

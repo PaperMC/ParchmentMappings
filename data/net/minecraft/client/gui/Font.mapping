@@ -54,6 +54,8 @@ CLASS net/minecraft/client/gui/Font
 	METHOD getGlyph (ILnet/minecraft/network/chat/Style;)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
 		ARG 1 character
 		ARG 2 style
+	METHOD getGlyphSource (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
+		ARG 1 fontDescription
 	METHOD getGlyphSource (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/GlyphSource;
 		ARG 1 glyphSource
 	METHOD isBidirectional ()Z
@@ -154,5 +156,7 @@ CLASS net/minecraft/client/gui/Font
 			ARG 3 right
 			ARG 4 bottom
 	CLASS Provider
+		METHOD glyphs (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
+			ARG 1 fontDescription
 		METHOD glyphs (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/GlyphSource;
 			ARG 1 name

@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/gui/font/FontSet
+	METHOD <init> (Lnet/minecraft/client/gui/font/GlyphStitcher;)V
+		ARG 1 stitcher
 	METHOD <init> (Lnet/minecraft/client/gui/font/GlyphStitcher;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 stitcher
 		ARG 2 name
@@ -46,6 +48,11 @@ CLASS net/minecraft/client/gui/font/FontSet
 	CLASS SelectedGlyphs
 		METHOD select (Z)Lnet/minecraft/client/gui/font/FontSet$BakeableGlyphImpl;
 			ARG 1 filterFishy
+		METHOD select (Z)Lnet/minecraft/client/gui/font/FontSet$StitchedBakeableGlyph;
+			ARG 1 filterFishyGlyphs
 	CLASS Source
 		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Z)V
 			ARG 2 filterFishyGlyphs
+	CLASS StitchedBakeableGlyph
+		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Lcom/mojang/blaze3d/font/GlyphInfo$Stitched;)V
+			ARG 2 info

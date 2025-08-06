@@ -2,10 +2,14 @@ CLASS net/minecraft/client/resources/model/AtlasManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;I)V
 		ARG 1 textureManager
 		ARG 2 maxMipmapLevels
+	METHOD forEach (Ljava/util/function/BiConsumer;)V
+		ARG 1 action
 	METHOD getAtlas (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/TextureAtlas;
 		ARG 1 name
 	METHOD getAtlasEntry (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/AtlasManager$AtlasEntry;
 		ARG 1 name
+	METHOD getAtlasOrThrow (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/TextureAtlas;
+		ARG 1 id
 	METHOD updateMaxMipLevel (I)V
 		ARG 1 maxMipLevel
 	CLASS AtlasConfig

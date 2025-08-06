@@ -1,6 +1,18 @@
 CLASS net/minecraft/network/chat/Style
 	COMMENT A Style for {@link Component}.
 	COMMENT Stores color, text formatting (bold, etc.) as well as possible HoverEvent/ClickEvent.
+	METHOD <init> (Lnet/minecraft/network/chat/TextColor;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Lnet/minecraft/network/chat/ClickEvent;Lnet/minecraft/network/chat/HoverEvent;Ljava/lang/String;Lnet/minecraft/network/chat/FontDescription;)V
+		ARG 1 color
+		ARG 2 shadowColor
+		ARG 3 bold
+		ARG 4 italic
+		ARG 5 underlined
+		ARG 6 strikethrough
+		ARG 7 obfuscated
+		ARG 8 clickEvent
+		ARG 9 hoverEvent
+		ARG 10 insertion
+		ARG 11 font
 	METHOD <init> (Lnet/minecraft/network/chat/TextColor;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Lnet/minecraft/network/chat/ClickEvent;Lnet/minecraft/network/chat/HoverEvent;Ljava/lang/String;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 color
 		ARG 2 shadowColor
@@ -70,6 +82,8 @@ CLASS net/minecraft/network/chat/Style
 		ARG 1 formatting
 	METHOD withColor (Lnet/minecraft/network/chat/TextColor;)Lnet/minecraft/network/chat/Style;
 		ARG 1 color
+	METHOD withFont (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/network/chat/Style;
+		ARG 1 font
 	METHOD withFont (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/network/chat/Style;
 		ARG 1 fontId
 	METHOD withHoverEvent (Lnet/minecraft/network/chat/HoverEvent;)Lnet/minecraft/network/chat/Style;

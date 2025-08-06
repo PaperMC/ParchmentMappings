@@ -12,3 +12,6 @@ CLASS net/minecraft/world/entity/PositionMoveRotation
 		ARG 0 entity
 	METHOD of (Lnet/minecraft/world/level/portal/TeleportTransition;)Lnet/minecraft/world/entity/PositionMoveRotation;
 		ARG 0 teleportTransition
+	METHOD withRotation (FF)Lnet/minecraft/world/entity/PositionMoveRotation;
+		ARG 1 yRot
+		ARG 2 xRot

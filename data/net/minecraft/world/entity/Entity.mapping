@@ -112,6 +112,12 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 to
 		ARG 3 stepBasedCollector
 		ARG 4 visited
+	METHOD checkInsideBlocks (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/InsideBlockEffectApplier$StepBasedCollector;Lit/unimi/dsi/fastutil/longs/LongSet;I)I
+		ARG 1 from
+		ARG 2 to
+		ARG 3 stepBasedCollector
+		ARG 4 visited
+		ARG 5 maxSteps
 	METHOD checkSupportingBlock (ZLnet/minecraft/world/phys/Vec3;)V
 		ARG 1 onGround
 		ARG 2 movement
@@ -208,6 +214,11 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD forceSetRotation (FF)V
 		ARG 1 yRot
 		ARG 2 xRot
+	METHOD forceSetRotation (FZFZ)V
+		ARG 1 yRot
+		ARG 2 yRelative
+		ARG 3 xRot
+		ARG 4 xRelative
 	METHOD fudgePositionAfterSizeChange (Lnet/minecraft/world/entity/EntityDimensions;)Z
 		ARG 1 dimensions
 	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
@@ -442,6 +453,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 damageSource
 	METHOD lambda$checkFallDamage$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 supportingPos
+	METHOD lambda$checkInsideBlocks$0 (ILjava/util/concurrent/atomic/AtomicInteger;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lit/unimi/dsi/fastutil/longs/LongSet;Lnet/minecraft/world/entity/InsideBlockEffectApplier$StepBasedCollector;Lnet/minecraft/core/BlockPos;I)Z
+		ARG 7 pos
+		ARG 8 index
 	METHOD lambda$checkInsideBlocks$0 (Lit/unimi/dsi/fastutil/longs/LongSet;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/InsideBlockEffectApplier$StepBasedCollector;Lnet/minecraft/core/BlockPos;I)Z
 		ARG 5 pos
 		ARG 6 index
@@ -459,6 +473,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD lerpMotion (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 deltaMovement
 	METHOD lerpPositionAndRotationStep (IDDDDD)V
 		ARG 1 steps
 		ARG 2 targetX
@@ -492,6 +508,15 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 type
 		ARG 2 movement
+	METHOD moveOrInterpolateTo (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
+	METHOD moveOrInterpolateTo (Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 pos
+		ARG 2 yRot
+		ARG 3 xRot
+	METHOD moveOrInterpolateTo (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 pos
 	METHOD moveOrInterpolateTo (Lnet/minecraft/world/phys/Vec3;FF)V
 		ARG 1 pos
 		ARG 2 yRot

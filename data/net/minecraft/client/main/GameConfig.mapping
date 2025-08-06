@@ -35,3 +35,6 @@ CLASS net/minecraft/client/main/GameConfig
 			ARG 2 userProperties
 			ARG 3 profileProperties
 			ARG 4 proxy
+		METHOD <init> (Lnet/minecraft/client/User;Ljava/net/Proxy;)V
+			ARG 1 user
+			ARG 2 proxy

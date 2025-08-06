@@ -45,6 +45,21 @@ CLASS net/minecraft/core/BlockPos
 		ARG 0 box
 	METHOD betweenClosedStream (Lnet/minecraft/world/phys/AABB;)Ljava/util/stream/Stream;
 		ARG 0 aabb
+	METHOD betweenCornersInDirection (IIIIIILnet/minecraft/world/phys/Vec3;)Ljava/lang/Iterable;
+		ARG 0 x1
+		ARG 1 y1
+		ARG 2 z1
+		ARG 3 x2
+		ARG 4 y2
+		ARG 5 z2
+		ARG 6 direction
+	METHOD betweenCornersInDirection (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/Vec3;)Ljava/lang/Iterable;
+		ARG 0 pos1
+		ARG 1 pos2
+		ARG 2 direction
+	METHOD betweenCornersInDirection (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/phys/Vec3;)Ljava/lang/Iterable;
+		ARG 0 boundingBox
+		ARG 1 direction
 	METHOD breadthFirstTraversal (Lnet/minecraft/core/BlockPos;IILjava/util/function/BiConsumer;Ljava/util/function/Function;)I
 		ARG 0 startPos
 		ARG 1 radius

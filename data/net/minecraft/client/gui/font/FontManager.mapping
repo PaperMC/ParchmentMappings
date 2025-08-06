@@ -1,6 +1,9 @@
 CLASS net/minecraft/client/gui/font/FontManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
 		ARG 1 textureManager
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/resources/model/AtlasManager;)V
+		ARG 1 textureManager
+		ARG 2 atlasManager
 	METHOD apply (Lnet/minecraft/client/gui/font/FontManager$Preparation;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 preparation
 		ARG 2 profiler
@@ -17,6 +20,8 @@ CLASS net/minecraft/client/gui/font/FontManager
 		ARG 1 fontSet
 	METHOD getFontSetRaw (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
 		ARG 1 fontSet
+	METHOD getSpriteFont (Lnet/minecraft/network/chat/FontDescription$AtlasSprite;)Lnet/minecraft/client/gui/GlyphSource;
+		ARG 1 sprite
 	METHOD lambda$new$0 (Lnet/minecraft/client/gui/font/FontSet;)V
 		ARG 0 fontSet
 	METHOD loadResourceStack (Ljava/util/List;Lnet/minecraft/resources/ResourceLocation;)Ljava/util/List;
@@ -44,6 +49,8 @@ CLASS net/minecraft/client/gui/font/FontManager
 			ARG 2 nonFishyOnly
 		METHOD fontSet (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
 			ARG 1 name
+		METHOD getGlyphSource (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
+			ARG 1 fontDescription
 	CLASS FontDefinitionFile
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

@@ -19,6 +19,8 @@ CLASS net/minecraft/core/Direction
 		ARG 9 normal
 	METHOD allShuffled (Lnet/minecraft/util/RandomSource;)Ljava/util/Collection;
 		ARG 0 random
+	METHOD axisStepOrder (Lnet/minecraft/world/phys/Vec3;)Lcom/google/common/collect/ImmutableList;
+		ARG 0 direction
 	METHOD byName (Ljava/lang/String;)Lnet/minecraft/core/Direction;
 		COMMENT @return the Direction specified by the given name or null if no such Direction exists
 		ARG 0 name
@@ -136,6 +138,12 @@ CLASS net/minecraft/core/Direction
 			COMMENT @return whether this Axis is on the horizontal plane (true for X and Z)
 		METHOD test (Lnet/minecraft/core/Direction;)Z
 			ARG 1 direction
+	CLASS AxisDirection
+		METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
+			ARG 3 step
+			ARG 4 name
+		METHOD getStep ()I
+			COMMENT @return the offset for this AxisDirection. 1 for POSITIVE, -1 for NEGATIVE
 	CLASS Plane
 		METHOD <init> (Ljava/lang/String;I[Lnet/minecraft/core/Direction;[Lnet/minecraft/core/Direction$Axis;)V
 			ARG 3 faces
@@ -148,9 +156,3 @@ CLASS net/minecraft/core/Direction
 			ARG 1 random
 		METHOD test (Lnet/minecraft/core/Direction;)Z
 			ARG 1 direction
-	CLASS AxisDirection
-		METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
-			ARG 3 step
-			ARG 4 name
-		METHOD getStep ()I
-			COMMENT @return the offset for this AxisDirection. 1 for POSITIVE, -1 for NEGATIVE

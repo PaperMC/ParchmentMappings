@@ -2,6 +2,8 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 	METHOD attachedStem (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 stemBlock
 		ARG 1 upperStemBlock
+	METHOD bars (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
+		ARG 0 block
 	METHOD campfire (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD candleCake (Lnet/minecraft/world/level/block/Block;Z)Lnet/minecraft/client/data/models/model/TextureMapping;

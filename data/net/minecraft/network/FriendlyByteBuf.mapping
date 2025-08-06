@@ -17,6 +17,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD copy (II)Lio/netty/buffer/ByteBuf;
 		ARG 1 index
 		ARG 2 length
+	METHOD ensureWritable (I)Lio/netty/buffer/ByteBuf;
+		ARG 1 minWritableBytes
 	METHOD ensureWritable (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 size
 	METHOD ensureWritable (IZ)I
@@ -587,6 +589,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 array
 	METHOD writeLongLE (J)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
+	METHOD writeLpVec3 (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 vec3
 	METHOD writeMap (Ljava/util/Map;Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;)V
 		ARG 1 map
 		ARG 2 keyWriter

@@ -9,6 +9,8 @@ CLASS net/minecraft/world/entity/vehicle/MinecartBehavior
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD lerpMotion (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 deltaMovement
 	METHOD moveAlongTrack (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD setDeltaMovement (DDD)V

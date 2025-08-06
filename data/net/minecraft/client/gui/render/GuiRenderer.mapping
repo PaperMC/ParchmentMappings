@@ -3,6 +3,8 @@ CLASS net/minecraft/client/gui/render/GuiRenderer
 		ARG 1 renderState
 		ARG 2 bufferSource
 		ARG 3 pictureInPictureRenderers
+	METHOD addElementToMesh (Lnet/minecraft/client/gui/render/state/GuiElementRenderState;)V
+		ARG 1 renderState
 	METHOD addElementToMesh (Lnet/minecraft/client/gui/render/state/GuiElementRenderState;I)V
 		ARG 1 renderState
 		ARG 2 layer

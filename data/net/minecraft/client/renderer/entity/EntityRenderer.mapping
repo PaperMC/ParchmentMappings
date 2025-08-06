@@ -45,6 +45,9 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 		ARG 3 shadowStrength
 		ARG 4 pos
 		ARG 5 chunk
+	METHOD finalizeRenderState (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;)V
+		ARG 1 entity
+		ARG 2 renderState
 	METHOD getBlockLightLevel (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 entity
 		ARG 2 pos

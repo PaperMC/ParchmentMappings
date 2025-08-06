@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/multiplayer/LevelLoadTracker
+	METHOD <init> (J)V
+		ARG 1 closeDelayMs
 	METHOD setServerChunkStatusView (Lnet/minecraft/server/level/progress/ChunkLoadStatusView;)V
 		ARG 1 serverChunkStatusView
 	METHOD startClientLoad (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/LevelRenderer;)V
