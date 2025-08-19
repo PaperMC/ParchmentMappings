@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/model/CopperGolemModel
+	METHOD applyBlockOnHeadTransform (Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;)V
+		ARG 1 state
+		ARG 2 poseStack
 	METHOD poseStatue (Lnet/minecraft/core/Direction;)V
 		ARG 1 direction

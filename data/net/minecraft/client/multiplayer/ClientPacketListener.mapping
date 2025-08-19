@@ -216,6 +216,15 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 command
 		ARG 2 titleKey
 		ARG 3 previousScreen
+	METHOD openSendConfirmationWindow (Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/network/chat/Component;Ljava/lang/Runnable;)V
+		ARG 1 command
+		ARG 2 titleKey
+		ARG 3 buttonText
+		ARG 4 onConfirm
+	METHOD openSignedCommandSendConfirmationWindow (Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/client/gui/screens/Screen;)V
+		ARG 1 command
+		ARG 2 titleKey
+		ARG 3 previousScreen
 	METHOD postAddEntitySoundInstance (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD queueLightRemoval (Lnet/minecraft/network/protocol/game/ClientboundForgetLevelChunkPacket;)V

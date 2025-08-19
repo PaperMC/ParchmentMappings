@@ -184,6 +184,10 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 	METHOD tryHandleChat (Ljava/lang/String;Ljava/lang/Runnable;)V
 		ARG 1 message
 		ARG 2 handler
+	METHOD tryHandleChat (Ljava/lang/String;ZLjava/lang/Runnable;)V
+		ARG 1 message
+		ARG 2 bypassHiddenChat
+		ARG 3 handler
 	METHOD tryPickItem (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
 	METHOD unpackAndApplyLastSeen (Lnet/minecraft/network/chat/LastSeenMessages$Update;)Ljava/util/Optional;

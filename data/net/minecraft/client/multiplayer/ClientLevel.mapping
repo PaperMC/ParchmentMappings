@@ -192,6 +192,11 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD tickPassenger (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 mount
 		ARG 2 rider
+	METHOD trackExplosionEffects (Lnet/minecraft/world/phys/Vec3;FILnet/minecraft/util/random/WeightedList;)V
+		ARG 1 center
+		ARG 2 radius
+		ARG 3 blockCount
+		ARG 4 blockParticles
 	METHOD trySpawnDripParticles (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/particles/ParticleOptions;Z)V
 		ARG 1 blockPos
 		ARG 2 blockState

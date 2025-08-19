@@ -613,6 +613,12 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 9 y1
 	METHOD submitMapRenderState (Lnet/minecraft/client/renderer/state/MapRenderState;)V
 		ARG 1 renderState
+	METHOD submitOutline (IIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 width
+		ARG 4 height
+		ARG 5 color
 	METHOD submitProfilerChartRenderState (Ljava/util/List;IIII)V
 		ARG 1 chartData
 		ARG 2 x0
@@ -661,6 +667,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the end point.
 		ARG 4 color
 			COMMENT the color of the line.
+	CLASS OutlineBox
+		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;)V
+			ARG 1 guiGraphics
 	CLASS ScissorStack
 		COMMENT A utility class for managing a stack of screen rectangles for scissoring.
 		METHOD containsPoint (II)Z

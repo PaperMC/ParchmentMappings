@@ -3,8 +3,16 @@ CLASS net/minecraft/client/renderer/feature/EntityModelFeatureRenderer
 		ARG 1 nodeStoage
 		ARG 2 bufferSource
 		ARG 3 outlineBufferSource
+	METHOD renderBatch (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/OutlineBufferSource;Lit/unimi/dsi/fastutil/ints/Int2ObjectAVLTreeMap;)V
+		ARG 1 bufferSource
+		ARG 2 outlineBufferSource
+		ARG 3 submits
 	METHOD renderModel (Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/OutlineBufferSource;)V
 		ARG 1 submit
 		ARG 2 renderType
 		ARG 3 consumer
 		ARG 4 outlineBufferSource
+	METHOD renderTranslucents (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/OutlineBufferSource;Ljava/util/List;)V
+		ARG 1 bufferSource
+		ARG 2 outlineBufferSource
+		ARG 3 submits

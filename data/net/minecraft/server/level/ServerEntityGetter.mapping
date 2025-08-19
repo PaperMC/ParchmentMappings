@@ -23,6 +23,14 @@ CLASS net/minecraft/server/level/ServerEntityGetter
 		ARG 4 x
 		ARG 6 y
 		ARG 8 z
+	METHOD getNearestEntity (Lnet/minecraft/tags/TagKey;Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;Lnet/minecraft/world/entity/LivingEntity;DDDLnet/minecraft/world/phys/AABB;)Lnet/minecraft/world/entity/LivingEntity;
+		ARG 1 tag
+		ARG 2 targetingConditions
+		ARG 3 source
+		ARG 4 x
+		ARG 6 y
+		ARG 8 z
+		ARG 10 area
 	METHOD getNearestPlayer (Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;DDD)Lnet/minecraft/world/entity/player/Player;
 		ARG 1 targetingConditions
 		ARG 2 x

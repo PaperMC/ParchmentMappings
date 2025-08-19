@@ -10,3 +10,5 @@ CLASS net/minecraft/util/random/Weighted
 		ARG 1 instance
 	METHOD map (Ljava/util/function/Function;)Lnet/minecraft/util/random/Weighted;
 		ARG 1 mapper
+	METHOD streamCodec (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 elementCodec

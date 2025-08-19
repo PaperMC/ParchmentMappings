@@ -31,6 +31,11 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 2 width
 		ARG 3 height
 		ARG 4 message
+	METHOD addFormatter (Lnet/minecraft/client/gui/components/EditBox$TextFormatter;)V
+		ARG 1 formatter
+	METHOD applyFormat (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
+		ARG 1 text
+		ARG 2 displayPos
 	METHOD charTyped (CI)Z
 		ARG 1 codePoint
 		ARG 2 modifiers
@@ -141,3 +146,7 @@ CLASS net/minecraft/client/gui/components/EditBox
 	METHOD setVisible (Z)V
 		COMMENT Sets whether this textbox is visible.
 		ARG 1 isVisible
+	CLASS TextFormatter
+		METHOD format (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
+			ARG 1 text
+			ARG 2 displayPos
