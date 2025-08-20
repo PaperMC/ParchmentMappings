@@ -1,3 +1,5 @@
 CLASS net/minecraft/client/gui/navigation/CommonInputs
+	METHOD confirm (I)Z
+		ARG 0 key
 	METHOD selected (I)Z
 		ARG 0 key

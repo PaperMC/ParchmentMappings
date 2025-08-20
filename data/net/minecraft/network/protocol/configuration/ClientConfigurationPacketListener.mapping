@@ -1,4 +1,6 @@
 CLASS net/minecraft/network/protocol/configuration/ClientConfigurationPacketListener
+	METHOD handleCodeOfConduct (Lnet/minecraft/network/protocol/configuration/ClientboundCodeOfConductPacket;)V
+		ARG 1 packet
 	METHOD handleConfigurationFinished (Lnet/minecraft/network/protocol/configuration/ClientboundFinishConfigurationPacket;)V
 		ARG 1 packet
 	METHOD handleEnabledFeatures (Lnet/minecraft/network/protocol/configuration/ClientboundUpdateEnabledFeaturesPacket;)V

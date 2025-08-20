@@ -25,6 +25,9 @@ CLASS net/minecraft/client/gui/font/FontSet
 	METHOD getRandomGlyph (Lnet/minecraft/util/RandomSource;I)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
 		ARG 1 random
 		ARG 2 width
+	METHOD getRandomGlyph (Lnet/minecraft/util/RandomSource;I)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
+		ARG 1 random
+		ARG 2 width
 	METHOD hasFishyAdvance (Lcom/mojang/blaze3d/font/GlyphInfo;)Z
 		ARG 0 glyph
 	METHOD reload (Ljava/util/List;Ljava/util/Set;)V
@@ -42,10 +45,15 @@ CLASS net/minecraft/client/gui/font/FontSet
 	CLASS BakeableGlyphImpl
 		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Lcom/mojang/blaze3d/font/GlyphInfo;)V
 			ARG 2 info
+	CLASS DelayedBake
+		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Lcom/mojang/blaze3d/font/UnbakedGlyph;)V
+			ARG 2 unbaked
 	CLASS GlyphInfoFilter
 		METHOD select (Z)Lcom/mojang/blaze3d/font/GlyphInfo;
 			ARG 1 filterFishyGlyphs
 	CLASS SelectedGlyphs
+		METHOD select (Z)Ljava/util/function/Supplier;
+			ARG 1 filterFishy
 		METHOD select (Z)Lnet/minecraft/client/gui/font/FontSet$BakeableGlyphImpl;
 			ARG 1 filterFishy
 		METHOD select (Z)Lnet/minecraft/client/gui/font/FontSet$StitchedBakeableGlyph;

@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/renderer/feature/ShadowFeatureRenderer
+	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
+		ARG 1 nodeCollection
+		ARG 2 bufferSource
 	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeStorage;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 nodeStorage
 		ARG 2 bufferSource

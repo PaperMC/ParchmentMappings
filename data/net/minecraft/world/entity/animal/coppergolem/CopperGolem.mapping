@@ -12,6 +12,8 @@ CLASS net/minecraft/world/entity/animal/coppergolem/CopperGolem
 	METHOD spawn (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;)V
 		ARG 1 level
 		ARG 2 weatherState
+	METHOD spawn (Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;)V
+		ARG 1 weatherState
 	METHOD turnToStatue (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD updateWeathering (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/util/RandomSource;J)V

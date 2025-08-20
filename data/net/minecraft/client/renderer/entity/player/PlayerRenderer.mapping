@@ -27,15 +27,34 @@ CLASS net/minecraft/client/renderer/entity/player/PlayerRenderer
 		ARG 4 skinTexture
 		ARG 5 arm
 		ARG 6 isSleeveVisible
+	METHOD renderHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/model/geom/ModelPart;Z)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 skinTexture
+		ARG 5 arm
+		ARG 6 isSleeveVisible
 	METHOD renderLeftHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/resources/ResourceLocation;Z)V
 		ARG 1 poseStack
 		ARG 2 bufferSource
 		ARG 3 packedLight
 		ARG 4 skinTexture
 		ARG 5 isSleeveVisible
+	METHOD renderLeftHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/ResourceLocation;Z)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 skinTexture
+		ARG 5 isSleeveVisible
 	METHOD renderRightHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/resources/ResourceLocation;Z)V
 		ARG 1 poseStack
 		ARG 2 bufferSource
+		ARG 3 packedLight
+		ARG 4 skinTexture
+		ARG 5 isSleeveVisible
+	METHOD renderRightHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/ResourceLocation;Z)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
 		ARG 3 packedLight
 		ARG 4 skinTexture
 		ARG 5 isSleeveVisible

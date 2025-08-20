@@ -18,6 +18,16 @@ CLASS net/minecraft/client/gui/screens/achievement/StatsScreen
 		ARG 1 listener
 	METHOD setActiveList (Lnet/minecraft/client/gui/components/ObjectSelectionList;)V
 		ARG 1 activeList
+	METHOD setTabActiveStateAndTooltip (I)V
+		ARG 1 index
+	CLASS GeneralStatisticsList
+		METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen;Lnet/minecraft/client/Minecraft;)V
+			ARG 2 minecraft
+		METHOD lambda$new$0 (Lnet/minecraft/stats/Stat;)Ljava/lang/String;
+			ARG 0 stat
+		CLASS Entry
+			METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$GeneralStatisticsList;Lnet/minecraft/stats/Stat;)V
+				ARG 2 stat
 	CLASS ItemStatisticsList
 		METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen;Lnet/minecraft/client/Minecraft;)V
 			ARG 2 minecraft
@@ -32,6 +42,13 @@ CLASS net/minecraft/client/gui/screens/achievement/StatsScreen
 			ARG 1 index
 		METHOD sortByColumn (Lnet/minecraft/stats/StatType;)V
 			ARG 1 statType
+		METHOD sortItems (Ljava/util/Comparator;)V
+			ARG 1 comparator
+		CLASS HeaderEntry
+			CLASS StatSortButton
+				METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$HeaderEntry;ILnet/minecraft/resources/ResourceLocation;)V
+					ARG 2 column
+					ARG 3 sprite
 		CLASS ItemRow
 			METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList;Lnet/minecraft/world/item/Item;)V
 				ARG 2 item
@@ -41,6 +58,9 @@ CLASS net/minecraft/client/gui/screens/achievement/StatsScreen
 				ARG 3 x
 				ARG 4 y
 				ARG 5 evenRow
+			CLASS ItemRowWidget
+				METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$ItemRow;Lnet/minecraft/world/item/ItemStack;)V
+					ARG 2 stack
 		CLASS ItemRowComparator
 			METHOD compare (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$ItemRow;Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$ItemRow;)I
 				ARG 1 row1
@@ -51,11 +71,7 @@ CLASS net/minecraft/client/gui/screens/achievement/StatsScreen
 		CLASS MobRow
 			METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$MobsStatisticsList;Lnet/minecraft/world/entity/EntityType;)V
 				ARG 2 entityType
-	CLASS GeneralStatisticsList
-		METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen;Lnet/minecraft/client/Minecraft;)V
-			ARG 2 minecraft
-		METHOD lambda$new$0 (Lnet/minecraft/stats/Stat;)Ljava/lang/String;
-			ARG 0 stat
-		CLASS Entry
-			METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$GeneralStatisticsList;Lnet/minecraft/stats/Stat;)V
-				ARG 2 stat
+	CLASS StatisticsTab
+		METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen;Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/components/AbstractSelectionList;)V
+			ARG 2 title
+			ARG 3 list

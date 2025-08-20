@@ -10,6 +10,8 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 5 z
 		ARG 6 u
 		ARG 7 v
+	METHOD lambda$submitBeaconBeam$1 (IIIFFFFFFFFFFLcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;)V
+		ARG 14 z4
 	METHOD renderBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;FFJIII)V
 		ARG 0 poseStack
 		ARG 1 bufferSource
@@ -31,6 +33,24 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 9 color
 		ARG 10 beamRadius
 		ARG 11 glowRadius
+	METHOD renderPart (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIIFFFFFFFFFFFF)V
+		ARG 0 pose
+		ARG 1 consumer
+		ARG 2 color
+		ARG 3 minY
+		ARG 4 maxY
+		ARG 5 x1
+		ARG 6 z1
+		ARG 7 x2
+		ARG 8 z2
+		ARG 9 x3
+		ARG 10 z3
+		ARG 11 x4
+		ARG 12 z4
+		ARG 13 minU
+		ARG 14 maxU
+		ARG 15 minV
+		ARG 16 maxV
 	METHOD renderPart (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIIFFFFFFFFFFFF)V
 		ARG 0 poseStack
 		ARG 1 consumer
@@ -63,3 +83,24 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 10 maxU
 		ARG 11 minV
 		ARG 12 maxV
+	METHOD submitBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;FFJIII)V
+		ARG 0 poseStack
+		ARG 1 nodeCollector
+		ARG 2 partialTick
+		ARG 3 radius
+		ARG 4 gameTime
+		ARG 6 yOffset
+		ARG 7 height
+		ARG 8 color
+	METHOD submitBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/resources/ResourceLocation;FFJIIIFF)V
+		ARG 0 poseStack
+		ARG 1 nodeCollector
+		ARG 2 beamLocation
+		ARG 3 partialTick
+		ARG 4 textureScale
+		ARG 5 gameTime
+		ARG 7 yOffset
+		ARG 8 height
+		ARG 9 color
+		ARG 10 beamRadius
+		ARG 11 glowRadius

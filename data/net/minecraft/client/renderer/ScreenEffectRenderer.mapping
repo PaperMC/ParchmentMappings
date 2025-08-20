@@ -21,9 +21,17 @@ CLASS net/minecraft/client/renderer/ScreenEffectRenderer
 	METHOD renderItemActivationAnimation (Lcom/mojang/blaze3d/vertex/PoseStack;F)V
 		ARG 1 poseStack
 		ARG 2 partialTick
+	METHOD renderItemActivationAnimation (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 poseStack
+		ARG 2 partialTick
+		ARG 3 nodeCollector
 	METHOD renderScreenEffect (ZF)V
 		ARG 1 sleeping
 		ARG 2 partialTick
+	METHOD renderScreenEffect (ZFLnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 sleeping
+		ARG 2 partialTick
+		ARG 3 nodeCollector
 	METHOD renderTex (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;)V
 		ARG 0 texture
 		ARG 1 poseStack

@@ -1,4 +1,6 @@
 CLASS net/minecraft/commands/arguments/HexColorArgument
+	METHOD duplicateDigit (I)I
+		ARG 0 digit
 	METHOD getHexColor (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/lang/Integer;
 		ARG 0 context
 		ARG 1 argument

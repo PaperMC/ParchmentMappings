@@ -18,3 +18,11 @@ CLASS net/minecraft/client/renderer/blockentity/SpawnerRenderer
 		ARG 4 entityRenderDispatcher
 		ARG 5 oSpin
 		ARG 7 spin
+	METHOD submitEntityInSpawner (FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/entity/EntityRenderDispatcher;DD)V
+		ARG 0 partialTick
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 entity
+		ARG 4 entityRenderer
+		ARG 5 oSpin
+		ARG 7 spin

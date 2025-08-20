@@ -1,4 +1,14 @@
 CLASS net/minecraft/client/gui/screens/worldselection/WorldSelectionList
+	METHOD <init> (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/Minecraft;IILjava/lang/String;Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;Ljava/util/function/Consumer;Ljava/util/function/Consumer;Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$EntryType;)V
+		ARG 1 screen
+		ARG 2 minecraft
+		ARG 3 width
+		ARG 4 height
+		ARG 5 filter
+		ARG 6 oldList
+		ARG 7 onEntrySelect
+		ARG 8 onEntryInteract
+		ARG 9 entryType
 	METHOD <init> (Lnet/minecraft/client/gui/screens/worldselection/SelectWorldScreen;Lnet/minecraft/client/Minecraft;IIIILjava/lang/String;Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;)V
 		ARG 1 screen
 		ARG 2 minecraft
@@ -20,13 +30,36 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldSelectionList
 		ARG 1 levels
 	METHOD updateFilter (Ljava/lang/String;)V
 		ARG 1 filter
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;)V
+			ARG 1 minecraft
+			ARG 2 screen
+		METHOD filter (Ljava/lang/String;)Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$Builder;
+			ARG 1 filter
+		METHOD height (I)Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$Builder;
+			ARG 1 height
+		METHOD oldList (Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;)Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$Builder;
+			ARG 1 oldList
+		METHOD onEntryInteract (Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$Builder;
+			ARG 1 onEntryInteract
+		METHOD onEntrySelect (Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$Builder;
+			ARG 1 onEntrySelect
+		METHOD width (I)Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$Builder;
+			ARG 1 width
 	CLASS LoadingHeader
 		METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 			ARG 1 minecraft
+	CLASS NoWorldsEntry
+		METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/Font;)V
+			ARG 1 message
+			ARG 2 font
 	CLASS WorldListEntry
 		METHOD <init> (Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;Lnet/minecraft/world/level/storage/LevelSummary;)V
 			ARG 2 worldSelectionList
 			ARG 3 summary
+		METHOD <init> (Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;Lnet/minecraft/world/level/storage/LevelSummary;)V
+			ARG 1 list
+			ARG 2 summary
 		METHOD mouseClicked (DDI)Z
 			ARG 1 mouseX
 			ARG 3 mouseY

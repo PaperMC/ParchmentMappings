@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/gui/components/WidgetSprites
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 sprite
 	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 enabled
 		ARG 2 disabled

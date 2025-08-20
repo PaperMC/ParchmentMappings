@@ -186,6 +186,10 @@ CLASS net/minecraft/world/level/Level
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
 		COMMENT Returns the Entity with the given ID, or null if it doesn't exist in this Level.
 		ARG 1 id
+	METHOD getEntity (Ljava/util/UUID;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 uuid
+	METHOD getEntityInAnyDimension (Ljava/util/UUID;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 uuid
 	METHOD getFluidState (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 pos
 	METHOD getHeight (Lnet/minecraft/world/level/levelgen/Heightmap$Types;II)I
@@ -196,6 +200,8 @@ CLASS net/minecraft/world/level/Level
 		COMMENT Returns the world's WorldInfo object
 	METHOD getMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 1 mapId
+	METHOD getPlayerInAnyDimension (Ljava/util/UUID;)Lnet/minecraft/world/entity/player/Player;
+		ARG 1 uuid
 	METHOD getPushableEntities (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;)Ljava/util/List;
 		ARG 1 entity
 		ARG 2 boundingBox

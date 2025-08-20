@@ -5,6 +5,8 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 		ARG 1 name
 		ARG 2 id
 		ARG 3 properties
+	METHOD create (Lcom/mojang/datafixers/util/Either;)Lnet/minecraft/world/item/component/ResolvableProfile;
+		ARG 0 contents
 	METHOD createGameProfile (Ljava/util/Optional;Ljava/util/Optional;)Lcom/mojang/authlib/GameProfile;
 		ARG 0 id
 		ARG 1 name
@@ -12,17 +14,34 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 		ARG 0 id
 		ARG 1 name
 		ARG 2 properties
+	METHOD createPartialProfile (Ljava/util/Optional;Ljava/util/Optional;)Lcom/mojang/authlib/GameProfile;
+		ARG 0 username
+		ARG 1 id
 	METHOD createProfile (Ljava/util/Optional;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 1 profile
+	METHOD createResolved (Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/world/item/component/ResolvableProfile;
+		ARG 0 gameProfile
+	METHOD createUnresolved (Ljava/util/UUID;)Lnet/minecraft/world/item/component/ResolvableProfile;
+		ARG 0 id
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD lambda$static$1 (Ljava/lang/String;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 0 name
+	METHOD resolveProfile (Lnet/minecraft/server/players/ProfileResolver;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 resolver
 	METHOD setupResolver (Lnet/minecraft/server/Services;Ljava/util/concurrent/Executor;)V
 		ARG 0 services
 		ARG 1 mainThreadExecutor
+	CLASS Dynamic
+		METHOD <init> (Lcom/mojang/datafixers/util/Either;)V
+			ARG 1 nameOrId
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
+	CLASS Partial
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS Resolver
 		METHOD <init> (Lnet/minecraft/server/Services;)V
 			ARG 1 services
@@ -34,3 +53,8 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 		CLASS 2
 			METHOD load (Ljava/lang/Object;)Ljava/lang/Object;
 				ARG 1 username
+	CLASS Static
+		METHOD <init> (Lcom/mojang/datafixers/util/Either;)V
+			ARG 1 contents
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other

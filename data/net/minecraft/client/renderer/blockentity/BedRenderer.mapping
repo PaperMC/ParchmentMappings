@@ -41,3 +41,19 @@ CLASS net/minecraft/client/renderer/blockentity/BedRenderer
 		ARG 6 packedLight
 		ARG 7 packedOverlay
 		ARG 8 isFeet
+	METHOD submitPiece (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZLnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 model
+		ARG 4 direction
+		ARG 5 material
+		ARG 6 packedLight
+		ARG 7 packedOverlay
+		ARG 8 isFeet
+		ARG 9 crumblingOverlay
+	METHOD submitSpecial (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/resources/model/Material;)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 material

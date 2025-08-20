@@ -11,6 +11,14 @@ CLASS net/minecraft/client/renderer/special/SpecialModelRenderer
 		ARG 5 packedLight
 		ARG 6 packedOverlay
 		ARG 7 hasFoilType
+	METHOD submit (Ljava/lang/Object;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IIZ)V
+		ARG 1 argument
+		ARG 2 displayContext
+		ARG 3 poseStack
+		ARG 4 nodeCollector
+		ARG 5 packedLight
+		ARG 6 packedOverlay
+		ARG 7 hasFoil
 	CLASS Unbaked
 		METHOD bake (Lnet/minecraft/client/model/geom/EntityModelSet;)Lnet/minecraft/client/renderer/special/SpecialModelRenderer;
 			ARG 1 modelSet

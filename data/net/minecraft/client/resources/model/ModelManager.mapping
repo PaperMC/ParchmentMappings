@@ -2,6 +2,10 @@ CLASS net/minecraft/client/resources/model/ModelManager
 	METHOD <init> (Lnet/minecraft/client/color/block/BlockColors;Lnet/minecraft/client/resources/model/AtlasManager;)V
 		ARG 1 blockColors
 		ARG 2 atlasManager
+	METHOD <init> (Lnet/minecraft/client/color/block/BlockColors;Lnet/minecraft/client/resources/model/AtlasManager;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
+		ARG 1 blockColors
+		ARG 2 atlasManager
+		ARG 3 playerSkinRenderCache
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/color/block/BlockColors;I)V
 		ARG 1 textureManager
 		ARG 2 blockColors

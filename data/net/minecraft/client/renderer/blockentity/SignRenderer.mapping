@@ -34,6 +34,14 @@ CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 		ARG 4 packedOverlay
 		ARG 5 model
 		ARG 6 material
+	METHOD submitSpecial (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/resources/model/Material;)V
+		ARG 0 materials
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 model
+		ARG 6 material
 	METHOD translateBase (Lcom/mojang/blaze3d/vertex/PoseStack;F)V
 		ARG 0 poseStack
 		ARG 1 yRot

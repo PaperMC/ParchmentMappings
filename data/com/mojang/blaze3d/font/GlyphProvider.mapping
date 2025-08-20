@@ -3,3 +3,5 @@ CLASS com/mojang/blaze3d/font/GlyphProvider
 		ARG 1 character
 	METHOD getGlyph (I)Lcom/mojang/blaze3d/font/GlyphInfo;
 		ARG 1 character
+	METHOD getGlyph (I)Lcom/mojang/blaze3d/font/UnbakedGlyph;
+		ARG 1 character

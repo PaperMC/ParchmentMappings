@@ -36,7 +36,7 @@ writtenbooks {
 }
 
 compass {
-    version = '25w33a'
+    version = '25w34b'
 }
 
 repositories {

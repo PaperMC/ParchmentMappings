@@ -1,5 +1,7 @@
 CLASS net/minecraft/client/gui/spectator/PlayerMenuItem
 	METHOD <init> (Lcom/mojang/authlib/GameProfile;)V
 		ARG 1 profile
+	METHOD <init> (Lnet/minecraft/client/multiplayer/PlayerInfo;)V
+		ARG 1 playerInfo
 	METHOD selectItem (Lnet/minecraft/client/gui/spectator/SpectatorMenu;)V
 		ARG 1 menu
