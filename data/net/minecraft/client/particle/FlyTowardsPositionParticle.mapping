@@ -9,6 +9,17 @@ CLASS net/minecraft/client/particle/FlyTowardsPositionParticle
 		ARG 12 zSpeed
 		ARG 14 isGlowing
 		ARG 15 lifetimeAlpha
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDZLnet/minecraft/client/particle/Particle$LifetimeAlpha;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xSpeed
+		ARG 10 ySpeed
+		ARG 12 zSpeed
+		ARG 14 isGlowing
+		ARG 15 lifetimeAlpha
+		ARG 16 sprite
 	CLASS EnchantProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite

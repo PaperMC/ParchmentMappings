@@ -113,6 +113,8 @@ CLASS net/minecraft/data/worldgen/BiomeDefaultFeatures
 		ARG 0 builder
 	METHOD addMushroomFieldVegetation (Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;)V
 		ARG 0 builder
+	METHOD addNearWaterVegetation (Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;)V
+		ARG 0 builder
 	METHOD addNetherDefaultOres (Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;)V
 		ARG 0 builder
 	METHOD addOtherBirchTrees (Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;)V

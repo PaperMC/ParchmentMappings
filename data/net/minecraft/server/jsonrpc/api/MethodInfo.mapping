@@ -1,0 +1,17 @@
+CLASS net/minecraft/server/jsonrpc/api/MethodInfo
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;Ljava/util/List;Ljava/util/Optional;)V
+		ARG 1 name
+		ARG 2 description
+		ARG 3 params
+		ARG 4 result
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;ZZ)V
+		ARG 1 name
+		ARG 2 description
+		ARG 3 runOnMainThread
+		ARG 4 discoverable
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD withParam ([Lnet/minecraft/server/jsonrpc/api/ParamInfo;)Lnet/minecraft/server/jsonrpc/api/MethodInfo;
+		ARG 1 params
+	METHOD withResult (Lnet/minecraft/server/jsonrpc/api/ResultInfo;)Lnet/minecraft/server/jsonrpc/api/MethodInfo;
+		ARG 1 result

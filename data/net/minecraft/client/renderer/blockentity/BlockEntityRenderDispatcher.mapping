@@ -23,6 +23,8 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher
 		ARG 6 entityRenderer
 		ARG 7 materials
 		ARG 8 playerSkinRenderCache
+	METHOD getRenderer (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;)Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderer;
+		ARG 1 renderState
 	METHOD getRenderer (Lnet/minecraft/world/level/block/entity/BlockEntity;)Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderer;
 		ARG 1 blockEntity
 	METHOD prepare (Lnet/minecraft/world/level/Level;Lnet/minecraft/client/Camera;Lnet/minecraft/world/phys/HitResult;)V
@@ -43,9 +45,17 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher
 		ARG 3 poseStack
 		ARG 4 bufferSource
 		ARG 5 cameraPos
+	METHOD submit (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 renderState
+		ARG 2 poseStack
+		ARG 3 nodeCollector
 	METHOD submit (Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 blockEntity
 		ARG 2 partialTick
 		ARG 3 poseStack
 		ARG 4 crumblingOverlay
 		ARG 5 submitNodeCollector
+	METHOD tryExtractRenderState (Lnet/minecraft/world/level/block/entity/BlockEntity;FLnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;
+		ARG 1 blockEntity
+		ARG 2 partialTick
+		ARG 3 breakProgress

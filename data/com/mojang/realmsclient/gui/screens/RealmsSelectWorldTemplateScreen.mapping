@@ -1,4 +1,4 @@
-CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
+CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
 	METHOD <init> (Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;Lcom/mojang/realmsclient/dto/RealmsServer$WorldType;)V
 		ARG 1 title
 		ARG 2 callback
@@ -8,6 +8,12 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
 		ARG 2 callback
 		ARG 3 worldType
 		ARG 4 worldTemplatePaginatedList
+	METHOD <init> (Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;Lcom/mojang/realmsclient/dto/RealmsServer$WorldType;Lcom/mojang/realmsclient/dto/WorldTemplatePaginatedList;Ljava/util/List;)V
+		ARG 1 title
+		ARG 2 callback
+		ARG 3 worldType
+		ARG 4 worldTemplatePaginatedList
+		ARG 5 subtitle
 	METHOD fetchTemplates (Lcom/mojang/realmsclient/dto/WorldTemplatePaginatedList;Lcom/mojang/realmsclient/client/RealmsClient;)Lcom/mojang/datafixers/util/Either;
 		ARG 1 templates
 		ARG 2 realmsClient

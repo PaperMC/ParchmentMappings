@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/entity/decoration/Mannequin
+	METHOD <init> (Lnet/minecraft/world/level/Level;)V
+		ARG 1 level
+	METHOD setProfile (Lcom/mojang/datafixers/util/Either;)V
+		ARG 1 profile

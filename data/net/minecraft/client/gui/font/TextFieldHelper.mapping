@@ -7,6 +7,8 @@ CLASS net/minecraft/client/gui/font/TextFieldHelper
 		ARG 5 stringValidator
 	METHOD charTyped (C)Z
 		ARG 1 character
+	METHOD charTyped (Lnet/minecraft/client/input/CharacterEvent;)Z
+		ARG 1 event
 	METHOD clampToMsgLength (I)I
 		ARG 1 textIndex
 	METHOD createClipboardGetter (Lnet/minecraft/client/Minecraft;)Ljava/util/function/Supplier;
@@ -26,6 +28,8 @@ CLASS net/minecraft/client/gui/font/TextFieldHelper
 		ARG 2 clipboardText
 	METHOD keyPressed (I)Z
 		ARG 1 key
+	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
+		ARG 1 event
 	METHOD lambda$createClipboardSetter$1 (Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V
 		ARG 1 text
 	METHOD moveBy (IZLnet/minecraft/client/gui/font/TextFieldHelper$CursorStep;)V

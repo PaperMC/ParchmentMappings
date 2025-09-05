@@ -10,6 +10,9 @@ CLASS net/minecraft/commands/arguments/selector/EntitySelectorParser
 		ARG 1 sizeX
 		ARG 3 sizeY
 		ARG 5 sizeZ
+	METHOD createRotationPredicate (Lnet/minecraft/advancements/critereon/MinMaxBounds$FloatDegrees;Lnet/minecraft/util/ToFloatFunction;)Ljava/util/function/Predicate;
+		ARG 1 rotation
+		ARG 2 getter
 	METHOD createRotationPredicate (Lnet/minecraft/advancements/critereon/WrappedMinMaxBounds;Ljava/util/function/ToDoubleFunction;)Ljava/util/function/Predicate;
 		ARG 1 angleBounds
 		ARG 2 angleFunction
@@ -76,8 +79,12 @@ CLASS net/minecraft/commands/arguments/selector/EntitySelectorParser
 		ARG 1 maxResults
 	METHOD setOrder (Ljava/util/function/BiConsumer;)V
 		ARG 1 order
+	METHOD setRotX (Lnet/minecraft/advancements/critereon/MinMaxBounds$FloatDegrees;)V
+		ARG 1 rotX
 	METHOD setRotX (Lnet/minecraft/advancements/critereon/WrappedMinMaxBounds;)V
 		ARG 1 rotX
+	METHOD setRotY (Lnet/minecraft/advancements/critereon/MinMaxBounds$FloatDegrees;)V
+		ARG 1 rotY
 	METHOD setRotY (Lnet/minecraft/advancements/critereon/WrappedMinMaxBounds;)V
 		ARG 1 rotY
 	METHOD setSorted (Z)V

@@ -410,6 +410,9 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 9 segment4Condition
 	METHOD createShelf (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 block
+	METHOD createShelf (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 shelfBlock
+		ARG 2 particleBlock
 	METHOD createShulkerBox (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/DyeColor;)V
 		ARG 1 block
 		ARG 2 color

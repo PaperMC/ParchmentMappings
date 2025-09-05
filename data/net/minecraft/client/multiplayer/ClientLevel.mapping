@@ -27,6 +27,9 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 9 xSpeed
 		ARG 11 ySpeed
 		ARG 13 zSpeed
+	METHOD addBreakingBlockEffect (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)V
+		ARG 1 pos
+		ARG 2 direction
 	METHOD addEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD addMapData (Ljava/util/Map;)V

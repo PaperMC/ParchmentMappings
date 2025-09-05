@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/CustomSpawner
+	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Z)V
+		ARG 1 level
+		ARG 2 spawnEnemies
 	METHOD tick (Lnet/minecraft/server/level/ServerLevel;ZZ)V
 		ARG 1 level
 		ARG 2 spawnEnemies

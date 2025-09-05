@@ -46,9 +46,14 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 num
 	METHOD deleteText (I)V
 		ARG 1 count
+	METHOD deleteText (IZ)V
+		ARG 1 num
+		ARG 2 words
 	METHOD deleteWords (I)V
 		COMMENT Deletes the given number of words from the current cursor's position, unless there is currently a selection, in which case the selection is deleted instead.
 		ARG 1 num
+	METHOD findClickedPositionInText (Lnet/minecraft/client/input/MouseButtonEvent;)I
+		ARG 1 event
 	METHOD getCursorPos (I)I
 		ARG 1 delta
 	METHOD getCursorPosition ()I
@@ -75,6 +80,9 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 numWords
 		ARG 2 pos
 		ARG 3 skipConsecutiveSpaces
+	METHOD handleClick (DZ)V
+		ARG 1 mouseX
+		ARG 3 shiftDown
 	METHOD insertText (Ljava/lang/String;)V
 		COMMENT Adds the given text after the cursor, or replaces the currently selected text if there is a selection.
 		ARG 1 textToWrite
@@ -103,6 +111,8 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 newText
 	METHOD scrollTo (I)V
 		ARG 1 position
+	METHOD selectWord (Lnet/minecraft/client/input/MouseButtonEvent;)V
+		ARG 1 event
 	METHOD setBordered (Z)V
 		COMMENT Sets whether the background and outline of this text box should be drawn.
 		ARG 1 enableBackgroundDrawing

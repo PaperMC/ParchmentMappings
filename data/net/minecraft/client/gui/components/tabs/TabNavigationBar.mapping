@@ -27,6 +27,11 @@ CLASS net/minecraft/client/gui/components/tabs/TabNavigationBar
 	METHOD getNextTabIndex (II)I
 		ARG 1 currentTabIndex
 		ARG 2 keyCode
+	METHOD getNextTabIndex (ILnet/minecraft/client/input/KeyEvent;)I
+		ARG 1 tabIndex
+		ARG 2 event
+	METHOD getNextTabIndex (Lnet/minecraft/client/input/KeyEvent;)I
+		ARG 1 event
 	METHOD getRectangle ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 		COMMENT {@return the {@link ScreenRectangle} occupied by the GUI element}
 	METHOD keyPressed (I)Z

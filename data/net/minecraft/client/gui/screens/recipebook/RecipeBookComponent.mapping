@@ -11,6 +11,13 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 3 contextMap
 	METHOD fillGhostRecipe (Lnet/minecraft/world/item/crafting/display/RecipeDisplay;)V
 		ARG 1 recipeDisplay
+	METHOD hasClickedOutside (DDIIII)Z
+		ARG 1 x
+		ARG 3 y
+		ARG 5 left
+		ARG 6 top
+		ARG 7 width
+		ARG 8 height
 	METHOD hasClickedOutside (DDIIIII)Z
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -66,6 +73,10 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 	METHOD tryPlaceRecipe (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/world/item/crafting/display/RecipeDisplayId;)Z
 		ARG 1 recipeCollection
 		ARG 2 recipe
+	METHOD tryPlaceRecipe (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/world/item/crafting/display/RecipeDisplayId;Z)Z
+		ARG 1 recipeCollection
+		ARG 2 recipe
+		ARG 3 useMaxItems
 	METHOD updateCollections (ZZ)V
 		ARG 1 resetPageNumber
 		ARG 2 isFiltering

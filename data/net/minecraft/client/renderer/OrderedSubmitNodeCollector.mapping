@@ -75,6 +75,15 @@ CLASS net/minecraft/client/renderer/OrderedSubmitNodeCollector
 		ARG 5 packedOverlay
 		ARG 6 sprite
 		ARG 7 tintColor
+	METHOD submitModelPart (Lnet/minecraft/client/model/geom/ModelPart;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/RenderType;IILnet/minecraft/client/renderer/texture/TextureAtlasSprite;ILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
+		ARG 1 modelPart
+		ARG 2 poseStack
+		ARG 3 renderType
+		ARG 4 packedLight
+		ARG 5 packedOverlay
+		ARG 6 sprite
+		ARG 7 tintColor
+		ARG 8 crumblingOverlay
 	METHOD submitModelPart (Lnet/minecraft/client/model/geom/ModelPart;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/RenderType;IILnet/minecraft/client/renderer/texture/TextureAtlasSprite;ZZ)V
 		ARG 1 modelPart
 		ARG 2 poseStack
@@ -94,6 +103,17 @@ CLASS net/minecraft/client/renderer/OrderedSubmitNodeCollector
 		ARG 7 sheeted
 		ARG 8 hasFoil
 		ARG 9 tintColor
+	METHOD submitModelPart (Lnet/minecraft/client/model/geom/ModelPart;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/RenderType;IILnet/minecraft/client/renderer/texture/TextureAtlasSprite;ZZILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
+		ARG 1 modelPart
+		ARG 2 poseStack
+		ARG 3 renderType
+		ARG 4 packedLight
+		ARG 5 packedOverlay
+		ARG 6 sprite
+		ARG 7 sheeted
+		ARG 8 hasFoil
+		ARG 9 tintColor
+		ARG 10 crumblingOverlay
 	METHOD submitMovingBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/block/MovingBlockRenderState;)V
 		ARG 1 poseStack
 		ARG 2 renderState
@@ -104,6 +124,8 @@ CLASS net/minecraft/client/renderer/OrderedSubmitNodeCollector
 		ARG 4 isSeeThrough
 		ARG 5 packedLight
 		ARG 6 distanceToCameraSq
+	METHOD submitParticleGroup (Lnet/minecraft/client/renderer/SubmitNodeCollector$ParticleGroupRenderer;)V
+		ARG 1 renderer
 	METHOD submitShadow (Lcom/mojang/blaze3d/vertex/PoseStack;FLjava/util/List;)V
 		ARG 1 poseStack
 		ARG 2 radius

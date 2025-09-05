@@ -27,3 +27,5 @@ CLASS net/minecraft/client/gui/components/AbstractSliderButton
 		ARG 1 value
 	METHOD setValueFromMouse (D)V
 		ARG 1 mouseX
+	METHOD setValueFromMouse (Lnet/minecraft/client/input/MouseButtonEvent;)V
+		ARG 1 event

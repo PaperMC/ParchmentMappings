@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/ParticleGroupRenderState
+	METHOD submit (Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 nodeCollector

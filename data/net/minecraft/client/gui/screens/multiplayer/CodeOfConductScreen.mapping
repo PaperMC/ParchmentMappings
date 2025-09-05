@@ -3,6 +3,17 @@ CLASS net/minecraft/client/gui/screens/multiplayer/CodeOfConductScreen
 		ARG 1 serverData
 		ARG 2 codeOfConductText
 		ARG 3 resultConsumer
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/client/gui/screens/Screen;Ljava/lang/String;Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;)V
+		ARG 1 serverData
+		ARG 2 parent
+		ARG 3 codeOfConductText
+		ARG 4 resultConsumer
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/network/chat/Component;Ljava/lang/String;Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;)V
+		ARG 1 serverData
+		ARG 2 parent
+		ARG 3 content
+		ARG 4 codeOfConductScreen
+		ARG 5 resultConsumer
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/network/chat/Component;Ljava/lang/String;Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;)V
 		ARG 1 serverData
 		ARG 2 content

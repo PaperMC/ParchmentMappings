@@ -11,6 +11,8 @@ CLASS net/minecraft/util/StringUtil
 		ARG 1 ticksPerSecond
 	METHOD isAllowedChatCharacter (C)Z
 		ARG 0 character
+	METHOD isAllowedChatCharacter (I)Z
+		ARG 0 codepoint
 	METHOD isBlank (Ljava/lang/String;)Z
 		ARG 0 string
 	METHOD isNullOrEmpty (Ljava/lang/String;)Z

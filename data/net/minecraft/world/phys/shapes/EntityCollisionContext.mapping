@@ -19,3 +19,6 @@ CLASS net/minecraft/world/phys/shapes/EntityCollisionContext
 		ARG 7 entity
 	METHOD isHoldingItem (Lnet/minecraft/world/item/Item;)Z
 		ARG 1 item
+	CLASS Empty
+		METHOD <init> (Z)V
+			ARG 1 alwaysCollideWithFluid

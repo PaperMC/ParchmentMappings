@@ -7,6 +7,8 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 		COMMENT The previously run command.
 	FIELD successCount I
 		COMMENT The number of successful commands run. (used for redstone output)
+	METHOD createCommandSourceStack (Lnet/minecraft/commands/CommandSource;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 1 commandSource
 	METHOD getCommand ()Ljava/lang/String;
 		COMMENT Returns the command of the command block.
 	METHOD getLastOutput ()Lnet/minecraft/network/chat/Component;

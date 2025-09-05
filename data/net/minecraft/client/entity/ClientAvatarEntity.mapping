@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/entity/ClientAvatarEntity
+	METHOD getParrotVariantOnShoulder (Z)Lnet/minecraft/world/entity/animal/Parrot$Variant;
+		ARG 1 left

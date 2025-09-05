@@ -10,6 +10,8 @@ CLASS net/minecraft/client/renderer/entity/layers/StuckInBodyLayer
 		ARG 2 model
 		ARG 3 texture
 		ARG 4 placementStyle
+	METHOD numStuck (Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;)I
+		ARG 1 renderState
 	METHOD numStuck (Lnet/minecraft/client/renderer/entity/state/PlayerRenderState;)I
 		ARG 1 renderState
 	METHOD renderStuckItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IFFF)V

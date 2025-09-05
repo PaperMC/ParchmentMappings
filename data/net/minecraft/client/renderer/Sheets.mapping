@@ -4,6 +4,9 @@ CLASS net/minecraft/client/renderer/Sheets
 	METHOD chooseCopperMaterial (Lnet/minecraft/world/level/block/state/properties/ChestType;Lnet/minecraft/world/level/block/CopperChestBlock;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 chestType
 		ARG 1 block
+	METHOD chooseMaterial (Lnet/minecraft/client/renderer/blockentity/state/ChestRenderState$ChestMaterialType;Lnet/minecraft/world/level/block/state/properties/ChestType;)Lnet/minecraft/client/resources/model/Material;
+		ARG 0 chestMaterialType
+		ARG 1 chestType
 	METHOD chooseMaterial (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/block/state/properties/ChestType;Z)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 blockEntity
 		ARG 1 chestType

@@ -4,6 +4,10 @@ CLASS net/minecraft/client/gui/font/FontManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/resources/model/AtlasManager;)V
 		ARG 1 textureManager
 		ARG 2 atlasManager
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/resources/model/AtlasManager;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
+		ARG 1 textureManager
+		ARG 2 atlasManager
+		ARG 3 playerSkinRenderCache
 	METHOD apply (Lnet/minecraft/client/gui/font/FontManager$Preparation;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 preparation
 		ARG 2 profiler

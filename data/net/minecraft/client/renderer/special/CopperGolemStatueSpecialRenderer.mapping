@@ -10,5 +10,8 @@ CLASS net/minecraft/client/renderer/special/CopperGolemStatueSpecialRenderer
 	CLASS Unbaked
 		METHOD <init> (Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;)V
 			ARG 1 weatherState
+		METHOD <init> (Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;Lnet/minecraft/world/level/block/CopperGolemStatueBlock$Pose;)V
+			ARG 1 weatherState
+			ARG 2 pose
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

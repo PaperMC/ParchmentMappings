@@ -56,8 +56,38 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 	METHOD runCommand (Ljava/lang/String;)Ljava/lang/String;
 		COMMENT Handle a command received by an RCon instance
 		ARG 1 command
+	METHOD setAcceptsTransfers (Z)V
+		ARG 1 acceptsTransfers
+	METHOD setAllowFlight (Z)V
+		ARG 1 allowFlight
+	METHOD setDifficulty (Lnet/minecraft/world/Difficulty;)V
+		ARG 1 difficulty
+	METHOD setEntityBroadcastRangePercentage (I)V
+		ARG 1 entityBroadcastRangePercentage
+	METHOD setForceGameMode (Z)V
+		ARG 1 forceGameMode
+	METHOD setGameMode (Lnet/minecraft/world/level/GameType;)V
+		ARG 1 gameMode
+	METHOD setHidesOnlinePlayers (Z)V
+		ARG 1 hidesOnlinePlayers
+	METHOD setMaxPlayers (I)V
+		ARG 1 maxPlayers
+	METHOD setOperatorUserPermissionLevel (I)V
+		ARG 1 operatorUserPermissionLevel
+	METHOD setPauseWhenEmptySeconds (I)V
+		ARG 1 pauseWhenEmptySeconds
 	METHOD setPlayerIdleTimeout (I)V
 		ARG 1 idleTimeout
+	METHOD setRepliesToStatus (Z)V
+		ARG 1 repliesToStatus
+	METHOD setSimulationDistance (I)V
+		ARG 1 simulationDistance
+	METHOD setSpawnProtectionRadius (I)V
+		ARG 1 spawnProtectionRadius
+	METHOD setStatusHeartbeatInterval (I)V
+		ARG 1 statusHeartbeatInterval
+	METHOD setViewDistance (I)V
+		ARG 1 viewDistance
 	METHOD stopServer ()V
 		COMMENT Saves all necessary data as preparation for stopping the server.
 	METHOD storeUsingWhiteList (Z)V

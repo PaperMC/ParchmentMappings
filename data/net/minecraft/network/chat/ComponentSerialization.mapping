@@ -1,8 +1,14 @@
 CLASS net/minecraft/network/chat/ComponentSerialization
+	METHOD bootstrap (Lnet/minecraft/util/ExtraCodecs$LateBoundIdMapper;)V
+		ARG 0 mapper
 	METHOD createCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
 	METHOD createFromList (Ljava/util/List;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 components
+	METHOD createLegacyComponentMatcher (Lnet/minecraft/util/ExtraCodecs$LateBoundIdMapper;Ljava/util/function/Function;Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 mapper
+		ARG 1 encoderGetter
+		ARG 2 fieldName
 	METHOD createLegacyComponentMatcher ([Lnet/minecraft/util/StringRepresentable;Ljava/util/function/Function;Ljava/util/function/Function;Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 types
 		ARG 1 codecGetter
@@ -26,6 +32,9 @@ CLASS net/minecraft/network/chat/ComponentSerialization
 			ARG 1 ops
 			ARG 2 component
 	CLASS FuzzyCodec
+		METHOD <init> (Ljava/util/Collection;Ljava/util/function/Function;)V
+			ARG 1 codecs
+			ARG 2 encoderGetter
 		METHOD <init> (Ljava/util/List;Ljava/util/function/Function;)V
 			ARG 1 codecs
 			ARG 2 encoderGetter

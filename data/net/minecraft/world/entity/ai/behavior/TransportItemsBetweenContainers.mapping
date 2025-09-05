@@ -25,12 +25,18 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 	METHOD getConnectedTargets (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Ljava/util/List;
 		ARG 1 target
 		ARG 2 level
+	METHOD getInteractionRange (Lnet/minecraft/world/entity/PathfinderMob;)D
+		ARG 0 mob
 	METHOD getTargetBlockPosition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Optional;
 		ARG 1 level
 		ARG 2 mob
 	METHOD getTargetSearchArea (Lnet/minecraft/world/entity/PathfinderMob;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 mob
+	METHOD getUnreachablePositions (Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Set;
+		ARG 0 mob
 	METHOD getVisitedPositions (Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Set;
+		ARG 0 mob
+	METHOD hasFinishedPath (Lnet/minecraft/world/entity/PathfinderMob;)Z
 		ARG 0 mob
 	METHOD hasItemMatchingHandItem (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/Container;)Z
 		ARG 0 mob
@@ -41,12 +47,27 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 	METHOD isAnotherMobInteractingWithTarget (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Z
 		ARG 1 target
 		ARG 2 level
+	METHOD isContainerLocked (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;)Z
+		ARG 1 target
 	METHOD isPickingUpItems (Lnet/minecraft/world/entity/PathfinderMob;)Z
 		ARG 0 mob
+	METHOD isPositionAlreadyVisited (Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Z
+		ARG 1 visited
+		ARG 2 unreachable
+		ARG 3 target
+		ARG 4 level
 	METHOD isPositionAlreadyVisited (Ljava/util/Set;Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Z
 		ARG 1 visitedPositions
 		ARG 2 target
 		ARG 3 level
+	METHOD isTargetValidToPick (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntity;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/phys/AABB;)Ljava/util/Optional;
+		ARG 1 mob
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 blockEntity
+		ARG 5 visited
+		ARG 6 unreachable
+		ARG 7 searchArea
 	METHOD isTargetValidToPick (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntity;Ljava/util/Set;Lnet/minecraft/world/phys/AABB;)Ljava/util/Optional;
 		ARG 1 mob
 		ARG 2 level
@@ -57,12 +78,21 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 	METHOD isWantedBlock (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 mob
 		ARG 2 state
+	METHOD isWithinTargetDistance (DLnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/PathfinderMob;)Z
+		ARG 1 maxDistance
+		ARG 3 target
+		ARG 4 level
+		ARG 5 mob
 	METHOD isWithinTargetDistance (DLnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/PathfinderMob;Z)Z
 		ARG 1 distance
 		ARG 3 target
 		ARG 4 level
 		ARG 5 mob
 		ARG 6 useDownwardOffset
+	METHOD markVisitedBlockPosAsUnreachable (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 mob
+		ARG 2 level
+		ARG 3 pos
 	METHOD matchesGettingItemsRequirement (Lnet/minecraft/world/Container;)Z
 		ARG 0 container
 	METHOD matchesLeavingItemsRequirement (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/Container;)Z
@@ -115,9 +145,16 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 1 mob
 	METHOD stopInPlace (Lnet/minecraft/world/entity/PathfinderMob;)V
 		ARG 1 mob
+	METHOD stopTargetingCurrentTarget (Lnet/minecraft/world/entity/PathfinderMob;)V
+		ARG 1 mob
 	METHOD targetHasNotChanged (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;)Z
 		ARG 1 level
 		ARG 2 target
+	METHOD targetIsReachableFromPosition (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/entity/PathfinderMob;)Z
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 target
+		ARG 4 mob
 	METHOD tryEnsureTargetPosExists (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/PathfinderMob;)V
 		ARG 1 level
 		ARG 2 mob

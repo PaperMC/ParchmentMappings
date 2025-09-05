@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/renderer/ParticlesRenderState
+	METHOD add (Lnet/minecraft/client/renderer/ParticleGroupRenderState;)V
+		ARG 1 renderState
+	METHOD submit (Lnet/minecraft/client/renderer/SubmitNodeStorage;)V
+		ARG 1 nodeStorage

@@ -1,4 +1,4 @@
-CLASS com/mojang/realmsclient/RealmsMainScreen
+CLASS com/mojang/realmsclient/RealmsMainScreen com/mojang/realmsclient/RealmsMainScreen
 	METHOD <init> (Lnet/minecraft/client/gui/screens/Screen;)V
 		ARG 1 lastScreen
 	METHOD callRealmsClient (Lcom/mojang/realmsclient/RealmsMainScreen$RealmsCall;Ljava/util/function/Consumer;)V
@@ -217,6 +217,8 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 			ARG 4 widget
 		METHOD refreshLayout (I)V
 			ARG 1 width
+		METHOD textWidth (I)I
+			ARG 0 width
 		METHOD updateEntryWidth (I)V
 			ARG 1 entryWidth
 	CLASS ParentEntry
@@ -226,9 +228,17 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 		METHOD addEntriesForNotification (Lcom/mojang/realmsclient/dto/RealmsNotification$VisitUrl;Lcom/mojang/realmsclient/RealmsMainScreen;)V
 			ARG 1 url
 			ARG 2 mainScreen
+		METHOD addEntriesForNotification (Lcom/mojang/realmsclient/dto/RealmsNotification$VisitUrl;Lcom/mojang/realmsclient/RealmsMainScreen;Lcom/mojang/realmsclient/RealmsMainScreen$Entry;)V
+			ARG 1 visitUrl
+			ARG 2 screen
+			ARG 3 entry
+		METHOD refreshEntries (Lcom/mojang/realmsclient/RealmsMainScreen;)V
+			ARG 1 screen
 		METHOD refreshEntries (Lcom/mojang/realmsclient/RealmsMainScreen;Lcom/mojang/realmsclient/dto/RealmsServer;)V
 			ARG 1 screen
 			ARG 2 server
+		METHOD refreshServerEntries (Lcom/mojang/realmsclient/RealmsMainScreen$Entry;)V
+			ARG 1 entry
 		METHOD refreshServerEntries (Lcom/mojang/realmsclient/dto/RealmsServer;)V
 			ARG 1 server
 	CLASS RealmsCall

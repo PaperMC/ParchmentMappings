@@ -1,4 +1,8 @@
 CLASS net/minecraft/client/renderer/texture/SkinTextureDownloader
+	METHOD <init> (Ljava/net/Proxy;Lnet/minecraft/client/renderer/texture/TextureManager;Ljava/util/concurrent/Executor;)V
+		ARG 1 proxy
+		ARG 2 textureManager
+		ARG 3 mainThreadExecutor
 	METHOD doNotchTransparencyHack (Lcom/mojang/blaze3d/platform/NativeImage;IIII)V
 		ARG 0 image
 		ARG 1 minX
@@ -7,12 +11,14 @@ CLASS net/minecraft/client/renderer/texture/SkinTextureDownloader
 		ARG 4 maxY
 	METHOD downloadAndRegisterSkin (Lnet/minecraft/resources/ResourceLocation;Ljava/nio/file/Path;Ljava/lang/String;Z)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 textureLocation
-		ARG 1 path
-		ARG 2 url
-		ARG 3 isLegacySkin
+		ARG 1 textureLocation
+		ARG 2 path
+		ARG 3 url
+		ARG 4 isLegacySkin
 	METHOD downloadSkin (Ljava/nio/file/Path;Ljava/lang/String;)Lcom/mojang/blaze3d/platform/NativeImage;
 		ARG 0 path
-		ARG 1 url
+		ARG 1 path
+		ARG 2 url
 	METHOD lambda$downloadAndRegisterSkin$1 (Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/platform/NativeImage;)Ljava/util/concurrent/CompletionStage;
 		ARG 1 image
 	METHOD processLegacySkin (Lcom/mojang/blaze3d/platform/NativeImage;Ljava/lang/String;)Lcom/mojang/blaze3d/platform/NativeImage;
@@ -20,7 +26,8 @@ CLASS net/minecraft/client/renderer/texture/SkinTextureDownloader
 		ARG 1 url
 	METHOD registerTextureInManager (Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/platform/NativeImage;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 location
-		ARG 1 image
+		ARG 1 textureLocation
+		ARG 2 image
 	METHOD setNoAlpha (Lcom/mojang/blaze3d/platform/NativeImage;IIII)V
 		ARG 0 image
 		ARG 1 minX

@@ -28,8 +28,12 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 	METHOD checkHotbarKeyPressed (II)Z
 		ARG 1 keyCode
 		ARG 2 scanCode
+	METHOD checkHotbarKeyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
+		ARG 1 event
 	METHOD checkHotbarMouseClicked (I)V
 		ARG 1 keyCode
+	METHOD checkHotbarMouseClicked (Lnet/minecraft/client/input/MouseButtonEvent;)V
+		ARG 1 event
 	METHOD getHoveredSlot (DD)Lnet/minecraft/world/inventory/Slot;
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -39,6 +43,11 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 slotId
 		ARG 2 containerId
 		ARG 3 newState
+	METHOD hasClickedOutside (DDII)Z
+		ARG 1 x
+		ARG 3 y
+		ARG 5 left
+		ARG 6 top
 	METHOD hasClickedOutside (DDIII)Z
 		ARG 1 mouseX
 		ARG 3 mouseY

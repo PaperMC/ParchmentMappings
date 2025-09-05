@@ -1,6 +1,9 @@
 CLASS net/minecraft/client/renderer/blockentity/BlockEntityWithBoundingBoxRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
 		ARG 1 context
+	METHOD extract (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/client/renderer/blockentity/state/BlockEntityWithBoundingBoxRenderState;)V
+		ARG 0 blockEntity
+		ARG 1 renderState
 	METHOD lambda$renderStructureVoids$0 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/core/Direction;III)V
 		ARG 4 direction
 		ARG 5 x
@@ -13,6 +16,12 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityWithBoundingBoxRender
 		ARG 4 boxSize
 		ARG 5 bufferSource
 		ARG 6 poseStack
+	METHOD renderStructureVoids (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityWithBoundingBoxRenderState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;)V
+		ARG 1 renderState
+		ARG 2 localPos
+		ARG 3 size
+		ARG 4 consumer
+		ARG 5 pose
 	METHOD renderStructureVoids (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 blockEntity
 		ARG 2 pos
@@ -25,6 +34,12 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityWithBoundingBoxRender
 		ARG 3 size
 		ARG 4 consumer
 		ARG 5 pose
+	METHOD submitInvisibleBlocks (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityWithBoundingBoxRenderState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lcom/mojang/blaze3d/vertex/PoseStack;)V
+		ARG 1 renderState
+		ARG 2 localPos
+		ARG 3 size
+		ARG 4 nodeCollector
+		ARG 5 poseStack
 	METHOD submitInvisibleBlocks (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 blockEntity
 		ARG 2 level

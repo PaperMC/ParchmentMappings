@@ -3,10 +3,19 @@ CLASS net/minecraft/client/KeyMapping
 		ARG 1 name
 		ARG 2 keyCode
 		ARG 3 category
+	METHOD <init> (Ljava/lang/String;ILnet/minecraft/client/KeyMapping$Category;)V
+		ARG 1 name
+		ARG 2 key
+		ARG 3 category
 	METHOD <init> (Ljava/lang/String;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILjava/lang/String;)V
 		ARG 1 name
 		ARG 2 type
 		ARG 3 keyCode
+		ARG 4 category
+	METHOD <init> (Ljava/lang/String;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILnet/minecraft/client/KeyMapping$Category;)V
+		ARG 1 name
+		ARG 2 type
+		ARG 3 key
 		ARG 4 category
 	METHOD click (Lcom/mojang/blaze3d/platform/InputConstants$Key;)V
 		ARG 0 key
@@ -17,6 +26,9 @@ CLASS net/minecraft/client/KeyMapping
 	METHOD createNameSupplier (Ljava/lang/String;)Ljava/util/function/Supplier;
 		COMMENT Returns a supplier which gets a keybind's current binding (eg, <code>key.forward</code> returns <samp>W</samp> by default), or the keybind's name if no such keybind exists (eg, <code>key.invalid</code> returns <samp>key.invalid</samp>)
 		ARG 0 key
+	METHOD forAllKeyMappings (Lcom/mojang/blaze3d/platform/InputConstants$Key;Ljava/util/function/Consumer;)V
+		ARG 0 key
+		ARG 1 action
 	METHOD get (Ljava/lang/String;)Lnet/minecraft/client/KeyMapping;
 		ARG 0 name
 	METHOD isDefault ()Z
@@ -28,8 +40,14 @@ CLASS net/minecraft/client/KeyMapping
 	METHOD matches (II)Z
 		ARG 1 keysym
 		ARG 2 scancode
+	METHOD matches (Lnet/minecraft/client/input/KeyEvent;)Z
+		ARG 1 event
 	METHOD matchesMouse (I)Z
 		COMMENT Returns {@code true} if the {@code KeyMapping} is set to a mouse key and the key matches.
+		ARG 1 key
+	METHOD matchesMouse (Lnet/minecraft/client/input/MouseButtonEvent;)Z
+		ARG 1 event
+	METHOD registerMapping (Lcom/mojang/blaze3d/platform/InputConstants$Key;)V
 		ARG 1 key
 	METHOD same (Lnet/minecraft/client/KeyMapping;)Z
 		COMMENT Returns {@code true} if the supplied {@code KeyMapping} conflicts with this
@@ -44,3 +62,6 @@ CLASS net/minecraft/client/KeyMapping
 	METHOD setKey (Lcom/mojang/blaze3d/platform/InputConstants$Key;)V
 		COMMENT Binds a new KeyCode to this
 		ARG 1 key
+	CLASS Category
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 descriptionId

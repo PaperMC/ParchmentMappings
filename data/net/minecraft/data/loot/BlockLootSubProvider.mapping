@@ -38,6 +38,8 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 		ARG 1 candleBlock
 	METHOD createCaveVinesDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
+	METHOD createCopperGolemStatueBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
+		ARG 1 block
 	METHOD createCopperOreDrops (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 	METHOD createCropDrops (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;

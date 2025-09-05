@@ -2,6 +2,8 @@ CLASS net/minecraft/client/player/AbstractClientPlayer
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lcom/mojang/authlib/GameProfile;)V
 		ARG 1 clientLevel
 		ARG 2 gameProfile
+	METHOD addWalkedDistance (F)V
+		ARG 1 walkDistance
 	METHOD getDeltaMovementLerped (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTick
 	METHOD getFieldOfViewModifier (ZF)F

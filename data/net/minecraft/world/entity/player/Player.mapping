@@ -53,6 +53,10 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 exhaustion
 	METHOD closeContainer ()V
 		COMMENT Sets the current crafting inventory back to the 2x2 square.
+	METHOD convertParrotVariant (Ljava/util/Optional;)Ljava/util/OptionalInt;
+		ARG 0 variant
+	METHOD convertParrotVariant (Ljava/util/OptionalInt;)Ljava/util/Optional;
+		ARG 0 id
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 entityHit
@@ -70,6 +74,8 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Drops an item into the world.
 		ARG 1 itemStack
 		ARG 2 includeThrowerName
+	METHOD extractParrotVariant (Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
+		ARG 0 tag
 	METHOD freeAt (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD getAbsorptionAmount ()F
@@ -240,6 +246,10 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 entityCompound
 	METHOD setShoulderEntityRight (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 entityCompound
+	METHOD setShoulderParrotLeft (Ljava/util/Optional;)V
+		ARG 1 variant
+	METHOD setShoulderParrotRight (Ljava/util/Optional;)V
+		ARG 1 variant
 	METHOD startAutoSpinAttack (IFLnet/minecraft/world/item/ItemStack;)V
 		ARG 1 ticks
 		ARG 2 damage

@@ -17,6 +17,10 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 	METHOD createPartialProfile (Ljava/util/Optional;Ljava/util/Optional;)Lcom/mojang/authlib/GameProfile;
 		ARG 0 username
 		ARG 1 id
+	METHOD createPartialProfile (Ljava/util/Optional;Ljava/util/Optional;Lcom/mojang/authlib/properties/PropertyMap;)Lcom/mojang/authlib/GameProfile;
+		ARG 0 username
+		ARG 1 id
+		ARG 2 properties
 	METHOD createProfile (Ljava/util/Optional;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 1 profile
 	METHOD createResolved (Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/world/item/component/ResolvableProfile;

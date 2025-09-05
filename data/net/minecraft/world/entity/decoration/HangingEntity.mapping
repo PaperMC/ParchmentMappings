@@ -6,6 +6,8 @@ CLASS net/minecraft/world/entity/decoration/HangingEntity
 	METHOD calculateBoundingBox (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 pos
 		ARG 2 direction
+	METHOD canCoexist (Z)Z
+		ARG 1 itemFrame
 	METHOD getDirection ()Lnet/minecraft/core/Direction;
 		COMMENT Gets the horizontal facing direction of this Entity.
 	METHOD lambda$static$0 (Lnet/minecraft/world/entity/Entity;)Z

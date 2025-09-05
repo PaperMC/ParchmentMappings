@@ -21,6 +21,8 @@ CLASS net/minecraft/world/level/storage/ServerLevelData
 	METHOD setInitialized (Z)V
 		COMMENT Sets the initialization status of the World.
 		ARG 1 initialized
+	METHOD setLegacyWorldBorderSettings (Ljava/util/Optional;)V
+		ARG 1 legacyWorldBorderSettings
 	METHOD setRainTime (I)V
 		COMMENT Sets the number of ticks until rain.
 		ARG 1 time

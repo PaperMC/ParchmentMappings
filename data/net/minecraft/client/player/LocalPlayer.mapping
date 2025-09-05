@@ -49,6 +49,8 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 1 health
 	METHOD isLocalPlayer ()Z
 		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
+	METHOD isSprintingPossible (Z)Z
+		ARG 1 flying
 	METHOD lambda$updateAutoJump$0 (Lnet/minecraft/world/phys/shapes/VoxelShape;)Ljava/util/stream/Stream;
 		ARG 0 voxelShape
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V

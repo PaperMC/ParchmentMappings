@@ -266,6 +266,8 @@ CLASS net/minecraft/server/level/ServerLevel
 	METHOD tickChunk (Lnet/minecraft/world/level/chunk/LevelChunk;I)V
 		ARG 1 chunk
 		ARG 2 randomTickSpeed
+	METHOD tickCustomSpawners (Z)V
+		ARG 1 spawnEnemies
 	METHOD tickCustomSpawners (ZZ)V
 		ARG 1 spawnEnemies
 		ARG 2 spawnFriendlies

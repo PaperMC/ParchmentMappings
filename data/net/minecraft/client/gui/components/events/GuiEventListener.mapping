@@ -10,6 +10,8 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the code point of the typed character.
 		ARG 2 modifiers
 			COMMENT the keyboard modifiers.
+	METHOD charTyped (Lnet/minecraft/client/input/CharacterEvent;)Z
+		ARG 1 event
 	METHOD getBorderForArrowNavigation (Lnet/minecraft/client/gui/navigation/ScreenDirection;)Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 		ARG 1 direction
 	METHOD getCurrentFocusPath ()Lnet/minecraft/client/gui/ComponentPath;
@@ -36,6 +38,8 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the scan code of the pressed key.
 		ARG 3 modifiers
 			COMMENT the keyboard modifiers.
+	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
+		ARG 1 event
 	METHOD keyReleased (III)Z
 		COMMENT Called when a keyboard key is released within the GUI element.
 		COMMENT <p>
@@ -46,6 +50,8 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the scan code of the released key.
 		ARG 3 modifiers
 			COMMENT the keyboard modifiers.
+	METHOD keyReleased (Lnet/minecraft/client/input/KeyEvent;)Z
+		ARG 1 event
 	METHOD mouseClicked (DDI)Z
 		COMMENT Called when a mouse button is clicked within the GUI element.
 		COMMENT <p>
@@ -61,6 +67,9 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 		ARG 3 mouseY
 		ARG 5 button
 		ARG 6 isDoubleClick
+	METHOD mouseClicked (Lnet/minecraft/client/input/MouseButtonEvent;Z)Z
+		ARG 1 event
+		ARG 2 isDoubleClick
 	METHOD mouseDragged (DDIDD)Z
 		COMMENT Called when the mouse is dragged within the GUI element.
 		COMMENT <p>
@@ -75,6 +84,10 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the X distance of the drag.
 		ARG 8 dragY
 			COMMENT the Y distance of the drag.
+	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
+		ARG 1 event
+		ARG 2 mouseX
+		ARG 4 mouseY
 	METHOD mouseMoved (DD)V
 		COMMENT Called when the mouse is moved within the GUI element.
 		ARG 1 mouseX
@@ -91,6 +104,8 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the Y coordinate of the mouse.
 		ARG 5 button
 			COMMENT the button that was released.
+	METHOD mouseReleased (Lnet/minecraft/client/input/MouseButtonEvent;)Z
+		ARG 1 event
 	METHOD mouseScrolled (DDDD)Z
 		ARG 1 mouseX
 		ARG 3 mouseY

@@ -19,6 +19,8 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 2 url
 	METHOD createArrowEvent (Lnet/minecraft/client/gui/navigation/ScreenDirection;)Lnet/minecraft/client/gui/navigation/FocusNavigationEvent$ArrowNavigation;
 		ARG 1 direction
+	METHOD createTabEvent (Z)Lnet/minecraft/client/gui/navigation/FocusNavigationEvent$TabNavigation;
+		ARG 1 forward
 	METHOD defaultHandleClickEvent (Lnet/minecraft/network/chat/ClickEvent;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;)V
 		ARG 0 clickEvent
 		ARG 1 minecraft
@@ -64,6 +66,10 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 1 text
 		ARG 2 charTyped
 		ARG 3 cursorPos
+	METHOD isValidCharacterForName (Ljava/lang/String;II)Z
+		ARG 1 text
+		ARG 2 codepoint
+		ARG 3 position
 	METHOD keyPressed (III)Z
 		ARG 1 keyCode
 		ARG 2 scanCode

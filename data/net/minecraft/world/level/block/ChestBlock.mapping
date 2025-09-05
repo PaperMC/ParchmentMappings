@@ -10,6 +10,10 @@ CLASS net/minecraft/world/level/block/ChestBlock
 	METHOD candidatePartnerFacing (Lnet/minecraft/world/item/context/BlockPlaceContext;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
 		ARG 1 context
 		ARG 2 direction
+	METHOD candidatePartnerFacing (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 direction
 	METHOD chestCanConnectTo (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
 	METHOD combine (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/level/block/DoubleBlockCombiner$NeighborCombineResult;
@@ -25,6 +29,10 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 3 pos
 	METHOD getBlockType (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/DoubleBlockCombiner$BlockType;
 		ARG 0 state
+	METHOD getChestType (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/block/state/properties/ChestType;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 direction
 	METHOD getConnectedBlockPos (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/core/BlockPos;
 		ARG 0 pos
 		ARG 1 state

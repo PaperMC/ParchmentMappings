@@ -6,6 +6,11 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 2 registries
 		ARG 3 playerIo
 		ARG 4 maxPlayers
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/core/LayeredRegistryAccess;Lnet/minecraft/world/level/storage/PlayerDataStorage;Lnet/minecraft/server/notifications/NotificationService;)V
+		ARG 1 server
+		ARG 2 registries
+		ARG 3 playerIo
+		ARG 4 notificationService
 	METHOD addWorldborderListener (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD broadcast (Lnet/minecraft/world/entity/player/Player;DDDDLnet/minecraft/resources/ResourceKey;Lnet/minecraft/network/protocol/Packet;)V
@@ -67,6 +72,8 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 uuid
 	METHOD getMaxPlayers ()I
 		COMMENT Returns the maximum number of players allowed on the server.
+	METHOD getPlayer (Ljava/lang/String;)Lnet/minecraft/server/level/ServerPlayer;
+		ARG 1 name
 	METHOD getPlayer (Ljava/util/UUID;)Lnet/minecraft/server/level/ServerPlayer;
 		COMMENT Gets the ServerPlayer object representing the player with the UUID.
 		ARG 1 playerUUID
@@ -82,6 +89,8 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 player
 	METHOD getPlayersWithAddress (Ljava/lang/String;)Ljava/util/List;
 		ARG 1 address
+	METHOD getReasonMessage (Lnet/minecraft/server/players/BanListEntry;)Lnet/minecraft/network/chat/Component;
+		ARG 1 entry
 	METHOD getSingleplayerData ()Lnet/minecraft/nbt/CompoundTag;
 		COMMENT On integrated servers, returns the host's player data to be written to level.dat.
 	METHOD getViewDistance ()I
@@ -103,6 +112,10 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 profile
 	METHOD op (Lnet/minecraft/server/players/NameAndId;)V
 		ARG 1 nameAndId
+	METHOD op (Lnet/minecraft/server/players/NameAndId;Ljava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 nameAndId
+		ARG 2 permissionLevel
+		ARG 3 canBypassPlayerLimit
 	METHOD placeNewPlayer (Lnet/minecraft/network/Connection;Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/server/network/CommonListenerCookie;)V
 		ARG 1 connection
 		ARG 2 player

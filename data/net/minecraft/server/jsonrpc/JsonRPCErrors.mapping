@@ -1,0 +1,9 @@
+CLASS net/minecraft/server/jsonrpc/JsonRPCErrors
+	METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
+		ARG 3 errorCode
+		ARG 4 message
+	METHOD create (Ljava/lang/Integer;)Lcom/google/gson/JsonObject;
+		ARG 1 errorCode
+	METHOD create (Ljava/lang/Integer;Ljava/lang/String;)Lcom/google/gson/JsonObject;
+		ARG 1 errorCode
+		ARG 2 message

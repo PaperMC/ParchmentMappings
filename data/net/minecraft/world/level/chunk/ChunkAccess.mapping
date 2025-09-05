@@ -7,6 +7,14 @@ CLASS net/minecraft/world/level/chunk/ChunkAccess
 		ARG 5 inhabitedTime
 		ARG 7 sections
 		ARG 8 blendingData
+	METHOD <init> (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/UpgradeData;Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/chunk/PalettedContainerFactory;J[Lnet/minecraft/world/level/chunk/LevelChunkSection;Lnet/minecraft/world/level/levelgen/blending/BlendingData;)V
+		ARG 1 chunkPos
+		ARG 2 upgradeData
+		ARG 3 levelHeightAccessor
+		ARG 4 palettedContainerFactory
+		ARG 5 inhabitedTime
+		ARG 7 sections
+		ARG 8 blendingData
 	METHOD addEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD addPackedPostProcess (Lit/unimi/dsi/fastutil/shorts/ShortList;I)V
@@ -63,6 +71,9 @@ CLASS net/minecraft/world/level/chunk/ChunkAccess
 		ARG 1 pos
 	METHOD replaceMissingSections (Lnet/minecraft/core/Registry;[Lnet/minecraft/world/level/chunk/LevelChunkSection;)V
 		ARG 0 biomeRegistry
+		ARG 1 sections
+	METHOD replaceMissingSections (Lnet/minecraft/world/level/chunk/PalettedContainerFactory;[Lnet/minecraft/world/level/chunk/LevelChunkSection;)V
+		ARG 0 palettedContainerFactory
 		ARG 1 sections
 	METHOD setAllStarts (Ljava/util/Map;)V
 		ARG 1 structureStarts

@@ -82,3 +82,6 @@ CLASS net/minecraft/client/renderer/SubmitNodeCollector
 		METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;)V
 			ARG 1 pose
 			ARG 2 consumer
+	CLASS ParticleGroupRenderer
+		METHOD render (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
+			ARG 1 bufferSource

@@ -2,3 +2,7 @@ CLASS net/minecraft/client/renderer/feature/ModelPartFeatureRenderer
 	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 nodeCollection
 		ARG 2 bufferSource
+	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
+		ARG 1 nodeCollection
+		ARG 2 bufferSource
+		ARG 3 crumblingBufferSource

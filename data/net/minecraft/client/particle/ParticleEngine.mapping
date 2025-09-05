@@ -1,6 +1,9 @@
 CLASS net/minecraft/client/particle/ParticleEngine
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/particle/ParticleResources;)V
+		ARG 1 level
+		ARG 2 resourceManager
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/texture/TextureManager;)V
 		ARG 1 level
 		ARG 2 textureManager
@@ -18,6 +21,8 @@ CLASS net/minecraft/client/particle/ParticleEngine
 		ARG 8 xSpeed
 		ARG 10 ySpeed
 		ARG 12 zSpeed
+	METHOD createParticleGroup (Lnet/minecraft/client/particle/ParticleRenderType;)Lnet/minecraft/client/particle/ParticleGroup;
+		ARG 1 renderType
 	METHOD createTrackingEmitter (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/particles/ParticleOptions;)V
 		ARG 1 entity
 		ARG 2 particleData
@@ -28,8 +33,15 @@ CLASS net/minecraft/client/particle/ParticleEngine
 	METHOD destroy (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state
+	METHOD extract (Lnet/minecraft/client/renderer/ParticlesRenderState;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/Camera;F)V
+		ARG 1 renderState
+		ARG 2 frustum
+		ARG 3 camera
+		ARG 4 partialTick
 	METHOD hasSpaceInParticleLimit (Lnet/minecraft/core/particles/ParticleGroup;)Z
 		ARG 1 group
+	METHOD hasSpaceInParticleLimit (Lnet/minecraft/core/particles/ParticleLimit;)Z
+		ARG 1 limit
 	METHOD loadParticleDescription (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/packs/resources/Resource;)Ljava/util/Optional;
 		ARG 1 registryName
 		ARG 2 resource
@@ -73,6 +85,9 @@ CLASS net/minecraft/client/particle/ParticleEngine
 		ARG 1 particles
 	METHOD updateCount (Lnet/minecraft/core/particles/ParticleGroup;I)V
 		ARG 1 group
+		ARG 2 count
+	METHOD updateCount (Lnet/minecraft/core/particles/ParticleLimit;I)V
+		ARG 1 limit
 		ARG 2 count
 	CLASS MutableSpriteSet
 		METHOD get (II)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;

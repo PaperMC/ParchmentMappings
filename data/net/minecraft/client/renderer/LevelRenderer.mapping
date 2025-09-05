@@ -27,7 +27,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 2 frustum
 		ARG 3 camera
 		ARG 4 frustumMatrix
-		ARG 5 shaderFof
+		ARG 5 shaderFog
 		ARG 6 renderBlockOutline
 		ARG 7 renderState
 		ARG 8 deltaTracker
@@ -94,6 +94,9 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 10 xSpeed
 		ARG 12 ySpeed
 		ARG 14 zSpeed
+	METHOD addParticlesPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
+		ARG 1 frameGraphBuilder
+		ARG 2 shaderFog
 	METHOD addParticlesPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/Camera;FLcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
 		ARG 1 frameGraphBuilder
 		ARG 2 camera
@@ -142,6 +145,10 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 	METHOD extractEntity (Lnet/minecraft/world/entity/Entity;F)Lnet/minecraft/client/renderer/entity/state/EntityRenderState;
 		ARG 1 entity
 		ARG 2 partialTick
+	METHOD extractVisibleBlockEntities (Lnet/minecraft/client/Camera;FLnet/minecraft/client/renderer/LevelRenderState;)V
+		ARG 1 camera
+		ARG 2 partialTick
+		ARG 3 renderState
 	METHOD extractVisibleEntities (Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/DeltaTracker;Lnet/minecraft/client/renderer/LevelRenderState;)V
 		ARG 1 camera
 		ARG 2 frustum
@@ -289,6 +296,11 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 4 isSpectator
 	METHOD shouldRenderDarkDisc (F)Z
 		ARG 1 partialTick
+	METHOD submitBlockEntities (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/LevelRenderState;Lnet/minecraft/client/renderer/SubmitNodeStorage;)V
+		ARG 1 poseStack
+		ARG 2 camera
+		ARG 3 renderState
+		ARG 4 nodeStorage
 	METHOD submitEntities (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/LevelRenderState;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 poseStack
 		ARG 2 camera

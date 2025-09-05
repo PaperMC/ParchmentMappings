@@ -45,6 +45,9 @@ CLASS net/minecraft/server/dedicated/Settings
 	METHOD getMutable (Ljava/lang/String;I)Lnet/minecraft/server/dedicated/Settings$MutableValue;
 		ARG 1 key
 		ARG 2 defaultValue
+	METHOD getMutable (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/server/dedicated/Settings$MutableValue;
+		ARG 1 key
+		ARG 2 defaultValue
 	METHOD getMutable (Ljava/lang/String;Ljava/util/function/Function;Ljava/lang/Object;)Lnet/minecraft/server/dedicated/Settings$MutableValue;
 		ARG 1 key
 		ARG 2 serializer

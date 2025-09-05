@@ -63,9 +63,14 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 4 z
 		ARG 5 texU
 		ARG 6 texV
+	METHOD getAvatarRenderer (Ljava/util/Map;Lnet/minecraft/world/entity/Avatar;)Lnet/minecraft/client/renderer/entity/player/AvatarRenderer;
+		ARG 1 renderers
+		ARG 2 avatar
 	METHOD getPackedLightCoords (Lnet/minecraft/world/entity/Entity;F)I
 		ARG 1 entity
 		ARG 2 partialTicks
+	METHOD getPlayerRenderer (Lnet/minecraft/client/player/AbstractClientPlayer;)Lnet/minecraft/client/renderer/entity/player/AvatarRenderer;
+		ARG 1 player
 	METHOD getRenderer (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;)Lnet/minecraft/client/renderer/entity/EntityRenderer;
 		ARG 1 renderState
 	METHOD getRenderer (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/client/renderer/entity/EntityRenderer;
