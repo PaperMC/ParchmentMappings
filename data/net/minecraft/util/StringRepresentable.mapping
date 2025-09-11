@@ -1,4 +1,9 @@
 CLASS net/minecraft/util/StringRepresentable
+	METHOD createNameLookup ([Ljava/lang/Object;Ljava/util/function/Function;)Ljava/util/function/Function;
+		ARG 0 values
+		ARG 1 serializer
+	METHOD createNameLookup ([Lnet/minecraft/util/StringRepresentable;)Ljava/util/function/Function;
+		ARG 0 values
 	METHOD createNameLookup ([Lnet/minecraft/util/StringRepresentable;Ljava/util/function/Function;)Ljava/util/function/Function;
 		ARG 0 values
 		ARG 1 keyFunction

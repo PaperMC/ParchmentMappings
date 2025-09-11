@@ -10,6 +10,8 @@ CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftBanListService
 		ARG 2 clientInfo
 	METHOD clearIpBans (Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)V
 		ARG 1 clientInfo
+	METHOD clearUserBans (Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)V
+		ARG 1 clientInfo
 	METHOD removeIpBan (Ljava/lang/String;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)V
 		ARG 1 ip
 		ARG 2 clientInfo

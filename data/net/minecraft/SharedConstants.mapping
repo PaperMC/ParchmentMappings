@@ -82,6 +82,12 @@ CLASS net/minecraft/SharedConstants
 		COMMENT
 		COMMENT @see com.mojang.bridge.game.GameVersion#getWorldVersion()
 		COMMENT @deprecated Use {@link #getCurrentVersion()} and {@link com.mojang.bridge.game.GameVersion#getWorldVersion()} instead.
+	METHOD booleanProperty (Ljava/lang/String;)Z
+		ARG 0 name
+	METHOD debugFlag (Ljava/lang/String;)Z
+		ARG 0 name
+	METHOD debugIntValue (Ljava/lang/String;)I
+		ARG 0 name
 	METHOD debugVoidTerrain (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 0 chunkPos
 	METHOD getCurrentVersion ()Lnet/minecraft/WorldVersion;
@@ -92,6 +98,8 @@ CLASS net/minecraft/SharedConstants
 		COMMENT {@return the networking protocol version in use by this game version}
 		COMMENT
 		COMMENT <p>For releases, this will be equivalent to {@link #RELEASE_NETWORK_PROTOCOL_VERSION}. For snapshot versions, this will be the combination (bitwise OR) of {@link #SNAPSHOT_NETWORK_PROTOCOL_VERSION} and the bit marked by {@link #SNAPSHOT_PROTOCOL_BIT}.</p>
+	METHOD prefixDebugFlagName (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 name
 	METHOD setVersion (Lnet/minecraft/WorldVersion;)V
 		COMMENT Sets the world version, failing if a different world version is already present.
 		COMMENT

@@ -7,6 +7,9 @@ CLASS net/minecraft/world/level/gameevent/EuclideanGameEventListenerRegistry
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 listener
+	METHOD sendDebugInfo (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEventListener;)V
+		ARG 0 level
+		ARG 1 listener
 	CLASS OnEmptyAction
 		METHOD apply (I)V
 			ARG 1 sectionY

@@ -6,3 +6,6 @@ CLASS net/minecraft/client/renderer/debug/NeighborsUpdateRenderer
 		ARG 3 pos
 	METHOD lambda$addUpdate$0 (Ljava/lang/Long;)Ljava/util/Map;
 		ARG 0 k
+	CLASS LastUpdate
+		METHOD tryCount (I)Lnet/minecraft/client/renderer/debug/NeighborsUpdateRenderer$LastUpdate;
+			ARG 1 age

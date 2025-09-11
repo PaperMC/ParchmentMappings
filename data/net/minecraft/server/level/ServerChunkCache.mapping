@@ -95,6 +95,12 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 3 radius
 	METHOD save (Z)V
 		ARG 1 flush
+	METHOD sendToTrackingPlayers (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 1 entity
+		ARG 2 packet
+	METHOD sendToTrackingPlayersAndSelf (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 1 entity
+		ARG 2 packet
 	METHOD setSimulationDistance (I)V
 		ARG 1 simulationDistance
 	METHOD setViewDistance (I)V

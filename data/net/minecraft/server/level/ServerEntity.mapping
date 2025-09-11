@@ -6,6 +6,12 @@ CLASS net/minecraft/server/level/ServerEntity
 		ARG 4 trackDelta
 		ARG 5 broadcast
 		ARG 6 broadcastWithIgnore
+	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;IZLnet/minecraft/server/level/ServerEntity$Synchronizer;)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 updateInterval
+		ARG 4 trackDelta
+		ARG 5 synchronizer
 	METHOD addPairing (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
 	METHOD broadcastAndSend (Lnet/minecraft/network/protocol/Packet;)V
@@ -26,3 +32,11 @@ CLASS net/minecraft/server/level/ServerEntity
 	METHOD sendPairingData (Lnet/minecraft/server/level/ServerPlayer;Ljava/util/function/Consumer;)V
 		ARG 1 player
 		ARG 2 consumer
+	CLASS Synchronizer
+		METHOD sendToTrackingPlayers (Lnet/minecraft/network/protocol/Packet;)V
+			ARG 1 packet
+		METHOD sendToTrackingPlayersAndSelf (Lnet/minecraft/network/protocol/Packet;)V
+			ARG 1 packet
+		METHOD sendToTrackingPlayersFiltered (Lnet/minecraft/network/protocol/Packet;Ljava/util/function/Predicate;)V
+			ARG 1 packet
+			ARG 2 filter

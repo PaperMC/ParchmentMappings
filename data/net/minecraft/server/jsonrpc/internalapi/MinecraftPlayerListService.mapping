@@ -2,6 +2,12 @@ CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftPlayerListService
 	METHOD <init> (Lnet/minecraft/server/dedicated/DedicatedServer;Lnet/minecraft/server/jsonrpc/JsonRpcLogger;)V
 		ARG 1 server
 		ARG 2 jsonRpcLogger
+	METHOD fetchUserById (Ljava/util/UUID;)Ljava/util/Optional;
+		ARG 1 id
+	METHOD fetchUserByName (Ljava/lang/String;)Ljava/util/Optional;
+		ARG 1 name
+	METHOD getCachedUserById (Ljava/util/UUID;)Ljava/util/Optional;
+		ARG 1 id
 	METHOD getPlayer (Ljava/util/Optional;Ljava/util/Optional;)Ljava/util/Optional;
 		ARG 1 uuid
 		ARG 2 playerName

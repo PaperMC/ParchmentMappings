@@ -47,3 +47,10 @@ CLASS net/minecraft/client/renderer/debug/BreezeDebugRenderer
 		ARG 3 xOffset
 		ARG 5 yOffset
 		ARG 7 zOffset
+	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;)V
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 camX
+		ARG 5 camY
+		ARG 7 camZ
+		ARG 9 debugValueAccess

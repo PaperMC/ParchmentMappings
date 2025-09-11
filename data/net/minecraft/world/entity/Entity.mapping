@@ -130,6 +130,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 		ARG 2 horizontalDistance
 		ARG 4 verticalDistance
+	METHOD collectAllColliders (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/phys/AABB;)Ljava/util/List;
+		ARG 0 entity
+		ARG 1 level
+		ARG 2 boundingBox
 	METHOD collectCandidateStepUpHeights (Lnet/minecraft/world/phys/AABB;Ljava/util/List;FF)[F
 		ARG 0 box
 		ARG 1 colliders
@@ -173,6 +177,11 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 pos
 		ARG 2 isBlock
 		ARG 3 isFluid
+	METHOD debugBlockIntersection (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;ZZ)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 inFluid
+		ARG 4 inBlock
 	METHOD defineSynchedData (Lnet/minecraft/network/syncher/SynchedEntityData$Builder;)V
 		ARG 1 builder
 	METHOD deflection (Lnet/minecraft/world/entity/projectile/Projectile;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
@@ -228,6 +237,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 entity
 	METHOD getAddEntityPacket (Lnet/minecraft/server/level/ServerEntity;)Lnet/minecraft/network/protocol/Packet;
 		ARG 1 entity
+	METHOD getAvailableSpaceBelow (D)D
+		ARG 1 distance
 	METHOD getBlockExplosionResistance (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;F)F
 		COMMENT Explosion resistance of a block relative to this entity
 		ARG 1 explosion
@@ -878,6 +889,14 @@ CLASS net/minecraft/world/entity/Entity
 			ARG 2 x
 			ARG 4 y
 			ARG 6 z
+	CLASS Movement
+		METHOD <init> (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)V
+			ARG 1 from
+			ARG 2 to
+		METHOD <init> (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)V
+			ARG 1 from
+			ARG 2 to
+			ARG 3 axisDependentOriginalMovement
 	CLASS MovementEmission
 		METHOD <init> (Ljava/lang/String;IZZ)V
 			ARG 3 sounds

@@ -566,6 +566,14 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 positioner
 		ARG 6 background
 		ARG 7 focused
+	METHOD submitBannerPatternRenderState (Lnet/minecraft/client/model/BannerFlagModel;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;IIII)V
+		ARG 1 flag
+		ARG 2 baseColor
+		ARG 3 resultBannerPatterns
+		ARG 4 x0
+		ARG 5 y0
+		ARG 6 x1
+		ARG 7 y1
 	METHOD submitBannerPatternRenderState (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;IIII)V
 		ARG 1 flag
 		ARG 2 baseColor
@@ -656,6 +664,20 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 8 y0
 		ARG 9 x1
 		ARG 10 y1
+	METHOD submitTiledBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lcom/mojang/blaze3d/textures/GpuTextureView;IIIIIIFFFFI)V
+		ARG 1 pipeline
+		ARG 2 atlasTexture
+		ARG 3 tileWidth
+		ARG 4 tileHeight
+		ARG 5 x0
+		ARG 6 x1
+		ARG 7 y0
+		ARG 8 y1
+		ARG 9 u0
+		ARG 10 u1
+		ARG 11 v0
+		ARG 12 v1
+		ARG 13 color
 	METHOD textHighlight (IIII)V
 		ARG 1 minX
 		ARG 2 minY

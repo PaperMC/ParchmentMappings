@@ -34,6 +34,8 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 nanoTime
 	METHOD getProjectionMatrix (F)Lorg/joml/Matrix4f;
 		ARG 1 fov
+	METHOD getProjectionMatrixForCulling (F)Lorg/joml/Matrix4f;
+		ARG 1 fov
 	METHOD pick (F)V
 		COMMENT Gets the block or object that is being moused over.
 		ARG 1 partialTicks

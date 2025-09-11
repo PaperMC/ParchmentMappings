@@ -4,6 +4,8 @@ CLASS net/minecraft/SystemReport
 	METHOD ignoreErrors (Ljava/lang/String;Ljava/lang/Runnable;)V
 		ARG 1 groupIdentifier
 		ARG 2 executor
+	METHOD printJvmFlags (Ljava/util/function/Predicate;)Ljava/lang/String;
+		ARG 0 predicate
 	METHOD putGraphics (Ljava/util/List;)V
 		ARG 1 gpus
 	METHOD putHardware (Loshi/SystemInfo;)V

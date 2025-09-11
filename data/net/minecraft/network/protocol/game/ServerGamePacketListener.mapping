@@ -48,6 +48,8 @@ CLASS net/minecraft/network/protocol/game/ServerGamePacketListener
 		ARG 1 packet
 	METHOD handleDebugSampleSubscription (Lnet/minecraft/network/protocol/game/ServerboundDebugSampleSubscriptionPacket;)V
 		ARG 1 packet
+	METHOD handleDebugSubscriptionRequest (Lnet/minecraft/network/protocol/game/ServerboundDebugSubscriptionRequestPacket;)V
+		ARG 1 packet
 	METHOD handleEditBook (Lnet/minecraft/network/protocol/game/ServerboundEditBookPacket;)V
 		ARG 1 packet
 	METHOD handleEntityTagQuery (Lnet/minecraft/network/protocol/game/ServerboundEntityTagQueryPacket;)V

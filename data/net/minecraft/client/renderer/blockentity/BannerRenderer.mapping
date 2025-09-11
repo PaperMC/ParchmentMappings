@@ -117,6 +117,17 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 9 baseColor
 		ARG 10 patterns
 		ARG 11 crumblingOverlay
+	METHOD submitPatternLayer (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
+		ARG 0 materials
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 flagModel
+		ARG 6 sway
+		ARG 7 material
+		ARG 8 color
+		ARG 9 crumblingOverlay
 	METHOD submitPatternLayer (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;)V
 		ARG 0 materials
 		ARG 1 poseStack
@@ -136,6 +147,19 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 6 material
 		ARG 7 color
 		ARG 8 crumblingOverlay
+	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
+		ARG 0 materials
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 flagModel
+		ARG 6 sway
+		ARG 7 material
+		ARG 8 banner
+		ARG 9 baseColor
+		ARG 10 patterns
+		ARG 11 crumblingOverlay
 	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
 		ARG 0 materials
 		ARG 1 poseStack

@@ -7,6 +7,8 @@ CLASS net/minecraft/world/level/pathfinder/Path
 		COMMENT Directs this path to the next point in its array
 	METHOD createFromStream (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/level/pathfinder/Path;
 		ARG 0 buf
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
 	METHOD getEndNode ()Lnet/minecraft/world/level/pathfinder/Node;
 		COMMENT Returns the last {@link net.minecraft.world.level.pathfinder.Node} of the Array.
 	METHOD getEntityPosAtNode (Lnet/minecraft/world/entity/Entity;I)Lnet/minecraft/world/phys/Vec3;

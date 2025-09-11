@@ -7,6 +7,9 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		ARG 5 registryAccess
 		ARG 6 errorReporter
 		ARG 7 levelHeightAccessor
+	METHOD add (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;
+		ARG 1 pos
+		ARG 2 type
 	METHOD add (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder;)V
 		ARG 1 pos
 		ARG 2 type
@@ -68,6 +71,8 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		ARG 2 pos
 		ARG 3 distance
 		ARG 4 status
+	METHOD getDebugPoiInfo (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/util/debug/DebugPoiInfo;
+		ARG 1 pos
 	METHOD getFreeTickets (Lnet/minecraft/core/BlockPos;)I
 		ARG 1 pos
 	METHOD getInChunk (Ljava/util/function/Predicate;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/entity/ai/village/poi/PoiManager$Occupancy;)Ljava/util/stream/Stream;
@@ -116,11 +121,6 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		ARG 1 section
 		ARG 2 sectionPos
 		ARG 3 posToTypeConsumer
-	CLASS Occupancy
-		METHOD <init> (Ljava/lang/String;ILjava/util/function/Predicate;)V
-			ARG 3 test
-		METHOD lambda$static$0 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
-			ARG 0 test
 	CLASS DistanceTracker
 		METHOD getLevel (J)I
 			ARG 1 sectionPos
@@ -129,3 +129,8 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		METHOD setLevel (JI)V
 			ARG 1 sectionPos
 			ARG 3 level
+	CLASS Occupancy
+		METHOD <init> (Ljava/lang/String;ILjava/util/function/Predicate;)V
+			ARG 3 test
+		METHOD lambda$static$0 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
+			ARG 0 test

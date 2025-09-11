@@ -7,3 +7,11 @@ CLASS net/minecraft/client/renderer/feature/NameTagFeatureRenderer
 		ARG 1 nodeStorage
 		ARG 2 bufferSource
 		ARG 3 font
+	CLASS Storage
+		METHOD add (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/network/chat/Component;ZID)V
+			ARG 1 poseStack
+			ARG 2 pos
+			ARG 3 text
+			ARG 4 seethrough
+			ARG 5 packedLight
+			ARG 6 distanceToCameraSq

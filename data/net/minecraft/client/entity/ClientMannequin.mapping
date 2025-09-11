@@ -6,3 +6,7 @@ CLASS net/minecraft/client/entity/ClientMannequin
 		ARG 0 profile
 	METHOD mapTexture (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 texture
+	METHOD registerOverrides (Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
+		ARG 0 playerSkinRenderCache
+	METHOD setSkin (Lnet/minecraft/client/resources/PlayerSkin;)V
+		ARG 1 skin

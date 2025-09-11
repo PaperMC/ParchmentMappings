@@ -136,6 +136,10 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 3 output
 	METHOD compileSections (Lnet/minecraft/client/Camera;)V
 		ARG 1 camera
+	METHOD cullTerrain (Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;Z)V
+		ARG 1 camera
+		ARG 2 frustum
+		ARG 3 spectator
 	METHOD destroyBlockProgress (ILnet/minecraft/core/BlockPos;I)V
 		ARG 1 breakerId
 		ARG 2 pos
@@ -185,6 +189,10 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 cameraPosition
 		ARG 2 frustumMatrix
 		ARG 3 projectionMatrix
+	METHOD prepareCullFrustum (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/client/renderer/culling/Frustum;
+		ARG 1 frustumMatrix
+		ARG 2 projectionMatrix
+		ARG 3 cameraPosition
 	METHOD removeProgress (Lnet/minecraft/server/level/BlockDestructionProgress;)V
 		ARG 1 progress
 	METHOD renderBlockDestroyAnimation (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
@@ -240,6 +248,17 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 7 fogBuffer
 		ARG 8 fogColor
 		ARG 9 renderSky
+	METHOD renderLevel (Lcom/mojang/blaze3d/resource/GraphicsResourceAllocator;Lnet/minecraft/client/DeltaTracker;ZLnet/minecraft/client/Camera;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lorg/joml/Vector4f;Z)V
+		ARG 1 graphicsResourceAllocator
+		ARG 2 deltaTracker
+		ARG 3 renderBlockOutline
+		ARG 4 camera
+		ARG 5 frustumMatrix
+		ARG 6 projectionMatrix
+		ARG 7 cullingProjectionMatrix
+		ARG 8 shaderFog
+		ARG 9 fogColor
+		ARG 10 renderSky
 	METHOD resize (II)V
 		ARG 1 width
 		ARG 2 height

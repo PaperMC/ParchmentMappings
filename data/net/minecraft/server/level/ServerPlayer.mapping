@@ -179,6 +179,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 enderPearl
 	METHOD registerEnderPearl (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)V
 		ARG 1 enderPearl
+	METHOD requestDebugSubscriptions (Ljava/util/Set;)V
+		ARG 1 subscriptions
 	METHOD resetSentInfo ()V
 		COMMENT This function is called when a player's inventory is sent to him, {@code lastHealth} is updated on any dimension transitions, then reset.
 	METHOD resetStat (Lnet/minecraft/stats/Stat;)V

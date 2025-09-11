@@ -64,6 +64,14 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleDamageEvent (Lnet/minecraft/network/protocol/game/ClientboundDamageEventPacket;)V
 		ARG 1 packet
+	METHOD handleDebugBlockValue (Lnet/minecraft/network/protocol/game/ClientboundDebugBlockValuePacket;)V
+		ARG 1 packet
+	METHOD handleDebugChunkValue (Lnet/minecraft/network/protocol/game/ClientboundDebugChunkValuePacket;)V
+		ARG 1 packet
+	METHOD handleDebugEntityValue (Lnet/minecraft/network/protocol/game/ClientboundDebugEntityValuePacket;)V
+		ARG 1 packet
+	METHOD handleDebugEvent (Lnet/minecraft/network/protocol/game/ClientboundDebugEventPacket;)V
+		ARG 1 packet
 	METHOD handleDebugSample (Lnet/minecraft/network/protocol/game/ClientboundDebugSamplePacket;)V
 		ARG 1 packet
 	METHOD handleDeleteChat (Lnet/minecraft/network/protocol/game/ClientboundDeleteChatPacket;)V
@@ -83,6 +91,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleForgetLevelChunk (Lnet/minecraft/network/protocol/game/ClientboundForgetLevelChunkPacket;)V
 		ARG 1 packet
 	METHOD handleGameEvent (Lnet/minecraft/network/protocol/game/ClientboundGameEventPacket;)V
+		ARG 1 packet
+	METHOD handleGameTestHighlightPos (Lnet/minecraft/network/protocol/game/ClientboundGameTestHighlightPosPacket;)V
 		ARG 1 packet
 	METHOD handleHorseScreenOpen (Lnet/minecraft/network/protocol/game/ClientboundHorseScreenOpenPacket;)V
 		ARG 1 packet

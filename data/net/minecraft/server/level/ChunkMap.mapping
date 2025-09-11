@@ -70,6 +70,11 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 pos
 	METHOD forEachBlockTickingChunk (Ljava/util/function/Consumer;)V
 		ARG 1 action
+	METHOD forEachEntityTrackedBy (Lnet/minecraft/server/level/ServerPlayer;Ljava/util/function/Consumer;)V
+		ARG 1 player
+		ARG 2 action
+	METHOD forEachReadyToSendChunk (Ljava/util/function/Consumer;)V
+		ARG 1 action
 	METHOD getChunkDebugData (Lnet/minecraft/world/level/ChunkPos;)Ljava/lang/String;
 		ARG 1 pos
 	METHOD getChunkQueueLevel (J)Ljava/util/function/IntSupplier;
@@ -107,6 +112,8 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 3 z
 	METHOD isExistingChunkFull (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 1 chunkPos
+	METHOD isTrackedByAnyPlayer (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity
 	METHOD lambda$debugFuturesAndCreateReportedException$4 (Ljava/lang/StringBuilder;Lnet/minecraft/server/level/ChunkHolder;)V
 		ARG 1 chunk
 	METHOD lambda$dumpChunks$31 (Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/Optional;
@@ -203,6 +210,16 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD scheduleUnload (JLnet/minecraft/server/level/ChunkHolder;)V
 		ARG 1 chunkPos
 		ARG 3 chunkHolder
+	METHOD sendToTrackingPlayers (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 1 entity
+		ARG 2 packet
+	METHOD sendToTrackingPlayersAndSelf (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 1 entity
+		ARG 2 packet
+	METHOD sendToTrackingPlayersFiltered (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;Ljava/util/function/Predicate;)V
+		ARG 1 entity
+		ARG 2 packet
+		ARG 3 filter
 	METHOD setChunkUnsaved (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
 	METHOD setServerViewDistance (I)V

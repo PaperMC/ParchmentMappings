@@ -65,3 +65,7 @@ CLASS net/minecraft/client/KeyMapping
 	CLASS Category
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 descriptionId
+		METHOD register (Ljava/lang/String;)Lnet/minecraft/client/KeyMapping$Category;
+			ARG 0 name
+		METHOD register (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/KeyMapping$Category;
+			ARG 0 location
