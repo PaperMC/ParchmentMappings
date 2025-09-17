@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/renderer/LevelEventHandler
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/ClientLevel;)V
+		ARG 1 minecraft
+		ARG 2 level
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/Level;Lnet/minecraft/client/renderer/LevelRenderer;)V
 		ARG 1 minecraft
 		ARG 2 level

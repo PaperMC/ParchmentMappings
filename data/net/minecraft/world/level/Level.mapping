@@ -20,7 +20,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 12 zSpeed
 	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;ZDDDDDD)V
 		ARG 1 particle
-		ARG 2 ignoreRange
+		ARG 2 overrideLimiter
 		ARG 3 x
 		ARG 5 y
 		ARG 7 z
@@ -213,6 +213,8 @@ CLASS net/minecraft/world/level/Level
 		ARG 1 partialTick
 	METHOD getThunderLevel (F)F
 		ARG 1 partialTick
+	METHOD getWorldBorderAdjustedRespawnData (Lnet/minecraft/world/level/storage/LevelData$RespawnData;)Lnet/minecraft/world/level/storage/LevelData$RespawnData;
+		ARG 1 respawnData
 	METHOD globalLevelEvent (ILnet/minecraft/core/BlockPos;I)V
 		ARG 1 id
 		ARG 2 pos
@@ -411,6 +413,8 @@ CLASS net/minecraft/world/level/Level
 	METHOD setRainLevel (F)V
 		COMMENT Sets the strength of the rain.
 		ARG 1 strength
+	METHOD setRespawnData (Lnet/minecraft/world/level/storage/LevelData$RespawnData;)V
+		ARG 1 respawnData
 	METHOD setSkyFlashTime (I)V
 		ARG 1 timeFlash
 	METHOD setSpawnSettings (Z)V

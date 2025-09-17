@@ -18,6 +18,10 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 		ARG 1 renderState
 		ARG 2 camera
 		ARG 3 z
+	METHOD extract (Lnet/minecraft/client/renderer/state/QuadParticleRenderState;Lnet/minecraft/client/Camera;F)V
+		ARG 1 reusedState
+		ARG 2 camera
+		ARG 3 partialTick
 	METHOD extractRotatedQuad (Lnet/minecraft/client/renderer/QuadParticleRenderState;Lnet/minecraft/client/Camera;Lorg/joml/Quaternionf;F)V
 		ARG 1 renderState
 		ARG 2 camera
@@ -26,6 +30,18 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 	METHOD extractRotatedQuad (Lnet/minecraft/client/renderer/QuadParticleRenderState;Lorg/joml/Quaternionf;FFFF)V
 		ARG 1 renderState
 		ARG 2 rotation
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 partialTick
+	METHOD extractRotatedQuad (Lnet/minecraft/client/renderer/state/QuadParticleRenderState;Lnet/minecraft/client/Camera;Lorg/joml/Quaternionf;F)V
+		ARG 1 reusedState
+		ARG 2 camera
+		ARG 3 orientation
+		ARG 4 partialTick
+	METHOD extractRotatedQuad (Lnet/minecraft/client/renderer/state/QuadParticleRenderState;Lorg/joml/Quaternionf;FFFF)V
+		ARG 1 reusedState
+		ARG 2 orientation
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z

@@ -238,6 +238,8 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 preventProxyConnections
 	METHOD setPvpAllowed (Z)V
 		ARG 1 allowPvp
+	METHOD setRespawnData (Lnet/minecraft/world/level/storage/LevelData$RespawnData;)V
+		ARG 1 respawnData
 	METHOD setSingleplayerProfile (Lcom/mojang/authlib/GameProfile;)V
 		ARG 1 singleplayerProfile
 	METHOD setUsesAuthentication (Z)V

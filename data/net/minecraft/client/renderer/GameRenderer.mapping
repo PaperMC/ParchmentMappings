@@ -19,6 +19,8 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 entity
 	METHOD displayItemActivation (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
+	METHOD extractCamera (F)V
+		ARG 1 partialTick
 	METHOD filterHitResult (Lnet/minecraft/world/phys/HitResult;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/HitResult;
 		ARG 0 hitResult
 		ARG 1 pos

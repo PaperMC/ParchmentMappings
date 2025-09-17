@@ -2,6 +2,8 @@ CLASS net/minecraft/server/jsonrpc/methods/DiscoveryService
 	METHOD createMethodInfo (Lnet/minecraft/server/jsonrpc/api/MethodInfo;Ljava/util/Set;)Lnet/minecraft/server/jsonrpc/api/MethodInfo;
 		ARG 0 methodInfo
 		ARG 1 referencedSchemas
+	METHOD discover (Ljava/util/List;)Lnet/minecraft/server/jsonrpc/methods/DiscoveryService$DiscoverResponse;
+		ARG 0 schemaRegistry
 	METHOD discover (Ljava/util/Map;)Lnet/minecraft/server/jsonrpc/methods/DiscoveryService$DiscoverResponse;
 		ARG 0 schemaRegistry
 	METHOD replaceRefsInSchema (Lnet/minecraft/server/jsonrpc/api/FlatSchema;Ljava/util/function/Function;)Lnet/minecraft/server/jsonrpc/api/Schema;

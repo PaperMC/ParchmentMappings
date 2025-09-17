@@ -27,6 +27,10 @@ CLASS net/minecraft/client/renderer/entity/DisplayRenderer
 		ARG 3 nodeCollector
 		ARG 4 packedLight
 		ARG 5 partialTick
+	METHOD transformXRot (F)F
+		ARG 0 xRot
+	METHOD transformYRot (F)F
+		ARG 0 yRot
 	CLASS TextDisplayRenderer
 		METHOD splitLines (Lnet/minecraft/network/chat/Component;I)Lnet/minecraft/world/entity/Display$TextDisplay$CachedInfo;
 			ARG 1 text

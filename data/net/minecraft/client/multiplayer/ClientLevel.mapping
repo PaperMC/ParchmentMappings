@@ -49,12 +49,24 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD calculateBlockTint (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/ColorResolver;)I
 		ARG 1 blockPos
 		ARG 2 colorResolver
+	METHOD calculateParticleLevel (Z)Lnet/minecraft/server/level/ParticleStatus;
+		ARG 1 alwaysShow
 	METHOD destroyBlockProgress (ILnet/minecraft/core/BlockPos;I)V
 		ARG 1 breakerId
 		ARG 2 pos
 		ARG 3 progress
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 reason
+	METHOD doAddParticle (Lnet/minecraft/core/particles/ParticleOptions;ZZDDDDDD)V
+		ARG 1 particle
+		ARG 2 overrideLimiter
+		ARG 3 alwaysShow
+		ARG 4 x
+		ARG 6 y
+		ARG 8 z
+		ARG 10 xSpeed
+		ARG 12 ySpeed
+		ARG 14 zSpeed
 	METHOD doAnimateTick (IIIILnet/minecraft/util/RandomSource;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos$MutableBlockPos;)V
 		ARG 1 posX
 		ARG 2 posY
@@ -96,6 +108,8 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 2 chunkZ
 	METHOD isTickingEntity (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
+	METHOD lambda$doAnimateTick$9 (Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/biome/AmbientParticleSettings;)V
+		ARG 2 particle
 	METHOD lambda$new$0 (Lnet/minecraft/core/BlockPos;)I
 		ARG 1 pos
 	METHOD lambda$new$1 (Lnet/minecraft/core/BlockPos;)I

@@ -13,3 +13,11 @@ CLASS net/minecraft/world/level/storage/LevelData
 	METHOD setRaining (Z)V
 		COMMENT Sets whether it is raining or not.
 		ARG 1 raining
+	CLASS RespawnData
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD of (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/BlockPos;FF)Lnet/minecraft/world/level/storage/LevelData$RespawnData;
+			ARG 0 dimension
+			ARG 1 pos
+			ARG 2 yaw
+			ARG 3 pitch

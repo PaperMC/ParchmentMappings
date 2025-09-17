@@ -27,6 +27,8 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher
 		ARG 1 renderState
 	METHOD getRenderer (Lnet/minecraft/world/level/block/entity/BlockEntity;)Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderer;
 		ARG 1 blockEntity
+	METHOD prepare (Lnet/minecraft/client/Camera;)V
+		ARG 1 camera
 	METHOD prepare (Lnet/minecraft/world/level/Level;Lnet/minecraft/client/Camera;Lnet/minecraft/world/phys/HitResult;)V
 		ARG 1 level
 		ARG 2 camera
@@ -49,6 +51,11 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher
 		ARG 1 renderState
 		ARG 2 poseStack
 		ARG 3 nodeCollector
+	METHOD submit (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/state/CameraRenderState;)V
+		ARG 1 renderState
+		ARG 2 poseStack
+		ARG 3 nodeCollector
+		ARG 4 cameraRenderState
 	METHOD submit (Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 blockEntity
 		ARG 2 partialTick

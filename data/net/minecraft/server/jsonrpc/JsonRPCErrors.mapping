@@ -14,3 +14,7 @@ CLASS net/minecraft/server/jsonrpc/JsonRPCErrors
 		ARG 2 message
 	METHOD createWithMessage (Ljava/lang/String;)Lcom/google/gson/JsonObject;
 		ARG 1 message
+	METHOD createWithUnknownId (Ljava/lang/String;)Lcom/google/gson/JsonObject;
+		ARG 1 data
+	METHOD createWithoutData (Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
+		ARG 1 requestId

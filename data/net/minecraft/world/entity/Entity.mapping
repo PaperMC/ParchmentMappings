@@ -278,7 +278,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 motionScaler
 		ARG 2 facing
 	METHOD getLightProbePosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getLookAngle ()Lnet/minecraft/world/phys/Vec3;
 		COMMENT Returns a (normalized) vector of where this entity is looking.
 	METHOD getMaxFallDistance ()I
@@ -294,7 +294,7 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD getPassengerRidingPosition (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 entity
 	METHOD getPosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getPreciseBodyRotation (F)F
 		ARG 1 partialTick
 	METHOD getPrimaryStepSoundBlockPos (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
@@ -327,10 +327,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD getViewVector (F)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Gets the interpolated look vector.
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getViewXRot (F)F
 		COMMENT Returns the current X rotation of the entity.
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getViewYRot (F)F
 		COMMENT Returns the current Y rotation of the entity.
 		ARG 1 partialTick
@@ -563,7 +563,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 key
 	METHOD pick (DFZ)Lnet/minecraft/world/phys/HitResult;
 		ARG 1 hitDistance
-		ARG 3 partialTicks
+		ARG 3 partialTick
 		ARG 4 hitFluids
 	METHOD placePortalTicket (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
@@ -844,6 +844,10 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD teleportSetPosition (Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)V
 		ARG 1 positionMovementRotation
 		ARG 2 relatives
+	METHOD teleportSetPosition (Lnet/minecraft/world/entity/PositionMoveRotation;Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)V
+		ARG 1 from
+		ARG 2 to
+		ARG 3 relatives
 	METHOD teleportSpectators (Lnet/minecraft/world/level/portal/TeleportTransition;Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 teleportTransition
 		ARG 2 oldLevel

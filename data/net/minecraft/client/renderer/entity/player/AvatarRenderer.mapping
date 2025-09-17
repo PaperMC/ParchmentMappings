@@ -17,6 +17,8 @@ CLASS net/minecraft/client/renderer/entity/player/AvatarRenderer
 		ARG 0 avatar
 		ARG 1 handItem
 		ARG 2 hand
+	METHOD isPlayerUpsideDown (Lnet/minecraft/world/entity/player/Player;)Z
+		ARG 0 player
 	METHOD renderHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/model/geom/ModelPart;Z)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector

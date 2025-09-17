@@ -2,6 +2,11 @@ CLASS net/minecraft/client/renderer/SkyRenderer
 	METHOD buildSkyDisc (Lcom/mojang/blaze3d/vertex/VertexConsumer;F)V
 		ARG 1 buffer
 		ARG 2 y
+	METHOD extractRenderState (Lnet/minecraft/client/multiplayer/ClientLevel;FLnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/renderer/state/SkyRenderState;)V
+		ARG 1 level
+		ARG 2 partialTick
+		ARG 3 cameraPosition
+		ARG 4 reusedState
 	METHOD getTexture (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/AbstractTexture;
 		ARG 1 location
 	METHOD renderEndFlash (Lcom/mojang/blaze3d/vertex/PoseStack;FFF)V
@@ -60,3 +65,6 @@ CLASS net/minecraft/client/renderer/SkyRenderer
 		ARG 2 bufferSource
 		ARG 3 sunAngle
 		ARG 4 color
+	METHOD shouldRenderDarkDisc (FLnet/minecraft/client/multiplayer/ClientLevel;)Z
+		ARG 1 partialTick
+		ARG 2 level

@@ -33,6 +33,10 @@ CLASS net/minecraft/world/level/storage/loot/LootContext
 		ARG 1 element
 	METHOD pushVisitedElement (Lnet/minecraft/world/level/storage/loot/LootContext$VisitedEntry;)Z
 		ARG 1 element
+	CLASS BlockEntityTarget
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/util/context/ContextKey;)V
+			ARG 3 name
+			ARG 4 param
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/storage/loot/LootParams;)V
 			ARG 1 params
@@ -51,3 +55,7 @@ CLASS net/minecraft/world/level/storage/loot/LootContext
 			ARG 4 param
 		METHOD getByName (Ljava/lang/String;)Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;
 			ARG 0 name
+	CLASS ItemStackTarget
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/util/context/ContextKey;)V
+			ARG 3 name
+			ARG 4 param

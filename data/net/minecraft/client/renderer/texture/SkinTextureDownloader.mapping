@@ -24,6 +24,9 @@ CLASS net/minecraft/client/renderer/texture/SkinTextureDownloader
 	METHOD processLegacySkin (Lcom/mojang/blaze3d/platform/NativeImage;Ljava/lang/String;)Lcom/mojang/blaze3d/platform/NativeImage;
 		ARG 0 image
 		ARG 1 url
+	METHOD registerTextureInManager (Lnet/minecraft/core/ClientAsset$Texture;Lcom/mojang/blaze3d/platform/NativeImage;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 texture
+		ARG 2 image
 	METHOD registerTextureInManager (Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/platform/NativeImage;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 location
 		ARG 1 textureLocation

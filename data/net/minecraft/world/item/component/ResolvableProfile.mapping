@@ -1,12 +1,18 @@
 CLASS net/minecraft/world/item/component/ResolvableProfile
 	METHOD <init> (Lcom/mojang/authlib/GameProfile;)V
 		ARG 1 profile
+	METHOD <init> (Lcom/mojang/authlib/GameProfile;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)V
+		ARG 1 partialProfile
+		ARG 2 skinPatch
 	METHOD <init> (Ljava/util/Optional;Ljava/util/Optional;Lcom/mojang/authlib/properties/PropertyMap;)V
 		ARG 1 name
 		ARG 2 id
 		ARG 3 properties
 	METHOD create (Lcom/mojang/datafixers/util/Either;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 0 contents
+	METHOD create (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)Lnet/minecraft/world/item/component/ResolvableProfile;
+		ARG 0 partialProfile
+		ARG 1 skinPatch
 	METHOD createGameProfile (Ljava/util/Optional;Ljava/util/Optional;)Lcom/mojang/authlib/GameProfile;
 		ARG 0 id
 		ARG 1 name
@@ -25,6 +31,8 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 		ARG 1 profile
 	METHOD createResolved (Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 0 gameProfile
+	METHOD createUnresolved (Ljava/lang/String;)Lnet/minecraft/world/item/component/ResolvableProfile;
+		ARG 0 name
 	METHOD createUnresolved (Ljava/util/UUID;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 0 id
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
@@ -41,6 +49,9 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 	CLASS Dynamic
 		METHOD <init> (Lcom/mojang/datafixers/util/Either;)V
 			ARG 1 nameOrId
+		METHOD <init> (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)V
+			ARG 1 nameOrId
+			ARG 2 patch
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other
 	CLASS Partial
@@ -60,5 +71,8 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 	CLASS Static
 		METHOD <init> (Lcom/mojang/datafixers/util/Either;)V
 			ARG 1 contents
+		METHOD <init> (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)V
+			ARG 1 contents
+			ARG 2 patch
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other

@@ -7,5 +7,7 @@ CLASS net/minecraft/server/jsonrpc/api/FlatSchema
 		ARG 0 values
 	METHOD ofRef (Ljava/lang/String;)Lnet/minecraft/server/jsonrpc/api/FlatSchema;
 		ARG 0 reference
+	METHOD ofRef (Ljava/net/URI;)Lnet/minecraft/server/jsonrpc/api/FlatSchema;
+		ARG 0 reference
 	METHOD ofType (Ljava/lang/String;)Lnet/minecraft/server/jsonrpc/api/FlatSchema;
 		ARG 0 type

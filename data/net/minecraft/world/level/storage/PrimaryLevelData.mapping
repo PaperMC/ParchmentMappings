@@ -55,6 +55,33 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 		ARG 27 worldOptions
 		ARG 28 specialWorldProperty
 		ARG 29 worldGenSettingsLifecycle
+	METHOD <init> (Lnet/minecraft/nbt/CompoundTag;ZLnet/minecraft/world/level/storage/LevelData$RespawnData;JJIIIZIZZZLjava/util/Optional;IILjava/util/UUID;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/level/timers/TimerQueue;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/dimension/end/EndDragonFight$Data;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;Lcom/mojang/serialization/Lifecycle;)V
+		ARG 1 loadedPlayerTag
+		ARG 2 wasModded
+		ARG 3 respawnData
+		ARG 4 gameTime
+		ARG 6 dayTime
+		ARG 8 version
+		ARG 9 clearWeatherTime
+		ARG 10 rainTime
+		ARG 11 raining
+		ARG 12 thunderTime
+		ARG 13 thundering
+		ARG 14 initialized
+		ARG 15 difficultyLocked
+		ARG 16 legacyWorldBorderSettings
+		ARG 17 wanderingTraderSpawnDelay
+		ARG 18 wanderingTraderSpawnChance
+		ARG 19 wanderingTraderId
+		ARG 20 knownServerBrands
+		ARG 21 removedFeatureFlags
+		ARG 22 scheduledEvents
+		ARG 23 customBossEvents
+		ARG 24 endDragonFightData
+		ARG 25 settings
+		ARG 26 worldOptions
+		ARG 27 specialWorldProperty
+		ARG 28 worldGenSettingsLifecycle
 	METHOD <init> (Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;Lcom/mojang/serialization/Lifecycle;)V
 		ARG 1 settings
 		ARG 2 worldOptions

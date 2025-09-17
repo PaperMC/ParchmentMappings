@@ -186,3 +186,11 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 6 zOffset
 		ARG 8 poseStack
 		ARG 9 nodeCollector
+	METHOD submit (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/renderer/state/CameraRenderState;DDDLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
+		ARG 1 renderState
+		ARG 2 cameraRenderState
+		ARG 3 camX
+		ARG 5 camY
+		ARG 7 camZ
+		ARG 9 poseStack
+		ARG 10 nodeCollector

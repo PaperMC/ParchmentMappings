@@ -38,6 +38,11 @@ CLASS net/minecraft/client/particle/ParticleEngine
 		ARG 2 frustum
 		ARG 3 camera
 		ARG 4 partialTick
+	METHOD extract (Lnet/minecraft/client/renderer/state/ParticlesRenderState;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/Camera;F)V
+		ARG 1 reusedState
+		ARG 2 frustum
+		ARG 3 camera
+		ARG 4 partialTick
 	METHOD hasSpaceInParticleLimit (Lnet/minecraft/core/particles/ParticleGroup;)Z
 		ARG 1 group
 	METHOD hasSpaceInParticleLimit (Lnet/minecraft/core/particles/ParticleLimit;)Z

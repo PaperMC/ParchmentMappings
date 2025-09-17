@@ -11,6 +11,11 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 	METHOD addItemsToContainer (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/Container;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 mob
 		ARG 1 container
+	METHOD canSeeAnyTargetSide (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/phys/Vec3;)Z
+		ARG 1 target
+		ARG 2 level
+		ARG 3 mob
+		ARG 4 pos
 	METHOD clearMemoriesAfterMatchingTargetFound (Lnet/minecraft/world/entity/PathfinderMob;)V
 		ARG 1 mob
 	METHOD doReachedTargetInteraction (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/Container;Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;Ljava/util/function/BiConsumer;)V
@@ -22,11 +27,18 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 6 placeNoItem
 	METHOD enterCooldownAfterNoMatchingTargetFound (Lnet/minecraft/world/entity/PathfinderMob;)V
 		ARG 1 mob
+	METHOD getCenterPos (Lnet/minecraft/world/entity/PathfinderMob;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 mob
 	METHOD getConnectedTargets (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Ljava/util/List;
 		ARG 1 target
 		ARG 2 level
+	METHOD getHorizontalSearchDistance (Lnet/minecraft/world/entity/PathfinderMob;)I
+		ARG 1 mob
 	METHOD getInteractionRange (Lnet/minecraft/world/entity/PathfinderMob;)D
 		ARG 0 mob
+	METHOD getPositionToReachTargetFrom (Lnet/minecraft/world/level/pathfinder/Path;Lnet/minecraft/world/entity/PathfinderMob;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 path
+		ARG 2 mob
 	METHOD getTargetBlockPosition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Optional;
 		ARG 1 level
 		ARG 2 mob
@@ -34,6 +46,8 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 1 mob
 	METHOD getUnreachablePositions (Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Set;
 		ARG 0 mob
+	METHOD getVerticalSearchDistance (Lnet/minecraft/world/entity/PathfinderMob;)I
+		ARG 1 mob
 	METHOD getVisitedPositions (Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Set;
 		ARG 0 mob
 	METHOD hasFinishedPath (Lnet/minecraft/world/entity/PathfinderMob;)Z
@@ -86,6 +100,12 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 3 target
 		ARG 4 level
 		ARG 5 mob
+	METHOD isWithinTargetDistance (DLnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/phys/Vec3;)Z
+		ARG 1 distance
+		ARG 3 target
+		ARG 4 level
+		ARG 5 mob
+		ARG 6 center
 	METHOD isWithinTargetDistance (DLnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/PathfinderMob;Z)Z
 		ARG 1 distance
 		ARG 3 target
@@ -135,6 +155,9 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 1 mob
 	METHOD setInteractionState (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$ContainerInteractionState;)V
 		ARG 1 interactionState
+	METHOD setMiddleYPosition (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 mob
+		ARG 2 pos
 	METHOD setTransportingState (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemState;)V
 		ARG 1 transportingState
 	METHOD setVisitedBlockPos (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
@@ -168,7 +191,16 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 3 pos
 		ARG 4 target
 		ARG 5 mob
+	METHOD targetIsReachableFromPosition (Lnet/minecraft/world/level/Level;ZLnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/entity/PathfinderMob;)Z
+		ARG 1 level
+		ARG 2 withinDistance
+		ARG 3 targetPos
+		ARG 4 target
+		ARG 5 mob
 	METHOD tryEnsureTargetPosExists (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/PathfinderMob;)V
+		ARG 1 level
+		ARG 2 mob
+	METHOD updateInvalidTarget (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/PathfinderMob;)Z
 		ARG 1 level
 		ARG 2 mob
 	METHOD walkTowardsTarget (Lnet/minecraft/world/entity/PathfinderMob;)V

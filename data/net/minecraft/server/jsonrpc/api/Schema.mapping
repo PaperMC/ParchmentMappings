@@ -9,6 +9,8 @@ CLASS net/minecraft/server/jsonrpc/api/Schema
 		ARG 0 enumValues
 	METHOD ofRef (Ljava/lang/String;)Lnet/minecraft/server/jsonrpc/api/Schema;
 		ARG 0 reference
+	METHOD ofRef (Ljava/net/URI;)Lnet/minecraft/server/jsonrpc/api/Schema;
+		ARG 0 reference
 	METHOD ofType (Ljava/lang/String;)Lnet/minecraft/server/jsonrpc/api/Schema;
 		ARG 0 type
 	METHOD record (Ljava/util/Map;)Lnet/minecraft/server/jsonrpc/api/Schema;

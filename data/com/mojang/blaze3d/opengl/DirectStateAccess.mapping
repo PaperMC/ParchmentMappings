@@ -52,6 +52,10 @@ CLASS com/mojang/blaze3d/opengl/DirectStateAccess
 	METHOD create (Lorg/lwjgl/opengl/GLCapabilities;Ljava/util/Set;)Lcom/mojang/blaze3d/opengl/DirectStateAccess;
 		ARG 0 capabilities
 		ARG 1 enabledExtensions
+	METHOD create (Lorg/lwjgl/opengl/GLCapabilities;Ljava/util/Set;Lcom/mojang/blaze3d/GraphicsWorkarounds;)Lcom/mojang/blaze3d/opengl/DirectStateAccess;
+		ARG 0 capabilities
+		ARG 1 enabledExtensions
+		ARG 2 workarounds
 	METHOD flushMappedBufferRange (III)V
 		ARG 1 buffer
 		ARG 2 offset

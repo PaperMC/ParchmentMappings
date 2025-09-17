@@ -15,3 +15,11 @@ CLASS net/minecraft/client/renderer/feature/NameTagFeatureRenderer
 			ARG 4 seethrough
 			ARG 5 packedLight
 			ARG 6 distanceToCameraSq
+		METHOD add (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/network/chat/Component;ZIDLnet/minecraft/client/renderer/state/CameraRenderState;)V
+			ARG 1 poseStack
+			ARG 2 pos
+			ARG 3 text
+			ARG 4 seethrough
+			ARG 5 packedLight
+			ARG 6 distanceToCameraSq
+			ARG 8 cameraRenderState

@@ -27,5 +27,7 @@ CLASS net/minecraft/core/component/PatchedDataComponentMap
 	METHOD set (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 component
 		ARG 2 value
+	METHOD set (Lnet/minecraft/core/component/TypedDataComponent;)Ljava/lang/Object;
+		ARG 1 component
 	METHOD setAll (Lnet/minecraft/core/component/DataComponentMap;)V
 		ARG 1 map

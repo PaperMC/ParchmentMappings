@@ -259,6 +259,8 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD set (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 component
 		ARG 2 value
+	METHOD set (Lnet/minecraft/core/component/TypedDataComponent;)Ljava/lang/Object;
+		ARG 1 component
 	METHOD setCount (I)V
 		ARG 1 count
 	METHOD setDamageValue (I)V

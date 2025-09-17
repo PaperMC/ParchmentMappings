@@ -18,6 +18,9 @@ CLASS net/minecraft/world/level/portal/TeleportTransition
 		ARG 4 yRot
 		ARG 5 xRot
 		ARG 6 postTeleportTransition
+	METHOD createDefault (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/portal/TeleportTransition$PostTeleportTransition;)Lnet/minecraft/world/level/portal/TeleportTransition;
+		ARG 0 player
+		ARG 1 postTeleportTransition
 	METHOD findAdjustedSharedSpawnPos (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 level
 		ARG 1 entity
@@ -27,6 +30,9 @@ CLASS net/minecraft/world/level/portal/TeleportTransition
 		ARG 0 level
 		ARG 1 entity
 		ARG 2 postTeleportTransition
+	METHOD missingRespawnBlock (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/portal/TeleportTransition$PostTeleportTransition;)Lnet/minecraft/world/level/portal/TeleportTransition;
+		ARG 0 player
+		ARG 1 postTeleportTransition
 	METHOD placePortalTicket (Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 entity
 	METHOD playPortalSound (Lnet/minecraft/world/entity/Entity;)V

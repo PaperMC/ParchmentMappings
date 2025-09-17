@@ -14,6 +14,8 @@ CLASS net/minecraft/client/renderer/PlayerSkinRenderCache
 		ARG 1 profile
 	METHOD playerSkinRenderType (Lnet/minecraft/client/resources/PlayerSkin;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 skin
+	METHOD playerSkinRenderType (Lnet/minecraft/world/entity/player/PlayerSkin;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 skin
 	CLASS 2
 		METHOD load (Ljava/lang/Object;)Ljava/lang/Object;
 			ARG 1 profile
@@ -24,5 +26,9 @@ CLASS net/minecraft/client/renderer/PlayerSkinRenderCache
 		METHOD <init> (Lnet/minecraft/client/renderer/PlayerSkinRenderCache;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/client/resources/PlayerSkin;)V
 			ARG 2 gameProfile
 			ARG 3 playerSkin
+		METHOD <init> (Lnet/minecraft/client/renderer/PlayerSkinRenderCache;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/world/entity/player/PlayerSkin;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)V
+			ARG 2 gameProfile
+			ARG 3 playerSkin
+			ARG 4 patch
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other

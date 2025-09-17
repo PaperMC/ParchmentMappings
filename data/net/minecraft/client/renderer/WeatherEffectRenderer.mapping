@@ -25,6 +25,12 @@ CLASS net/minecraft/client/renderer/WeatherEffectRenderer
 		ARG 6 z
 		ARG 7 lightCoords
 		ARG 8 partialTick
+	METHOD extractRenderState (Lnet/minecraft/world/level/Level;IFLnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/renderer/state/WeatherRenderState;)V
+		ARG 1 level
+		ARG 2 ticks
+		ARG 3 partialTick
+		ARG 4 cameraPosition
+		ARG 5 reusedState
 	METHOD getPrecipitationAt (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/biome/Biome$Precipitation;
 		ARG 1 level
 		ARG 2 pos
@@ -35,6 +41,10 @@ CLASS net/minecraft/client/renderer/WeatherEffectRenderer
 		ARG 4 rainLevel
 		ARG 5 rainColumnInstances
 		ARG 6 snowColumnInstances
+	METHOD render (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/renderer/state/WeatherRenderState;)V
+		ARG 1 bufferSource
+		ARG 2 cameraPosition
+		ARG 3 renderState
 	METHOD render (Lnet/minecraft/world/level/Level;Lnet/minecraft/client/renderer/MultiBufferSource;IFLnet/minecraft/world/phys/Vec3;)V
 		ARG 1 level
 		ARG 2 bufferSource
