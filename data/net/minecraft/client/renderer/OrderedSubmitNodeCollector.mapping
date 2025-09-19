@@ -117,6 +117,15 @@ CLASS net/minecraft/client/renderer/OrderedSubmitNodeCollector
 	METHOD submitMovingBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/block/MovingBlockRenderState;)V
 		ARG 1 poseStack
 		ARG 2 renderState
+	METHOD submitNameTag (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/phys/Vec3;ILnet/minecraft/network/chat/Component;ZIDLnet/minecraft/client/renderer/state/CameraRenderState;)V
+		ARG 1 poseStack
+		ARG 2 pos
+		ARG 3 yOffset
+		ARG 4 text
+		ARG 5 seethrough
+		ARG 6 packedLight
+		ARG 7 distanceToCameraSq
+		ARG 9 cameraRenderState
 	METHOD submitNameTag (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/network/chat/Component;ZID)V
 		ARG 1 poseStack
 		ARG 2 attachmentPos

@@ -44,6 +44,9 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 2 mob
 	METHOD getTargetSearchArea (Lnet/minecraft/world/entity/PathfinderMob;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 mob
+	METHOD getTransportTarget (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Optional;
+		ARG 1 level
+		ARG 2 mob
 	METHOD getUnreachablePositions (Lnet/minecraft/world/entity/PathfinderMob;)Ljava/util/Set;
 		ARG 0 mob
 	METHOD getVerticalSearchDistance (Lnet/minecraft/world/entity/PathfinderMob;)I
@@ -91,6 +94,13 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		ARG 3 pos
 		ARG 4 blockEntity
 		ARG 5 visitedPositions
+		ARG 6 searchArea
+	METHOD isTargetValidToPick (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/BlockEntity;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/phys/AABB;)Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;
+		ARG 1 mob
+		ARG 2 level
+		ARG 3 blockEntity
+		ARG 4 visited
+		ARG 5 unreachable
 		ARG 6 searchArea
 	METHOD isWantedBlock (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 mob
@@ -214,7 +224,13 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 		METHOD tryCreatePossibleTarget (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
 			ARG 0 pos
 			ARG 1 level
+		METHOD tryCreatePossibleTarget (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;
+			ARG 0 pos
+			ARG 1 level
 		METHOD tryCreatePossibleTarget (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
 			ARG 0 pos
 			ARG 1 blockEntity
 			ARG 2 level
+		METHOD tryCreatePossibleTarget (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;
+			ARG 0 blockEntity
+			ARG 1 level
