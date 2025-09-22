@@ -4,6 +4,8 @@ CLASS net/minecraft/commands/arguments/HexColorArgument
 	METHOD getHexColor (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/lang/Integer;
 		ARG 0 context
 		ARG 1 argument
+	METHOD lambda$static$0 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 color
 	METHOD listSuggestions (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 context
 		ARG 2 builder

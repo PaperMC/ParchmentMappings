@@ -32,6 +32,9 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 	METHOD getConnectedTargets (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Ljava/util/List;
 		ARG 1 target
 		ARG 2 level
+	METHOD getConnectedTargets (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Ljava/util/stream/Stream;
+		ARG 1 target
+		ARG 2 level
 	METHOD getHorizontalSearchDistance (Lnet/minecraft/world/entity/PathfinderMob;)I
 		ARG 1 mob
 	METHOD getInteractionRange (Lnet/minecraft/world/entity/PathfinderMob;)D
@@ -61,6 +64,10 @@ CLASS net/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers
 	METHOD hasValidTarget (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/PathfinderMob;)Z
 		ARG 1 level
 		ARG 2 mob
+	METHOD hasValidTravellingPath (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/entity/PathfinderMob;)Z
+		ARG 1 level
+		ARG 2 target
+		ARG 3 mob
 	METHOD isAnotherMobInteractingWithTarget (Lnet/minecraft/world/entity/ai/behavior/TransportItemsBetweenContainers$TransportItemTarget;Lnet/minecraft/world/level/Level;)Z
 		ARG 1 target
 		ARG 2 level
