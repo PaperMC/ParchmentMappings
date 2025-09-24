@@ -117,6 +117,20 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 9 baseColor
 		ARG 10 patterns
 		ARG 11 crumblingOverlay
+	METHOD submitBanner (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IIFLnet/minecraft/client/model/BannerModel;Lnet/minecraft/client/model/BannerFlagModel;FLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;I)V
+		ARG 0 materials
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 rotation
+		ARG 6 model
+		ARG 7 flag
+		ARG 8 sway
+		ARG 9 baseColor
+		ARG 10 patterns
+		ARG 11 crumblingOverlay
+		ARG 12 outlineColor
 	METHOD submitPatternLayer (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
 		ARG 0 materials
 		ARG 1 poseStack
@@ -160,6 +174,21 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 9 baseColor
 		ARG 10 patterns
 		ARG 11 crumblingOverlay
+	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;ZLnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;I)V
+		ARG 0 materials
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 flag
+		ARG 6 renderState
+		ARG 7 material
+		ARG 8 banner
+		ARG 9 baseColor
+		ARG 10 patterns
+		ARG 11 withGlint
+		ARG 12 crumblingOverlay
+		ARG 13 outlineColor
 	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
 		ARG 0 materials
 		ARG 1 poseStack
@@ -217,3 +246,11 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 4 packedOverlay
 		ARG 5 baseColor
 		ARG 6 patterns
+	METHOD submitSpecial (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;I)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 baseColor
+		ARG 6 patterns
+		ARG 7 outlineColor

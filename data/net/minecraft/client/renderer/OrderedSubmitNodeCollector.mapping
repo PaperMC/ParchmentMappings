@@ -114,6 +114,18 @@ CLASS net/minecraft/client/renderer/OrderedSubmitNodeCollector
 		ARG 8 hasFoil
 		ARG 9 tintColor
 		ARG 10 crumblingOverlay
+	METHOD submitModelPart (Lnet/minecraft/client/model/geom/ModelPart;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/RenderType;IILnet/minecraft/client/renderer/texture/TextureAtlasSprite;ZZILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;I)V
+		ARG 1 modelPart
+		ARG 2 poseStack
+		ARG 3 renderType
+		ARG 4 packedLight
+		ARG 5 packedOverlay
+		ARG 6 sprite
+		ARG 7 sheeted
+		ARG 8 hasFoil
+		ARG 9 tintColor
+		ARG 10 crumblingOverlay
+		ARG 11 outlineColor
 	METHOD submitMovingBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/block/MovingBlockRenderState;)V
 		ARG 1 poseStack
 		ARG 2 renderState

@@ -45,3 +45,10 @@ CLASS net/minecraft/client/renderer/blockentity/DecoratedPotRenderer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 		ARG 5 potDecorations
+	METHOD submit (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/level/block/entity/PotDecorations;I)V
+		ARG 1 poseStack
+		ARG 2 nodeCollector
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 decorations
+		ARG 6 outlineColor

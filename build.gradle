@@ -36,7 +36,10 @@ writtenbooks {
 }
 
 compass {
-    version = '1.21.9-pre3'
+    version = '1.21.9-pre4'
+    migration {
+        targetVersion = "1.21.8"
+    }
 }
 
 repositories {
