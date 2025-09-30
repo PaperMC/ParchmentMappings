@@ -1,6 +1,4 @@
 CLASS net/minecraft/core/ClientAsset
-	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 id
 	CLASS ResourceTexture
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
 			ARG 1 location

@@ -76,8 +76,6 @@ CLASS net/minecraft/client/Minecraft
 	METHOD finishProfilers (ZLnet/minecraft/util/profiling/SingleTickProfiler;)V
 		ARG 1 renderFpsPie
 		ARG 2 profiler
-	METHOD forceSetScreen (Lnet/minecraft/client/gui/screens/Screen;)V
-		ARG 1 screen
 	METHOD formatSeconds (D)Ljava/lang/String;
 		ARG 0 seconds
 	METHOD getInstance ()Lnet/minecraft/client/Minecraft;
@@ -88,12 +86,8 @@ CLASS net/minecraft/client/Minecraft
 		COMMENT Returns the save loader that is currently being used
 	METHOD getMusicManager ()Lnet/minecraft/client/sounds/MusicManager;
 		COMMENT Return the musicTicker's instance
-	METHOD getPaintingTextures ()Lnet/minecraft/client/resources/PaintingTextureManager;
-		COMMENT Gets the sprite uploader used for paintings.
 	METHOD getSingleplayerServer ()Lnet/minecraft/client/server/IntegratedServer;
 		COMMENT Returns the currently running integrated server
-	METHOD getTextureAtlas (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/function/Function;
-		ARG 1 location
 	METHOD getTickTargetMillis (F)F
 		ARG 1 defaultValue
 	METHOD getVersionType ()Ljava/lang/String;
@@ -115,8 +109,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 1 gameLoadCookie
 	METHOD onResourceLoadFinished (Lnet/minecraft/client/Minecraft$GameLoadCookie;)V
 		ARG 1 gameLoadCookie
-	METHOD openChatScreen (Ljava/lang/String;)V
-		ARG 1 defaultText
 	METHOD openChatScreen (Lnet/minecraft/client/gui/components/ChatComponent$ChatMethod;)V
 		ARG 1 chatMethod
 	METHOD pauseGame (Z)V
@@ -141,9 +133,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 1 lastInputType
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
-	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
-		ARG 1 level
-		ARG 2 reason
 	METHOD setOverlay (Lnet/minecraft/client/gui/screens/Overlay;)V
 		ARG 1 loadingGui
 	METHOD setScreen (Lnet/minecraft/client/gui/screens/Screen;)V
@@ -172,8 +161,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 1 mipMapLevel
 	METHOD updateReportEnvironment (Lnet/minecraft/client/multiplayer/chat/report/ReportEnvironment;)V
 		ARG 1 reportEnvironment
-	METHOD updateScreenAndTick (Lnet/minecraft/client/gui/screens/Screen;)V
-		ARG 1 screen
 	METHOD useAmbientOcclusion ()Z
 		COMMENT Returns if ambient occlusion is enabled
 	METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;

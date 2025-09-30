@@ -22,17 +22,9 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 properties
 	METHOD lambda$static$321 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
-	METHOD lambda$static$325 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
 	METHOD lambda$static$326 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$327 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$328 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$329 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$330 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$331 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
@@ -118,23 +110,11 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 properties
 	METHOD lambda$static$377 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
-	METHOD lambda$static$379 (Lnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 0 state
 	METHOD lambda$static$380 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$383 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
-	METHOD lambda$static$384 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$385 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
 	METHOD lambda$static$386 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$388 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$389 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$390 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$391 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
@@ -143,8 +123,6 @@ CLASS net/minecraft/world/level/block/Blocks
 	METHOD lambda$static$393 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$394 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$395 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$396 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
@@ -163,8 +141,6 @@ CLASS net/minecraft/world/level/block/Blocks
 	METHOD lambda$static$407 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$409 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$411 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$412 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
@@ -198,25 +174,15 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 properties
 	METHOD lambda$static$435 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
-	METHOD lambda$static$436 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
 	METHOD lambda$static$437 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$441 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$442 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$443 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$444 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$445 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$446 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$447 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 properties
-	METHOD lambda$static$448 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties
 	METHOD lambda$static$449 (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 properties

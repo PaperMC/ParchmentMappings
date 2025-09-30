@@ -51,29 +51,13 @@ CLASS net/minecraft/client/gui/screens/Screen
 	METHOD insertText (Ljava/lang/String;Z)V
 		ARG 1 text
 		ARG 2 overwrite
-	METHOD isCopy (I)Z
-		ARG 0 keyCode
-	METHOD isCut (I)Z
-		ARG 0 keyCode
 	METHOD isMouseOver (DD)Z
 		ARG 1 mouseX
 		ARG 3 mouseY
-	METHOD isPaste (I)Z
-		ARG 0 keyCode
-	METHOD isSelectAll (I)Z
-		ARG 0 keyCode
-	METHOD isValidCharacterForName (Ljava/lang/String;CI)Z
-		ARG 1 text
-		ARG 2 charTyped
-		ARG 3 cursorPos
 	METHOD isValidCharacterForName (Ljava/lang/String;II)Z
 		ARG 1 text
 		ARG 2 codepoint
 		ARG 3 position
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
 	METHOD onFilesDrop (Ljava/util/List;)V
 		ARG 1 packs
 	METHOD removeWidget (Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
@@ -107,11 +91,6 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 2 partialTick
 	METHOD renderTransparentBackground (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
-	METHOD renderWithTooltip (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
-		ARG 1 guiGraphics
-		ARG 2 mouseX
-		ARG 3 mouseY
-		ARG 4 partialTick
 	METHOD renderWithTooltipAndSubtitles (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
 		ARG 1 guiGraphics
 		ARG 2 mouseX

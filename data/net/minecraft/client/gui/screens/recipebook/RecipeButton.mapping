@@ -10,8 +10,6 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeButton
 		ARG 2 isFiltering
 		ARG 3 page
 		ARG 4 contextMap
-	METHOD isValidClickButton (I)Z
-		ARG 1 button
 	METHOD lambda$allRecipesHaveSameResultDisplay$1 (Lnet/minecraft/client/gui/screens/recipebook/RecipeButton$ResolvedEntry;)Ljava/util/stream/Stream;
 		ARG 0 entry
 	METHOD lambda$init$0 (Lnet/minecraft/util/context/ContextMap;Lnet/minecraft/world/item/crafting/display/RecipeDisplayEntry;)Lnet/minecraft/client/gui/screens/recipebook/RecipeButton$ResolvedEntry;

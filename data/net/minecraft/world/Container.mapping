@@ -45,8 +45,6 @@ CLASS net/minecraft/world/Container
 		ARG 2 stack
 	METHOD startOpen (Lnet/minecraft/world/entity/ContainerUser;)V
 		ARG 1 user
-	METHOD startOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
 		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player
@@ -59,8 +57,6 @@ CLASS net/minecraft/world/Container
 		ARG 2 distance
 	METHOD stopOpen (Lnet/minecraft/world/entity/ContainerUser;)V
 		ARG 1 user
-	METHOD stopOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	CLASS ContainerIterator
 		METHOD <init> (Lnet/minecraft/world/Container;)V
 			ARG 1 container

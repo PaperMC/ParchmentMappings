@@ -10,7 +10,5 @@ CLASS net/minecraft/world/entity/decoration/Mannequin
 		ARG 1 hideDescription
 	METHOD setImmovable (Z)V
 		ARG 1 immovable
-	METHOD setProfile (Lcom/mojang/datafixers/util/Either;)V
-		ARG 1 profile
 	METHOD setProfile (Lnet/minecraft/world/item/component/ResolvableProfile;)V
 		ARG 1 profile

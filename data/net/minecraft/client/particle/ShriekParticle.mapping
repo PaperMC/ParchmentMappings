@@ -1,10 +1,4 @@
 CLASS net/minecraft/client/particle/ShriekParticle
-	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDI)V
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 delay
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDILnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 		ARG 1 level
 		ARG 2 x

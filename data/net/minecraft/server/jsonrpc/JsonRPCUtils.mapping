@@ -4,25 +4,10 @@ CLASS net/minecraft/server/jsonrpc/JsonRPCUtils
 		ARG 1 message
 		ARG 2 code
 		ARG 3 data
-	METHOD createError (Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/String;)Lcom/google/gson/JsonObject;
-		ARG 0 requestId
-		ARG 1 message
-		ARG 2 code
-		ARG 3 data
-	METHOD createRequest (Ljava/lang/Integer;Ljava/lang/String;Ljava/util/List;)Lcom/google/gson/JsonObject;
-		ARG 0 requestId
-		ARG 1 method
-		ARG 2 params
 	METHOD createRequest (Ljava/lang/Integer;Lnet/minecraft/resources/ResourceLocation;Ljava/util/List;)Lcom/google/gson/JsonObject;
 		ARG 0 requestId
 		ARG 1 methodName
 		ARG 2 params
-	METHOD createResult (Lcom/google/gson/JsonElement;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
-		ARG 0 requestId
-		ARG 1 result
-	METHOD createResult (Ljava/lang/Integer;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
-		ARG 0 requestId
-		ARG 1 json
 	METHOD createSuccessResult (Lcom/google/gson/JsonElement;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
 		ARG 0 requestId
 		ARG 1 result
@@ -33,8 +18,6 @@ CLASS net/minecraft/server/jsonrpc/JsonRPCUtils
 	METHOD getParams (Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonElement;
 		ARG 0 json
 	METHOD getRequestId (Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonElement;
-		ARG 0 json
-	METHOD getRequestId (Lcom/google/gson/JsonObject;)Ljava/lang/Integer;
 		ARG 0 json
 	METHOD getResult (Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonElement;
 		ARG 0 json

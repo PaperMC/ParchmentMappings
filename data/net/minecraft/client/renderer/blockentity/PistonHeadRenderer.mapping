@@ -1,24 +1,6 @@
 CLASS net/minecraft/client/renderer/blockentity/PistonHeadRenderer
-	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
-		ARG 1 context
 	METHOD createMovingBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/Level;)Lnet/minecraft/client/renderer/block/MovingBlockRenderState;
 		ARG 0 pos
 		ARG 1 state
 		ARG 2 biome
 		ARG 3 level
-	METHOD renderBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/Level;ZI)V
-		ARG 1 pos
-		ARG 2 state
-		ARG 3 poseStack
-		ARG 4 bufferSource
-		ARG 5 level
-		ARG 6 extended
-			COMMENT if {@code true}, checks all sides before rendering via {@link net.minecraft.world.level.block.Block#shouldRenderFace(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos)}
-		ARG 7 packedOverlay
-	METHOD submitMovingBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/Level;)V
-		ARG 0 poseStack
-		ARG 1 nodeCollector
-		ARG 2 pos
-		ARG 3 state
-		ARG 4 biome
-		ARG 5 level

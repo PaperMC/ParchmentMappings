@@ -159,9 +159,6 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 blockPos
 		ARG 2 oldState
 		ARG 3 newState
-	METHOD setDefaultSpawnPos (Lnet/minecraft/core/BlockPos;F)V
-		ARG 1 spawnPos
-		ARG 2 spawnAngle
 	METHOD setSectionDirtyWithNeighbors (III)V
 		ARG 1 sectionX
 		ARG 2 sectionY
@@ -247,6 +244,3 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		METHOD setRaining (Z)V
 			COMMENT Sets whether it is raining or not.
 			ARG 1 isRaining
-		METHOD setSpawn (Lnet/minecraft/core/BlockPos;F)V
-			ARG 1 spawnPoint
-			ARG 2 angle

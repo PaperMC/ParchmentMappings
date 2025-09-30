@@ -7,10 +7,6 @@ CLASS com/mojang/realmsclient/gui/RealmsWorldSlotButton
 		ARG 5 slotIndex
 		ARG 6 serverData
 		ARG 7 onPress
-	METHOD getAction (Lcom/mojang/realmsclient/dto/RealmsServer;ZZ)Lcom/mojang/realmsclient/gui/RealmsWorldSlotButton$Action;
-		ARG 0 realmsServer
-		ARG 1 isCurrentlyActiveSlot
-		ARG 2 minigame
 	METHOD getAction (ZZZ)Lcom/mojang/realmsclient/gui/RealmsWorldSlotButton$Action;
 		ARG 0 activeSlot
 		ARG 1 empty

@@ -2,9 +2,9 @@ CLASS net/minecraft/client/gui/screens/debug/DebugOptionsScreen
 	METHOD addProfileButton (Lnet/minecraft/client/gui/components/debug/DebugScreenProfile;Lnet/minecraft/client/gui/layouts/LinearLayout;)V
 		ARG 1 profile
 		ARG 2 layout
-	CLASS CategoryEntry
-		METHOD <init> (Lnet/minecraft/client/gui/screens/debug/DebugOptionsScreen;Lnet/minecraft/network/chat/Component;)V
-			ARG 2 category
+	CLASS OptionList
+		METHOD updateSearch (Ljava/lang/String;)V
+			ARG 1 query
 	CLASS OptionEntry
 		METHOD <init> (Lnet/minecraft/client/gui/screens/debug/DebugOptionsScreen;Lnet/minecraft/resources/ResourceLocation;)V
 			ARG 2 location
@@ -13,6 +13,6 @@ CLASS net/minecraft/client/gui/screens/debug/DebugOptionsScreen
 		METHOD setValue (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/gui/components/debug/DebugScreenEntryStatus;)V
 			ARG 1 entry
 			ARG 2 status
-	CLASS OptionList
-		METHOD updateSearch (Ljava/lang/String;)V
-			ARG 1 query
+	CLASS CategoryEntry
+		METHOD <init> (Lnet/minecraft/client/gui/screens/debug/DebugOptionsScreen;Lnet/minecraft/network/chat/Component;)V
+			ARG 2 category

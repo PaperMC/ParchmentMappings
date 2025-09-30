@@ -3,9 +3,6 @@ CLASS net/minecraft/world/entity/projectile/ThrownEnderpearl
 		ARG 1 level
 		ARG 2 owner
 		ARG 3 item
-	METHOD findOwnerInAnyDimension (Lnet/minecraft/server/level/ServerLevel;Ljava/util/UUID;)Lnet/minecraft/world/entity/Entity;
-		ARG 0 level
-		ARG 1 uuid
 	METHOD findOwnerIncludingDeadPlayer (Lnet/minecraft/server/level/ServerLevel;Ljava/util/UUID;)Lnet/minecraft/world/entity/Entity;
 		ARG 0 level
 		ARG 1 uuid

@@ -6,9 +6,6 @@ CLASS net/minecraft/client/renderer/blockentity/SkullBlockRenderer
 		ARG 1 type
 	METHOD getPlayerSkinRenderType (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 textureLocation
-	METHOD getRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/item/component/ResolvableProfile;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 type
-		ARG 1 profile
 	METHOD getSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 type
 		ARG 1 textureLocation
@@ -16,37 +13,9 @@ CLASS net/minecraft/client/renderer/blockentity/SkullBlockRenderer
 		ARG 1 type
 	METHOD lambda$static$0 (Ljava/util/HashMap;)V
 		ARG 0 skinByType
-	METHOD renderSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/RenderType;)V
-		ARG 0 direction
-		ARG 1 yRot
-		ARG 2 mouthAnimation
-		ARG 3 poseStack
-		ARG 4 bufferSource
-		ARG 5 packedLight
-		ARG 6 model
-		ARG 7 renderType
 	METHOD resolveSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/level/block/entity/SkullBlockEntity;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 1 type
 		ARG 2 blockEntity
-	METHOD submitSkull (FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/RenderType;I)V
-		ARG 0 yRot
-		ARG 1 animationPos
-		ARG 2 poseStack
-		ARG 3 nodeCollector
-		ARG 4 packedLight
-		ARG 5 model
-		ARG 6 renderType
-		ARG 7 outlineColor
-	METHOD submitSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/RenderType;I)V
-		ARG 0 direction
-		ARG 1 yRot
-		ARG 2 animationPos
-		ARG 3 poseStack
-		ARG 4 nodeCollector
-		ARG 5 packedLight
-		ARG 6 model
-		ARG 7 renderType
-		ARG 8 outlneColor
 	METHOD submitSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/RenderType;ILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
 		ARG 0 direction
 		ARG 1 yRot

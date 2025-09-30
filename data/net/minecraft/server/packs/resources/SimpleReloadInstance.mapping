@@ -37,21 +37,9 @@ CLASS net/minecraft/server/packs/resources/SimpleReloadInstance
 		ARG 1 reloads
 		ARG 2 listeners
 	CLASS StateFactory
-		METHOD create (Lnet/minecraft/server/packs/resources/PreparableReloadListener$PreparationBarrier;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/server/packs/resources/PreparableReloadListener;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
-			ARG 1 preparationBarrier
-			ARG 2 resourceManager
-			ARG 3 listener
-			ARG 4 backgroundExecutor
-			ARG 5 gameExecutor
 		METHOD create (Lnet/minecraft/server/packs/resources/PreparableReloadListener$SharedState;Lnet/minecraft/server/packs/resources/PreparableReloadListener$PreparationBarrier;Lnet/minecraft/server/packs/resources/PreparableReloadListener;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 sharedState
 			ARG 2 barrier
 			ARG 3 listener
 			ARG 4 executor
 			ARG 5 applyExecutor
-		METHOD lambda$static$0 (Lnet/minecraft/server/packs/resources/PreparableReloadListener$PreparationBarrier;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/server/packs/resources/PreparableReloadListener;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
-			ARG 0 preperationBarrier
-			ARG 1 resourceManager
-			ARG 2 listener
-			ARG 3 backgroundExecutor
-			ARG 4 gameExecutor

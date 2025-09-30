@@ -1,17 +1,4 @@
 CLASS net/minecraft/client/resources/model/ModelBakery
-	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/client/resources/model/ResolvedModel;)V
-		ARG 1 entityModelSet
-		ARG 2 unbakedBlockStateModels
-		ARG 3 clientInfos
-		ARG 4 resolvedModels
-		ARG 5 missingModel
-	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/MaterialSet;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/client/resources/model/ResolvedModel;)V
-		ARG 1 entityModelSet
-		ARG 2 materials
-		ARG 3 unbakedBlockStateModels
-		ARG 4 clientInfos
-		ARG 5 resolvedModels
-		ARG 6 missingModel
 	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/client/resources/model/ResolvedModel;)V
 		ARG 1 entityModelSet
 		ARG 2 materials

@@ -27,6 +27,11 @@ CLASS net/minecraft/util/debug/TrackingDebugSynchronizer
 		ARG 2 entity
 	METHOD tick (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
+	CLASS ValueSource
+		METHOD <init> (Lnet/minecraft/util/debug/DebugValueSource$ValueGetter;)V
+			ARG 1 getter
+		METHOD pollUpdate (Lnet/minecraft/util/debug/DebugSubscription;)Lnet/minecraft/util/debug/DebugSubscription$Update;
+			ARG 1 subscription
 	CLASS PoiSynchronizer
 		METHOD onPoiAdded (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)V
 			ARG 1 level
@@ -54,11 +59,6 @@ CLASS net/minecraft/util/debug/TrackingDebugSynchronizer
 		METHOD registerEntity (Ljava/util/UUID;Lnet/minecraft/util/debug/DebugValueSource$ValueGetter;)V
 			ARG 1 uuid
 			ARG 2 getter
-	CLASS ValueSource
-		METHOD <init> (Lnet/minecraft/util/debug/DebugValueSource$ValueGetter;)V
-			ARG 1 getter
-		METHOD pollUpdate (Lnet/minecraft/util/debug/DebugSubscription;)Lnet/minecraft/util/debug/DebugSubscription$Update;
-			ARG 1 subscription
 	CLASS VillageSectionSynchronizer
 		METHOD forEachVillageSectionUpdate (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/SectionPos;Ljava/util/function/BiConsumer;)V
 			ARG 0 level

@@ -1,29 +1,6 @@
 CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 	FIELD playerRenderers Ljava/util/Map;
 		COMMENT lists the various player skin types with their associated Renderer class instances.
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/item/ItemModelResolver;Lnet/minecraft/client/renderer/entity/ItemRenderer;Lnet/minecraft/client/renderer/MapRenderer;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/Options;Ljava/util/function/Supplier;Lnet/minecraft/client/resources/model/EquipmentAssetManager;)V
-		ARG 1 minecraft
-		ARG 2 textureManager
-		ARG 3 itemModelResolver
-		ARG 4 itemRenderer
-		ARG 5 mapRenderer
-		ARG 6 blockRenderDispatcher
-		ARG 7 font
-		ARG 8 options
-		ARG 9 entityModels
-		ARG 10 equipmentModels
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/item/ItemModelResolver;Lnet/minecraft/client/renderer/entity/ItemRenderer;Lnet/minecraft/client/renderer/MapRenderer;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/resources/model/AtlasManager;Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/Options;Ljava/util/function/Supplier;Lnet/minecraft/client/resources/model/EquipmentAssetManager;)V
-		ARG 1 minecraft
-		ARG 2 textureManager
-		ARG 3 itemModelResolver
-		ARG 4 itemRenderer
-		ARG 5 mapRenderer
-		ARG 6 blockRenderDispatcher
-		ARG 7 atlasManager
-		ARG 8 font
-		ARG 9 options
-		ARG 10 entityModels
-		ARG 11 equipmentAssetw
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/item/ItemModelResolver;Lnet/minecraft/client/renderer/entity/ItemRenderer;Lnet/minecraft/client/renderer/MapRenderer;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/resources/model/AtlasManager;Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/Options;Ljava/util/function/Supplier;Lnet/minecraft/client/resources/model/EquipmentAssetManager;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
 		ARG 1 minecraft
 		ARG 2 textureManager
@@ -37,32 +14,14 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 10 entityModels
 		ARG 11 equipmentAssets
 		ARG 12 playerSkinRenderCache
-	METHOD distanceToSqr (DDD)D
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD distanceToSqr (Lnet/minecraft/world/entity/Entity;)D
 		ARG 1 entity
 	METHOD extractEntity (Lnet/minecraft/world/entity/Entity;F)Lnet/minecraft/client/renderer/entity/state/EntityRenderState;
 		ARG 1 entity
 		ARG 2 partialTick
-	METHOD fillRendererDetails (DDDLnet/minecraft/client/renderer/entity/EntityRenderer;Lnet/minecraft/CrashReport;)Lnet/minecraft/CrashReportCategory;
-		ARG 1 xOffset
-		ARG 3 yOffset
-		ARG 5 zOffset
-		ARG 7 renderer
-		ARG 8 crashReport
 	METHOD fillRendererDetails (Lnet/minecraft/client/renderer/entity/EntityRenderer;Lnet/minecraft/CrashReport;)Lnet/minecraft/CrashReportCategory;
 		ARG 1 renderer
 		ARG 2 crashReport
-	METHOD fireVertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFF)V
-		ARG 0 matrixEntry
-		ARG 1 buffer
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 texU
-		ARG 6 texV
 	METHOD getAvatarRenderer (Ljava/util/Map;Lnet/minecraft/world/entity/Avatar;)Lnet/minecraft/client/renderer/entity/player/AvatarRenderer;
 		ARG 1 renderers
 		ARG 2 avatar
@@ -75,117 +34,15 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 1 renderState
 	METHOD getRenderer (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/client/renderer/entity/EntityRenderer;
 		ARG 1 entity
-	METHOD overrideCameraOrientation (Lorg/joml/Quaternionf;)V
-		ARG 1 cameraOrientation
 	METHOD prepare (Lnet/minecraft/client/Camera;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 camera
 		ARG 2 crosshairPickEntitty
-	METHOD prepare (Lnet/minecraft/world/level/Level;Lnet/minecraft/client/Camera;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 level
-		ARG 2 activeRenderInfo
-		ARG 3 entity
-	METHOD render (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;DDDLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
-		ARG 1 renderState
-		ARG 2 xOffset
-		ARG 4 yOffset
-		ARG 6 zOffset
-		ARG 8 poseStack
-		ARG 9 bufferSource
-		ARG 10 packedLight
-	METHOD render (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;DDDLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/renderer/entity/EntityRenderer;)V
-		ARG 1 renderState
-		ARG 2 xOffset
-		ARG 4 yOffset
-		ARG 6 zOffset
-		ARG 8 poseStack
-		ARG 9 bufferSource
-		ARG 10 packedLight
-		ARG 11 renderer
-	METHOD render (Lnet/minecraft/world/entity/Entity;DDDFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
-		ARG 1 entity
-		ARG 2 xOffset
-		ARG 4 yOffset
-		ARG 6 zOffset
-		ARG 8 partialTick
-		ARG 9 poseStack
-		ARG 10 bufferSource
-		ARG 11 packedLight
-	METHOD render (Lnet/minecraft/world/entity/Entity;DDDFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/renderer/entity/EntityRenderer;)V
-		ARG 1 entity
-		ARG 2 xOffset
-		ARG 4 yOffset
-		ARG 6 zOffset
-		ARG 8 partialTick
-		ARG 9 poseStack
-		ARG 10 bufferSource
-		ARG 11 packedLight
-		ARG 12 renderer
-	METHOD renderBlockShadow (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;DDDFF)V
-		ARG 0 pose
-		ARG 1 consumer
-		ARG 2 chunk
-		ARG 3 level
-		ARG 4 pos
-		ARG 5 x
-		ARG 7 y
-		ARG 9 z
-		ARG 11 size
-		ARG 12 weight
-	METHOD renderFlame (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lorg/joml/Quaternionf;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 renderState
-		ARG 4 quaternion
-	METHOD renderHitbox (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/entity/state/HitboxRenderState;)V
-		ARG 0 posStack
-		ARG 1 consumer
-		ARG 2 hitbox
-	METHOD renderHitboxes (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/renderer/entity/state/HitboxesRenderState;Lnet/minecraft/client/renderer/MultiBufferSource;)V
-		ARG 1 poseStack
-		ARG 2 renderState
-		ARG 3 hitboxesRenderState
-		ARG 4 bufferSource
-	METHOD renderHitboxesAndViewVector (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/entity/state/HitboxesRenderState;Lcom/mojang/blaze3d/vertex/VertexConsumer;F)V
-		ARG 0 poseStack
-		ARG 1 hitboxesRenderState
-		ARG 2 consumer
-		ARG 3 eyeHeight
-	METHOD renderShadow (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;FLnet/minecraft/world/level/LevelReader;F)V
-		ARG 0 poseStack
-		ARG 1 bufferSource
-		ARG 2 renderState
-		ARG 3 strength
-		ARG 4 level
-		ARG 5 size
-	METHOD setLevel (Lnet/minecraft/world/level/Level;)V
-		COMMENT World sets this RenderManager's worldObj to the world provided
-		ARG 1 level
-	METHOD setRenderHitBoxes (Z)V
-		ARG 1 debugBoundingBox
-	METHOD setRenderShadow (Z)V
-		ARG 1 renderShadow
-	METHOD shadowVertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;IFFFFF)V
-		ARG 0 pose
-		ARG 1 consumer
-		ARG 2 color
-		ARG 3 offsetX
-		ARG 4 offsetY
-		ARG 5 offsetZ
-		ARG 6 u
-		ARG 7 v
 	METHOD shouldRender (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/culling/Frustum;DDD)Z
 		ARG 1 entity
 		ARG 2 frustum
 		ARG 3 camX
 		ARG 5 camY
 		ARG 7 camZ
-	METHOD submit (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;DDDLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
-		ARG 1 renderState
-		ARG 2 xOffset
-		ARG 4 yOffset
-		ARG 6 zOffset
-		ARG 8 poseStack
-		ARG 9 nodeCollector
 	METHOD submit (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/renderer/state/CameraRenderState;DDDLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 renderState
 		ARG 2 cameraRenderState

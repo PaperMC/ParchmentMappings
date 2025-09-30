@@ -1,19 +1,4 @@
 CLASS net/minecraft/world/entity/EntityType
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;ZZZZLcom/google/common/collect/ImmutableSet;Lnet/minecraft/world/entity/EntityDimensions;FIILjava/lang/String;Ljava/util/Optional;Lnet/minecraft/world/flag/FeatureFlagSet;)V
-		ARG 1 factory
-		ARG 2 category
-		ARG 3 serialize
-		ARG 4 summon
-		ARG 5 fireImmune
-		ARG 6 canSpawnFarFromPlayer
-		ARG 7 immuneTo
-		ARG 8 dimensions
-		ARG 9 spawnDimensionsScale
-		ARG 10 clientTrackingRange
-		ARG 11 updateInterval
-		ARG 12 descriptionId
-		ARG 13 lootTable
-		ARG 14 requiredFeatures
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;ZZZZLcom/google/common/collect/ImmutableSet;Lnet/minecraft/world/entity/EntityDimensions;FIILjava/lang/String;Ljava/util/Optional;Lnet/minecraft/world/flag/FeatureFlagSet;Z)V
 		ARG 1 factory
 		ARG 2 category
@@ -97,8 +82,6 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 state
 	METHOD lambda$appendComponentsConfig$22 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
-	METHOD lambda$appendCustomEntityStackConfig$23 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/component/CustomData;Lnet/minecraft/world/entity/Entity;)V
-		ARG 3 entity
 	METHOD lambda$create$24 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/entity/Entity;
 		ARG 2 entityType
 	METHOD lambda$createDefaultStackConfig$21 (Lnet/minecraft/world/entity/Entity;)V
@@ -173,11 +156,6 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 5 reason
 		ARG 6 shouldOffsetY
 		ARG 7 shouldOffsetYMore
-	METHOD updateCustomEntityTag (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/component/CustomData;)V
-		ARG 0 level
-		ARG 1 owner
-		ARG 2 entity
-		ARG 3 customData
 	METHOD updateCustomEntityTag (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/component/TypedEntityData;)V
 		ARG 0 level
 		ARG 1 owner

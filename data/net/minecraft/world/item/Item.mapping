@@ -134,8 +134,6 @@ CLASS net/minecraft/world/item/Item
 	METHOD useOnRelease (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT If this stack's item is a crossbow
 		ARG 1 stack
-	METHOD verifyComponentsAfterLoad (Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 stack
 	CLASS Properties
 		METHOD attributes (Lnet/minecraft/world/item/component/ItemAttributeModifiers;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 attributes

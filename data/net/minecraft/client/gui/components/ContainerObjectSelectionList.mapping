@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/gui/components/ContainerObjectSelectionList
-	METHOD isSelectedItem (I)Z
-		ARG 1 index
 	METHOD lambda$nextFocusPath$0 (Lnet/minecraft/client/gui/components/ContainerObjectSelectionList$Entry;)Z
 		ARG 0 listEntry
 	CLASS Entry

@@ -3,8 +3,6 @@ CLASS net/minecraft/world/level/block/CaveVines
 		ARG 0 berries
 	METHOD hasGlowBerries (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
-	METHOD lambda$emission$0 (ILnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 1 state
 	METHOD use (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/InteractionResult;
 		ARG 0 entity
 		ARG 1 state

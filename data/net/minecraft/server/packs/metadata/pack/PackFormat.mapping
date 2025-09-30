@@ -1,5 +1,5 @@
 CLASS net/minecraft/server/packs/metadata/pack/PackFormat
-	METHOD compareTo (Ljava/lang/Object;)I
+	METHOD compareTo (Lnet/minecraft/server/packs/metadata/pack/PackFormat;)I
 		ARG 1 other
 	METHOD fullCodec (I)Lcom/mojang/serialization/Codec;
 		ARG 0 defaultMinorVersion

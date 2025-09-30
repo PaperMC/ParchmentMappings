@@ -1,12 +1,4 @@
 CLASS net/minecraft/client/gui/components/events/ContainerEventHandler
-	METHOD charTyped (CI)Z
-		COMMENT Called when a character is typed within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 codePoint
-			COMMENT the code point of the typed character.
-		ARG 2 modifiers
-			COMMENT the keyboard modifiers.
 	METHOD children ()Ljava/util/List;
 		COMMENT {@return a List containing all GUI element children of this GUI element}
 	METHOD getChildAt (DD)Ljava/util/Optional;
@@ -33,62 +25,8 @@ CLASS net/minecraft/client/gui/components/events/ContainerEventHandler
 		COMMENT {@return {@code true} if the GUI element is dragging, {@code false} otherwise}
 	METHOD isFocused ()Z
 		COMMENT {@return {@code true} if the GUI element is focused, {@code false} otherwise}
-	METHOD keyPressed (III)Z
-		COMMENT Called when a keyboard key is pressed within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 keyCode
-			COMMENT the key code of the pressed key.
-		ARG 2 scanCode
-			COMMENT the scan code of the pressed key.
-		ARG 3 modifiers
-			COMMENT the keyboard modifiers.
-	METHOD keyReleased (III)Z
-		COMMENT Called when a keyboard key is released within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 keyCode
-			COMMENT the key code of the released key.
-		ARG 2 scanCode
-			COMMENT the scan code of the released key.
-		ARG 3 modifiers
-			COMMENT the keyboard modifiers.
 	METHOD lambda$nextFocusPathInDirection$3 (Lnet/minecraft/client/gui/navigation/ScreenDirection;Lnet/minecraft/client/gui/components/events/GuiEventListener;)Ljava/lang/Integer;
 		ARG 1 listener
-	METHOD mouseClicked (DDI)Z
-		COMMENT Called when a mouse button is clicked within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
-		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
-		ARG 5 button
-			COMMENT the button that was clicked.
-	METHOD mouseDragged (DDIDD)Z
-		COMMENT Called when the mouse is dragged within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
-		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
-		ARG 5 button
-			COMMENT the button that is being dragged.
-		ARG 6 dragX
-			COMMENT the X distance of the drag.
-		ARG 8 dragY
-			COMMENT the Y distance of the drag.
-	METHOD mouseReleased (DDI)Z
-		COMMENT Called when a mouse button is released within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
-		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
-		ARG 5 button
-			COMMENT the button that was released.
 	METHOD nextFocusPath (Lnet/minecraft/client/gui/navigation/FocusNavigationEvent;)Lnet/minecraft/client/gui/ComponentPath;
 		COMMENT Retrieves the next focus path based on the given focus navigation event.
 		COMMENT <p>

@@ -10,10 +10,6 @@ CLASS net/minecraft/world/level/block/entity/BarrelBlockEntity
 		ARG 2 sound
 	METHOD setItems (Lnet/minecraft/core/NonNullList;)V
 		ARG 1 items
-	METHOD startOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
-	METHOD stopOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	METHOD updateBlockState (Lnet/minecraft/world/level/block/state/BlockState;Z)V
 		ARG 1 state
 		ARG 2 open

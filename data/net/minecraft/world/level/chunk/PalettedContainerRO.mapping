@@ -9,22 +9,15 @@ CLASS net/minecraft/world/level/chunk/PalettedContainerRO
 		ARG 1 consumer
 	METHOD maybeHas (Ljava/util/function/Predicate;)Z
 		ARG 1 filter
-	METHOD pack (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;)Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;
-		ARG 1 registry
-		ARG 2 strategy
 	METHOD pack (Lnet/minecraft/world/level/chunk/Strategy;)Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;
 		ARG 1 strategy
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
+	CLASS Unpacker
+		METHOD read (Lnet/minecraft/world/level/chunk/Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
+			ARG 1 strategy
+			ARG 2 packedData
 	CLASS PackedData
 		METHOD <init> (Ljava/util/List;Ljava/util/Optional;)V
 			ARG 1 paletteEntries
 			ARG 2 storage
-	CLASS Unpacker
-		METHOD read (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
-			ARG 1 registry
-			ARG 2 strategy
-			ARG 3 packedData
-		METHOD read (Lnet/minecraft/world/level/chunk/Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
-			ARG 1 strategy
-			ARG 2 packedData

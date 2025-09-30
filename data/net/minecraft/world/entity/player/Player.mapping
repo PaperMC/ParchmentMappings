@@ -141,8 +141,6 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Dead and sleeping entities cannot move
 	METHOD isLocalPlayer ()Z
 		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
-	METHOD isModelPartShown (Lnet/minecraft/world/entity/player/PlayerModelPart;)Z
-		ARG 1 part
 	METHOD isReducedDebugInfo ()Z
 		COMMENT Whether the "reducedDebugInfo" option is active for this player.
 	METHOD isSleepingLongEnough ()Z
@@ -204,8 +202,6 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 source
 		ARG 3 volume
 		ARG 4 pitch
-	METHOD playShoulderEntityAmbientSound (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 entityCompound
 	METHOD playSound (Lnet/minecraft/sounds/SoundEvent;FF)V
 		ARG 1 sound
 		ARG 2 volume
@@ -214,8 +210,6 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 recipes
 	METHOD resetStat (Lnet/minecraft/stats/Stat;)V
 		ARG 1 stat
-	METHOD respawnEntityOnShoulder (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 entityCompound
 	METHOD rideTick ()V
 		COMMENT Handles updating while riding another entity
 	METHOD sendMerchantOffers (ILnet/minecraft/world/item/trading/MerchantOffers;IIZZ)V
@@ -227,14 +221,10 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 6 canRestock
 	METHOD setClientLoaded (Z)V
 		ARG 1 clientLoaded
-	METHOD setEntityOnShoulder (Lnet/minecraft/nbt/CompoundTag;)Z
-		ARG 1 entityCompound
 	METHOD setIgnoreFallDamageFromCurrentImpulse (Z)V
 		ARG 1 ignoreFallDamageFromCurrentImpulse
 	METHOD setLastDeathLocation (Ljava/util/Optional;)V
 		ARG 1 lastDeathLocation
-	METHOD setMainArm (Lnet/minecraft/world/entity/HumanoidArm;)V
-		ARG 1 hand
 	METHOD setReducedDebugInfo (Z)V
 		ARG 1 reducedDebugInfo
 	METHOD setRemainingFireTicks (I)V
@@ -242,10 +232,6 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD setScore (I)V
 		COMMENT Set player's score
 		ARG 1 score
-	METHOD setShoulderEntityLeft (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 entityCompound
-	METHOD setShoulderEntityRight (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 entityCompound
 	METHOD setShoulderParrotLeft (Ljava/util/Optional;)V
 		ARG 1 variant
 	METHOD setShoulderParrotRight (Ljava/util/Optional;)V

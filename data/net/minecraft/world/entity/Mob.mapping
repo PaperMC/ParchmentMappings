@@ -208,9 +208,6 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 amount
 	METHOD spawnAnim ()V
 		COMMENT Spawns an explosion particle around the Entity's location
-	METHOD startRiding (Lnet/minecraft/world/entity/Entity;Z)Z
-		ARG 1 entity
-		ARG 2 force
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD updateControlFlags ()V

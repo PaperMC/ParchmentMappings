@@ -5,22 +5,8 @@ CLASS net/minecraft/client/renderer/entity/layers/StuckInBodyLayer
 		ARG 3 modelState
 		ARG 4 texture
 		ARG 5 placementStyle
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/LivingEntityRenderer;Lnet/minecraft/client/model/Model;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/entity/layers/StuckInBodyLayer$PlacementStyle;)V
-		ARG 1 renderer
-		ARG 2 model
-		ARG 3 texture
-		ARG 4 placementStyle
 	METHOD numStuck (Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;)I
 		ARG 1 renderState
-	METHOD numStuck (Lnet/minecraft/client/renderer/entity/state/PlayerRenderState;)I
-		ARG 1 renderState
-	METHOD renderStuckItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IFFF)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 x
-		ARG 5 y
-		ARG 6 z
 	METHOD snapToFace (F)F
 		ARG 0 value
 	METHOD submitStuckItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IFFFI)V

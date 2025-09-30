@@ -1,10 +1,6 @@
 CLASS net/minecraft/client/gui/screens/inventory/StructureBlockEditScreen
 	METHOD <init> (Lnet/minecraft/world/level/block/entity/StructureBlockEntity;)V
 		ARG 1 structure
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
 	METHOD lambda$init$1 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$init$13 (Lnet/minecraft/client/gui/components/Button;)V

@@ -1,7 +1,4 @@
 CLASS net/minecraft/client/renderer/entity/layers/CustomHeadLayer
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/geom/EntityModelSet;)V
-		ARG 1 renderer
-		ARG 2 modelSet
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
 		ARG 1 renderer
 		ARG 2 modelSet
@@ -11,10 +8,6 @@ CLASS net/minecraft/client/renderer/entity/layers/CustomHeadLayer
 		ARG 2 modelSet
 		ARG 3 playerSkinRenderCache
 		ARG 4 transforms
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/renderer/entity/layers/CustomHeadLayer$Transforms;)V
-		ARG 1 renderer
-		ARG 2 modelSet
-		ARG 3 transforms
 	METHOD lambda$new$0 (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/model/SkullModelBase;
 		ARG 1 type
 	METHOD resolveSkullRenderType (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/renderer/RenderType;

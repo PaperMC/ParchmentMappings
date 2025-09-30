@@ -5,13 +5,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 3 height
 		ARG 4 y
 		ARG 5 itemHeight
-	METHOD <init> (Lnet/minecraft/client/Minecraft;IIIII)V
-		ARG 1 minecraft
-		ARG 2 width
-		ARG 3 height
-		ARG 4 y
-		ARG 5 itemHeight
-		ARG 6 headerHeight
 	METHOD addEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)I
 		ARG 1 entry
 	METHOD addEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;I)I
@@ -30,10 +23,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 entry
 	METHOD enableScissor (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
-	METHOD ensureVisible (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
-		ARG 1 entry
-	METHOD getEntry (I)Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;
-		ARG 1 index
 	METHOD getEntryAtPosition (DD)Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -41,10 +30,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 index
 	METHOD getRowTop (I)I
 		ARG 1 index
-	METHOD isSelectedItem (I)Z
-		ARG 1 index
-	METHOD lambda$nextEntry$0 (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)Z
-		ARG 0 entry
 	METHOD narrateListElementPosition (Lnet/minecraft/client/gui/narration/NarrationElementOutput;Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 narrationElementOutput
 		ARG 2 entry
@@ -57,36 +42,12 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 direction
 		ARG 2 predicate
 		ARG 3 selected
-	METHOD remove (I)Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;
-		ARG 1 index
 	METHOD removeEntries (Ljava/util/List;)V
 		ARG 1 entries
 	METHOD removeEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 entry
-	METHOD removeEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)Z
-		ARG 1 entry
 	METHOD removeEntryFromTop (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 entry
-	METHOD removeEntryFromTop (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)Z
-		ARG 1 entry
-	METHOD renderDecorations (Lnet/minecraft/client/gui/GuiGraphics;II)V
-		ARG 1 guiGraphics
-		ARG 2 mouseX
-		ARG 3 mouseY
-	METHOD renderHeader (Lnet/minecraft/client/gui/GuiGraphics;II)V
-		ARG 1 guiGraphics
-		ARG 2 x
-		ARG 3 y
-	METHOD renderItem (Lnet/minecraft/client/gui/GuiGraphics;IIFIIIII)V
-		ARG 1 guiGraphics
-		ARG 2 mouseX
-		ARG 3 mouseY
-		ARG 4 partialTick
-		ARG 5 index
-		ARG 6 left
-		ARG 7 top
-		ARG 8 width
-		ARG 9 height
 	METHOD renderItem (Lnet/minecraft/client/gui/GuiGraphics;IIFLnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 guiGraphics
 		ARG 2 mouseX
@@ -102,13 +63,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 4 partialTick
 	METHOD renderListSeparators (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
-	METHOD renderSelection (Lnet/minecraft/client/gui/GuiGraphics;IIIII)V
-		ARG 1 guiGraphics
-		ARG 2 top
-		ARG 3 width
-		ARG 4 height
-		ARG 5 outerColor
-		ARG 6 innerColor
 	METHOD renderSelection (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;I)V
 		ARG 1 guiGraphics
 		ARG 2 entry
@@ -120,8 +74,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 	METHOD scrollToEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 entry
 	METHOD setSelected (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
-		ARG 1 selected
-	METHOD setSelectedIndex (I)V
 		ARG 1 selected
 	METHOD sort (Ljava/util/Comparator;)V
 		ARG 1 comparator
@@ -144,28 +96,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		METHOD isMouseOver (DD)Z
 			ARG 1 mouseX
 			ARG 3 mouseY
-		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V
-			ARG 1 guiGraphics
-			ARG 2 index
-			ARG 3 top
-			ARG 4 left
-			ARG 5 width
-			ARG 6 height
-			ARG 7 mouseX
-			ARG 8 mouseY
-			ARG 9 hovering
-			ARG 10 partialTick
-		METHOD renderBack (Lnet/minecraft/client/gui/GuiGraphics;IIIIIIIZF)V
-			ARG 1 guiGraphics
-			ARG 2 index
-			ARG 3 top
-			ARG 4 left
-			ARG 5 width
-			ARG 6 height
-			ARG 7 mouseX
-			ARG 8 mouseY
-			ARG 9 isMouseOver
-			ARG 10 partialTick
 		METHOD renderContent (Lnet/minecraft/client/gui/GuiGraphics;IIZF)V
 			ARG 1 guiGraphics
 			ARG 2 mouseX

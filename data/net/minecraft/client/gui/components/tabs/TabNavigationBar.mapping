@@ -18,15 +18,6 @@ CLASS net/minecraft/client/gui/components/tabs/TabNavigationBar
 		COMMENT Returns the index of the current tab.
 		COMMENT <p>
 		COMMENT @return the index of the current tab, or -1 if no current tab is set.
-	METHOD getNextTabIndex (I)I
-		COMMENT Returns the index of the next tab based on the given key code.
-		COMMENT <p>
-		COMMENT @return the index of the next tab, or -1 if no valid tab index is found.
-		ARG 1 keycode
-			COMMENT the keycode of the pressed key.
-	METHOD getNextTabIndex (II)I
-		ARG 1 currentTabIndex
-		ARG 2 keyCode
 	METHOD getNextTabIndex (ILnet/minecraft/client/input/KeyEvent;)I
 		ARG 1 tabIndex
 		ARG 2 event
@@ -34,12 +25,6 @@ CLASS net/minecraft/client/gui/components/tabs/TabNavigationBar
 		ARG 1 event
 	METHOD getRectangle ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 		COMMENT {@return the {@link ScreenRectangle} occupied by the GUI element}
-	METHOD keyPressed (I)Z
-		COMMENT Handles key pressed events.
-		COMMENT <p>
-		COMMENT @return {@code true} if the key press was handled, {@code false} otherwise.
-		ARG 1 keycode
-			COMMENT the keycode of the pressed key.
 	METHOD lambda$updateNarration$1 (Lnet/minecraft/client/gui/narration/NarrationElementOutput;Lnet/minecraft/client/gui/components/TabButton;)V
 		ARG 2 tabButton
 	METHOD narrateListElementPosition (Lnet/minecraft/client/gui/narration/NarrationElementOutput;Lnet/minecraft/client/gui/components/TabButton;)V

@@ -1,18 +1,9 @@
 CLASS net/minecraft/client/renderer/debug/DebugRenderer
-	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
-		ARG 1 minecraft
 	METHOD getTargetedEntity (Lnet/minecraft/world/entity/Entity;I)Ljava/util/Optional;
 		ARG 0 entity
 		ARG 1 distance
 	METHOD mixColor (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 shift
-	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDD)V
-		ARG 1 poseStack
-		ARG 2 frustum
-		ARG 3 bufferSource
-		ARG 4 camX
-		ARG 6 camY
-		ARG 8 camZ
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/culling/Frustum;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDDZ)V
 		ARG 1 poseStack
 		ARG 2 frustum
@@ -21,12 +12,6 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 6 camY
 		ARG 8 camZ
 		ARG 10 translucent
-	METHOD renderAfterTranslucents (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;DDD)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 camX
-		ARG 5 camY
-		ARG 7 camZ
 	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDDDDFFFF)V
 		ARG 0 poseStack
 		ARG 1 bufferSource
@@ -144,24 +129,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 1 green
 		ARG 2 blue
 		ARG 3 shift
-	METHOD switchRenderChunkborder ()Z
-		COMMENT Toggles the {@link #renderChunkborder} value, effectively toggling the {@link #chunkBorderRenderer} on or off.
-		COMMENT
-		COMMENT @return the new, inverted value
 	CLASS SimpleDebugRenderer
-		METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDD)V
-			ARG 1 poseStack
-			ARG 2 bufferSource
-			ARG 3 camX
-			ARG 5 camY
-			ARG 7 camZ
-		METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;)V
-			ARG 1 poseStack
-			ARG 2 bufferSource
-			ARG 3 camX
-			ARG 5 camY
-			ARG 7 camZ
-			ARG 9 debugValueAccess
 		METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;Lnet/minecraft/client/renderer/culling/Frustum;)V
 			ARG 1 poseStack
 			ARG 2 bufferSource

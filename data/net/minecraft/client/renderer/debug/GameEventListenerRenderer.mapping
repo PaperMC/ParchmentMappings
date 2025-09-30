@@ -1,17 +1,7 @@
 CLASS net/minecraft/client/renderer/debug/GameEventListenerRenderer
-	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
-		ARG 1 minecraft
 	METHOD forEachListener (Lnet/minecraft/util/debug/DebugValueAccess;Lnet/minecraft/client/renderer/debug/GameEventListenerRenderer$ListenerVisitor;)V
 		ARG 1 debugValueAccess
 		ARG 2 action
-	METHOD lambda$render$0 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/renderer/debug/GameEventListenerRenderer$TrackedListener;)Z
-		ARG 2 trackedListener
-	METHOD lambda$render$1 (Lnet/minecraft/client/renderer/debug/GameEventListenerRenderer$TrackedListener;Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDLnet/minecraft/world/phys/Vec3;)V
-		ARG 9 pos
-	METHOD lambda$render$2 (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDLnet/minecraft/world/phys/Vec3;)V
-		ARG 8 position
-	METHOD lambda$render$3 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 2 position
 	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/phys/AABB;FFFF)V
 		ARG 0 poseStack
 		ARG 1 buffer
@@ -20,24 +10,7 @@ CLASS net/minecraft/client/renderer/debug/GameEventListenerRenderer
 		ARG 4 green
 		ARG 5 blue
 		ARG 6 alpha
-	METHOD trackGameEvent (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 gameEvent
-		ARG 2 position
-	METHOD trackListener (Lnet/minecraft/world/level/gameevent/PositionSource;I)V
-		ARG 1 listenerSource
-		ARG 2 listenerRange
 	CLASS ListenerVisitor
 		METHOD accept (Lnet/minecraft/world/phys/Vec3;I)V
 			ARG 1 pos
 			ARG 2 radius
-	CLASS TrackedListener
-		METHOD <init> (Lnet/minecraft/world/level/gameevent/PositionSource;I)V
-			ARG 1 listenerSource
-			ARG 2 listenerRange
-		METHOD getPosition (Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
-			ARG 1 level
-		METHOD isExpired (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/phys/Vec3;)Z
-			ARG 1 level
-			ARG 2 pos
-		METHOD lambda$isExpired$0 (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Z
-			ARG 1 position

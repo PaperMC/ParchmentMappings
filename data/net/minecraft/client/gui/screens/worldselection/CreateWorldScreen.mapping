@@ -6,13 +6,6 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 		ARG 4 preset
 		ARG 5 seed
 		ARG 6 createWorldCallback
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContext;Ljava/util/Optional;Ljava/util/OptionalLong;Lnet/minecraft/client/gui/screens/worldselection/CreateWorldCallback;)V
-		ARG 1 minecraft
-		ARG 2 lastScreen
-		ARG 3 context
-		ARG 4 preset
-		ARG 5 seed
-		ARG 6 createWorldCallback
 	METHOD applyNewPackConfig (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/level/WorldDataConfiguration;Ljava/util/function/Consumer;)V
 		ARG 1 packRepository
 		ARG 2 worldDataConfiguration
@@ -27,12 +20,6 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 	METHOD createFromExisting (Lnet/minecraft/client/Minecraft;Ljava/lang/Runnable;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContext;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screens/worldselection/CreateWorldScreen;
 		ARG 0 minecraft
 		ARG 1 onClose
-		ARG 2 levelSettings
-		ARG 3 context
-		ARG 4 tempDataPackDir
-	METHOD createFromExisting (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContext;Ljava/nio/file/Path;)Lnet/minecraft/client/gui/screens/worldselection/CreateWorldScreen;
-		ARG 0 minecraft
-		ARG 1 lastScreen
 		ARG 2 levelSettings
 		ARG 3 context
 		ARG 4 tempDataPackDir
@@ -53,10 +40,6 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 		ARG 2 levelData
 	METHOD getDataPackSelectionSettings (Lnet/minecraft/world/level/WorldDataConfiguration;)Lcom/mojang/datafixers/util/Pair;
 		ARG 1 worldDataConfiguration
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
 	METHOD lambda$init$11 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$new$0 (Lnet/minecraft/client/gui/screens/worldselection/CreateWorldScreen;Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
@@ -64,13 +47,6 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 	METHOD openCreateWorldScreen (Lnet/minecraft/client/Minecraft;Ljava/lang/Runnable;Ljava/util/function/Function;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContextMapper;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/client/gui/screens/worldselection/CreateWorldCallback;)V
 		ARG 0 minecraft
 		ARG 1 onClose
-		ARG 2 worldGenSettingsGetter
-		ARG 3 creationContextMapper
-		ARG 4 preset
-		ARG 5 createWorldCallback
-	METHOD openCreateWorldScreen (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Ljava/util/function/Function;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContextMapper;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/client/gui/screens/worldselection/CreateWorldCallback;)V
-		ARG 0 minecraft
-		ARG 1 lastScreen
 		ARG 2 worldGenSettingsGetter
 		ARG 3 creationContextMapper
 		ARG 4 preset
@@ -86,22 +62,12 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 		ARG 0 minecraft
 		ARG 1 onClose
 		ARG 2 callback
-	METHOD openFresh (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;)V
-		ARG 0 minecraft
-		ARG 1 lastScreen
-	METHOD openFresh (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/gui/screens/worldselection/CreateWorldCallback;)V
-		ARG 0 minecraft
-		ARG 1 lastScreen
-		ARG 2 callback
 	METHOD queueLoadScreen (Lnet/minecraft/client/Minecraft;Lnet/minecraft/network/chat/Component;)V
 		ARG 0 minecraft
 		ARG 1 title
 	METHOD testWorld (Lnet/minecraft/client/Minecraft;Ljava/lang/Runnable;)V
 		ARG 0 minecraft
 		ARG 1 onClose
-	METHOD testWorld (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;)V
-		ARG 0 minecraft
-		ARG 1 lastScreen
 	METHOD tryApplyNewDataPacks (Lnet/minecraft/server/packs/repository/PackRepository;ZLjava/util/function/Consumer;)V
 		ARG 1 packRepository
 		ARG 2 shouldConfirm

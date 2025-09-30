@@ -17,9 +17,6 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 5 z
 	METHOD clampVec3ToBound (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 vec3
-	METHOD closestBorder (DD)Ljava/util/List;
-		ARG 1 x
-		ARG 3 z
 	METHOD getDistanceToBorder (DD)D
 		ARG 1 x
 		ARG 3 z
@@ -61,8 +58,6 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 3 z
 	METHOD setDamagePerBlock (D)V
 		ARG 1 damagePerBlock
-	METHOD setDamageSafeZone (D)V
-		ARG 1 damageSafeZone
 	METHOD setSafeZone (D)V
 		ARG 1 safeZone
 	METHOD setSize (D)V
@@ -71,11 +66,6 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 1 warningDistance
 	METHOD setWarningTime (I)V
 		ARG 1 warningTime
-	CLASS MovingBorderExtent
-		METHOD <init> (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
-			ARG 2 from
-			ARG 4 to
-			ARG 6 lerpDuration
 	CLASS Settings
 		METHOD <init> (DDDDIIDJD)V
 			ARG 1 centerX
@@ -85,17 +75,17 @@ CLASS net/minecraft/world/level/border/WorldBorder
 			ARG 9 warningBlocks
 			ARG 10 warningTime
 			ARG 11 size
-			ARG 13 sizeLerpTime
-			ARG 15 sizeLerpTarget
+			ARG 13 lerpTime
+			ARG 15 lerpTarget
 		METHOD <init> (Lnet/minecraft/world/level/border/WorldBorder;)V
 			ARG 1 border
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
-		METHOD read (Lcom/mojang/serialization/DynamicLike;Lnet/minecraft/world/level/border/WorldBorder$Settings;)Lnet/minecraft/world/level/border/WorldBorder$Settings;
-			ARG 0 dynamic
-			ARG 1 defaultValue
-		METHOD write (Lnet/minecraft/nbt/CompoundTag;)V
-			ARG 1 nbt
+	CLASS MovingBorderExtent
+		METHOD <init> (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
+			ARG 2 from
+			ARG 4 to
+			ARG 6 lerpDuration
 	CLASS StaticBorderExtent
 		METHOD <init> (Lnet/minecraft/world/level/border/WorldBorder;D)V
 			ARG 2 size

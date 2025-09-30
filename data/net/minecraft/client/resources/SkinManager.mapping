@@ -1,12 +1,4 @@
 CLASS net/minecraft/client/resources/SkinManager
-	METHOD <init> (Ljava/nio/file/Path;Lcom/mojang/authlib/minecraft/MinecraftSessionService;Ljava/util/concurrent/Executor;)V
-		ARG 1 skinDirectory
-		ARG 2 sessionService
-		ARG 3 executor
-	METHOD <init> (Ljava/nio/file/Path;Lnet/minecraft/server/Services;Ljava/util/concurrent/Executor;)V
-		ARG 1 skinDirectory
-		ARG 2 services
-		ARG 3 exector
 	METHOD <init> (Ljava/nio/file/Path;Lnet/minecraft/server/Services;Lnet/minecraft/client/renderer/texture/SkinTextureDownloader;Ljava/util/concurrent/Executor;)V
 		ARG 1 skinDirectory
 		ARG 2 services
@@ -16,15 +8,6 @@ CLASS net/minecraft/client/resources/SkinManager
 		ARG 1 profile
 		ARG 2 requireSecure
 	METHOD get (Lcom/mojang/authlib/GameProfile;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 profile
-	METHOD getInsecureSkin (Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/client/resources/PlayerSkin;
-		ARG 1 profile
-	METHOD getInsecureSkin (Lcom/mojang/authlib/GameProfile;Lnet/minecraft/client/resources/PlayerSkin;)Lnet/minecraft/client/resources/PlayerSkin;
-		ARG 1 profile
-		ARG 2 defaultSkin
-	METHOD getOrLoad (Lcom/mojang/authlib/GameProfile;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 profile
-	METHOD lookupInsecure (Lcom/mojang/authlib/GameProfile;)Ljava/util/function/Supplier;
 		ARG 1 profile
 	METHOD registerTextures (Ljava/util/UUID;Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 uuid
@@ -38,9 +21,6 @@ CLASS net/minecraft/client/resources/SkinManager
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other
 	CLASS TextureCache
-		METHOD <init> (Ljava/nio/file/Path;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;)V
-			ARG 1 root
-			ARG 2 type
 		METHOD <init> (Lnet/minecraft/client/resources/SkinManager;Ljava/nio/file/Path;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;)V
 			ARG 2 root
 			ARG 3 type

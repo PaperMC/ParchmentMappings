@@ -471,18 +471,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the rendering position.
 		ARG 5 text
 			COMMENT the custom text to display. Can be null.
-	METHOD renderOutline (IIIII)V
-		COMMENT Renders an outline rectangle on the screen with the specified color.
-		ARG 1 x
-			COMMENT the x-coordinate of the top-left corner of the rectangle.
-		ARG 2 y
-			COMMENT the y-coordinate of the top-left corner of the rectangle.
-		ARG 3 width
-			COMMENT the width of the blitted portion.
-		ARG 4 height
-			COMMENT the height of the rectangle.
-		ARG 5 color
-			COMMENT the color of the outline.
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 font
 		ARG 2 components
@@ -574,14 +562,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 y0
 		ARG 6 x1
 		ARG 7 y1
-	METHOD submitBannerPatternRenderState (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;IIII)V
-		ARG 1 flag
-		ARG 2 baseColor
-		ARG 3 resultBannerPatterns
-		ARG 4 x0
-		ARG 5 y0
-		ARG 6 x1
-		ARG 7 y1
 	METHOD submitBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lcom/mojang/blaze3d/textures/GpuTextureView;IIIIFFFFI)V
 		ARG 1 pipeline
 		ARG 2 atlasTexture
@@ -640,14 +620,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 	METHOD submitSignRenderState (Lnet/minecraft/client/model/Model$Simple;FLnet/minecraft/world/level/block/state/properties/WoodType;IIII)V
 		ARG 1 signModel
 		ARG 2 acale
-		ARG 3 woodType
-		ARG 4 x0
-		ARG 5 y0
-		ARG 6 x1
-		ARG 7 y1
-	METHOD submitSignRenderState (Lnet/minecraft/client/model/Model;FLnet/minecraft/world/level/block/state/properties/WoodType;IIII)V
-		ARG 1 signModel
-		ARG 2 scale
 		ARG 3 woodType
 		ARG 4 x0
 		ARG 5 y0

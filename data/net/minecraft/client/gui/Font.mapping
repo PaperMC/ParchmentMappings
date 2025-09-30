@@ -1,7 +1,4 @@
 CLASS net/minecraft/client/gui/Font
-	METHOD <init> (Ljava/util/function/Function;Z)V
-		ARG 1 fonts
-		ARG 2 filterFishyGlyphs
 	METHOD <init> (Lnet/minecraft/client/gui/Font$Provider;)V
 		ARG 1 provider
 	METHOD bidirectionalShaping (Ljava/lang/String;)Ljava/lang/String;
@@ -49,18 +46,11 @@ CLASS net/minecraft/client/gui/Font
 		ARG 6 pose
 		ARG 7 bufferSource
 		ARG 8 packedLightCoords
-	METHOD getFontSet (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
-		ARG 1 fontLocation
-	METHOD getGlyph (ILnet/minecraft/network/chat/Style;)Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;
-		ARG 1 character
-		ARG 2 style
 	METHOD getGlyph (ILnet/minecraft/network/chat/Style;)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;
 		ARG 1 character
 		ARG 2 style
 	METHOD getGlyphSource (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
 		ARG 1 fontDescription
-	METHOD getGlyphSource (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/GlyphSource;
-		ARG 1 glyphSource
 	METHOD isBidirectional ()Z
 		COMMENT Get bidiFlag that controls if the Unicode Bidirectional Algorithm should be run before rendering any string
 	METHOD lambda$new$0 (ILnet/minecraft/network/chat/Style;)F
@@ -110,15 +100,13 @@ CLASS net/minecraft/client/gui/Font
 	METHOD wordWrapHeight (Lnet/minecraft/network/chat/FormattedText;I)I
 		ARG 1 text
 		ARG 2 maxWidth
+	CLASS Provider
+		METHOD glyphs (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
+			ARG 1 fontDescription
 	CLASS GlyphVisitor
 		METHOD acceptEffect (Lnet/minecraft/client/gui/font/TextRenderable;)V
 			ARG 1 effect
-		METHOD acceptEffect (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$Effect;)V
-			ARG 1 glyph
-			ARG 2 effect
 		METHOD acceptGlyph (Lnet/minecraft/client/gui/font/TextRenderable;)V
-			ARG 1 glyph
-		METHOD acceptGlyph (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$GlyphInstance;)V
 			ARG 1 glyph
 		METHOD forMultiBufferSource (Lnet/minecraft/client/renderer/MultiBufferSource;Lorg/joml/Matrix4f;Lnet/minecraft/client/gui/Font$DisplayMode;I)Lnet/minecraft/client/gui/Font$GlyphVisitor;
 			ARG 0 bufferSource
@@ -143,21 +131,13 @@ CLASS net/minecraft/client/gui/Font
 			ARG 3 y
 			ARG 4 color
 			ARG 5 dropShadow
-		METHOD accept (ILnet/minecraft/network/chat/Style;Lnet/minecraft/client/gui/font/glyphs/BakeableGlyph;)Z
-			ARG 1 positionInCurrentSequence
-			ARG 2 style
-			ARG 3 glyph
 		METHOD accept (ILnet/minecraft/network/chat/Style;Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;)Z
 			ARG 1 positionInCurrentSequence
 			ARG 2 style
 			ARG 3 glyph
 		METHOD addEffect (Lnet/minecraft/client/gui/font/TextRenderable;)V
 			ARG 1 effect
-		METHOD addEffect (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$Effect;)V
-			ARG 1 effect
 		METHOD addGlyph (Lnet/minecraft/client/gui/font/TextRenderable;)V
-			ARG 1 glyph
-		METHOD addGlyph (Lnet/minecraft/client/gui/font/glyphs/BakedGlyph$GlyphInstance;)V
 			ARG 1 glyph
 		METHOD getShadowColor (Lnet/minecraft/network/chat/Style;I)I
 			ARG 1 style
@@ -173,8 +153,3 @@ CLASS net/minecraft/client/gui/Font
 			ARG 2 top
 			ARG 3 right
 			ARG 4 bottom
-	CLASS Provider
-		METHOD glyphs (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
-			ARG 1 fontDescription
-		METHOD glyphs (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/GlyphSource;
-			ARG 1 name

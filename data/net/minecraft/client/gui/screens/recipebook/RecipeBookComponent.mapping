@@ -2,9 +2,6 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 	METHOD <init> (Lnet/minecraft/world/inventory/RecipeBookMenu;Ljava/util/List;)V
 		ARG 1 menu
 		ARG 2 tabInfos
-	METHOD charTyped (CI)Z
-		ARG 1 codePoint
-		ARG 2 modifiers
 	METHOD fillGhostRecipe (Lnet/minecraft/client/gui/screens/recipebook/GhostSlots;Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/util/context/ContextMap;)V
 		ARG 1 ghostSlots
 		ARG 2 recipeDisplay
@@ -18,14 +15,6 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 6 top
 		ARG 7 width
 		ARG 8 height
-	METHOD hasClickedOutside (DDIIIII)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 x
-		ARG 6 y
-		ARG 7 width
-		ARG 8 height
-		ARG 9 mouseButton
 	METHOD init (IILnet/minecraft/client/Minecraft;Z)V
 		ARG 1 width
 		ARG 2 height
@@ -36,20 +25,8 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 	METHOD isMouseOver (DD)Z
 		ARG 1 mouseX
 		ARG 3 mouseY
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
-	METHOD keyReleased (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
 	METHOD lambda$initVisuals$1 (Lnet/minecraft/client/gui/screens/recipebook/RecipeBookTabButton;)Z
 		ARG 1 button
-	METHOD mouseClicked (DDI)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 button
 	METHOD pirateSpeechForThePeople (Ljava/lang/String;)V
 		COMMENT Check if we should activate the pirate speak easter egg.
 		ARG 1 text
@@ -70,9 +47,6 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 1 visible
 	METHOD slotClicked (Lnet/minecraft/world/inventory/Slot;)V
 		ARG 1 slot
-	METHOD tryPlaceRecipe (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/world/item/crafting/display/RecipeDisplayId;)Z
-		ARG 1 recipeCollection
-		ARG 2 recipe
 	METHOD tryPlaceRecipe (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/world/item/crafting/display/RecipeDisplayId;Z)Z
 		ARG 1 recipeCollection
 		ARG 2 recipe

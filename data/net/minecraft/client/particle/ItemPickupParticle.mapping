@@ -4,20 +4,3 @@ CLASS net/minecraft/client/particle/ItemPickupParticle
 		ARG 2 itemRenderState
 		ARG 3 target
 		ARG 4 speed
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRenderDispatcher;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entityRenderDispatcher
-		ARG 2 level
-		ARG 3 itemEntity
-		ARG 4 target
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRenderDispatcher;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 entityRenderDispatcher
-		ARG 2 level
-		ARG 3 itemEntity
-		ARG 4 target
-		ARG 5 speed
-	METHOD getSafeCopy (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 entity
-	METHOD render (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/Camera;F)V
-		ARG 1 buffer
-		ARG 2 renderInfo
-		ARG 3 partialTicks

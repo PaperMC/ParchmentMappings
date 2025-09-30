@@ -44,11 +44,6 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 1 pos
 	METHOD lambda$getDismountLocationForPassenger$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 1 pos
-	METHOD lerpMotion (DDD)V
-		COMMENT Updates the entity motion clientside, called by packets from the server
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD makeStepAlongTrack (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/properties/RailShape;D)D
 		ARG 1 pos
 		ARG 2 railShape

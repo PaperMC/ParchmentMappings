@@ -8,15 +8,7 @@ CLASS net/minecraft/client/gui/screens/packs/TransferableSelectionList
 	METHOD updateList (Ljava/util/stream/Stream;Lnet/minecraft/client/gui/screens/packs/PackSelectionModel$EntryBase;)V
 		ARG 1 entries
 		ARG 2 focused
-	CLASS HeaderEntry
-		METHOD <init> (Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;)V
-			ARG 2 font
-			ARG 3 text
 	CLASS PackEntry
-		METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;Lnet/minecraft/client/gui/screens/packs/PackSelectionModel$Entry;)V
-			ARG 1 minecraft
-			ARG 2 parent
-			ARG 3 pack
 		METHOD <init> (Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;Lnet/minecraft/client/gui/screens/packs/PackSelectionModel$Entry;)V
 			ARG 2 minecraft
 			ARG 3 parent
@@ -27,7 +19,7 @@ CLASS net/minecraft/client/gui/screens/packs/TransferableSelectionList
 		METHOD cacheName (Lnet/minecraft/client/Minecraft;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/util/FormattedCharSequence;
 			ARG 0 minecraft
 			ARG 1 name
-		METHOD mouseClicked (DDI)Z
-			ARG 1 mouseX
-			ARG 3 mouseY
-			ARG 5 button
+	CLASS HeaderEntry
+		METHOD <init> (Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;)V
+			ARG 2 font
+			ARG 3 text

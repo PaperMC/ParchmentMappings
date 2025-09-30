@@ -13,18 +13,6 @@ CLASS net/minecraft/network/chat/Style
 		ARG 9 hoverEvent
 		ARG 10 insertion
 		ARG 11 font
-	METHOD <init> (Lnet/minecraft/network/chat/TextColor;Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Lnet/minecraft/network/chat/ClickEvent;Lnet/minecraft/network/chat/HoverEvent;Ljava/lang/String;Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 color
-		ARG 2 shadowColor
-		ARG 3 bold
-		ARG 4 italic
-		ARG 5 underlined
-		ARG 6 strikethrough
-		ARG 7 obfuscated
-		ARG 8 clickEvent
-		ARG 9 hoverEvent
-		ARG 10 insertion
-		ARG 11 font
 	METHOD applyFormat (Lnet/minecraft/ChatFormatting;)Lnet/minecraft/network/chat/Style;
 		ARG 1 formatting
 	METHOD applyFormats ([Lnet/minecraft/ChatFormatting;)Lnet/minecraft/network/chat/Style;
@@ -54,8 +42,6 @@ CLASS net/minecraft/network/chat/Style
 		ARG 1 other
 	METHOD getClickEvent ()Lnet/minecraft/network/chat/ClickEvent;
 		COMMENT The effective chat click event.
-	METHOD getFont ()Lnet/minecraft/resources/ResourceLocation;
-		COMMENT The font to use for this Style
 	METHOD getHoverEvent ()Lnet/minecraft/network/chat/HoverEvent;
 		COMMENT The effective chat hover event.
 	METHOD getInsertion ()Ljava/lang/String;
@@ -84,8 +70,6 @@ CLASS net/minecraft/network/chat/Style
 		ARG 1 color
 	METHOD withFont (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/network/chat/Style;
 		ARG 1 font
-	METHOD withFont (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/network/chat/Style;
-		ARG 1 fontId
 	METHOD withHoverEvent (Lnet/minecraft/network/chat/HoverEvent;)Lnet/minecraft/network/chat/Style;
 		ARG 1 hoverEvent
 	METHOD withInsertion (Ljava/lang/String;)Lnet/minecraft/network/chat/Style;

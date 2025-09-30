@@ -7,9 +7,6 @@ CLASS net/minecraft/world/entity/vehicle/MinecartTNT
 		ARG 4 receivingPower
 	METHOD damageSourceIgnitesTnt (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 0 source
-	METHOD explode (D)V
-		COMMENT Makes the minecart explode.
-		ARG 1 radiusModifier
 	METHOD explode (Lnet/minecraft/world/damagesource/DamageSource;D)V
 		ARG 1 damageSource
 		ARG 2 radiusModifier

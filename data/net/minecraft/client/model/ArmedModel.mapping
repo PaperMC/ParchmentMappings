@@ -3,6 +3,3 @@ CLASS net/minecraft/client/model/ArmedModel
 		ARG 1 renderState
 		ARG 2 arm
 		ARG 3 poseStack
-	METHOD translateToHand (Lnet/minecraft/world/entity/HumanoidArm;Lcom/mojang/blaze3d/vertex/PoseStack;)V
-		ARG 1 side
-		ARG 2 poseStack

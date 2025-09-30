@@ -3,13 +3,3 @@ CLASS net/minecraft/server/dedicated/DedicatedPlayerList
 		ARG 1 server
 		ARG 2 registries
 		ARG 3 playerIo
-	METHOD canBypassPlayerLimit (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
-	METHOD deop (Lcom/mojang/authlib/GameProfile;)V
-		ARG 1 profile
-	METHOD isWhiteListed (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
-	METHOD op (Lcom/mojang/authlib/GameProfile;)V
-		ARG 1 profile
-	METHOD setUsingWhiteList (Z)V
-		ARG 1 whitelistEnabled

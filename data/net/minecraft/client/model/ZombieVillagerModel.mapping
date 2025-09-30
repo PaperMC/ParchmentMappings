@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/model/ZombieVillagerModel
-	METHOD createArmorLayer (Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/model/geom/builders/LayerDefinition;
-		ARG 0 cubeDeformation
 	METHOD createArmorLayerSet (Lnet/minecraft/client/model/geom/builders/CubeDeformation;Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/renderer/entity/ArmorModelSet;
 		ARG 0 innerCubeDeformation
 		ARG 1 outerCubeDeformation

@@ -1,8 +1,4 @@
-CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
-	METHOD <init> (Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;Lcom/mojang/realmsclient/dto/RealmsServer$WorldType;)V
-		ARG 1 title
-		ARG 2 callback
-		ARG 3 worldType
+CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
 	METHOD <init> (Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;Lcom/mojang/realmsclient/dto/RealmsServer$WorldType;Lcom/mojang/realmsclient/dto/WorldTemplatePaginatedList;)V
 		ARG 1 title
 		ARG 2 callback
@@ -24,8 +20,6 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen com/mo
 		ARG 2 x
 		ARG 3 y
 		ARG 4 lines
-	METHOD setWarning ([Lnet/minecraft/network/chat/Component;)V
-		ARG 1 warning
 	CLASS Entry
 		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen;Lcom/mojang/realmsclient/dto/WorldTemplate;)V
 			ARG 2 template

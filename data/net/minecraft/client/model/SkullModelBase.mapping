@@ -1,7 +1,3 @@
 CLASS net/minecraft/client/model/SkullModelBase
 	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
 		ARG 1 root
-	METHOD setupAnim (FFF)V
-		ARG 1 mouthAnimation
-		ARG 2 yRot
-		ARG 3 xRot

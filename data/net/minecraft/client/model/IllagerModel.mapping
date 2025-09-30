@@ -3,6 +3,3 @@ CLASS net/minecraft/client/model/IllagerModel
 		ARG 1 root
 	METHOD getArm (Lnet/minecraft/world/entity/HumanoidArm;)Lnet/minecraft/client/model/geom/ModelPart;
 		ARG 1 arm
-	METHOD translateToHand (Lnet/minecraft/world/entity/HumanoidArm;Lcom/mojang/blaze3d/vertex/PoseStack;)V
-		ARG 1 side
-		ARG 2 poseStack

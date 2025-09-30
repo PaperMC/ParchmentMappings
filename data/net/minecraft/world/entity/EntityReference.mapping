@@ -9,10 +9,6 @@ CLASS net/minecraft/world/entity/EntityReference
 		ARG 0 reference
 		ARG 1 level
 		ARG 2 entityClass
-	METHOD get (Lnet/minecraft/world/entity/EntityReference;Lnet/minecraft/world/level/entity/UUIDLookup;Ljava/lang/Class;)Lnet/minecraft/world/level/entity/UniquelyIdentifyable;
-		ARG 0 reference
-		ARG 1 uuidLookup
-		ARG 2 entityClass
 	METHOD getEntity (Lnet/minecraft/world/entity/EntityReference;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
 		ARG 0 reference
 		ARG 1 level

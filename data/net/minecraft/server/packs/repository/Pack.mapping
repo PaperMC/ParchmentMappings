@@ -9,18 +9,11 @@ CLASS net/minecraft/server/packs/repository/Pack
 	METHOD getChatLink (Z)Lnet/minecraft/network/chat/Component;
 		ARG 1 green
 			COMMENT used to indicate either a successful operation or datapack enabled status
-	METHOD getDeclaredPackVersions (Ljava/lang/String;Lnet/minecraft/server/packs/metadata/pack/PackMetadataSection;)Lnet/minecraft/util/InclusiveRange;
-		ARG 0 id
-		ARG 1 metadata
 	METHOD readMetaAndCreate (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/repository/Pack$ResourcesSupplier;Lnet/minecraft/server/packs/PackType;Lnet/minecraft/server/packs/PackSelectionConfig;)Lnet/minecraft/server/packs/repository/Pack;
 		ARG 0 location
 		ARG 1 resources
 		ARG 2 packType
 		ARG 3 selectionConfig
-	METHOD readPackMetadata (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/repository/Pack$ResourcesSupplier;I)Lnet/minecraft/server/packs/repository/Pack$Metadata;
-		ARG 0 location
-		ARG 1 resources
-		ARG 2 version
 	METHOD readPackMetadata (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/repository/Pack$ResourcesSupplier;Lnet/minecraft/server/packs/metadata/pack/PackFormat;Lnet/minecraft/server/packs/PackType;)Lnet/minecraft/server/packs/repository/Pack$Metadata;
 		ARG 0 location
 		ARG 1 resources

@@ -1,17 +1,4 @@
 CLASS net/minecraft/client/renderer/entity/TntMinecartRenderer
-	METHOD renderWhiteSolidBlock (Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IZ)V
-		ARG 0 blockRenderDispatcher
-		ARG 1 state
-		ARG 2 poseStack
-		ARG 3 buffer
-		ARG 4 packedLight
-		ARG 5 whiteOverlay
-	METHOD submitWhiteSolidBlock (Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IZ)V
-		ARG 0 state
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 flash
 	METHOD submitWhiteSolidBlock (Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IZI)V
 		ARG 0 blockState
 		ARG 1 poseStack

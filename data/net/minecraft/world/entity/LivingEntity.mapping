@@ -243,8 +243,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 2 travelVector
 	METHOD getRiddenSpeed (Lnet/minecraft/world/entity/player/Player;)F
 		ARG 1 player
-	METHOD getSlotForHand (Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/entity/EquipmentSlot;
-		ARG 0 hand
 	METHOD getSoundVolume ()F
 		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getSpeed ()F
@@ -487,8 +485,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 rotation
 	METHOD shouldDropExperience ()Z
 		COMMENT Entity won't drop experience points if this returns false
-	METHOD shouldDropLoot ()Z
-		COMMENT Entity won't drop items if this returns false
 	METHOD shouldDropLoot (Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 1 level
 	METHOD spawnItemParticles (Lnet/minecraft/world/item/ItemStack;I)V

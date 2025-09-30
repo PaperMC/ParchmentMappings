@@ -21,8 +21,6 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 location
 		ARG 1 u
 		ARG 2 v
-	METHOD celestial (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
 	METHOD create (Ljava/lang/String;ILcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/client/renderer/RenderType$CompositeState;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
 		ARG 0 name
 		ARG 1 bufferSize
@@ -128,18 +126,10 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 id
 	METHOD lambda$static$24 (Ljava/lang/Double;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
 		ARG 0 width
-	METHOD lambda$static$25 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
 	METHOD lambda$static$26 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
-	METHOD lambda$static$28 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
-	METHOD lambda$static$29 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 texture
 	METHOD lambda$static$3 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
-	METHOD lambda$static$30 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
 	METHOD lambda$static$4 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$5 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
@@ -156,8 +146,6 @@ CLASS net/minecraft/client/renderer/RenderType
 	METHOD lambda$static$9 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 		ARG 1 affectsOutline
-	METHOD opaqueParticle (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
 	METHOD outline (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
 	METHOD text (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
@@ -172,8 +160,6 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 id
 	METHOD textSeeThrough (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
-	METHOD translucentParticle (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
 	METHOD weather (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 texture
 		ARG 1 depthWrite

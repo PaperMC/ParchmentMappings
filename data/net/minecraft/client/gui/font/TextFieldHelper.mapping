@@ -5,8 +5,6 @@ CLASS net/minecraft/client/gui/font/TextFieldHelper
 		ARG 3 getClipboard
 		ARG 4 setClipboard
 		ARG 5 stringValidator
-	METHOD charTyped (C)Z
-		ARG 1 character
 	METHOD charTyped (Lnet/minecraft/client/input/CharacterEvent;)Z
 		ARG 1 event
 	METHOD clampToMsgLength (I)I
@@ -26,8 +24,6 @@ CLASS net/minecraft/client/gui/font/TextFieldHelper
 	METHOD insertText (Ljava/lang/String;Ljava/lang/String;)V
 		ARG 1 text
 		ARG 2 clipboardText
-	METHOD keyPressed (I)Z
-		ARG 1 key
 	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
 		ARG 1 event
 	METHOD lambda$createClipboardSetter$1 (Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V

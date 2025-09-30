@@ -70,12 +70,6 @@ CLASS net/minecraft/client/sounds/SoundManager
 			COMMENT The active render info
 	METHOD updateSourceVolume (Lnet/minecraft/sounds/SoundSource;)V
 		ARG 1 source
-	METHOD updateSourceVolume (Lnet/minecraft/sounds/SoundSource;F)V
-		COMMENT Updates the volume of the specified sound source category.
-		ARG 1 category
-			COMMENT The sound source category
-		ARG 2 volume
-			COMMENT The new volume
 	METHOD validateSoundResource (Lnet/minecraft/client/resources/sounds/Sound;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/packs/resources/ResourceProvider;)Z
 		COMMENT Validates a sound resource
 		COMMENT <p>

@@ -38,26 +38,18 @@ CLASS net/minecraft/server/players/OldUsersConverter
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
-		METHOD onProfileLookupSucceeded (Lcom/mojang/authlib/GameProfile;)V
-			ARG 1 gameProfile
 	CLASS 2
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
-		METHOD onProfileLookupSucceeded (Lcom/mojang/authlib/GameProfile;)V
-			ARG 1 gameProfile
 	CLASS 3
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
-		METHOD onProfileLookupSucceeded (Lcom/mojang/authlib/GameProfile;)V
-			ARG 1 gameProfile
 	CLASS 4
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
-		METHOD onProfileLookupSucceeded (Lcom/mojang/authlib/GameProfile;)V
-			ARG 1 gameProfile
 	CLASS 5
 		METHOD getFileNameForProfile (Ljava/lang/String;)Ljava/lang/String;
 			ARG 1 profileName
@@ -68,8 +60,6 @@ CLASS net/minecraft/server/players/OldUsersConverter
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
-		METHOD onProfileLookupSucceeded (Lcom/mojang/authlib/GameProfile;)V
-			ARG 1 gameProfile
 	CLASS ConversionError
 		METHOD <init> (Ljava/lang/String;)V
 			ARG 1 message

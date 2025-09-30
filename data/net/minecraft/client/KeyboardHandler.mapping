@@ -1,10 +1,6 @@
 CLASS net/minecraft/client/KeyboardHandler
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 minecraft
-	METHOD charTyped (JII)V
-		ARG 1 windowPointer
-		ARG 3 codePoint
-		ARG 4 modifiers
 	METHOD charTyped (JLnet/minecraft/client/input/CharacterEvent;)V
 		ARG 1 window
 		ARG 3 event
@@ -31,20 +27,10 @@ CLASS net/minecraft/client/KeyboardHandler
 	METHOD decorateDebugComponent (Lnet/minecraft/ChatFormatting;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/Component;
 		ARG 0 formatting
 		ARG 1 component
-	METHOD handleChunkDebugKeys (I)Z
-		ARG 1 keyCode
 	METHOD handleChunkDebugKeys (Lnet/minecraft/client/input/KeyEvent;)Z
 		ARG 1 event
-	METHOD handleDebugKeys (I)Z
-		ARG 1 key
 	METHOD handleDebugKeys (Lnet/minecraft/client/input/KeyEvent;)Z
 		ARG 1 event
-	METHOD keyPress (JIIII)V
-		ARG 1 windowPointer
-		ARG 3 key
-		ARG 4 scanCode
-		ARG 5 action
-		ARG 6 modifiers
 	METHOD keyPress (JILnet/minecraft/client/input/KeyEvent;)V
 		ARG 1 window
 		ARG 3 action
@@ -65,8 +51,6 @@ CLASS net/minecraft/client/KeyboardHandler
 		ARG 6 modifiers
 	METHOD setClipboard (Ljava/lang/String;)V
 		ARG 1 string
-	METHOD setup (J)V
-		ARG 1 window
 	METHOD setup (Lcom/mojang/blaze3d/platform/Window;)V
 		ARG 1 window
 	METHOD showDebugChat (Lnet/minecraft/network/chat/Component;)V

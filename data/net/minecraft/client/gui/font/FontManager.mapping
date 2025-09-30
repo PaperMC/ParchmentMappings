@@ -1,9 +1,4 @@
 CLASS net/minecraft/client/gui/font/FontManager
-	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
-		ARG 1 textureManager
-	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/resources/model/AtlasManager;)V
-		ARG 1 textureManager
-		ARG 2 atlasManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/resources/model/AtlasManager;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
 		ARG 1 textureManager
 		ARG 2 atlasManager
@@ -20,14 +15,10 @@ CLASS net/minecraft/client/gui/font/FontManager
 		ARG 2 fallbackProvider
 	METHOD getFontOptions (Lnet/minecraft/client/Options;)Ljava/util/Set;
 		ARG 0 options
-	METHOD getFontSetCached (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
-		ARG 1 fontSet
 	METHOD getFontSetRaw (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
 		ARG 1 fontSet
 	METHOD getSpriteFont (Lnet/minecraft/network/chat/FontDescription$AtlasSprite;)Lnet/minecraft/client/gui/GlyphSource;
 		ARG 1 sprite
-	METHOD lambda$new$0 (Lnet/minecraft/client/gui/font/FontSet;)V
-		ARG 0 fontSet
 	METHOD loadResourceStack (Ljava/util/List;Lnet/minecraft/resources/ResourceLocation;)Ljava/util/List;
 		ARG 0 resources
 		ARG 1 fontId
@@ -51,8 +42,6 @@ CLASS net/minecraft/client/gui/font/FontManager
 	CLASS CachedFontProvider
 		METHOD <init> (Lnet/minecraft/client/gui/font/FontManager;Z)V
 			ARG 2 nonFishyOnly
-		METHOD fontSet (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
-			ARG 1 name
 		METHOD getGlyphSource (Lnet/minecraft/network/chat/FontDescription;)Lnet/minecraft/client/gui/GlyphSource;
 			ARG 1 fontDescription
 	CLASS FontDefinitionFile

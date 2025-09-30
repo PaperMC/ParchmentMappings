@@ -1,16 +1,4 @@
 CLASS net/minecraft/client/renderer/entity/ItemRenderer
-	METHOD <init> (Lnet/minecraft/client/renderer/item/ItemModelResolver;)V
-		ARG 1 resolver
-	METHOD getArmorFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;Z)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 0 bufferSource
-		ARG 1 renderType
-		ARG 2 hasFoil
-	METHOD getBoundingBox (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/ItemOwner;I)Lnet/minecraft/world/phys/AABB;
-		ARG 1 stack
-		ARG 2 displayContext
-		ARG 3 level
-		ARG 4 owner
-		ARG 5 seed
 	METHOD getFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 bufferSource
 		ARG 1 renderType
@@ -44,65 +32,5 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 3 tintLayers
 		ARG 4 packedLight
 		ARG 5 packedOverlay
-	METHOD renderStatic (Lnet/minecraft/world/entity/ItemOwner;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/Level;III)V
-		ARG 1 owner
-		ARG 2 stack
-		ARG 3 displayContext
-		ARG 4 poseStack
-		ARG 5 bufferSource
-		ARG 6 level
-		ARG 7 packedLight
-		ARG 8 packedOverlay
-		ARG 9 seed
-	METHOD renderStatic (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/Level;III)V
-		ARG 1 entity
-		ARG 2 stack
-		ARG 3 displayContext
-		ARG 4 poseStack
-		ARG 5 bufferSource
-		ARG 6 level
-		ARG 7 packedLight
-		ARG 8 packedOverlay
-		ARG 9 seed
-	METHOD renderStatic (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;IILcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/Level;I)V
-		ARG 1 stack
-		ARG 2 displayContext
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 poseStack
-		ARG 6 bufferSource
-		ARG 7 level
-		ARG 8 seed
-	METHOD renderStatic (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;IILcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/Direction;I)V
-		ARG 1 stack
-		ARG 2 displayContext
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 poseStack
-		ARG 6 bufferSource
-		ARG 7 level
-		ARG 8 pos
-		ARG 9 direction
-		ARG 10 seed
-	METHOD renderUpwardsFrom (Lnet/minecraft/world/entity/ItemOwner;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/Level;III)V
-		ARG 1 owner
-		ARG 2 stack
-		ARG 3 displayContext
-		ARG 4 poseStack
-		ARG 5 bufferSource
-		ARG 6 level
-		ARG 7 packedLight
-		ARG 8 packedOverlay
-		ARG 9 seed
-	METHOD renderUpwardsFrom (Lnet/minecraft/world/entity/ItemOwner;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/world/level/Level;III)V
-		ARG 1 owner
-		ARG 2 stack
-		ARG 3 displayContext
-		ARG 4 poseStack
-		ARG 5 nodeCollector
-		ARG 6 level
-		ARG 7 packedLight
-		ARG 8 packedOverlay
-		ARG 9 seed
 	METHOD useTransparentGlint (Lnet/minecraft/client/renderer/RenderType;)Z
 		ARG 0 renderType

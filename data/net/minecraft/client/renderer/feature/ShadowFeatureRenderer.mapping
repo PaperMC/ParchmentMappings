@@ -2,9 +2,6 @@ CLASS net/minecraft/client/renderer/feature/ShadowFeatureRenderer
 	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 nodeCollection
 		ARG 2 bufferSource
-	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeStorage;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
-		ARG 1 nodeStorage
-		ARG 2 bufferSource
 	METHOD shadowVertex (Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;IFFFFF)V
 		ARG 0 pose
 		ARG 1 consumer

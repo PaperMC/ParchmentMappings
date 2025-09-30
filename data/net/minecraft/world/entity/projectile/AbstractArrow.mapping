@@ -40,11 +40,6 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		COMMENT Whether the arrow can noClip
 	METHOD lambda$hitBlockEnchantmentEffects$0 (Lnet/minecraft/world/item/Item;)V
 		ARG 1 item
-	METHOD lerpMotion (DDD)V
-		COMMENT Updates the entity motion clientside, called by packets from the server
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 type
 		ARG 2 pos

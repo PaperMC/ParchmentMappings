@@ -40,9 +40,6 @@ CLASS net/minecraft/world/level/storage/DerivedLevelData
 	METHOD setRaining (Z)V
 		COMMENT Sets whether it is raining or not.
 		ARG 1 isRaining
-	METHOD setSpawn (Lnet/minecraft/core/BlockPos;F)V
-		ARG 1 spawnPoint
-		ARG 2 angle
 	METHOD setThunderTime (I)V
 		COMMENT Defines the number of ticks until next thunderbolt.
 		ARG 1 time
@@ -55,5 +52,3 @@ CLASS net/minecraft/world/level/storage/DerivedLevelData
 		ARG 1 chance
 	METHOD setWanderingTraderSpawnDelay (I)V
 		ARG 1 delay
-	METHOD setWorldBorder (Lnet/minecraft/world/level/border/WorldBorder$Settings;)V
-		ARG 1 serializer

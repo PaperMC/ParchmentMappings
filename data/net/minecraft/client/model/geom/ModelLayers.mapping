@@ -16,7 +16,3 @@ CLASS net/minecraft/client/model/geom/ModelLayers
 		ARG 1 model
 	METHOD registerArmorSet (Ljava/lang/String;)Lnet/minecraft/client/renderer/entity/ArmorModelSet;
 		ARG 0 path
-	METHOD registerInnerArmor (Ljava/lang/String;)Lnet/minecraft/client/model/geom/ModelLayerLocation;
-		ARG 0 path
-	METHOD registerOuterArmor (Ljava/lang/String;)Lnet/minecraft/client/model/geom/ModelLayerLocation;
-		ARG 0 path

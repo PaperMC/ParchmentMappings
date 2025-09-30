@@ -9,13 +9,6 @@ CLASS net/minecraft/client/renderer/entity/GuardianRenderer
 		ARG 1 livingEntity
 		ARG 2 yOffset
 		ARG 4 partialTick
-	METHOD renderBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/phys/Vec3;FFF)V
-		ARG 0 poseStack
-		ARG 1 buffer
-		ARG 2 beamVector
-		ARG 3 attackTime
-		ARG 4 scale
-		ARG 5 animationTime
 	METHOD renderBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/world/phys/Vec3;FFF)V
 		ARG 0 poseStack
 		ARG 1 nodeCollector

@@ -10,8 +10,6 @@ CLASS net/minecraft/world/entity/decoration/HangingEntity
 		ARG 1 itemFrame
 	METHOD getDirection ()Lnet/minecraft/core/Direction;
 		COMMENT Gets the horizontal facing direction of this Entity.
-	METHOD lambda$static$0 (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 0 entity
 	METHOD mirror (Lnet/minecraft/world/level/block/Mirror;)F
 		COMMENT Transforms the entity's current yaw with the given Mirror and returns it. This does not have a side-effect.
 		ARG 1 transformMirror

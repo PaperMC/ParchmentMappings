@@ -4,24 +4,20 @@ CLASS net/minecraft/client/resources/model/AtlasManager
 		ARG 2 maxMipmapLevels
 	METHOD forEach (Ljava/util/function/BiConsumer;)V
 		ARG 1 action
-	METHOD getAtlas (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/TextureAtlas;
-		ARG 1 name
-	METHOD getAtlasEntry (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/AtlasManager$AtlasEntry;
-		ARG 1 name
 	METHOD getAtlasOrThrow (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/TextureAtlas;
 		ARG 1 id
 	METHOD updateMaxMipLevel (I)V
 		ARG 1 maxMipLevel
-	CLASS AtlasConfig
-		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Z)V
-			ARG 1 textureId
-			ARG 2 definitionLocation
-			ARG 3 createMipmaps
 	CLASS AtlasEntry
 		METHOD scheduleLoad (Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;I)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 resourceManager
 			ARG 2 executor
 			ARG 3 mipLevel
+	CLASS AtlasConfig
+		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Z)V
+			ARG 1 textureId
+			ARG 2 definitionLocation
+			ARG 3 createMipmaps
 	CLASS PendingStitch
 		METHOD joinAndUpload (Ljava/util/Map;)V
 			ARG 1 output

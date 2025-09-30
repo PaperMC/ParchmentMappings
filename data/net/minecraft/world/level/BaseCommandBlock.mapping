@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/level/BaseCommandBlock
-	FIELD TIME_FORMAT Ljava/text/SimpleDateFormat;
-		COMMENT The formatting for the timestamp on commands run.
 	FIELD command Ljava/lang/String;
 		COMMENT The command stored in the command block.
 	FIELD lastOutput Lnet/minecraft/network/chat/Component;

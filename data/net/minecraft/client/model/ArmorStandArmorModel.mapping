@@ -4,5 +4,3 @@ CLASS net/minecraft/client/model/ArmorStandArmorModel
 		ARG 1 outerCubeDeformation
 	METHOD createBaseMesh (Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/model/geom/builders/MeshDefinition;
 		ARG 0 cubeDeformation
-	METHOD createBodyLayer (Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/model/geom/builders/LayerDefinition;
-		ARG 0 cubeDeformation

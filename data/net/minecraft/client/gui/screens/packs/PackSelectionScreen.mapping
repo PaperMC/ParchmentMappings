@@ -29,11 +29,6 @@ CLASS net/minecraft/client/gui/screens/packs/PackSelectionScreen
 		ARG 1 entry
 	METHOD updateFilteredEntries (Ljava/lang/String;)V
 		ARG 1 query
-	METHOD updateFocus (Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;)V
-		ARG 1 selection
-	METHOD updateList (Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;Ljava/util/stream/Stream;)V
-		ARG 1 selection
-		ARG 2 models
 	CLASS Watcher
 		METHOD <init> (Ljava/nio/file/Path;)V
 			ARG 1 packPath

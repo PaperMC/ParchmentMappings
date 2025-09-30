@@ -4,8 +4,6 @@ CLASS net/minecraft/world/level/block/CopperChestBlock
 		ARG 2 openSound
 		ARG 3 closeSound
 		ARG 4 properties
-	METHOD getFromCopperBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
-		ARG 0 block
 	METHOD getFromCopperBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 0 block
 		ARG 1 direction
@@ -20,4 +18,3 @@ CLASS net/minecraft/world/level/block/CopperChestBlock
 	METHOD unwaxBlock (Lnet/minecraft/world/level/block/CopperChestBlock;Lnet/minecraft/world/level/block/state/BlockState;)Ljava/util/Optional;
 		ARG 0 block
 		ARG 1 state
-		ARG 2 state

@@ -4,22 +4,7 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsSelectFileToUploadScreen
 		ARG 2 realmId
 		ARG 4 slotId
 		ARG 5 lastScreen
-	METHOD formatLastPlayed (Lnet/minecraft/world/level/storage/LevelSummary;)Ljava/lang/String;
-		ARG 0 levelSummary
-	METHOD gameModeName (Lnet/minecraft/world/level/storage/LevelSummary;)Lnet/minecraft/network/chat/Component;
-		ARG 0 levelSummary
 	METHOD updateButtonState (Lnet/minecraft/world/level/storage/LevelSummary;)V
 		ARG 1 summary
 	METHOD upload (Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList$WorldListEntry;)V
 		ARG 1 entry
-	CLASS Entry
-		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsSelectFileToUploadScreen;Lnet/minecraft/world/level/storage/LevelSummary;)V
-			ARG 2 levelSummary
-		METHOD renderItem (Lnet/minecraft/client/gui/GuiGraphics;III)V
-			ARG 1 guiGraphics
-			ARG 2 index
-			ARG 3 x
-			ARG 4 y
-	CLASS WorldSelectionList
-		METHOD addEntry (Lnet/minecraft/world/level/storage/LevelSummary;)V
-			ARG 1 levelSummary

@@ -1,5 +1,0 @@
-CLASS net/minecraft/client/resources/PaintingTextureManager
-	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
-		ARG 1 textureManager
-	METHOD get (Lnet/minecraft/world/entity/decoration/PaintingVariant;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
-		ARG 1 paintingVariant

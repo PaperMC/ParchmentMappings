@@ -3,13 +3,6 @@ CLASS net/minecraft/client/renderer/entity/layers/LlamaDecorLayer
 		ARG 1 renderer
 		ARG 2 models
 		ARG 3 equipmentRenderer
-	METHOD renderEquipment (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/entity/state/LlamaRenderState;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceKey;I)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 renderState
-		ARG 4 stack
-		ARG 5 equipmentAsset
-		ARG 6 packedLight
 	METHOD renderEquipment (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/entity/state/LlamaRenderState;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceKey;I)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector

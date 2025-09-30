@@ -3,9 +3,6 @@ CLASS net/minecraft/client/renderer/feature/ParticleFeatureRenderer
 		ARG 1 renderPass
 	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;)V
 		ARG 1 collection
-	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
-		ARG 1 nodeCollection
-		ARG 2 bufferSource
 	CLASS ParticleBufferCache
 		METHOD write (Ljava/nio/ByteBuffer;)V
 			ARG 1 buffer

@@ -14,21 +14,10 @@ CLASS net/minecraft/client/renderer/SkyRenderer
 		ARG 2 intensity
 		ARG 3 xAngle
 		ARG 4 yAngle
-	METHOD renderEndFlash (Lnet/minecraft/client/renderer/MultiBufferSource;Lcom/mojang/blaze3d/vertex/PoseStack;FFF)V
-		ARG 1 bufferSource
-		ARG 2 poseStack
-		ARG 3 intensity
-		ARG 4 xAngle
-		ARG 5 yAngle
 	METHOD renderMoon (IFLcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 moonPhase
 		ARG 2 rainLevel
 		ARG 3 poseStack
-	METHOD renderMoon (IFLnet/minecraft/client/renderer/MultiBufferSource;Lcom/mojang/blaze3d/vertex/PoseStack;)V
-		ARG 1 phase
-		ARG 2 alpha
-		ARG 3 bufferSource
-		ARG 4 poseStack
 	METHOD renderSkyDisc (FFF)V
 		ARG 1 red
 		ARG 2 green
@@ -39,32 +28,16 @@ CLASS net/minecraft/client/renderer/SkyRenderer
 	METHOD renderSun (FLcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 alpha
 		ARG 2 poseStack
-	METHOD renderSun (FLnet/minecraft/client/renderer/MultiBufferSource;Lcom/mojang/blaze3d/vertex/PoseStack;)V
-		ARG 1 alpha
-		ARG 2 bufferSource
-		ARG 3 poseStack
 	METHOD renderSunMoonAndStars (Lcom/mojang/blaze3d/vertex/PoseStack;FIFF)V
 		ARG 1 poseStack
 		ARG 2 timeOfDay
 		ARG 3 moonPhase
 		ARG 4 rainLevel
 		ARG 5 starBrightness
-	METHOD renderSunMoonAndStars (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;FIFF)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 timeOfDay
-		ARG 4 moonPhase
-		ARG 5 rainLevel
-		ARG 6 starBrightness
 	METHOD renderSunriseAndSunset (Lcom/mojang/blaze3d/vertex/PoseStack;FI)V
 		ARG 1 poseStack
 		ARG 2 sunAngle
 		ARG 3 color
-	METHOD renderSunriseAndSunset (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;FI)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 sunAngle
-		ARG 4 color
 	METHOD shouldRenderDarkDisc (FLnet/minecraft/client/multiplayer/ClientLevel;)Z
 		ARG 1 partialTick
 		ARG 2 level

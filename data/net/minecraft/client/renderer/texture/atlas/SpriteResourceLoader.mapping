@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/renderer/texture/atlas/SpriteResourceLoader
-	METHOD create (Ljava/util/Collection;)Lnet/minecraft/client/renderer/texture/atlas/SpriteResourceLoader;
-		ARG 0 sectionSerializers
 	METHOD create (Ljava/util/Set;)Lnet/minecraft/client/renderer/texture/atlas/SpriteResourceLoader;
 		ARG 0 sectionTypes
 	METHOD loadSprite (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/packs/resources/Resource;)Lnet/minecraft/client/renderer/texture/SpriteContents;

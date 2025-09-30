@@ -1,13 +1,4 @@
 CLASS net/minecraft/client/particle/CampfireSmokeParticle
-	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDZ)V
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-		ARG 14 signal
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDZLnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 		ARG 1 level
 		ARG 2 x
@@ -21,24 +12,6 @@ CLASS net/minecraft/client/particle/CampfireSmokeParticle
 	CLASS CosyProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
-		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;
-			ARG 1 type
-			ARG 2 level
-			ARG 3 x
-			ARG 5 y
-			ARG 7 z
-			ARG 9 xSpeed
-			ARG 11 ySpeed
-			ARG 13 zSpeed
 	CLASS SignalProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
-		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;
-			ARG 1 type
-			ARG 2 level
-			ARG 3 x
-			ARG 5 y
-			ARG 7 z
-			ARG 9 xSpeed
-			ARG 11 ySpeed
-			ARG 13 zSpeed

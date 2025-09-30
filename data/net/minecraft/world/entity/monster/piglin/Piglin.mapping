@@ -51,6 +51,3 @@ CLASS net/minecraft/world/entity/monster/piglin/Piglin
 		ARG 1 isCharging
 	METHOD setDancing (Z)V
 		ARG 1 dancing
-	METHOD startRiding (Lnet/minecraft/world/entity/Entity;Z)Z
-		ARG 1 entity
-		ARG 2 force

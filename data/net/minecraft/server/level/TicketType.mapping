@@ -3,8 +3,3 @@ CLASS net/minecraft/server/level/TicketType
 		ARG 0 name
 		ARG 1 timeout
 		ARG 3 flags
-	METHOD register (Ljava/lang/String;JZLnet/minecraft/server/level/TicketType$TicketUse;)Lnet/minecraft/server/level/TicketType;
-		ARG 0 name
-		ARG 1 timeout
-		ARG 3 persist
-		ARG 4 use

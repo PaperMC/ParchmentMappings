@@ -25,10 +25,6 @@ CLASS net/minecraft/gametest/framework/ReportGameListener
 		ARG 0 serverLevel
 		ARG 1 formatting
 		ARG 2 message
-	METHOD showRedBox (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Ljava/lang/String;)V
-		ARG 0 serverLevel
-		ARG 1 pos
-		ARG 2 displayMessage
 	METHOD visualizeFailedTest (Lnet/minecraft/gametest/framework/GameTestInfo;Ljava/lang/Throwable;)V
 		ARG 0 testInfo
 		ARG 1 error

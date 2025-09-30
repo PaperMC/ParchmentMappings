@@ -23,10 +23,6 @@ CLASS net/minecraft/world/level/pathfinder/PathFinder
 	METHOD getBestH (Lnet/minecraft/world/level/pathfinder/Node;Ljava/util/Set;)F
 		ARG 1 node
 		ARG 2 targets
-	METHOD lambda$findPath$0 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/Target;
-		ARG 1 pos
-	METHOD lambda$findPath$1 (Ljava/util/Map;Lnet/minecraft/world/level/pathfinder/Target;)Lnet/minecraft/world/level/pathfinder/Path;
-		ARG 2 pathfinder
 	METHOD lambda$findPath$2 (Ljava/util/Map;Lnet/minecraft/world/level/pathfinder/Target;)Lnet/minecraft/world/level/pathfinder/Path;
 		ARG 2 pathfinder
 	METHOD reconstructPath (Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/level/pathfinder/Path;

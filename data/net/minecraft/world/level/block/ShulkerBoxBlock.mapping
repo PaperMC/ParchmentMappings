@@ -9,10 +9,6 @@ CLASS net/minecraft/world/level/block/ShulkerBoxBlock
 		ARG 3 blockEntity
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
-	METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
-		ARG 1 blockState
-		ARG 2 level
-		ARG 3 pos
 	METHOD getBlockByColor (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 color
 	METHOD getColoredItemStack (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/ItemStack;

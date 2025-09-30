@@ -1,9 +1,0 @@
-CLASS net/minecraft/server/level/progress/LoggerChunkProgressListener
-	METHOD <init> (I)V
-		ARG 1 maxCount
-	METHOD create (I)Lnet/minecraft/server/level/progress/LoggerChunkProgressListener;
-		ARG 0 radius
-	METHOD createFromGameruleRadius (I)Lnet/minecraft/server/level/progress/LoggerChunkProgressListener;
-		ARG 0 radius
-	METHOD updateSpawnPos (Lnet/minecraft/world/level/ChunkPos;)V
-		ARG 1 center

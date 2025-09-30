@@ -11,10 +11,6 @@ CLASS net/minecraft/client/renderer/feature/FlameFeatureRenderer
 		ARG 1 nodeCollection
 		ARG 2 bufferSource
 		ARG 3 atlasManager
-	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeStorage;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/resources/model/AtlasManager;)V
-		ARG 1 nodeStorage
-		ARG 2 bufferSource
-		ARG 3 atlasManager
 	METHOD renderFlame (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lorg/joml/Quaternionf;Lnet/minecraft/client/resources/model/AtlasManager;)V
 		ARG 1 pose
 		ARG 2 bufferSource

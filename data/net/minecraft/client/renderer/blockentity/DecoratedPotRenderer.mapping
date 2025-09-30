@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/renderer/blockentity/DecoratedPotRenderer
-	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;)V
-		ARG 1 modelSet
 	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/MaterialSet;)V
 		ARG 1 modelSet
 		ARG 2 materials
@@ -12,39 +10,6 @@ CLASS net/minecraft/client/renderer/blockentity/DecoratedPotRenderer
 		ARG 1 output
 	METHOD getSideMaterial (Ljava/util/Optional;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 item
-	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/entity/PotDecorations;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 decorations
-	METHOD renderInHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/entity/PotDecorations;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 decorations
-	METHOD renderSide (Lnet/minecraft/client/model/geom/ModelPart;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/resources/model/Material;)V
-		ARG 1 modelPart
-		ARG 2 poseStack
-		ARG 3 buffer
-		ARG 4 packedLight
-		ARG 5 packedOverlay
-		ARG 6 material
-	METHOD renderSide (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/resources/model/Material;)V
-		ARG 1 modelPart
-		ARG 2 materials
-		ARG 3 poseStack
-		ARG 4 bufferSource
-		ARG 5 packedLight
-		ARG 6 packedOverlay
-		ARG 7 material
-	METHOD submit (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/level/block/entity/PotDecorations;)V
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 potDecorations
 	METHOD submit (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/level/block/entity/PotDecorations;I)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector

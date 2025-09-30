@@ -1,7 +1,4 @@
 CLASS net/minecraft/client/renderer/entity/layers/BreezeWindLayer
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/renderer/entity/RenderLayerParent;)V
-		ARG 1 context
-		ARG 2 renderer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/geom/EntityModelSet;)V
 		ARG 1 renderer
 		ARG 2 modelSet

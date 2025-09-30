@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
-	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;)V
-		ARG 1 modelSet
 	METHOD <init> (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/resources/model/MaterialSet;)V
 		ARG 1 modelSet
 		ARG 2 materials
@@ -10,113 +8,6 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 1 context
 	METHOD getExtents (Ljava/util/Set;)V
 		ARG 1 output
-	METHOD renderBanner (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IIFLnet/minecraft/client/model/BannerModel;Lnet/minecraft/client/model/BannerFlagModel;FLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 0 poseStack
-		ARG 1 bufferSource
-		ARG 2 packedLight
-		ARG 3 packedOverlay
-		ARG 4 rotation
-		ARG 5 standingModel
-		ARG 6 standingFlagModel
-		ARG 7 angle
-		ARG 8 baseColor
-		ARG 9 patterns
-	METHOD renderBanner (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IIFLnet/minecraft/client/model/BannerModel;Lnet/minecraft/client/model/BannerFlagModel;FLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 rotation
-		ARG 6 standingModel
-		ARG 7 standingFlagModel
-		ARG 8 sway
-		ARG 9 baseColor
-		ARG 10 patterns
-	METHOD renderInHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 baseColor
-		ARG 6 patterns
-	METHOD renderPatternLayer (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;)V
-		ARG 0 poseStack
-		ARG 1 buffer
-		ARG 2 packedLight
-		ARG 3 packedOverlay
-		ARG 4 flagPart
-		ARG 5 material
-		ARG 6 color
-	METHOD renderPatternLayer (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flagPart
-		ARG 6 material
-		ARG 7 color
-	METHOD renderPatterns (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 0 poseStack
-		ARG 1 bufferSource
-		ARG 2 packedLight
-		ARG 3 packedOverlay
-		ARG 4 flagPart
-		ARG 5 flagMaterial
-		ARG 6 banner
-			COMMENT if {@code true}, uses banner material; otherwise if {@code false} uses shield material
-		ARG 7 baseColor
-		ARG 8 patterns
-	METHOD renderPatterns (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;ZZ)V
-		ARG 0 poseStack
-		ARG 1 bufferSource
-		ARG 2 packedLight
-		ARG 3 packedOverlay
-		ARG 4 flagPart
-		ARG 5 flagMaterial
-		ARG 6 banner
-		ARG 7 baseColor
-		ARG 8 patterns
-		ARG 9 withGlint
-		ARG 10 noEntity
-	METHOD renderPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flagPart
-		ARG 6 material
-		ARG 7 banner
-		ARG 8 baseColor
-		ARG 9 patterns
-	METHOD renderPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;ZZ)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flagPart
-		ARG 6 material
-		ARG 7 banner
-		ARG 8 baseColor
-		ARG 9 patterns
-		ARG 10 withGlint
-		ARG 11 noEntity
-	METHOD submitBanner (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IIFLnet/minecraft/client/model/BannerModel;Lnet/minecraft/client/model/BannerFlagModel;FLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 rotation
-		ARG 6 model
-		ARG 7 flagModel
-		ARG 8 sway
-		ARG 9 baseColor
-		ARG 10 patterns
-		ARG 11 crumblingOverlay
 	METHOD submitBanner (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IIFLnet/minecraft/client/model/BannerModel;Lnet/minecraft/client/model/BannerFlagModel;FLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;I)V
 		ARG 0 materials
 		ARG 1 poseStack
@@ -142,38 +33,6 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 7 material
 		ARG 8 color
 		ARG 9 crumblingOverlay
-	METHOD submitPatternLayer (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 submitNodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 modelPart
-		ARG 6 material
-		ARG 7 color
-	METHOD submitPatternLayer (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flag
-		ARG 6 material
-		ARG 7 color
-		ARG 8 crumblingOverlay
-	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flagModel
-		ARG 6 sway
-		ARG 7 material
-		ARG 8 banner
-		ARG 9 baseColor
-		ARG 10 patterns
-		ARG 11 crumblingOverlay
 	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/Model;Ljava/lang/Object;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;ZLnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;I)V
 		ARG 0 materials
 		ARG 1 poseStack
@@ -189,63 +48,6 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 11 withGlint
 		ARG 12 crumblingOverlay
 		ARG 13 outlineColor
-	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 submitNodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flagPart
-		ARG 6 material
-		ARG 7 banner
-		ARG 8 baseColor
-		ARG 9 patterns
-	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flag
-		ARG 6 material
-		ARG 7 banner
-		ARG 8 baseColor
-		ARG 9 patterns
-		ARG 10 crumblingOverlay
-	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;ZZ)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 submitNodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flagPart
-		ARG 6 material
-		ARG 7 banner
-		ARG 8 baseColor
-		ARG 9 patterns
-		ARG 10 withGlint
-		ARG 11 noEntity
-	METHOD submitPatterns (Lnet/minecraft/client/resources/model/MaterialSet;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;ZZLnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
-		ARG 0 materials
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 flag
-		ARG 6 material
-		ARG 7 banner
-		ARG 8 baseColor
-		ARG 9 patterns
-		ARG 10 withGlint
-		ARG 11 noEntity
-		ARG 12 crumblingOverlay
-	METHOD submitSpecial (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 baseColor
-		ARG 6 patterns
 	METHOD submitSpecial (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;I)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector

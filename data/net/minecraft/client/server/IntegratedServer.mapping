@@ -1,12 +1,4 @@
 CLASS net/minecraft/client/server/IntegratedServer
-	METHOD <init> (Ljava/lang/Thread;Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/ChunkProgressListenerFactory;)V
-		ARG 1 serverThread
-		ARG 2 minecraft
-		ARG 3 storageSource
-		ARG 4 packRepository
-		ARG 5 worldStem
-		ARG 6 services
-		ARG 7 progressListenerFactory
 	METHOD <init> (Ljava/lang/Thread;Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/LevelLoadListener;)V
 		ARG 1 serverThread
 		ARG 2 minecraft
@@ -22,14 +14,10 @@ CLASS net/minecraft/client/server/IntegratedServer
 		ARG 1 waitForServer
 	METHOD initServer ()Z
 		COMMENT Initialises the server and starts it.
-	METHOD isCommandBlockEnabled ()Z
-		COMMENT Return whether command blocks are enabled.
 	METHOD isEpollEnabled ()Z
 		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD isPublished ()Z
 		COMMENT Returns {@code true} if this integrated server is open to LAN
-	METHOD isSingleplayerOwner (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
 	METHOD onServerCrash (Lnet/minecraft/CrashReport;)V
 		COMMENT Called on exit from the main run() loop.
 		ARG 1 report

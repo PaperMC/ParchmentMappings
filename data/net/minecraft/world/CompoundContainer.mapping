@@ -29,10 +29,6 @@ CLASS net/minecraft/world/CompoundContainer
 		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 		ARG 1 index
 		ARG 2 stack
-	METHOD startOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
 		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
-		ARG 1 player
-	METHOD stopOpen (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player

@@ -1,8 +1,6 @@
 CLASS net/minecraft/client/renderer/debug/BreezeDebugRenderer
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 minecraft
-	METHOD add (Lnet/minecraft/network/protocol/common/custom/BreezeDebugPayload$BreezeInfo;)V
-		ARG 1 breeze
 	METHOD drawCircle (Lorg/joml/Matrix4f;DDDLcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/phys/Vec3;FI)V
 		ARG 0 pose
 		ARG 1 xOffset
@@ -31,26 +29,3 @@ CLASS net/minecraft/client/renderer/debug/BreezeDebugRenderer
 		ARG 8 fromPos
 		ARG 9 toPos
 		ARG 10 color
-	METHOD lambda$render$0 (Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z
-		ARG 0 breeze
-	METHOD lambda$render$1 (Lnet/minecraft/client/player/LocalPlayer;Ljava/lang/Integer;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 attackTarget
-	METHOD lambda$render$3 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/monster/breeze/Breeze;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 9 vector
-	METHOD lambda$render$4 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/monster/breeze/Breeze;Lnet/minecraft/core/BlockPos;)V
-		ARG 9 blockPos
-	METHOD lambda$render$5 (Lnet/minecraft/client/player/LocalPlayer;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/monster/breeze/Breeze;)V
-		ARG 10 breeze
-	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDD)V
-		ARG 1 poseStack
-		ARG 2 buffer
-		ARG 3 xOffset
-		ARG 5 yOffset
-		ARG 7 zOffset
-	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 camX
-		ARG 5 camY
-		ARG 7 camZ
-		ARG 9 debugValueAccess

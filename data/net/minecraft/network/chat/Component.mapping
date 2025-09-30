@@ -16,11 +16,6 @@ CLASS net/minecraft/network/chat/Component
 		ARG 2 content
 	METHOD literal (Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 text
-	METHOD nbt (Ljava/lang/String;ZLjava/util/Optional;Lnet/minecraft/network/chat/contents/DataSource;)Lnet/minecraft/network/chat/MutableComponent;
-		ARG 0 nbtPathPattern
-		ARG 1 interpreting
-		ARG 2 separator
-		ARG 3 dataSource
 	METHOD nbt (Ljava/lang/String;ZLjava/util/Optional;Lnet/minecraft/network/chat/contents/data/DataSource;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 nbtPathPattern
 		ARG 1 interpreting

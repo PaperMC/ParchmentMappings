@@ -1,12 +1,4 @@
 CLASS net/minecraft/client/renderer/entity/AbstractZombieRenderer
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/model/ZombieModel;)V
-		ARG 1 context
-		ARG 2 adultModel
-		ARG 3 babyModel
-		ARG 4 innerModel
-		ARG 5 outerModel
-		ARG 6 innerModelBaby
-		ARG 7 outerModelBaby
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/model/ZombieModel;Lnet/minecraft/client/renderer/entity/ArmorModelSet;Lnet/minecraft/client/renderer/entity/ArmorModelSet;)V
 		ARG 1 context
 		ARG 2 adultModel

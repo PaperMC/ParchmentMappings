@@ -181,9 +181,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 	METHOD teleport (Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)V
 		ARG 1 posMoveRotation
 		ARG 2 relatives
-	METHOD tryHandleChat (Ljava/lang/String;Ljava/lang/Runnable;)V
-		ARG 1 message
-		ARG 2 handler
 	METHOD tryHandleChat (Ljava/lang/String;ZLjava/lang/Runnable;)V
 		ARG 1 message
 		ARG 2 bypassHiddenChat

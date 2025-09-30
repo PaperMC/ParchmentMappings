@@ -5,32 +5,11 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityRenderer
 		ARG 3 partialTick
 		ARG 4 cameraPosition
 		ARG 5 breakProgress
-	METHOD render (Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/phys/Vec3;)V
-		ARG 1 blockEntity
-		ARG 2 partialTick
-		ARG 3 poseStack
-		ARG 4 bufferSource
-		ARG 5 packedLight
-		ARG 6 packedOverlay
-		ARG 7 cameraPos
 	METHOD shouldRender (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/phys/Vec3;)Z
 		ARG 1 blockEntity
 		ARG 2 cameraPos
-	METHOD submit (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
-		ARG 1 renderState
-		ARG 2 poseStack
-		ARG 3 nodeCollector
 	METHOD submit (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/state/CameraRenderState;)V
 		ARG 1 renderState
 		ARG 2 poseStack
 		ARG 3 nodeCollector
 		ARG 4 cameraRenderState
-	METHOD submit (Lnet/minecraft/world/level/block/entity/BlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;IILnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
-		ARG 1 blockEntity
-		ARG 2 partialTick
-		ARG 3 poseStack
-		ARG 4 packedLight
-		ARG 5 packedOverlay
-		ARG 6 cameraPosition
-		ARG 7 crumblingOverlay
-		ARG 8 nodeCollector

@@ -101,9 +101,6 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 1 permissionLevel
 	METHOD setShowDeathScreen (Z)V
 		ARG 1 show
-	METHOD startRiding (Lnet/minecraft/world/entity/Entity;Z)Z
-		ARG 1 entity
-		ARG 2 force
 	METHOD startUsingItem (Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 hand
 	METHOD suffocatesAt (Lnet/minecraft/core/BlockPos;)Z

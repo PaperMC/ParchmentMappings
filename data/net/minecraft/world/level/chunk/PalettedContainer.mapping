@@ -2,20 +2,6 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 	METHOD <init> (Ljava/lang/Object;Lnet/minecraft/world/level/chunk/Strategy;)V
 		ARG 1 defaultValue
 		ARG 2 strategy
-	METHOD <init> (Lnet/minecraft/core/IdMap;Ljava/lang/Object;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;)V
-		ARG 1 registry
-		ARG 2 palette
-		ARG 3 strategy
-	METHOD <init> (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainer$Configuration;Lnet/minecraft/util/BitStorage;Ljava/util/List;)V
-		ARG 1 registry
-		ARG 2 strategy
-		ARG 3 configuration
-		ARG 4 storage
-		ARG 5 values
-	METHOD <init> (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainer$Data;)V
-		ARG 1 registry
-		ARG 2 strategy
-		ARG 3 data
 	METHOD <init> (Lnet/minecraft/world/level/chunk/PalettedContainer;)V
 		ARG 1 other
 	METHOD <init> (Lnet/minecraft/world/level/chunk/Strategy;Lnet/minecraft/world/level/chunk/Configuration;Lnet/minecraft/util/BitStorage;Lnet/minecraft/world/level/chunk/Palette;)V
@@ -28,21 +14,10 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 		ARG 1 strategy
 		ARG 2 defaultValue
 		ARG 3 unpacker
-	METHOD codec (Lnet/minecraft/core/IdMap;Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Ljava/lang/Object;Lnet/minecraft/world/level/chunk/PalettedContainerRO$Unpacker;)Lcom/mojang/serialization/Codec;
-		ARG 0 registry
-		ARG 1 codec
-		ARG 2 strategy
-		ARG 3 value
-		ARG 4 unpacker
 	METHOD codecRO (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/chunk/Strategy;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
 		ARG 0 valueCodec
 		ARG 1 strategy
 		ARG 2 defaultValue
-	METHOD codecRO (Lnet/minecraft/core/IdMap;Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
-		ARG 0 registry
-		ARG 1 codec
-		ARG 2 strategy
-		ARG 3 value
 	METHOD codecRW (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/chunk/Strategy;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
 		ARG 0 valueCodec
 		ARG 1 strategy
@@ -77,26 +52,8 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 		ARG 4 state
 	METHOD lambda$codec$2 (Lcom/mojang/serialization/Codec;Ljava/lang/Object;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 instance
-	METHOD lambda$codec$3 (Lcom/mojang/serialization/Codec;Ljava/lang/Object;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 2 instance
 	METHOD lambda$codec$3 (Lnet/minecraft/world/level/chunk/PalettedContainerRO$Unpacker;Lnet/minecraft/world/level/chunk/Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
 		ARG 2 packedData
-	METHOD lambda$codec$4 (Lnet/minecraft/world/level/chunk/PalettedContainerRO$Unpacker;Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
-		ARG 3 packedData
-	METHOD lambda$codec$5 (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO;)Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;
-		ARG 2 container
-	METHOD lambda$codecRO$1 (Lnet/minecraft/world/level/chunk/PalettedContainer;)Lnet/minecraft/world/level/chunk/PalettedContainerRO;
-		ARG 0 container
-	METHOD lambda$count$12 (Lit/unimi/dsi/fastutil/ints/Int2IntOpenHashMap;I)V
-		ARG 1 id
-	METHOD lambda$count$13 (Lnet/minecraft/world/level/chunk/PalettedContainer$CountConsumer;Lit/unimi/dsi/fastutil/ints/Int2IntMap$Entry;)V
-		ARG 2 idEntry
-	METHOD lambda$getAll$6 (Ljava/util/function/Consumer;Lnet/minecraft/world/level/chunk/Palette;I)V
-		ARG 2 id
-	METHOD lambda$pack$11 (Lnet/minecraft/world/level/chunk/HashMapPalette;I)I
-		ARG 2 id
-	METHOD lambda$unpack$9 (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/Palette;I)I
-		ARG 2 id
 	METHOD maybeHas (Ljava/util/function/Predicate;)Z
 		ARG 1 predicate
 	METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)V
@@ -113,56 +70,21 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 	METHOD set (ILjava/lang/Object;)V
 		ARG 1 index
 		ARG 2 state
-	METHOD swapPalette ([ILjava/util/function/IntUnaryOperator;)V
-		ARG 0 bits
-		ARG 1 operator
-	METHOD unpack (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
-		ARG 0 registry
-		ARG 1 strategy
-		ARG 2 packedData
 	METHOD unpack (Lnet/minecraft/world/level/chunk/Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
 		ARG 0 strategy
 		ARG 1 packedData
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
-	CLASS Configuration
-		METHOD createData (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PaletteResize;I)Lnet/minecraft/world/level/chunk/PalettedContainer$Data;
-			ARG 1 registry
-			ARG 2 paletteResize
-			ARG 3 size
-	CLASS CountConsumer
-		METHOD accept (Ljava/lang/Object;I)V
-			ARG 1 state
-			ARG 2 count
 	CLASS Data
-		METHOD copy (Lnet/minecraft/world/level/chunk/PaletteResize;)Lnet/minecraft/world/level/chunk/PalettedContainer$Data;
-			ARG 1 resizeHandler
 		METHOD copyFrom (Lnet/minecraft/world/level/chunk/Palette;Lnet/minecraft/util/BitStorage;)V
 			ARG 1 palette
 			ARG 2 bitStorage
 		METHOD getSerializedSize (Lnet/minecraft/core/IdMap;)I
 			ARG 1 idMap
-		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-			ARG 1 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/core/IdMap;)V
 			ARG 1 buffer
 			ARG 2 idMap
-	CLASS Strategy
-		METHOD <init> (I)V
-			ARG 1 sizeBits
-		METHOD calculateBitsForSerialization (II)I
-			ARG 1 registrySize
-			ARG 2 paletteSize
-		METHOD calculateBitsForSerialization (Lnet/minecraft/core/IdMap;I)I
-			ARG 1 registry
-			ARG 2 size
-		METHOD getConfiguration (II)Lnet/minecraft/world/level/chunk/PalettedContainer$Configuration;
-			ARG 1 registrySize
-			ARG 2 bitsForSerialization
-		METHOD getConfiguration (Lnet/minecraft/core/IdMap;I)Lnet/minecraft/world/level/chunk/PalettedContainer$Configuration;
-			ARG 1 registry
-			ARG 2 size
-		METHOD getIndex (III)I
-			ARG 1 x
-			ARG 2 y
-			ARG 3 z
+	CLASS CountConsumer
+		METHOD accept (Ljava/lang/Object;I)V
+			ARG 1 state
+			ARG 2 count

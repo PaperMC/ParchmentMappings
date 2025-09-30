@@ -6,9 +6,6 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 1 y
 		ARG 2 width
 		ARG 3 height
-	METHOD flipFrame (JLcom/mojang/blaze3d/TracyFrameCapture;)V
-		ARG 0 window
-		ARG 2 tracyFrameCapture
 	METHOD flipFrame (Lcom/mojang/blaze3d/platform/Window;Lcom/mojang/blaze3d/TracyFrameCapture;)V
 		ARG 0 window
 		ARG 1 frameCapture
@@ -38,10 +35,6 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 0 callback
 	METHOD setGlobalSettingsUniform (Lcom/mojang/blaze3d/buffers/GpuBuffer;)V
 		ARG 0 globalSettingsUniform
-	METHOD setModelOffset (FFF)V
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
 	METHOD setProjectionMatrix (Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lcom/mojang/blaze3d/ProjectionType;)V
 		ARG 0 projectionMatrixBuffer
 		ARG 1 projectionType

@@ -1,3 +1,0 @@
-CLASS net/minecraft/core/particles/ParticleGroup
-	METHOD <init> (I)V
-		ARG 1 limit

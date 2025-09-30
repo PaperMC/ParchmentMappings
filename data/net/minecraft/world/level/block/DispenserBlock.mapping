@@ -7,10 +7,6 @@ CLASS net/minecraft/world/level/block/DispenserBlock
 		ARG 1 level
 		ARG 2 state
 		ARG 3 pos
-	METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
-		ARG 1 blockState
-		ARG 2 level
-		ARG 3 pos
 	METHOD getDefaultDispenseMethod (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/dispenser/DispenseItemBehavior;
 		ARG 0 stack
 	METHOD getDispenseMethod (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/dispenser/DispenseItemBehavior;

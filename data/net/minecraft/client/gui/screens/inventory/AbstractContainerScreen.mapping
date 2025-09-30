@@ -25,13 +25,8 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 3 title
 	METHOD addItemSlotMouseAction (Lnet/minecraft/client/gui/ItemSlotMouseAction;)V
 		ARG 1 itemSlotMouseAction
-	METHOD checkHotbarKeyPressed (II)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
 	METHOD checkHotbarKeyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
 		ARG 1 event
-	METHOD checkHotbarMouseClicked (I)V
-		ARG 1 keyCode
 	METHOD checkHotbarMouseClicked (Lnet/minecraft/client/input/MouseButtonEvent;)V
 		ARG 1 event
 	METHOD getHoveredSlot (DD)Lnet/minecraft/world/inventory/Slot;
@@ -48,12 +43,6 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 3 y
 		ARG 5 left
 		ARG 6 top
-	METHOD hasClickedOutside (DDIII)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 guiLeft
-		ARG 6 guiTop
-		ARG 7 mouseButton
 	METHOD isHovering (IIIIDD)Z
 		ARG 1 x
 		ARG 2 y
@@ -65,24 +54,6 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 slot
 		ARG 2 mouseX
 		ARG 4 mouseY
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
-	METHOD mouseClicked (DDI)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 button
-	METHOD mouseDragged (DDIDD)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 button
-		ARG 6 dragX
-		ARG 8 dragY
-	METHOD mouseReleased (DDI)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 button
 	METHOD onMouseClickAction (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/inventory/ClickType;)V
 		ARG 1 slot
 		ARG 2 type

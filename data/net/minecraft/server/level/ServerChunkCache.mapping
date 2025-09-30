@@ -1,17 +1,4 @@
 CLASS net/minecraft/server/level/ServerChunkCache
-	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/ChunkGenerator;IIZLnet/minecraft/server/level/progress/ChunkProgressListener;Lnet/minecraft/world/level/entity/ChunkStatusUpdateListener;Ljava/util/function/Supplier;)V
-		ARG 1 level
-		ARG 2 levelStorageAccess
-		ARG 3 fixerUpper
-		ARG 4 structureManager
-		ARG 5 dispatcher
-		ARG 6 generator
-		ARG 7 viewDistance
-		ARG 8 simulationDistance
-		ARG 9 sync
-		ARG 10 progressListener
-		ARG 11 chunkStatusListener
-		ARG 12 overworldDataStorage
 	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/ChunkGenerator;IIZLnet/minecraft/world/level/entity/ChunkStatusUpdateListener;Ljava/util/function/Supplier;)V
 		ARG 1 level
 		ARG 2 storageSource
@@ -39,12 +26,6 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 3 radius
 	METHOD blockChanged (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
-	METHOD broadcast (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
-		ARG 1 entity
-		ARG 2 packet
-	METHOD broadcastAndSend (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
-		ARG 1 entity
-		ARG 2 packet
 	METHOD broadcastChangedChunks (Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 profiler
 	METHOD chunkAbsent (Lnet/minecraft/server/level/ChunkHolder;I)Z

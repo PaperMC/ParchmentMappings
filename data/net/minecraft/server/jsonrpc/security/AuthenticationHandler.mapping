@@ -8,8 +8,6 @@ CLASS net/minecraft/server/jsonrpc/security/AuthenticationHandler
 		ARG 1 context
 	METHOD isValidApiKey (Ljava/lang/String;)Z
 		ARG 1 apiKey
-	METHOD isWebSocketUpgrade (Lio/netty/handler/codec/http/HttpRequest;)Z
-		ARG 1 request
 	METHOD performSecurityChecks (Lio/netty/handler/codec/http/HttpRequest;)Lnet/minecraft/server/jsonrpc/security/AuthenticationHandler$SecurityCheckResult;
 		ARG 1 request
 	METHOD sendUnauthorizedResponse (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/String;)V

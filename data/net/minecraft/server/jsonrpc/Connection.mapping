@@ -8,17 +8,9 @@ CLASS net/minecraft/server/jsonrpc/Connection
 		ARG 1 context
 	METHOD channelInactive (Lio/netty/channel/ChannelHandlerContext;)V
 		ARG 1 context
-	METHOD channelRead0 (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V
+	METHOD channelRead0 (Lio/netty/channel/ChannelHandlerContext;Lcom/google/gson/JsonElement;)V
 		ARG 1 context
 		ARG 2 json
-	METHOD dispatchIncomingRequest (Lcom/google/gson/JsonElement;Ljava/lang/String;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonElement;
-		ARG 1 requestId
-		ARG 2 methodName
-		ARG 3 params
-	METHOD dispatchIncomingRequest (Ljava/lang/Integer;Ljava/lang/String;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonElement;
-		ARG 1 requestId
-		ARG 2 methodName
-		ARG 3 params
 	METHOD dispatchIncomingRequest (Ljava/lang/String;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonElement;
 		ARG 1 methodName
 		ARG 2 params
@@ -30,14 +22,7 @@ CLASS net/minecraft/server/jsonrpc/Connection
 	METHOD handleError (Lcom/google/gson/JsonElement;Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonObject;
 		ARG 1 requestId
 		ARG 2 error
-	METHOD handleError (Ljava/lang/Integer;Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonObject;
-		ARG 1 requestId
-		ARG 2 error
 	METHOD handleIncomingRequest (Lcom/google/gson/JsonElement;Ljava/lang/String;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
-		ARG 1 requestId
-		ARG 2 methodName
-		ARG 3 params
-	METHOD handleIncomingRequest (Ljava/lang/Integer;Ljava/lang/String;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
 		ARG 1 requestId
 		ARG 2 methodName
 		ARG 3 params
@@ -46,9 +31,6 @@ CLASS net/minecraft/server/jsonrpc/Connection
 	METHOD handleRequestResponse (ILcom/google/gson/JsonElement;)V
 		ARG 1 requestId
 		ARG 2 result
-	METHOD handleRequestResponse (Lcom/google/gson/JsonElement;Lcom/google/gson/JsonElement;)V
-		ARG 1 requestId
-		ARG 2 response
 	METHOD isValidRequestId (Lcom/google/gson/JsonElement;)Z
 		ARG 0 json
 	METHOD isValidResponseId (Lcom/google/gson/JsonElement;)Z
@@ -60,26 +42,12 @@ CLASS net/minecraft/server/jsonrpc/Connection
 	METHOD sendNotification (Lnet/minecraft/core/Holder$Reference;Ljava/lang/Object;)V
 		ARG 1 method
 		ARG 2 params
-	METHOD sendNotification (Lnet/minecraft/server/jsonrpc/OutgoingRpcMethod;)V
-		ARG 1 method
-	METHOD sendNotification (Lnet/minecraft/server/jsonrpc/OutgoingRpcMethod;Ljava/lang/Object;)V
-		ARG 1 method
-		ARG 2 params
 	METHOD sendRequest (Lnet/minecraft/core/Holder$Reference;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 method
 	METHOD sendRequest (Lnet/minecraft/core/Holder$Reference;Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 method
 		ARG 2 params
 	METHOD sendRequest (Lnet/minecraft/core/Holder$Reference;Ljava/lang/Object;Z)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 method
-		ARG 2 params
-		ARG 3 expectResponse
-	METHOD sendRequest (Lnet/minecraft/server/jsonrpc/OutgoingRpcMethod;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 method
-	METHOD sendRequest (Lnet/minecraft/server/jsonrpc/OutgoingRpcMethod;Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 method
-		ARG 2 params
-	METHOD sendRequest (Lnet/minecraft/server/jsonrpc/OutgoingRpcMethod;Ljava/lang/Object;Z)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 method
 		ARG 2 params
 		ARG 3 expectResponse

@@ -8,67 +8,8 @@ CLASS net/minecraft/client/renderer/blockentity/AbstractSignRenderer
 	METHOD getSignModel (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/model/Model$Simple;
 		ARG 1 blockState
 		ARG 2 woodType
-	METHOD getSignModel (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/model/Model;
-		ARG 1 state
-		ARG 2 woodType
 	METHOD isOutlineVisible (Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 pos
-	METHOD isOutlineVisible (Lnet/minecraft/core/BlockPos;I)Z
-		ARG 0 pos
-		ARG 1 color
-	METHOD lambda$renderSignText$0 (ILnet/minecraft/network/chat/Component;)Lnet/minecraft/util/FormattedCharSequence;
-		ARG 2 component
-	METHOD renderSign (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model$Simple;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 woodType
-		ARG 6 model
-	METHOD renderSign (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 woodType
-		ARG 6 model
-	METHOD renderSignText (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/SignText;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IIIZ)V
-		ARG 1 pos
-		ARG 2 text
-		ARG 3 poseStack
-		ARG 4 bufferSource
-		ARG 5 packedLight
-		ARG 6 lineHeight
-		ARG 7 maxLineWidth
-		ARG 8 isFront
-	METHOD renderSignWithText (Lnet/minecraft/world/level/block/entity/SignBlockEntity;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/SignBlock;Lnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model$Simple;)V
-		ARG 1 blockEntity
-		ARG 2 poseStack
-		ARG 3 bufferSource
-		ARG 4 packedLight
-		ARG 5 packedOverlay
-		ARG 6 blockState
-		ARG 7 block
-		ARG 8 woodType
-		ARG 9 model
-	METHOD renderSignWithText (Lnet/minecraft/world/level/block/entity/SignBlockEntity;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/SignBlock;Lnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model;)V
-		ARG 1 blockEntity
-		ARG 2 poseStack
-		ARG 3 bufferSource
-		ARG 4 packedLight
-		ARG 5 packedOverlay
-		ARG 6 state
-		ARG 7 sign
-		ARG 8 woodType
-		ARG 9 model
-	METHOD submitSign (Lcom/mojang/blaze3d/vertex/PoseStack;IILnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
-		ARG 1 poseStack
-		ARG 2 packedLight
-		ARG 3 packedOverlay
-		ARG 4 woodType
-		ARG 5 model
-		ARG 6 crumblingOverlay
-		ARG 7 nodeCollector
 	METHOD submitSign (Lcom/mojang/blaze3d/vertex/PoseStack;ILnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 poseStack
 		ARG 2 packedLight
@@ -81,15 +22,6 @@ CLASS net/minecraft/client/renderer/blockentity/AbstractSignRenderer
 		ARG 2 poseStack
 		ARG 3 nodeCollector
 		ARG 4 isFront
-	METHOD submitSignText (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/SignText;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IIIZ)V
-		ARG 1 pos
-		ARG 2 text
-		ARG 3 poseStack
-		ARG 4 nodeCollector
-		ARG 5 packedLight
-		ARG 6 lineWidth
-		ARG 7 maxLineWidth
-		ARG 8 isFront
 	METHOD submitSignWithText (Lnet/minecraft/client/renderer/blockentity/state/SignRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/SignBlock;Lnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 renderState
 		ARG 2 poseStack
@@ -99,17 +31,6 @@ CLASS net/minecraft/client/renderer/blockentity/AbstractSignRenderer
 		ARG 6 model
 		ARG 7 crumblingOverlay
 		ARG 8 nodeCollector
-	METHOD submitSignWithText (Lnet/minecraft/world/level/block/entity/SignBlockEntity;Lcom/mojang/blaze3d/vertex/PoseStack;IILnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/SignBlock;Lnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
-		ARG 1 blockEntity
-		ARG 2 poseStack
-		ARG 3 packedLight
-		ARG 4 packedOverlay
-		ARG 5 blockState
-		ARG 6 block
-		ARG 7 woodType
-		ARG 8 model
-		ARG 9 crumblingOverlay
-		ARG 10 nodeCollector
 	METHOD translateSign (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 poseStack
 		ARG 2 yRot

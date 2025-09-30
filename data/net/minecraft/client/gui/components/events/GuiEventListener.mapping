@@ -2,14 +2,6 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 	COMMENT Represents a listener for GUI events.
 	COMMENT <p>
 	COMMENT It extends the {@code TabOrderedElement} interface, providing tab order functionality for GUI components.
-	METHOD charTyped (CI)Z
-		COMMENT Called when a character is typed within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 codePoint
-			COMMENT the code point of the typed character.
-		ARG 2 modifiers
-			COMMENT the keyboard modifiers.
 	METHOD charTyped (Lnet/minecraft/client/input/CharacterEvent;)Z
 		ARG 1 event
 	METHOD getBorderForArrowNavigation (Lnet/minecraft/client/gui/navigation/ScreenDirection;)Lnet/minecraft/client/gui/navigation/ScreenRectangle;
@@ -28,62 +20,13 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the X coordinate of the mouse.
 		ARG 3 mouseY
 			COMMENT the Y coordinate of the mouse.
-	METHOD keyPressed (III)Z
-		COMMENT Called when a keyboard key is pressed within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 keyCode
-			COMMENT the key code of the pressed key.
-		ARG 2 scanCode
-			COMMENT the scan code of the pressed key.
-		ARG 3 modifiers
-			COMMENT the keyboard modifiers.
 	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
 		ARG 1 event
-	METHOD keyReleased (III)Z
-		COMMENT Called when a keyboard key is released within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 keyCode
-			COMMENT the key code of the released key.
-		ARG 2 scanCode
-			COMMENT the scan code of the released key.
-		ARG 3 modifiers
-			COMMENT the keyboard modifiers.
 	METHOD keyReleased (Lnet/minecraft/client/input/KeyEvent;)Z
 		ARG 1 event
-	METHOD mouseClicked (DDI)Z
-		COMMENT Called when a mouse button is clicked within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
-		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
-		ARG 5 button
-			COMMENT the button that was clicked.
-	METHOD mouseClicked (DDIZ)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-		ARG 5 button
-		ARG 6 isDoubleClick
 	METHOD mouseClicked (Lnet/minecraft/client/input/MouseButtonEvent;Z)Z
 		ARG 1 event
 		ARG 2 isDoubleClick
-	METHOD mouseDragged (DDIDD)Z
-		COMMENT Called when the mouse is dragged within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
-		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
-		ARG 5 button
-			COMMENT the button that is being dragged.
-		ARG 6 dragX
-			COMMENT the X distance of the drag.
-		ARG 8 dragY
-			COMMENT the Y distance of the drag.
 	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
 		ARG 1 event
 		ARG 2 mouseX
@@ -94,16 +37,6 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 			COMMENT the X coordinate of the mouse.
 		ARG 3 mouseY
 			COMMENT the Y coordinate of the mouse.
-	METHOD mouseReleased (DDI)Z
-		COMMENT Called when a mouse button is released within the GUI element.
-		COMMENT <p>
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
-		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
-		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
-		ARG 5 button
-			COMMENT the button that was released.
 	METHOD mouseReleased (Lnet/minecraft/client/input/MouseButtonEvent;)Z
 		ARG 1 event
 	METHOD mouseScrolled (DDDD)Z

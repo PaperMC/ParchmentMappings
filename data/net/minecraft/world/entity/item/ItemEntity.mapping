@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/item/ItemEntity
-	METHOD <init> (Lnet/minecraft/world/entity/item/ItemEntity;)V
-		ARG 1 other
 	METHOD <init> (Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
 		ARG 2 posX

@@ -1,17 +1,4 @@
 CLASS net/minecraft/server/level/ServerLevel
-	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/world/level/storage/ServerLevelData;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/dimension/LevelStem;Lnet/minecraft/server/level/progress/ChunkProgressListener;ZJLjava/util/List;ZLnet/minecraft/world/RandomSequences;)V
-		ARG 1 server
-		ARG 2 dispatcher
-		ARG 3 levelStorageAccess
-		ARG 4 serverLevelData
-		ARG 5 dimension
-		ARG 6 levelStem
-		ARG 7 progressListener
-		ARG 8 isDebug
-		ARG 9 biomeZoomSeed
-		ARG 11 customSpawners
-		ARG 12 tickTime
-		ARG 13 randomSequences
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/world/level/storage/ServerLevelData;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/dimension/LevelStem;ZJLjava/util/List;ZLnet/minecraft/world/RandomSequences;)V
 		ARG 1 server
 		ARG 2 dispatcher
@@ -145,28 +132,8 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 pos
 	METHOD isVillage (Lnet/minecraft/core/SectionPos;)Z
 		ARG 1 pos
-	METHOD lambda$clearBlockEvents$16 (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/BlockEventData;)Z
-		ARG 1 blockEventData
-	METHOD lambda$findLightningRod$4 (Lnet/minecraft/core/Holder;)Z
-		ARG 0 pointOfInterestType
-	METHOD lambda$findLightningRod$5 (Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 blockPos
-	METHOD lambda$findLightningRod$6 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
-		ARG 0 blockPos
-	METHOD lambda$findLightningTargetAround$7 (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 1 entity
-	METHOD lambda$getEntities$10 (Ljava/util/function/Predicate;Ljava/util/List;ILnet/minecraft/world/entity/Entity;)Lnet/minecraft/util/AbortableIterationConsumer$Continuation;
-		ARG 3 entity
-	METHOD lambda$getTypeCount$18 (Lit/unimi/dsi/fastutil/objects/Object2IntMap$Entry;)Ljava/lang/String;
-		ARG 0 entry
-	METHOD lambda$getWatchdogStats$17 (Lnet/minecraft/world/entity/Entity;)Ljava/lang/String;
-		ARG 0 entity
-	METHOD lambda$globalLevelEvent$11 (Lnet/minecraft/core/BlockPos;IILnet/minecraft/server/level/ServerPlayer;)V
-		ARG 4 player
 	METHOD lambda$tick$2 (Lnet/minecraft/world/TickRateManager;Lnet/minecraft/util/profiling/ProfilerFiller;Lnet/minecraft/world/entity/Entity;)V
 		ARG 3 entity
-	METHOD lambda$wakeUpAllPlayers$3 (Lnet/minecraft/server/level/ServerPlayer;)V
-		ARG 0 player
 	METHOD onReputationEvent (Lnet/minecraft/world/entity/ai/village/ReputationEventType;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/ReputationEventHandler;)V
 		ARG 1 type
 		ARG 2 target
@@ -242,9 +209,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 3 add
 	METHOD setDayTime (J)V
 		ARG 1 time
-	METHOD setDefaultSpawnPos (Lnet/minecraft/core/BlockPos;F)V
-		ARG 1 pos
-		ARG 2 angle
 	METHOD setDragonFight (Lnet/minecraft/world/level/dimension/end/EndDragonFight;)V
 		ARG 1 dragonFight
 	METHOD setMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
@@ -268,9 +232,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 2 randomTickSpeed
 	METHOD tickCustomSpawners (Z)V
 		ARG 1 spawnEnemies
-	METHOD tickCustomSpawners (ZZ)V
-		ARG 1 spawnEnemies
-		ARG 2 spawnFriendlies
 	METHOD tickFluid (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;)V
 		ARG 1 pos
 		ARG 2 fluid
@@ -293,9 +254,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 2 state
 	METHOD updateSleepingPlayerList ()V
 		COMMENT Updates the flag that indicates whether all players in the world are sleeping.
-	METHOD waitForChunkAndEntities (Lnet/minecraft/world/level/ChunkPos;I)V
-		ARG 1 chunkPos
-		ARG 2 radius
 	METHOD waitForEntities (Lnet/minecraft/world/level/ChunkPos;I)V
 		ARG 1 chunkPos
 		ARG 2 radius

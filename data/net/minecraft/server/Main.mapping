@@ -13,10 +13,6 @@ CLASS net/minecraft/server/Main
 		ARG 4 running
 		ARG 5 registryAccess
 		ARG 6 recreateRegionFiles
-	METHOD lambda$main$0 (Lcom/mojang/serialization/Dynamic;Ljoptsimple/OptionSet;Ljoptsimple/OptionSpec;Lnet/minecraft/server/dedicated/DedicatedServerSettings;Ljoptsimple/OptionSpec;Lnet/minecraft/server/WorldLoader$DataLoadContext;)Lnet/minecraft/server/WorldLoader$DataLoadOutput;
-		ARG 5 context
-	METHOD lambda$main$1 (Lnet/minecraft/server/WorldLoader$InitConfig;Lcom/mojang/serialization/Dynamic;Ljoptsimple/OptionSet;Ljoptsimple/OptionSpec;Lnet/minecraft/server/dedicated/DedicatedServerSettings;Ljoptsimple/OptionSpec;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
-		ARG 6 executor
 	METHOD loadOrCreateConfig (Lnet/minecraft/server/dedicated/DedicatedServerProperties;Lcom/mojang/serialization/Dynamic;ZLnet/minecraft/server/packs/repository/PackRepository;)Lnet/minecraft/server/WorldLoader$InitConfig;
 		ARG 0 dedicatedServerProperties
 		ARG 1 dynamic

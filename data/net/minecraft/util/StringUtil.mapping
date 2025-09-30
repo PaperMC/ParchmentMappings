@@ -9,8 +9,6 @@ CLASS net/minecraft/util/StringUtil
 	METHOD formatTickDuration (IF)Ljava/lang/String;
 		ARG 0 ticks
 		ARG 1 ticksPerSecond
-	METHOD isAllowedChatCharacter (C)Z
-		ARG 0 character
 	METHOD isAllowedChatCharacter (I)Z
 		ARG 0 codepoint
 	METHOD isBlank (Ljava/lang/String;)Z

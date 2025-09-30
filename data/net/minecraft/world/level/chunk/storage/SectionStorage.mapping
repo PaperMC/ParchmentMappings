@@ -19,8 +19,6 @@ CLASS net/minecraft/world/level/chunk/storage/SectionStorage
 		ARG 1 sectionKey
 	METHOD getOrLoad (J)Ljava/util/Optional;
 		ARG 1 sectionKey
-	METHOD getVersion (Lcom/mojang/serialization/Dynamic;)I
-		ARG 0 columnData
 	METHOD onSectionLoad (J)V
 		ARG 1 sectionKey
 	METHOD outsideStoredRange (J)Z

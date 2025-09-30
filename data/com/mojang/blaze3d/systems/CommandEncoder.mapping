@@ -95,13 +95,3 @@ CLASS com/mojang/blaze3d/systems/CommandEncoder
 		ARG 7 y
 		ARG 8 width
 		ARG 9 height
-	METHOD writeToTexture (Lcom/mojang/blaze3d/textures/GpuTexture;Ljava/nio/IntBuffer;Lcom/mojang/blaze3d/platform/NativeImage$Format;IIIIII)V
-		ARG 1 texture
-		ARG 2 buffer
-		ARG 3 format
-		ARG 4 mipLevel
-		ARG 5 depthOrLayer
-		ARG 6 x
-		ARG 7 y
-		ARG 8 width
-		ARG 9 height

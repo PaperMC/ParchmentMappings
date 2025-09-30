@@ -1,13 +1,4 @@
 CLASS net/minecraft/client/renderer/block/model/ItemTransforms
-	METHOD <init> (Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;Lnet/minecraft/client/renderer/block/model/ItemTransform;)V
-		ARG 1 thirdPersonLeftHand
-		ARG 2 thirdPersonRightHand
-		ARG 3 firstPersonLeftHand
-		ARG 4 firstPersonRightHand
-		ARG 5 head
-		ARG 6 gui
-		ARG 7 ground
-		ARG 8 fixed
 	METHOD getTransform (Lnet/minecraft/world/item/ItemDisplayContext;)Lnet/minecraft/client/renderer/block/model/ItemTransform;
 		ARG 1 displayContext
 	CLASS Deserializer

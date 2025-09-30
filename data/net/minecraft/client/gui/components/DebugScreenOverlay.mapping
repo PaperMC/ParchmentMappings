@@ -1,21 +1,11 @@
 CLASS net/minecraft/client/gui/components/DebugScreenOverlay
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 minecraft
-	METHOD bytesToMegabytes (J)J
-		ARG 0 bytes
-	METHOD drawGameInformation (Lnet/minecraft/client/gui/GuiGraphics;)V
-		ARG 1 guiGraphics
-	METHOD drawSystemInformation (Lnet/minecraft/client/gui/GuiGraphics;)V
-		ARG 1 guiGraphics
-	METHOD getPropertyValueString (Ljava/util/Map$Entry;)Ljava/lang/String;
-		ARG 1 entry
 	METHOD logFrameDuration (J)V
 		ARG 1 frameDuration
 	METHOD logRemoteSample ([JLnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
 		ARG 1 sample
 		ARG 2 sampleType
-	METHOD printBiome (Lnet/minecraft/core/Holder;)Ljava/lang/String;
-		ARG 0 biomeHolder
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
 	METHOD render3dCrosshair (Lnet/minecraft/client/Camera;)V
@@ -24,6 +14,3 @@ CLASS net/minecraft/client/gui/components/DebugScreenOverlay
 		ARG 1 guiGraphics
 		ARG 2 lines
 		ARG 3 leftSide
-	CLASS AllocationRateCalculator
-		METHOD bytesAllocatedPerSecond (J)J
-			ARG 1 heapUsage

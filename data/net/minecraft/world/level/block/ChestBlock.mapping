@@ -4,12 +4,6 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 2 openSound
 		ARG 3 closeSound
 		ARG 4 properties
-	METHOD <init> (Ljava/util/function/Supplier;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-		ARG 1 blockEntityType
-		ARG 2 properties
-	METHOD candidatePartnerFacing (Lnet/minecraft/world/item/context/BlockPlaceContext;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
-		ARG 1 context
-		ARG 2 direction
 	METHOD candidatePartnerFacing (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
 		ARG 1 level
 		ARG 2 pos
@@ -23,10 +17,6 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 4 override
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
-	METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
-		ARG 1 blockState
-		ARG 2 level
-		ARG 3 pos
 	METHOD getBlockType (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/DoubleBlockCombiner$BlockType;
 		ARG 0 state
 	METHOD getChestType (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/block/state/properties/ChestType;

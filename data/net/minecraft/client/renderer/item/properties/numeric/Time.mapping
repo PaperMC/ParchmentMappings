@@ -7,11 +7,6 @@ CLASS net/minecraft/client/renderer/item/properties/numeric/Time
 	CLASS TimeSource
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 name
-		METHOD get (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/util/RandomSource;)F
-			ARG 1 level
-			ARG 2 stack
-			ARG 3 entity
-			ARG 4 random
 		METHOD get (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/ItemOwner;Lnet/minecraft/util/RandomSource;)F
 			ARG 1 level
 			ARG 2 stack

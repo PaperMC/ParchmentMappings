@@ -1,10 +1,4 @@
 CLASS net/minecraft/client/particle/DripParticle
-	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;)V
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 type
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 		ARG 1 level
 		ARG 2 x
@@ -12,213 +6,9 @@ CLASS net/minecraft/client/particle/DripParticle
 		ARG 6 z
 		ARG 8 type
 		ARG 9 sprite
-	METHOD createDripstoneLavaFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createDripstoneLavaHangParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createDripstoneWaterFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createDripstoneWaterHangParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createHoneyFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createHoneyHangParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createHoneyLandParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createLavaFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createLavaHangParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createLavaLandParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createNectarFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createObsidianTearFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createObsidianTearHangParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createObsidianTearLandParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createSporeBlossomFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createWaterFallParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
-	METHOD createWaterHangParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TextureSheetParticle;
-		ARG 0 type
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 xSpeed
-		ARG 10 ySpeed
-		ARG 12 zSpeed
 	METHOD getLightColor (F)I
 		ARG 1 partialTick
-	CLASS DripHangParticle
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
-			ARG 9 fallingParticle
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
-			ARG 9 fallingParticle
-			ARG 10 sprite
-	CLASS DripstoneLavaFallProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
-	CLASS DripstoneLavaHangProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
-	CLASS DripstoneWaterFallProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
-	CLASS DripstoneWaterHangProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
-	CLASS FallAndLandParticle
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
-			ARG 9 landParticle
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
-			ARG 9 landParticle
-			ARG 10 sprite
 	CLASS FallingParticle
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;I)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
-			ARG 9 lifetime
 		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;ILnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 			ARG 1 level
 			ARG 2 x
@@ -227,15 +17,15 @@ CLASS net/minecraft/client/particle/DripParticle
 			ARG 8 type
 			ARG 9 lifetime
 			ARG 10 sprite
-	CLASS HoneyFallProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
-	CLASS HoneyHangProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
-	CLASS HoneyLandProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprite
+	CLASS DripHangParticle
+		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
+			ARG 1 level
+			ARG 2 x
+			ARG 4 y
+			ARG 6 z
+			ARG 8 type
+			ARG 9 fallingParticle
+			ARG 10 sprite
 	CLASS LavaFallProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite
@@ -245,9 +35,33 @@ CLASS net/minecraft/client/particle/DripParticle
 	CLASS LavaLandProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite
+	CLASS HoneyFallProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
+	CLASS HoneyHangProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
+	CLASS HoneyLandProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
+	CLASS WaterFallProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
+	CLASS WaterHangProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
 	CLASS NectarFallProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite
+	CLASS FallAndLandParticle
+		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
+			ARG 1 level
+			ARG 2 x
+			ARG 4 y
+			ARG 6 z
+			ARG 8 type
+			ARG 9 landParticle
+			ARG 10 sprite
 	CLASS ObsidianTearFallProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite
@@ -260,9 +74,15 @@ CLASS net/minecraft/client/particle/DripParticle
 	CLASS SporeBlossomFallProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite
-	CLASS WaterFallProvider
+	CLASS DripstoneLavaFallProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite
-	CLASS WaterHangProvider
+	CLASS DripstoneLavaHangProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
+	CLASS DripstoneWaterFallProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
+	CLASS DripstoneWaterHangProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprite

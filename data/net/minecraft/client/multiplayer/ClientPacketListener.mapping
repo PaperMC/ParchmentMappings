@@ -22,10 +22,6 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 fromDeath
 		ARG 2 spawnDimension
 		ARG 3 playerDimension
-	METHOD determineLevelLoadingReason (ZLnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;
-		ARG 1 dying
-		ARG 2 spawnDimension
-		ARG 3 currentDimension
 	METHOD enableChunkLight (Lnet/minecraft/world/level/chunk/LevelChunk;II)V
 		ARG 1 chunk
 		ARG 2 x
@@ -259,10 +255,6 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 2 entity
 		ARG 3 lerp
 	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/LevelLoadingScreen$Reason;)V
-		ARG 1 player
-		ARG 2 level
-		ARG 3 reason
-	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 player
 		ARG 2 level
 		ARG 3 reason

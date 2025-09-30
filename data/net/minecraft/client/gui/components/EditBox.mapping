@@ -36,16 +36,11 @@ CLASS net/minecraft/client/gui/components/EditBox
 	METHOD applyFormat (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
 		ARG 1 text
 		ARG 2 displayPos
-	METHOD charTyped (CI)Z
-		ARG 1 codePoint
-		ARG 2 modifiers
 	METHOD deleteChars (I)V
 		COMMENT Deletes the given number of characters from the current cursor's position, unless there is currently a selection, in which case the selection is deleted instead.
 		ARG 1 num
 	METHOD deleteCharsToPos (I)V
 		ARG 1 num
-	METHOD deleteText (I)V
-		ARG 1 count
 	METHOD deleteText (IZ)V
 		ARG 1 num
 		ARG 2 words
@@ -80,9 +75,6 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 numWords
 		ARG 2 pos
 		ARG 3 skipConsecutiveSpaces
-	METHOD handleClick (DZ)V
-		ARG 1 mouseX
-		ARG 3 shiftDown
 	METHOD insertText (Ljava/lang/String;)V
 		COMMENT Adds the given text after the cursor, or replaces the currently selected text if there is a selection.
 		ARG 1 textToWrite
@@ -90,13 +82,6 @@ CLASS net/minecraft/client/gui/components/EditBox
 		COMMENT Gets whether the background and outline of this text box should be drawn (true if so).
 	METHOD isVisible ()Z
 		COMMENT Returns {@code true} if this textbox is visible.
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
-	METHOD lambda$new$0 (Ljava/lang/String;Ljava/lang/Integer;)Lnet/minecraft/util/FormattedCharSequence;
-		ARG 0 text
-		ARG 1 codePoint
 	METHOD moveCursor (IZ)V
 		ARG 1 delta
 		ARG 2 select
@@ -128,8 +113,6 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 enabled
 	METHOD setFilter (Ljava/util/function/Predicate;)V
 		ARG 1 validator
-	METHOD setFormatter (Ljava/util/function/BiFunction;)V
-		ARG 1 textFormatter
 	METHOD setHighlightPos (I)V
 		COMMENT Sets the position of the selection anchor (the selection anchor and the cursor position mark the edges of the selection). If the anchor is set beyond the bounds of the current text, it will be put back inside.
 		ARG 1 position

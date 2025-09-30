@@ -4,8 +4,6 @@ CLASS net/minecraft/network/protocol/status/ServerStatus
 	CLASS Players
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
-		METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
 	CLASS Version
 		METHOD <init> (Ljava/lang/String;I)V
 			ARG 1 name

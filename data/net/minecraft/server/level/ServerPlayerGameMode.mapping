@@ -30,10 +30,6 @@ CLASS net/minecraft/server/level/ServerPlayerGameMode
 	METHOD setGameModeForPlayer (Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/level/GameType;)V
 		ARG 1 gameMode
 		ARG 2 previousGameMode
-	METHOD setGameModeForPlayer (Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/level/GameType;Lnet/minecraft/util/TriState;)V
-		ARG 1 gameMode
-		ARG 2 previousGameMode
-		ARG 3 flying
 	METHOD setLevel (Lnet/minecraft/server/level/ServerLevel;)V
 		COMMENT Sets the world instance.
 		ARG 1 serverLevel

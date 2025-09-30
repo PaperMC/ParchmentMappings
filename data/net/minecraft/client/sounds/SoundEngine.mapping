@@ -50,27 +50,12 @@ CLASS net/minecraft/client/sounds/SoundEngine
 		ARG 1 sound
 	METHOD destroy ()V
 		COMMENT Cleans up the Sound System
-	METHOD getVolume (Lnet/minecraft/sounds/SoundSource;)F
-		COMMENT {@return the volume value pinned between 0.0f and 1.0f for a given {@linkplain SoundSource} category}
-		ARG 1 category
 	METHOD isActive (Lnet/minecraft/client/resources/sounds/SoundInstance;)Z
 		COMMENT {@return {@code true} if the {@linkplain SoundInstance} is active, {@code false} otherwise}
 		ARG 1 sound
 			COMMENT the SoundInstance to check
-	METHOD lambda$play$10 (Lnet/minecraft/client/sounds/ChannelAccess$ChannelHandle;Lnet/minecraft/client/sounds/AudioStream;)V
-		ARG 1 audioStream
-	METHOD lambda$play$6 (FFLnet/minecraft/client/resources/sounds/SoundInstance$Attenuation;FZZLnet/minecraft/world/phys/Vec3;ZLcom/mojang/blaze3d/audio/Channel;)V
-		ARG 8 channel
-	METHOD lambda$play$7 (Lcom/mojang/blaze3d/audio/SoundBuffer;Lcom/mojang/blaze3d/audio/Channel;)V
-		ARG 1 channel
-	METHOD lambda$play$8 (Lnet/minecraft/client/sounds/ChannelAccess$ChannelHandle;Lcom/mojang/blaze3d/audio/SoundBuffer;)V
-		ARG 1 buffer
-	METHOD lambda$play$9 (Lnet/minecraft/client/sounds/AudioStream;Lcom/mojang/blaze3d/audio/Channel;)V
-		ARG 1 channel
 	METHOD lambda$setVolume$2 (FLnet/minecraft/client/resources/sounds/SoundInstance;Lcom/mojang/blaze3d/audio/Channel;)V
 		ARG 3 channel
-	METHOD lambda$stopAll$3 (Lnet/minecraft/client/sounds/ChannelAccess$ChannelHandle;)V
-		ARG 0 handle
 	METHOD lambda$updateCategoryVolume$0 (FLcom/mojang/blaze3d/audio/Channel;)V
 		ARG 1 channel
 	METHOD lambda$updateCategoryVolume$1 (Lnet/minecraft/client/resources/sounds/SoundInstance;Lnet/minecraft/client/sounds/ChannelAccess$ChannelHandle;)V
@@ -148,18 +133,5 @@ CLASS net/minecraft/client/sounds/SoundEngine
 		ARG 1 isGamePaused
 	METHOD updateCategoryVolume (Lnet/minecraft/sounds/SoundSource;)V
 		ARG 1 category
-	METHOD updateCategoryVolume (Lnet/minecraft/sounds/SoundSource;F)V
-		COMMENT Updates the volume for a specific sound category.
-		COMMENT <p>
-		COMMENT If the sound engine has not been loaded, the method returns without performing any action.
-		COMMENT <p>
-		COMMENT If the category is the "MASTER" category, the overall listener gain (volume) is set to the specified value.
-		COMMENT <p>
-		COMMENT For other categories, the volume is updated for each sound instance associated with the category.
-		COMMENT <p>
-		COMMENT If the calculated volume for an instance is less than or equal to 0.0, the instance is stopped.
-		COMMENT Otherwise, the volume of the instance is set to the calculated value.
-		ARG 1 category
-		ARG 2 volume
 	METHOD updateSource (Lnet/minecraft/client/Camera;)V
 		ARG 1 renderInfo

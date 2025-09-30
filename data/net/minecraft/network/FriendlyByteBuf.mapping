@@ -17,8 +17,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD copy (II)Lio/netty/buffer/ByteBuf;
 		ARG 1 index
 		ARG 2 length
-	METHOD ensureWritable (I)Lio/netty/buffer/ByteBuf;
-		ARG 1 minWritableBytes
 	METHOD ensureWritable (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 size
 	METHOD ensureWritable (IZ)I
@@ -294,10 +292,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT @see #writeResourceLocation
 	METHOD readRetainedSlice (I)Lio/netty/buffer/ByteBuf;
 		ARG 1 length
-	METHOD readSectionPos ()Lnet/minecraft/core/SectionPos;
-		COMMENT Reads a SectionPos encoded as a long from the buffer.
-		COMMENT
-		COMMENT @see #writeSectionPos
 	METHOD readSlice (I)Lio/netty/buffer/ByteBuf;
 		ARG 1 length
 	METHOD readUUID ()Ljava/util/UUID;
@@ -628,11 +622,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT
 		COMMENT @see #readResourceLocation
 		ARG 1 resourceLocation
-	METHOD writeSectionPos (Lnet/minecraft/core/SectionPos;)Lnet/minecraft/network/FriendlyByteBuf;
-		COMMENT Writes a SectionPos encoded as a long to the buffer.
-		COMMENT
-		COMMENT @see #readSectionPos
-		ARG 1 sectionPos
 	METHOD writeShort (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
 	METHOD writeShortLE (I)Lnet/minecraft/network/FriendlyByteBuf;

@@ -6,9 +6,6 @@ CLASS net/minecraft/client/sounds/SoundEngineExecutor
 		COMMENT Creates and starts a new thread for executing sound-related tasks.
 		COMMENT <p>
 		COMMENT @return The created thread
-	METHOD flush ()V
-		COMMENT Flushes the SoundEngineExecutor by interrupting the thread, joining the thread, dropping all pending tasks, and recreating the thread.
-		COMMENT It sets the shutdown state to false to allow new tasks to be scheduled.
 	METHOD getRunningThread ()Ljava/lang/Thread;
 		COMMENT {@return The currently running thread}
 	METHOD run ()V

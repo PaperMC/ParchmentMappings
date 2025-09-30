@@ -8,8 +8,6 @@ CLASS net/minecraft/world/level/chunk/storage/SerializableChunkData
 		ARG 0 chunkPos
 		ARG 1 sectionY
 		ARG 2 error
-	METHOD makeBiomeCodec (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/Codec;
-		ARG 0 biomeRegistry
 	METHOD packOffsets ([Lit/unimi/dsi/fastutil/shorts/ShortList;)Lnet/minecraft/nbt/ListTag;
 		ARG 0 offsets
 	METHOD packStructureData (Lnet/minecraft/world/level/levelgen/structure/pieces/StructurePieceSerializationContext;Lnet/minecraft/world/level/ChunkPos;Ljava/util/Map;Ljava/util/Map;)Lnet/minecraft/nbt/CompoundTag;
@@ -17,10 +15,6 @@ CLASS net/minecraft/world/level/chunk/storage/SerializableChunkData
 		ARG 1 pos
 		ARG 2 structureStarts
 		ARG 3 references
-	METHOD parse (Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/storage/SerializableChunkData;
-		ARG 0 levelHeightAccessor
-		ARG 1 registries
-		ARG 2 tag
 	METHOD parse (Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/chunk/PalettedContainerFactory;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/storage/SerializableChunkData;
 		ARG 0 levelHeightAccessor
 		ARG 1 palettedContainerFactory

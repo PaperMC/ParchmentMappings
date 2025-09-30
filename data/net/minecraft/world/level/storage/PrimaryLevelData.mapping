@@ -1,60 +1,4 @@
 CLASS net/minecraft/world/level/storage/PrimaryLevelData
-	METHOD <init> (Lnet/minecraft/nbt/CompoundTag;ZLnet/minecraft/core/BlockPos;FJJIIIZIZZZLjava/util/Optional;IILjava/util/UUID;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/level/timers/TimerQueue;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/dimension/end/EndDragonFight$Data;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;Lcom/mojang/serialization/Lifecycle;)V
-		ARG 1 loadedPlayerTag
-		ARG 2 wasModded
-		ARG 3 spawnPos
-		ARG 4 spawnAngle
-		ARG 5 gameTime
-		ARG 7 dayTime
-		ARG 9 version
-		ARG 10 clearWeatherTime
-		ARG 11 rainTime
-		ARG 12 raining
-		ARG 13 thunderTime
-		ARG 14 thundering
-		ARG 15 initialized
-		ARG 16 difficultyLocked
-		ARG 17 worldBorder
-		ARG 18 wanderingTraderSpawnDelay
-		ARG 19 wanderingTraderSpawnChance
-		ARG 20 wanderingTraderId
-		ARG 21 knownServerBrands
-		ARG 22 removedFeatureFlags
-		ARG 23 scheduledEvents
-		ARG 24 customBossEvents
-		ARG 25 endDragonFightData
-		ARG 26 settings
-		ARG 27 worldOptions
-		ARG 28 specialWorldProperty
-		ARG 29 worldGenSettingsLifecycle
-	METHOD <init> (Lnet/minecraft/nbt/CompoundTag;ZLnet/minecraft/core/BlockPos;FJJIIIZIZZZLnet/minecraft/world/level/border/WorldBorder$Settings;IILjava/util/UUID;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/level/timers/TimerQueue;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/dimension/end/EndDragonFight$Data;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;Lcom/mojang/serialization/Lifecycle;)V
-		ARG 1 loadedPlayerTag
-		ARG 2 wasModded
-		ARG 3 spawnPos
-		ARG 4 spawnAngle
-		ARG 5 gameTime
-		ARG 7 dayTime
-		ARG 9 version
-		ARG 10 clearWeatherTime
-		ARG 11 rainTime
-		ARG 12 raining
-		ARG 13 thunderTime
-		ARG 14 thundering
-		ARG 15 initialized
-		ARG 16 difficultyLocked
-		ARG 17 worldBorder
-		ARG 18 wanderingTraderSpawnDelay
-		ARG 19 wanderingTraderSpawnChance
-		ARG 20 wanderingTraderId
-		ARG 21 knownServerBrands
-		ARG 22 removedFeatureFlags
-		ARG 23 scheduledEvents
-		ARG 24 customBossEvents
-		ARG 25 endDragonFightData
-		ARG 26 settings
-		ARG 27 worldOptions
-		ARG 28 specialWorldProperty
-		ARG 29 worldGenSettingsLifecycle
 	METHOD <init> (Lnet/minecraft/nbt/CompoundTag;ZLnet/minecraft/world/level/storage/LevelData$RespawnData;JJIIIZIZZZLjava/util/Optional;IILjava/util/UUID;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/world/level/timers/TimerQueue;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/dimension/end/EndDragonFight$Data;Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;Lcom/mojang/serialization/Lifecycle;)V
 		ARG 1 loadedPlayerTag
 		ARG 2 wasModded
@@ -149,9 +93,6 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 	METHOD setRaining (Z)V
 		COMMENT Sets whether it is raining or not.
 		ARG 1 isRaining
-	METHOD setSpawn (Lnet/minecraft/core/BlockPos;F)V
-		ARG 1 spawnPoint
-		ARG 2 angle
 	METHOD setTagData (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 registry
 		ARG 2 nbt
@@ -168,7 +109,5 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 		ARG 1 chance
 	METHOD setWanderingTraderSpawnDelay (I)V
 		ARG 1 delay
-	METHOD setWorldBorder (Lnet/minecraft/world/level/border/WorldBorder$Settings;)V
-		ARG 1 serializer
 	METHOD stringCollectionToTag (Ljava/util/Set;)Lnet/minecraft/nbt/ListTag;
 		ARG 0 stringCollection

@@ -1,7 +1,4 @@
 CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftServerSettingsService
-	METHOD <init> (Lnet/minecraft/server/dedicated/DedicatedServer;Lnet/minecraft/server/jsonrpc/JsonRpcLogger;)V
-		ARG 1 server
-		ARG 2 jsonrpcLogger
 	METHOD setAcceptsTransfers (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 acceptsTransfers
 		ARG 2 clientInfo

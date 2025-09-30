@@ -1,8 +1,4 @@
 CLASS net/minecraft/client/gui/render/GuiRenderer
-	METHOD <init> (Lnet/minecraft/client/gui/render/state/GuiRenderState;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Ljava/util/List;)V
-		ARG 1 renderState
-		ARG 2 bufferSource
-		ARG 3 pictureInPictureRenderers
 	METHOD <init> (Lnet/minecraft/client/gui/render/state/GuiRenderState;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/feature/FeatureRenderDispatcher;Ljava/util/List;)V
 		ARG 1 renderState
 		ARG 2 bufferSource
@@ -11,9 +7,6 @@ CLASS net/minecraft/client/gui/render/GuiRenderer
 		ARG 5 pictureInPictureRenderers
 	METHOD addElementToMesh (Lnet/minecraft/client/gui/render/state/GuiElementRenderState;)V
 		ARG 1 renderState
-	METHOD addElementToMesh (Lnet/minecraft/client/gui/render/state/GuiElementRenderState;I)V
-		ARG 1 renderState
-		ARG 2 layer
 	METHOD addElementsToMeshes (Lnet/minecraft/client/gui/render/state/GuiRenderState$TraverseRange;)V
 		ARG 1 traverseRange
 	METHOD calculateAtlasSizeInPixels (I)I

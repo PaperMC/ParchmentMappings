@@ -1,28 +1,4 @@
 CLASS net/minecraft/world/level/border/BorderChangeListener
-	METHOD onBorderCenterSet (Lnet/minecraft/world/level/border/WorldBorder;DD)V
-		ARG 1 border
-		ARG 2 x
-		ARG 4 z
-	METHOD onBorderSetDamagePerBlock (Lnet/minecraft/world/level/border/WorldBorder;D)V
-		ARG 1 border
-		ARG 2 damagePerBlock
-	METHOD onBorderSetDamageSafeZOne (Lnet/minecraft/world/level/border/WorldBorder;D)V
-		ARG 1 border
-		ARG 2 damageSafeZone
-	METHOD onBorderSetWarningBlocks (Lnet/minecraft/world/level/border/WorldBorder;I)V
-		ARG 1 border
-		ARG 2 warningBlocks
-	METHOD onBorderSetWarningTime (Lnet/minecraft/world/level/border/WorldBorder;I)V
-		ARG 1 border
-		ARG 2 warningTime
-	METHOD onBorderSizeLerping (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
-		ARG 1 border
-		ARG 2 oldSize
-		ARG 4 newSize
-		ARG 6 time
-	METHOD onBorderSizeSet (Lnet/minecraft/world/level/border/WorldBorder;D)V
-		ARG 1 border
-		ARG 2 size
 	METHOD onLerpSize (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
 		ARG 1 worldBorder
 		ARG 2 oldSize
@@ -47,30 +23,3 @@ CLASS net/minecraft/world/level/border/BorderChangeListener
 	METHOD onSetWarningTime (Lnet/minecraft/world/level/border/WorldBorder;I)V
 		ARG 1 worldBorder
 		ARG 2 warningTime
-	CLASS DelegateBorderChangeListener
-		METHOD <init> (Lnet/minecraft/world/level/border/WorldBorder;)V
-			ARG 1 worldBorder
-		METHOD onBorderCenterSet (Lnet/minecraft/world/level/border/WorldBorder;DD)V
-			ARG 1 border
-			ARG 2 x
-			ARG 4 z
-		METHOD onBorderSetDamagePerBlock (Lnet/minecraft/world/level/border/WorldBorder;D)V
-			ARG 1 border
-			ARG 2 newAmount
-		METHOD onBorderSetDamageSafeZOne (Lnet/minecraft/world/level/border/WorldBorder;D)V
-			ARG 1 border
-			ARG 2 newSize
-		METHOD onBorderSetWarningBlocks (Lnet/minecraft/world/level/border/WorldBorder;I)V
-			ARG 1 border
-			ARG 2 newDistance
-		METHOD onBorderSetWarningTime (Lnet/minecraft/world/level/border/WorldBorder;I)V
-			ARG 1 border
-			ARG 2 newTime
-		METHOD onBorderSizeLerping (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
-			ARG 1 border
-			ARG 2 oldSize
-			ARG 4 newSize
-			ARG 6 time
-		METHOD onBorderSizeSet (Lnet/minecraft/world/level/border/WorldBorder;D)V
-			ARG 1 border
-			ARG 2 newSize

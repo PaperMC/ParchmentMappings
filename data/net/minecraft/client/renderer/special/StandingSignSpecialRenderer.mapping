@@ -1,7 +1,4 @@
 CLASS net/minecraft/client/renderer/special/StandingSignSpecialRenderer
-	METHOD <init> (Lnet/minecraft/client/model/Model;Lnet/minecraft/client/resources/model/Material;)V
-		ARG 1 model
-		ARG 2 material
 	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/model/Model$Simple;Lnet/minecraft/client/resources/model/Material;)V
 		ARG 1 materials
 		ARG 2 model

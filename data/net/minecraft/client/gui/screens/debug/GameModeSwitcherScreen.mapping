@@ -1,8 +1,4 @@
 CLASS net/minecraft/client/gui/screens/debug/GameModeSwitcherScreen
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
 	METHOD switchToHoveredGameMode (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/debug/GameModeSwitcherScreen$GameModeIcon;)V
 		ARG 0 minecraft
 		ARG 1 gameModeIcon

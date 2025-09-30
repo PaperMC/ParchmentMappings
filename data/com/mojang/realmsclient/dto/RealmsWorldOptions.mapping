@@ -7,37 +7,15 @@ CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
 		ARG 5 slotName
 		ARG 6 version
 		ARG 7 compatibility
-	METHOD <init> (ZZIZIIZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
-		ARG 1 pvp
-		ARG 2 spawnMonsters
-		ARG 3 spawnProtection
-		ARG 4 commandBlocks
-		ARG 5 difficulty
-		ARG 6 gameMode
-		ARG 7 forceGameMode
-		ARG 8 slotName
-		ARG 9 version
-		ARG 10 compatibility
 	METHOD createDefaultsWith (Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/Difficulty;ZLjava/lang/String;Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
 		ARG 0 gameMode
 		ARG 1 difficulty
 		ARG 2 hardcore
 		ARG 3 version
 		ARG 4 slotName
-	METHOD createDefaultsWith (Lnet/minecraft/world/level/GameType;ZLnet/minecraft/world/Difficulty;ZLjava/lang/String;Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
-		ARG 0 gameType
-		ARG 1 commandBlocks
-		ARG 2 difficulty
-		ARG 3 hardcore
-		ARG 4 version
-		ARG 5 slotName
 	METHOD createFromSettings (Lnet/minecraft/world/level/LevelSettings;Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
 		ARG 0 settings
 		ARG 1 slotName
-	METHOD createFromSettings (Lnet/minecraft/world/level/LevelSettings;ZLjava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
-		ARG 0 levelSettings
-		ARG 1 commandBlocks
-		ARG 2 version
 	METHOD finalize (Lcom/mojang/realmsclient/dto/RealmsWorldOptions;)V
 		ARG 0 options
 	METHOD getDefaultSlotName (I)Ljava/lang/String;

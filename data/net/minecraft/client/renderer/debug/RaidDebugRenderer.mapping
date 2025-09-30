@@ -11,5 +11,3 @@ CLASS net/minecraft/client/renderer/debug/RaidDebugRenderer
 		ARG 2 text
 		ARG 3 pos
 		ARG 4 color
-	METHOD setRaidCenters (Ljava/util/Collection;)V
-		ARG 1 raidCenters

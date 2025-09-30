@@ -35,10 +35,6 @@ CLASS net/minecraft/world/level/block/entity/ShulkerBoxBlockEntity
 		ARG 3 state
 	METHOD setItems (Lnet/minecraft/core/NonNullList;)V
 		ARG 1 items
-	METHOD startOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
-	METHOD stopOpen (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	METHOD tick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/ShulkerBoxBlockEntity;)V
 		ARG 0 level
 		ARG 1 pos

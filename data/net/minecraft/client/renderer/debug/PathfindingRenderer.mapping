@@ -1,8 +1,4 @@
 CLASS net/minecraft/client/renderer/debug/PathfindingRenderer
-	METHOD addPath (ILnet/minecraft/world/level/pathfinder/Path;F)V
-		ARG 1 entityId
-		ARG 2 path
-		ARG 3 maxDistanceToWaypoint
 	METHOD distanceToCamera (Lnet/minecraft/core/BlockPos;DDD)F
 		ARG 0 pos
 		ARG 1 x

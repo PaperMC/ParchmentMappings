@@ -2,14 +2,6 @@ CLASS net/minecraft/client/renderer/entity/layers/MushroomCowMushroomLayer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;)V
 		ARG 1 renderer
 		ARG 2 blockRenderer
-	METHOD renderMushroomBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IZLnet/minecraft/world/level/block/state/BlockState;ILnet/minecraft/client/renderer/block/model/BlockStateModel;)V
-		ARG 1 poseStack
-		ARG 2 bufferSource
-		ARG 3 packedLight
-		ARG 4 renderOutline
-		ARG 5 state
-		ARG 6 packedOverlay
-		ARG 7 model
 	METHOD submitMushroomBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IZILnet/minecraft/world/level/block/state/BlockState;ILnet/minecraft/client/renderer/block/model/BlockStateModel;)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector
@@ -19,11 +11,3 @@ CLASS net/minecraft/client/renderer/entity/layers/MushroomCowMushroomLayer
 		ARG 6 blockState
 		ARG 7 packedOverlay
 		ARG 8 model
-	METHOD submitMushroomBlock (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IZLnet/minecraft/world/level/block/state/BlockState;ILnet/minecraft/client/renderer/block/model/BlockStateModel;)V
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedLight
-		ARG 4 renderOutline
-		ARG 5 state
-		ARG 6 packedOverlay
-		ARG 7 model

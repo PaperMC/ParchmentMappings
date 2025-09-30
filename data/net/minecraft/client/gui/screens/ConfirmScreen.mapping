@@ -15,10 +15,6 @@ CLASS net/minecraft/client/gui/screens/ConfirmScreen
 		ARG 5 noButton
 	METHOD addButtons (Lnet/minecraft/client/gui/layouts/LinearLayout;)V
 		ARG 1 layout
-	METHOD keyPressed (III)Z
-		ARG 1 keyCode
-		ARG 2 scanCode
-		ARG 3 modifiers
 	METHOD setDelay (I)V
 		COMMENT Sets the number of ticks to wait before enabling the buttons.
 		ARG 1 ticksUntilEnable

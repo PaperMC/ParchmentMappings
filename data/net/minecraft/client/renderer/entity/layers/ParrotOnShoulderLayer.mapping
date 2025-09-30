@@ -2,15 +2,6 @@ CLASS net/minecraft/client/renderer/entity/layers/ParrotOnShoulderLayer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/geom/EntityModelSet;)V
 		ARG 1 renderer
 		ARG 2 modelSet
-	METHOD renderOnShoulder (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/renderer/entity/state/PlayerRenderState;Lnet/minecraft/world/entity/animal/Parrot$Variant;FFZ)V
-		ARG 1 poseStack
-		ARG 2 buffer
-		ARG 3 packedLight
-		ARG 4 renderState
-		ARG 5 variant
-		ARG 6 yRot
-		ARG 7 xRot
-		ARG 8 leftShoulder
 	METHOD submitOnShoulder (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/AvatarRenderState;Lnet/minecraft/world/entity/animal/Parrot$Variant;FFZ)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector
@@ -20,12 +11,3 @@ CLASS net/minecraft/client/renderer/entity/layers/ParrotOnShoulderLayer
 		ARG 6 yRot
 		ARG 7 xRot
 		ARG 8 isLeft
-	METHOD submitOnShoulder (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/PlayerRenderState;Lnet/minecraft/world/entity/animal/Parrot$Variant;FFZ)V
-		ARG 1 poseStack
-		ARG 2 nodeCollector
-		ARG 3 packedOverlay
-		ARG 4 renderState
-		ARG 5 variant
-		ARG 6 yRot
-		ARG 7 xRot
-		ARG 8 isLeftShoulder

@@ -1,14 +1,4 @@
 CLASS net/minecraft/client/renderer/debug/StructureRenderer
-	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
-		ARG 1 minecraft
-	METHOD addBoundingBox (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Ljava/util/List;Lnet/minecraft/resources/ResourceKey;)V
-		ARG 1 boundingBox
-		ARG 2 pieces
-		ARG 3 dimension
-	METHOD lambda$addBoundingBox$0 (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Map;
-		ARG 0 dimension
-	METHOD lambda$addBoundingBox$1 (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Map;
-		ARG 0 dimension
 	METHOD renderBox (Lcom/mojang/blaze3d/vertex/PoseStack;DDDLcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;FFFF)V
 		ARG 0 poseStack
 		ARG 1 camX

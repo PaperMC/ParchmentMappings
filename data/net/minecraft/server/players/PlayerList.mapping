@@ -1,11 +1,6 @@
 CLASS net/minecraft/server/players/PlayerList
 	FIELD playersByUUID Ljava/util/Map;
 		COMMENT A map containing the key-value pairs for UUIDs and their EntityPlayerMP objects.
-	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/core/LayeredRegistryAccess;Lnet/minecraft/world/level/storage/PlayerDataStorage;I)V
-		ARG 1 server
-		ARG 2 registries
-		ARG 3 playerIo
-		ARG 4 maxPlayers
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/core/LayeredRegistryAccess;Lnet/minecraft/world/level/storage/PlayerDataStorage;Lnet/minecraft/server/notifications/NotificationService;)V
 		ARG 1 server
 		ARG 2 registries
@@ -52,22 +47,13 @@ CLASS net/minecraft/server/players/PlayerList
 	METHOD broadcastSystemToTeam (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/network/chat/Component;)V
 		ARG 1 player
 		ARG 2 message
-	METHOD canBypassPlayerLimit (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
 	METHOD canBypassPlayerLimit (Lnet/minecraft/server/players/NameAndId;)Z
 		ARG 1 nameAndId
-	METHOD canPlayerLogin (Ljava/net/SocketAddress;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/network/chat/Component;
-		ARG 1 socketAddress
-		ARG 2 gameProfile
 	METHOD canPlayerLogin (Ljava/net/SocketAddress;Lnet/minecraft/server/players/NameAndId;)Lnet/minecraft/network/chat/Component;
 		ARG 1 address
 		ARG 2 nameAndId
-	METHOD deop (Lcom/mojang/authlib/GameProfile;)V
-		ARG 1 profile
 	METHOD deop (Lnet/minecraft/server/players/NameAndId;)V
 		ARG 1 nameAndId
-	METHOD disconnectAllPlayersWithProfile (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 gameProfile
 	METHOD disconnectAllPlayersWithProfile (Ljava/util/UUID;)Z
 		ARG 1 uuid
 	METHOD getMaxPlayers ()I
@@ -89,27 +75,16 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 player
 	METHOD getPlayersWithAddress (Ljava/lang/String;)Ljava/util/List;
 		ARG 1 address
-	METHOD getReasonMessage (Lnet/minecraft/server/players/BanListEntry;)Lnet/minecraft/network/chat/Component;
-		ARG 1 entry
 	METHOD getSingleplayerData ()Lnet/minecraft/nbt/CompoundTag;
 		COMMENT On integrated servers, returns the host's player data to be written to level.dat.
 	METHOD getViewDistance ()I
 		COMMENT Gets the view distance, in chunks.
-	METHOD isOp (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
 	METHOD isOp (Lnet/minecraft/server/players/NameAndId;)Z
 		ARG 1 nameAndId
-	METHOD isWhiteListed (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
 	METHOD isWhiteListed (Lnet/minecraft/server/players/NameAndId;)Z
 		ARG 1 nameAndId
-	METHOD load (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/util/ProblemReporter;)Ljava/util/Optional;
-		ARG 1 player
-		ARG 2 problemReporter
 	METHOD loadPlayerData (Lnet/minecraft/server/players/NameAndId;)Ljava/util/Optional;
 		ARG 1 nameAndId
-	METHOD op (Lcom/mojang/authlib/GameProfile;)V
-		ARG 1 profile
 	METHOD op (Lnet/minecraft/server/players/NameAndId;)V
 		ARG 1 nameAndId
 	METHOD op (Lnet/minecraft/server/players/NameAndId;Ljava/util/Optional;Ljava/util/Optional;)V
@@ -155,8 +130,6 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 allowCommandsForAllPlayers
 	METHOD setSimulationDistance (I)V
 		ARG 1 simulationDistance
-	METHOD setUsingWhiteList (Z)V
-		ARG 1 whitelistEnabled
 	METHOD setViewDistance (I)V
 		ARG 1 viewDistance
 	METHOD updateEntireScoreboard (Lnet/minecraft/server/ServerScoreboard;Lnet/minecraft/server/level/ServerPlayer;)V

@@ -1,13 +1,4 @@
 CLASS net/minecraft/server/MinecraftServer
-	METHOD <init> (Ljava/lang/Thread;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Ljava/net/Proxy;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/ChunkProgressListenerFactory;)V
-		ARG 1 serverThread
-		ARG 2 storageSource
-		ARG 3 packRepository
-		ARG 4 worldStem
-		ARG 5 proxy
-		ARG 6 fixerUpper
-		ARG 7 services
-		ARG 8 progressListenerFactory
 	METHOD <init> (Ljava/lang/Thread;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Ljava/net/Proxy;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/server/Services;Lnet/minecraft/server/level/progress/LevelLoadListener;)V
 		ARG 1 serverThread
 		ARG 2 storageSource
@@ -35,8 +26,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 radius
 	METHOD createGameModeForPlayer (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/server/level/ServerPlayerGameMode;
 		ARG 1 player
-	METHOD createLevels (Lnet/minecraft/server/level/progress/ChunkProgressListener;)V
-		ARG 1 listener
 	METHOD createTextFilterForPlayer (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/server/network/TextFilter;
 		ARG 1 player
 	METHOD doRunTask (Lnet/minecraft/server/TickTask;)V
@@ -73,16 +62,12 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 dimension
 	METHOD getLocalIp ()Ljava/lang/String;
 		COMMENT "getHostname" is already taken, but both return the hostname.
-	METHOD getMaxPlayers ()I
-		COMMENT Returns the maximum number of players allowed on the server.
 	METHOD getPlayerCount ()I
 		COMMENT Returns the number of players currently on the server.
 	METHOD getPlayerNames ()[Ljava/lang/String;
 		COMMENT Returns an array of the usernames of all the connected players.
 	METHOD getPort ()I
 		COMMENT Gets serverPort.
-	METHOD getProfilePermissions (Lcom/mojang/authlib/GameProfile;)I
-		ARG 1 profile
 	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)I
 		ARG 1 user
 	METHOD getScaledTrackingDistance (I)I
@@ -92,10 +77,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 safeMode
 	METHOD getServerVersion ()Ljava/lang/String;
 		COMMENT Returns the server's Minecraft version as string.
-	METHOD getSpawnProtectionRadius ()I
-		COMMENT Return the spawn protection area's size.
-	METHOD getSpawnRadius (Lnet/minecraft/server/level/ServerLevel;)I
-		ARG 1 level
 	METHOD getWorldPath (Lnet/minecraft/world/level/storage/LevelResource;)Ljava/nio/file/Path;
 		ARG 1 levelResource
 	METHOD halt (Z)V
@@ -116,27 +97,15 @@ CLASS net/minecraft/server/MinecraftServer
 		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD isHardcore ()Z
 		COMMENT Defaults to false.
-	METHOD isLevelEnabled (Lnet/minecraft/world/level/Level;)Z
-		ARG 1 level
 	METHOD isPublished ()Z
 		COMMENT Returns {@code true} if this integrated server is open to LAN
-	METHOD isSingleplayerOwner (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 1 profile
 	METHOD isSingleplayerOwner (Lnet/minecraft/server/players/NameAndId;)Z
 		ARG 1 player
 	METHOD isUnderSpawnProtection (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 player
-	METHOD kickUnlistedPlayers (Lnet/minecraft/commands/CommandSourceStack;)V
-		ARG 1 commandSource
-	METHOD lambda$getSelectedPacks$30 (Ljava/util/Collection;Ljava/lang/String;)Z
-		ARG 1 packId
-	METHOD lambda$loadStatusIcon$11 (Ljava/nio/file/Path;)Z
-		ARG 0 path
 	METHOD lambda$loadStatusIcon$12 (Ljava/nio/file/Path;)Z
-		ARG 0 path
-	METHOD lambda$loadStatusIcon$14 (Ljava/nio/file/Path;)Ljava/util/Optional;
 		ARG 0 path
 	METHOD lambda$new$0 (Lnet/minecraft/util/profiling/ProfileResults;)V
 		ARG 1 results
@@ -149,8 +118,6 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD lambda$spin$3 (Ljava/lang/Thread;Ljava/lang/Throwable;)V
 		ARG 0 thread
 		ARG 1 exception
-	METHOD lambda$stopServer$6 (Lnet/minecraft/server/level/ServerLevel;)Z
-		ARG 0 level
 	METHOD logChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/ChatType$Bound;Ljava/lang/String;)V
 		ARG 1 content
 		ARG 2 boundChatType
@@ -165,9 +132,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 report
 	METHOD onServerExit ()V
 		COMMENT Directly calls System.exit(0), instantly killing the program.
-	METHOD prepareLevels (Lnet/minecraft/server/level/progress/ChunkProgressListener;)V
-		COMMENT Loads the spawn chunks and any forced chunks
-		ARG 1 listener
 	METHOD publishServer (Lnet/minecraft/world/level/GameType;ZI)Z
 		ARG 1 gameMode
 		ARG 2 commands
@@ -209,15 +173,8 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 whitelistEnabled
 	METHOD setFatalException (Ljava/lang/RuntimeException;)V
 		ARG 0 fatalException
-	METHOD setFlightAllowed (Z)V
-		ARG 1 allow
 	METHOD setId (Ljava/lang/String;)V
 		ARG 1 serverId
-	METHOD setInitialSpawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/ServerLevelData;ZZ)V
-		ARG 0 level
-		ARG 1 levelData
-		ARG 2 generateBonusChest
-		ARG 3 debug
 	METHOD setInitialSpawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/ServerLevelData;ZZLnet/minecraft/server/level/progress/LevelLoadListener;)V
 		ARG 0 level
 		ARG 1 levelData
@@ -236,8 +193,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 port
 	METHOD setPreventProxyConnections (Z)V
 		ARG 1 preventProxyConnections
-	METHOD setPvpAllowed (Z)V
-		ARG 1 allowPvp
 	METHOD setRespawnData (Lnet/minecraft/world/level/storage/LevelData$RespawnData;)V
 		ARG 1 respawnData
 	METHOD setSingleplayerProfile (Lcom/mojang/authlib/GameProfile;)V
@@ -261,9 +216,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 crashReport
 		ARG 2 chunkPos
 		ARG 3 regionStorageInfo
-	METHOD subscribeToDebugSample (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
-		ARG 1 player
-		ARG 2 sampleType
 	METHOD synchronizeTime (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD tickChildren (Ljava/util/function/BooleanSupplier;)V

@@ -2,10 +2,6 @@ CLASS net/minecraft/client/renderer/LevelEventHandler
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 minecraft
 		ARG 2 level
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/Level;Lnet/minecraft/client/renderer/LevelRenderer;)V
-		ARG 1 minecraft
-		ARG 2 level
-		ARG 3 levelRenderer
 	METHOD globalLevelEvent (ILnet/minecraft/core/BlockPos;I)V
 		COMMENT Handles a global level event. This includes playing sounds that should be heard by any player, regardless of position and dimension, such as the Wither spawning.
 		ARG 1 type

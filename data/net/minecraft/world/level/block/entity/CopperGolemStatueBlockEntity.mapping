@@ -2,8 +2,6 @@ CLASS net/minecraft/world/level/block/entity/CopperGolemStatueBlockEntity
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state
-	METHOD createCustomData (Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;)Lnet/minecraft/nbt/CompoundTag;
-		ARG 0 golem
 	METHOD createStatue (Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;)V
 		ARG 1 golem
 	METHOD getItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/CopperGolemStatueBlock$Pose;)Lnet/minecraft/world/item/ItemStack;
@@ -12,9 +10,5 @@ CLASS net/minecraft/world/level/block/entity/CopperGolemStatueBlockEntity
 	METHOD initCopperGolem (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;)Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;
 		ARG 1 blockState
 		ARG 2 copperGolem
-	METHOD initCopperGolem (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;
-		ARG 1 state
-		ARG 2 golem
-		ARG 3 level
 	METHOD removeStatue (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/entity/animal/coppergolem/CopperGolem;
 		ARG 1 state

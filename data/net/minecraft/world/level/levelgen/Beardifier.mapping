@@ -1,8 +1,5 @@
 CLASS net/minecraft/world/level/levelgen/Beardifier
 	COMMENT Modifies terrain noise to be flatter near structures such as villages.
-	METHOD <init> (Lit/unimi/dsi/fastutil/objects/ObjectListIterator;Lit/unimi/dsi/fastutil/objects/ObjectListIterator;)V
-		ARG 1 pieceIterator
-		ARG 2 junctionIterator
 	METHOD <init> (Ljava/util/List;Ljava/util/List;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
 		ARG 1 pieces
 		ARG 2 junctions

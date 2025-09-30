@@ -2,8 +2,6 @@ CLASS net/minecraft/client/gui/screens/LevelLoadingScreen
 	METHOD <init> (Lnet/minecraft/client/multiplayer/LevelLoadTracker;Lnet/minecraft/client/gui/screens/LevelLoadingScreen$Reason;)V
 		ARG 1 loadTracker
 		ARG 2 reason
-	METHOD <init> (Lnet/minecraft/server/level/progress/StoringChunkProgressListener;)V
-		ARG 1 progressListener
 	METHOD drawProgressBar (Lnet/minecraft/client/gui/GuiGraphics;IIIIF)V
 		ARG 1 guiGraphics
 		ARG 2 x
@@ -20,13 +18,6 @@ CLASS net/minecraft/client/gui/screens/LevelLoadingScreen
 		ARG 3 size
 		ARG 4 spacing
 		ARG 5 statusView
-	METHOD renderChunks (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/server/level/progress/StoringChunkProgressListener;IIII)V
-		ARG 0 guiGraphics
-		ARG 1 progressListener
-		ARG 2 x
-		ARG 3 y
-		ARG 4 size
-		ARG 5 spacing
 	METHOD update (Lnet/minecraft/client/multiplayer/LevelLoadTracker;Lnet/minecraft/client/gui/screens/LevelLoadingScreen$Reason;)V
 		ARG 1 laodTracker
 		ARG 2 reason

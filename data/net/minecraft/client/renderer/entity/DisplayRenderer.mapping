@@ -3,10 +3,6 @@ CLASS net/minecraft/client/renderer/entity/DisplayRenderer
 		ARG 1 renderState
 		ARG 2 entityRenderState
 		ARG 3 quaternion
-	METHOD cameraXRot (Lnet/minecraft/client/Camera;)F
-		ARG 0 camera
-	METHOD cameraYrot (Lnet/minecraft/client/Camera;)F
-		ARG 0 camera
 	METHOD entityXRot (Lnet/minecraft/world/entity/Display;F)F
 		ARG 0 entity
 		ARG 1 partialTick
@@ -15,12 +11,6 @@ CLASS net/minecraft/client/renderer/entity/DisplayRenderer
 		ARG 1 partialTick
 	METHOD getBrightnessOverride (Lnet/minecraft/world/entity/Display;)I
 		ARG 0 display
-	METHOD renderInner (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IF)V
-		ARG 1 renderState
-		ARG 2 poseStack
-		ARG 3 bufferSource
-		ARG 4 packedLight
-		ARG 5 interpolationProgress
 	METHOD submitInner (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IF)V
 		ARG 1 renderState
 		ARG 2 poseStack
