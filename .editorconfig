@@ -1,0 +1,8 @@
+root = true
+
+[buildSrc/src/main/kotlin/**/*.kt]
+insert_final_newline = true
+
+[data/**/*.mapping]
+indent_size = 4
+indent_style = tab

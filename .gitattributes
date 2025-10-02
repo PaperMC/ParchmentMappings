@@ -1,6 +1,7 @@
-# These are explicitly windows files and should use crlf
-*.bat           text eol=crlf
+# Documentation: https://www.git-scm.com/docs/gitattributes
 
-# To prevent GitHub calling us a shell/batch project
-/enigma.bat     linguist-vendored
-/enigma         linguist-vendored
+# Set default behavior to automatically normalize line endings.
+* text=auto eol=lf
+
+# Enforce CRLF line endings in Windows batch scripts to avoid issues.
+*.bat text eol=crlf

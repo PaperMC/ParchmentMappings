@@ -1,0 +1,6 @@
+[default]
+extend-ignore-re = [
+    # disable false positive in method signature and Mojang's typos
+    "(?s)METHOD.*?\\n"
+]
+check-filename = false

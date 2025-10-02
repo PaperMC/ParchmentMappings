@@ -20,7 +20,7 @@ There are two ways to configure the migration system:
     ```gradle
     compass {
         migration {
-            targetVersion = '1.19.4'
+            targetVersion = "1.19.4"
         }
     }
     ```

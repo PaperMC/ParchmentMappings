@@ -1,21 +1,23 @@
-bin
+/bin
 *.launch
 .settings
 .metadata
 .classpath
 .project
 
-out
+/out
 *.ipr
 *.iws
 *.iml
-.idea
+/.idea
 
-build
+/build
+/buildSrc/build
 .gradle
+.kotlin
 
-run
+/run
 
-staging
-input
-repo
+/staging
+/input
+/repo

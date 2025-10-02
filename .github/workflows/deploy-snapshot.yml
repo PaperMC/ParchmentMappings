@@ -1,0 +1,29 @@
+name: Deploy Snapshot
+on:
+  push:
+    branches: ['latest-snapshot']
+    paths-ignore:
+      - 'README.md'
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - '.typos.toml'
+
+jobs:
+  deploy:
+    name: Deploy Snapshot
+    runs-on: 'ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v5
+      - name: Validate data
+        run: ./gradlew validateData --stacktrace --console=colored
+      - name: Deploy snapshot version
+        run: ./gradlew publishVersionedExportPublicationToPaperSnapshotsRepository --stacktrace --console=colored
+        env:
+          ORG_GRADLE_PROJECT_paperSnapshotsUsername: ${{ secrets.ARTIFACTORY_USERNAME }}
+          ORG_GRADLE_PROJECT_paperSnapshotsPassword: ${{ secrets.ARTIFACTORY_PASSWORD }}
