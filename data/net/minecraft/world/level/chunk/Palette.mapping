@@ -2,8 +2,8 @@ CLASS net/minecraft/world/level/chunk/Palette
 	METHOD getSerializedSize (Lnet/minecraft/core/IdMap;)I
 		ARG 1 idMap
 	METHOD idFor (Ljava/lang/Object;Lnet/minecraft/world/level/chunk/PaletteResize;)I
-		ARG 1 value
-		ARG 2 resize
+		ARG 1 state
+		ARG 2 resizeHandler
 	METHOD maybeHas (Ljava/util/function/Predicate;)Z
 		ARG 1 filter
 	METHOD read (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/core/IdMap;)V

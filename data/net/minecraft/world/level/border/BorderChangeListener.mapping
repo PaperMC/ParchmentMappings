@@ -1,25 +1,25 @@
 CLASS net/minecraft/world/level/border/BorderChangeListener
 	METHOD onLerpSize (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
-		ARG 1 worldBorder
+		ARG 1 border
 		ARG 2 oldSize
 		ARG 4 newSize
 		ARG 6 time
 	METHOD onSetCenter (Lnet/minecraft/world/level/border/WorldBorder;DD)V
-		ARG 1 worldBorder
+		ARG 1 border
 		ARG 2 x
 		ARG 4 z
 	METHOD onSetDamagePerBlock (Lnet/minecraft/world/level/border/WorldBorder;D)V
-		ARG 1 worldBorder
+		ARG 1 border
 		ARG 2 damagePerBlock
 	METHOD onSetSafeZone (Lnet/minecraft/world/level/border/WorldBorder;D)V
-		ARG 1 worldBorder
-		ARG 2 safeSize
+		ARG 1 border
+		ARG 2 damageSafeZone
 	METHOD onSetSize (Lnet/minecraft/world/level/border/WorldBorder;D)V
-		ARG 1 worldBorder
+		ARG 1 border
 		ARG 2 size
 	METHOD onSetWarningBlocks (Lnet/minecraft/world/level/border/WorldBorder;I)V
-		ARG 1 worldBorder
+		ARG 1 border
 		ARG 2 warningBlocks
 	METHOD onSetWarningTime (Lnet/minecraft/world/level/border/WorldBorder;I)V
-		ARG 1 worldBorder
+		ARG 1 border
 		ARG 2 warningTime
