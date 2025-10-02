@@ -15,8 +15,8 @@ plugins {
     id 'org.parchmentmc.writtenbooks' version '0.5.+'
 }
 
-group = 'org.parchmentmc.data'
-final releaseType = project.findProperty('releaseType') ?: 'local'
+group = 'io.papermc.parchment.data'
+final releaseType = project.findProperty('releaseType') ?: 'release'
 final date = OffsetDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ofPattern('yyyy.MM.dd'))
 final isRelease = releaseType.toString() == 'release'
 version = date + (isRelease ? '' : "-${releaseType}-SNAPSHOT")
@@ -40,6 +40,11 @@ compass {
 }
 
 repositories {
+    mavenCentral()
+    maven {
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
     maven {
         name = 'MinecraftForge'
         url = 'https://maven.minecraftforge.net/'
@@ -47,15 +52,6 @@ repositories {
     maven {
         name = 'FabricMC'
         url = 'https://maven.fabricmc.net/'
-    }
-    maven {
-        name = 'QuiltMC <333'
-        url = 'https://maven.quiltmc.org/repository/release/'
-    }
-    // remove when ASM 9.8 is released
-    maven {
-        name = 'OW2 Snapshots for Enigma'
-        url = "https://repository.ow2.org/nexus/content/repositories/snapshots/"
     }
 }
 
@@ -72,7 +68,7 @@ dependencies {
     remapper 'net.minecraftforge:ForgeAutoRenamingTool:1.0.2'
 
     // Enigma, gorgeous interface for editing mappings
-    enigma 'org.quiltmc:enigma-swing:2.6.2'
+    enigma 'cuchaz:enigma-swing:2.5.2'
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer 'org.parchmentmc.jam:jam-parchment:0.1.0'
@@ -186,6 +182,11 @@ publishing {
             name 'projectLocal'
             url "file://${rootProject.file('repo').absolutePath}"
         }
+        maven {
+            name 'paperSnapshots'
+            url 'https://artifactory.papermc.io/artifactory/releases/'
+            credentials(PasswordCredentials)
+        }
     }
 }
 
@@ -242,7 +243,7 @@ abstract class EnigmaExec extends JavaExec {
         description 'Runs the Enigma mapping tool.'
 
         classpath project.configurations.enigma
-        mainClass.set 'org.quiltmc.enigma.gui.Main'
+        mainClass.set 'cuchaz.enigma.gui.Main'
 
         args = ['--no-edit-all', '--edit-parameters', '--edit-javadocs']
         argumentProviders.add({ ->
