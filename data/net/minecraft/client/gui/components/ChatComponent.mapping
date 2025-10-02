@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/gui/components/ChatComponent
 	FIELD allMessages Ljava/util/List;
 		COMMENT Chat lines to be displayed in the chat box
-	FIELD recentChat Ljava/util/List;
+	FIELD recentChat Lnet/minecraft/util/ArrayListDeque;
 		COMMENT A list of messages previously sent through the chat GUI
 	FIELD trimmedMessages Ljava/util/List;
 		COMMENT List of the ChatLines currently drawn

@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/block/entity/BannerBlockEntity
-	FIELD patterns Ljava/util/List;
+	FIELD patterns Lnet/minecraft/world/level/block/entity/BannerPatternLayers;
 		COMMENT A list of all patterns stored on this banner.
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos

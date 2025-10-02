@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/block/entity/BeaconBlockEntity
-	FIELD BEACON_EFFECTS [[Lnet/minecraft/world/effect/MobEffect;
+	FIELD BEACON_EFFECTS Ljava/util/List;
 		COMMENT A list of effects that beacons can apply.
 	FIELD beamSections Ljava/util/List;
 		COMMENT A list of beam segments for this beacon.
@@ -7,9 +7,9 @@ CLASS net/minecraft/world/level/block/entity/BeaconBlockEntity
 		COMMENT The number of levels of this beacon's pyramid.
 	FIELD name Lnet/minecraft/network/chat/Component;
 		COMMENT The custom name for this beacon.
-	FIELD primaryPower Lnet/minecraft/world/effect/MobEffect;
+	FIELD primaryPower Lnet/minecraft/core/Holder;
 		COMMENT The primary effect given by this beacon.
-	FIELD secondaryPower Lnet/minecraft/world/effect/MobEffect;
+	FIELD secondaryPower Lnet/minecraft/core/Holder;
 		COMMENT The secondary effect given by this beacon.
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos

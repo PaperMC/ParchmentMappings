@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer
 	COMMENT Base class for loot pool entry containers. This class just stores a list of conditions that are checked before the entry generates loot.
-	FIELD conditions [Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition;
+	FIELD conditions Ljava/util/List;
 		COMMENT Conditions for the loot entry to be applied.
 	METHOD <init> (Ljava/util/List;)V
 		ARG 1 conditions

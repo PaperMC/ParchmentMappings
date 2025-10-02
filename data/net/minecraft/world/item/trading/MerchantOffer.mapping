@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/item/trading/MerchantOffer
-	FIELD baseCostA Lnet/minecraft/world/item/ItemStack;
+	FIELD baseCostA Lnet/minecraft/world/item/trading/ItemCost;
 		COMMENT The first input for this offer.
-	FIELD costB Lnet/minecraft/world/item/ItemStack;
+	FIELD costB Ljava/util/Optional;
 		COMMENT The second input for this offer.
 	FIELD result Lnet/minecraft/world/item/ItemStack;
 		COMMENT The output of this offer.

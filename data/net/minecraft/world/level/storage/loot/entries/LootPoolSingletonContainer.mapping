@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer
 	COMMENT A LootPoolEntryContainer that expands into a single LootPoolEntry.
-	FIELD functions [Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;
+	FIELD functions Ljava/util/List;
 		COMMENT Functions that are ran on the entry.
 	FIELD quality I
 		COMMENT The quality of the entry.
