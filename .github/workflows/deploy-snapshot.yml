@@ -1,7 +1,7 @@
 name: Deploy Snapshot
 on:
   push:
-    branches: ['latest-snapshot']
+    branches: ['main']
     paths-ignore:
       - 'README.md'
       - '.editorconfig'
