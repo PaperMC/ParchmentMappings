@@ -3,6 +3,7 @@ on:
   push:
     branches: ['main']
     paths-ignore:
+      - 'docs/**'
       - 'README.md'
       - '.editorconfig'
       - '.gitattributes'
@@ -23,7 +24,7 @@ jobs:
       - name: Validate data
         run: ./gradlew validateData --stacktrace --console=colored
       - name: Deploy snapshot version
-        run: ./gradlew publishVersionedExportPublicationToPaperSnapshotsRepository --stacktrace --console=colored
+        run: ./gradlew publishExportPublicationToPaperSnapshotsRepository --stacktrace --console=colored
         env:
           ORG_GRADLE_PROJECT_paperSnapshotsUsername: ${{ secrets.ARTIFACTORY_USERNAME }}
           ORG_GRADLE_PROJECT_paperSnapshotsPassword: ${{ secrets.ARTIFACTORY_PASSWORD }}

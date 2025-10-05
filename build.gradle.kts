@@ -125,6 +125,7 @@ val artifactVersionProvider = providers.of(ArtifactVersionProvider::class) {
     parameters {
         repoUrl = "https://artifactory.papermc.io/artifactory/releases/"
         version = mcVersion
+        ci = providers.environmentVariable("CI").map { it.toBooleanStrict() }.orElse(false)
     }
 }
 
@@ -181,8 +182,7 @@ publishing {
         artifactId = "parchment"
     }
 
-    publications.register<MavenPublication>("versionedExport") {
-        // for remote repository (like Paper)
+    publications.register<MavenPublication>("export") {
         artifact(officialExportZip)
         artifact(officialSanitizedExportZip) {
             classifier = "checked"
@@ -190,14 +190,6 @@ publishing {
         version = artifactVersionProvider.get()
     }
 
-    publications.register<MavenPublication>("export") {
-        // for mavenLocal
-        artifact(officialExportZip)
-        artifact(officialSanitizedExportZip) {
-            classifier = "checked"
-        }
-        version = mcVersion.get()
-    }
     publications.register<MavenPublication>("staging") {
         artifact(officialStagingExportZip)
         version = "staging-SNAPSHOT"

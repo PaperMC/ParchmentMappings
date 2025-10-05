@@ -10,6 +10,7 @@ abstract class ArtifactVersionProvider : ValueSource<String, ArtifactVersionProv
     interface BuildIdParameters : ValueSourceParameters {
         val repoUrl: Property<String>
         val version: Property<String> // minecraft version
+        val ci: Property<Boolean>
     }
 
     override fun obtain(): String {
@@ -17,6 +18,10 @@ abstract class ArtifactVersionProvider : ValueSource<String, ArtifactVersionProv
     }
 
     private fun buildVersion(): String {
+        if (!parameters.ci.get()) {
+            return "local-SNAPSHOT"
+        }
+
         val client = HttpClient.newBuilder()
             .version(HttpClient.Version.HTTP_2)
             .build()
