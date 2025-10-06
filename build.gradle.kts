@@ -39,6 +39,7 @@ repositories {
 
 val enigma by configurations.registering
 val remapper by configurations.registering
+val minecraft by configurations.registering
 
 configurations.jammer {
     val asmVersion = "9.8"
@@ -55,7 +56,7 @@ dependencies {
     // MCPConfig for the SRG intermediate
     mcpconfig("de.oceanlabs.mcp:mcp_config:1.19.3-20221207.122022")
 
-    // art for remapping the client JAR
+    // ART for remapping the client JAR
     remapper("net.neoforged:AutoRenamingTool:2.0.15")
 
     // Enigma, pretty interface for editing mappings
@@ -63,6 +64,14 @@ dependencies {
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer("org.parchmentmc.jam:jam-parchment:0.1.0")
+
+    // Minecraft classpath for inheritance check in ART and later for enigma v3+
+    val manifest = project.plugins.getPlugin(CompassPlugin::class).manifestsDownloader.versionManifest
+    for (library in manifest.get().libraries) {
+        minecraft(library.name) {
+            isTransitive = false
+        }
+    }
 }
 
 val downloadClientJar by tasks.registering(VersionDownload::class) {
@@ -70,13 +79,9 @@ val downloadClientJar by tasks.registering(VersionDownload::class) {
     description = "Downloads the client JAR for the current version set in Compass."
 }
 
-val minecraft by configurations.registering
-
 val remapJar by tasks.registering(RemapJar::class) {
     group = "parchment"
     description = "Remaps the client JAR with the Mojang obfuscation mappings."
-
-    RemapJar.configureMinecraftClasspath(project, downloadClientJar.flatMap { it.manifest })
 
     val obfDL = project.plugins.getPlugin(CompassPlugin::class).obfuscationMapsDownloader
     inputJar = downloadClientJar.flatMap { it.outputFile }

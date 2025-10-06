@@ -1,17 +1,13 @@
 package org.parchmentmc.tasks
 
 import org.gradle.api.DefaultTask
-import org.gradle.api.Project
 import org.gradle.api.file.ConfigurableFileCollection
 import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.model.ObjectFactory
-import org.gradle.api.provider.Provider
 import org.gradle.api.tasks.*
-import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.newInstance
 import org.gradle.process.CommandLineArgumentProvider
 import org.gradle.process.ExecOperations
-import org.parchmentmc.feather.manifests.VersionManifest
 import java.io.OutputStream
 import javax.inject.Inject
 
@@ -85,19 +81,6 @@ abstract class RemapJar @Inject constructor(
             argumentProviders.add(provider)
 
             standardOutput = OutputStream.nullOutputStream()
-        }
-    }
-
-    companion object {
-        @JvmStatic
-        fun configureMinecraftClasspath(project: Project, manifest: Provider<VersionManifest>) {
-            project.dependencies {
-                for (library in manifest.get().libraries) {
-                    "minecraft"(library.name) {
-                        isTransitive = false
-                    }
-                }
-            }
         }
     }
 }
