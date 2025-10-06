@@ -14,7 +14,6 @@ import org.parchmentmc.util.*
 import org.parchmentmc.util.lorenz.FabricEnigmaReader
 import java.lang.constant.ConstantDescs
 
-@UntrackedTask(because = "Manual task")
 abstract class ScanInitParamsJar : DefaultTask() {
 
     @get:InputFile

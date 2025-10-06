@@ -1,11 +1,12 @@
 import org.parchmentmc.compass.CompassPlugin
+import org.parchmentmc.compass.data.validation.impl.MemberExistenceValidator
 import org.parchmentmc.compass.tasks.GenerateExport
 import org.parchmentmc.compass.tasks.GenerateSanitizedExport
 import org.parchmentmc.compass.tasks.ValidateData
 import org.parchmentmc.compass.tasks.VersionDownload
 import org.parchmentmc.tasks.*
 import org.parchmentmc.util.ArtifactVersionProvider
-import org.parchmentmc.util.FieldDescriptorValidator
+import org.parchmentmc.util.MemberExistenceValidatorV2
 
 plugins {
     java
@@ -112,7 +113,9 @@ tasks.register<EnigmaRunner>("enigma") {
 }
 
 tasks.withType<ValidateData>().configureEach {
-    validators.add(FieldDescriptorValidator())
+    if (validators.removeIf { validator -> validator is MemberExistenceValidator }) {
+        validators.add(MemberExistenceValidatorV2())
+    }
 }
 
 tasks.withType<GenerateExport>().configureEach {

@@ -72,7 +72,7 @@ class BlackstonePlugin : Plugin<Project> {
         val createDistribution by target.tasks.registering(Zip::class) {
             group = PLUGIN_TASK_GROUP
             archiveFileName = "$mcVersion.zip"
-            destinationDirectory = target.layout.buildDirectory.dir("dist")
+            destinationDirectory = project.layout.buildDirectory.dir("dist")
 
             from(mergeMetadata.flatMap { it.output })
         }
