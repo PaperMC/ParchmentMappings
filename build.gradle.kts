@@ -26,9 +26,6 @@ repositories {
         name = "Minecraft"
     }
     mavenCentral() // for Enigma's dependency flatlaf
-    maven("https://repo.papermc.io/repository/maven-public") {
-        name = "PaperMC"
-    }
     maven("https://maven.neoforged.net/") {
         name = "NeoForged"
     }
