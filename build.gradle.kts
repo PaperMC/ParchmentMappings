@@ -110,6 +110,8 @@ tasks.register<JavadocLint>("checkJavadoc") {
 tasks.register<EnigmaRunner>("enigma") {
     group = "parchment"
     description = "Runs the Enigma mapping tool"
+    classpath(enigma)
+    mainClass = "cuchaz.enigma.gui.Main"
     inputJar = remapJar.flatMap { it.outputJar }
     mappings = project.compass.productionData
 }

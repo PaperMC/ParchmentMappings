@@ -8,7 +8,6 @@ import org.gradle.api.tasks.*
 import org.gradle.jvm.toolchain.JavaLanguageVersion
 import org.gradle.jvm.toolchain.JavaToolchainService
 import org.gradle.kotlin.dsl.assign
-import org.gradle.kotlin.dsl.get
 import org.gradle.kotlin.dsl.newInstance
 import org.gradle.process.CommandLineArgumentProvider
 import javax.inject.Inject
@@ -43,9 +42,6 @@ abstract class EnigmaRunner @Inject constructor(
     abstract val mappings: DirectoryProperty
 
     init {
-        classpath(project.configurations["enigma"])
-        mainClass = "cuchaz.enigma.gui.Main"
-
         val provider = objects.newInstance<EnigmaArgumentProvider>()
         provider.inputJar.set(inputJar)
         provider.mappings.set(mappings)
