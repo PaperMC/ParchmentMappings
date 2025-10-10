@@ -68,7 +68,7 @@ CLASS net/minecraft/server/MinecraftServer
 		COMMENT Returns an array of the usernames of all the connected players.
 	METHOD getPort ()I
 		COMMENT Gets port.
-	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)I
+	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)Lnet/minecraft/server/permissions/LevelBasedPermissionSet;
 		ARG 1 nameAndId
 	METHOD getScaledTrackingDistance (I)I
 		ARG 1 trackingDistance
@@ -87,10 +87,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 2 payload
 	METHOD initServer ()Z
 		COMMENT Initialises the server and starts it.
-	METHOD isAllowedToEnterPortal (Lnet/minecraft/world/level/Level;)Z
-		ARG 1 level
-	METHOD isCommandBlockEnabled ()Z
-		COMMENT Return whether command blocks are enabled.
 	METHOD isDemo ()Z
 		COMMENT Gets whether this is a demo or not.
 	METHOD isEpollEnabled ()Z
@@ -146,8 +142,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 gameMode
 		ARG 2 commands
 		ARG 3 port
-	METHOD readScoreboard (Lnet/minecraft/world/level/storage/DimensionDataStorage;)V
-		ARG 1 dataStorage
 	METHOD reloadResources (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Replaces currently selected list of datapacks, reloads them, and sends new data to players.
 		ARG 1 selectedIds

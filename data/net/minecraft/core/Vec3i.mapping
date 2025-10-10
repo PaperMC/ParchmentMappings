@@ -59,6 +59,10 @@ CLASS net/minecraft/core/Vec3i
 		ARG 0 vec3i
 	METHOD multiply (I)Lnet/minecraft/core/Vec3i;
 		ARG 1 scalar
+	METHOD multiply (III)Lnet/minecraft/core/Vec3i;
+		ARG 1 factorX
+		ARG 2 factorY
+		ARG 3 factorZ
 	METHOD north (I)Lnet/minecraft/core/Vec3i;
 		ARG 1 distance
 	METHOD offset (III)Lnet/minecraft/core/Vec3i;

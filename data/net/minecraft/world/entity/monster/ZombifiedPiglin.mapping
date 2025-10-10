@@ -17,10 +17,6 @@ CLASS net/minecraft/world/entity/monster/ZombifiedPiglin
 		ARG 1 zombifiedPiglin
 	METHOD lambda$alertOthers$3 (Lnet/minecraft/world/entity/monster/ZombifiedPiglin;)V
 		ARG 1 zombifiedPiglin
-	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
-		ARG 1 target
-	METHOD setRemainingPersistentAngerTime (I)V
-		ARG 1 time
 	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Sets the active target the Task system uses for tracking
 		ARG 1 target

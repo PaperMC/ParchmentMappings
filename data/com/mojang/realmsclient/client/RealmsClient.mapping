@@ -22,8 +22,6 @@ CLASS com/mojang/realmsclient/client/RealmsClient
 		ARG 1 page
 		ARG 2 pageSize
 		ARG 3 worldType
-	METHOD getActivity (J)Lcom/mojang/realmsclient/dto/ServerActivityList;
-		ARG 1 worldId
 	METHOD getOrCreate (Lnet/minecraft/client/Minecraft;)Lcom/mojang/realmsclient/client/RealmsClient;
 		ARG 0 minecraft
 	METHOD getOwnRealm (J)Lcom/mojang/realmsclient/dto/RealmsServer;

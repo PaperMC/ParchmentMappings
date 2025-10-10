@@ -26,7 +26,7 @@ CLASS net/minecraft/world/entity/ai/util/GoalUtils
 		COMMENT @return if the position is water in the mob's level
 		ARG 0 mob
 		ARG 1 pos
-	METHOD mobRestricted (Lnet/minecraft/world/entity/PathfinderMob;I)Z
+	METHOD mobRestricted (Lnet/minecraft/world/entity/PathfinderMob;D)Z
 		COMMENT @return if a mob is stuck, within a certain radius beyond its restriction radius
 		ARG 0 mob
 		ARG 1 radius

@@ -12,11 +12,16 @@ CLASS com/mojang/math/OctahedralGroup
 		ARG 1 y
 	METHOD inverts (Lnet/minecraft/core/Direction$Axis;)Z
 		ARG 1 axis
-	METHOD lambda$static$4 (Lcom/mojang/math/OctahedralGroup;)Lcom/mojang/math/OctahedralGroup;
+	METHOD lambda$static$3 (Lcom/mojang/math/OctahedralGroup;)Lcom/mojang/math/OctahedralGroup;
 		ARG 0 group
-	METHOD permute (Lnet/minecraft/core/Direction$Axis;)Lnet/minecraft/core/Direction$Axis;
-		ARG 1 axis
 	METHOD rotate (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
 		ARG 1 direction
 	METHOD rotate (Lnet/minecraft/core/FrontAndTop;)Lnet/minecraft/core/FrontAndTop;
 		ARG 1 frontAndTop
+	METHOD rotate (Lorg/joml/Vector3i;)Lorg/joml/Vector3i;
+		ARG 1 vector
+	METHOD trace (ZZZLcom/mojang/math/SymmetricGroup3;)I
+		ARG 0 invertX
+		ARG 1 invertY
+		ARG 2 invertZ
+		ARG 3 permutation

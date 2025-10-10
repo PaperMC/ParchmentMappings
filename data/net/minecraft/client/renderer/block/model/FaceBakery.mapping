@@ -1,10 +1,4 @@
 CLASS net/minecraft/client/renderer/block/model/FaceBakery
-	METHOD applyElementRotation (Lorg/joml/Vector3f;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;)V
-		ARG 0 vec
-		ARG 1 partRotation
-	METHOD applyModelRotation (Lorg/joml/Vector3f;Lcom/mojang/math/Transformation;)V
-		ARG 0 pos
-		ARG 1 transform
 	METHOD bakeQuad (Lorg/joml/Vector3fc;Lorg/joml/Vector3fc;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;ZI)Lnet/minecraft/client/renderer/block/model/BakedQuad;
 		ARG 0 posFrom
 		ARG 1 posTo
@@ -30,8 +24,6 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 		ARG 0 faceData
 	METHOD centerToCorner (F)F
 		ARG 0 coord
-	METHOD computeRescale (Lnet/minecraft/client/renderer/block/model/BlockElementRotation;)Lorg/joml/Vector3fc;
-		ARG 0 partRotation
 	METHOD cornerToCenter (F)F
 		ARG 0 coord
 	METHOD defaultFaceUV (Lorg/joml/Vector3fc;Lorg/joml/Vector3fc;Lnet/minecraft/core/Direction;)Lnet/minecraft/client/renderer/block/model/BlockElementFace$UVs;
@@ -60,11 +52,10 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 	METHOD recalculateWinding ([ILnet/minecraft/core/Direction;)V
 		ARG 0 vertices
 		ARG 1 direction
-	METHOD rotateVertexBy (Lorg/joml/Vector3f;Lorg/joml/Vector3fc;Lorg/joml/Matrix4fc;Lorg/joml/Vector3fc;)V
+	METHOD rotateVertexBy (Lorg/joml/Vector3f;Lorg/joml/Vector3fc;Lorg/joml/Matrix4fc;)V
 		ARG 0 pos
 		ARG 1 origin
 		ARG 2 transform
-		ARG 3 scale
 	METHOD setupShape (Lorg/joml/Vector3fc;Lorg/joml/Vector3fc;)[F
 		ARG 0 posFrom
 		ARG 1 posTo

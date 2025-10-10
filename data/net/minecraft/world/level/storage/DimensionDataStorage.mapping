@@ -1,9 +1,8 @@
 CLASS net/minecraft/world/level/storage/DimensionDataStorage
-	METHOD <init> (Lnet/minecraft/world/level/saveddata/SavedData$Context;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/HolderLookup$Provider;)V
-		ARG 1 context
-		ARG 2 dataFolder
-		ARG 3 fixerUpper
-		ARG 4 registries
+	METHOD <init> (Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 dataFolder
+		ARG 2 fixerUpper
+		ARG 3 registries
 	METHOD computeIfAbsent (Lnet/minecraft/world/level/saveddata/SavedDataType;)Lnet/minecraft/world/level/saveddata/SavedData;
 		ARG 1 type
 	METHOD encodeUnchecked (Lnet/minecraft/world/level/saveddata/SavedDataType;Lnet/minecraft/world/level/saveddata/SavedData;Lnet/minecraft/resources/RegistryOps;)Lnet/minecraft/nbt/CompoundTag;

@@ -24,8 +24,8 @@ CLASS net/minecraft/commands/Commands
 		ARG 2 source
 	METHOD getParseException (Lcom/mojang/brigadier/ParseResults;)Lcom/mojang/brigadier/exceptions/CommandSyntaxException;
 		ARG 0 result
-	METHOD hasPermission (I)Lnet/minecraft/server/commands/PermissionCheck;
-		ARG 0 level
+	METHOD hasPermission (Lnet/minecraft/server/permissions/PermissionCheck;)Lnet/minecraft/server/permissions/PermissionProviderCheck;
+		ARG 0 check
 	METHOD lambda$finishParsing$4 (Ljava/lang/String;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
 		ARG 1 style
 	METHOD lambda$performCommand$1 (Ljava/lang/String;Lcom/mojang/brigadier/context/ContextChain;Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/commands/execution/ExecutionContext;)V

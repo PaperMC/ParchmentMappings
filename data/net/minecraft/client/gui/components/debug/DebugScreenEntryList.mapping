@@ -9,8 +9,8 @@ CLASS net/minecraft/client/gui/components/debug/DebugScreenEntryList
 		ARG 1 profile
 	METHOD loadProfile (Lnet/minecraft/client/gui/components/debug/DebugScreenProfile;)V
 		ARG 1 profile
-	METHOD setF3Visible (Z)V
-		ARG 1 isF3Visible
+	METHOD setOverlayVisible (Z)V
+		ARG 1 isOverlayVisible
 	METHOD setStatus (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/gui/components/debug/DebugScreenEntryStatus;)V
 		ARG 1 statusId
 		ARG 2 status

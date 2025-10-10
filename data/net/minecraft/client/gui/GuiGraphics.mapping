@@ -471,6 +471,12 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the rendering position.
 		ARG 5 text
 			COMMENT the custom text to display. Can be {@code null}.
+	METHOD renderOutline (IIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 width
+		ARG 4 height
+		ARG 5 color
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 font
 		ARG 2 components
@@ -562,18 +568,19 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 y0
 		ARG 6 x1
 		ARG 7 y1
-	METHOD submitBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lcom/mojang/blaze3d/textures/GpuTextureView;IIIIFFFFI)V
+	METHOD submitBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lcom/mojang/blaze3d/textures/GpuTextureView;Lcom/mojang/blaze3d/textures/GpuSampler;IIIIFFFFI)V
 		ARG 1 pipeline
 		ARG 2 atlasTexture
-		ARG 3 x0
-		ARG 4 y0
-		ARG 5 x1
-		ARG 6 y1
-		ARG 7 u0
-		ARG 8 u1
-		ARG 9 v0
-		ARG 10 v1
-		ARG 11 color
+		ARG 3 sampler
+		ARG 4 x0
+		ARG 5 y0
+		ARG 6 x1
+		ARG 7 y1
+		ARG 8 u0
+		ARG 9 u1
+		ARG 10 v0
+		ARG 11 v1
+		ARG 12 color
 	METHOD submitBookModelRenderState (Lnet/minecraft/client/model/BookModel;Lnet/minecraft/resources/ResourceLocation;FFFIIII)V
 		ARG 1 bookModel
 		ARG 2 texture
@@ -605,18 +612,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 9 y1
 	METHOD submitMapRenderState (Lnet/minecraft/client/renderer/state/MapRenderState;)V
 		ARG 1 renderState
-	METHOD submitOutline (IIIII)V
-		COMMENT Submits an outline rectangle to render on the screen with the specified color.
-		ARG 1 x
-			COMMENT the x-coordinate of the top-left corner of the rectangle.
-		ARG 2 y
-			COMMENT the y-coordinate of the top-left corner of the rectangle.
-		ARG 3 width
-			COMMENT the width of the blitted portion.
-		ARG 4 height
-			COMMENT the height of the rectangle.
-		ARG 5 color
-			COMMENT the color of the outline.
 	METHOD submitProfilerChartRenderState (Ljava/util/List;IIII)V
 		ARG 1 chartData
 		ARG 2 x0
@@ -642,25 +637,27 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 8 y0
 		ARG 9 x1
 		ARG 10 y1
-	METHOD submitTiledBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lcom/mojang/blaze3d/textures/GpuTextureView;IIIIIIFFFFI)V
+	METHOD submitTiledBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lcom/mojang/blaze3d/textures/GpuTextureView;Lcom/mojang/blaze3d/textures/GpuSampler;IIIIIIFFFFI)V
 		ARG 1 pipeline
 		ARG 2 atlasTexture
-		ARG 3 tileWidth
-		ARG 4 tileHeight
-		ARG 5 x0
-		ARG 6 y0
-		ARG 7 x1
-		ARG 8 y1
-		ARG 9 u0
-		ARG 10 u1
-		ARG 11 v0
-		ARG 12 v1
-		ARG 13 color
-	METHOD textHighlight (IIII)V
+		ARG 3 sampler
+		ARG 4 tileWidth
+		ARG 5 tileHeight
+		ARG 6 x0
+		ARG 7 y0
+		ARG 8 x1
+		ARG 9 y1
+		ARG 10 u0
+		ARG 11 u1
+		ARG 12 v0
+		ARG 13 v1
+		ARG 14 color
+	METHOD textHighlight (IIIIZ)V
 		ARG 1 minX
 		ARG 2 minY
 		ARG 3 maxX
 		ARG 4 maxY
+		ARG 5 invertColor
 	METHOD vLine (IIII)V
 		COMMENT Draws a vertical line from minY to maxY at the specified x-coordinate with the given color.
 		ARG 1 x
@@ -671,9 +668,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the end point.
 		ARG 4 color
 			COMMENT the color of the line.
-	CLASS OutlineBox
-		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;)V
-			ARG 1 guiGraphics
 	CLASS ScissorStack
 		COMMENT A utility class for managing a stack of screen rectangles for scissoring.
 		METHOD containsPoint (II)Z

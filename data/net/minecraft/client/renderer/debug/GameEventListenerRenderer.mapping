@@ -2,18 +2,10 @@ CLASS net/minecraft/client/renderer/debug/GameEventListenerRenderer
 	METHOD forEachListener (Lnet/minecraft/util/debug/DebugValueAccess;Lnet/minecraft/client/renderer/debug/GameEventListenerRenderer$ListenerVisitor;)V
 		ARG 1 valueAccess
 		ARG 2 action
-	METHOD lambda$render$3 (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDLnet/minecraft/world/phys/Vec3;I)V
-		ARG 8 position
-	METHOD lambda$render$4 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/phys/Vec3;I)V
-		ARG 2 position
-	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/phys/AABB;FFFF)V
-		ARG 0 poseStack
-		ARG 1 bufferSource
-		ARG 2 boundingBox
-		ARG 3 red
-		ARG 4 green
-		ARG 5 blue
-		ARG 6 alpha
+	METHOD lambda$emitGizmos$3 (Lnet/minecraft/world/phys/Vec3;I)V
+		ARG 0 position
+	METHOD lambda$emitGizmos$4 (Lnet/minecraft/world/phys/Vec3;I)V
+		ARG 0 position
 	CLASS ListenerVisitor
 		METHOD accept (Lnet/minecraft/world/phys/Vec3;I)V
 			ARG 1 pos

@@ -4,20 +4,22 @@ CLASS net/minecraft/world/entity/ai/util/RandomPos
 		ARG 0 random
 		ARG 1 horizontalDistance
 		ARG 2 verticalDistance
-	METHOD generateRandomDirectionWithinRadians (Lnet/minecraft/util/RandomSource;IIIDDD)Lnet/minecraft/core/BlockPos;
-		COMMENT @return a random (x, y, z) coordinate by picking a point (x, z), adding a random angle, up to a difference of {@code maxAngleDelta}. The y position is randomly chosen from the range {@code [y - yRange, y + yRange]}. Will be {@code null} if the chosen coordinate is outside a distance of {@code maxHorizontalDistance} from the origin.
+	METHOD generateRandomDirectionWithinRadians (Lnet/minecraft/util/RandomSource;DDIIDDD)Lnet/minecraft/core/BlockPos;
+		COMMENT @return a random (x, y, z) coordinate by picking a point (x, z), adding a random angle, up to a difference of {@code maxAngleDelta}. The y position is randomly chosen from the range {@code [y - yRange, y + yRange]}. Will be {@code null} if the chosen coordinate is outside a distance of {@code maxDistance} from the origin.
 		ARG 0 random
-		ARG 1 maxHorizontalDifference
+		ARG 1 minDistance
+			COMMENT The minimum value in x and z, in absolute value, that could be returned.
+		ARG 3 maxDistance
 			COMMENT The maximum value in x and z, in absolute value, that could be returned.
-		ARG 2 yRange
+		ARG 5 yRange
 			COMMENT The range plus or minus the y position to be chosen
-		ARG 3 y
+		ARG 6 y
 			COMMENT The target y position
-		ARG 4 x
+		ARG 7 x
 			COMMENT The x offset to the target position
-		ARG 6 z
+		ARG 9 z
 			COMMENT The z offset to the target position
-		ARG 8 maxAngleDelta
+		ARG 11 maxAngleDelta
 			COMMENT The maximum variance of the returned angle, from the base angle being a vector from (0, 0) to (x, z).
 	METHOD generateRandomPos (Ljava/util/function/Supplier;Ljava/util/function/ToDoubleFunction;)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Tries 10 times to maximize the return value of the position to double function based on the supplied position
@@ -26,12 +28,12 @@ CLASS net/minecraft/world/entity/ai/util/RandomPos
 	METHOD generateRandomPos (Lnet/minecraft/world/entity/PathfinderMob;Ljava/util/function/Supplier;)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 mob
 		ARG 1 posSupplier
-	METHOD generateRandomPosTowardDirection (Lnet/minecraft/world/entity/PathfinderMob;ILnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+	METHOD generateRandomPosTowardDirection (Lnet/minecraft/world/entity/PathfinderMob;DLnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
 		COMMENT @return a random position within range, only if the mob is currently restricted
 		ARG 0 mob
 		ARG 1 range
-		ARG 2 random
-		ARG 3 pos
+		ARG 3 random
+		ARG 4 pos
 	METHOD moveUpOutOfSolid (Lnet/minecraft/core/BlockPos;ILjava/util/function/Predicate;)Lnet/minecraft/core/BlockPos;
 		COMMENT @return the highest above position that is within the provided conditions
 		ARG 0 pos

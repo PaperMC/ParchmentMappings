@@ -609,7 +609,7 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 2 writer
 	METHOD writePublicKey (Ljava/security/PublicKey;)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 publicKey
-	METHOD writeQuaternion (Lio/netty/buffer/ByteBuf;Lorg/joml/Quaternionf;)V
+	METHOD writeQuaternion (Lio/netty/buffer/ByteBuf;Lorg/joml/Quaternionfc;)V
 		ARG 0 buffer
 		ARG 1 quaternion
 	METHOD writeQuaternion (Lorg/joml/Quaternionf;)V
@@ -660,7 +660,7 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 vec3
 	METHOD writeVec3 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 vec3
-	METHOD writeVector3f (Lio/netty/buffer/ByteBuf;Lorg/joml/Vector3f;)V
+	METHOD writeVector3f (Lio/netty/buffer/ByteBuf;Lorg/joml/Vector3fc;)V
 		ARG 0 buffer
 		ARG 1 vector3f
 	METHOD writeVector3f (Lorg/joml/Vector3f;)V

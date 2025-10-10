@@ -1,8 +1,7 @@
 CLASS net/minecraft/client/renderer/DimensionSpecialEffects
-	METHOD <init> (Lnet/minecraft/client/renderer/DimensionSpecialEffects$SkyType;ZZ)V
+	METHOD <init> (Lnet/minecraft/client/renderer/DimensionSpecialEffects$SkyType;Z)V
 		ARG 1 skyType
 		ARG 2 constantAmbientLight
-		ARG 3 hasEndFlashes
 	METHOD forType (Lnet/minecraft/world/level/dimension/DimensionType;)Lnet/minecraft/client/renderer/DimensionSpecialEffects;
 		ARG 0 dimensionType
 	METHOD getBrightnessDependentFogColor (Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;

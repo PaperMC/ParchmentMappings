@@ -6,9 +6,17 @@ CLASS com/mojang/math/SymmetricGroup3
 		ARG 5 p2
 	METHOD compose (Lcom/mojang/math/SymmetricGroup3;)Lcom/mojang/math/SymmetricGroup3;
 		ARG 1 other
-	METHOD lambda$static$0 ([ILcom/mojang/math/SymmetricGroup3;)Z
-		ARG 1 group
-	METHOD lambda$static$1 ([[Lcom/mojang/math/SymmetricGroup3;)V
-		ARG 0 groups
-	METHOD permutation (I)I
-		ARG 1 element
+	METHOD lambda$static$0 (IIILcom/mojang/math/SymmetricGroup3;)Z
+		ARG 3 group
+	METHOD lambda$static$2 (Lcom/mojang/math/SymmetricGroup3;Lcom/mojang/math/SymmetricGroup3;)Z
+		ARG 1 group2
+	METHOD lambda$static$3 (Lcom/mojang/math/SymmetricGroup3;)Lcom/mojang/math/SymmetricGroup3;
+		ARG 0 group1
+	METHOD permute (I)I
+		ARG 1 pn
+	METHOD permuteAxis (Lnet/minecraft/core/Direction$Axis;)Lnet/minecraft/core/Direction$Axis;
+		ARG 1 axis
+	METHOD permuteVector (Lorg/joml/Vector3f;)Lorg/joml/Vector3f;
+		ARG 1 vector
+	METHOD permuteVector (Lorg/joml/Vector3i;)Lorg/joml/Vector3i;
+		ARG 1 vector

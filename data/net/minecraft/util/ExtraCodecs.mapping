@@ -57,7 +57,7 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 1 data
 	METHOD lambda$converter$1 (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/Dynamic;
 		ARG 1 value
-	METHOD lambda$gameProfileCodec$92 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+	METHOD lambda$gameProfileCodec$97 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 1 instance
 	METHOD lambda$static$15 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
@@ -65,16 +65,23 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 list
 	METHOD lambda$static$6 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
-	METHOD lambda$static$77 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+	METHOD lambda$static$82 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
 	METHOD lambda$static$9 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
-	METHOD lambda$static$91 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+	METHOD lambda$static$96 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
-	METHOD lambda$static$94 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+	METHOD lambda$static$99 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
 	METHOD legacyEnum (Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
 		ARG 0 fromString
+	METHOD longRange (II)Lcom/mojang/serialization/Codec;
+		ARG 0 min
+		ARG 1 max
+	METHOD longRangeWithMessage (JJLjava/util/function/Function;)Lcom/mojang/serialization/Codec;
+		ARG 0 min
+		ARG 2 max
+		ARG 4 errorMessage
 	METHOD nonEmptyHolderSet (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
 	METHOD nonEmptyList (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;

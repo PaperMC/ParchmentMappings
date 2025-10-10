@@ -89,7 +89,7 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 nameAndId
 	METHOD op (Lnet/minecraft/server/players/NameAndId;Ljava/util/Optional;Ljava/util/Optional;)V
 		ARG 1 nameAndId
-		ARG 2 level
+		ARG 2 permissions
 		ARG 3 bypassesPlayerLimit
 	METHOD placeNewPlayer (Lnet/minecraft/network/Connection;Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/server/network/CommonListenerCookie;)V
 		ARG 1 connection
@@ -123,9 +123,9 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 2 level
 	METHOD sendPlayerPermissionLevel (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
-	METHOD sendPlayerPermissionLevel (Lnet/minecraft/server/level/ServerPlayer;I)V
+	METHOD sendPlayerPermissionLevel (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/server/permissions/LevelBasedPermissionSet;)V
 		ARG 1 player
-		ARG 2 permLevel
+		ARG 2 permissions
 	METHOD setAllowCommandsForAllPlayers (Z)V
 		ARG 1 allowCommandsForAllPlayers
 	METHOD setSimulationDistance (I)V

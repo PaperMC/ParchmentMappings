@@ -37,8 +37,9 @@ CLASS net/minecraft/client/renderer/WeatherEffectRenderer
 		ARG 4 amount
 		ARG 5 radius
 		ARG 6 rainLevel
-	METHOD tickRainParticles (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/Camera;ILnet/minecraft/server/level/ParticleStatus;)V
+	METHOD tickRainParticles (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/Camera;ILnet/minecraft/server/level/ParticleStatus;I)V
 		ARG 1 level
 		ARG 2 camera
 		ARG 3 ticks
 		ARG 4 particleStatus
+		ARG 5 weatherRadius

@@ -7,7 +7,7 @@ CLASS net/minecraft/world/level/dimension/DimensionType
 		ARG 1 secondType
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
-	METHOD moonPhase (J)I
+	METHOD moonPhase (J)Lnet/minecraft/world/level/MoonPhase;
 		ARG 1 dayTime
 	METHOD timeOfDay (J)F
 		ARG 1 dayTime

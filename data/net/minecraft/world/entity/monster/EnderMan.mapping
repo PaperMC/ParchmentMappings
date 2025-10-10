@@ -12,10 +12,6 @@ CLASS net/minecraft/world/entity/monster/EnderMan
 		ARG 1 key
 	METHOD setCarriedBlock (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
-	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
-		ARG 1 target
-	METHOD setRemainingPersistentAngerTime (I)V
-		ARG 1 time
 	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Sets the active target the Task system uses for tracking
 		ARG 1 target

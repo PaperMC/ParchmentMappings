@@ -22,6 +22,9 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 2 damageSource
 	METHOD doPostHurtEffects (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 target
+	METHOD findHitEntities (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/Collection;
+		ARG 1 startVec
+		ARG 2 endVec
 	METHOD findHitEntity (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/EntityHitResult;
 		COMMENT Gets the EntityHitResult representing the entity hit
 		ARG 1 startVec
@@ -32,13 +35,15 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 1 level
 		ARG 2 hitResult
 		ARG 3 stack
+	METHOD hitTargetsOrDeflectSelf (Ljava/util/Collection;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
+		ARG 1 hitResults
 	METHOD isAttackable ()Z
 		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
 	METHOD isCritArrow ()Z
 		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.
 	METHOD isNoPhysics ()Z
 		COMMENT Whether the arrow can noPhysics
-	METHOD lambda$hitBlockEnchantmentEffects$0 (Lnet/minecraft/world/item/Item;)V
+	METHOD lambda$hitBlockEnchantmentEffects$1 (Lnet/minecraft/world/item/Item;)V
 		ARG 1 item
 	METHOD lerpMotion (Lnet/minecraft/world/phys/Vec3;)V
 		COMMENT Updates the entity motion clientside, called by packets from the server

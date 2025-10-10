@@ -1,10 +1,10 @@
 CLASS net/minecraft/world/entity/vehicle/MinecartHopper
-	METHOD activateMinecart (IIIZ)V
+	METHOD activateMinecart (Lnet/minecraft/server/level/ServerLevel;IIIZ)V
 		COMMENT Called every tick the minecart is on an activator rail.
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 receivingPower
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 receivingPower
 	METHOD createMenu (ILnet/minecraft/world/entity/player/Inventory;)Lnet/minecraft/world/inventory/AbstractContainerMenu;
 		ARG 1 id
 		ARG 2 playerInventory

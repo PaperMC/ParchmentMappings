@@ -3,9 +3,7 @@ CLASS net/minecraft/client/renderer/texture/ReloadableTexture
 		ARG 1 resourceId
 	METHOD apply (Lnet/minecraft/client/renderer/texture/TextureContents;)V
 		ARG 1 textureContents
-	METHOD doLoad (Lcom/mojang/blaze3d/platform/NativeImage;ZZ)V
+	METHOD doLoad (Lcom/mojang/blaze3d/platform/NativeImage;)V
 		ARG 1 image
-		ARG 2 blur
-		ARG 3 clamp
 	METHOD loadContents (Lnet/minecraft/server/packs/resources/ResourceManager;)Lnet/minecraft/client/renderer/texture/TextureContents;
 		ARG 1 resourceManager

@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/model/AnimationUtils
-	METHOD animateCrossbowCharge (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;FIZ)V
+	METHOD animateCrossbowCharge (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;FFZ)V
 		ARG 0 rightArm
 		ARG 1 leftArm
 		ARG 2 maxCrossbowChargeDuration
@@ -10,12 +10,11 @@ CLASS net/minecraft/client/model/AnimationUtils
 		ARG 1 leftArm
 		ARG 2 head
 		ARG 3 rightHanded
-	METHOD animateZombieArms (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZFF)V
+	METHOD animateZombieArms (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;ZLnet/minecraft/client/renderer/entity/state/UndeadRenderState;)V
 		ARG 0 leftArm
 		ARG 1 rightArm
 		ARG 2 isAggressive
-		ARG 3 attackTime
-		ARG 4 ageInTicks
+		ARG 3 renderState
 	METHOD bobArms (Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;F)V
 		ARG 0 rightArm
 		ARG 1 leftArm

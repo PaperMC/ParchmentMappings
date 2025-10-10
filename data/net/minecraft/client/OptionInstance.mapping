@@ -90,9 +90,10 @@ CLASS net/minecraft/client/OptionInstance
 			ARG 1 encoder
 			ARG 2 decoder
 	CLASS IntRangeBase
-		METHOD xmap (Ljava/util/function/IntFunction;Ljava/util/function/ToIntFunction;)Lnet/minecraft/client/OptionInstance$SliderableValueSet;
+		METHOD xmap (Ljava/util/function/IntFunction;Ljava/util/function/ToIntFunction;Z)Lnet/minecraft/client/OptionInstance$SliderableValueSet;
 			ARG 1 to
 			ARG 2 from
+			ARG 3 keyboardControls
 	CLASS TooltipSupplier
 		METHOD apply (Ljava/lang/Object;)Lnet/minecraft/client/gui/components/Tooltip;
 			ARG 1 value
@@ -106,6 +107,10 @@ CLASS net/minecraft/client/OptionInstance
 			ARG 1 value
 		METHOD lambda$createButton$0 (Lnet/minecraft/client/Options;IIILnet/minecraft/client/OptionInstance$TooltipSupplier;Ljava/util/function/Consumer;Lnet/minecraft/client/OptionInstance;)Lnet/minecraft/client/gui/components/AbstractWidget;
 			ARG 7 instance
+		METHOD next (Ljava/lang/Object;)Ljava/util/Optional;
+			ARG 1 value
+		METHOD previous (Ljava/lang/Object;)Ljava/util/Optional;
+			ARG 1 value
 		METHOD toSliderValue (Ljava/lang/Object;)D
 			ARG 1 value
 	CLASS CaptionBasedToString

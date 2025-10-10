@@ -5,12 +5,13 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 		ARG 3 x
 		ARG 5 y
 		ARG 7 z
-	METHOD activateMinecart (IIIZ)V
+	METHOD activateMinecart (Lnet/minecraft/server/level/ServerLevel;IIIZ)V
 		COMMENT Called every tick the minecart is on an activator rail.
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 powered
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 powered
 	METHOD applyNaturalSlowdown (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 speed
 	METHOD canCollideWith (Lnet/minecraft/world/entity/Entity;)Z

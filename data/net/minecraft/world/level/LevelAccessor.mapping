@@ -38,8 +38,6 @@ CLASS net/minecraft/world/level/LevelAccessor
 		ARG 3 pos
 	METHOD getChunkSource ()Lnet/minecraft/world/level/chunk/ChunkSource;
 		COMMENT Gets the world's chunk provider
-	METHOD getCurrentDifficultyAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/DifficultyInstance;
-		ARG 1 pos
 	METHOD getLevelData ()Lnet/minecraft/world/level/storage/LevelData;
 		COMMENT Returns the world's LevelData object
 	METHOD hasChunk (II)Z

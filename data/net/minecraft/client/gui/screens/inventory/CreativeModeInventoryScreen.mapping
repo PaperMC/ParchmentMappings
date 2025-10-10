@@ -49,10 +49,9 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 	METHOD renderTabButton (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/item/CreativeModeTab;)V
 		ARG 1 guiGraphics
 		ARG 2 creativeModeTab
-	METHOD resize (Lnet/minecraft/client/Minecraft;II)V
-		ARG 1 minecraft
-		ARG 2 width
-		ARG 3 height
+	METHOD resize (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD selectTab (Lnet/minecraft/world/item/CreativeModeTab;)V
 		COMMENT Sets the current creative tab, restructuring the GUI as needed.
 		ARG 1 tab

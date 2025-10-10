@@ -39,8 +39,6 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 renderPipeline
 	METHOD crumbling (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
-	METHOD debugLineStrip (D)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 width
 	METHOD dragonExplosionAlpha (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD draw (Lcom/mojang/blaze3d/vertex/MeshData;)V
@@ -89,65 +87,6 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 texture
 	METHOD itemEntityTranslucentCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
-	METHOD lambda$static$0 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$1 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$10 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$11 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-		ARG 1 affectsOutline
-	METHOD lambda$static$12 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$13 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$14 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$15 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$16 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$17 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$18 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$19 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$2 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$20 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$21 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$22 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$23 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$24 (Ljava/lang/Double;)Lnet/minecraft/client/renderer/RenderType$CompositeRenderType;
-		ARG 0 width
-	METHOD lambda$static$26 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
-	METHOD lambda$static$27 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 texture
-	METHOD lambda$static$3 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$4 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$5 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-		ARG 1 affectsOutline
-	METHOD lambda$static$6 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-		ARG 1 affectsOutline
-	METHOD lambda$static$7 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-	METHOD lambda$static$8 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-		ARG 1 affectsOutline
-	METHOD lambda$static$9 (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Boolean;)Lnet/minecraft/client/renderer/RenderType;
-		ARG 0 id
-		ARG 1 affectsOutline
 	METHOD outline (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 location
 	METHOD text (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
@@ -166,15 +105,14 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 texture
 		ARG 1 depthWrite
 	CLASS CompositeState
-		METHOD <init> (Lnet/minecraft/client/renderer/RenderStateShard$EmptyTextureStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LightmapStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OverlayStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LayeringStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OutputStateShard;Lnet/minecraft/client/renderer/RenderStateShard$TexturingStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LineStateShard;Lnet/minecraft/client/renderer/RenderType$OutlineProperty;)V
+		METHOD <init> (Lnet/minecraft/client/renderer/RenderStateShard$EmptyTextureStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LightmapStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OverlayStateShard;Lnet/minecraft/client/renderer/RenderStateShard$LayeringStateShard;Lnet/minecraft/client/renderer/RenderStateShard$OutputStateShard;Lnet/minecraft/client/renderer/RenderStateShard$TexturingStateShard;Lnet/minecraft/client/renderer/RenderType$OutlineProperty;)V
 			ARG 1 textureState
 			ARG 2 lightmapState
 			ARG 3 overlayState
 			ARG 4 layeringState
 			ARG 5 outputState
 			ARG 6 texturingState
-			ARG 7 lineState
-			ARG 8 outlineProperty
+			ARG 7 outlineProperty
 		CLASS CompositeStateBuilder
 			METHOD createCompositeState (Lnet/minecraft/client/renderer/RenderType$OutlineProperty;)Lnet/minecraft/client/renderer/RenderType$CompositeState;
 				ARG 1 outlineProperty
@@ -184,8 +122,6 @@ CLASS net/minecraft/client/renderer/RenderType
 				ARG 1 layeringState
 			METHOD setLightmapState (Lnet/minecraft/client/renderer/RenderStateShard$LightmapStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;
 				ARG 1 lightmapState
-			METHOD setLineState (Lnet/minecraft/client/renderer/RenderStateShard$LineStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;
-				ARG 1 lineState
 			METHOD setOutputState (Lnet/minecraft/client/renderer/RenderStateShard$OutputStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;
 				ARG 1 outputState
 			METHOD setOverlayState (Lnet/minecraft/client/renderer/RenderStateShard$OverlayStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;

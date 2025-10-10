@@ -3,28 +3,34 @@ CLASS net/minecraft/client/gui/screens/inventory/EffectsInInventory
 		ARG 1 screen
 	METHOD getEffectName (Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/network/chat/Component;
 		ARG 1 effect
-	METHOD renderBackgrounds (Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/Iterable;Z)V
-		ARG 1 guiGraphics
-		ARG 2 x
-		ARG 3 y
-		ARG 4 activeEffects
-		ARG 5 large
-	METHOD renderEffects (Lnet/minecraft/client/gui/GuiGraphics;II)V
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;II)V
 		ARG 1 guiGraphics
 		ARG 2 mouseX
 		ARG 3 mouseY
-	METHOD renderIcons (Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/Iterable;Z)V
+	METHOD renderBackground (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IIZI)I
 		ARG 1 guiGraphics
-		ARG 2 x
-		ARG 3 y
-		ARG 4 activeEffects
-		ARG 5 large
-	METHOD renderLabels (Lnet/minecraft/client/gui/GuiGraphics;IILjava/lang/Iterable;)V
+		ARG 2 font
+		ARG 3 effectName
+		ARG 4 x
+		ARG 5 y
+		ARG 6 isAmbient
+		ARG 7 width
+	METHOD renderEffects (Lnet/minecraft/client/gui/GuiGraphics;Ljava/util/Collection;IIIII)V
 		ARG 1 guiGraphics
-		ARG 2 x
-		ARG 3 y
-		ARG 4 activeEffects
-	METHOD renderTooltip (Lnet/minecraft/client/gui/GuiGraphics;II)V
+		ARG 2 activeEffects
+		ARG 3 x
+		ARG 4 height
+		ARG 5 mouseX
+		ARG 6 mouseY
+		ARG 7 width
+	METHOD renderText (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/Font;IIIIII)V
 		ARG 1 guiGraphics
-		ARG 2 mouseX
-		ARG 3 mouseY
+		ARG 2 effect
+		ARG 3 effectName
+		ARG 4 font
+		ARG 5 x
+		ARG 6 y
+		ARG 7 width
+		ARG 8 height
+		ARG 9 mouseX
+		ARG 10 mouseY

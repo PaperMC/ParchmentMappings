@@ -15,7 +15,7 @@ CLASS net/minecraft/client/Camera
 	METHOD setRotation (FF)V
 		ARG 1 yRot
 		ARG 2 xRot
-	METHOD setup (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/world/entity/Entity;ZZF)V
+	METHOD setup (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;ZZF)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 detached

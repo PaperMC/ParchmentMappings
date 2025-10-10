@@ -8,11 +8,8 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractCommandBlockEditScreen
 		ARG 1 button
 	METHOD onEdited (Ljava/lang/String;)V
 		ARG 1 command
-	METHOD populateAndSendPacket (Lnet/minecraft/world/level/BaseCommandBlock;)V
-		ARG 1 commandBlock
-	METHOD resize (Lnet/minecraft/client/Minecraft;II)V
-		ARG 1 minecraft
-		ARG 2 width
-		ARG 3 height
+	METHOD resize (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD updatePreviousOutput (Z)V
 		ARG 1 trackOutput

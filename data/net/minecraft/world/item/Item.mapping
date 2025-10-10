@@ -30,8 +30,6 @@ CLASS net/minecraft/world/item/Item
 		ARG 1 stack
 	METHOD getBarWidth (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 stack
-	METHOD getDamageSource (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;
-		ARG 1 entity
 	METHOD getDescriptionId ()Ljava/lang/String;
 		COMMENT Returns the unlocalized name of this item.
 	METHOD getDestroySpeed (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)F
@@ -39,6 +37,8 @@ CLASS net/minecraft/world/item/Item
 		ARG 2 state
 	METHOD getId (Lnet/minecraft/world/item/Item;)I
 		ARG 0 item
+	METHOD getItemDamageSource (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;
+		ARG 1 entity
 	METHOD getName (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/network/chat/Component;
 		ARG 1 stack
 	METHOD getPlayerPOVHitResult (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/ClipContext$Fluid;)Lnet/minecraft/world/phys/BlockHitResult;
@@ -177,6 +177,8 @@ CLASS net/minecraft/world/item/Item
 			ARG 0 key
 		METHOD lambda$static$1 (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/String;
 			ARG 0 key
+		METHOD nautilusArmor (Lnet/minecraft/world/item/equipment/ArmorMaterial;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 material
 		METHOD overrideDescription (Ljava/lang/String;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 description
 		METHOD pickaxe (Lnet/minecraft/world/item/ToolMaterial;FF)Lnet/minecraft/world/item/Item$Properties;
@@ -199,6 +201,17 @@ CLASS net/minecraft/world/item/Item
 			ARG 3 attackSpeed
 		METHOD spawnEgg (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 type
+		METHOD spear (Lnet/minecraft/world/item/ToolMaterial;FFFFFFFFF)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 material
+			ARG 2 swingDurationSeconds
+			ARG 3 damageMultiplier
+			ARG 4 delaySeconds
+			ARG 5 dismountMaxDurationSeconds
+			ARG 6 dismountMinSpeed
+			ARG 7 knockbackMaxDurationSeconds
+			ARG 8 knockbackMinSpeed
+			ARG 9 damageMaxDurationSeconds
+			ARG 10 damageMinRelativeSpeed
 		METHOD stacksTo (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 maxStackSize
 		METHOD sword (Lnet/minecraft/world/item/ToolMaterial;FF)Lnet/minecraft/world/item/Item$Properties;

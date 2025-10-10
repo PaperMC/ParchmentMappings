@@ -150,8 +150,6 @@ CLASS net/minecraft/world/level/Level
 		ARG 2 chunkZ
 	METHOD getClientLeafTintColor (Lnet/minecraft/core/BlockPos;)I
 		ARG 1 pos
-	METHOD getCurrentDifficultyAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/DifficultyInstance;
-		ARG 1 pos
 	METHOD getEntities (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;
 		COMMENT Gets all entities within the specified AABB excluding the one passed into it.
 		ARG 1 entity

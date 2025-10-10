@@ -12,8 +12,3 @@ CLASS com/mojang/blaze3d/pipeline/RenderTarget
 	METHOD resize (II)V
 		ARG 1 width
 		ARG 2 height
-	METHOD setFilterMode (Lcom/mojang/blaze3d/textures/FilterMode;)V
-		ARG 1 filterMode
-	METHOD setFilterMode (Lcom/mojang/blaze3d/textures/FilterMode;Z)V
-		ARG 1 filterMode
-		ARG 2 force

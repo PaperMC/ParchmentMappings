@@ -1,9 +1,10 @@
 CLASS net/minecraft/world/entity/npc/AbstractVillager
-	METHOD addOffersFromItemListings (Lnet/minecraft/world/item/trading/MerchantOffers;[Lnet/minecraft/world/entity/npc/VillagerTrades$ItemListing;I)V
+	METHOD addOffersFromItemListings (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/trading/MerchantOffers;[Lnet/minecraft/world/entity/npc/VillagerTrades$ItemListing;I)V
 		COMMENT Adds a limited number of trades to the given {@link net.minecraft.world.item.trading.MerchantOffers}.
-		ARG 1 givenMerchantOffers
-		ARG 2 newTrades
-		ARG 3 maxNumbers
+		ARG 1 level
+		ARG 2 givenMerchantOffers
+		ARG 3 newTrades
+		ARG 4 maxNumbers
 	METHOD addParticlesAroundSelf (Lnet/minecraft/core/particles/ParticleOptions;)V
 		ARG 1 options
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
@@ -28,3 +29,5 @@ CLASS net/minecraft/world/entity/npc/AbstractVillager
 		ARG 1 player
 	METHOD setUnhappyCounter (I)V
 		ARG 1 unhappyCounter
+	METHOD updateTrades (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level

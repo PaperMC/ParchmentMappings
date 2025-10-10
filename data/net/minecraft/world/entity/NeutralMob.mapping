@@ -19,13 +19,15 @@ CLASS net/minecraft/world/entity/NeutralMob
 	METHOD setLastHurtByMob (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Hint to AI tasks that we were attacked by the passed LivingEntity and should retaliate. Is not guaranteed to change our actual active target (for example if we are currently busy attacking someone else)
 		ARG 1 livingEntity
-	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
-		ARG 1 persistentAngerTarget
-	METHOD setRemainingPersistentAngerTime (I)V
-		ARG 1 remainingPersistentAngerTime
+	METHOD setPersistentAngerEndTime (J)V
+		ARG 1 absoluteTime
+	METHOD setPersistentAngerTarget (Lnet/minecraft/world/entity/EntityReference;)V
+		ARG 1 target
 	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Sets the active target the Task system uses for tracking
 		ARG 1 target
+	METHOD setTimeToRemainAngry (J)V
+		ARG 1 time
 	METHOD updatePersistentAnger (Lnet/minecraft/server/level/ServerLevel;Z)V
 		ARG 1 level
 		ARG 2 updateAnger

@@ -21,9 +21,5 @@ CLASS net/minecraft/world/entity/animal/IronGolem
 	METHOD playStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 block
-	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
-		ARG 1 target
 	METHOD setPlayerCreated (Z)V
 		ARG 1 playerCreated
-	METHOD setRemainingPersistentAngerTime (I)V
-		ARG 1 time

@@ -51,10 +51,6 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 1 hasStung
 	METHOD setHivePos (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 hivePos
-	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
-		ARG 1 target
-	METHOD setRemainingPersistentAngerTime (I)V
-		ARG 1 time
 	METHOD setRolling (Z)V
 		ARG 1 isRolling
 	METHOD setSavedFlowerPos (Lnet/minecraft/core/BlockPos;)V

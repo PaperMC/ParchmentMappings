@@ -1,10 +1,10 @@
 CLASS net/minecraft/world/entity/vehicle/MinecartTNT
-	METHOD activateMinecart (IIIZ)V
+	METHOD activateMinecart (Lnet/minecraft/server/level/ServerLevel;IIIZ)V
 		COMMENT Called every tick the minecart is on an activator rail.
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 receivingPower
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 receivingPower
 	METHOD damageSourceIgnitesTnt (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 0 damageSource
 	METHOD explode (Lnet/minecraft/world/damagesource/DamageSource;D)V

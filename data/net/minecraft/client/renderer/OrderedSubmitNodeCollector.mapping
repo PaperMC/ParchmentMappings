@@ -23,10 +23,6 @@ CLASS net/minecraft/client/renderer/OrderedSubmitNodeCollector
 		ARG 1 poseStack
 		ARG 2 entityRenderState
 		ARG 3 rotation
-	METHOD submitHitbox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/renderer/entity/state/HitboxesRenderState;)V
-		ARG 1 poseStack
-		ARG 2 entityRenderState
-		ARG 3 hitboxesRenderState
 	METHOD submitItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/item/ItemDisplayContext;III[ILjava/util/List;Lnet/minecraft/client/renderer/RenderType;Lnet/minecraft/client/renderer/item/ItemStackRenderState$FoilType;)V
 		ARG 1 poseStack
 		ARG 2 displayContext

@@ -6,18 +6,6 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 	METHOD createRenderState (Lnet/minecraft/world/entity/Entity;F)Lnet/minecraft/client/renderer/entity/state/EntityRenderState;
 		ARG 1 entity
 		ARG 2 partialTick
-	METHOD extractAdditionalHitboxes (Lnet/minecraft/world/entity/Entity;Lcom/google/common/collect/ImmutableList$Builder;F)V
-		ARG 1 entity
-		ARG 2 hitboxes
-		ARG 3 partialTick
-	METHOD extractHitboxes (Lnet/minecraft/world/entity/Entity;FZ)Lnet/minecraft/client/renderer/entity/state/HitboxesRenderState;
-		ARG 1 entity
-		ARG 2 partialTick
-		ARG 3 green
-	METHOD extractHitboxes (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;F)V
-		ARG 1 entity
-		ARG 2 reusedState
-		ARG 3 partialTick
 	METHOD extractRenderState (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/entity/state/EntityRenderState;F)V
 		ARG 1 entity
 		ARG 2 reusedState

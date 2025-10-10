@@ -1,34 +1,34 @@
 CLASS net/minecraft/world/RandomSequences
-	METHOD <init> (J)V
-		ARG 1 worldSeed
-	METHOD <init> (JIZZLjava/util/Map;)V
-		ARG 1 worldSeed
-		ARG 3 salt
-		ARG 4 includeWorldSeed
-		ARG 5 includeSequenceId
-		ARG 6 sequences
-	METHOD codec (J)Lcom/mojang/serialization/Codec;
-		ARG 0 worldSeed
-	METHOD createSequence (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/RandomSequence;
+	METHOD <init> (IZZLjava/util/Map;)V
+		ARG 1 salt
+		ARG 2 includeWorldSeed
+		ARG 3 includeSequenceId
+		ARG 4 sequences
+	METHOD createSequence (Lnet/minecraft/resources/ResourceLocation;J)Lnet/minecraft/world/RandomSequence;
 		ARG 1 location
-	METHOD createSequence (Lnet/minecraft/resources/ResourceLocation;IZZ)Lnet/minecraft/world/RandomSequence;
+		ARG 2 seed
+	METHOD createSequence (Lnet/minecraft/resources/ResourceLocation;JIZZ)Lnet/minecraft/world/RandomSequence;
 		ARG 1 location
-		ARG 2 salt
-		ARG 3 includeWorldSeed
-		ARG 4 includeSequenceId
+		ARG 2 seed
+		ARG 4 salt
+		ARG 5 includeWorldSeed
+		ARG 6 includeSequenceId
 	METHOD forAllSequences (Ljava/util/function/BiConsumer;)V
 		ARG 1 action
-	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/RandomSource;
+	METHOD get (Lnet/minecraft/resources/ResourceLocation;J)Lnet/minecraft/util/RandomSource;
 		ARG 1 location
-	METHOD lambda$codec$6 (JLcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 2 instance
-	METHOD reset (Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 sequence
-	METHOD reset (Lnet/minecraft/resources/ResourceLocation;IZZ)V
+		ARG 2 seed
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD reset (Lnet/minecraft/resources/ResourceLocation;J)V
 		ARG 1 sequence
 		ARG 2 seed
-		ARG 3 includeWorldSeed
-		ARG 4 includeSequenceId
+	METHOD reset (Lnet/minecraft/resources/ResourceLocation;JIZZ)V
+		ARG 1 sequence
+		ARG 2 seed
+		ARG 4 salt
+		ARG 5 includeWorldSeed
+		ARG 6 includeSequenceId
 	METHOD setSeedDefaults (IZZ)V
 		ARG 1 salt
 		ARG 2 includeWorldSeed

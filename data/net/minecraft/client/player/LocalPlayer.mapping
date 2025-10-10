@@ -76,8 +76,6 @@ CLASS net/minecraft/client/player/LocalPlayer
 	METHOD openItemGui (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 stack
 		ARG 2 hand
-	METHOD openMinecartCommandBlock (Lnet/minecraft/world/level/BaseCommandBlock;)V
-		ARG 1 commandBlock
 	METHOD openStructureBlock (Lnet/minecraft/world/level/block/entity/StructureBlockEntity;)V
 		ARG 1 structure
 	METHOD playSound (Lnet/minecraft/sounds/SoundEvent;FF)V
@@ -92,13 +90,15 @@ CLASS net/minecraft/client/player/LocalPlayer
 		COMMENT Called every tick when the player is on foot. Performs all the things that normally happen during movement.
 	METHOD setDoLimitedCrafting (Z)V
 		ARG 1 doLimitedCrafting
+	METHOD setExperienceDisplayStartTickToTickCount (F)V
+		ARG 1 currentXP
 	METHOD setExperienceValues (FII)V
 		COMMENT Sets the current XP, total XP, and level number.
 		ARG 1 currentXP
 		ARG 2 maxXP
 		ARG 3 level
-	METHOD setPermissionLevel (I)V
-		ARG 1 permissionLevel
+	METHOD setPermissions (Lnet/minecraft/server/permissions/PermissionSet;)V
+		ARG 1 permissions
 	METHOD setShowDeathScreen (Z)V
 		ARG 1 show
 	METHOD startUsingItem (Lnet/minecraft/world/InteractionHand;)V

@@ -17,10 +17,9 @@ CLASS net/minecraft/client/gui/screens/PresetFlatWorldScreen
 	METHOD getLayersInfoFromString (Lnet/minecraft/core/HolderGetter;Ljava/lang/String;)Ljava/util/List;
 		ARG 0 blockGetter
 		ARG 1 layerInfo
-	METHOD resize (Lnet/minecraft/client/Minecraft;II)V
-		ARG 1 minecraft
-		ARG 2 width
-		ARG 3 height
+	METHOD resize (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD save (Lnet/minecraft/world/level/levelgen/flat/FlatLevelGeneratorSettings;)Ljava/lang/String;
 		ARG 0 levelGeneratorSettings
 	METHOD updateButtonValidity (Z)V

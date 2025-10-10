@@ -1,4 +1,3 @@
 CLASS net/minecraft/client/resources/metadata/texture/TextureMetadataSection
-	METHOD <init> (ZZ)V
-		ARG 1 blur
-		ARG 2 clamp
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

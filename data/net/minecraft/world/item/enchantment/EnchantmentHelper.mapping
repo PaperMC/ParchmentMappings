@@ -3,6 +3,9 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 0 stack
 	METHOD createBook (Lnet/minecraft/world/item/enchantment/EnchantmentInstance;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 enchantment
+	METHOD doLungeEffects (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 level
+		ARG 1 entity
 	METHOD doPostAttackEffects (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 0 level
 		ARG 1 entity

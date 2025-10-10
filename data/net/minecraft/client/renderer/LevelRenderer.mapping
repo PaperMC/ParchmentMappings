@@ -13,11 +13,11 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 4 ticks
 		ARG 5 cloudColor
 		ARG 6 cloudHeight
-	METHOD addLateDebugPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/world/phys/Vec3;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lnet/minecraft/client/renderer/culling/Frustum;)V
+	METHOD addLateDebugPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/state/CameraRenderState;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lorg/joml/Matrix4f;)V
 		ARG 1 frameGraphBuilder
-		ARG 2 cameraPosition
+		ARG 2 cameraRenderState
 		ARG 3 shaderFog
-		ARG 4 frustum
+		ARG 4 frustumMatrix
 	METHOD addMainPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/culling/Frustum;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;ZLnet/minecraft/client/renderer/state/LevelRenderState;Lnet/minecraft/client/DeltaTracker;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 frameGraphBuilder
 		ARG 2 frustum
@@ -36,10 +36,9 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 frameGraphBuilder
 		ARG 2 camera
 		ARG 3 shaderFog
-	METHOD addWeatherPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/world/phys/Vec3;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
+	METHOD addWeatherPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
 		ARG 1 frameGraphBuilder
-		ARG 2 cameraPosition
-		ARG 3 shaderFog
+		ARG 2 shaderFog
 	METHOD allChanged ()V
 		COMMENT Loads all renderers and sets up the basic options usage.
 	METHOD applyFrustum (Lnet/minecraft/client/renderer/culling/Frustum;)V
@@ -124,7 +123,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 2 poseStack
 		ARG 3 sort
 		ARG 4 renderState
-	METHOD renderHitOutline (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDLnet/minecraft/client/renderer/state/BlockOutlineRenderState;I)V
+	METHOD renderHitOutline (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDLnet/minecraft/client/renderer/state/BlockOutlineRenderState;IF)V
 		ARG 1 poseStack
 		ARG 2 consumer
 		ARG 3 camX
@@ -132,6 +131,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 7 camZ
 		ARG 9 renderState
 		ARG 10 color
+		ARG 11 lineWidth
 	METHOD renderLevel (Lcom/mojang/blaze3d/resource/GraphicsResourceAllocator;Lnet/minecraft/client/DeltaTracker;ZLnet/minecraft/client/Camera;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lorg/joml/Vector4f;Z)V
 		ARG 1 graphicsResourceAllocator
 		ARG 2 deltaTracker

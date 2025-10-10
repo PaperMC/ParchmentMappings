@@ -17,10 +17,6 @@ CLASS net/minecraft/world/entity/animal/PolarBear
 	METHOD playStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 block
-	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
-		ARG 1 target
-	METHOD setRemainingPersistentAngerTime (I)V
-		ARG 1 time
 	METHOD setStanding (Z)V
 		ARG 1 standing
 	METHOD tick ()V
