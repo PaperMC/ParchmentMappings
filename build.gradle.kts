@@ -203,7 +203,7 @@ publishing {
     }
     repositories {
         maven("https://artifactory.papermc.io/artifactory/releases/") {
-            name = "paperSnapshots"
+            name = "paper"
             credentials(PasswordCredentials::class)
         }
     }

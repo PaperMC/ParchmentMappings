@@ -1,4 +1,4 @@
-name: Deploy Snapshot
+name: Deploy Release
 on:
   push:
     branches: ['main']
@@ -12,7 +12,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Snapshot
+    name: Deploy Release
     runs-on: 'ubuntu-latest'
     steps:
       - uses: actions/checkout@v5
@@ -23,8 +23,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v5
       - name: Validate data
         run: ./gradlew validateData --stacktrace --console=colored
-      - name: Deploy snapshot version
-        run: ./gradlew publishExportPublicationToPaperSnapshotsRepository --stacktrace --console=colored
+      - name: Deploy release version
+        run: ./gradlew publishExportPublicationToPaperRepository --stacktrace --console=colored
         env:
-          ORG_GRADLE_PROJECT_paperSnapshotsUsername: ${{ secrets.ARTIFACTORY_USERNAME }}
-          ORG_GRADLE_PROJECT_paperSnapshotsPassword: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          ORG_GRADLE_PROJECT_paperUsername: ${{ secrets.ARTIFACTORY_USERNAME }}
+          ORG_GRADLE_PROJECT_paperPassword: ${{ secrets.ARTIFACTORY_PASSWORD }}
