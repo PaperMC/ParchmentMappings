@@ -3,7 +3,7 @@ CLASS net/minecraft/client/renderer/debug/SupportBlockRenderer
 		ARG 1 minecraft
 	METHOD drawHighlights (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/Entity;Ljava/util/function/DoubleSupplier;FFF)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 bufferSource
 		ARG 3 camX
 		ARG 5 camY
 		ARG 7 camZ
@@ -20,10 +20,10 @@ CLASS net/minecraft/client/renderer/debug/SupportBlockRenderer
 		ARG 3 camX
 		ARG 5 camY
 		ARG 7 camZ
-		ARG 9 buffer
+		ARG 9 bufferSource
 		ARG 10 bias
 		ARG 12 red
 		ARG 13 green
 		ARG 14 blue
 	METHOD lambda$drawHighlights$2 (Ljava/util/function/DoubleSupplier;Lnet/minecraft/world/entity/Entity;Lcom/mojang/blaze3d/vertex/PoseStack;DDDLnet/minecraft/client/renderer/MultiBufferSource;FFFLnet/minecraft/core/BlockPos;)V
-		ARG 14 blockPos
+		ARG 14 pos

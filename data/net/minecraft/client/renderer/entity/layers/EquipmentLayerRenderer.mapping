@@ -26,4 +26,4 @@ CLASS net/minecraft/client/renderer/entity/layers/EquipmentLayerRenderer
 		ARG 8 packedLight
 		ARG 9 texture
 		ARG 10 outlineColor
-		ARG 11 key
+		ARG 11 order

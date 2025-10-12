@@ -1,6 +1,6 @@
 CLASS net/minecraft/util/Mth
 	FIELD MULTIPLY_DE_BRUIJN_BIT_POSITION [I
-		COMMENT Though it looks like an array, this is really more like a mapping. Key (index of this array) is the upper 5 bits of the result of multiplying a 32-bit unsigned integer by the B(2, 5) De Bruijn sequence 0x077CB531. Value (value stored in the array) is the unique index (from the right) of the leftmo
+		COMMENT Though it looks like an array, this is really more like a mapping. Key (index of this array) is the upper 5 bits of the result of multiplying a 32-bit unsigned integer by the B(2, 5) De Bruijn sequence 0x077CB531. Value (value stored in the array) is the unique index (from the right) of the leftmost
 	METHOD abs (F)F
 		ARG 0 value
 	METHOD abs (I)I
@@ -178,7 +178,7 @@ CLASS net/minecraft/util/Mth
 		ARG 0 number
 		ARG 1 multiple
 	METHOD isPowerOfTwo (I)Z
-		COMMENT Is the given value a power of two?  (1, 2, 4, 8, 16, ...)
+		COMMENT Is the given value a power of two? (1, 2, 4, 8, 16, ...)
 		ARG 0 value
 	METHOD length (DD)D
 		ARG 0 xDistance
@@ -252,7 +252,7 @@ CLASS net/minecraft/util/Mth
 		COMMENT Long version of floor()
 		ARG 0 value
 	METHOD log2 (I)I
-		COMMENT Efficiently calculates the floor of the base-2 log of an integer value.  This is effectively the index of the highest bit that is set.  For example, if the number in binary is 0...100101, this will return 5.
+		COMMENT Efficiently calculates the floor of the base-2 log of an integer value. This is effectively the index of the highest bit that is set. For example, if the number in binary is 0...100101, this will return 5.
 		ARG 0 value
 	METHOD map (DDDDD)D
 		ARG 0 input
@@ -334,7 +334,7 @@ CLASS net/minecraft/util/Mth
 		ARG 2 start
 		ARG 4 end
 	METHOD rotLerp (FFF)F
-		COMMENT Linearly interpolates an angle between the start between the start and end values given as degrees.
+		COMMENT Linearly interpolates an angle between the start and end values given as degrees.
 		ARG 0 delta
 			COMMENT A value between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value)
 		ARG 1 start

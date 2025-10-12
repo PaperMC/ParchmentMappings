@@ -23,11 +23,11 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 		ARG 2 reusedState
 		ARG 3 partialTick
 	METHOD extractShadow (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/Level;)V
-		ARG 1 renderState
+		ARG 1 reusedState
 		ARG 2 minecraft
 		ARG 3 level
 	METHOD extractShadowPiece (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/world/level/Level;FLnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/chunk/ChunkAccess;)V
-		ARG 1 renderState
+		ARG 1 reusedState
 		ARG 2 level
 		ARG 3 shadowStrength
 		ARG 4 pos
@@ -46,7 +46,7 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 		ARG 1 entity
 	METHOD getPackedLightCoords (Lnet/minecraft/world/entity/Entity;F)I
 		ARG 1 entity
-		ARG 2 partialTicks
+		ARG 2 partialTick
 	METHOD getRenderOffset (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 renderState
 	METHOD getServerSideEntity (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
@@ -60,7 +60,7 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 		ARG 2 pos
 	METHOD shouldRender (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/culling/Frustum;DDD)Z
 		ARG 1 livingEntity
-		ARG 2 camera
+		ARG 2 frustum
 		ARG 3 camX
 		ARG 5 camY
 		ARG 7 camZ

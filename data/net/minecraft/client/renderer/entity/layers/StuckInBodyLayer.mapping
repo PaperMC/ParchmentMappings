@@ -16,4 +16,4 @@ CLASS net/minecraft/client/renderer/entity/layers/StuckInBodyLayer
 		ARG 4 x
 		ARG 5 y
 		ARG 6 z
-		ARG 7 outlineColor
+		ARG 7 color

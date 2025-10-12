@@ -1,7 +1,7 @@
 CLASS net/minecraft/server/commands/BanPlayerCommands
 	METHOD banPlayers (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/network/chat/Component;)I
 		ARG 0 source
-		ARG 1 gameProfiles
+		ARG 1 players
 		ARG 2 reason
 	METHOD lambda$register$1 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context

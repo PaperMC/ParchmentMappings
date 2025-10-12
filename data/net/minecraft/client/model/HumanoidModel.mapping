@@ -15,19 +15,19 @@ CLASS net/minecraft/client/model/HumanoidModel
 		ARG 1 root
 		ARG 2 renderType
 	METHOD createArmorMeshSet (Ljava/util/function/Function;Lnet/minecraft/client/model/geom/builders/CubeDeformation;Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/renderer/entity/ArmorModelSet;
-		ARG 0 meshCreator
-		ARG 1 innerCubeDeformation
-		ARG 2 outerCubeDeformation
+		ARG 0 definition
+		ARG 1 innerDeformation
+		ARG 2 outerDeformation
 	METHOD createArmorMeshSet (Lnet/minecraft/client/model/geom/builders/CubeDeformation;Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/renderer/entity/ArmorModelSet;
-		ARG 0 innerArmorCubeDeformation
-		ARG 1 outerArmorCubeDeformation
+		ARG 0 innerDeformation
+		ARG 1 outerDeformation
 	METHOD createBaseArmorMesh (Lnet/minecraft/client/model/geom/builders/CubeDeformation;)Lnet/minecraft/client/model/geom/builders/MeshDefinition;
 		ARG 0 cubeDeformation
 	METHOD createMesh (Lnet/minecraft/client/model/geom/builders/CubeDeformation;F)Lnet/minecraft/client/model/geom/builders/MeshDefinition;
 		ARG 0 cubeDeformation
 		ARG 1 yOffset
 	METHOD getArm (Lnet/minecraft/world/entity/HumanoidArm;)Lnet/minecraft/client/model/geom/ModelPart;
-		ARG 1 side
+		ARG 1 arm
 	METHOD poseBlockingArm (Lnet/minecraft/client/model/geom/ModelPart;Z)V
 		ARG 1 arm
 		ARG 2 isRightArm

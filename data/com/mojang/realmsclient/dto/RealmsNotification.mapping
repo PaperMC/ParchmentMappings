@@ -29,6 +29,8 @@ CLASS com/mojang/realmsclient/dto/RealmsNotification
 		METHOD buildScreen (Lnet/minecraft/client/gui/screens/Screen;Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/components/PopupScreen;
 			ARG 1 backgroundScreen
 			ARG 2 uuidOutput
+		METHOD lambda$buildScreen$0 (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/gui/components/PopupScreen;Z)V
+			ARG 4 confirmed
 		METHOD parse (Lcom/mojang/realmsclient/dto/RealmsNotification;Lcom/google/gson/JsonObject;)Lcom/mojang/realmsclient/dto/RealmsNotification$InfoPopup;
 			ARG 0 notification
 			ARG 1 json

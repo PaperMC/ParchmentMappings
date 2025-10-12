@@ -56,7 +56,7 @@ CLASS net/minecraft/commands/arguments/NbtPathArgument
 		METHOD <init> (Ljava/lang/String;[Lnet/minecraft/commands/arguments/NbtPathArgument$Node;Lit/unimi/dsi/fastutil/objects/Object2IntMap;)V
 			ARG 1 original
 			ARG 2 nodes
-			ARG 3 nodeToOriginPosition
+			ARG 3 nodeToOriginalPosition
 		METHOD apply (Ljava/util/List;Ljava/util/function/Function;)I
 			ARG 0 tags
 			ARG 1 function

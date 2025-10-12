@@ -4,7 +4,7 @@ CLASS net/minecraft/client/renderer/debug/PoiDebugRenderer
 	METHOD getTicketHolderNames (Lnet/minecraft/util/debug/DebugPoiInfo;ZLnet/minecraft/util/debug/DebugValueAccess;)Ljava/util/List;
 		ARG 1 poiInfo
 		ARG 2 potential
-		ARG 3 debugValueAccess
+		ARG 3 valueAccess
 	METHOD highlightPoi (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 poseStack
 		ARG 1 bufferSource
@@ -18,7 +18,7 @@ CLASS net/minecraft/client/renderer/debug/PoiDebugRenderer
 		ARG 1 poseStack
 		ARG 2 bufferSource
 		ARG 3 poiInfo
-		ARG 4 debugValueAccess
+		ARG 4 valueAccess
 	METHOD renderTextOverPoi (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;Lnet/minecraft/util/debug/DebugPoiInfo;II)V
 		ARG 0 poseStack
 		ARG 1 bufferSource

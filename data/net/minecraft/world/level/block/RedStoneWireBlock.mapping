@@ -32,8 +32,8 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 2 state
 		ARG 3 pos
 	METHOD getDirectSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
-		ARG 1 blockState
-		ARG 2 blockAccess
+		ARG 1 state
+		ARG 2 level
 		ARG 3 pos
 		ARG 4 side
 	METHOD getMissingConnections (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
@@ -46,8 +46,8 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 3 pos
 		ARG 4 context
 	METHOD getSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
-		ARG 1 blockState
-		ARG 2 blockAccess
+		ARG 1 state
+		ARG 2 level
 		ARG 3 pos
 		ARG 4 side
 	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
@@ -66,7 +66,7 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 oldState
-		ARG 5 isMoving
+		ARG 5 movedByPiston
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 rotation

@@ -10,7 +10,7 @@ CLASS net/minecraft/util/debug/DebugValueAccess
 		ARG 2 action
 	METHOD forEachEvent (Lnet/minecraft/util/debug/DebugSubscription;Lnet/minecraft/util/debug/DebugValueAccess$EventVisitor;)V
 		ARG 1 subscription
-		ARG 2 action
+		ARG 2 visitor
 	METHOD getBlockValue (Lnet/minecraft/util/debug/DebugSubscription;Lnet/minecraft/core/BlockPos;)Ljava/lang/Object;
 		ARG 1 subscription
 		ARG 2 pos

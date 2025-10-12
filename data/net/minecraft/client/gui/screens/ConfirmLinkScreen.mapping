@@ -62,3 +62,7 @@ CLASS net/minecraft/client/gui/screens/ConfirmLinkScreen
 		ARG 1 extraInfo
 	METHOD copyToClipboard ()V
 		COMMENT Copies the link to the system clipboard.
+	METHOD lambda$confirmLinkNow$3 (Ljava/lang/String;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Z)V
+		ARG 3 confirmed
+	METHOD lambda$confirmLinkNow$4 (Ljava/net/URI;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Z)V
+		ARG 3 confirmed

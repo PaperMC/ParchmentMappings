@@ -4,13 +4,13 @@ CLASS net/minecraft/world/entity/ai/goal/AvoidEntityGoal
 	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;Ljava/lang/Class;FDD)V
 		ARG 1 mob
 		ARG 2 avoidClass
-		ARG 3 maxDistance
+		ARG 3 maxDist
 		ARG 4 walkSpeedModifier
 		ARG 6 sprintSpeedModifier
 	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;Ljava/lang/Class;FDDLjava/util/function/Predicate;)V
 		ARG 1 mob
 		ARG 2 avoidClass
-		ARG 3 maxDistance
+		ARG 3 maxDist
 		ARG 4 walkSpeedModifier
 		ARG 6 sprintSpeedModifier
 		ARG 8 predicateOnAvoidEntity
@@ -19,12 +19,12 @@ CLASS net/minecraft/world/entity/ai/goal/AvoidEntityGoal
 		ARG 1 mob
 		ARG 2 avoidClass
 		ARG 3 avoidPredicate
-		ARG 4 maxDistance
+		ARG 4 maxDist
 		ARG 5 walkSpeedModifier
 		ARG 7 sprintSpeedModifier
 		ARG 9 predicateOnAvoidEntity
 	METHOD canContinueToUse ()Z
-		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+		COMMENT Returns whether an in-progress Goal should continue executing
 	METHOD canUse ()Z
 		COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	METHOD lambda$new$0 (Lnet/minecraft/world/entity/LivingEntity;)Z

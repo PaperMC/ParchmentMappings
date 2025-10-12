@@ -6,7 +6,7 @@ CLASS net/minecraft/world/entity/vehicle/MinecartBehavior
 	METHOD getMaxSpeed (Lnet/minecraft/server/level/ServerLevel;)D
 		ARG 1 level
 	METHOD lerpMotion (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 deltaMovement
+		ARG 1 movement
 	METHOD moveAlongTrack (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD setDeltaMovement (DDD)V

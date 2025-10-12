@@ -16,19 +16,19 @@ CLASS net/minecraft/resources/RegistryOps
 		ARG 0 dynamic
 		ARG 1 registries
 	METHOD lambda$retrieveElement$10 (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/DynamicOps;)Lcom/mojang/serialization/DataResult;
-		ARG 2 dynamicOps
+		ARG 2 ops
 	METHOD lambda$retrieveElement$6 (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/RegistryOps$RegistryInfo;)Ljava/util/Optional;
 		ARG 1 registryInfo
 	METHOD lambda$retrieveGetter$0 (Lnet/minecraft/resources/RegistryOps$RegistryInfo;)Lcom/mojang/serialization/DataResult;
 		ARG 0 registryInfo
 	METHOD lambda$retrieveGetter$4 (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/DynamicOps;)Lcom/mojang/serialization/DataResult;
-		ARG 1 dynamicOps
+		ARG 1 ops
 	METHOD owner (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 1 registryKey
 	METHOD retrieveElement (Lnet/minecraft/resources/ResourceKey;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
 		ARG 0 key
 	METHOD retrieveGetter (Lnet/minecraft/resources/ResourceKey;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
-		ARG 0 registryOps
+		ARG 0 registryKey
 	METHOD withParent (Lcom/mojang/serialization/DynamicOps;)Lnet/minecraft/resources/RegistryOps;
 		ARG 1 ops
 	CLASS RegistryInfo

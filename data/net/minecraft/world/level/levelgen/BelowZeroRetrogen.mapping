@@ -6,7 +6,7 @@ CLASS net/minecraft/world/level/levelgen/BelowZeroRetrogen
 		ARG 1 chunk
 	METHOD getBiomeResolver (Lnet/minecraft/world/level/biome/BiomeResolver;Lnet/minecraft/world/level/chunk/ChunkAccess;)Lnet/minecraft/world/level/biome/BiomeResolver;
 		ARG 0 resolver
-		ARG 1 access
+		ARG 1 chunk
 	METHOD hasBedrockHole (II)Z
 		ARG 1 x
 		ARG 2 z

@@ -38,6 +38,8 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/JigsawStructure
 		ARG 0 structure
 	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/util/Optional;
 		ARG 0 structure
+	METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure$MaxDistance;
+		ARG 0 structure
 	METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/util/List;
 		ARG 0 structure
 	METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;

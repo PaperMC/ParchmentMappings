@@ -4,7 +4,7 @@ CLASS net/minecraft/server/commands/BossBarCommands
 		ARG 1 id
 		ARG 2 displayName
 	METHOD getBossBar (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/server/bossevents/CustomBossEvent;
-		ARG 0 source
+		ARG 0 context
 	METHOD getMax (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/bossevents/CustomBossEvent;)I
 		ARG 0 source
 		ARG 1 bossbar

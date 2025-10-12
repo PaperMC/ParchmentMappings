@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/components/EditBox
 	FIELD canLoseFocus Z
-		COMMENT if true the textbox can lose focus by clicking elsewhere on the screen
+		COMMENT if {@code true} the textbox can lose focus by clicking elsewhere on the screen
 	FIELD displayPos I
 		COMMENT The current character index that should be used as start of the rendered text.
 	FIELD filter Ljava/util/function/Predicate;
@@ -8,7 +8,7 @@ CLASS net/minecraft/client/gui/components/EditBox
 	FIELD highlightPos I
 		COMMENT other selection position, maybe the same as the cursor
 	FIELD isEditable Z
-		COMMENT If this value is true along with isFocused, keyTyped will process the keys.
+		COMMENT If this value is {@code true} along with isFocused, keyTyped will process the keys.
 	FIELD value Ljava/lang/String;
 		COMMENT Has the current text being edited on the textbox.
 	METHOD <init> (Lnet/minecraft/client/gui/Font;IIIILnet/minecraft/client/gui/components/EditBox;Lnet/minecraft/network/chat/Component;)V
@@ -35,15 +35,15 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 formatter
 	METHOD applyFormat (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
 		ARG 1 text
-		ARG 2 displayPos
+		ARG 2 index
 	METHOD deleteChars (I)V
 		COMMENT Deletes the given number of characters from the current cursor's position, unless there is currently a selection, in which case the selection is deleted instead.
 		ARG 1 num
 	METHOD deleteCharsToPos (I)V
 		ARG 1 num
 	METHOD deleteText (IZ)V
-		ARG 1 num
-		ARG 2 words
+		ARG 1 count
+		ARG 2 hasControlDown
 	METHOD deleteWords (I)V
 		COMMENT Deletes the given number of words from the current cursor's position, unless there is currently a selection, in which case the selection is deleted instead.
 		ARG 1 num
@@ -54,11 +54,11 @@ CLASS net/minecraft/client/gui/components/EditBox
 	METHOD getCursorPosition ()I
 		COMMENT Returns the current position of the cursor.
 	METHOD getHighlighted ()Ljava/lang/String;
-		COMMENT Returns the text between the cursor and selectionEnd.
+		COMMENT Returns the text between the cursorPos and highlightPos.
 	METHOD getInnerWidth ()I
 		COMMENT Returns the width of the textbox depending on if background drawing is enabled.
 	METHOD getMaxLength ()I
-		COMMENT Returns the maximum number of character that can be contained in this textbox.
+		COMMENT Returns the maximum number of characters that can be contained in this textbox.
 	METHOD getScreenX (I)I
 		ARG 1 charNum
 	METHOD getValue ()Ljava/lang/String;
@@ -79,14 +79,14 @@ CLASS net/minecraft/client/gui/components/EditBox
 		COMMENT Adds the given text after the cursor, or replaces the currently selected text if there is a selection.
 		ARG 1 textToWrite
 	METHOD isBordered ()Z
-		COMMENT Gets whether the background and outline of this text box should be drawn (true if so).
+		COMMENT Gets whether the background and outline of this text box should be drawn ({@code true} if so).
 	METHOD isVisible ()Z
 		COMMENT Returns {@code true} if this textbox is visible.
 	METHOD moveCursor (IZ)V
 		ARG 1 delta
 		ARG 2 select
 	METHOD moveCursorTo (IZ)V
-		ARG 1 delta
+		ARG 1 pos
 		ARG 2 select
 	METHOD moveCursorToEnd (Z)V
 		ARG 1 select
@@ -115,7 +115,7 @@ CLASS net/minecraft/client/gui/components/EditBox
 		ARG 1 validator
 	METHOD setHighlightPos (I)V
 		COMMENT Sets the position of the selection anchor (the selection anchor and the cursor position mark the edges of the selection). If the anchor is set beyond the bounds of the current text, it will be put back inside.
-		ARG 1 position
+		ARG 1 pos
 	METHOD setHint (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 hint
 	METHOD setMaxLength (I)V
@@ -142,4 +142,4 @@ CLASS net/minecraft/client/gui/components/EditBox
 	CLASS TextFormatter
 		METHOD format (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
 			ARG 1 text
-			ARG 2 displayPos
+			ARG 2 index

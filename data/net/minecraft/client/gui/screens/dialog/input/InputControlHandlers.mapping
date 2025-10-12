@@ -1,0 +1,26 @@
+CLASS net/minecraft/client/gui/screens/dialog/input/InputControlHandlers
+	METHOD createHandler (Lnet/minecraft/server/dialog/input/InputControl;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/gui/screens/dialog/input/InputControlHandler$Output;)V
+		ARG 0 input
+		ARG 1 screen
+		ARG 2 output
+	METHOD get (Lnet/minecraft/server/dialog/input/InputControl;)Lnet/minecraft/client/gui/screens/dialog/input/InputControlHandler;
+		ARG 0 input
+	METHOD register (Lcom/mojang/serialization/MapCodec;Lnet/minecraft/client/gui/screens/dialog/input/InputControlHandler;)V
+		ARG 0 inputCodec
+		ARG 1 handler
+	CLASS NumberRangeHandler
+		CLASS SliderImpl
+			METHOD <init> (Lnet/minecraft/server/dialog/input/NumberRangeInput;D)V
+				ARG 1 input
+				ARG 2 value
+			METHOD computeMessage (Lnet/minecraft/server/dialog/input/NumberRangeInput;D)Lnet/minecraft/network/chat/Component;
+				ARG 0 input
+				ARG 1 value
+			METHOD scaledValue (Lnet/minecraft/server/dialog/input/NumberRangeInput;D)F
+				ARG 0 input
+				ARG 1 value
+			METHOD sliderValueToString (Lnet/minecraft/server/dialog/input/NumberRangeInput;D)Ljava/lang/String;
+				ARG 0 input
+				ARG 1 value
+			METHOD valueToString (F)Ljava/lang/String;
+				ARG 0 value

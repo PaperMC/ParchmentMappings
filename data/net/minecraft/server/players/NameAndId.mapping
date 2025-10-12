@@ -6,7 +6,7 @@ CLASS net/minecraft/server/players/NameAndId
 	METHOD appendTo (Lcom/google/gson/JsonObject;)V
 		ARG 1 json
 	METHOD createOffline (Ljava/lang/String;)Lnet/minecraft/server/players/NameAndId;
-		ARG 0 username
+		ARG 0 name
 	METHOD fromJson (Lcom/google/gson/JsonObject;)Lnet/minecraft/server/players/NameAndId;
 		ARG 0 json
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;

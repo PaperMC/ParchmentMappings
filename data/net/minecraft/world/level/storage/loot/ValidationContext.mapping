@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/storage/loot/ValidationContext
-	COMMENT Context for validating loot tables. Loot tables are validated recursively by checking that all functions, conditions, etc. (implementing {@link LootContextUser}) are valid according to their LootTable's {@link LootContextParamSet}.
+	COMMENT Context for validating loot tables. Loot tables are validated recursively by checking that all functions, conditions, etc. (implementing {@link LootContextUser}) are valid according to their LootTable's {@link ContextKeySet}.
 	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/util/context/ContextKeySet;)V
 		ARG 1 reporter
 		ARG 2 contextKeySet

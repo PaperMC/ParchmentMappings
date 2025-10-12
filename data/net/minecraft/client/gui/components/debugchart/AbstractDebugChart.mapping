@@ -33,7 +33,7 @@ CLASS net/minecraft/client/gui/components/debugchart/AbstractDebugChart
 		ARG 6 midPosition
 		ARG 8 midColor
 		ARG 9 maxPosition
-		ARG 11 guiGraphics
+		ARG 11 maxColor
 	METHOD getSampleColor (J)I
 		ARG 1 value
 	METHOD getSampleHeight (D)I

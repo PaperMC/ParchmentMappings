@@ -10,16 +10,30 @@ CLASS net/minecraft/world/level/block/CarvedPumpkinBlock
 	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 context
 	METHOD getWeatherStateFromPattern (Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch;)Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;
-		ARG 1 pattern
+		ARG 1 patternMatch
+	METHOD lambda$getOrCreateCopperGolemBase$5 (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 0 state
+	METHOD lambda$getOrCreateCopperGolemFull$6 (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 0 state
+	METHOD lambda$getOrCreateIronGolemBase$3 (Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
+		ARG 0 block
+	METHOD lambda$getOrCreateIronGolemFull$4 (Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
+		ARG 0 block
+	METHOD lambda$getWeatherStateFromPattern$0 (Lnet/minecraft/world/level/block/Block;)Z
+		ARG 0 block
+	METHOD lambda$getWeatherStateFromPattern$1 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/WeatheringCopper;
+		ARG 0 block
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 0 state
 	METHOD onPlace (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 oldState
-		ARG 5 isMoving
+		ARG 5 movedByPiston
 	METHOD replaceCopperBlockWithChest (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch;)V
 		ARG 1 level
-		ARG 2 pattern
+		ARG 2 patternMatch
 	METHOD spawnGolemInWorld (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 level
 		ARG 1 patternMatch

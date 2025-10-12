@@ -2,7 +2,7 @@ CLASS net/minecraft/world/inventory/StonecutterMenu
 	FIELD input Lnet/minecraft/world/item/ItemStack;
 		COMMENT The {@linkplain net.minecraft.world.item.ItemStack} set in the input slot by the player.
 	FIELD lastSoundTime J
-		COMMENT Stores the game time of the last time the player took items from the the crafting result slot. This is used to prevent the sound from being played multiple times on the same tick.
+		COMMENT Stores the game time of the last time the player took items from the crafting result slot. This is used to prevent the sound from being played multiple times on the same tick.
 	FIELD resultContainer Lnet/minecraft/world/inventory/ResultContainer;
 		COMMENT The inventory that stores the output of the crafting recipe.
 	FIELD resultSlot Lnet/minecraft/world/inventory/Slot;
@@ -17,11 +17,11 @@ CLASS net/minecraft/world/inventory/StonecutterMenu
 		ARG 2 playerInventory
 		ARG 3 access
 	METHOD canTakeItemForPickAll (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/Slot;)Z
-		COMMENT Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is null for the initial slot that was double-clicked.
+		COMMENT Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is {@code null} for the initial slot that was double-clicked.
 		ARG 1 stack
 		ARG 2 slot
 	METHOD clickMenuButton (Lnet/minecraft/world/entity/player/Player;I)Z
-		COMMENT Handles the given Button-click on the server.
+		COMMENT Handles the given Button-click on the server, currently used by enchanting table, loom, lectern and stonecutter.
 		ARG 1 player
 		ARG 2 id
 	METHOD getSelectedRecipeIndex ()I
@@ -34,9 +34,9 @@ CLASS net/minecraft/world/inventory/StonecutterMenu
 	METHOD lambda$setupResultSlot$1 (Lnet/minecraft/world/item/crafting/RecipeHolder;)V
 		ARG 1 recipe
 	METHOD quickMoveStack (Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Handle when the stack in slot {@code index} is shift-clicked. Normally this moves the stack between the player inventory and the other inventory(s).
+		COMMENT Handle when the stack in {@code slotIndex} is shift-clicked. Normally this moves the stack between the player inventory and the other inventory(s).
 		ARG 1 player
-		ARG 2 index
+		ARG 2 slotIndex
 	METHOD registerUpdateListener (Ljava/lang/Runnable;)V
 		ARG 1 listener
 	METHOD removed (Lnet/minecraft/world/entity/player/Player;)V

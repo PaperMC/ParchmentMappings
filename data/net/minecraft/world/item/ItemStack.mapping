@@ -80,11 +80,11 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 enchantment
 		ARG 2 level
 	METHOD finishUsingItem (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Called when the item in use count reach 0, e.g. item food eaten. Return the new ItemStack. Args : world, entity
+		COMMENT Called when the item in use count reach 0, e.g. item food eaten. Return the new ItemStack.
 		ARG 1 level
 		ARG 2 livingEntity
 	METHOD forEachModifier (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
-		ARG 1 equipmentSLot
+		ARG 1 slot
 		ARG 2 action
 	METHOD forEachModifier (Lnet/minecraft/world/entity/EquipmentSlotGroup;Lorg/apache/commons/lang3/function/TriConsumer;)V
 		ARG 1 slot
@@ -92,11 +92,9 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD getDestroySpeed (Lnet/minecraft/world/level/block/state/BlockState;)F
 		ARG 1 state
 	METHOD getDisplayName ()Lnet/minecraft/network/chat/Component;
-		COMMENT Get a ChatComponent for this Item's display name that shows this Item on hover
-	METHOD getEntityRepresentation ()Lnet/minecraft/world/entity/Entity;
-		COMMENT For example, it'll return an {@code ItemFrameEntity} if it is in an itemframe.
+		COMMENT Get a Component for this Item's display name that shows this Item on hover
 	METHOD getFrame ()Lnet/minecraft/world/entity/decoration/ItemFrame;
-		COMMENT Return the item frame this stack is on. Returns null if not on an item frame.
+		COMMENT Return the item frame this stack is on. Returns {@code null} if not on an item frame.
 	METHOD getItem ()Lnet/minecraft/world/item/Item;
 		COMMENT Returns the object corresponding to the stack.
 	METHOD getMaxDamage ()I
@@ -167,9 +165,9 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD isDamaged ()Z
 		COMMENT Returns {@code true} when a damageable item is damaged.
 	METHOD isEnchantable ()Z
-		COMMENT True if it is a tool and has no enchantments to begin with
+		COMMENT {@code true} if it is a tool and has no enchantments to begin with
 	METHOD isEnchanted ()Z
-		COMMENT True if the item has enchantment data
+		COMMENT {@code true} if the item has enchantment data
 	METHOD isFramed ()Z
 		COMMENT Return whether this stack is on an item frame.
 	METHOD isItemEnabled (Lnet/minecraft/world/flag/FeatureFlagSet;)Z

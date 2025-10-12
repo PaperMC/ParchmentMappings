@@ -185,11 +185,11 @@ CLASS net/minecraft/world/level/levelgen/structure/StructurePiece
 		ARG 3 z
 	METHOD placeBlock (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/block/state/BlockState;IIILnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
 		ARG 1 level
-		ARG 2 blockstate
+		ARG 2 state
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
-		ARG 6 boundingbox
+		ARG 6 boundingBox
 	METHOD postProcess (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/StructureManager;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 level
 		ARG 2 structureManager

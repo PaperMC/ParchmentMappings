@@ -22,9 +22,9 @@ CLASS net/minecraft/world/level/lighting/LayerLightSectionStorage
 	METHOD getDebugSectionType (J)Lnet/minecraft/world/level/lighting/LayerLightSectionStorage$SectionType;
 		ARG 1 sectionPos
 	METHOD getLightValue (J)I
-		ARG 1 levelPos
+		ARG 1 pos
 	METHOD getStoredLevel (J)I
-		ARG 1 levelPos
+		ARG 1 pos
 	METHOD initializeSection (J)V
 		ARG 1 sectionPos
 	METHOD lightOnInColumn (J)Z
@@ -54,7 +54,7 @@ CLASS net/minecraft/world/level/lighting/LayerLightSectionStorage
 		ARG 1 sectionPos
 		ARG 3 lightEnabled
 	METHOD setStoredLevel (JI)V
-		ARG 1 levelPos
+		ARG 1 pos
 		ARG 3 lightLevel
 	METHOD storingLightForSection (J)Z
 		ARG 1 sectionPos

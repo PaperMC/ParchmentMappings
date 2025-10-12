@@ -19,7 +19,7 @@ CLASS net/minecraft/world/damagesource/DamageSource
 	METHOD getDirectEntity ()Lnet/minecraft/world/entity/Entity;
 		COMMENT Retrieves the immediate causer of the damage, e.g. the arrow entity, not its shooter
 	METHOD getEntity ()Lnet/minecraft/world/entity/Entity;
-		COMMENT Retrieves the true causer of the damage, e.g. the player who fired an arrow, the shulker who fired the bullet, etc.
+		COMMENT Retrieves the {@code true} causer of the damage, e.g. the player who fired an arrow, the shulker who fired the bullet, etc.
 	METHOD getFoodExhaustion ()F
 		COMMENT How much satiate (food) is consumed by this {@code DamageSource}.
 	METHOD getLocalizedDeathMessage (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/network/chat/Component;

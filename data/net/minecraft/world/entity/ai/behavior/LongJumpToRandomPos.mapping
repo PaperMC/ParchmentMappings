@@ -9,7 +9,7 @@ CLASS net/minecraft/world/entity/ai/behavior/LongJumpToRandomPos
 		ARG 1 timeBetweenLongJumps
 		ARG 2 maxLongJumpHeight
 		ARG 3 maxLongJumpWidth
-		ARG 4 maxJumpVelocity
+		ARG 4 maxJumpVelocityMultiplier
 		ARG 5 getJumpSound
 		ARG 6 acceptableLandingSpot
 	METHOD calculateOptimalJumpVector (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;

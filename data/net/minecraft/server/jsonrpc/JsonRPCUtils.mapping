@@ -6,7 +6,7 @@ CLASS net/minecraft/server/jsonrpc/JsonRPCUtils
 		ARG 3 data
 	METHOD createRequest (Ljava/lang/Integer;Lnet/minecraft/resources/ResourceLocation;Ljava/util/List;)Lcom/google/gson/JsonObject;
 		ARG 0 requestId
-		ARG 1 methodName
+		ARG 1 method
 		ARG 2 params
 	METHOD createSuccessResult (Lcom/google/gson/JsonElement;Lcom/google/gson/JsonElement;)Lcom/google/gson/JsonObject;
 		ARG 0 requestId

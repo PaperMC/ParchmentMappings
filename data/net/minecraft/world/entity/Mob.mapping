@@ -104,7 +104,7 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD getMaxFallDistance ()I
 		COMMENT The maximum height from where the entity is allowed to jump (used in pathfinder)
 	METHOD getMaxHeadXRot ()I
-		COMMENT The speed it takes to move the entity's head rotation through the faceEntity method.
+		COMMENT The speed it takes to move the entity's head rotation through the setLookAt method.
 	METHOD getMaxSpawnClusterSize ()I
 		COMMENT Will return how many at most can spawn in a chunk at once.
 	METHOD getPathfindingMalus (Lnet/minecraft/world/level/pathfinder/PathType;)F
@@ -147,7 +147,7 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD playAmbientSound ()V
 		COMMENT Plays living's sound at its position
 	METHOD playHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)V
-		ARG 1 source
+		ARG 1 damageSource
 	METHOD populateDefaultEquipmentEnchantments (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
 		ARG 1 level
 		ARG 2 random
@@ -160,7 +160,6 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD removeWhenFarAway (D)Z
 		ARG 1 distanceToClosestPlayer
 	METHOD rotlerp (FFF)F
-		COMMENT Arguments: current rotation, intended rotation, max increment.
 		ARG 1 angle
 		ARG 2 targetAngle
 		ARG 3 maxIncrease
@@ -195,7 +194,7 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD setPersistenceRequired ()V
 		COMMENT Enable the Entity persistence
 	METHOD setSpeed (F)V
-		COMMENT Sets the movespeed used for the new AI system.
+		COMMENT Sets the movement speed used for the new AI system.
 		ARG 1 speed
 	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Sets the active target the Goal system uses for tracking
@@ -211,7 +210,7 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD updateControlFlags ()V
-		COMMENT Sets MOVE, JUMP, LOOK Goal.Flags depending if entity is riding or been controlled
+		COMMENT Sets MOVE, JUMP, LOOK and TARGET Goal.Flag depending if entity is riding or been controlled
 	METHOD usePlayerItem (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 player
 		ARG 2 hand

@@ -57,7 +57,7 @@ CLASS net/minecraft/core/RegistrySetBuilder
 		ARG 2 owner
 		ARG 3 elements
 	METHOD wrapContextLookup (Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/core/HolderGetter;
-		ARG 0 owner
+		ARG 0 lookup
 	CLASS 3
 		METHOD getEntry (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 			ARG 1 registryKey

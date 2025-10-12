@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/block/SculkSpreader
 	METHOD <init> (ZLnet/minecraft/tags/TagKey;IIII)V
 		ARG 1 isWorldGeneration
 		ARG 2 replaceableBlocks
-		ARG 3 growthSpawnCoat
+		ARG 3 growthSpawnCost
 		ARG 4 noGrowthRadius
 		ARG 5 chargeDecayRate
 		ARG 6 additionalDecayRate

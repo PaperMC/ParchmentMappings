@@ -2,7 +2,7 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 	METHOD clearBlock (ILnet/minecraft/core/BlockPos;Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 0 structureBlockY
 		ARG 1 pos
-		ARG 2 serverLevel
+		ARG 2 level
 	METHOD clearSpaceForStructure (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 0 boundingBox
 		ARG 1 level
@@ -15,7 +15,7 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 	METHOD doesStructureContain (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 structureBlockPos
 		ARG 1 posToTest
-		ARG 2 serverLevel
+		ARG 2 level
 	METHOD findNearestTest (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/Optional;
 		ARG 0 pos
 		ARG 1 radius
@@ -45,9 +45,9 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 	METHOD lambda$clearSpaceForStructure$1 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD lambda$findNearestTest$3 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)I
-		ARG 1 blockPos
+		ARG 1 pos
 	METHOD lambda$findTestContainingPos$2 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z
-		ARG 2 blockPos
+		ARG 2 pos
 	METHOD lookedAtTestPos (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
 		ARG 0 pos
 		ARG 1 entity

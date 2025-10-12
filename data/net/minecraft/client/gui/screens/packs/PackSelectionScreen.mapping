@@ -11,24 +11,26 @@ CLASS net/minecraft/client/gui/screens/packs/PackSelectionScreen
 	METHOD extractPackNames (Ljava/util/Collection;)Ljava/util/stream/Stream;
 		ARG 0 paths
 	METHOD filterEntries (Ljava/lang/String;Ljava/util/stream/Stream;Lnet/minecraft/client/gui/screens/packs/TransferableSelectionList;)V
-		ARG 1 query
+		ARG 1 value
 		ARG 2 entries
-		ARG 3 list
+		ARG 3 packList
 	METHOD getPackIcon (Lnet/minecraft/server/packs/repository/Pack;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 1 pack
 	METHOD lambda$init$0 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$init$1 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
+	METHOD lambda$onFilesDrop$8 (Ljava/util/List;Z)V
+		ARG 2 confirmed
 	METHOD loadPackIcon (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/server/packs/repository/Pack;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 1 textureManager
 		ARG 2 pack
 	METHOD onFilesDrop (Ljava/util/List;)V
 		ARG 1 packs
 	METHOD populateLists (Lnet/minecraft/client/gui/screens/packs/PackSelectionModel$EntryBase;)V
-		ARG 1 entry
+		ARG 1 changed
 	METHOD updateFilteredEntries (Ljava/lang/String;)V
-		ARG 1 query
+		ARG 1 value
 	CLASS Watcher
 		METHOD <init> (Ljava/nio/file/Path;)V
 			ARG 1 packPath

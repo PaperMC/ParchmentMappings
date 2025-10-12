@@ -7,11 +7,11 @@ CLASS net/minecraft/client/sounds/SoundBufferLibrary
 	METHOD clear ()V
 		COMMENT Clears the cache of all {@linkplain SoundBuffer} instances.
 	METHOD getCompleteBuffer (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/concurrent/CompletableFuture;
-		COMMENT {@return Returns a {@linkplain CompletableFuture} containing the complete {@linkplain SoundBuffer}. The {@linkplain SoundBuffer} is loaded asynchronously and cached.}
-		ARG 1 soundID
+		COMMENT @return a {@linkplain CompletableFuture} containing the complete {@linkplain SoundBuffer}. The {@linkplain SoundBuffer} is loaded asynchronously and cached.
+		ARG 1 soundId
 			COMMENT the {@linkplain ResourceLocation} of the sound
 	METHOD getStream (Lnet/minecraft/resources/ResourceLocation;Z)Ljava/util/concurrent/CompletableFuture;
-		COMMENT {@return Returns a {@linkplain CompletableFuture} containing the {@linkplain AudioStream}. The {@linkplain AudioStream} is loaded asynchronously.}
+		COMMENT @return a {@linkplain CompletableFuture} containing the {@linkplain AudioStream}. The {@linkplain AudioStream} is loaded asynchronously.
 		ARG 1 resourceLocation
 			COMMENT the {@linkplain ResourceLocation} of the sound
 		ARG 2 isWrapper
@@ -22,7 +22,6 @@ CLASS net/minecraft/client/sounds/SoundBufferLibrary
 		ARG 1 sound
 	METHOD preload (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Preloads the {@linkplain SoundBuffer} objects for the specified collection of sounds.
-		COMMENT <p>
 		COMMENT @return a {@linkplain CompletableFuture} representing the completion of the preload operation
 		ARG 1 sounds
 			COMMENT the collection of sounds to preload

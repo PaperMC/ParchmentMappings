@@ -4,5 +4,5 @@ CLASS net/minecraft/network/protocol/game/ServerboundEditBookPacket
 		ARG 2 pages
 		ARG 3 title
 	METHOD handle (Lnet/minecraft/network/protocol/game/ServerGamePacketListener;)V
-		COMMENT Passes this Packet on to the NetHandler for processing.
+		COMMENT Passes this Packet on to the packet listener for processing.
 		ARG 1 handler

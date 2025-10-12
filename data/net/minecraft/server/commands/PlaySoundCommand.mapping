@@ -13,7 +13,7 @@ CLASS net/minecraft/server/commands/PlaySoundCommand
 		ARG 0 source
 		ARG 1 targets
 		ARG 2 sound
-		ARG 3 category
+		ARG 3 soundSource
 		ARG 4 pos
 		ARG 5 volume
 		ARG 6 pitch
@@ -21,4 +21,4 @@ CLASS net/minecraft/server/commands/PlaySoundCommand
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
 	METHOD source (Lnet/minecraft/sounds/SoundSource;)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
-		ARG 0 category
+		ARG 0 source

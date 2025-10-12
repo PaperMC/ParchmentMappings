@@ -1,9 +1,9 @@
 CLASS net/minecraft/client/renderer/entity/AbstractSkeletonRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/geom/ModelLayerLocation;Lnet/minecraft/client/renderer/entity/ArmorModelSet;)V
 		ARG 1 context
-		ARG 2 skeletonLayer
-		ARG 3 armorModelSet
+		ARG 2 modelLayer
+		ARG 3 modelSet
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/renderer/entity/ArmorModelSet;Lnet/minecraft/client/model/SkeletonModel;)V
 		ARG 1 context
-		ARG 2 armorModelSet
+		ARG 2 modelSet
 		ARG 3 model

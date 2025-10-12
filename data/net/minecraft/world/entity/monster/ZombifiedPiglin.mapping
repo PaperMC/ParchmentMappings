@@ -23,4 +23,4 @@ CLASS net/minecraft/world/entity/monster/ZombifiedPiglin
 		ARG 1 time
 	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Sets the active target the Task system uses for tracking
-		ARG 1 livingEntity
+		ARG 1 target

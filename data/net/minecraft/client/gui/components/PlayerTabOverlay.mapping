@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/components/PlayerTabOverlay
 	FIELD visible Z
-		COMMENT Whether or not the playerlist is currently being rendered
+		COMMENT Whether the playerlist is currently being rendered
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/Gui;)V
 		ARG 1 minecraft
 		ARG 2 gui
@@ -44,7 +44,7 @@ CLASS net/minecraft/client/gui/components/PlayerTabOverlay
 	METHOD setHeader (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 header
 	METHOD setVisible (Z)V
-		COMMENT Called by GuiIngame to update the information stored in the playerlist, does not actually render the list, however.
+		COMMENT Called by Gui to update the information stored in the player list, does not actually render the list, however.
 		ARG 1 visible
 	CLASS HealthState
 		METHOD <init> (I)V

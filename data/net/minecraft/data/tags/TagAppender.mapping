@@ -1,14 +1,14 @@
 CLASS net/minecraft/data/tags/TagAppender
 	METHOD add (Ljava/lang/Object;)Lnet/minecraft/data/tags/TagAppender;
-		ARG 1 block
+		ARG 1 element
 	METHOD add ([Ljava/lang/Object;)Lnet/minecraft/data/tags/TagAppender;
 		ARG 1 elements
 	METHOD addAll (Ljava/util/Collection;)Lnet/minecraft/data/tags/TagAppender;
 		ARG 1 elements
 	METHOD addAll (Ljava/util/stream/Stream;)Lnet/minecraft/data/tags/TagAppender;
-		ARG 1 stream
+		ARG 1 elements
 	METHOD addOptional (Ljava/lang/Object;)Lnet/minecraft/data/tags/TagAppender;
-		ARG 1 block
+		ARG 1 element
 	METHOD addOptionalTag (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/data/tags/TagAppender;
 		ARG 1 tag
 	METHOD addTag (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/data/tags/TagAppender;

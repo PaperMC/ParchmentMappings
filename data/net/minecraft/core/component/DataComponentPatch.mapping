@@ -34,4 +34,4 @@ CLASS net/minecraft/core/component/DataComponentPatch
 			ARG 0 key
 	CLASS CodecGetter
 		METHOD apply (Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/network/codec/StreamCodec;
-			ARG 1 componentType
+			ARG 1 component

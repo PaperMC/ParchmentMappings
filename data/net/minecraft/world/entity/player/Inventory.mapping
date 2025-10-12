@@ -15,7 +15,7 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 slot
 		ARG 2 stack
 	METHOD addResource (Lnet/minecraft/world/item/ItemStack;)I
-		COMMENT This function stores as many items of an ItemStack as possible in a matching slot and returns the quantity of left over items.
+		COMMENT This function stores as many items of an ItemStack as possible in a matching slot and returns the quantity of leftover items.
 		ARG 1 stack
 	METHOD clearOrCountMatchingItems (Ljava/util/function/Predicate;ILnet/minecraft/world/Container;)I
 		ARG 1 stackPredicate
@@ -81,7 +81,7 @@ CLASS net/minecraft/world/entity/player/Inventory
 		COMMENT Removes a stack from the given slot and returns it.
 		ARG 1 index
 	METHOD replaceWith (Lnet/minecraft/world/entity/player/Inventory;)V
-		COMMENT Copy the ItemStack contents from another InventoryPlayer instance
+		COMMENT Copy the ItemStack contents from another Inventory instance
 		ARG 1 playerInventory
 	METHOD save (Lnet/minecraft/world/level/storage/ValueOutput$TypedOutputList;)V
 		ARG 1 output
@@ -96,7 +96,6 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD setSelectedSlot (I)V
 		ARG 1 slot
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player
 	METHOD tick ()V
 		COMMENT Ticks every item in inventory. Used for animations. Is called on client and server.

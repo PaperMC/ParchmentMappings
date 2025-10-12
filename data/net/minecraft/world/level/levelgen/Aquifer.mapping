@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 	COMMENT Aquifers are responsible for non-sea level fluids found in terrain generation, but also managing that different aquifers don't intersect with each other in ways that would create undesirable fluid placement.
 	COMMENT The aquifer interface itself is a modifier on a per-block basis. It computes a block state to be placed for each position in the world.
 	COMMENT <p>
-	COMMENT Aquifers work by first partitioning a single chunk into a low resolution grid. They then generate, via various noise layers, an {@link NoiseBasedAquifer.AquiferStatus} at each grid point.
+	COMMENT Aquifers work by first partitioning a single chunk into a low resolution grid. They then generate, via various noise layers, an {@link NoiseBasedAquifer.FluidStatus} at each grid point.
 	COMMENT At each point, the grid cell containing that point is calculated, and then of the eight grid corners, the three closest aquifers are found, by square euclidean distance.
 	COMMENT Borders between aquifers are created by comparing nearby aquifers to see if the given point is near-equidistant from them, indicating a border if so, or fluid/air depending on the aquifer height if not.
 	METHOD computeSubstance (Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;D)Lnet/minecraft/world/level/block/state/BlockState;
@@ -21,8 +21,8 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 		COMMENT Creates a disabled, or no-op aquifer. This will fill any open areas below sea level with the default fluid.
 		ARG 0 defaultFluid
 	METHOD shouldScheduleFluidUpdate ()Z
-		COMMENT Returns {@code true} if there should be a fluid update scheduled - due to a fluid block being placed in a possibly unsteady position - at the last position passed into {@link #computeState}.
-		COMMENT This <strong>must</strong> be invoked only after {@link #computeState}, and will be using the same parameters as that method.
+		COMMENT Returns {@code true} if there should be a fluid update scheduled - due to a fluid block being placed in a possibly unsteady position - at the last position passed into {@link #computeSubstance}.
+		COMMENT This <strong>must</strong> be invoked only after {@link #computeSubstance}, and will be using the same parameters as that method.
 	CLASS FluidPicker
 		METHOD computeFluid (III)Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;
 			ARG 1 x
@@ -86,7 +86,9 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 			ARG 0 gridZ
 			ARG 1 offset
 		METHOD getAquiferStatus (I)Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;
-			ARG 1 index
+			COMMENT Calculates the aquifer at a given location. Internally references a cache using the grid positions as an index. If the cache is not populated, computes a new aquifer at that grid location using {@link #computeFluid}.
+			ARG 1 packedPos
+				COMMENT The aquifer block position, packed into an {@code int}.
 		METHOD getIndex (III)I
 			COMMENT @return A cache index based on grid positions.
 			ARG 1 gridX

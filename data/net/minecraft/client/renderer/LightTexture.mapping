@@ -23,4 +23,4 @@ CLASS net/minecraft/client/renderer/LightTexture
 	METHOD sky (I)I
 		ARG 0 packedLight
 	METHOD updateLightTexture (F)V
-		ARG 1 partialTicks
+		ARG 1 partialTick

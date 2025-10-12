@@ -5,7 +5,7 @@ CLASS net/minecraft/world/entity/animal/horse/AbstractHorse
 		COMMENT The higher this value, the more likely the horse is to be tamed next time a player rides it.
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
 		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
-		ARG 1 otherAnimal
+		ARG 1 partner
 	METHOD canParent ()Z
 		COMMENT Returns {@code true} if the horse entity ready to mate. (no rider, not riding, tame, adult, not sterile...)
 	METHOD createOffspringAttribute (DDDDLnet/minecraft/util/RandomSource;)D

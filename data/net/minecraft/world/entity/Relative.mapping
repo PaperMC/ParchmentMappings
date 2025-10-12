@@ -2,20 +2,20 @@ CLASS net/minecraft/world/entity/Relative
 	METHOD <init> (Ljava/lang/String;II)V
 		ARG 3 bit
 	METHOD direction (ZZZ)Ljava/util/Set;
-		ARG 0 deltaX
-		ARG 1 deltaY
-		ARG 2 deltaZ
+		ARG 0 xRelative
+		ARG 1 yRelative
+		ARG 2 zRelative
 	METHOD isSet (I)Z
 		ARG 1 data
 	METHOD pack (Ljava/util/Set;)I
 		ARG 0 relatives
 	METHOD position (ZZZ)Ljava/util/Set;
-		ARG 0 x
-		ARG 1 y
-		ARG 2 z
+		ARG 0 xRelative
+		ARG 1 yRelative
+		ARG 2 zRelative
 	METHOD rotation (ZZ)Ljava/util/Set;
-		ARG 0 yRot
-		ARG 1 xRot
+		ARG 0 yRelative
+		ARG 1 xRelative
 	METHOD union ([Ljava/util/Set;)Ljava/util/Set;
 		ARG 0 sets
 	METHOD unpack (I)Ljava/util/Set;

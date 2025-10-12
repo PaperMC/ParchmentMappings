@@ -2,7 +2,7 @@ CLASS net/minecraft/world/item/crafting/CraftingInput
 	METHOD <init> (IILjava/util/List;)V
 		ARG 1 width
 		ARG 2 height
-		ARG 3 item
+		ARG 3 items
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD getItem (II)Lnet/minecraft/world/item/ItemStack;

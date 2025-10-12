@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/ticks/SavedTick
 	METHOD codec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
-		ARG 0 codec
+		ARG 0 typeCodec
 	METHOD filterTickListForChunk (Ljava/util/List;Lnet/minecraft/world/level/ChunkPos;)Ljava/util/List;
 		ARG 0 tickList
 		ARG 1 chunkPos

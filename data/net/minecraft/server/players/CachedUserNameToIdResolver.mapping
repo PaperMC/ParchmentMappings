@@ -5,19 +5,19 @@ CLASS net/minecraft/server/players/CachedUserNameToIdResolver
 	METHOD addInternal (Lnet/minecraft/server/players/NameAndId;)Lnet/minecraft/server/players/CachedUserNameToIdResolver$GameProfileInfo;
 		ARG 1 nameAndId
 	METHOD createUnknownProfile (Ljava/lang/String;)Ljava/util/Optional;
-		ARG 1 username
+		ARG 1 name
 	METHOD getTopMRUProfiles (I)Ljava/util/stream/Stream;
-		ARG 1 count
+		ARG 1 limit
 	METHOD lookupGameProfile (Lcom/mojang/authlib/GameProfileRepository;Ljava/lang/String;)Ljava/util/Optional;
 		ARG 1 profileRepository
-		ARG 2 username
+		ARG 2 name
 	METHOD readGameProfile (Lcom/google/gson/JsonElement;Ljava/text/DateFormat;)Ljava/util/Optional;
-		ARG 0 json
+		ARG 0 element
 		ARG 1 format
 	METHOD safeAdd (Lnet/minecraft/server/players/CachedUserNameToIdResolver$GameProfileInfo;)V
 		ARG 1 profileInfo
 	METHOD writeGameProfile (Lnet/minecraft/server/players/CachedUserNameToIdResolver$GameProfileInfo;Ljava/text/DateFormat;)Lcom/google/gson/JsonElement;
-		ARG 0 profile
+		ARG 0 profileInfo
 		ARG 1 format
 	CLASS GameProfileInfo
 		METHOD <init> (Lnet/minecraft/server/players/NameAndId;Ljava/util/Date;)V

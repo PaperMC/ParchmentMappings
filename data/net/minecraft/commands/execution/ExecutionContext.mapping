@@ -1,6 +1,6 @@
 CLASS net/minecraft/commands/execution/ExecutionContext
 	METHOD <init> (IILnet/minecraft/util/profiling/ProfilerFiller;)V
-		ARG 1 commandLimit
+		ARG 1 commandQuota
 		ARG 2 forkLimit
 		ARG 3 profiler
 	METHOD createTopFrame (Lnet/minecraft/commands/execution/ExecutionContext;Lnet/minecraft/commands/CommandResultCallback;)Lnet/minecraft/commands/execution/Frame;

@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/block/entity/CrafterBlockEntity
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
-		ARG 2 state
+		ARG 2 blockState
 	METHOD addDisabledSlots (Lnet/minecraft/world/level/storage/ValueOutput;)V
 		ARG 1 output
 	METHOD addTriggered (Lnet/minecraft/world/level/storage/ValueOutput;)V

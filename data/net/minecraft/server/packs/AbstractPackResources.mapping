@@ -5,3 +5,5 @@ CLASS net/minecraft/server/packs/AbstractPackResources
 		ARG 0 type
 		ARG 1 stream
 		ARG 2 location
+	METHOD lambda$getMetadataFromStream$0 (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/metadata/MetadataSectionType;Lcom/mojang/serialization/DataResult$Error;)V
+		ARG 2 error

@@ -12,7 +12,7 @@ CLASS net/minecraft/commands/execution/CustomCommandExecutor
 			ARG 1 error
 			ARG 2 source
 			ARG 3 chainModifiers
-			ARG 4 traceCallbacks
+			ARG 4 tracer
 		METHOD runGuarded (Lnet/minecraft/commands/ExecutionCommandSource;Lcom/mojang/brigadier/context/ContextChain;Lnet/minecraft/commands/execution/ChainModifiers;Lnet/minecraft/commands/execution/ExecutionControl;)V
 			ARG 1 source
 			ARG 2 contextChain

@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/storage/loot/predicates/LocationCheck
-	COMMENT LootItemCondition that checks the {@link LootContextParams.ORIGIN} position against a {@link LocationPredicate} after applying an offset to the origin position.
+	COMMENT LootItemCondition that checks the {@link LootContextParams#ORIGIN} position against a {@link LocationPredicate} after applying an offset to the origin position.
 	METHOD checkLocation (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
 		ARG 0 locationPredicateBuilder
 	METHOD checkLocation (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;

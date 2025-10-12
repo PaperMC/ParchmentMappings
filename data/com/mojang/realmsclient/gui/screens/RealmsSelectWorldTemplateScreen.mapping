@@ -15,6 +15,20 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
 		ARG 2 realmsClient
 	METHOD fetchTemplatesAsync (Lcom/mojang/realmsclient/dto/WorldTemplatePaginatedList;)V
 		ARG 1 output
+	METHOD lambda$init$0 (Lnet/minecraft/client/gui/layouts/LinearLayout;Lnet/minecraft/network/chat/Component;)V
+		ARG 2 message
+	METHOD lambda$init$1 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$2 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$3 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$4 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$5 (Lcom/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen;Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
+		ARG 1 widget
+	METHOD lambda$renderMultilineMessage$6 (Lcom/mojang/realmsclient/util/TextRenderingUtils$LineSegment;)I
+		ARG 1 segment
 	METHOD renderMultilineMessage (Lnet/minecraft/client/gui/GuiGraphics;IILjava/util/List;)V
 		ARG 1 guiGraphics
 		ARG 2 x

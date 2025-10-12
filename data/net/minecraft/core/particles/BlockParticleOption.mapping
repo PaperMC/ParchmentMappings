@@ -5,8 +5,8 @@ CLASS net/minecraft/core/particles/BlockParticleOption
 	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 particleType
 	METHOD lambda$codec$0 (Lnet/minecraft/core/particles/ParticleType;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/core/particles/BlockParticleOption;
-		ARG 1 blockState
+		ARG 1 state
 	METHOD lambda$codec$1 (Lnet/minecraft/core/particles/BlockParticleOption;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 0 blockState
+		ARG 0 state
 	METHOD streamCodec (Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/network/codec/StreamCodec;
 		ARG 0 particleType

@@ -4,9 +4,9 @@ CLASS net/minecraft/world/level/pathfinder/Path
 		ARG 2 target
 		ARG 3 reached
 	METHOD advance ()V
-		COMMENT Directs this path to the next point in its array
+		COMMENT Directs this path to the next node in its array
 	METHOD createFromStream (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/world/level/pathfinder/Path;
-		ARG 0 buf
+		ARG 0 buffer
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD getEndNode ()Lnet/minecraft/world/level/pathfinder/Node;
@@ -16,7 +16,7 @@ CLASS net/minecraft/world/level/pathfinder/Path
 		ARG 1 entity
 		ARG 2 index
 	METHOD getNextEntityPos (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
-		COMMENT @return the current {@code PathEntity} target node as a {@code Vec3D}
+		COMMENT @return the current {@code Path} target node as a {@code Vec3}
 		ARG 1 entity
 	METHOD getNode (I)Lnet/minecraft/world/level/pathfinder/Node;
 		COMMENT Returns the {@link net.minecraft.world.level.pathfinder.Node} located at the specified index, usually the current one.
@@ -29,16 +29,16 @@ CLASS net/minecraft/world/level/pathfinder/Path
 		ARG 0 buffer
 	METHOD replaceNode (ILnet/minecraft/world/level/pathfinder/Node;)V
 		ARG 1 index
-		ARG 2 point
+		ARG 2 node
 	METHOD sameAs (Lnet/minecraft/world/level/pathfinder/Path;)Z
-		COMMENT Returns {@code true} if the EntityPath are the same. Non instance related equals.
-		ARG 1 pathEntity
+		COMMENT Returns {@code true} if the Path are the same. Non instance related equals.
+		ARG 1 path
 	METHOD setDebug ([Lnet/minecraft/world/level/pathfinder/Node;[Lnet/minecraft/world/level/pathfinder/Node;Ljava/util/Set;)V
 		ARG 1 openSet
 		ARG 2 closedSet
 		ARG 3 targetNodes
 	METHOD setNextNodeIndex (I)V
-		ARG 1 currentPathIndex
+		ARG 1 currentIndex
 	METHOD truncateNodes (I)V
 		ARG 1 length
 	METHOD writeNodeArray (Lnet/minecraft/network/FriendlyByteBuf;[Lnet/minecraft/world/level/pathfinder/Node;)V

@@ -80,7 +80,7 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 	METHOD createNameableBlockEntityTable (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 	METHOD createOakLeavesDrops (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;[F)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		COMMENT Used for oak and dark oak, same as droppingWithChancesAndSticks but adding in apples.
+		COMMENT Used for oak and dark oak, same as createLeavesDrops but adding in apples.
 		ARG 1 oakLeavesBlock
 		ARG 2 saplingBlock
 		ARG 3 chances

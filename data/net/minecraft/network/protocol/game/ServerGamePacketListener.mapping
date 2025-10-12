@@ -15,7 +15,7 @@ CLASS net/minecraft/network/protocol/game/ServerGamePacketListener
 	METHOD handleChangeGameMode (Lnet/minecraft/network/protocol/game/ServerboundChangeGameModePacket;)V
 		ARG 1 packet
 	METHOD handleChat (Lnet/minecraft/network/protocol/game/ServerboundChatPacket;)V
-		COMMENT Process chat messages (broadcast back to clients) and commands (executes)
+		COMMENT Process messages (broadcast back to clients) and commands (executes)
 		ARG 1 packet
 	METHOD handleChatAck (Lnet/minecraft/network/protocol/game/ServerboundChatAckPacket;)V
 		ARG 1 packet

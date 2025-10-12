@@ -7,7 +7,7 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD addItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
 	METHOD attack (Lnet/minecraft/world/entity/Entity;)V
-		COMMENT Attacks for the player the targeted entity with the currently equipped item.  The equipped item has hitEntity called on it. Args: targetEntity
+		COMMENT Attacks for the player the targeted entity with the currently equipped item. The equipped item has hurtEnemy called on it.
 		ARG 1 target
 	METHOD awardRecipes (Ljava/util/Collection;)I
 		ARG 1 recipes
@@ -52,27 +52,27 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Increases exhaustion level by the supplied amount.
 		ARG 1 exhaustion
 	METHOD closeContainer ()V
-		COMMENT Sets the current crafting inventory back to the 2x2 square.
+		COMMENT Closes the container the player currently has open.
 	METHOD convertParrotVariant (Ljava/util/Optional;)Ljava/util/OptionalInt;
 		ARG 0 variant
 	METHOD convertParrotVariant (Ljava/util/OptionalInt;)Ljava/util/Optional;
-		ARG 0 id
+		ARG 0 variantId
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
-		ARG 1 entityHit
+		ARG 1 target
 	METHOD decorateDisplayNameComponent (Lnet/minecraft/network/chat/MutableComponent;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 1 displayName
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
-		ARG 1 cause
+		ARG 1 damageSource
 	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
-		ARG 1 chatComponent
-		ARG 2 actionBar
+		ARG 1 message
+		ARG 2 overlay
 	METHOD doWaterSplashEffect ()V
-		COMMENT Plays the {@link #getSplashSound() splash sound}, and the {@link ParticleType#WATER_BUBBLE} and {@link ParticleType#WATER_SPLASH} particles.
+		COMMENT Plays the splash sound, and the {@link ParticleTypes#BUBBLE}/{@link ParticleTypes#SPLASH} particles.
 	METHOD drop (Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/entity/item/ItemEntity;
 		COMMENT Drops an item into the world.
-		ARG 1 itemStack
+		ARG 1 stack
 		ARG 2 includeThrowerName
 	METHOD extractParrotVariant (Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
 		ARG 0 tag
@@ -92,9 +92,9 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 damage
 		ARG 3 damageSource
 	METHOD getEnderChestInventory ()Lnet/minecraft/world/inventory/PlayerEnderChestContainer;
-		COMMENT Returns the InventoryEnderChest of this player.
+		COMMENT Returns the PlayerEnderChestContainer of this player.
 	METHOD getFoodData ()Lnet/minecraft/world/food/FoodData;
-		COMMENT Returns the player's FoodStats object.
+		COMMENT Returns the player's FoodData object.
 	METHOD getGameProfile ()Lcom/mojang/authlib/GameProfile;
 		COMMENT Returns the GameProfile for this player
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
@@ -102,11 +102,11 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD getProjectile (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 shootable
 	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getScoreboardName ()Ljava/lang/String;
 		COMMENT Returns a String to use as this entity's name in the scoreboard/entity selector systems
 	METHOD getSpeed ()F
-		COMMENT Gets the movespeed used for the new AI system.
+		COMMENT Gets the movement speed used for the new AI system.
 	METHOD getXpNeededForNextLevel ()I
 		COMMENT This method returns the cap amount of experience that the experience bar can hold. With each level, the experience cap on the player's experience bar is raised by 10.
 	METHOD giveExperienceLevels (I)V
@@ -122,7 +122,7 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 permissionLevel
 	METHOD hurtArmor (Lnet/minecraft/world/damagesource/DamageSource;F)V
 		ARG 1 damageSource
-		ARG 2 damage
+		ARG 2 damageAmount
 	METHOD increaseScore (I)V
 		COMMENT Add to player's score
 		ARG 1 score
@@ -148,25 +148,24 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD isSpectator ()Z
 		COMMENT Returns {@code true} if the player is in spectator mode.
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entityHit
+		ARG 1 target
 	METHOD makeStuckInBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 state
 		ARG 2 motionMultiplier
 	METHOD mayUseItemAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Returns whether this player can modify the block at a certain location with the given stack.
 		COMMENT <p>
-		COMMENT The position being queried is {@code pos.offset(facing.getOpposite())}.
+		COMMENT The position being queried is {@code pos.relative(facing.getOpposite())}.
 		COMMENT
 		COMMENT @return Whether this player may modify the queried location in the current world
-		COMMENT @see ItemStack#canPlaceOn(Block)
-		COMMENT @see ItemStack#canEditBlocks()
-		COMMENT @see PlayerCapabilities#allowEdit
+		COMMENT @see ItemStack#canPlaceOnBlockInAdventureMode(BlockInWorld)
+		COMMENT @see Abilities#mayBuild
 		ARG 1 pos
 		ARG 2 facing
 		ARG 3 stack
 	METHOD maybeBackOffFromEdge (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/MoverType;)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 vec
-		ARG 2 mover
+		ARG 1 movement
+		ARG 2 type
 	METHOD onEnchantmentPerformed (Lnet/minecraft/world/item/ItemStack;I)V
 		ARG 1 enchantedItem
 		ARG 2 levelCost
@@ -238,8 +237,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 variant
 	METHOD startAutoSpinAttack (IFLnet/minecraft/world/item/ItemStack;)V
 		ARG 1 ticks
-		ARG 2 damage
-		ARG 3 itemStack
+		ARG 2 damageAmount
+		ARG 3 stack
 	METHOD startSleepInBed (Lnet/minecraft/core/BlockPos;)Lcom/mojang/datafixers/util/Either;
 		ARG 1 bedPos
 	METHOD stopSleepInBed (ZZ)V

@@ -81,7 +81,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD getInstance ()Lnet/minecraft/client/Minecraft;
 		COMMENT Return the singleton Minecraft instance for the game
 	METHOD getLaunchedVersion ()Ljava/lang/String;
-		COMMENT Gets the version that Minecraft was launched under (the name of a version JSON). Specified via the <code>--version</code> flag.
+		COMMENT Gets the version that Minecraft was launched under (the name of a version JSON). Specified via the {@code --version} flag.
 	METHOD getLevelSource ()Lnet/minecraft/world/level/storage/LevelStorageSource;
 		COMMENT Returns the save loader that is currently being used
 	METHOD getMusicManager ()Lnet/minecraft/client/sounds/MusicManager;
@@ -91,7 +91,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD getTickTargetMillis (F)F
 		ARG 1 defaultValue
 	METHOD getVersionType ()Ljava/lang/String;
-		COMMENT Gets the type of version that Minecraft was launched under (as specified in the version JSON). Specified via the <code>--versionType</code> flag.
+		COMMENT Gets the type of version that Minecraft was launched under (as specified in the version JSON). Specified via the {@code --versionType} flag.
 	METHOD grabPanoramixScreenshot (Ljava/io/File;)Lnet/minecraft/network/chat/Component;
 		ARG 1 gameDirectory
 	METHOD hasSingleplayerServer ()Z
@@ -110,7 +110,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD onResourceLoadFinished (Lnet/minecraft/client/Minecraft$GameLoadCookie;)V
 		ARG 1 gameLoadCookie
 	METHOD openChatScreen (Lnet/minecraft/client/gui/components/ChatComponent$ChatMethod;)V
-		ARG 1 chatMethod
+		ARG 1 method
 	METHOD pauseGame (Z)V
 		COMMENT Displays the in-game menu
 		ARG 1 pauseOnly
@@ -150,7 +150,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD startUseItem ()V
 		COMMENT Called when user clicked he's mouse right button (place)
 	METHOD stop ()V
-		COMMENT Called when the window is closing. Sets 'running' to false which allows the game loop to exit cleanly.
+		COMMENT Called when the window is closing. Sets 'running' to {@code false} which allows the game loop to exit cleanly.
 	METHOD tick ()V
 		COMMENT Runs the current tick.
 	METHOD triggerResourcePackRecovery (Ljava/lang/Exception;)V

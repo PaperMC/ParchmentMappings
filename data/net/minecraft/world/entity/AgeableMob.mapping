@@ -6,7 +6,7 @@ CLASS net/minecraft/world/entity/AgeableMob
 		ARG 2 forced
 	METHOD getBreedOffspring (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/AgeableMob;)Lnet/minecraft/world/entity/AgeableMob;
 		ARG 1 level
-		ARG 2 otherParent
+		ARG 2 partner
 	METHOD getSpeedUpSecondsWhenFeeding (I)I
 		ARG 0 ticksUntilAdult
 	METHOD setAge (I)V

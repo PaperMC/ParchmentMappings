@@ -19,11 +19,11 @@ CLASS net/minecraft/client/renderer/ItemInHandRenderer
 		ARG 5 player
 	METHOD applyItemArmAttackTransform (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V
 		ARG 1 poseStack
-		ARG 2 hand
+		ARG 2 arm
 		ARG 3 swingProgress
 	METHOD applyItemArmTransform (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V
 		ARG 1 poseStack
-		ARG 2 hand
+		ARG 2 arm
 		ARG 3 equippedProg
 	METHOD calculateMapTilt (F)F
 		COMMENT Return the angle to render the Map
@@ -40,7 +40,7 @@ CLASS net/minecraft/client/renderer/ItemInHandRenderer
 		ARG 3 pitch
 		ARG 4 hand
 		ARG 5 swingProgress
-		ARG 6 item
+		ARG 6 stack
 		ARG 7 equippedProgress
 		ARG 8 poseStack
 		ARG 9 nodeCollector

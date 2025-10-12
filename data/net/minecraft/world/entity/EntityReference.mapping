@@ -29,7 +29,7 @@ CLASS net/minecraft/world/entity/EntityReference
 	METHOD matches (Lnet/minecraft/world/level/entity/UniquelyIdentifyable;)Z
 		ARG 1 entity
 	METHOD of (Ljava/util/UUID;)Lnet/minecraft/world/entity/EntityReference;
-		ARG 0 id
+		ARG 0 uuid
 	METHOD of (Lnet/minecraft/world/level/entity/UniquelyIdentifyable;)Lnet/minecraft/world/entity/EntityReference;
 		ARG 0 entity
 	METHOD read (Lnet/minecraft/world/level/storage/ValueInput;Ljava/lang/String;)Lnet/minecraft/world/entity/EntityReference;

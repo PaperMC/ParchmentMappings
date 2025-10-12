@@ -18,7 +18,7 @@ CLASS net/minecraft/client/renderer/entity/GuardianRenderer
 		ARG 5 animationTime
 	METHOD shouldRender (Lnet/minecraft/world/entity/monster/Guardian;Lnet/minecraft/client/renderer/culling/Frustum;DDD)Z
 		ARG 1 livingEntity
-		ARG 2 camera
+		ARG 2 frustum
 		ARG 3 camX
 		ARG 5 camY
 		ARG 7 camZ

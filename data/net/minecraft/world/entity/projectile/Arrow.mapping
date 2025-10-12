@@ -14,7 +14,7 @@ CLASS net/minecraft/world/entity/projectile/Arrow
 	METHOD addEffect (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effectInstance
 	METHOD doPostHurtEffects (Lnet/minecraft/world/entity/LivingEntity;)V
-		ARG 1 living
+		ARG 1 target
 	METHOD makeParticle (I)V
 		ARG 1 particleAmount
 	METHOD setPotionContents (Lnet/minecraft/world/item/alchemy/PotionContents;)V

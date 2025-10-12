@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/particle/ElderGuardianParticleGroup
+	METHOD lambda$extractRenderState$0 (Lnet/minecraft/client/Camera;FLnet/minecraft/client/particle/ElderGuardianParticle;)Lnet/minecraft/client/particle/ElderGuardianParticleGroup$ElderGuardianParticleRenderState;
+		ARG 2 particle
 	CLASS ElderGuardianParticleRenderState
 		METHOD fromParticle (Lnet/minecraft/client/particle/ElderGuardianParticle;Lnet/minecraft/client/Camera;F)Lnet/minecraft/client/particle/ElderGuardianParticleGroup$ElderGuardianParticleRenderState;
 			ARG 0 particle

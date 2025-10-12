@@ -10,7 +10,7 @@ CLASS net/minecraft/world/entity/monster/MagmaCube
 	METHOD getJumpDelay ()I
 		COMMENT Gets the amount of time the slime needs to wait between jumps.
 	METHOD isDealsDamage ()Z
-		COMMENT Indicates weather the slime is able to damage the player (based upon the slime's size)
+		COMMENT Indicates whether the slime is able to damage the player (based upon the slime's size)
 	METHOD isOnFire ()Z
 		COMMENT Returns {@code true} if the entity is on fire. Used by render to add the fire effect on rendering.
 	METHOD jumpFromGround ()V

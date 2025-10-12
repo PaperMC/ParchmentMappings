@@ -1,29 +1,29 @@
 CLASS net/minecraft/server/jsonrpc/methods/IpBanlistService
 	METHOD add (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Ljava/util/List;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/util/List;
 		ARG 0 api
-		ARG 1 entries
-		ARG 2 clientInfo
+		ARG 1 ipBan
+		ARG 2 client
 	METHOD banIp (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Lnet/minecraft/server/jsonrpc/methods/IpBanlistService$IncomingIpBanDto;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/util/List;
 		ARG 0 api
-		ARG 1 entry
-		ARG 2 clientInfo
+		ARG 1 ipBan
+		ARG 2 client
 	METHOD banIp (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Lnet/minecraft/server/jsonrpc/methods/IpBanlistService$IpBan;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/util/List;
 		ARG 0 api
 		ARG 1 ipBan
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD clear (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/util/List;
 		ARG 0 api
-		ARG 1 clientInfo
+		ARG 1 client
 	METHOD get (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;)Ljava/util/List;
 		ARG 0 api
 	METHOD remove (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Ljava/util/List;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/util/List;
 		ARG 0 api
 		ARG 1 ips
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD set (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Ljava/util/List;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/util/List;
 		ARG 0 api
-		ARG 1 entries
-		ARG 2 clientInfo
+		ARG 1 ipBans
+		ARG 2 client
 	CLASS IpBan
 		METHOD from (Lnet/minecraft/server/players/IpBanListEntry;)Lnet/minecraft/server/jsonrpc/methods/IpBanlistService$IpBan;
 			ARG 0 entry

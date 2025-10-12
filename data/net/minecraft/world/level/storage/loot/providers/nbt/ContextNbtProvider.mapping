@@ -4,6 +4,8 @@ CLASS net/minecraft/world/level/storage/loot/providers/nbt/ContextNbtProvider
 		ARG 1 source
 	METHOD forContextEntity (Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/providers/nbt/NbtProvider;
 		ARG 0 entityTarget
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	CLASS Source
 		METHOD get (Ljava/lang/Object;)Lnet/minecraft/nbt/Tag;
 			ARG 1 value

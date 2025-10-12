@@ -162,6 +162,11 @@ CLASS net/minecraft/Util
 		ARG 5 input
 	METHOD lambda$anyOf$17 ([Ljava/util/function/Predicate;Ljava/lang/Object;)Z
 		ARG 1 input
+	METHOD lambda$fallibleSequence$22 (Ljava/util/function/Consumer;Ljava/util/List;ILjava/lang/Object;Ljava/lang/Throwable;)V
+		ARG 3 result
+		ARG 4 throwable
+	METHOD lambda$fallibleSequence$23 (Ljava/util/List;[Ljava/util/concurrent/CompletableFuture;Ljava/util/function/Consumer;Ljava/util/concurrent/CompletableFuture;)V
+		ARG 3 future
 	METHOD lambda$makeIoExecutor$4 (Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicInteger;ZLjava/lang/Runnable;)Ljava/lang/Thread;
 		ARG 3 task
 	METHOD lambda$static$0 (Ljava/nio/file/spi/FileSystemProvider;)Z
@@ -169,7 +174,7 @@ CLASS net/minecraft/Util
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V
-		ARG 0 error
+		ARG 0 message
 	METHOD logAndPauseIfInIde (Ljava/lang/String;Ljava/lang/Throwable;)V
 		ARG 0 message
 		ARG 1 error

@@ -14,7 +14,7 @@ CLASS com/mojang/blaze3d/opengl/GlDebug
 	METHOD printUnknownToken (I)Ljava/lang/String;
 		ARG 0 token
 	METHOD severityToString (I)Ljava/lang/String;
-		ARG 0 type
+		ARG 0 severity
 	METHOD sourceToString (I)Ljava/lang/String;
 		ARG 0 source
 	METHOD typeToString (I)Ljava/lang/String;

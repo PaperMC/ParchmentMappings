@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/RandomSequences
 	METHOD <init> (J)V
-		ARG 1 seed
+		ARG 1 worldSeed
 	METHOD <init> (JIZZLjava/util/Map;)V
 		ARG 1 worldSeed
 		ARG 3 salt

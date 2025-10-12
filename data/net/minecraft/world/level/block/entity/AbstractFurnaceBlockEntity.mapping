@@ -23,7 +23,7 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 2 stack
 	METHOD canPlaceItemThroughFace (ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)Z
 		ARG 1 index
-		ARG 2 itemStack
+		ARG 2 stack
 		ARG 3 direction
 	METHOD canTakeItemThroughFace (ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)Z
 		ARG 1 index

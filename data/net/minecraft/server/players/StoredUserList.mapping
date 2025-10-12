@@ -3,21 +3,22 @@ CLASS net/minecraft/server/players/StoredUserList
 		ARG 1 file
 		ARG 2 notificationService
 	METHOD add (Lnet/minecraft/server/players/StoredUserEntry;)Z
+		COMMENT Adds an entry to the list
 		ARG 1 entry
 	METHOD contains (Ljava/lang/Object;)Z
 		ARG 1 entry
 	METHOD createEntry (Lcom/google/gson/JsonObject;)Lnet/minecraft/server/players/StoredUserEntry;
 		ARG 1 entryData
 	METHOD get (Ljava/lang/Object;)Lnet/minecraft/server/players/StoredUserEntry;
-		ARG 1 obj
+		ARG 1 user
 	METHOD getKeyForUser (Ljava/lang/Object;)Ljava/lang/String;
 		COMMENT Gets the key value for the given object
-		ARG 1 obj
+		ARG 1 user
 	METHOD lambda$save$0 (Lnet/minecraft/server/players/StoredUserEntry;)Lcom/google/gson/JsonObject;
 		ARG 0 storedEntry
 	METHOD remove (Ljava/lang/Object;)Z
-		ARG 1 key
+		ARG 1 user
 	METHOD remove (Lnet/minecraft/server/players/StoredUserEntry;)Z
 		ARG 1 entry
 	METHOD removeExpired ()V
-		COMMENT Removes expired bans from the list. See {@link BanEntry#hasBanExpired}
+		COMMENT Removes expired entries from the list. See {@link StoredUserEntry#hasExpired()}

@@ -6,8 +6,8 @@ CLASS net/minecraft/network/Varint21FrameDecoder
 		ARG 0 in
 		ARG 1 out
 	METHOD decode (Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 in
 		ARG 3 out
 	METHOD handlerRemoved0 (Lio/netty/channel/ChannelHandlerContext;)V
-		ARG 1 context
+		ARG 1 ctx

@@ -13,6 +13,8 @@ CLASS net/minecraft/advancements/critereon/MinMaxBounds
 			ARG 0 value
 		METHOD fromReader (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/advancements/critereon/MinMaxBounds$Ints;
 			ARG 0 reader
+		METHOD lambda$new$0 (Ljava/lang/Integer;)Ljava/lang/Long;
+			ARG 0 integer
 		METHOD matches (I)Z
 			ARG 1 value
 		METHOD matchesSqr (J)Z
@@ -33,16 +35,25 @@ CLASS net/minecraft/advancements/critereon/MinMaxBounds
 			ARG 0 value
 		METHOD fromReader (Lcom/mojang/brigadier/StringReader;Ljava/util/function/Function;Ljava/util/function/Supplier;)Lnet/minecraft/advancements/critereon/MinMaxBounds$Bounds;
 			ARG 0 reader
-			ARG 1 parser
-			ARG 2 exceptionSupplier
+			ARG 1 converter
+			ARG 2 errorGetter
 		METHOD isAllowedInputChar (Lcom/mojang/brigadier/StringReader;)Z
 			ARG 0 reader
+		METHOD lambda$createCodec$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 1 instance
+		METHOD lambda$createCodec$4 (Lcom/mojang/datafixers/util/Either;)Lnet/minecraft/advancements/critereon/MinMaxBounds$Bounds;
+			ARG 0 either
 		METHOD map (Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/MinMaxBounds$Bounds;
 			ARG 1 mapper
 		METHOD readNumber (Lcom/mojang/brigadier/StringReader;Ljava/util/function/Function;Ljava/util/function/Supplier;)Ljava/util/Optional;
 			ARG 0 reader
-			ARG 1 parser
-			ARG 2 exceptionSupplier
+			ARG 1 converter
+			ARG 2 errorGetter
+		CLASS 1
+			METHOD lambda$encode$0 (Lnet/minecraft/network/codec/StreamCodec;Lio/netty/buffer/ByteBuf;Ljava/lang/Number;)V
+				ARG 2 min
+			METHOD lambda$encode$1 (Lnet/minecraft/network/codec/StreamCodec;Lio/netty/buffer/ByteBuf;Ljava/lang/Number;)V
+				ARG 2 max
 	CLASS Doubles
 		METHOD <init> (Lnet/minecraft/advancements/critereon/MinMaxBounds$Bounds;)V
 			ARG 1 bounds

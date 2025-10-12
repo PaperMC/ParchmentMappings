@@ -1,5 +1,9 @@
 CLASS net/minecraft/client/multiplayer/ClientConfigurationPacketListenerImpl
 	METHOD handleUnknownCustomPayload (Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
 		ARG 1 payload
+	METHOD lambda$handleCodeOfConduct$0 (Lnet/minecraft/client/gui/screens/Screen;Z)V
+		ARG 2 accept
+	METHOD lambda$handleConfigurationFinished$1 (Lnet/minecraft/server/packs/resources/ResourceProvider;)Lnet/minecraft/core/RegistryAccess$Frozen;
+		ARG 1 resourceProvider
 	METHOD runWithResources (Ljava/util/function/Function;)Ljava/lang/Object;
 		ARG 1 resources

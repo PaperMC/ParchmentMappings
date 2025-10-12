@@ -3,8 +3,8 @@ CLASS net/minecraft/client/sounds/SoundPreviewHandler
 		ARG 0 soundManager
 	METHOD preview (Lnet/minecraft/client/sounds/SoundManager;Lnet/minecraft/sounds/SoundSource;F)V
 		ARG 0 soundManager
-		ARG 1 source
+		ARG 1 category
 		ARG 2 volume
 	METHOD stopOtherCategoryPreview (Lnet/minecraft/client/sounds/SoundManager;Lnet/minecraft/sounds/SoundSource;)V
 		ARG 0 soundManager
-		ARG 1 soundSource
+		ARG 1 category

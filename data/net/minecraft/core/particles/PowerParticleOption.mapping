@@ -3,9 +3,13 @@ CLASS net/minecraft/core/particles/PowerParticleOption
 		ARG 1 type
 		ARG 2 power
 	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/MapCodec;
-		ARG 0 particleType
+		ARG 0 type
 	METHOD create (Lnet/minecraft/core/particles/ParticleType;F)Lnet/minecraft/core/particles/PowerParticleOption;
-		ARG 0 particleType
+		ARG 0 type
+		ARG 1 power
+	METHOD lambda$codec$0 (Lnet/minecraft/core/particles/ParticleType;Ljava/lang/Float;)Lnet/minecraft/core/particles/PowerParticleOption;
+		ARG 1 power
+	METHOD lambda$streamCodec$2 (Lnet/minecraft/core/particles/ParticleType;Ljava/lang/Float;)Lnet/minecraft/core/particles/PowerParticleOption;
 		ARG 1 power
 	METHOD streamCodec (Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/network/codec/StreamCodec;
-		ARG 0 particleType
+		ARG 0 type

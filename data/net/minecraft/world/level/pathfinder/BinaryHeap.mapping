@@ -1,22 +1,22 @@
 CLASS net/minecraft/world/level/pathfinder/BinaryHeap
 	METHOD changeCost (Lnet/minecraft/world/level/pathfinder/Node;F)V
-		COMMENT Changes the provided point's total cost if costIn is smaller
-		ARG 1 point
+		COMMENT Changes the provided node's total cost if costIn is smaller
+		ARG 1 node
 		ARG 2 cost
 	METHOD clear ()V
 		COMMENT Clears the path
 	METHOD downHeap (I)V
-		COMMENT Sorts a point to the right
+		COMMENT Sorts a node to the right
 		ARG 1 index
 	METHOD insert (Lnet/minecraft/world/level/pathfinder/Node;)Lnet/minecraft/world/level/pathfinder/Node;
-		COMMENT Adds a point to the path
-		ARG 1 point
+		COMMENT Adds a node to the path
+		ARG 1 node
 	METHOD isEmpty ()Z
-		COMMENT Returns {@code true} if this path contains no points
+		COMMENT Returns {@code true} if this path contains no nodes
 	METHOD pop ()Lnet/minecraft/world/level/pathfinder/Node;
-		COMMENT Returns and removes the first point in the path
+		COMMENT Returns and removes the first node in the path
 	METHOD remove (Lnet/minecraft/world/level/pathfinder/Node;)V
 		ARG 1 node
 	METHOD upHeap (I)V
-		COMMENT Sorts a point to the left
+		COMMENT Sorts a node to the left
 		ARG 1 index

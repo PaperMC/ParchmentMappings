@@ -32,5 +32,5 @@ CLASS com/mojang/blaze3d/systems/GpuDevice
 	METHOD precompilePipeline (Lcom/mojang/blaze3d/pipeline/RenderPipeline;)Lcom/mojang/blaze3d/pipeline/CompiledRenderPipeline;
 		ARG 1 pipeline
 	METHOD precompilePipeline (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Ljava/util/function/BiFunction;)Lcom/mojang/blaze3d/pipeline/CompiledRenderPipeline;
-		ARG 1 renderPipeline
+		ARG 1 pipeline
 		ARG 2 shaderSource

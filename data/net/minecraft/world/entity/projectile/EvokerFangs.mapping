@@ -10,7 +10,7 @@ CLASS net/minecraft/world/entity/projectile/EvokerFangs
 	METHOD dealDamageTo (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 target
 	METHOD getAnimationProgress (F)F
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD setOwner (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 owner
 	METHOD tick ()V

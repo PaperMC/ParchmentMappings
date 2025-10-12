@@ -1,14 +1,14 @@
 CLASS net/minecraft/client/renderer/entity/EnderDragonRenderer
 	METHOD submitCrystalBeams (FFFFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;I)V
-		ARG 0 offsetX
-		ARG 1 offsetY
-		ARG 2 offsetZ
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
 		ARG 3 ageInTicks
 		ARG 4 poseStack
 		ARG 5 nodeCollector
 		ARG 6 packedLight
 	METHOD submitRays (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/RenderType;)V
 		ARG 0 poseStack
-		ARG 1 deathProgress
+		ARG 1 dragonDeathCompletion
 		ARG 2 nodeCollector
 		ARG 3 renderType

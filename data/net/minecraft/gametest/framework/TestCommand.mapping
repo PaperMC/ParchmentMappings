@@ -18,6 +18,16 @@ CLASS net/minecraft/gametest/framework/TestCommand
 	METHOD exportTestStructure (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 testInstance
+	METHOD lambda$createNewStructure$46 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
+	METHOD lambda$locate$11 (Lnet/minecraft/gametest/framework/TestFinder;Lnet/minecraft/core/BlockPos;Lorg/apache/commons/lang3/mutable/MutableInt;Lnet/minecraft/core/BlockPos;)V
+		ARG 3 pos
+	METHOD lambda$register$20 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/gametest/framework/TestFinder;
+		ARG 0 context
+	METHOD lambda$register$21 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/gametest/framework/TestFinder;
+		ARG 0 context
+	METHOD lambda$register$22 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD lambda$register$23 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$24 (Lcom/mojang/brigadier/context/CommandContext;)I
@@ -56,10 +66,26 @@ CLASS net/minecraft/gametest/framework/TestCommand
 		ARG 0 context
 	METHOD lambda$register$41 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
+	METHOD lambda$register$42 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$runWithRetryOptions$14 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$runWithRetryOptions$15 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$runWithRetryOptionsAndBuildInfo$17 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$runWithRetryOptionsAndBuildInfo$18 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
 	METHOD lambda$static$0 (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
+	METHOD lambda$toGameTestInfo$44 (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/Holder$Reference;)Z
+		ARG 1 test
+	METHOD lambda$toGameTestInfo$45 (ILnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/gametest/framework/RetryOptions;Lnet/minecraft/core/Holder$Reference;)Lnet/minecraft/gametest/framework/GameTestInfo;
+		ARG 3 test
+	METHOD lambda$toGameTestInfos$43 (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/gametest/framework/RetryOptions;Lnet/minecraft/core/BlockPos;)Ljava/util/Optional;
+		ARG 2 pos
 	METHOD locate (Lnet/minecraft/gametest/framework/TestFinder;)I
 		ARG 0 testFinder
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V

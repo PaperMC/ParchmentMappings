@@ -10,7 +10,7 @@ CLASS net/minecraft/world/level/storage/LevelSummary
 	METHOD compareTo (Lnet/minecraft/world/level/storage/LevelSummary;)I
 		ARG 1 other
 	METHOD getGameMode ()Lnet/minecraft/world/level/GameType;
-		COMMENT Gets the EnumGameType.
+		COMMENT Gets the GameType.
 	METHOD getLevelId ()Ljava/lang/String;
 		COMMENT Returns the file name.
 	METHOD getLevelName ()Ljava/lang/String;

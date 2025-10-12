@@ -15,7 +15,7 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookPage
 		ARG 3 y
 		ARG 4 width
 		ARG 5 height
-		ARG 6 isDoubleClick
+		ARG 6 doubleClick
 	METHOD recipeShown (Lnet/minecraft/world/item/crafting/display/RecipeDisplayId;)V
 		ARG 1 recipe
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIIIF)V

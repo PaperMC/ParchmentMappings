@@ -22,7 +22,7 @@ CLASS net/minecraft/gametest/framework/ReportGameListener
 		ARG 0 testInfo
 		ARG 1 message
 	METHOD say (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/ChatFormatting;Ljava/lang/String;)V
-		ARG 0 serverLevel
+		ARG 0 level
 		ARG 1 formatting
 		ARG 2 message
 	METHOD visualizeFailedTest (Lnet/minecraft/gametest/framework/GameTestInfo;Ljava/lang/Throwable;)V

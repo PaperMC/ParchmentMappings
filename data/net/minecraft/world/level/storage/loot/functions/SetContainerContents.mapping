@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetContainerContents
 	COMMENT LootItemFunction that sets the contents of a container such as a chest by setting the {@code BlocKEntityTag} of the stacks.
 	COMMENT The contents are based on a list of loot pools.
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/ContainerComponentManipulator;Ljava/util/List;)V
-		ARG 1 conditions
+		ARG 1 predicates
 		ARG 2 component
 		ARG 3 entries
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;

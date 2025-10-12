@@ -20,10 +20,10 @@ CLASS net/minecraft/world/scores/Scoreboard
 	METHOD getDisplayObjective (Lnet/minecraft/world/scores/DisplaySlot;)Lnet/minecraft/world/scores/Objective;
 		ARG 1 slot
 	METHOD getObjective (Ljava/lang/String;)Lnet/minecraft/world/scores/Objective;
-		COMMENT Returns a ScoreObjective for the objective name
+		COMMENT Returns an Objective for the objective name
 		ARG 1 name
 	METHOD getOrCreatePlayerInfo (Ljava/lang/String;)Lnet/minecraft/world/scores/PlayerScores;
-		ARG 1 username
+		ARG 1 playerName
 	METHOD getOrCreatePlayerScore (Lnet/minecraft/world/scores/ScoreHolder;Lnet/minecraft/world/scores/Objective;)Lnet/minecraft/world/scores/ScoreAccess;
 		ARG 1 scoreHolder
 		ARG 2 objective
@@ -35,15 +35,15 @@ CLASS net/minecraft/world/scores/Scoreboard
 		ARG 1 scoreHolder
 		ARG 2 objective
 	METHOD getPlayerTeam (Ljava/lang/String;)Lnet/minecraft/world/scores/PlayerTeam;
-		COMMENT Retrieve the ScorePlayerTeam instance identified by the passed team name
-		ARG 1 teamName
+		COMMENT Retrieve the PlayerTeam instance identified by the passed team name
+		ARG 1 name
 	METHOD getPlayerTeams ()Ljava/util/Collection;
-		COMMENT Retrieve all registered ScorePlayerTeam instances
+		COMMENT Retrieve all registered PlayerTeam instances
 	METHOD getPlayersTeam (Ljava/lang/String;)Lnet/minecraft/world/scores/PlayerTeam;
-		COMMENT Gets the ScorePlayerTeam object for the given username.
-		ARG 1 username
+		COMMENT Gets the PlayerTeam object for the given player.
+		ARG 1 playerName
 	METHOD getTeamNames ()Ljava/util/Collection;
-		COMMENT Retrieve all registered ScorePlayerTeam names
+		COMMENT Retrieve all registered PlayerTeam names
 	METHOD listPlayerScores (Lnet/minecraft/world/scores/Objective;)Ljava/util/Collection;
 		ARG 1 objective
 	METHOD listPlayerScores (Lnet/minecraft/world/scores/ScoreHolder;)Lit/unimi/dsi/fastutil/objects/Object2IntMap;
@@ -73,22 +73,22 @@ CLASS net/minecraft/world/scores/Scoreboard
 		ARG 1 scoreHolder
 		ARG 2 objective
 	METHOD onTeamAdded (Lnet/minecraft/world/scores/PlayerTeam;)V
-		ARG 1 playerTeam
+		ARG 1 team
 	METHOD onTeamChanged (Lnet/minecraft/world/scores/PlayerTeam;)V
-		ARG 1 playerTeam
+		ARG 1 team
 	METHOD onTeamRemoved (Lnet/minecraft/world/scores/PlayerTeam;)V
-		ARG 1 playerTeam
+		ARG 1 team
 	METHOD removeObjective (Lnet/minecraft/world/scores/Objective;)V
 		ARG 1 objective
 	METHOD removePlayerFromTeam (Ljava/lang/String;)Z
 		ARG 1 playerName
 	METHOD removePlayerFromTeam (Ljava/lang/String;Lnet/minecraft/world/scores/PlayerTeam;)V
-		COMMENT Removes the given username from the given ScorePlayerTeam. If the player is not on the team then an IllegalStateException is thrown.
-		ARG 1 username
-		ARG 2 playerTeam
+		COMMENT Removes the given player from the given PlayerTeam. If the player is not on the team then an IllegalStateException is thrown.
+		ARG 1 playerName
+		ARG 2 team
 	METHOD removePlayerTeam (Lnet/minecraft/world/scores/PlayerTeam;)V
 		COMMENT Removes the team from the scoreboard, updates all player memberships and broadcasts the deletion to all players
-		ARG 1 playerTeam
+		ARG 1 team
 	METHOD resetAllPlayerScores (Lnet/minecraft/world/scores/ScoreHolder;)V
 		ARG 1 scoreHolder
 	METHOD resetSinglePlayerScore (Lnet/minecraft/world/scores/ScoreHolder;Lnet/minecraft/world/scores/Objective;)V

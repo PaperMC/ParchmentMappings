@@ -8,7 +8,7 @@ CLASS net/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl
 		ARG 6 worldLoadDuration
 		ARG 7 updateStatus
 		ARG 8 levelLoadTracker
-		ARG 9 transferState
+		ARG 9 state
 	METHOD authenticateServer (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
 		ARG 1 serverHash
 	METHOD handleCompression (Lnet/minecraft/network/protocol/login/ClientboundLoginCompressionPacket;)V

@@ -8,5 +8,5 @@ CLASS net/minecraft/world/level/block/IceBlock
 		ARG 2 player
 		ARG 3 pos
 		ARG 4 state
-		ARG 5 te
+		ARG 5 blockEntity
 		ARG 6 stack

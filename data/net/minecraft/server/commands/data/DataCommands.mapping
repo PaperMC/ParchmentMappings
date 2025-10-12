@@ -75,7 +75,7 @@ CLASS net/minecraft/server/commands/data/DataCommands
 	METHOD lambda$static$6 (Ljava/util/function/Function;)Lnet/minecraft/server/commands/data/DataCommands$DataProvider;
 		ARG 0 dataProviderFactory
 	METHOD manipulateData (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/server/commands/data/DataCommands$DataProvider;Lnet/minecraft/server/commands/data/DataCommands$DataManipulator;Ljava/util/List;)I
-		ARG 0 source
+		ARG 0 context
 		ARG 1 dataProvider
 		ARG 2 dataManipulator
 		ARG 3 tags
@@ -85,7 +85,7 @@ CLASS net/minecraft/server/commands/data/DataCommands
 		COMMENT @return 1
 		ARG 0 source
 		ARG 1 accessor
-		ARG 2 nbt
+		ARG 2 tag
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
 	METHOD removeData (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/commands/data/DataAccessor;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;)I
@@ -114,7 +114,7 @@ CLASS net/minecraft/server/commands/data/DataCommands
 		ARG 2 end
 	CLASS DataProvider
 		METHOD access (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/server/commands/data/DataAccessor;
-			COMMENT Creates an accessor based on the command context. This should only refer to arguments registered in {@link createArgument}.
+			COMMENT Creates an accessor based on the command context. This should only refer to arguments registered in {@link #register}.
 			ARG 1 context
 		METHOD wrap (Lcom/mojang/brigadier/builder/ArgumentBuilder;Ljava/util/function/Function;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
 			COMMENT Creates an argument used for accessing data related to this type of thing, including a literal to distinguish from other types.
@@ -123,7 +123,7 @@ CLASS net/minecraft/server/commands/data/DataCommands
 	CLASS DataManipulator
 		METHOD modify (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;Ljava/util/List;)I
 			ARG 1 context
-			ARG 2 nbt
+			ARG 2 data
 			ARG 3 nbtPath
 			ARG 4 tags
 	CLASS StringProcessor

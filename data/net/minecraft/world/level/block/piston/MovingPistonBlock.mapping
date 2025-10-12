@@ -6,7 +6,7 @@ CLASS net/minecraft/world/level/block/piston/MovingPistonBlock
 		ARG 2 pos
 		ARG 3 state
 	METHOD getBlockEntity (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/piston/PistonMovingBlockEntity;
-		ARG 1 blockReader
+		ARG 1 level
 		ARG 2 pos
 	METHOD getCollisionShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 1 state
@@ -23,11 +23,11 @@ CLASS net/minecraft/world/level/block/piston/MovingPistonBlock
 		ARG 2 mirror
 	METHOD newMovingBlockEntity (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;ZZ)Lnet/minecraft/world/level/block/entity/BlockEntity;
 		ARG 0 pos
-		ARG 1 blockState
+		ARG 1 state
 		ARG 2 movedState
 		ARG 3 direction
 		ARG 4 extending
 		ARG 5 isSourcePiston
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
-		ARG 2 rot
+		ARG 2 rotation

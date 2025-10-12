@@ -8,7 +8,7 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/RootSystemConfig
 		ARG 6 rootPlacementAttempts
 		ARG 7 rootColumnMaxHeight
 		ARG 8 hangingRootRadius
-		ARG 9 hangingRootsVerticalSpawn
+		ARG 9 hangingRootsVerticalSpan
 		ARG 10 hangingRootStateProvider
 		ARG 11 hangingRootPlacementAttempts
 		ARG 12 allowedVerticalWaterForTree

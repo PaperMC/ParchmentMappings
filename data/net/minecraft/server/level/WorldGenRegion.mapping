@@ -7,7 +7,7 @@ CLASS net/minecraft/server/level/WorldGenRegion
 	METHOD addFreshEntity (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
-		ARG 1 particleData
+		ARG 1 options
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
@@ -42,7 +42,7 @@ CLASS net/minecraft/server/level/WorldGenRegion
 		ARG 2 x
 		ARG 3 z
 	METHOD getLevelData ()Lnet/minecraft/world/level/storage/LevelData;
-		COMMENT Returns the world's WorldInfo object
+		COMMENT Returns the world's LevelData object
 	METHOD getNearestPlayer (DDDDLjava/util/function/Predicate;)Lnet/minecraft/world/entity/player/Player;
 		ARG 1 x
 		ARG 3 y
@@ -61,14 +61,14 @@ CLASS net/minecraft/server/level/WorldGenRegion
 		ARG 1 pos
 		ARG 2 state
 	METHOD lambda$new$0 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/ticks/TickContainerAccess;
-		ARG 1 blockPos
+		ARG 1 pos
 	METHOD lambda$new$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/ticks/TickContainerAccess;
-		ARG 1 blockPos
+		ARG 1 pos
 	METHOD markPosForPostprocessing (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD removeBlock (Lnet/minecraft/core/BlockPos;Z)Z
 		ARG 1 pos
-		ARG 2 isMoving
+		ARG 2 movedByPiston
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z
 		ARG 1 pos
 		ARG 2 state

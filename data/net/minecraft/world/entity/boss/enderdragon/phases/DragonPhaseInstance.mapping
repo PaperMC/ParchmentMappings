@@ -3,7 +3,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/phases/DragonPhaseInstance
 		COMMENT Called when this phase is set to active
 	METHOD doClientTick ()V
 		COMMENT Generates particle effects appropriate to the phase (or sometimes sounds).
-		COMMENT Called by dragon's onLivingUpdate. Only used when worldObj.isRemote.
+		COMMENT Called by dragon's aiStep. Only used when level is not an instance of ServerLevel.
 	METHOD doServerTick (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD getFlySpeed ()F

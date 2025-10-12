@@ -3,7 +3,7 @@ CLASS net/minecraft/network/protocol/game/ClientboundCommandSuggestionsPacket
 		ARG 1 id
 		ARG 2 suggestions
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the NetHandler for processing.
+		COMMENT Passes this Packet on to the packet listener for processing.
 		ARG 1 handler
 	METHOD lambda$new$0 (Lcom/mojang/brigadier/suggestion/Suggestion;)Lnet/minecraft/network/protocol/game/ClientboundCommandSuggestionsPacket$Entry;
 		ARG 0 suggestion

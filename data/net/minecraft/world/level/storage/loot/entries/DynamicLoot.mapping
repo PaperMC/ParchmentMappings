@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/storage/loot/entries/DynamicLoot
 	COMMENT A loot pool entry container that will generate the dynamic drops with a given name.
 	COMMENT
-	COMMENT @see LootContext.DynamicDrops
+	COMMENT @see net.minecraft.world.level.storage.loot.LootParams.DynamicDrop
 	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;IILjava/util/List;Ljava/util/List;)V
 		ARG 1 name
 		ARG 2 weight

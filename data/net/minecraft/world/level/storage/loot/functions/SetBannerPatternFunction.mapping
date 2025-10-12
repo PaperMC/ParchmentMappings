@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction
 	COMMENT LootItemFunction that sets the banner patterns for a banner item. Optionally appends to any existing patterns.
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Z)V
-		ARG 1 conditions
+		ARG 1 predicates
 		ARG 2 patterns
 		ARG 3 append
 	METHOD setBannerPattern (Z)Lnet/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction$Builder;

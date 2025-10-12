@@ -1,0 +1,14 @@
+CLASS net/minecraft/server/dialog/input/NumberRangeInput
+	METHOD computeLabel (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
+		ARG 1 value
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	CLASS RangeInfo
+		METHOD computeScaledValue (F)F
+			ARG 1 value
+		METHOD isOutOfRange (F)Z
+			ARG 1 value
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD scaledValueToSlider (F)F
+			ARG 1 value

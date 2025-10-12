@@ -19,7 +19,7 @@ CLASS com/mojang/blaze3d/audio/Channel
 			COMMENT the number of samples to buffer
 	METHOD create ()Lcom/mojang/blaze3d/audio/Channel;
 		COMMENT Creates a new OpenAL audio channel.
-		COMMENT {@return a new OpenAL audio channel or {@code null} if its creation failed}
+		COMMENT @return a new OpenAL audio channel or {@code null} if its creation failed
 	METHOD destroy ()V
 		COMMENT Stops the audio channel and releases resources.
 	METHOD disableAttenuation ()V
@@ -39,7 +39,7 @@ CLASS com/mojang/blaze3d/audio/Channel
 	METHOD play ()V
 		COMMENT Starts playing the audio channel.
 	METHOD playing ()Z
-		COMMENT {@return {@code true} if the audio channel is currently playing, {@code false} otherwise}
+		COMMENT @return {@code true} if the audio channel is currently playing, {@code false} otherwise
 	METHOD pumpBuffers (I)V
 		COMMENT Reads and queues audio buffers from the stream.
 		ARG 1 readCount
@@ -70,7 +70,7 @@ CLASS com/mojang/blaze3d/audio/Channel
 	METHOD stop ()V
 		COMMENT Stops playing the audio channel.
 	METHOD stopped ()Z
-		COMMENT {@return {@code true} if the audio channel is stopped, {@code false} otherwise}
+		COMMENT @return {@code true} if the audio channel is stopped, {@code false} otherwise
 	METHOD unpause ()V
 		COMMENT Resumes playing the audio channel if it was paused.
 	METHOD updateStream ()V

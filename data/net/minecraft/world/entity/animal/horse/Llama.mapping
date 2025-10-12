@@ -47,4 +47,4 @@ CLASS net/minecraft/world/entity/animal/horse/Llama
 		METHOD <init> (Lnet/minecraft/world/entity/animal/horse/Llama;)V
 			ARG 1 llama
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing

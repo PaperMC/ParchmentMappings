@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/block/entity/CreakingHeartBlockEntity
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
-		ARG 2 state
+		ARG 2 blockState
 	METHOD emitParticles (Lnet/minecraft/server/level/ServerLevel;IZ)V
 		ARG 1 level
 		ARG 2 count

@@ -18,13 +18,13 @@ CLASS com/mojang/blaze3d/audio/OpenAlUtil
 			COMMENT The AudioFormat object to convert
 	METHOD checkALCError (JLjava/lang/String;)Z
 		COMMENT Checks for an ALC error and logs an error message if one is found.
-		COMMENT @return true if an ALC error was found, false otherwise.
+		COMMENT @return {@code true} if an ALC error was found, {@code false} otherwise.
 		ARG 0 deviceHandle
 			COMMENT The handle of the device to check for errors on
 		ARG 2 operationState
 			COMMENT A String describing the operation being performed when the error occurred
 	METHOD checkALError (Ljava/lang/String;)Z
 		COMMENT Checks for an OpenAL error and logs an error message if one is found.
-		COMMENT @return true if an OpenAL error was found, false otherwise.
+		COMMENT @return {@code true} if an OpenAL error was found, {@code false} otherwise.
 		ARG 0 operationState
 			COMMENT A String describing the operation being performed when the error occurred

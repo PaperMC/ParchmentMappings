@@ -3,7 +3,7 @@ CLASS com/mojang/blaze3d/platform/cursor/CursorType
 		ARG 1 name
 		ARG 2 handle
 	METHOD createStandardCursor (ILjava/lang/String;Lcom/mojang/blaze3d/platform/cursor/CursorType;)Lcom/mojang/blaze3d/platform/cursor/CursorType;
-		ARG 0 id
+		ARG 0 shape
 		ARG 1 name
 		ARG 2 fallback
 	METHOD select (Lcom/mojang/blaze3d/platform/Window;)V

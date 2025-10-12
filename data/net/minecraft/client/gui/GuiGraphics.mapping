@@ -287,7 +287,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 4 y
 		ARG 5 lineWidth
 		ARG 6 color
-		ARG 7 dropShadow
+		ARG 7 drawShadow
 	METHOD enableScissor (IIII)V
 		COMMENT Enables scissoring with the specified screen coordinates.
 		ARG 1 minX
@@ -343,9 +343,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 	METHOD getSpriteScaling (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling;
 		ARG 0 sprite
 	METHOD guiHeight ()I
-		COMMENT {@return returns the height of the GUI screen in pixels}
+		COMMENT {@return the height of the GUI screen in pixels}
 	METHOD guiWidth ()I
-		COMMENT {@return returns the width of the GUI screen in pixels}
+		COMMENT {@return the width of the GUI screen in pixels}
 	METHOD hLine (IIII)V
 		COMMENT Draws a horizontal line from minX to maxX at the specified y-coordinate with the given color.
 		ARG 1 minX
@@ -373,7 +373,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 1 font
 			COMMENT the font used for rendering text.
 		ARG 2 style
-			COMMENT the style of the text component. Can be null.
+			COMMENT the style of the text component. Can be {@code null}.
 		ARG 3 mouseX
 			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
@@ -406,9 +406,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 	METHOD renderItem (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;III)V
 		COMMENT Renders an item stack for a living entity in a specific level at the specified coordinates with a random seed.
 		ARG 1 entity
-			COMMENT the living entity. Can be null.
+			COMMENT the living entity. Can be {@code null}.
 		ARG 2 level
-			COMMENT the level in which the rendering occurs. Can be null.
+			COMMENT the level in which the rendering occurs. Can be {@code null}.
 		ARG 3 stack
 			COMMENT the item stack to render.
 		ARG 4 x
@@ -470,7 +470,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 4 y
 			COMMENT the y-coordinate of the rendering position.
 		ARG 5 text
-			COMMENT the custom text to display. Can be null.
+			COMMENT the custom text to display. Can be {@code null}.
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 font
 		ARG 2 components
@@ -606,11 +606,17 @@ CLASS net/minecraft/client/gui/GuiGraphics
 	METHOD submitMapRenderState (Lnet/minecraft/client/renderer/state/MapRenderState;)V
 		ARG 1 renderState
 	METHOD submitOutline (IIIII)V
+		COMMENT Submits an outline rectangle to render on the screen with the specified color.
 		ARG 1 x
+			COMMENT the x-coordinate of the top-left corner of the rectangle.
 		ARG 2 y
+			COMMENT the y-coordinate of the top-left corner of the rectangle.
 		ARG 3 width
+			COMMENT the width of the blitted portion.
 		ARG 4 height
+			COMMENT the height of the rectangle.
 		ARG 5 color
+			COMMENT the color of the outline.
 	METHOD submitProfilerChartRenderState (Ljava/util/List;IIII)V
 		ARG 1 chartData
 		ARG 2 x0
@@ -619,7 +625,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 y1
 	METHOD submitSignRenderState (Lnet/minecraft/client/model/Model$Simple;FLnet/minecraft/world/level/block/state/properties/WoodType;IIII)V
 		ARG 1 signModel
-		ARG 2 acale
+		ARG 2 scale
 		ARG 3 woodType
 		ARG 4 x0
 		ARG 5 y0
@@ -642,8 +648,8 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 3 tileWidth
 		ARG 4 tileHeight
 		ARG 5 x0
-		ARG 6 x1
-		ARG 7 y0
+		ARG 6 y0
+		ARG 7 x1
 		ARG 8 y1
 		ARG 9 u0
 		ARG 10 u1
@@ -675,12 +681,10 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			ARG 2 y
 		METHOD pop ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 			COMMENT Pops the top screen rectangle from the scissor stack.
-			COMMENT <p>
-			COMMENT @return The new top screen rectangle after the pop operation, or null if the stack is empty.
+			COMMENT @return The new top screen rectangle after the pop operation, or {@code null} if the stack is empty.
 			COMMENT @throws IllegalStateException if the stack is empty.
 		METHOD push (Lnet/minecraft/client/gui/navigation/ScreenRectangle;)Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 			COMMENT Pushes a screen rectangle onto the scissor stack.
-			COMMENT <p>
 			COMMENT @return The resulting intersection of the pushed rectangle with the previous top rectangle on the stack, or the pushed rectangle if the stack is empty.
 			ARG 1 scissor
 				COMMENT the screen rectangle to push.

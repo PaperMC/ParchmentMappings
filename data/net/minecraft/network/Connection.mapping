@@ -8,11 +8,11 @@ CLASS net/minecraft/network/Connection
 	METHOD <init> (Lnet/minecraft/network/protocol/PacketFlow;)V
 		ARG 1 receiving
 	METHOD channelActive (Lio/netty/channel/ChannelHandlerContext;)V
-		ARG 1 context
+		ARG 1 ctx
 	METHOD channelInactive (Lio/netty/channel/ChannelHandlerContext;)V
-		ARG 1 context
+		ARG 1 ctx
 	METHOD channelRead0 (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/protocol/Packet;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 packet
 	METHOD configureInMemoryPipeline (Lio/netty/channel/ChannelPipeline;Lnet/minecraft/network/protocol/PacketFlow;)V
 		ARG 0 pipeline
@@ -23,7 +23,7 @@ CLASS net/minecraft/network/Connection
 		ARG 0 pipeline
 		ARG 1 flow
 		ARG 2 memoryOnly
-		ARG 3 bandwithDebugMonitor
+		ARG 3 bandwidthDebugMonitor
 	METHOD connect (Ljava/net/InetSocketAddress;ZLnet/minecraft/network/Connection;)Lio/netty/channel/ChannelFuture;
 		ARG 0 address
 		ARG 1 useEpollIfAvailable
@@ -38,7 +38,7 @@ CLASS net/minecraft/network/Connection
 		ARG 1 useEpollIfAvailable
 		ARG 2 sampleLogger
 	METHOD createFrameDecoder (Lnet/minecraft/network/BandwidthDebugMonitor;Z)Lio/netty/channel/ChannelInboundHandler;
-		ARG 0 bandwithDebugMonitor
+		ARG 0 bandwidthDebugMonitor
 		ARG 1 memoryOnly
 	METHOD createFrameEncoder (Z)Lio/netty/channel/ChannelOutboundHandler;
 		ARG 0 memoryOnly
@@ -50,13 +50,13 @@ CLASS net/minecraft/network/Connection
 		COMMENT {@code ClientboundDisconnectPacket}.
 		COMMENT
 		COMMENT Closing the channel this way does not send any disconnection packets, it simply terminates the underlying netty channel.
-		ARG 1 message
+		ARG 1 reason
 	METHOD doSendPacket (Lnet/minecraft/network/protocol/Packet;Lio/netty/channel/ChannelFutureListener;Z)V
 		ARG 1 packet
 		ARG 2 sendListener
 		ARG 3 flush
 	METHOD exceptionCaught (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 exception
 	METHOD flushQueue ()V
 		COMMENT Will iterate through the outboundPacketQueue and dispatch all Packets
@@ -106,7 +106,7 @@ CLASS net/minecraft/network/Connection
 	METHOD isConnecting ()Z
 		COMMENT Returns {@code true} while this connection is still connecting, i.e. {@link #channelActive} has not fired yet.
 	METHOD isMemoryConnection ()Z
-		COMMENT True if this {@code Connection} uses a memory connection (single player game). False may imply both an active TCP connection or simply no active connection at all
+		COMMENT {@code true} if this {@code Connection} uses a memory connection (single player game). {@code false} may imply both an active TCP connection or simply no active connection at all
 	METHOD outboundHandlerName (Z)Ljava/lang/String;
 		ARG 0 clientbound
 	METHOD runOnceConnected (Ljava/util/function/Consumer;)V
@@ -125,7 +125,7 @@ CLASS net/minecraft/network/Connection
 		ARG 2 sendListener
 		ARG 3 flush
 	METHOD setBandwidthLogger (Lnet/minecraft/util/debugchart/LocalSampleLogger;)V
-		ARG 1 bandwithLogger
+		ARG 1 bandwidthLogger
 	METHOD setEncryptionKey (Ljavax/crypto/Cipher;Ljavax/crypto/Cipher;)V
 		COMMENT Enables encryption for this connection using the given decrypting and encrypting ciphers.
 		COMMENT This adds new handlers to this connection's pipeline which handle the decrypting and encrypting.
@@ -138,7 +138,7 @@ CLASS net/minecraft/network/Connection
 	METHOD setListenerForServerboundHandshake (Lnet/minecraft/network/PacketListener;)V
 		ARG 1 packetListener
 	METHOD setReadOnly ()V
-		COMMENT Switches the channel to manual reading modus
+		COMMENT Switches the channel to manual reading mode
 	METHOD setupCompression (IZ)V
 		COMMENT Enables or disables compression for this connection. If {@code threshold} is >= 0 then a {@link CompressionDecoder} and {@link CompressionEncoder}
 		COMMENT are installed in the pipeline or updated if they already exist. If {@code threshold} is < 0 then any such codec are removed.

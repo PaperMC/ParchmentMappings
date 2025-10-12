@@ -14,4 +14,4 @@ CLASS net/minecraft/world/entity/animal/coppergolem/CopperGolem
 	METHOD updateWeathering (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/util/RandomSource;J)V
 		ARG 1 level
 		ARG 2 random
-		ARG 3 dayTime
+		ARG 3 gameTime

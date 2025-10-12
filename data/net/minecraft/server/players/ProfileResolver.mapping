@@ -9,3 +9,9 @@ CLASS net/minecraft/server/players/ProfileResolver
 		METHOD <init> (Lcom/mojang/authlib/minecraft/MinecraftSessionService;Lnet/minecraft/server/players/UserNameToIdResolver;)V
 			ARG 1 sessionService
 			ARG 2 resolver
+		CLASS 1
+			METHOD load (Ljava/util/UUID;)Ljava/util/Optional;
+				ARG 1 id
+		CLASS 2
+			METHOD load (Ljava/lang/String;)Ljava/util/Optional;
+				ARG 1 name

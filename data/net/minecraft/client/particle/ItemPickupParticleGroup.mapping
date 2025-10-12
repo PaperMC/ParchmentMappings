@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/particle/ItemPickupParticleGroup
+	METHOD lambda$extractRenderState$0 (Lnet/minecraft/client/Camera;FLnet/minecraft/client/particle/ItemPickupParticle;)Lnet/minecraft/client/particle/ItemPickupParticleGroup$ParticleInstance;
+		ARG 2 particle
 	CLASS ParticleInstance
 		METHOD fromParticle (Lnet/minecraft/client/particle/ItemPickupParticle;Lnet/minecraft/client/Camera;F)Lnet/minecraft/client/particle/ItemPickupParticleGroup$ParticleInstance;
 			ARG 0 particle

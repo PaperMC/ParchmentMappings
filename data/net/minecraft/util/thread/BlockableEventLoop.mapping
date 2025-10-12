@@ -12,7 +12,7 @@ CLASS net/minecraft/util/thread/BlockableEventLoop
 	METHOD isNonRecoverable (Ljava/lang/Throwable;)Z
 		ARG 0 error
 	METHOD managedBlock (Ljava/util/function/BooleanSupplier;)V
-		COMMENT Drive the executor until the given BooleanSupplier returns true
+		COMMENT Drive the executor until the given BooleanSupplier returns {@code true}
 		ARG 1 isDone
 	METHOD shouldRun (Ljava/lang/Runnable;)Z
 		ARG 1 runnable

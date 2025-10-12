@@ -1,10 +1,10 @@
 CLASS net/minecraft/client/renderer/blockentity/AbstractEndPortalRenderer
 	METHOD renderCube (Ljava/util/EnumSet;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;)V
-		ARG 1 faces
+		ARG 1 facesToShow
 		ARG 2 pose
 		ARG 3 consumer
 	METHOD renderFace (Ljava/util/EnumSet;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFFFFFLnet/minecraft/core/Direction;)V
-		ARG 1 faces
+		ARG 1 facesToShow
 		ARG 2 pose
 		ARG 3 consumer
 		ARG 4 x1
@@ -15,4 +15,4 @@ CLASS net/minecraft/client/renderer/blockentity/AbstractEndPortalRenderer
 		ARG 9 z2
 		ARG 10 z3
 		ARG 11 z4
-		ARG 12 direction
+		ARG 12 face

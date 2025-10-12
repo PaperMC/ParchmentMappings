@@ -1,6 +1,11 @@
 CLASS com/mojang/blaze3d/font/SpaceProvider
 	METHOD <init> (Ljava/util/Map;)V
 		ARG 1 glyphs
+	METHOD lambda$new$0 (Ljava/lang/Integer;Ljava/lang/Float;)V
+		ARG 1 character
+		ARG 2 advance
 	CLASS Definition
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+		METHOD lambda$unpack$1 (Lnet/minecraft/server/packs/resources/ResourceManager;)Lcom/mojang/blaze3d/font/GlyphProvider;
+			ARG 1 resourceManager

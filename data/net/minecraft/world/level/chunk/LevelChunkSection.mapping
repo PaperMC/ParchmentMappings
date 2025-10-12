@@ -5,7 +5,7 @@ CLASS net/minecraft/world/level/chunk/LevelChunkSection
 		ARG 1 states
 		ARG 2 biomes
 	METHOD <init> (Lnet/minecraft/world/level/chunk/PalettedContainerFactory;)V
-		ARG 1 palettedContainerFactory
+		ARG 1 containerFactory
 	METHOD fillBiomesFromNoise (Lnet/minecraft/world/level/biome/BiomeResolver;Lnet/minecraft/world/level/biome/Climate$Sampler;III)V
 		ARG 1 biomeResolver
 		ARG 2 climateSampler

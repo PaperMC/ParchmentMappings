@@ -12,7 +12,7 @@ CLASS net/minecraft/world/damagesource/CombatTracker
 		ARG 3 hasWeaponTranslationKey
 		ARG 4 noWeaponTranslationKey
 	METHOD recheckStatus ()V
-		COMMENT Resets this trackers list of combat entries
+		COMMENT Resets this tracker's list of combat entries
 	METHOD recordDamage (Lnet/minecraft/world/damagesource/DamageSource;F)V
 		ARG 1 source
 		ARG 2 damage

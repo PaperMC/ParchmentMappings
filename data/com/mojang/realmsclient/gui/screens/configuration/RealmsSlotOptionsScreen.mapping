@@ -3,7 +3,7 @@ CLASS com/mojang/realmsclient/gui/screens/configuration/RealmsSlotOptionsScreen
 		ARG 1 parentScreen
 		ARG 2 slot
 		ARG 3 worldType
-		ARG 4 slotIndex
+		ARG 4 slotId
 	METHOD confirmDangerousOption (Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/components/CycleButton$OnValueChange;
 		ARG 1 text
 		ARG 2 callback

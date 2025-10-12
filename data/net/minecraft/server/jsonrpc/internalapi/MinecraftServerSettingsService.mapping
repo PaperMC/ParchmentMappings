@@ -1,61 +1,61 @@
 CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftServerSettingsService
 	METHOD setAcceptsTransfers (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 acceptsTransfers
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setAllowFlight (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 allowFlight
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setAutoSave (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
-		ARG 1 autoSave
-		ARG 2 clientInfo
+		ARG 1 save
+		ARG 2 client
 	METHOD setDifficulty (Lnet/minecraft/world/Difficulty;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Lnet/minecraft/world/Difficulty;
 		ARG 1 difficulty
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setEnforceWhitelist (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 enforceWhitelist
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setEntityBroadcastRangePercentage (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
 		ARG 1 entityBroadcastRangePercentage
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setForceGameMode (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
-		ARG 1 forceGamemode
-		ARG 2 clientInfo
+		ARG 1 forceGameMode
+		ARG 2 client
 	METHOD setGameMode (Lnet/minecraft/world/level/GameType;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Lnet/minecraft/world/level/GameType;
 		ARG 1 gameMode
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setHidesOnlinePlayers (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 hidesOnlinePlayers
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setMaxPlayers (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
 		ARG 1 maxPlayers
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setMotd (Ljava/lang/String;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/lang/String;
 		ARG 1 motd
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setOperatorUserPermissionLevel (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
 		ARG 1 operatorUserPermissionLevel
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setPauseWhenEmptySeconds (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
 		ARG 1 pauseWhenEmptySeconds
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setPlayerIdleTimeout (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
-		ARG 1 playerIdleTimeout
-		ARG 2 clientInfo
+		ARG 1 idleTimeout
+		ARG 2 client
 	METHOD setRepliesToStatus (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 repliesToStatus
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setSimulationDistance (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
 		ARG 1 simulationDistance
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setSpawnProtectionRadius (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
-		ARG 1 spawnProtectionRadius
-		ARG 2 clientInfo
+		ARG 1 radius
+		ARG 2 client
 	METHOD setStatusHeartbeatInterval (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
-		ARG 1 statusHeartbeatInterval
-		ARG 2 clientInfo
+		ARG 1 heartbeatInterval
+		ARG 2 client
 	METHOD setUsingWhitelist (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 1 usingWhitelist
-		ARG 2 clientInfo
+		ARG 2 client
 	METHOD setViewDistance (ILnet/minecraft/server/jsonrpc/methods/ClientInfo;)I
 		ARG 1 viewDistance
-		ARG 2 clientInfo
+		ARG 2 client

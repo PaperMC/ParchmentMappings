@@ -18,6 +18,9 @@ CLASS net/minecraft/gametest/framework/GameTestRunner
 		ARG 1 index
 	METHOD spawn (Lnet/minecraft/gametest/framework/GameTestInfo;)Ljava/util/Optional;
 		ARG 1 test
+	CLASS 1
+		METHOD testCompleted (Lnet/minecraft/gametest/framework/GameTestInfo;)V
+			ARG 1 testInfo
 	CLASS Builder
 		METHOD <init> (Ljava/util/Collection;Lnet/minecraft/server/level/ServerLevel;)V
 			ARG 1 batches

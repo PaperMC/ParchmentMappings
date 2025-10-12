@@ -287,6 +287,14 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 state
 	METHOD lambda$assertEntityInstancePresent$17 (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 currentEntity
+	METHOD lambda$assertEntityInventoryContains$25 (Ljava/lang/Object;)Z
+		ARG 0 entity
+	METHOD lambda$assertEntityInventoryContains$26 (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
+	METHOD lambda$assertEntityNotTouching$24 (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity
+	METHOD lambda$assertEntityTouching$23 (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity
 	METHOD lambda$findClosestEntity$2 (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)I
 		ARG 1 first
 		ARG 2 second

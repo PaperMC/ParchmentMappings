@@ -3,4 +3,4 @@ CLASS net/minecraft/util/parsing/packrat/commands/NumberRunParseRule
 		ARG 1 noValueError
 		ARG 2 underscoreNotAllowedError
 	METHOD isAccepted (C)Z
-		ARG 1 c
+		ARG 1 character

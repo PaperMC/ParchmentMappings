@@ -8,14 +8,14 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 	METHOD bootstrap (Lnet/minecraft/world/flag/FeatureFlagSet;)Lnet/minecraft/world/item/alchemy/PotionBrewing;
 		ARG 0 enabledFeatures
 	METHOD hasContainerMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 1 reagent
-		ARG 2 potionItem
+		ARG 1 potion
+		ARG 2 ingredient
 	METHOD hasMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 1 reagent
-		ARG 2 potionItem
+		ARG 1 potion
+		ARG 2 ingredient
 	METHOD hasPotionMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 1 reagent
-		ARG 2 potionItem
+		ARG 1 potion
+		ARG 2 ingredient
 	METHOD isBrewablePotion (Lnet/minecraft/core/Holder;)Z
 		ARG 1 potion
 	METHOD isContainer (Lnet/minecraft/world/item/ItemStack;)Z
@@ -27,8 +27,8 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 	METHOD isPotionIngredient (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
 	METHOD mix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 potion
-		ARG 2 potionItem
+		ARG 1 ingredient
+		ARG 2 potion
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/flag/FeatureFlagSet;)V
 			ARG 1 enabledFeatures
@@ -36,14 +36,14 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 			ARG 1 container
 		METHOD addContainerRecipe (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;)V
 			ARG 1 input
-			ARG 2 reagent
+			ARG 2 ingredient
 			ARG 3 result
 		METHOD addMix (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/Item;Lnet/minecraft/core/Holder;)V
 			ARG 1 input
-			ARG 2 reagent
+			ARG 2 ingredient
 			ARG 3 result
 		METHOD addStartMix (Lnet/minecraft/world/item/Item;Lnet/minecraft/core/Holder;)V
-			ARG 1 reagent
+			ARG 1 ingredient
 			ARG 2 result
 		METHOD expectPotion (Lnet/minecraft/world/item/Item;)V
 			ARG 0 item

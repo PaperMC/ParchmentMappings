@@ -1,4 +1,6 @@
 CLASS net/minecraft/core/ClientAsset
 	CLASS ResourceTexture
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
-			ARG 1 location
+			ARG 1 id
+		METHOD lambda$new$0 (Ljava/lang/String;)Ljava/lang/String;
+			ARG 0 path

@@ -3,5 +3,5 @@ CLASS net/minecraft/client/renderer/entity/AbstractZombieRenderer
 		ARG 1 context
 		ARG 2 adultModel
 		ARG 3 babyModel
-		ARG 4 adultArmorModels
-		ARG 5 babyArmorModels
+		ARG 4 adultModelSet
+		ARG 5 babyModelSet

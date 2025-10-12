@@ -13,4 +13,4 @@ CLASS net/minecraft/world/entity/monster/Ravager
 	METHOD strongKnockback (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD updateControlFlags ()V
-		COMMENT Sets MOVE, JUMP, LOOK Goal.Flags depending if entity is riding or been controlled
+		COMMENT Sets MOVE, JUMP, LOOK and TARGET Goal.Flag depending if entity is riding or been controlled

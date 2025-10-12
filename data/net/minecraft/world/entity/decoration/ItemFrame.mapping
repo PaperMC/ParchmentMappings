@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/entity/decoration/ItemFrame
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)V
-		ARG 1 entityType
+		ARG 1 type
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 direction
@@ -27,13 +27,13 @@ CLASS net/minecraft/world/entity/decoration/ItemFrame
 		ARG 2 hand
 	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 type
-		ARG 2 pos
+		ARG 2 movement
 	METHOD onItemChanged (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 item
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
 		ARG 1 key
 	METHOD push (DDD)V
-		COMMENT Adds to the current velocity of the entity, and sets {@link #isAirBorne} to true.
+		COMMENT Adds to the current velocity of the entity, and sets {@link #hasImpulse} to {@code true}.
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

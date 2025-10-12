@@ -6,6 +6,6 @@ CLASS net/minecraft/server/commands/data/DataAccessor
 		ARG 4 value
 	METHOD getPrintSuccess (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/network/chat/Component;
 		COMMENT Gets the message used as a result of querying the given NBT (both for /data get and /data get path)
-		ARG 1 nbt
+		ARG 1 tag
 	METHOD setData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 other

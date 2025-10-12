@@ -14,7 +14,7 @@ CLASS net/minecraft/world/waypoints/WaypointTransmitter
 		METHOD <init> (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/waypoints/Waypoint$Icon;Lnet/minecraft/server/level/ServerPlayer;)V
 			ARG 1 source
 			ARG 2 icon
-			ARG 3 reciever
+			ARG 3 receiver
 	CLASS EntityChunkConnection
 		METHOD <init> (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/waypoints/Waypoint$Icon;Lnet/minecraft/server/level/ServerPlayer;)V
 			ARG 1 source
@@ -24,4 +24,4 @@ CLASS net/minecraft/world/waypoints/WaypointTransmitter
 		METHOD <init> (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/waypoints/Waypoint$Icon;Lnet/minecraft/server/level/ServerPlayer;)V
 			ARG 1 source
 			ARG 2 icon
-			ARG 3 reciever
+			ARG 3 receiver

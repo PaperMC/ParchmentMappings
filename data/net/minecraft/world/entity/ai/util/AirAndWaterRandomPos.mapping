@@ -7,7 +7,7 @@ CLASS net/minecraft/world/entity/ai/util/AirAndWaterRandomPos
 		ARG 4 x
 		ARG 6 z
 		ARG 8 amplifier
-		ARG 10 shortCircuit
+		ARG 10 isRestricted
 	METHOD getPos (Lnet/minecraft/world/entity/PathfinderMob;IIIDDD)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 mob
 		ARG 1 maxDistance

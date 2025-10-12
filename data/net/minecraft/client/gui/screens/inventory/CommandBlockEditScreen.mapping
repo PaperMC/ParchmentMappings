@@ -3,6 +3,14 @@ CLASS net/minecraft/client/gui/screens/inventory/CommandBlockEditScreen
 		ARG 1 autoCommandBlock
 	METHOD enableControls (Z)V
 		ARG 1 active
+	METHOD lambda$addExtraControls$0 (Lnet/minecraft/world/level/block/entity/CommandBlockEntity$Mode;)Lnet/minecraft/network/chat/Component;
+		ARG 0 mode
+	METHOD lambda$addExtraControls$1 (Lnet/minecraft/client/gui/components/CycleButton;Lnet/minecraft/world/level/block/entity/CommandBlockEntity$Mode;)V
+		ARG 2 mode
+	METHOD lambda$addExtraControls$2 (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Boolean;)V
+		ARG 2 conditional
+	METHOD lambda$addExtraControls$3 (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Boolean;)V
+		ARG 2 autoexec
 	METHOD resize (Lnet/minecraft/client/Minecraft;II)V
 		ARG 1 minecraft
 		ARG 2 width

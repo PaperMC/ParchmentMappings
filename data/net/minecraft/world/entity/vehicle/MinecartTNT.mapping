@@ -6,7 +6,7 @@ CLASS net/minecraft/world/entity/vehicle/MinecartTNT
 		ARG 3 z
 		ARG 4 receivingPower
 	METHOD damageSourceIgnitesTnt (Lnet/minecraft/world/damagesource/DamageSource;)Z
-		ARG 0 source
+		ARG 0 damageSource
 	METHOD explode (Lnet/minecraft/world/damagesource/DamageSource;D)V
 		ARG 1 damageSource
 		ARG 2 radiusModifier
@@ -15,7 +15,7 @@ CLASS net/minecraft/world/entity/vehicle/MinecartTNT
 		ARG 1 explosion
 		ARG 2 level
 		ARG 3 pos
-		ARG 4 blockState
+		ARG 4 state
 		ARG 5 fluidState
 		ARG 6 explosionPower
 	METHOD getFuse ()I
@@ -28,7 +28,7 @@ CLASS net/minecraft/world/entity/vehicle/MinecartTNT
 		ARG 1 explosion
 		ARG 2 level
 		ARG 3 pos
-		ARG 4 blockState
+		ARG 4 state
 		ARG 5 explosionPower
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.

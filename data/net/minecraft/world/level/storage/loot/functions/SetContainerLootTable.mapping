@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/storage/loot/functions/SetContainerLootTable
 	COMMENT LootItemFunction that sets the LootTable and optionally the loot table seed on the stack's {@code BlockEntityTag}. The effect of this is that containers such as chests will receive the given LootTable when placed.
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/resources/ResourceKey;JLnet/minecraft/core/Holder;)V
-		ARG 1 conditions
+		ARG 1 predicates
 		ARG 2 name
 		ARG 3 seed
 		ARG 5 type
@@ -10,7 +10,7 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetContainerLootTable
 		ARG 2 context
 	METHOD withLootTable (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 type
-		ARG 1 toolTable
+		ARG 1 lootTable
 	METHOD withLootTable (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/resources/ResourceKey;J)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 type
 		ARG 1 lootTable

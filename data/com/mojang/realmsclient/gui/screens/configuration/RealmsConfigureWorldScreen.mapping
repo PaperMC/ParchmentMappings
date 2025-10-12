@@ -32,6 +32,6 @@ CLASS com/mojang/realmsclient/gui/screens/configuration/RealmsConfigureWorldScre
 		ARG 1 name
 		ARG 2 description
 		ARG 3 regionSelectionPreference
-		ARG 4 preferredRegiom
+		ARG 4 preferredRegion
 	METHOD saveSlotSettings (Lcom/mojang/realmsclient/dto/RealmsSlot;)V
 		ARG 1 slot

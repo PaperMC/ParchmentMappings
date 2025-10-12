@@ -6,5 +6,5 @@ CLASS net/minecraft/util/datafix/fixes/AddFieldFix
 		ARG 4 fieldGenerator
 		ARG 5 path
 	METHOD addField (Lcom/mojang/serialization/Dynamic;I)Lcom/mojang/serialization/Dynamic;
-		ARG 1 data
+		ARG 1 dynamic
 		ARG 2 depth

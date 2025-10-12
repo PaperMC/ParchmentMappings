@@ -1,6 +1,6 @@
 CLASS net/minecraft/nbt/NbtIo
 	METHOD createCompressorStream (Ljava/io/OutputStream;)Ljava/io/DataOutputStream;
-		ARG 0 outputSteam
+		ARG 0 outputStream
 	METHOD createDecompressorStream (Ljava/io/InputStream;)Ljava/io/DataInputStream;
 		ARG 0 zippedStream
 	METHOD parse (Ljava/io/DataInput;Lnet/minecraft/nbt/StreamTagVisitor;Lnet/minecraft/nbt/NbtAccounter;)V
@@ -42,21 +42,21 @@ CLASS net/minecraft/nbt/NbtIo
 		ARG 0 input
 		ARG 1 accounter
 	METHOD write (Lnet/minecraft/nbt/CompoundTag;Ljava/io/DataOutput;)V
-		ARG 0 compoundTag
+		ARG 0 tag
 		ARG 1 output
 	METHOD write (Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V
-		ARG 0 compoundTag
+		ARG 0 tag
 		ARG 1 path
 	METHOD writeAnyTag (Lnet/minecraft/nbt/Tag;Ljava/io/DataOutput;)V
 		ARG 0 tag
 		ARG 1 output
 	METHOD writeCompressed (Lnet/minecraft/nbt/CompoundTag;Ljava/io/OutputStream;)V
 		COMMENT Writes and compresses a compound tag to a GNU zipped file.
-		COMMENT @see #writeCompressed(CompoundTag, File)
-		ARG 0 compoundTag
+		COMMENT @see #writeCompressed(CompoundTag, Path)
+		ARG 0 tag
 		ARG 1 outputStream
 	METHOD writeCompressed (Lnet/minecraft/nbt/CompoundTag;Ljava/nio/file/Path;)V
-		ARG 0 compoundTag
+		ARG 0 tag
 		ARG 1 path
 	METHOD writeUnnamedTag (Lnet/minecraft/nbt/Tag;Ljava/io/DataOutput;)V
 		ARG 0 tag

@@ -38,18 +38,30 @@ CLASS net/minecraft/server/players/OldUsersConverter
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
+		METHOD onProfileLookupSucceeded (Ljava/lang/String;Ljava/util/UUID;)V
+			ARG 1 profileName
+			ARG 2 profileId
 	CLASS 2
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
+		METHOD onProfileLookupSucceeded (Ljava/lang/String;Ljava/util/UUID;)V
+			ARG 1 profileName
+			ARG 2 profileId
 	CLASS 3
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
+		METHOD onProfileLookupSucceeded (Ljava/lang/String;Ljava/util/UUID;)V
+			ARG 1 profileName
+			ARG 2 profileId
 	CLASS 4
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
+		METHOD onProfileLookupSucceeded (Ljava/lang/String;Ljava/util/UUID;)V
+			ARG 1 profileName
+			ARG 2 profileId
 	CLASS 5
 		METHOD getFileNameForProfile (Ljava/lang/String;)Ljava/lang/String;
 			ARG 1 profileName
@@ -60,6 +72,9 @@ CLASS net/minecraft/server/players/OldUsersConverter
 		METHOD onProfileLookupFailed (Ljava/lang/String;Ljava/lang/Exception;)V
 			ARG 1 profileName
 			ARG 2 exception
+		METHOD onProfileLookupSucceeded (Ljava/lang/String;Ljava/util/UUID;)V
+			ARG 1 profileName
+			ARG 2 profileId
 	CLASS ConversionError
 		METHOD <init> (Ljava/lang/String;)V
 			ARG 1 message

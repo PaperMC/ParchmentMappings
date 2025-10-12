@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 	METHOD <init> (IIBZZZLnet/minecraft/resources/ResourceKey;)V
-		ARG 1 x
-		ARG 2 z
+		ARG 1 centerX
+		ARG 2 centerZ
 		ARG 3 scale
 		ARG 4 trackingPosition
 		ARG 5 unlimitedTracking
@@ -9,8 +9,8 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 		ARG 7 dimension
 	METHOD <init> (Lnet/minecraft/resources/ResourceKey;IIBLjava/nio/ByteBuffer;ZZZLjava/util/List;Ljava/util/List;)V
 		ARG 1 dimension
-		ARG 2 x
-		ARG 3 z
+		ARG 2 centerX
+		ARG 3 centerZ
 		ARG 4 scale
 		ARG 5 colors
 		ARG 6 trackingPosition
@@ -43,7 +43,7 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 		ARG 1 level
 		ARG 2 yRot
 	METHOD checkBanners (Lnet/minecraft/world/level/BlockGetter;II)V
-		ARG 1 reader
+		ARG 1 level
 		ARG 2 x
 		ARG 3 z
 	METHOD clampMapCoordinate (F)B
@@ -103,7 +103,7 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 		ARG 1 player
 		ARG 2 mapStack
 	METHOD toggleBanner (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 accessor
+		ARG 1 level
 		ARG 2 pos
 	METHOD type (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/SavedDataType;
 		ARG 0 mapId

@@ -1,7 +1,7 @@
 CLASS net/minecraft/server/level/progress/LevelLoadProgressTracker
 	METHOD <init> (Z)V
-		ARG 1 includePlayerChunk
+		ARG 1 includePlayerChunks
 	METHOD beginSegment (I)V
-		ARG 1 weight
+		ARG 1 segmentWeight
 	METHOD tracksStage (Lnet/minecraft/server/level/progress/LevelLoadListener$Stage;)Z
 		ARG 1 stage

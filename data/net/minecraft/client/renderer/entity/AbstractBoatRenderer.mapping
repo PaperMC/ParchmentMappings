@@ -3,4 +3,4 @@ CLASS net/minecraft/client/renderer/entity/AbstractBoatRenderer
 		ARG 1 renderState
 		ARG 2 poseStack
 		ARG 3 nodeCollector
-		ARG 4 lightCoords
+		ARG 4 packedLight

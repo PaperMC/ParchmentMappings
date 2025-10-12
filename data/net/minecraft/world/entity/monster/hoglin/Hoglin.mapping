@@ -30,4 +30,4 @@ CLASS net/minecraft/world/entity/monster/hoglin/Hoglin
 	METHOD setTimeInOverworld (I)V
 		ARG 1 timeInOverworld
 	METHOD shouldDropExperience ()Z
-		COMMENT Entity won't drop items or experience points if this returns false
+		COMMENT Entity won't drop items or experience points if this returns {@code false}

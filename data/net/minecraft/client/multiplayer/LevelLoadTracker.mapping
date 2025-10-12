@@ -6,4 +6,4 @@ CLASS net/minecraft/client/multiplayer/LevelLoadTracker
 	METHOD startClientLoad (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/LevelRenderer;)V
 		ARG 1 player
 		ARG 2 level
-		ARG 3 renderer
+		ARG 3 levelRenderer

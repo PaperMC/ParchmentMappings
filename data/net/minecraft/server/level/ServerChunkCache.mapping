@@ -1,7 +1,7 @@
 CLASS net/minecraft/server/level/ServerChunkCache
 	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/ChunkGenerator;IIZLnet/minecraft/world/level/entity/ChunkStatusUpdateListener;Ljava/util/function/Supplier;)V
 		ARG 1 level
-		ARG 2 storageSource
+		ARG 2 levelStorageAccess
 		ARG 3 fixerUpper
 		ARG 4 structureManager
 		ARG 5 dispatcher
@@ -17,7 +17,7 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 1 ticket
 		ARG 2 chunkPos
 	METHOD addTicketAndLoadWithRadius (Lnet/minecraft/server/level/TicketType;Lnet/minecraft/world/level/ChunkPos;I)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 ticketType
+		ARG 1 ticket
 		ARG 2 chunkPos
 		ARG 3 radius
 	METHOD addTicketWithRadius (Lnet/minecraft/server/level/TicketType;Lnet/minecraft/world/level/ChunkPos;I)V
@@ -66,7 +66,7 @@ CLASS net/minecraft/server/level/ServerChunkCache
 	METHOD onChunkReadyToSend (Lnet/minecraft/server/level/ChunkHolder;)V
 		ARG 1 chunkHolder
 	METHOD onLightUpdate (Lnet/minecraft/world/level/LightLayer;Lnet/minecraft/core/SectionPos;)V
-		ARG 1 type
+		ARG 1 lightLayer
 		ARG 2 pos
 	METHOD removeEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity

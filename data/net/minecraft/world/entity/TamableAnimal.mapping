@@ -5,7 +5,7 @@ CLASS net/minecraft/world/entity/TamableAnimal
 		ARG 1 pos
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
-		ARG 1 cause
+		ARG 1 damageSource
 	METHOD isOwnedBy (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD maybeTeleportTo (III)Z

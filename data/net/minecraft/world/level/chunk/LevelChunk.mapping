@@ -35,8 +35,15 @@ CLASS net/minecraft/world/level/chunk/LevelChunk
 		ARG 3 z
 	METHOD isTicking (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
+	METHOD lambda$clearAllBlockEntities$7 (Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;)V
+		ARG 0 ticker
 	METHOD lambda$new$0 (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 0 chunkPos
+	METHOD lambda$registerAllBlockEntitiesAfterLevelLoad$8 (Lnet/minecraft/world/level/block/entity/BlockEntity;)V
+		ARG 1 blockEntity
+	METHOD lambda$updateBlockEntityTicker$9 (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/level/block/entity/BlockEntityTicker;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;)Lnet/minecraft/world/level/chunk/LevelChunk$RebindableTickingBlockEntityWrapper;
+		ARG 3 pos
+		ARG 4 ticker
 	METHOD postProcessGeneration (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD promotePendingBlockEntity (Lnet/minecraft/core/BlockPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/block/entity/BlockEntity;

@@ -54,6 +54,8 @@ CLASS net/minecraft/world/item/trading/MerchantOffer
 		ARG 0 buffer
 	METHOD getModifiedCostCount (Lnet/minecraft/world/item/trading/ItemCost;)I
 		ARG 1 itemCost
+	METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD satisfiedBy (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 playerOfferA
 		ARG 2 playerOfferB

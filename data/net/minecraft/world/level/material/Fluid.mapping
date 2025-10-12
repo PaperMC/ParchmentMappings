@@ -26,7 +26,7 @@ CLASS net/minecraft/world/level/material/Fluid
 	METHOD getAmount (Lnet/minecraft/world/level/material/FluidState;)I
 		ARG 1 state
 	METHOD getFlow (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/FluidState;)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 blockReader
+		ARG 1 level
 		ARG 2 pos
 		ARG 3 fluidState
 	METHOD getHeight (Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)F
@@ -57,5 +57,5 @@ CLASS net/minecraft/world/level/material/Fluid
 	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;)V
 		ARG 1 level
 		ARG 2 pos
-		ARG 3 blockState
+		ARG 3 state
 		ARG 4 fluidState

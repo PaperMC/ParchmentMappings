@@ -13,7 +13,7 @@ CLASS net/minecraft/client/multiplayer/ClientChunkCache
 		ARG 1 x
 		ARG 2 z
 	METHOD onLightUpdate (Lnet/minecraft/world/level/LightLayer;Lnet/minecraft/core/SectionPos;)V
-		ARG 1 type
+		ARG 1 lightLayer
 		ARG 2 pos
 	METHOD replaceBiomes (IILnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 x

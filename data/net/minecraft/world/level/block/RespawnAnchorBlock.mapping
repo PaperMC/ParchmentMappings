@@ -33,5 +33,3 @@ CLASS net/minecraft/world/level/block/RespawnAnchorBlock
 	METHOD isWaterThatWouldFlow (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Level;)Z
 		ARG 0 pos
 		ARG 1 level
-	METHOD lambda$explode$0 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 pos

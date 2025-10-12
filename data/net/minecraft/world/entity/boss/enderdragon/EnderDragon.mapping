@@ -9,21 +9,21 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 		ARG 1 level
 		ARG 2 box
 	METHOD findClosestNode ()I
-		COMMENT Generates values for the fields pathPoints, and neighbors, and then returns the nearest pathPoint to the specified position.
+		COMMENT Generates values for the fields nodes, and nodeAdjacency, and then returns the nearest node to the specified position.
 	METHOD findClosestNode (DDD)I
-		COMMENT Returns the index into pathPoints of the nearest PathPoint.
+		COMMENT Returns the index into nodes of the nearest Node.
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
 	METHOD findPath (IILnet/minecraft/world/level/pathfinder/Node;)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Find and return a path among the circles described by pathPoints, or null if the shortest path would just be directly between the start and finish with no intermediate points.
+		COMMENT Find and return a path among the circles described by nodes, or {@code null} if the shortest path would just be directly between the start and finish with no intermediate points.
 		COMMENT
-		COMMENT Starting with pathPoint[startIdx], it searches the neighboring points (and their neighboring points, and so on) until it reaches pathPoint[finishIdx], at which point it calls makePath to seal the deal.
+		COMMENT Starting with nodes[startIndex], it searches the neighboring points (and their neighboring points, and so on) until it reaches nodes[finishIndex], at which point it calls reconstructPath to seal the deal.
 		ARG 1 startIndex
 		ARG 2 finishIndex
 		ARG 3 andThen
 	METHOD getHeadLookVector (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getSoundVolume ()F
@@ -53,7 +53,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 		ARG 2 damageSource
 		ARG 3 amount
 	METHOD reconstructPath (Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Create and return a new PathEntity defining a path from the start to the finish, using the connections already made by the caller, findPath.
+		COMMENT Create and return a new Path defining a path from the start to the finish, using the connections already made by the caller, findPath.
 		ARG 1 start
 		ARG 2 finish
 	METHOD rotWrap (D)F

@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/storage/TagValueOutput
 	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 problemReporter
 		ARG 2 ops
-		ARG 3 tag
+		ARG 3 output
 	METHOD createWithContext (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/storage/TagValueOutput;
 		ARG 0 problemReporter
 		ARG 1 lookup

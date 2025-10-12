@@ -4,6 +4,6 @@ CLASS net/minecraft/network/PacketDecoder
 	METHOD <init> (Lnet/minecraft/network/ProtocolInfo;)V
 		ARG 1 protocolInfo
 	METHOD decode (Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 in
 		ARG 3 out

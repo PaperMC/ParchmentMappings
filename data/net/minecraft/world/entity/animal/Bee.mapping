@@ -68,12 +68,12 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 6 startZ
 		ARG 8 endZ
 		ARG 10 posY
-		ARG 12 particleOption
+		ARG 12 options
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	CLASS BaseBeeGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS BeeAttackGoal
@@ -82,12 +82,12 @@ CLASS net/minecraft/world/entity/animal/Bee
 			ARG 3 speedModifier
 			ARG 5 followingTargetEvenIfNotSeen
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS BeeWanderGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -139,7 +139,7 @@ CLASS net/minecraft/world/entity/animal/Bee
 			ARG 1 mob
 			ARG 2 target
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 	CLASS ValidateFlowerGoal
 		METHOD isFlower (Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 pos
@@ -154,6 +154,6 @@ CLASS net/minecraft/world/entity/animal/Bee
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Bee;)V
 			ARG 1 mob
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

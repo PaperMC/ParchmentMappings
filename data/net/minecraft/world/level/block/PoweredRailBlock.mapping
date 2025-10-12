@@ -18,7 +18,7 @@ CLASS net/minecraft/world/level/block/PoweredRailBlock
 		ARG 2 mirror
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
-		ARG 2 rot
+		ARG 2 rotation
 	METHOD updateState (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 state
 		ARG 2 level

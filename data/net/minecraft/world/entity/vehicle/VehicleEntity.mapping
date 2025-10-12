@@ -12,4 +12,4 @@ CLASS net/minecraft/world/entity/vehicle/VehicleEntity
 	METHOD setHurtTime (I)V
 		ARG 1 hurtTime
 	METHOD shouldSourceDestroy (Lnet/minecraft/world/damagesource/DamageSource;)Z
-		ARG 1 source
+		ARG 1 damageSource

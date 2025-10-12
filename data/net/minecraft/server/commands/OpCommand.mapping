@@ -1,6 +1,6 @@
 CLASS net/minecraft/server/commands/OpCommand
 	METHOD opPlayers (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
 		ARG 0 source
-		ARG 1 gameProfiles
+		ARG 1 players
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher

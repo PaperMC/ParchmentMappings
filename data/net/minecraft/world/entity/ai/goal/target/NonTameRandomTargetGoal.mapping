@@ -5,6 +5,6 @@ CLASS net/minecraft/world/entity/ai/goal/target/NonTameRandomTargetGoal
 		ARG 3 mustSee
 		ARG 4 selector
 	METHOD canContinueToUse ()Z
-		COMMENT Returns whether an in-progress EntityAIBase should continue executing
+		COMMENT Returns whether an in-progress Goal should continue executing
 	METHOD canUse ()Z
 		COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

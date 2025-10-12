@@ -10,4 +10,4 @@ CLASS net/minecraft/client/renderer/entity/layers/ParrotOnShoulderLayer
 		ARG 5 variant
 		ARG 6 yRot
 		ARG 7 xRot
-		ARG 8 isLeft
+		ARG 8 leftShoulder

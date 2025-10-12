@@ -5,18 +5,18 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 3 modelOutput
 	METHOD addBookSlotModel (Lnet/minecraft/client/data/models/blockstates/MultiPartGenerator;Lnet/minecraft/client/renderer/block/model/multipart/Condition;Lnet/minecraft/client/renderer/block/model/VariantMutator;Lnet/minecraft/world/level/block/state/properties/BooleanProperty;Lnet/minecraft/client/data/models/model/ModelTemplate;Z)V
 		ARG 1 generator
-		ARG 2 conditon
+		ARG 2 condition
 		ARG 3 rotation
 		ARG 4 hasBookProperty
 		ARG 5 template
 		ARG 6 hasBook
 	METHOD addShelfPart (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/client/data/models/model/TextureMapping;Lnet/minecraft/client/data/models/blockstates/MultiPartGenerator;Lnet/minecraft/client/data/models/model/ModelTemplate;Ljava/lang/Boolean;Lnet/minecraft/world/level/block/state/properties/SideChainPart;)V
 		ARG 1 block
-		ARG 2 textureMapping
+		ARG 2 mapping
 		ARG 3 generator
 		ARG 4 template
-		ARG 5 powered
-		ARG 6 sideChainPart
+		ARG 5 hasPoweredProperty
+		ARG 6 chainPart
 	METHOD addSlotStateAndRotationVariants (Lnet/minecraft/client/data/models/blockstates/MultiPartGenerator;Lnet/minecraft/client/renderer/block/model/multipart/Condition;Lnet/minecraft/client/renderer/block/model/VariantMutator;)V
 		ARG 1 generator
 		ARG 2 condition
@@ -82,10 +82,10 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 6 postSide
 		ARG 7 postSideAlt
 	METHOD createBarsAndItem (Lnet/minecraft/world/level/block/Block;)V
-		ARG 1 block
+		ARG 1 barsBlock
 	METHOD createBarsAndItem (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
-		ARG 1 block
-		ARG 2 waxedBlock
+		ARG 1 barsBlock
+		ARG 2 waxedBarsBlock
 	METHOD createBed (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/DyeColor;)V
 		ARG 1 block
 		ARG 2 particleBlock
@@ -130,18 +130,18 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 3 lit
 		ARG 4 litPowered
 	METHOD createCopperChain (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
-		ARG 1 chain
-		ARG 2 waxed
+		ARG 1 chainBlock
+		ARG 2 waxedChainBlock
 	METHOD createCopperChainItem (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;)V
-		ARG 1 item
-		ARG 2 waxedItem
+		ARG 1 chainItem
+		ARG 2 waxedChainItem
 	METHOD createCopperGolemStatue (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;)V
 		ARG 1 statueBlock
-		ARG 2 copperBlock
+		ARG 2 block
 		ARG 3 weatherState
 	METHOD createCopperLantern (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 lanternBlock
-		ARG 2 waxed
+		ARG 2 waxedLanternBlock
 	METHOD createCoral (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 coralBlock
 		ARG 2 deadCoralBlock
@@ -291,8 +291,8 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 	METHOD createLeafLitter (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 block
 	METHOD createLightningRod (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
-		ARG 1 block
-		ARG 2 waxedBlock
+		ARG 1 rodBlock
+		ARG 2 waxedRodBlock
 	METHOD createMirroredColumnGenerator (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/client/renderer/block/model/Variant;Lnet/minecraft/client/data/models/model/TextureMapping;Ljava/util/function/BiConsumer;)Lnet/minecraft/client/data/models/blockstates/BlockModelDefinitionGenerator;
 		ARG 0 block
 		ARG 1 variant
@@ -475,12 +475,10 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 	METHOD family (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/BlockModelGenerators$BlockFamilyProvider;
 		ARG 1 block
 	METHOD forEachHorizontalDirection (Ljava/util/function/BiConsumer;)V
-		ARG 0 action
+		ARG 0 rotation
 	METHOD generateSimpleSpecialItemModel (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/client/renderer/special/SpecialModelRenderer$Unbaked;)V
 		ARG 1 block
 		ARG 2 specialModel
-	METHOD lambda$addShelfPart$56 (Lnet/minecraft/client/data/models/blockstates/MultiPartGenerator;Ljava/lang/Boolean;Lnet/minecraft/world/level/block/state/properties/SideChainPart;Lnet/minecraft/client/data/models/MultiVariant;Lnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/block/model/VariantMutator;)V
-		ARG 4 direction
 	METHOD or ([Lnet/minecraft/client/data/models/blockstates/ConditionBuilder;)Lnet/minecraft/client/renderer/block/model/multipart/Condition;
 		ARG 0 conditions
 	METHOD plainModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/Variant;
@@ -511,9 +509,9 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 0 state
 		ARG 1 facePropertyGetter
 	METHOD shelfCondition (Lnet/minecraft/core/Direction;Ljava/lang/Boolean;Lnet/minecraft/world/level/block/state/properties/SideChainPart;)Lnet/minecraft/client/renderer/block/model/multipart/Condition;
-		ARG 0 direction
-		ARG 1 powered
-		ARG 2 sideChainPart
+		ARG 0 facing
+		ARG 1 hasPoweredProperty
+		ARG 2 chainPart
 	METHOD variant (Lnet/minecraft/client/renderer/block/model/Variant;)Lnet/minecraft/client/data/models/MultiVariant;
 		ARG 0 variant
 	METHOD variants ([Lnet/minecraft/client/renderer/block/model/Variant;)Lnet/minecraft/client/data/models/MultiVariant;

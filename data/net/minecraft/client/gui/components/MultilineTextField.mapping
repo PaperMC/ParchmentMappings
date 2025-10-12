@@ -12,8 +12,6 @@ CLASS net/minecraft/client/gui/components/MultilineTextField
 		ARG 1 cursor
 	METHOD insertText (Ljava/lang/String;)V
 		ARG 1 text
-	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
-		ARG 1 event
 	METHOD lambda$new$0 (Ljava/lang/String;)V
 		ARG 0 value
 	METHOD lambda$reflowDisplayLines$2 (Lnet/minecraft/network/chat/Style;II)V

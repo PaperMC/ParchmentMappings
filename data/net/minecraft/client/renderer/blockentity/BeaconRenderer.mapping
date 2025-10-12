@@ -9,10 +9,10 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 6 u
 		ARG 7 v
 	METHOD extract (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/client/renderer/blockentity/state/BeaconRenderState;FLnet/minecraft/world/phys/Vec3;)V
-		ARG 0 sign
+		ARG 0 blockEntity
 		ARG 1 renderState
 		ARG 2 partialTick
-		ARG 3 cameraPosition
+		ARG 3 cameraPos
 	METHOD renderPart (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIIFFFFFFFFFFFF)V
 		ARG 0 pose
 		ARG 1 consumer
@@ -56,8 +56,8 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 	METHOD submitBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/resources/ResourceLocation;FFIIIFF)V
 		ARG 0 poseStack
 		ARG 1 nodeCollector
-		ARG 2 location
-		ARG 3 partialTick
+		ARG 2 beamLocation
+		ARG 3 textureScale
 		ARG 4 animationTime
 		ARG 5 yOffset
 		ARG 6 height

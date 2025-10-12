@@ -6,9 +6,13 @@ CLASS com/mojang/blaze3d/vertex/VertexSorting
 	METHOD byDistance (Lcom/mojang/blaze3d/vertex/VertexSorting$DistanceFunction;)Lcom/mojang/blaze3d/vertex/VertexSorting;
 		ARG 0 distanceFunction
 	METHOD byDistance (Lorg/joml/Vector3fc;)Lcom/mojang/blaze3d/vertex/VertexSorting;
-		ARG 0 origin
+		ARG 0 vector
+	METHOD lambda$byDistance$2 (Lcom/mojang/blaze3d/vertex/VertexSorting$DistanceFunction;Lcom/mojang/blaze3d/vertex/CompactVectorArray;)[I
+		ARG 1 centroids
+	METHOD lambda$static$0 (Lorg/joml/Vector3f;)F
+		ARG 0 vector
 	METHOD sort (Lcom/mojang/blaze3d/vertex/CompactVectorArray;)[I
-		ARG 1 vectors
+		ARG 1 centroids
 	CLASS DistanceFunction
 		METHOD apply (Lorg/joml/Vector3f;)F
 			ARG 1 vector

@@ -7,6 +7,6 @@ CLASS net/minecraft/client/renderer/entity/layers/LlamaDecorLayer
 		ARG 1 poseStack
 		ARG 2 nodeCollector
 		ARG 3 renderState
-		ARG 4 item
-		ARG 5 equipmentAseet
+		ARG 4 stack
+		ARG 5 equipmentAsset
 		ARG 6 packedLight

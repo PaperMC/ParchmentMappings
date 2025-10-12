@@ -18,6 +18,6 @@ CLASS net/minecraft/world/level/block/piston/PistonHeadBlock
 		ARG 2 mirror
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
-		ARG 2 rot
+		ARG 2 rotation
 	METHOD useShapeForLightOcclusion (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state

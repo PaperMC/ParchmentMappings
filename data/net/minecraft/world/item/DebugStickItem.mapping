@@ -13,13 +13,13 @@ CLASS net/minecraft/world/item/DebugStickItem
 	METHOD handleInteraction (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;ZLnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 player
 		ARG 2 stateClicked
-		ARG 3 accessor
+		ARG 3 level
 		ARG 4 pos
 		ARG 5 shouldCycleState
 		ARG 6 debugStack
 	METHOD message (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/network/chat/Component;)V
 		ARG 0 player
-		ARG 1 messageComponent
+		ARG 1 message
 	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
 		COMMENT Called when this item is used when targeting a Block
 		ARG 1 context

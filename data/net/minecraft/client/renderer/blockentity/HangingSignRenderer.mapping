@@ -24,4 +24,4 @@ CLASS net/minecraft/client/renderer/blockentity/HangingSignRenderer
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 name
 		METHOD byBlockState (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/blockentity/HangingSignRenderer$AttachmentType;
-			ARG 0 blockState
+			ARG 0 state

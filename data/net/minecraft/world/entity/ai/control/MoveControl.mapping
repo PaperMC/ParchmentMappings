@@ -4,7 +4,7 @@ CLASS net/minecraft/world/entity/ai/control/MoveControl
 	METHOD hasWanted ()Z
 		COMMENT @return If the mob is currently trying to go somewhere
 	METHOD isWalkable (FF)Z
-		COMMENT @return true if the mob can walk successfully to a given X and Z
+		COMMENT @return {@code true} if the mob can walk successfully to a given X and Z
 		ARG 1 relativeX
 		ARG 2 relativeZ
 	METHOD rotlerp (FFF)F
@@ -13,11 +13,11 @@ CLASS net/minecraft/world/entity/ai/control/MoveControl
 		ARG 2 targetAngle
 		ARG 3 maximumChange
 	METHOD setWantedPosition (DDDD)V
-		COMMENT Sets the speed and location to move to
+		COMMENT Sets the speed modifier and location to move to
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-		ARG 7 speed
+		ARG 7 speedModifier
 	METHOD strafe (FF)V
 		ARG 1 forward
 		ARG 2 strafe

@@ -3,11 +3,11 @@ CLASS net/minecraft/util/debug/DebugBrainDump
 		ARG 1 buffer
 	METHOD getKnownBlockPositions (Lnet/minecraft/world/entity/ai/Brain;[Lnet/minecraft/world/entity/ai/memory/MemoryModuleType;)Ljava/util/Set;
 		ARG 0 brain
-		ARG 1 moduleTypes
+		ARG 1 memoryTypes
 	METHOD getMemoryDescription (Lnet/minecraft/server/level/ServerLevel;JLnet/minecraft/world/entity/ai/memory/MemoryModuleType;Ljava/util/Optional;)Ljava/lang/String;
 		ARG 0 level
 		ARG 1 gameTime
-		ARG 3 moduleType
+		ARG 3 memoryType
 		ARG 4 value
 	METHOD getMemoryDescriptions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;J)Ljava/util/stream/Stream;
 		ARG 0 level

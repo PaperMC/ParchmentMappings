@@ -80,7 +80,7 @@ CLASS net/minecraft/world/entity/Leashable
 			ARG 1 force
 	CLASS LeashData
 		METHOD <init> (I)V
-			ARG 1 delayedLeashInfoId
+			ARG 1 delayedLeashHolderId
 		METHOD <init> (Lcom/mojang/datafixers/util/Either;)V
 			ARG 1 delayedLeashInfo
 		METHOD <init> (Lnet/minecraft/world/entity/Entity;)V

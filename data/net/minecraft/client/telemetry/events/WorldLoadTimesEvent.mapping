@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/telemetry/events/WorldLoadTimesEvent
 	METHOD <init> (ZLjava/time/Duration;)V
 		ARG 1 newWorld
-		ARG 2 wordLoadDuration
+		ARG 2 worldLoadDuration
 	METHOD send (Lnet/minecraft/client/telemetry/TelemetryEventSender;)V
 		ARG 1 sender

@@ -61,6 +61,9 @@ CLASS net/minecraft/client/gui/render/GuiRenderer
 		ARG 3 y
 		ARG 4 itemSize
 		ARG 5 atlasSize
+	CLASS 1
+		METHOD accept (Lnet/minecraft/client/gui/font/TextRenderable;)V
+			ARG 1 text
 	CLASS AtlasPosition
 		METHOD <init> (IIFFI)V
 			ARG 1 x

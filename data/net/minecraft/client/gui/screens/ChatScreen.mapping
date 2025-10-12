@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/screens/ChatScreen
 	FIELD historyPos I
-		COMMENT keeps position of which chat message you will select when you press up, (does not increase for duplicated messages sent immediately after each other)
+		COMMENT keeps position of which message you will select when you press up, (does not increase for duplicated messages sent immediately after each other)
 	FIELD initial Ljava/lang/String;
 		COMMENT is the text that appears when you press the chat key and the input box appears pre-filled
 	FIELD input Lnet/minecraft/client/gui/components/EditBox;
@@ -10,7 +10,7 @@ CLASS net/minecraft/client/gui/screens/ChatScreen
 		ARG 2 isDraft
 	METHOD formatChat (Ljava/lang/String;I)Lnet/minecraft/util/FormattedCharSequence;
 		ARG 1 text
-		ARG 2 displayPos
+		ARG 2 index
 	METHOD getComponentStyleAt (DD)Lnet/minecraft/network/chat/Style;
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -33,5 +33,5 @@ CLASS net/minecraft/client/gui/screens/ChatScreen
 		ARG 3 height
 	CLASS ChatConstructor
 		METHOD create (Ljava/lang/String;Z)Lnet/minecraft/client/gui/screens/ChatScreen;
-			ARG 1 initial
+			ARG 1 text
 			ARG 2 isDraft

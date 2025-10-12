@@ -3,14 +3,14 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 		ARG 1 partialProfile
 		ARG 2 skinPatch
 	METHOD create (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)Lnet/minecraft/world/item/component/ResolvableProfile;
-		ARG 0 partialProfile
+		ARG 0 contents
 		ARG 1 skinPatch
 	METHOD createPartialProfile (Ljava/util/Optional;Ljava/util/Optional;Lcom/mojang/authlib/properties/PropertyMap;)Lcom/mojang/authlib/GameProfile;
-		ARG 0 username
+		ARG 0 name
 		ARG 1 id
 		ARG 2 properties
 	METHOD createResolved (Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/world/item/component/ResolvableProfile;
-		ARG 0 gameProfile
+		ARG 0 profile
 	METHOD createUnresolved (Ljava/lang/String;)Lnet/minecraft/world/item/component/ResolvableProfile;
 		ARG 0 name
 	METHOD createUnresolved (Ljava/util/UUID;)Lnet/minecraft/world/item/component/ResolvableProfile;
@@ -22,13 +22,13 @@ CLASS net/minecraft/world/item/component/ResolvableProfile
 	CLASS Static
 		METHOD <init> (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)V
 			ARG 1 contents
-			ARG 2 patch
+			ARG 2 skinPatch
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other
 	CLASS Dynamic
 		METHOD <init> (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/entity/player/PlayerSkin$Patch;)V
 			ARG 1 nameOrId
-			ARG 2 patch
+			ARG 2 skinPatch
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other
 	CLASS Partial

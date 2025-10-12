@@ -12,7 +12,7 @@ CLASS net/minecraft/network/protocol/game/ClientboundMoveEntityPacket
 	METHOD getEntity (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the NetHandler for processing.
+		COMMENT Passes this Packet on to the packet listener for processing.
 		ARG 1 handler
 	CLASS Pos
 		METHOD <init> (ISSSZ)V

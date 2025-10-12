@@ -1,10 +1,10 @@
 CLASS net/minecraft/server/network/ServerConnectionListener
 	FIELD channels Ljava/util/List;
-		COMMENT Contains all endpoints added to this NetworkSystem
+		COMMENT Contains all endpoints added to this ServerConnectionListener
 	FIELD connections Ljava/util/List;
-		COMMENT A list containing all NetworkManager instances of all endpoints
+		COMMENT A list containing all Connection instances of all endpoints
 	FIELD running Z
-		COMMENT True if this NetworkSystem has never had his endpoints terminated
+		COMMENT {@code true} if this ServerConnectionListener has never had his endpoints terminated
 	FIELD server Lnet/minecraft/server/MinecraftServer;
 		COMMENT Reference to the MinecraftServer object.
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;)V
@@ -18,7 +18,7 @@ CLASS net/minecraft/server/network/ServerConnectionListener
 	METHOD stop ()V
 		COMMENT Shuts down all open endpoints (with immediate effect?)
 	METHOD tick ()V
-		COMMENT Will try to process the packets received by each NetworkManager, gracefully manage processing failures and cleans up dead connections
+		COMMENT Will try to process the packets received by each Connection, gracefully manage processing failures and cleans up dead connections
 	CLASS 1
 		METHOD initChannel (Lio/netty/channel/Channel;)V
 			ARG 1 channel

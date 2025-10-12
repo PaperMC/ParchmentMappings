@@ -4,7 +4,7 @@ CLASS net/minecraft/advancements/critereon/KilledTrigger
 	METHOD trigger (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 player
 		ARG 2 entity
-		ARG 3 source
+		ARG 3 damageSource
 	CLASS TriggerInstance
 		METHOD <init> (Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
 			ARG 1 player
@@ -31,7 +31,7 @@ CLASS net/minecraft/advancements/critereon/KilledTrigger
 		METHOD matches (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/level/storage/loot/LootContext;Lnet/minecraft/world/damagesource/DamageSource;)Z
 			ARG 1 player
 			ARG 2 context
-			ARG 3 source
+			ARG 3 damageSource
 		METHOD playerKilledEntity (Ljava/util/Optional;)Lnet/minecraft/advancements/Criterion;
 			ARG 0 entityPredicate
 		METHOD playerKilledEntity (Ljava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/advancements/Criterion;

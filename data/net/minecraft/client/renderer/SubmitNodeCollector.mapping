@@ -1,12 +1,12 @@
 CLASS net/minecraft/client/renderer/SubmitNodeCollector
 	METHOD order (I)Lnet/minecraft/client/renderer/OrderedSubmitNodeCollector;
-		ARG 1 index
+		ARG 1 order
 	CLASS ParticleGroupRenderer
 		METHOD prepare (Lnet/minecraft/client/renderer/feature/ParticleFeatureRenderer$ParticleBufferCache;)Lnet/minecraft/client/renderer/state/QuadParticleRenderState$PreparedBuffers;
-			ARG 1 cache
+			ARG 1 bufferCache
 		METHOD render (Lnet/minecraft/client/renderer/state/QuadParticleRenderState$PreparedBuffers;Lnet/minecraft/client/renderer/feature/ParticleFeatureRenderer$ParticleBufferCache;Lcom/mojang/blaze3d/systems/RenderPass;Lnet/minecraft/client/renderer/texture/TextureManager;Z)V
 			ARG 1 preparedBuffers
-			ARG 2 cache
+			ARG 2 bufferCache
 			ARG 3 renderPass
 			ARG 4 textureManager
 			ARG 5 translucent

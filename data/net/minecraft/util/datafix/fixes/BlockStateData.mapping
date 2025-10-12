@@ -15,4 +15,4 @@ CLASS net/minecraft/util/datafix/fixes/BlockStateData
 	METHOD upgradeBlock (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 name
 	METHOD upgradeBlockStateTag (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 nbt
+		ARG 0 tag

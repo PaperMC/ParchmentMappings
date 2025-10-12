@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/screens/inventory/HorseInventoryScreen
 	FIELD horse Lnet/minecraft/world/entity/animal/horse/AbstractHorse;
-		COMMENT The EntityHorse whose inventory is currently being accessed.
+		COMMENT The AbstractHorse whose inventory is currently being accessed.
 	FIELD xMouse F
 		COMMENT The mouse x-position recorded during the last rendered frame.
 	FIELD yMouse F

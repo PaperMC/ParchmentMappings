@@ -11,8 +11,8 @@ CLASS net/minecraft/commands/arguments/selector/EntitySelectorParser
 		ARG 3 sizeY
 		ARG 5 sizeZ
 	METHOD createRotationPredicate (Lnet/minecraft/advancements/critereon/MinMaxBounds$FloatDegrees;Lnet/minecraft/util/ToFloatFunction;)Ljava/util/function/Predicate;
-		ARG 1 rotation
-		ARG 2 getter
+		ARG 1 bounds
+		ARG 2 angleGetter
 	METHOD fillSelectorSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)V
 		ARG 0 builder
 	METHOD fillSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Ljava/util/function/Consumer;)Ljava/util/concurrent/CompletableFuture;

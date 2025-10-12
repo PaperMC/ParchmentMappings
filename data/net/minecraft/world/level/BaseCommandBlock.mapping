@@ -6,7 +6,7 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 	FIELD successCount I
 		COMMENT The number of successful commands run. (used for redstone output)
 	METHOD createCommandSourceStack (Lnet/minecraft/commands/CommandSource;)Lnet/minecraft/commands/CommandSourceStack;
-		ARG 1 commandSource
+		ARG 1 source
 	METHOD getCommand ()Ljava/lang/String;
 		COMMENT Returns the command of the command block.
 	METHOD getLastOutput ()Lnet/minecraft/network/chat/Component;
@@ -20,7 +20,6 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 	METHOD save (Lnet/minecraft/world/level/storage/ValueOutput;)V
 		ARG 1 output
 	METHOD setCommand (Ljava/lang/String;)V
-		COMMENT Sets the command.
 		ARG 1 command
 	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 customName
@@ -32,3 +31,6 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 		ARG 1 shouldTrackOutput
 	METHOD usedBy (Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player
+	CLASS CloseableCommandBlockSource
+		FIELD TIME_FORMAT Ljava/time/format/DateTimeFormatter;
+			COMMENT The formatting for the timestamp on commands run.

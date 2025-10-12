@@ -6,7 +6,7 @@ CLASS net/minecraft/client/renderer/WeatherEffectRenderer
 		ARG 4 bottomY
 		ARG 5 topY
 		ARG 6 z
-		ARG 7 lightCoords
+		ARG 7 packedLight
 		ARG 8 partialTick
 	METHOD createSnowColumnInstance (Lnet/minecraft/util/RandomSource;IIIIIIF)Lnet/minecraft/client/renderer/WeatherEffectRenderer$ColumnInstance;
 		ARG 1 random
@@ -15,14 +15,14 @@ CLASS net/minecraft/client/renderer/WeatherEffectRenderer
 		ARG 4 bottomY
 		ARG 5 topY
 		ARG 6 z
-		ARG 7 lightCoords
+		ARG 7 packedLight
 		ARG 8 partialTick
 	METHOD extractRenderState (Lnet/minecraft/world/level/Level;IFLnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/renderer/state/WeatherRenderState;)V
 		ARG 1 level
 		ARG 2 ticks
 		ARG 3 partialTick
 		ARG 4 cameraPosition
-		ARG 5 reusedState
+		ARG 5 renderState
 	METHOD getPrecipitationAt (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/biome/Biome$Precipitation;
 		ARG 1 level
 		ARG 2 pos
@@ -31,7 +31,7 @@ CLASS net/minecraft/client/renderer/WeatherEffectRenderer
 		ARG 2 cameraPosition
 		ARG 3 renderState
 	METHOD renderInstances (Lcom/mojang/blaze3d/vertex/VertexConsumer;Ljava/util/List;Lnet/minecraft/world/phys/Vec3;FIF)V
-		ARG 1 buffer
+		ARG 1 consumer
 		ARG 2 columnInstances
 		ARG 3 cameraPosition
 		ARG 4 amount

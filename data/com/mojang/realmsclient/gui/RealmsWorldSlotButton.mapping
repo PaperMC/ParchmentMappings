@@ -9,7 +9,7 @@ CLASS com/mojang/realmsclient/gui/RealmsWorldSlotButton
 		ARG 7 onPress
 	METHOD getAction (ZZZ)Lcom/mojang/realmsclient/gui/RealmsWorldSlotButton$Action;
 		ARG 0 activeSlot
-		ARG 1 empty
+		ARG 1 isCurrentlyActiveSlot
 		ARG 2 expired
 	METHOD setServerData (Lcom/mojang/realmsclient/dto/RealmsServer;)Lcom/mojang/realmsclient/gui/RealmsWorldSlotButton$State;
 		ARG 1 serverData
@@ -19,4 +19,4 @@ CLASS com/mojang/realmsclient/gui/RealmsWorldSlotButton
 	CLASS State
 		METHOD <init> (Lcom/mojang/realmsclient/dto/RealmsServer;I)V
 			ARG 1 server
-			ARG 2 slot
+			ARG 2 slotIndex

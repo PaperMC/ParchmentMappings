@@ -6,7 +6,7 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsBrokenWorldScreen
 	METHOD createErrorScreen (Lcom/mojang/realmsclient/exception/RealmsServiceException;)Lnet/minecraft/client/gui/screens/Screen;
 		ARG 1 exception
 	METHOD downloadWorld (I)V
-		ARG 1 slotIndex
+		ARG 1 slotId
 	METHOD drawSlotFrame (Lnet/minecraft/client/gui/GuiGraphics;IIIIZLjava/lang/String;IJLjava/lang/String;Z)V
 		ARG 1 guiGraphics
 		ARG 2 x
@@ -15,7 +15,7 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsBrokenWorldScreen
 		ARG 5 mouseY
 		ARG 6 isActiveNonMinigame
 		ARG 7 text
-		ARG 8 slotIndex
+		ARG 8 slotId
 		ARG 9 templateId
 		ARG 11 templateImage
 		ARG 12 hasTemplateImage

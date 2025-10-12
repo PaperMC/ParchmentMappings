@@ -18,7 +18,7 @@ CLASS net/minecraft/client/renderer/feature/ModelFeatureRenderer
 	METHOD renderTranslucents (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/OutlineBufferSource;Ljava/util/List;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 bufferSource
 		ARG 2 outlineBufferSource
-		ARG 3 submits
+		ARG 3 translucentSubmits
 		ARG 4 crumblingBufferSource
 	CLASS Storage
 		METHOD add (Lnet/minecraft/client/renderer/RenderType;Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;)V

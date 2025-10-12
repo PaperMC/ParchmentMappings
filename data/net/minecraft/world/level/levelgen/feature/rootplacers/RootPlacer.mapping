@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/feature/rootplacers/RootPlacer
 	METHOD <init> (Lnet/minecraft/util/valueproviders/IntProvider;Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;Ljava/util/Optional;)V
-		ARG 1 trunkOffset
+		ARG 1 trunkOffsetY
 		ARG 2 rootProvider
 		ARG 3 aboveRootPlacement
 	METHOD canPlaceRoot (Lnet/minecraft/world/level/LevelSimulatedReader;Lnet/minecraft/core/BlockPos;)Z

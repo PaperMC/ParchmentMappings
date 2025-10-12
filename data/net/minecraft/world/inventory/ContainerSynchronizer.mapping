@@ -14,4 +14,4 @@ CLASS net/minecraft/world/inventory/ContainerSynchronizer
 	METHOD sendSlotChange (Lnet/minecraft/world/inventory/AbstractContainerMenu;ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 container
 		ARG 2 slot
-		ARG 3 itemStack
+		ARG 3 stack

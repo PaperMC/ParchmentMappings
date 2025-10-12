@@ -20,7 +20,7 @@ CLASS net/minecraft/core/SectionPos
 		ARG 1 y
 		ARG 2 z
 	METHOD asLong (Lnet/minecraft/core/BlockPos;)J
-		ARG 0 blockPos
+		ARG 0 pos
 	METHOD betweenClosedStream (IIIIII)Ljava/util/stream/Stream;
 		ARG 0 x1
 		ARG 1 y1
@@ -29,9 +29,9 @@ CLASS net/minecraft/core/SectionPos
 		ARG 4 y2
 		ARG 5 z2
 	METHOD blockToSection (J)J
-		ARG 0 levelPos
+		ARG 0 pos
 	METHOD blockToSectionCoord (D)I
-		ARG 0 coord
+		ARG 0 blockCoord
 	METHOD blockToSectionCoord (I)I
 		ARG 0 blockCoord
 	METHOD bottomOf (Lnet/minecraft/world/level/chunk/ChunkAccess;)Lnet/minecraft/core/SectionPos;
@@ -45,9 +45,9 @@ CLASS net/minecraft/core/SectionPos
 	METHOD getZeroNode (J)J
 		ARG 0 pos
 	METHOD of (III)Lnet/minecraft/core/SectionPos;
-		ARG 0 chunkX
-		ARG 1 chunkY
-		ARG 2 chunkZ
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
 	METHOD of (J)Lnet/minecraft/core/SectionPos;
 		ARG 0 packed
 	METHOD of (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/SectionPos;
@@ -78,7 +78,7 @@ CLASS net/minecraft/core/SectionPos
 	METHOD relativeToBlockZ (S)I
 		ARG 1 z
 	METHOD sectionRelative (I)I
-		ARG 0 rel
+		ARG 0 blockCoord
 	METHOD sectionRelativePos (Lnet/minecraft/core/BlockPos;)S
 		ARG 0 pos
 	METHOD sectionRelativeX (S)I
@@ -90,7 +90,7 @@ CLASS net/minecraft/core/SectionPos
 	METHOD sectionToBlockCoord (I)I
 		ARG 0 sectionCoord
 	METHOD sectionToBlockCoord (II)I
-		ARG 0 pos
+		ARG 0 sectionCoord
 		ARG 1 offset
 	METHOD sectionToChunk (J)J
 		ARG 0 pos

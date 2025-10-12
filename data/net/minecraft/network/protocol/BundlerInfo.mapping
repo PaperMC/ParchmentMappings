@@ -2,7 +2,7 @@ CLASS net/minecraft/network/protocol/BundlerInfo
 	METHOD createForPacket (Lnet/minecraft/network/protocol/PacketType;Ljava/util/function/Function;Lnet/minecraft/network/protocol/BundleDelimiterPacket;)Lnet/minecraft/network/protocol/BundlerInfo;
 		ARG 0 type
 		ARG 1 bundler
-		ARG 2 packet
+		ARG 2 delimiterPacket
 	METHOD startPacketBundling (Lnet/minecraft/network/protocol/Packet;)Lnet/minecraft/network/protocol/BundlerInfo$Bundler;
 		ARG 1 packet
 	METHOD unbundlePacket (Lnet/minecraft/network/protocol/Packet;Ljava/util/function/Consumer;)V
@@ -10,4 +10,4 @@ CLASS net/minecraft/network/protocol/BundlerInfo
 		ARG 2 consumer
 	CLASS Bundler
 		METHOD addPacket (Lnet/minecraft/network/protocol/Packet;)Lnet/minecraft/network/protocol/Packet;
-			ARG 1 packet
+			ARG 1 subPacket

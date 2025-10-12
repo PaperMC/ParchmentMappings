@@ -90,10 +90,10 @@ CLASS net/minecraft/world/phys/shapes/Shapes
 		ARG 1 others
 	METHOD rotate (Lnet/minecraft/world/phys/shapes/VoxelShape;Lcom/mojang/math/OctahedralGroup;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 0 shape
-		ARG 1 octohedralGroup
+		ARG 1 octahedralGroup
 	METHOD rotate (Lnet/minecraft/world/phys/shapes/VoxelShape;Lcom/mojang/math/OctahedralGroup;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 0 shape
-		ARG 1 octohedralGroup
+		ARG 1 octahedralGroup
 		ARG 2 pos
 	METHOD rotateAll (Lnet/minecraft/world/phys/shapes/VoxelShape;)Ljava/util/Map;
 		ARG 0 shape

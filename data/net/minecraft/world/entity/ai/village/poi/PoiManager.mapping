@@ -14,14 +14,14 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		ARG 1 sectionPos
 		ARG 2 levelChunkSection
 	METHOD ensureLoadedAndValid (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;I)V
-		ARG 1 levelReader
+		ARG 1 level
 		ARG 2 pos
-		ARG 3 coordinateOffset
+		ARG 3 radius
 	METHOD exists (Lnet/minecraft/core/BlockPos;Ljava/util/function/Predicate;)Z
 		ARG 1 pos
 		ARG 2 typePredicate
 	METHOD existsAtPosition (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 type
+		ARG 1 poiType
 		ARG 2 pos
 	METHOD find (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Lnet/minecraft/core/BlockPos;ILnet/minecraft/world/entity/ai/village/poi/PoiManager$Occupancy;)Ljava/util/Optional;
 		ARG 1 typePredicate

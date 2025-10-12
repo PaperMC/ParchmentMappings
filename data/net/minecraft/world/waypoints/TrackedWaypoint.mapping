@@ -10,7 +10,7 @@ CLASS net/minecraft/world/waypoints/TrackedWaypoint
 	METHOD pitchDirectionToCamera (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/waypoints/TrackedWaypoint$Projector;Lnet/minecraft/world/waypoints/PartialTickSupplier;)Lnet/minecraft/world/waypoints/TrackedWaypoint$PitchDirection;
 		ARG 1 level
 		ARG 2 projector
-		ARG 3 partialTickSupplier
+		ARG 3 partialTickGetter
 	METHOD read (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/world/waypoints/TrackedWaypoint;
 		ARG 0 buffer
 	METHOD setAzimuth (Ljava/util/UUID;Lnet/minecraft/world/waypoints/Waypoint$Icon;F)Lnet/minecraft/world/waypoints/TrackedWaypoint;
@@ -34,7 +34,7 @@ CLASS net/minecraft/world/waypoints/TrackedWaypoint
 	METHOD yawAngleToCamera (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/waypoints/TrackedWaypoint$Camera;Lnet/minecraft/world/waypoints/PartialTickSupplier;)D
 		ARG 1 level
 		ARG 2 camera
-		ARG 3 partialTickSupplier
+		ARG 3 partialTickGetter
 	CLASS Type
 		METHOD <init> (Ljava/lang/String;ILorg/apache/commons/lang3/function/TriFunction;)V
 			ARG 3 constructor
@@ -70,7 +70,7 @@ CLASS net/minecraft/world/waypoints/TrackedWaypoint
 			ARG 3 vector
 		METHOD position (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/waypoints/PartialTickSupplier;)Lnet/minecraft/world/phys/Vec3;
 			ARG 1 level
-			ARG 2 partialTickSupplier
+			ARG 2 partialTickGetter
 	CLASS AzimuthWaypoint
 		METHOD <init> (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/world/waypoints/Waypoint$Icon;Lnet/minecraft/network/FriendlyByteBuf;)V
 			ARG 1 identifier

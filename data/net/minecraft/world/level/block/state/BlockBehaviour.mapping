@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 	FIELD friction F
 		COMMENT Determines how much velocity is maintained while moving on top of this block
 	FIELD isRandomlyTicking Z
-		COMMENT Whether this blocks receives random ticks
+		COMMENT Whether this block receives random ticks
 	METHOD <init> (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 		ARG 1 properties
 	METHOD affectNeighborsAfterRemoval (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Z)V
@@ -31,7 +31,9 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 3 pos
 		ARG 4 entity
 		ARG 5 effectApplier
+		ARG 6 pastEdges
 	METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
+		COMMENT Returns the analog signal this block emits. This is the signal a comparator can read from it.
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
@@ -89,10 +91,10 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 	METHOD getOcclusionShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 1 state
 	METHOD getRenderShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;
-		COMMENT The type of render function called. MODEL for mixed tesr and static model, MODELBLOCK_ANIMATED for TESR-only, LIQUID for vanilla liquids, INVISIBLE to skip all rendering
+		COMMENT The type of render function called. MODEL for mixed tesr and static model, ENTITYBLOCK_ANIMATED for TESR-only, LIQUID for vanilla liquids, INVISIBLE to skip all rendering
 		ARG 1 state
 	METHOD getSeed (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)J
-		COMMENT Return a random long to be passed to {@link net.minecraft.client.resources.model.BakedModel#getQuads}, used for random model rotations
+		COMMENT Return a random long to be passed to {@link net.minecraft.client.renderer.block.model.BlockModelPart#getQuads}, used for random model rotations
 		ARG 1 state
 		ARG 2 pos
 	METHOD getShadeBrightness (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)F
@@ -200,7 +202,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 3 pos
 		ARG 4 random
 	METHOD triggerEvent (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;II)Z
-		COMMENT Called on server when {@link net.minecraft.world.level.Level#blockEvent} is called. If server returns true, then also called on the client. On the Server, this may perform additional changes to the world, like pistons replacing the block with an extended base. On the client, the update may involve replacing block entities or effects such as sounds or particles
+		COMMENT Called on server when {@link net.minecraft.world.level.Level#blockEvent} is called. If server returns {@code true}, then also called on the client. On the Server, this may perform additional changes to the world, like pistons replacing the block with an extended base. On the client, the update may involve replacing block entities or effects such as sounds or particles
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
@@ -208,12 +210,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 5 param
 	METHOD updateIndirectNeighbourShapes (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;II)V
 		COMMENT Updates the shapes of indirect neighbors of this block. This method is analogous to
-		COMMENT {@link net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase#updateNeighbourShapes}
+		COMMENT {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#updateNeighbourShapes}
 		COMMENT but where that method affects the 6 direct neighbors of this block, this method affects
 		COMMENT the indirect neighbors, if any.
 		COMMENT
 		COMMENT <p>
-		COMMENT Currently the only implementation of this method is {@link net.minecraft.world.level.block.RedStoneWireBlock#updateIndirectNeighbourShapes}
+		COMMENT Currently the only implementation of this method is RedStoneWireBlock#updateIndirectNeighbourShapes
 		COMMENT where it is used to validate diagonal connections of redstone wire blocks.
 		ARG 1 state
 		ARG 2 level
@@ -373,7 +375,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 2 pos
 			ARG 3 entity
 		METHOD entityCanStandOnFace (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/Direction;)Z
-			COMMENT @return true if the collision box of this state covers the entire upper face of the blockspace
+			COMMENT @return {@code true} if the collision box of this state covers the entire upper face of the blockspace
 			ARG 1 level
 			ARG 2 pos
 			ARG 3 entity
@@ -383,6 +385,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 2 pos
 			ARG 3 entity
 			ARG 4 effectApplier
+			ARG 5 pastEdges
 		METHOD getAnalogOutputSignal (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
 			ARG 1 level
 			ARG 2 pos

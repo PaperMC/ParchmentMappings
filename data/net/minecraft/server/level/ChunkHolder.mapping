@@ -1,10 +1,10 @@
 CLASS net/minecraft/server/level/ChunkHolder
 	FIELD entityTickingChunkFuture Ljava/util/concurrent/CompletableFuture;
-		COMMENT A future that returns the chunk if it is an entity ticking chunk, {@link net.minecraft.world.server.ChunkHolder.ChunkLoadingFailure#UNLOADED} otherwise.
+		COMMENT A future that returns the chunk if it is an entity ticking chunk, {@link #UNLOADED_LEVEL_CHUNK_FUTURE} otherwise.
 	FIELD fullChunkFuture Ljava/util/concurrent/CompletableFuture;
-		COMMENT A future that returns the chunk if it is a border chunk, {@link net.minecraft.world.server.ChunkHolder.ChunkLoadingFailure#UNLOADED} otherwise.
+		COMMENT A future that returns the chunk if it is a border chunk, {@link #UNLOADED_LEVEL_CHUNK_FUTURE} otherwise.
 	FIELD tickingChunkFuture Ljava/util/concurrent/CompletableFuture;
-		COMMENT A future that returns the chunk if it is a ticking chunk, {@link net.minecraft.world.server.ChunkHolder.ChunkLoadingFailure#UNLOADED} otherwise.
+		COMMENT A future that returns the chunk if it is a ticking chunk, {@link #UNLOADED_LEVEL_CHUNK_FUTURE} otherwise.
 	METHOD <init> (Lnet/minecraft/world/level/ChunkPos;ILnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/lighting/LevelLightEngine;Lnet/minecraft/server/level/ChunkHolder$LevelChangeListener;Lnet/minecraft/server/level/ChunkHolder$PlayerProvider;)V
 		ARG 1 pos
 		ARG 2 ticketLevel

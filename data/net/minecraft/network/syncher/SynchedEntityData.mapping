@@ -3,7 +3,7 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 	COMMENT A maximum of 254 parameters per entity class can be registered. The system then ensures that these values are updated on the client whenever they change on the server.
 	COMMENT
 	COMMENT Use {@link #defineId} to register a piece of data for your entity class.
-	COMMENT Use {@link #define} during {@link Entity#defineSynchedData} to set the default value for a given parameter.
+	COMMENT Use {@link Builder#define} during Entity#defineSynchedData to set the default value for a given parameter.
 	METHOD <init> (Lnet/minecraft/network/syncher/SyncedDataHolder;[Lnet/minecraft/network/syncher/SynchedEntityData$DataItem;)V
 		ARG 1 entity
 		ARG 2 itemsById

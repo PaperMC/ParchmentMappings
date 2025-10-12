@@ -3,6 +3,6 @@ CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftGameRuleServiceImpl
 		ARG 1 server
 		ARG 2 jsonrpcLogger
 	METHOD getRuleKey (Ljava/lang/String;)Ljava/util/Optional;
-		ARG 1 gamerule
+		ARG 1 id
 	METHOD getRuleValue (Ljava/lang/String;)Lnet/minecraft/world/level/GameRules$Value;
-		ARG 1 gamerule
+		ARG 1 id

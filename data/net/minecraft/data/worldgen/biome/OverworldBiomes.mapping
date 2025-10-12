@@ -41,7 +41,7 @@ CLASS net/minecraft/data/worldgen/biome/OverworldBiomes
 		ARG 9 generationSettings
 		ARG 10 backgroundMusic
 	METHOD biome (ZFFLnet/minecraft/world/level/biome/MobSpawnSettings$Builder;Lnet/minecraft/world/level/biome/BiomeGenerationSettings$Builder;Lnet/minecraft/sounds/Music;)Lnet/minecraft/world/level/biome/Biome;
-		ARG 0 hasPercipitation
+		ARG 0 hasPrecipitation
 		ARG 1 temperature
 		ARG 2 downfall
 		ARG 3 mobSpawnSettings

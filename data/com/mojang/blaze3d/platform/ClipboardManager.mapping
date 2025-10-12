@@ -5,7 +5,7 @@ CLASS com/mojang/blaze3d/platform/ClipboardManager
 	METHOD pushClipboard (Lcom/mojang/blaze3d/platform/Window;Ljava/nio/ByteBuffer;[B)V
 		ARG 0 window
 		ARG 1 buffer
-		ARG 2 bytes
+		ARG 2 clipboardContent
 	METHOD setClipboard (Lcom/mojang/blaze3d/platform/Window;Ljava/lang/String;)V
 		ARG 1 window
-		ARG 2 clipboard
+		ARG 2 clipboardContent

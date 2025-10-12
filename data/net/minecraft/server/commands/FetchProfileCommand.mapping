@@ -1,11 +1,15 @@
 CLASS net/minecraft/server/commands/FetchProfileCommand
+	METHOD lambda$register$0 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$register$1 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
 	METHOD reportResolvedProfile (Lnet/minecraft/commands/CommandSourceStack;Lcom/mojang/authlib/GameProfile;Ljava/lang/String;Lnet/minecraft/network/chat/Component;)V
 		ARG 0 source
 		ARG 1 profile
-		ARG 2 translationKey
-		ARG 3 id
+		ARG 2 successKey
+		ARG 3 resolved
 	METHOD resolveId (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/UUID;)I
 		ARG 0 source
 		ARG 1 id

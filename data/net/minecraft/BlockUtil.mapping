@@ -8,7 +8,7 @@ CLASS net/minecraft/BlockUtil
 		ARG 4 max2
 		ARG 5 posPredicate
 	METHOD getLimit (Ljava/util/function/Predicate;Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/core/Direction;I)I
-		COMMENT Finds the distance we can travel in the given direction while the predicate returns true
+		COMMENT Finds the distance we can travel in the given direction while the predicate returns {@code true}
 		ARG 0 posPredicate
 		ARG 1 centerPos
 		ARG 2 direction
@@ -17,7 +17,7 @@ CLASS net/minecraft/BlockUtil
 		COMMENT Finds the largest rectangle within the array of heights
 		ARG 0 heights
 	METHOD getTopConnectedBlock (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/Block;)Ljava/util/Optional;
-		ARG 0 getter
+		ARG 0 level
 		ARG 1 pos
 		ARG 2 baseBlock
 		ARG 3 direction

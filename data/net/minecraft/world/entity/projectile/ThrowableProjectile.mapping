@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/entity/projectile/ThrowableProjectile
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;DDDLnet/minecraft/world/level/Level;)V
-		ARG 1 entityType
+		ARG 1 type
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z

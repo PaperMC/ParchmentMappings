@@ -36,7 +36,7 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 		ARG 0 context
 		ARG 1 bounds
 	METHOD checkScore (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/server/commands/ExecuteCommand$IntBiPredicate;)Z
-		ARG 0 source
+		ARG 0 context
 		ARG 1 predicate
 	METHOD checkUnlessRegions (Lcom/mojang/brigadier/context/CommandContext;Z)I
 		ARG 0 context

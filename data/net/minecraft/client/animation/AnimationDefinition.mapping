@@ -3,7 +3,7 @@ CLASS net/minecraft/client/animation/AnimationDefinition
 		ARG 1 root
 	CLASS Builder
 		METHOD <init> (F)V
-			ARG 1 lengthInSeconds
+			ARG 1 length
 		METHOD addAnimation (Ljava/lang/String;Lnet/minecraft/client/animation/AnimationChannel;)Lnet/minecraft/client/animation/AnimationDefinition$Builder;
 			ARG 1 bone
 			ARG 2 animationChannel

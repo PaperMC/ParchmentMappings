@@ -26,7 +26,7 @@ CLASS net/minecraft/client/renderer/block/BlockRenderDispatcher
 		ARG 1 pos
 		ARG 2 level
 		ARG 3 consumer
-		ARG 4 blockState
+		ARG 4 state
 		ARG 5 fluidState
 	METHOD renderSingleBlock (Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V
 		ARG 1 state

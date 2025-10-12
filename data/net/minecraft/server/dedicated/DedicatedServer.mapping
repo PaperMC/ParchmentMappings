@@ -18,7 +18,7 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 	METHOD getServerName ()Ljava/lang/String;
 		COMMENT Returns the server message of the day
 	METHOD getServerPort ()I
-		COMMENT Never used, but "getServerPort" is already taken.
+		COMMENT Returns the server's port.
 	METHOD handleConsoleInput (Ljava/lang/String;Lnet/minecraft/commands/CommandSourceStack;)V
 		ARG 1 msg
 		ARG 2 source
@@ -37,7 +37,7 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 	METHOD parseBugReportLink (Lnet/minecraft/server/dedicated/DedicatedServerProperties;)Ljava/util/Optional;
 		ARG 0 properties
 	METHOD runCommand (Ljava/lang/String;)Ljava/lang/String;
-		COMMENT Handle a command received by an RCon instance
+		COMMENT Handle a command received by a RconClient instance
 		ARG 1 command
 	METHOD setAcceptsTransfers (Z)V
 		ARG 1 acceptsTransfers
@@ -66,9 +66,9 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 	METHOD setSimulationDistance (I)V
 		ARG 1 simulationDistance
 	METHOD setSpawnProtectionRadius (I)V
-		ARG 1 spawnProtectionRadius
+		ARG 1 radius
 	METHOD setStatusHeartbeatInterval (I)V
-		ARG 1 statusHeartbeatInterval
+		ARG 1 heartbeatInterval
 	METHOD setViewDistance (I)V
 		ARG 1 viewDistance
 	METHOD stopServer ()V

@@ -6,7 +6,7 @@ CLASS net/minecraft/world/entity/ai/behavior/BehaviorUtils
 		ARG 0 brain
 		ARG 1 target
 	METHOD findSectionClosestToVillage (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/SectionPos;I)Lnet/minecraft/core/SectionPos;
-		ARG 0 serverLevel
+		ARG 0 level
 		ARG 1 sectionPos
 		ARG 2 radius
 	METHOD getLivingEntityFromUUIDMemory (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/ai/memory/MemoryModuleType;)Ljava/util/Optional;
@@ -80,8 +80,8 @@ CLASS net/minecraft/world/entity/ai/behavior/BehaviorUtils
 		ARG 1 memoryType
 		ARG 2 livingPredicate
 	METHOD targetIsValid (Lnet/minecraft/world/entity/ai/Brain;Lnet/minecraft/world/entity/ai/memory/MemoryModuleType;Lnet/minecraft/world/entity/EntityType;)Z
-		ARG 0 brains
-		ARG 1 memorymodule
+		ARG 0 brain
+		ARG 1 memoryType
 		ARG 2 entityType
 	METHOD throwItem (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 0 livingEntity

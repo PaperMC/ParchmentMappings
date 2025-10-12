@@ -67,13 +67,13 @@ CLASS net/minecraft/world/level/levelgen/NoiseChunk
 			ARG 3 computeValues
 	CLASS CacheAllInCell
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;)V
-			ARG 2 noiseFilter
+			ARG 2 noiseFiller
 	CLASS BlockStateFiller
 		METHOD calculate (Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;)Lnet/minecraft/world/level/block/state/BlockState;
 			ARG 1 context
 	CLASS NoiseInterpolator
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;)V
-			ARG 2 noiseFilter
+			ARG 2 noiseFiller
 		METHOD allocateSlice (II)[[D
 			ARG 1 cellCountY
 			ARG 2 cellCountXZ

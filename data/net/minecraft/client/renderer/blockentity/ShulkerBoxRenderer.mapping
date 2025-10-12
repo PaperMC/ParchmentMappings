@@ -19,7 +19,7 @@ CLASS net/minecraft/client/renderer/blockentity/ShulkerBoxRenderer
 		ARG 2 nodeCollector
 		ARG 3 packedLight
 		ARG 4 packedOverlay
-		ARG 5 direction
+		ARG 5 facing
 		ARG 6 progress
 		ARG 7 crumblingOverlay
 		ARG 8 material

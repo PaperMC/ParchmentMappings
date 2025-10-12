@@ -11,7 +11,7 @@ CLASS net/minecraft/world/entity/projectile/ShulkerBullet
 	METHOD isPickable ()Z
 		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
-		COMMENT Called when this EntityFireball hits a block or entity.
+		COMMENT Called when this projectile hits a block or entity.
 		ARG 1 result
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
 		COMMENT Called when the arrow hits an entity

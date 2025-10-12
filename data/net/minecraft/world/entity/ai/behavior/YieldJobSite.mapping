@@ -2,7 +2,7 @@ CLASS net/minecraft/world/entity/ai/behavior/YieldJobSite
 	METHOD canReachPos (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/ai/village/poi/PoiType;)Z
 		ARG 0 mob
 		ARG 1 pos
-		ARG 2 poi
+		ARG 2 poiType
 	METHOD create (F)Lnet/minecraft/world/entity/ai/behavior/BehaviorControl;
 		ARG 0 speedModifier
 	METHOD lambda$create$0 (Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/entity/LivingEntity;)Z

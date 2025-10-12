@@ -54,9 +54,9 @@ CLASS net/minecraft/world/level/levelgen/feature/TreeFeature
 	METHOD updateLeaves (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Ljava/util/Set;Ljava/util/Set;Ljava/util/Set;)Lnet/minecraft/world/phys/shapes/DiscreteVoxelShape;
 		ARG 0 level
 		ARG 1 box
-		ARG 2 rootPositions
-		ARG 3 trunkPositions
-		ARG 4 foliagePositions
+		ARG 2 trunkPositions
+		ARG 3 foliagePositions
+		ARG 4 rootPositions
 	METHOD validTreePos (Lnet/minecraft/world/level/LevelSimulatedReader;Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 level
 		ARG 1 pos

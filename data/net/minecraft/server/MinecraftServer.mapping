@@ -58,18 +58,18 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD getKeyPair ()Ljava/security/KeyPair;
 		COMMENT Gets KeyPair instanced in MinecraftServer.
 	METHOD getLevel (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/server/level/ServerLevel;
-		COMMENT Gets the worldServer by the given dimension.
+		COMMENT Gets the ServerLevel by the given dimension.
 		ARG 1 dimension
 	METHOD getLocalIp ()Ljava/lang/String;
-		COMMENT "getHostname" is already taken, but both return the hostname.
+		COMMENT "getServerIp" is already taken, but both return the hostname.
 	METHOD getPlayerCount ()I
 		COMMENT Returns the number of players currently on the server.
 	METHOD getPlayerNames ()[Ljava/lang/String;
 		COMMENT Returns an array of the usernames of all the connected players.
 	METHOD getPort ()I
-		COMMENT Gets serverPort.
+		COMMENT Gets port.
 	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)I
-		ARG 1 user
+		ARG 1 nameAndId
 	METHOD getScaledTrackingDistance (I)I
 		ARG 1 trackingDistance
 	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;Z)Lnet/minecraft/world/level/DataPackConfig;
@@ -80,7 +80,7 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD getWorldPath (Lnet/minecraft/world/level/storage/LevelResource;)Ljava/nio/file/Path;
 		ARG 1 levelResource
 	METHOD halt (Z)V
-		COMMENT Sets the serverRunning variable to false, in order to get the server to shut down.
+		COMMENT Sets the running variable to {@code false}, in order to get the server to shut down.
 		ARG 1 waitForShutdown
 	METHOD handleCustomClickAction (Lnet/minecraft/resources/ResourceLocation;Ljava/util/Optional;)V
 		ARG 1 id
@@ -96,16 +96,22 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD isEpollEnabled ()Z
 		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD isHardcore ()Z
-		COMMENT Defaults to false.
+		COMMENT Defaults to {@code false}.
 	METHOD isPublished ()Z
 		COMMENT Returns {@code true} if this integrated server is open to LAN
 	METHOD isSingleplayerOwner (Lnet/minecraft/server/players/NameAndId;)Z
-		ARG 1 player
+		ARG 1 nameAndId
 	METHOD isUnderSpawnProtection (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 player
+	METHOD lambda$getSelectedPacks$31 (Ljava/util/Collection;Ljava/lang/String;)Z
+		ARG 1 packId
 	METHOD lambda$loadStatusIcon$12 (Ljava/nio/file/Path;)Z
+		ARG 0 path
+	METHOD lambda$loadStatusIcon$13 (Ljava/nio/file/Path;)Z
+		ARG 0 path
+	METHOD lambda$loadStatusIcon$15 (Ljava/nio/file/Path;)Ljava/util/Optional;
 		ARG 0 path
 	METHOD lambda$new$0 (Lnet/minecraft/util/profiling/ProfileResults;)V
 		ARG 1 results
@@ -118,6 +124,8 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD lambda$spin$3 (Ljava/lang/Thread;Ljava/lang/Throwable;)V
 		ARG 0 thread
 		ARG 1 exception
+	METHOD lambda$stopServer$7 (Lnet/minecraft/server/level/ServerLevel;)Z
+		ARG 0 level
 	METHOD logChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/ChatType$Bound;Ljava/lang/String;)V
 		ARG 1 content
 		ARG 2 boundChatType
@@ -125,13 +133,15 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD logTickMethodTime (J)V
 		ARG 1 startTime
 	METHOD onGameRuleChanged (Ljava/lang/String;Lnet/minecraft/world/level/GameRules$Value;)V
-		ARG 1 gameRule
+		ARG 1 key
 		ARG 2 value
 	METHOD onServerCrash (Lnet/minecraft/CrashReport;)V
 		COMMENT Called on exit from the main run() loop.
 		ARG 1 report
 	METHOD onServerExit ()V
 		COMMENT Directly calls System.exit(0), instantly killing the program.
+	METHOD prepareLevels ()V
+		COMMENT Loads the forced chunks
 	METHOD publishServer (Lnet/minecraft/world/level/GameType;ZI)Z
 		ARG 1 gameMode
 		ARG 2 commands
@@ -157,7 +167,7 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD sendDifficultyUpdate (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
 	METHOD setAutoSave (Z)Z
-		ARG 1 autoSave
+		ARG 1 save
 	METHOD setDefaultGameType (Lnet/minecraft/world/level/GameType;)V
 		COMMENT Sets the game type for all worlds.
 		ARG 1 gameMode
@@ -170,7 +180,7 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD setDifficultyLocked (Z)V
 		ARG 1 locked
 	METHOD setEnforceWhitelist (Z)V
-		ARG 1 whitelistEnabled
+		ARG 1 enforceWhitelist
 	METHOD setFatalException (Ljava/lang/RuntimeException;)V
 		ARG 0 fatalException
 	METHOD setId (Ljava/lang/String;)V
@@ -180,7 +190,7 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 levelData
 		ARG 2 generateBonusChest
 		ARG 3 debug
-		ARG 4 listener
+		ARG 4 levelLoadListener
 	METHOD setLocalIp (Ljava/lang/String;)V
 		ARG 1 localIp
 	METHOD setMotd (Ljava/lang/String;)V
@@ -221,10 +231,10 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD tickChildren (Ljava/util/function/BooleanSupplier;)V
 		ARG 1 hasTimeLeft
 	METHOD tickServer (Ljava/util/function/BooleanSupplier;)V
-		COMMENT Main function called by run() every loop.
+		COMMENT Main function called by runServer() every loop.
 		ARG 1 hasTimeLeft
 	METHOD waitUntilNextTick ()V
-		COMMENT Runs all pending tasks and waits for more tasks until serverTime is reached.
+		COMMENT Runs all pending tasks and waits for more tasks until haveTime is reached.
 	METHOD wrapRunnable (Ljava/lang/Runnable;)Lnet/minecraft/server/TickTask;
 		ARG 1 runnable
 	CLASS TimeProfiler

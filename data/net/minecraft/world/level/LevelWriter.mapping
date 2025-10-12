@@ -16,21 +16,26 @@ CLASS net/minecraft/world/level/LevelWriter
 		ARG 4 recursionLeft
 	METHOD removeBlock (Lnet/minecraft/core/BlockPos;Z)Z
 		ARG 1 pos
-		ARG 2 isMoving
+		ARG 2 movedByPiston
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
-		COMMENT Sets a block state into this world.Flags are as follows:
-		COMMENT 1 will cause a block update.
-		COMMENT 2 will send the change to clients.
-		COMMENT 4 will prevent the block from being re-rendered.
-		COMMENT 8 will force any re-renders to run on the main thread instead
-		COMMENT 16 will prevent neighbor reactions (e.g. fences connecting, observers pulsing).
-		COMMENT 32 will prevent neighbor reactions from spawning drops.
-		COMMENT 64 will signify the block is being moved.
-		COMMENT Flags can be OR-ed
 		ARG 1 pos
-		ARG 2 newState
+		ARG 2 state
 		ARG 3 flags
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z
+		COMMENT Sets a block state into this world. Flags are as follows:
+		COMMENT <ul>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_NEIGHBORS} will notify neighboring block updates.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_CLIENTS} will send the change to clients.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_INVISIBLE} will prevent the block from being re-rendered.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_IMMEDIATE} will force any re-renders to run on the main thread instead.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_KNOWN_SHAPE} will prevent neighbor reactions (e.g. fences connecting, observers pulsing).</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SUPPRESS_DROPS} will prevent neighbor reactions from spawning drops.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_MOVE_BY_PISTON} will signify the block is being moved.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SKIP_SHAPE_UPDATE_ON_WIRE} will skip shape update for redstone wire.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SKIP_BLOCK_ENTITY_SIDEEFFECTS} will skip block entity removal side effects (BlockEntity#preRemoveSideEffects).</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SKIP_ON_PLACE} will skip block placement post reaction (BlockBehaviour#onPlace).</li>
+		COMMENT </ul>
+		COMMENT Flags can be OR-ed
 		ARG 1 pos
 		ARG 2 state
 		ARG 3 flags

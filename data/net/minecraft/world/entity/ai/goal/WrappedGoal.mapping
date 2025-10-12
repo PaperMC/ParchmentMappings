@@ -2,8 +2,7 @@ CLASS net/minecraft/world/entity/ai/goal/WrappedGoal
 	COMMENT This is an internal object used by the GoalSelector to choose between Goals.
 	COMMENT In most cases, it should not be constructed directly.
 	COMMENT
-	COMMENT For information on how individual methods work, see the javadocs for Goal:
-	COMMENT {@link net.minecraft.entity.ai.goal.Goal}
+	COMMENT For information on how individual methods work, see the javadocs for {@link Goal}
 	METHOD <init> (ILnet/minecraft/world/entity/ai/goal/Goal;)V
 		ARG 1 priority
 		ARG 2 goal

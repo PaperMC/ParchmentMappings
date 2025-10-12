@@ -167,7 +167,7 @@ CLASS net/minecraft/world/level/levelgen/DensityFunctions
 			ARG 1 value
 	CLASS YClampedGradient
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 codec
+			ARG 0 instance
 	CLASS WeirdScaledSampler
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

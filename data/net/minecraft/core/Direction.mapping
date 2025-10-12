@@ -2,7 +2,7 @@ CLASS net/minecraft/core/Direction
 	FIELD BY_2D_DATA [Lnet/minecraft/core/Direction;
 		COMMENT All Facings with horizontal axis in order S-W-N-E
 	FIELD data2d I
-		COMMENT Ordering index for the HORIZONTALS field (S-W-N-E)
+		COMMENT Ordering index for the BY_2D_DATA field (S-W-N-E)
 	FIELD data3d I
 		COMMENT Ordering index for D-U-N-S-W-E
 	FIELD normal Lnet/minecraft/core/Vec3i;
@@ -20,9 +20,9 @@ CLASS net/minecraft/core/Direction
 	METHOD allShuffled (Lnet/minecraft/util/RandomSource;)Ljava/util/Collection;
 		ARG 0 random
 	METHOD axisStepOrder (Lnet/minecraft/world/phys/Vec3;)Lcom/google/common/collect/ImmutableList;
-		ARG 0 direction
+		ARG 0 vector
 	METHOD byName (Ljava/lang/String;)Lnet/minecraft/core/Direction;
-		COMMENT @return the Direction specified by the given name or null if no such Direction exists
+		COMMENT @return the Direction specified by the given name or {@code null} if no such Direction exists
 		ARG 0 name
 	METHOD from2DDataValue (I)Lnet/minecraft/core/Direction;
 		COMMENT @return the Direction corresponding to the given horizontal index (0-3). Out of bounds values are wrapped around. The order is S-W-N-E.
@@ -34,12 +34,12 @@ CLASS net/minecraft/core/Direction
 		ARG 0 index
 	METHOD fromAxisAndDirection (Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/core/Direction$AxisDirection;)Lnet/minecraft/core/Direction;
 		ARG 0 axis
-		ARG 1 axisDirection
+		ARG 1 direction
 	METHOD fromYRot (D)Lnet/minecraft/core/Direction;
 		COMMENT @return the Direction corresponding to the given angle in degrees (0-360). Out of bounds values are wrapped around. An angle of 0 is SOUTH, an angle of 90 would be WEST.
-		ARG 0 angle
+		ARG 0 yRot
 	METHOD get (Lnet/minecraft/core/Direction$AxisDirection;Lnet/minecraft/core/Direction$Axis;)Lnet/minecraft/core/Direction;
-		ARG 0 axisDirection
+		ARG 0 direction
 		ARG 1 axis
 	METHOD get2DDataValue ()I
 		COMMENT @return the index of this horizontal facing (0-3). The order is S-W-N-E
@@ -87,7 +87,7 @@ CLASS net/minecraft/core/Direction
 	METHOD getYRot (Lnet/minecraft/core/Direction;)F
 		ARG 0 direction
 	METHOD isFacingAngle (F)Z
-		ARG 1 degrees
+		ARG 1 angle
 	METHOD lambda$static$0 (Lnet/minecraft/core/Direction;)Ljava/lang/Byte;
 		ARG 0 direction
 	METHOD lambda$static$1 (Lnet/minecraft/core/Direction;)Ljava/lang/Byte;
@@ -135,7 +135,7 @@ CLASS net/minecraft/core/Direction
 		METHOD getRandom (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/core/Direction$Axis;
 			ARG 0 random
 		METHOD isHorizontal ()Z
-			COMMENT @return whether this Axis is on the horizontal plane (true for X and Z)
+			COMMENT @return whether this Axis is on the horizontal plane ({@code true} for X and Z)
 		METHOD test (Lnet/minecraft/core/Direction;)Z
 			ARG 1 direction
 	CLASS Plane

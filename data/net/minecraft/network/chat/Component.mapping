@@ -19,7 +19,7 @@ CLASS net/minecraft/network/chat/Component
 	METHOD nbt (Ljava/lang/String;ZLjava/util/Optional;Lnet/minecraft/network/chat/contents/data/DataSource;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 nbtPathPattern
 		ARG 1 interpreting
-		ARG 2 seperator
+		ARG 2 separator
 		ARG 3 dataSource
 	METHOD nullToEmpty (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
 		ARG 0 text

@@ -17,7 +17,7 @@ CLASS net/minecraft/server/packs/repository/Pack
 	METHOD readPackMetadata (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/repository/Pack$ResourcesSupplier;Lnet/minecraft/server/packs/metadata/pack/PackFormat;Lnet/minecraft/server/packs/PackType;)Lnet/minecraft/server/packs/repository/Pack$Metadata;
 		ARG 0 location
 		ARG 1 resources
-		ARG 2 format
+		ARG 2 packFormat
 		ARG 3 packType
 	CLASS Position
 		METHOD insert (Ljava/util/List;Ljava/lang/Object;Ljava/util/function/Function;Z)I

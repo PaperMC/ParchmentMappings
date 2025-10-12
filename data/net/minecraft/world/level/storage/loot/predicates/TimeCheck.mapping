@@ -8,6 +8,6 @@ CLASS net/minecraft/world/level/storage/loot/predicates/TimeCheck
 		ARG 0 timeRange
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/storage/loot/IntRange;)V
-			ARG 1 timeRange
+			ARG 1 value
 		METHOD setPeriod (J)Lnet/minecraft/world/level/storage/loot/predicates/TimeCheck$Builder;
 			ARG 1 period

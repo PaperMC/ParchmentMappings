@@ -7,6 +7,6 @@ CLASS net/minecraft/client/renderer/entity/layers/WolfArmorLayer
 		ARG 1 poseStack
 		ARG 2 nodeCollector
 		ARG 3 packedLight
-		ARG 4 armorStack
+		ARG 4 armorItem
 		ARG 5 model
 		ARG 6 renderState

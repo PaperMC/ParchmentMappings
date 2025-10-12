@@ -1,8 +1,8 @@
 CLASS net/minecraft/client/gui/screens/MenuScreens
 	METHOD create (Lnet/minecraft/world/inventory/MenuType;Lnet/minecraft/client/Minecraft;ILnet/minecraft/network/chat/Component;)V
 		ARG 0 type
-		ARG 1 mc
-		ARG 2 windowId
+		ARG 1 minecraft
+		ARG 2 containerId
 		ARG 3 title
 	METHOD getConstructor (Lnet/minecraft/world/inventory/MenuType;)Lnet/minecraft/client/gui/screens/MenuScreens$ScreenConstructor;
 		ARG 0 type
@@ -17,5 +17,5 @@ CLASS net/minecraft/client/gui/screens/MenuScreens
 		METHOD fromPacket (Lnet/minecraft/network/chat/Component;Lnet/minecraft/world/inventory/MenuType;Lnet/minecraft/client/Minecraft;I)V
 			ARG 1 title
 			ARG 2 type
-			ARG 3 mc
-			ARG 4 windowId
+			ARG 3 minecraft
+			ARG 4 containerId

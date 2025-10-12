@@ -4,4 +4,4 @@ CLASS net/minecraft/world/entity/ai/navigation/WaterBoundPathNavigation
 	METHOD isStableDestination (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD setCanFloat (Z)V
-		ARG 1 canSwim
+		ARG 1 canFloat

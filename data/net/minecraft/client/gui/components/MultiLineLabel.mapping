@@ -19,7 +19,7 @@ CLASS net/minecraft/client/gui/components/MultiLineLabel
 		ARG 1 align
 		ARG 2 x
 		ARG 3 y
-		ARG 4 height
+		ARG 4 lineHeight
 		ARG 5 mouseX
 		ARG 7 mouseY
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/components/MultiLineLabel$Align;IIIZI)I
@@ -28,7 +28,6 @@ CLASS net/minecraft/client/gui/components/MultiLineLabel
 		ARG 3 x
 		ARG 4 y
 		ARG 5 lineHeight
-		ARG 6 unused
 		ARG 7 color
 	CLASS Align
 		METHOD calculateLeft (II)I

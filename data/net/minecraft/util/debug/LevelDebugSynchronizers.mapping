@@ -38,7 +38,7 @@ CLASS net/minecraft/util/debug/LevelDebugSynchronizers
 	METHOD registerEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD registerPoi (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)V
-		ARG 1 poiRecord
+		ARG 1 record
 	METHOD sendBlockValue (Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/debug/DebugSubscription;Ljava/lang/Object;)V
 		ARG 1 pos
 		ARG 2 subscription

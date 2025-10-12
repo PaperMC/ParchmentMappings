@@ -7,7 +7,7 @@ CLASS net/minecraft/client/gui/components/SpriteIconButton
 		ARG 5 spriteHeight
 		ARG 6 sprite
 		ARG 7 onPress
-		ARG 8 tooltip
+		ARG 8 tooltipMessage
 		ARG 9 createNarration
 	METHOD builder (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/components/Button$OnPress;Z)Lnet/minecraft/client/gui/components/SpriteIconButton$Builder;
 		ARG 0 message

@@ -1,4 +1,4 @@
 CLASS net/minecraft/world/food/FoodConstants
 	METHOD saturationByModifier (IF)F
-		ARG 0 foodLevel
+		ARG 0 nutrition
 		ARG 1 saturationModifier

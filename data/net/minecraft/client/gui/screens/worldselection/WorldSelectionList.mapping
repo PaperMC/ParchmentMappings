@@ -5,7 +5,7 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldSelectionList
 		ARG 3 width
 		ARG 4 height
 		ARG 5 filter
-		ARG 6 oldList
+		ARG 6 worlds
 		ARG 7 onEntrySelect
 		ARG 8 onEntryInteract
 		ARG 9 entryType
@@ -48,3 +48,7 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldSelectionList
 		METHOD <init> (Lnet/minecraft/client/gui/screens/worldselection/WorldSelectionList;Lnet/minecraft/world/level/storage/LevelSummary;)V
 			ARG 1 list
 			ARG 2 summary
+		METHOD lambda$deleteWorld$1 (Z)V
+			ARG 1 confirmed
+		METHOD lambda$recreateWorld$4 (Lnet/minecraft/world/level/LevelSettings;Lnet/minecraft/client/gui/screens/worldselection/WorldCreationContext;Ljava/nio/file/Path;Z)V
+			ARG 4 confirmed

@@ -8,7 +8,7 @@ CLASS net/minecraft/world/entity/animal/IronGolem
 		ARG 1 air
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
-		ARG 1 cause
+		ARG 1 damageSource
 	METHOD doPush (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;

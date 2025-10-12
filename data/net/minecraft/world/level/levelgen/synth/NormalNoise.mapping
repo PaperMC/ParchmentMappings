@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/levelgen/synth/NormalNoise
 	METHOD <init> (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/level/levelgen/synth/NormalNoise$NoiseParameters;Z)V
 		ARG 1 random
 		ARG 2 parameters
-		ARG 3 useLegacyNetherBiome
+		ARG 3 useNewFactory
 	METHOD create (Lnet/minecraft/util/RandomSource;I[D)Lnet/minecraft/world/level/levelgen/synth/NormalNoise;
 		ARG 0 random
 		ARG 1 firstOctave

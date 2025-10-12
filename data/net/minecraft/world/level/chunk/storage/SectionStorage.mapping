@@ -47,4 +47,4 @@ CLASS net/minecraft/world/level/chunk/storage/SectionStorage
 			ARG 1 ops
 			ARG 2 value
 			ARG 3 simpleRegionStorage
-			ARG 4 levelHeightAccessor
+			ARG 4 level

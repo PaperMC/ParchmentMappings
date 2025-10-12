@@ -45,6 +45,8 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 		ARG 2 boundingBox
 	METHOD lambda$addPieces$0 (Lnet/minecraft/core/Registry;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 2 key
+	METHOD lambda$addPieces$2 (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;IILnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure$MaxDistance;ILnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;ILnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;ZLnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/world/level/levelgen/WorldgenRandom;Lnet/minecraft/core/Registry;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;Lnet/minecraft/world/level/levelgen/structure/pieces/StructurePiecesBuilder;)V
+		ARG 17 builder
 	CLASS Placer
 		METHOD <init> (Lnet/minecraft/core/Registry;ILnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/List;Lnet/minecraft/util/RandomSource;)V
 			ARG 1 pools

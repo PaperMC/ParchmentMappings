@@ -27,7 +27,7 @@ CLASS net/minecraft/client/telemetry/TelemetryPropertyMap
 			ARG 1 key
 			ARG 2 value
 		METHOD putAll (Lnet/minecraft/client/telemetry/TelemetryPropertyMap;)Lnet/minecraft/client/telemetry/TelemetryPropertyMap$Builder;
-			ARG 1 propertyMap
+			ARG 1 map
 		METHOD putIfNotNull (Lnet/minecraft/client/telemetry/TelemetryProperty;Ljava/lang/Object;)Lnet/minecraft/client/telemetry/TelemetryPropertyMap$Builder;
 			ARG 1 key
 			ARG 2 value

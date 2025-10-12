@@ -8,6 +8,9 @@ CLASS net/minecraft/client/renderer/blockentity/BedRenderer
 		ARG 2 modelSet
 	METHOD getExtents (Ljava/util/Set;)V
 		ARG 1 output
+	METHOD lambda$extractRenderState$0 (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Z
+		ARG 0 level
+		ARG 1 pos
 	METHOD preparePose (Lcom/mojang/blaze3d/vertex/PoseStack;ZLnet/minecraft/core/Direction;)V
 		ARG 0 poseStack
 		ARG 1 isFeet

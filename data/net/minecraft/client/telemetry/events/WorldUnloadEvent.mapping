@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/telemetry/events/WorldUnloadEvent
 	METHOD getTimeInSecondsSinceLoad (Ljava/time/Instant;)I
-		ARG 1 wordLoadedTime
+		ARG 1 worldLoadedTime
 	METHOD send (Lnet/minecraft/client/telemetry/TelemetryEventSender;)V
 		ARG 1 sender
 	METHOD setTime (J)V

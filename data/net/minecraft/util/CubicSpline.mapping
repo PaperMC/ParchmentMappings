@@ -14,6 +14,8 @@ CLASS net/minecraft/util/CubicSpline
 		ARG 2 derivative
 	METHOD lambda$codec$1 (Lorg/apache/commons/lang3/mutable/MutableObject;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 1 instance
+	METHOD lambda$codec$4 (Lnet/minecraft/util/BoundedFloatFunction;Ljava/util/List;)Lnet/minecraft/util/CubicSpline$Multipoint;
+		ARG 0 coordinate
 	METHOD lambda$codec$5 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 locations
 	METHOD mapAll (Lnet/minecraft/util/CubicSpline$CoordinateVisitor;)Lnet/minecraft/util/CubicSpline;

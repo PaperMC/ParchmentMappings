@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/multiplayer/ServerStatusPinger
 	FIELD connections Ljava/util/List;
-		COMMENT A list of NetworkManagers that have pending pings
+		COMMENT A list of Connections that have pending pings
 	METHOD formatPlayerCount (II)Lnet/minecraft/network/chat/Component;
 		ARG 0 players
 		ARG 1 capacity

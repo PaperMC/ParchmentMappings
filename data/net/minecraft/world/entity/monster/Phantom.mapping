@@ -26,7 +26,7 @@ CLASS net/minecraft/world/entity/monster/Phantom
 			ARG 2 mob
 	CLASS PhantomSweepAttackGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -51,7 +51,7 @@ CLASS net/minecraft/world/entity/monster/Phantom
 			COMMENT Update the Head and Body rendering angles
 	CLASS PhantomAttackPlayerTargetGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS PhantomCircleAroundAnchorGoal

@@ -3,8 +3,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundBlockUpdatePacket
 		ARG 1 pos
 		ARG 2 blockState
 	METHOD <init> (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 blockGetter
+		ARG 1 level
 		ARG 2 pos
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the NetHandler for processing.
+		COMMENT Passes this Packet on to the packet listener for processing.
 		ARG 1 handler

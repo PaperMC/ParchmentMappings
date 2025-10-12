@@ -9,4 +9,4 @@ CLASS net/minecraft/client/particle/VibrationSignalParticle
 		ARG 10 sprite
 	CLASS Provider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
+			ARG 1 sprite

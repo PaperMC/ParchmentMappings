@@ -16,7 +16,7 @@ CLASS net/minecraft/client/renderer/debug/PathfindingRenderer
 		ARG 0 poseStack
 		ARG 1 bufferSource
 		ARG 2 path
-		ARG 3 nodeSize
+		ARG 3 maxNodeDistance
 		ARG 4 renderDebugNodes
 		ARG 5 renderDebugInfo
 		ARG 6 x

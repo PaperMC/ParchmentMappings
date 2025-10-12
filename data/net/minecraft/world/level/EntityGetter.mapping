@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/EntityGetter
 	METHOD getEntities (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;)Ljava/util/List;
-		COMMENT Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb
+		COMMENT Will get all entities within the specified AABB excluding the one passed into it.
 		ARG 1 entity
 		ARG 2 area
 	METHOD getEntities (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;

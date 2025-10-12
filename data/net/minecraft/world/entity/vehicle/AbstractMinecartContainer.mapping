@@ -25,5 +25,4 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecartContainer
 		ARG 1 lootTable
 		ARG 2 seed
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player

@@ -57,14 +57,14 @@ CLASS net/minecraft/resources/ResourceLocation
 		ARG 1 path
 	METHOD tryBySeparator (Ljava/lang/String;C)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 location
-		ARG 1 seperator
+		ARG 1 separator
 	METHOD tryParse (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Attempts to parse the specified {@code location} as a {@code ResourceLocation} by splitting it into a
 		COMMENT namespace and path by a colon.
 		COMMENT <p>
 		COMMENT If no colon is present in the {@code location}, the namespace defaults to {@code minecraft}, taking the {@code location} as the path.
 		COMMENT @return the parsed resource location; otherwise {@code null} if there is a non {@code [a-z0-9_.-]} character in the decomposed namespace or a non {@code [a-z0-9/._-]} character in the decomposed path
-		COMMENT @see #of(String, char)
+		COMMENT @see #bySeparator(String, char)
 		ARG 0 location
 			COMMENT the location string to try to parse as a {@code ResourceLocation}
 	METHOD validNamespaceChar (C)Z

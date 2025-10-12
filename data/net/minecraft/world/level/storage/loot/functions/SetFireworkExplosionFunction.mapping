@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/functions/SetFireworkExplosionFunction
 	METHOD <init> (Ljava/util/List;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
-		ARG 1 conditions
+		ARG 1 predicates
 		ARG 2 shape
 		ARG 3 colors
 		ARG 4 fadeColors

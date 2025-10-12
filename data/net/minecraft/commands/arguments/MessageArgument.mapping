@@ -25,7 +25,7 @@ CLASS net/minecraft/commands/arguments/MessageArgument
 			ARG 2 end
 			ARG 3 selector
 		METHOD toComponent (Lnet/minecraft/commands/CommandSourceStack;)Lnet/minecraft/network/chat/Component;
-			COMMENT Runs the selector and returns the component produced by it. This method does not actually appear to ever return null.
+			COMMENT Runs the selector and returns the component produced by it. This method does not actually appear to ever return {@code null}.
 			ARG 1 source
 	CLASS Message
 		METHOD <init> (Ljava/lang/String;[Lnet/minecraft/commands/arguments/MessageArgument$Part;)V

@@ -10,6 +10,6 @@ CLASS net/minecraft/world/level/block/ShelfBlock
 	METHOD swapSingleItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/block/entity/ShelfBlockEntity;ILnet/minecraft/world/entity/player/Inventory;)Z
 		ARG 0 stack
 		ARG 1 player
-		ARG 2 shelf
-		ARG 3 index
+		ARG 2 blockEntity
+		ARG 3 slot
 		ARG 4 inventory

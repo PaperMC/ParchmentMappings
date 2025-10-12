@@ -17,6 +17,8 @@ CLASS net/minecraft/client/renderer/texture/SkinTextureDownloader
 	METHOD downloadSkin (Ljava/nio/file/Path;Ljava/lang/String;)Lcom/mojang/blaze3d/platform/NativeImage;
 		ARG 1 path
 		ARG 2 url
+	METHOD lambda$downloadAndRegisterSkin$1 (Lnet/minecraft/core/ClientAsset$DownloadedTexture;Lcom/mojang/blaze3d/platform/NativeImage;)Ljava/util/concurrent/CompletionStage;
+		ARG 2 image
 	METHOD processLegacySkin (Lcom/mojang/blaze3d/platform/NativeImage;Ljava/lang/String;)Lcom/mojang/blaze3d/platform/NativeImage;
 		ARG 0 image
 		ARG 1 url

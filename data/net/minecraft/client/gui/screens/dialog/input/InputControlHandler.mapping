@@ -1,0 +1,9 @@
+CLASS net/minecraft/client/gui/screens/dialog/input/InputControlHandler
+	METHOD addControl (Lnet/minecraft/server/dialog/input/InputControl;Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/gui/screens/dialog/input/InputControlHandler$Output;)V
+		ARG 1 input
+		ARG 2 screen
+		ARG 3 output
+	CLASS Output
+		METHOD accept (Lnet/minecraft/client/gui/layouts/LayoutElement;Lnet/minecraft/server/dialog/action/Action$ValueGetter;)V
+			ARG 1 element
+			ARG 2 valueGetter

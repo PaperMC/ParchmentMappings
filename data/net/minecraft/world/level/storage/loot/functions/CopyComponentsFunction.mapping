@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/functions/CopyComponentsFunction
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Source;Ljava/util/Optional;Ljava/util/Optional;)V
-		ARG 1 conditions
+		ARG 1 predicates
 		ARG 2 source
 		ARG 3 include
 		ARG 4 exclude

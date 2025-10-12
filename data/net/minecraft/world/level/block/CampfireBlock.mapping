@@ -51,4 +51,4 @@ CLASS net/minecraft/world/level/block/CampfireBlock
 		ARG 4 fluidState
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
-		ARG 2 rot
+		ARG 2 rotation

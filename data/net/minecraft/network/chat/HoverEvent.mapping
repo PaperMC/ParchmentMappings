@@ -11,11 +11,11 @@ CLASS net/minecraft/network/chat/HoverEvent
 	CLASS EntityTooltipInfo
 		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Ljava/util/Optional;)V
 			ARG 1 type
-			ARG 2 id
+			ARG 2 uuid
 			ARG 3 name
 		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Lnet/minecraft/network/chat/Component;)V
 			ARG 1 type
-			ARG 2 id
+			ARG 2 uuid
 			ARG 3 name
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other

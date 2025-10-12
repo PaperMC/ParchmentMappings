@@ -24,7 +24,7 @@ CLASS net/minecraft/server/level/ServerEntityGetter
 		ARG 6 y
 		ARG 8 z
 	METHOD getNearestEntity (Lnet/minecraft/tags/TagKey;Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;Lnet/minecraft/world/entity/LivingEntity;DDDLnet/minecraft/world/phys/AABB;)Lnet/minecraft/world/entity/LivingEntity;
-		ARG 1 tag
+		ARG 1 types
 		ARG 2 targetingConditions
 		ARG 3 source
 		ARG 4 x
@@ -45,5 +45,7 @@ CLASS net/minecraft/server/level/ServerEntityGetter
 		ARG 3 x
 		ARG 5 y
 		ARG 7 z
+	METHOD lambda$getNearbyEntities$2 (Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 0 entity
 	METHOD lambda$getNearestEntity$0 (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 entity

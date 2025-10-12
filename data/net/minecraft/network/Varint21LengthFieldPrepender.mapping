@@ -3,6 +3,6 @@ CLASS net/minecraft/network/Varint21LengthFieldPrepender
 	COMMENT
 	COMMENT @see Varint21FrameDecoder
 	METHOD encode (Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBuf;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 encoder
 		ARG 3 decoder

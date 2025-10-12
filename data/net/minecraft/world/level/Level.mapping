@@ -11,7 +11,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 7 biomeZoomSeed
 		ARG 9 maxChainedNeighborUpdates
 	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
-		ARG 1 particle
+		ARG 1 options
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
@@ -19,7 +19,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 10 ySpeed
 		ARG 12 zSpeed
 	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;ZDDDDDD)V
-		ARG 1 particle
+		ARG 1 options
 		ARG 2 overrideLimiter
 		ARG 3 x
 		ARG 5 y
@@ -33,7 +33,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 1 pos
 		ARG 2 state
 	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
-		ARG 1 particleData
+		ARG 1 options
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
@@ -41,7 +41,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 10 ySpeed
 		ARG 12 zSpeed
 	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;ZZDDDDDD)V
-		ARG 1 particle
+		ARG 1 options
 		ARG 2 overrideLimiter
 		ARG 3 alwaysShow
 		ARG 4 x
@@ -55,7 +55,7 @@ CLASS net/minecraft/world/level/Level
 	METHOD blockEvent (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;II)V
 		ARG 1 pos
 		ARG 2 block
-		ARG 3 eventID
+		ARG 3 eventId
 		ARG 4 eventParam
 	METHOD broadcastDamageEvent (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 entity
@@ -131,8 +131,6 @@ CLASS net/minecraft/world/level/Level
 	METHOD fillReportDetails (Lnet/minecraft/CrashReport;)Lnet/minecraft/CrashReportCategory;
 		COMMENT Adds some basic stats of the world to the given crash report.
 		ARG 1 report
-	METHOD gatherChunkSourceStats ()Ljava/lang/String;
-		COMMENT Returns the name of the current chunk provider, by calling chunkprovider.makeString()
 	METHOD getBlockEntity (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;
 		ARG 1 pos
 	METHOD getBlockRandomPos (IIII)Lnet/minecraft/core/BlockPos;
@@ -171,12 +169,12 @@ CLASS net/minecraft/world/level/Level
 		ARG 4 output
 		ARG 5 maxResults
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
-		COMMENT Returns the Entity with the given ID, or null if it doesn't exist in this Level.
+		COMMENT Returns the Entity with the given ID, or {@code null} if it doesn't exist in this Level.
 		ARG 1 id
 	METHOD getEntity (Ljava/util/UUID;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 uuid
 	METHOD getEntityInAnyDimension (Ljava/util/UUID;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 uuid
+		ARG 1 id
 	METHOD getFluidState (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 pos
 	METHOD getHeight (Lnet/minecraft/world/level/levelgen/Heightmap$Types;II)I
@@ -184,19 +182,18 @@ CLASS net/minecraft/world/level/Level
 		ARG 2 x
 		ARG 3 z
 	METHOD getLevelData ()Lnet/minecraft/world/level/storage/LevelData;
-		COMMENT Returns the world's WorldInfo object
+		COMMENT Returns the world's LevelData object
 	METHOD getMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 1 mapId
 	METHOD getPlayerInAnyDimension (Ljava/util/UUID;)Lnet/minecraft/world/entity/player/Player;
-		ARG 1 uuid
+		ARG 1 id
 	METHOD getPushableEntities (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;)Ljava/util/List;
 		ARG 1 entity
 		ARG 2 boundingBox
 	METHOD getRainLevel (F)F
-		COMMENT Returns rain strength.
+		COMMENT Returns rain level.
 		ARG 1 partialTick
 	METHOD getSunAngle (F)F
-		COMMENT Return getCelestialAngle()*2*PI
 		ARG 1 partialTick
 	METHOD getThunderLevel (F)F
 		ARG 1 partialTick
@@ -225,7 +222,7 @@ CLASS net/minecraft/world/level/Level
 	METHOD isOutsideSpawnableHeight (I)Z
 		ARG 0 y
 	METHOD isRaining ()Z
-		COMMENT Returns {@code true} if the current rain strength is greater than 0.2
+		COMMENT Returns {@code true} if the current rain level is greater than 0.2
 	METHOD isRainingAt (Lnet/minecraft/core/BlockPos;)Z
 		COMMENT Check if precipitation is currently happening at a position
 		ARG 1 pos
@@ -233,7 +230,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 1 pos
 		ARG 2 state
 	METHOD isThundering ()Z
-		COMMENT Returns {@code true} if the current thunder strength (weighted with the rain strength) is greater than 0.9
+		COMMENT Returns {@code true} if the current thunder level (weighted with the rain level) is greater than 0.9
 	METHOD lambda$getEntities$1 (Ljava/util/function/Predicate;Ljava/util/List;ILnet/minecraft/world/level/entity/EntityTypeTest;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/util/AbortableIterationConsumer$Continuation;
 		ARG 4 entity
 	METHOD loadedAndEntityCanStandOn (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;)Z
@@ -355,14 +352,14 @@ CLASS net/minecraft/world/level/Level
 	METHOD precipitationAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/biome/Biome$Precipitation;
 		ARG 1 pos
 	METHOD prepareWeather ()V
-		COMMENT Called from World constructor to set rainingStrength and thunderingStrength
+		COMMENT Called from Level constructor to set rainLevel and thunderLevel
 	METHOD removeBlock (Lnet/minecraft/core/BlockPos;Z)Z
 		ARG 1 pos
-		ARG 2 isMoving
+		ARG 2 movedByPiston
 	METHOD removeBlockEntity (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD sendBlockUpdated (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;I)V
-		COMMENT Flags are as in setBlockState
+		COMMENT Flags are as in setBlock
 		ARG 1 pos
 		ARG 2 oldState
 		ARG 3 newState
@@ -370,19 +367,24 @@ CLASS net/minecraft/world/level/Level
 	METHOD sendPacketToServer (Lnet/minecraft/network/protocol/Packet;)V
 		ARG 1 packet
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
-		COMMENT Sets a block state into this world.Flags are as follows:
-		COMMENT 1 will notify neighboring blocks through {@link net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase#neighborChanged neighborChanged} updates.
-		COMMENT 2 will send the change to clients.
-		COMMENT 4 will prevent the block from being re-rendered.
-		COMMENT 8 will force any re-renders to run on the main thread instead
-		COMMENT 16 will prevent neighbor reactions (e.g. fences connecting, observers pulsing).
-		COMMENT 32 will prevent neighbor reactions from spawning drops.
-		COMMENT 64 will signify the block is being moved.
-		COMMENT Flags can be OR-ed
 		ARG 1 pos
-		ARG 2 newState
+		ARG 2 state
 		ARG 3 flags
 	METHOD setBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z
+		COMMENT Sets a block state into this world. Flags are as follows:
+		COMMENT <ul>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_NEIGHBORS} will notify neighboring block updates.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_CLIENTS} will send the change to clients.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_INVISIBLE} will prevent the block from being re-rendered.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_IMMEDIATE} will force any re-renders to run on the main thread instead.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_KNOWN_SHAPE} will prevent neighbor reactions (e.g. fences connecting, observers pulsing).</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SUPPRESS_DROPS} will prevent neighbor reactions from spawning drops.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_MOVE_BY_PISTON} will signify the block is being moved.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SKIP_SHAPE_UPDATE_ON_WIRE} will skip shape update for redstone wire.</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SKIP_BLOCK_ENTITY_SIDEEFFECTS} will skip block entity removal side effects (BlockEntity#preRemoveSideEffects).</li>
+		COMMENT <li>{@link net.minecraft.world.level.block.Block#UPDATE_SKIP_ON_PLACE} will skip block placement post reaction (BlockBehaviour#onPlace).</li>
+		COMMENT </ul>
+		COMMENT Flags can be OR-ed
 		ARG 1 pos
 		ARG 2 state
 		ARG 3 flags
@@ -394,12 +396,12 @@ CLASS net/minecraft/world/level/Level
 	METHOD setBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;)V
 		ARG 1 blockEntity
 	METHOD setBlocksDirty (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V
-		ARG 1 blockPos
+		ARG 1 pos
 		ARG 2 oldState
 		ARG 3 newState
 	METHOD setRainLevel (F)V
-		COMMENT Sets the strength of the rain.
-		ARG 1 strength
+		COMMENT Sets the level of the rain.
+		ARG 1 level
 	METHOD setRespawnData (Lnet/minecraft/world/level/storage/LevelData$RespawnData;)V
 		ARG 1 respawnData
 	METHOD setSkyFlashTime (I)V
@@ -407,8 +409,8 @@ CLASS net/minecraft/world/level/Level
 	METHOD setSpawnSettings (Z)V
 		ARG 1 spawnSettings
 	METHOD setThunderLevel (F)V
-		COMMENT Sets the strength of the thunder.
-		ARG 1 strength
+		COMMENT Sets the level of the thunder.
+		ARG 1 level
 	METHOD shouldTickBlocksAt (J)Z
 		ARG 1 chunkPos
 	METHOD shouldTickBlocksAt (Lnet/minecraft/core/BlockPos;)Z

@@ -11,7 +11,7 @@ CLASS net/minecraft/client/renderer/item/properties/numeric/CompassAngleState
 	METHOD getRotationTowardsCompassTarget (Lnet/minecraft/world/entity/ItemOwner;JLnet/minecraft/core/BlockPos;)F
 		ARG 1 owner
 		ARG 2 gameTime
-		ARG 4 pos
+		ARG 4 targetPos
 	METHOD getWrappedVisualRotationY (Lnet/minecraft/world/entity/ItemOwner;)F
 		ARG 0 owner
 	METHOD hash (I)I

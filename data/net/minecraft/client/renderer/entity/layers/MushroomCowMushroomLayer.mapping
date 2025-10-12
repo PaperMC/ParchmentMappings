@@ -8,6 +8,6 @@ CLASS net/minecraft/client/renderer/entity/layers/MushroomCowMushroomLayer
 		ARG 3 packedLight
 		ARG 4 renderOutline
 		ARG 5 outlineColor
-		ARG 6 blockState
+		ARG 6 state
 		ARG 7 packedOverlay
 		ARG 8 model

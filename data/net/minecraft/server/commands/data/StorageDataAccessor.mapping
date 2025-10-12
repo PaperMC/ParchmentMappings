@@ -11,7 +11,7 @@ CLASS net/minecraft/server/commands/data/StorageDataAccessor
 		ARG 4 value
 	METHOD getPrintSuccess (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/network/chat/Component;
 		COMMENT Gets the message used as a result of querying the given NBT (both for /data get and /data get path)
-		ARG 1 nbt
+		ARG 1 tag
 	METHOD lambda$static$0 (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 context
 		ARG 1 builder

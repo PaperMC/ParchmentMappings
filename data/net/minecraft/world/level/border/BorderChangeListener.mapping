@@ -13,7 +13,7 @@ CLASS net/minecraft/world/level/border/BorderChangeListener
 		ARG 2 damagePerBlock
 	METHOD onSetSafeZone (Lnet/minecraft/world/level/border/WorldBorder;D)V
 		ARG 1 border
-		ARG 2 damageSafeZone
+		ARG 2 safeZone
 	METHOD onSetSize (Lnet/minecraft/world/level/border/WorldBorder;D)V
 		ARG 1 border
 		ARG 2 size

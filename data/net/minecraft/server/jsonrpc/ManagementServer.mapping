@@ -22,3 +22,6 @@ CLASS net/minecraft/server/jsonrpc/ManagementServer
 		ARG 1 api
 	METHOD stop (Z)V
 		ARG 1 shutdownThreads
+	CLASS 1
+		METHOD initChannel (Lio/netty/channel/Channel;)V
+			ARG 1 channel

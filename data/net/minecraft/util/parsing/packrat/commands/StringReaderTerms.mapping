@@ -16,4 +16,4 @@ CLASS net/minecraft/util/parsing/packrat/commands/StringReaderTerms
 		METHOD <init> (Lit/unimi/dsi/fastutil/chars/CharList;)V
 			ARG 1 characters
 		METHOD isAccepted (C)Z
-			ARG 1 c
+			ARG 1 character

@@ -5,8 +5,7 @@ CLASS net/minecraft/client/sounds/ChannelAccess
 		ARG 2 executor
 	METHOD createHandle (Lcom/mojang/blaze3d/audio/Library$Pool;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Creates a new channel handle for the specified system mode and returns a CompletableFuture that completes with the handle when it is created.
-		COMMENT <p>
-		COMMENT @return a CompletableFuture that completes with the channel handle when it is created, or null if it cannot be created
+		COMMENT @return a CompletableFuture that completes with the channel handle when it is created, or {@code null} if it cannot be created
 		ARG 1 systemMode
 			COMMENT systemMode the system mode to create the channel handle for
 	METHOD executeOnChannels (Ljava/util/function/Consumer;)V
@@ -19,4 +18,4 @@ CLASS net/minecraft/client/sounds/ChannelAccess
 		METHOD execute (Ljava/util/function/Consumer;)V
 			ARG 1 soundConsumer
 		METHOD isStopped ()Z
-			COMMENT {@return {@code true} if the channel has been stopped, {@code false} otherwise}
+			COMMENT @return {@code true} if the channel has been stopped, {@code false} otherwise

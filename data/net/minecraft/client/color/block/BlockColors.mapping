@@ -68,7 +68,7 @@ CLASS net/minecraft/client/color/block/BlockColors
 		ARG 3 tintIndex
 	METHOD lambda$createDefault$9 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;I)I
 		ARG 0 state
-		ARG 1 lightReader
+		ARG 1 level
 		ARG 2 pos
 		ARG 3 tintIndex
 	METHOD register (Lnet/minecraft/client/color/block/BlockColor;[Lnet/minecraft/world/level/block/Block;)V

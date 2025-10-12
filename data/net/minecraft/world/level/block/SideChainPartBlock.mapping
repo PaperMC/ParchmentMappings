@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/block/SideChainPartBlock
 	METHOD addBlocksConnectingTowards (Ljava/util/function/IntFunction;Lnet/minecraft/world/level/block/state/properties/SideChainPart;Ljava/util/function/Consumer;)V
 		ARG 1 neighborGetter
-		ARG 2 part
+		ARG 2 chainPart
 		ARG 3 output
 	METHOD canConnect (II)Z
 		ARG 1 segmentLength
@@ -13,7 +13,7 @@ CLASS net/minecraft/world/level/block/SideChainPartBlock
 		ARG 1 state
 	METHOD getNeighbors (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/block/SideChainPartBlock$Neighbors;
 		ARG 1 level
-		ARG 2 pos
+		ARG 2 center
 		ARG 3 facing
 	METHOD getSideChainPart (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/properties/SideChainPart;
 		ARG 1 state
@@ -25,10 +25,10 @@ CLASS net/minecraft/world/level/block/SideChainPartBlock
 	METHOD setPart (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/properties/SideChainPart;)V
 		ARG 1 level
 		ARG 2 pos
-		ARG 3 part
+		ARG 3 chainPart
 	METHOD setSideChainPart (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/SideChainPart;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
-		ARG 2 sideChainPart
+		ARG 2 chainPart
 	METHOD updateNeighborsAfterPoweringDown (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 level
 		ARG 2 pos
@@ -40,7 +40,7 @@ CLASS net/minecraft/world/level/block/SideChainPartBlock
 		ARG 4 oldState
 	CLASS Neighbor
 		METHOD connectsTowards (Lnet/minecraft/world/level/block/state/properties/SideChainPart;)Z
-			ARG 1 part
+			ARG 1 chainPart
 	CLASS Neighbors
 		METHOD createNewNeighbor (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/SideChainPartBlock$Neighbor;
 			ARG 1 pos

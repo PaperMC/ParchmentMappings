@@ -16,7 +16,7 @@ CLASS net/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket
 	METHOD createRemovePacket (Lnet/minecraft/world/scores/PlayerTeam;)Lnet/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket;
 		ARG 0 team
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the NetHandler for processing.
+		COMMENT Passes this Packet on to the packet listener for processing.
 		ARG 1 handler
 	METHOD shouldHaveParameters (I)Z
 		ARG 0 method

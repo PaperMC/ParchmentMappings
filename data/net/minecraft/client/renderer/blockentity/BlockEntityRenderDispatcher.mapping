@@ -22,4 +22,4 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher
 	METHOD tryExtractRenderState (Lnet/minecraft/world/level/block/entity/BlockEntity;FLnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)Lnet/minecraft/client/renderer/blockentity/state/BlockEntityRenderState;
 		ARG 1 blockEntity
 		ARG 2 partialTick
-		ARG 3 breakProgress
+		ARG 3 crumblingOverlay

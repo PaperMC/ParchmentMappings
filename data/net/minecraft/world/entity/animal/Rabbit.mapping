@@ -42,7 +42,7 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;)V
 			ARG 1 rabbit
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD isValidTarget (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
@@ -66,20 +66,20 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 		METHOD setCanJump (Z)V
 			ARG 1 canJump
 		METHOD tick ()V
-			COMMENT Called to actually make the entity jump if isJumping is true.
+			COMMENT Called to actually make the entity jump if jump is {@code true}.
 	CLASS RabbitMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;)V
 			ARG 1 rabbit
 		METHOD setWantedPosition (DDDD)V
-			COMMENT Sets the speed and location to move to
+			COMMENT Sets the speed modifier and location to move to
 			ARG 1 x
 			ARG 3 y
 			ARG 5 z
-			ARG 7 speed
+			ARG 7 speedModifier
 	CLASS RabbitAvoidEntityGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Rabbit;Ljava/lang/Class;FDD)V
 			ARG 1 rabbit
-			ARG 2 entityClassToAvoid
+			ARG 2 avoidClass
 			ARG 3 maxDist
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier

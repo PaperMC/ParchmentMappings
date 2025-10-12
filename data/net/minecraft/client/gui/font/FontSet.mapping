@@ -19,7 +19,7 @@ CLASS net/minecraft/client/gui/font/FontSet
 		ARG 1 providers
 		ARG 2 options
 	METHOD source (Z)Lnet/minecraft/client/gui/GlyphSource;
-		ARG 1 filterFishyGlyphs
+		ARG 1 nonFishyOnly
 	CLASS Source
 		METHOD <init> (Lnet/minecraft/client/gui/font/FontSet;Z)V
 			ARG 2 filterFishyGlyphs
@@ -28,4 +28,4 @@ CLASS net/minecraft/client/gui/font/FontSet
 			ARG 2 unbaked
 	CLASS SelectedGlyphs
 		METHOD select (Z)Ljava/util/function/Supplier;
-			ARG 1 filterFishy
+			ARG 1 nonFishyOnly

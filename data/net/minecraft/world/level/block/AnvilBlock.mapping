@@ -7,7 +7,7 @@ CLASS net/minecraft/world/level/block/AnvilBlock
 		ARG 1 fallingEntity
 	METHOD getDustColor (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 state
-		ARG 2 reader
+		ARG 2 level
 		ARG 3 pos
 	METHOD getMenuProvider (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/MenuProvider;
 		ARG 1 state
@@ -26,4 +26,4 @@ CLASS net/minecraft/world/level/block/AnvilBlock
 		ARG 4 player
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
-		ARG 2 rot
+		ARG 2 rotation

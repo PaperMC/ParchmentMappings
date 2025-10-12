@@ -3,7 +3,7 @@ CLASS net/minecraft/world/CompoundContainer
 		ARG 1 container1
 		ARG 2 container2
 	METHOD canPlaceItem (ILnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Returns {@code true} if automation is allowed to insert the given stack (ignoring stack size) into the given slot. For guis use Slot.isItemValid
+		COMMENT Returns {@code true} if automation is allowed to insert the given stack (ignoring stack size) into the given slot. For guis use Slot.mayPlace
 		ARG 1 index
 		ARG 2 stack
 	METHOD contains (Lnet/minecraft/world/Container;)Z
@@ -30,5 +30,4 @@ CLASS net/minecraft/world/CompoundContainer
 		ARG 1 index
 		ARG 2 stack
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player

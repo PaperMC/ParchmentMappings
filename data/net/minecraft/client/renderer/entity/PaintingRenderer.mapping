@@ -3,7 +3,7 @@ CLASS net/minecraft/client/renderer/entity/PaintingRenderer
 		ARG 1 poseStack
 		ARG 2 nodeCollector
 		ARG 3 renderType
-		ARG 4 packedLightPerBlock
+		ARG 4 lightCoords
 		ARG 5 width
 		ARG 6 height
 		ARG 7 frontSprite

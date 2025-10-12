@@ -15,9 +15,9 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 		ARG 5 rotation
-		ARG 6 model
-		ARG 7 flag
-		ARG 8 sway
+		ARG 6 standingModel
+		ARG 7 standingFlagModel
+		ARG 8 angle
 		ARG 9 baseColor
 		ARG 10 patterns
 		ARG 11 crumblingOverlay
@@ -28,8 +28,8 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 2 nodeCollector
 		ARG 3 packedLight
 		ARG 4 packedOverlay
-		ARG 5 flagModel
-		ARG 6 sway
+		ARG 5 model
+		ARG 6 state
 		ARG 7 material
 		ARG 8 color
 		ARG 9 crumblingOverlay
@@ -39,13 +39,14 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 		ARG 2 nodeCollector
 		ARG 3 packedLight
 		ARG 4 packedOverlay
-		ARG 5 flag
-		ARG 6 renderState
+		ARG 5 model
+		ARG 6 state
 		ARG 7 material
 		ARG 8 banner
+			COMMENT if {@code true}, uses banner material; otherwise if {@code false} uses shield material
 		ARG 9 baseColor
 		ARG 10 patterns
-		ARG 11 withGlint
+		ARG 11 hasFoilType
 		ARG 12 crumblingOverlay
 		ARG 13 outlineColor
 	METHOD submitSpecial (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IILnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;I)V

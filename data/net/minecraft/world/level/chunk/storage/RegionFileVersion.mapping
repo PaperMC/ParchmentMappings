@@ -8,9 +8,9 @@ CLASS net/minecraft/world/level/chunk/storage/RegionFileVersion
 	FIELD VERSION_GZIP Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;
 		COMMENT Used to store the chunk data in gzip format. Unused in practice.
 	FIELD VERSION_LZ4 Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;
-		COMMENT Used to store the chunk data in lz4 format. Used when region-file-compression is set to 1z4 in server.properties.
+		COMMENT Used to store the chunk data in lz4 format. Used when region-file-compression is set to lz4 in server.properties.
 	FIELD VERSION_NONE Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;
-		COMMENT Used to keep the chunk data uncompressed. Unused in practice.
+		COMMENT Used to keep the chunk data uncompressed. Used when region-file-compression is set to none in server.properties.
 	METHOD <init> (ILjava/lang/String;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion$StreamWrapper;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion$StreamWrapper;)V
 		ARG 1 id
 		ARG 2 optionName

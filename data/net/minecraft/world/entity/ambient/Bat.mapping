@@ -17,7 +17,7 @@ CLASS net/minecraft/world/entity/ambient/Bat
 	METHOD getSoundVolume ()F
 		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getVoicePitch ()F
-		COMMENT Gets the pitch of living sounds in living entities.
+		COMMENT Gets the pitch of living sounds from living entities.
 	METHOD isIgnoringBlockTriggers ()Z
 		COMMENT Return whether this entity should NOT trigger a pressure plate or a tripwire.
 	METHOD isPushable ()Z

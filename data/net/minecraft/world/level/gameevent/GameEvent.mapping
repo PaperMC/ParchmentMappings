@@ -47,7 +47,7 @@ CLASS net/minecraft/world/level/gameevent/GameEvent
 	FIELD SHEAR Lnet/minecraft/core/Holder$Reference;
 		COMMENT This event is broadcast when a shear is used. This includes disarming tripwires, harvesting honeycombs, carving pumpkins, etc.
 	FIELD SPLASH Lnet/minecraft/core/Holder$Reference;
-		COMMENT This event is broadcast wen an entity splashes in the water. This includes boats paddling or hitting bubble columns.
+		COMMENT This event is broadcast when an entity splashes in the water. This includes boats paddling or hitting bubble columns.
 	FIELD STEP Lnet/minecraft/core/Holder$Reference;
 		COMMENT This event is broadcast when an entity moves on the ground. This includes entities such as minecarts.
 	FIELD SWIM Lnet/minecraft/core/Holder$Reference;

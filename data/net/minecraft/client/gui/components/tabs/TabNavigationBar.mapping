@@ -12,19 +12,22 @@ CLASS net/minecraft/client/gui/components/tabs/TabNavigationBar
 		COMMENT {@return a List containing all GUI element children of this GUI element}
 	METHOD currentTabButton ()Lnet/minecraft/client/gui/components/TabButton;
 		COMMENT Returns the current tab button.
-		COMMENT <p>
-		COMMENT @return the current tab button, or null if no current tab is set.
+		COMMENT @return the current tab button, or {@code null} if no current tab is set.
 	METHOD currentTabIndex ()I
 		COMMENT Returns the index of the current tab.
-		COMMENT <p>
 		COMMENT @return the index of the current tab, or -1 if no current tab is set.
 	METHOD getNextTabIndex (ILnet/minecraft/client/input/KeyEvent;)I
 		ARG 1 tabIndex
 		ARG 2 event
 	METHOD getNextTabIndex (Lnet/minecraft/client/input/KeyEvent;)I
+		COMMENT Returns the index of the next tab based on the given event.
+		COMMENT @return the index of the next tab, or -1 if no valid tab index is found.
 		ARG 1 event
 	METHOD getRectangle ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
-		COMMENT {@return the {@link ScreenRectangle} occupied by the GUI element}
+		COMMENT @return the {@link ScreenRectangle} occupied by the GUI element
+	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
+		COMMENT Handles key pressed events.
+		COMMENT @return {@code true} if the key press was handled, {@code false} otherwise.
 	METHOD lambda$updateNarration$1 (Lnet/minecraft/client/gui/narration/NarrationElementOutput;Lnet/minecraft/client/gui/components/TabButton;)V
 		ARG 2 tabButton
 	METHOD narrateListElementPosition (Lnet/minecraft/client/gui/narration/NarrationElementOutput;Lnet/minecraft/client/gui/components/TabButton;)V
@@ -37,7 +40,6 @@ CLASS net/minecraft/client/gui/components/tabs/TabNavigationBar
 		COMMENT {@return the narration priority}
 	METHOD nextFocusPath (Lnet/minecraft/client/gui/navigation/FocusNavigationEvent;)Lnet/minecraft/client/gui/ComponentPath;
 		COMMENT Retrieves the next focus path based on the given focus navigation event.
-		COMMENT <p>
 		COMMENT @return the next focus path as a ComponentPath, or {@code null} if there is no next focus path.
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
 		COMMENT Renders the graphical user interface (GUI) element.
@@ -68,11 +70,9 @@ CLASS net/minecraft/client/gui/components/tabs/TabNavigationBar
 			ARG 2 width
 		METHOD addTabs ([Lnet/minecraft/client/gui/components/tabs/Tab;)Lnet/minecraft/client/gui/components/tabs/TabNavigationBar$Builder;
 			COMMENT Adds multiple tabs to the TabNavigationBar.
-			COMMENT <p>
 			COMMENT @return the {@link Builder} instance.
 			ARG 1 tabs
 				COMMENT the tabs to add.
 		METHOD build ()Lnet/minecraft/client/gui/components/tabs/TabNavigationBar;
 			COMMENT Builds and returns a new TabNavigationBar instance.
-			COMMENT <p>
 			COMMENT @return a new TabNavigationBar instance.

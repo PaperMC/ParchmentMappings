@@ -27,4 +27,4 @@ CLASS net/minecraft/world/entity/monster/Monster
 		ARG 1 level
 		ARG 2 player
 	METHOD shouldDropExperience ()Z
-		COMMENT Entity won't drop items or experience points if this returns false
+		COMMENT Entity won't drop items or experience points if this returns {@code false}

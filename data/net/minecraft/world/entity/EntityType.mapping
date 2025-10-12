@@ -14,7 +14,7 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 12 descriptionId
 		ARG 13 lootTable
 		ARG 14 requiredFeatures
-		ARG 15 allowdInPeaceful
+		ARG 15 allowedInPeaceful
 	METHOD appendComponentsConfig (Ljava/util/function/Consumer;Lnet/minecraft/world/item/ItemStack;)Ljava/util/function/Consumer;
 		ARG 0 consumer
 		ARG 1 stack
@@ -82,6 +82,8 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 state
 	METHOD lambda$appendComponentsConfig$22 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
+	METHOD lambda$appendCustomEntityStackConfig$23 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/component/TypedEntityData;Lnet/minecraft/world/entity/Entity;)V
+		ARG 3 entity
 	METHOD lambda$create$24 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/entity/Entity;
 		ARG 2 entityType
 	METHOD lambda$createDefaultStackConfig$21 (Lnet/minecraft/world/entity/Entity;)V
@@ -105,7 +107,7 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 4 adapter
 	METHOD loadEntityRecursive (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/storage/ValueInput;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;Ljava/util/function/Function;)Lnet/minecraft/world/entity/Entity;
 		ARG 0 entityType
-		ARG 1 valueInput
+		ARG 1 input
 		ARG 2 level
 		ARG 3 spawnReason
 		ARG 4 adapter
@@ -115,14 +117,14 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 2 spawnReason
 		ARG 3 adapter
 	METHOD loadPassengersRecursive (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/storage/ValueInput;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;Ljava/util/function/Function;)Lnet/minecraft/world/entity/Entity;
-		ARG 0 entityType
-		ARG 1 valueInput
+		ARG 0 entity
+		ARG 1 input
 		ARG 2 level
 		ARG 3 spawnReason
 		ARG 4 adapter
 	METHOD loadStaticEntity (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/storage/ValueInput;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;)Ljava/util/Optional;
 		ARG 0 entityType
-		ARG 1 valueInput
+		ARG 1 input
 		ARG 2 level
 		ARG 3 spawnReason
 	METHOD loadStaticEntity (Lnet/minecraft/world/level/storage/ValueInput;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntitySpawnReason;)Ljava/util/Optional;
@@ -141,26 +143,26 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 level
 		ARG 2 consumer
 		ARG 3 pos
-		ARG 4 reason
+		ARG 4 spawnReason
 		ARG 5 shouldOffsetY
 		ARG 6 shouldOffsetYMore
 	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/EntitySpawnReason;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
 		ARG 2 pos
-		ARG 3 reason
+		ARG 3 spawnReason
 	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/EntitySpawnReason;ZZ)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
 		ARG 2 spawnedFrom
 		ARG 3 owner
 		ARG 4 pos
-		ARG 5 reason
+		ARG 5 spawnReason
 		ARG 6 shouldOffsetY
 		ARG 7 shouldOffsetYMore
 	METHOD updateCustomEntityTag (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/component/TypedEntityData;)V
 		ARG 0 level
 		ARG 1 owner
 		ARG 2 entity
-		ARG 3 data
+		ARG 3 entityData
 	METHOD vanillaEntityId (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 name
 	CLASS Builder

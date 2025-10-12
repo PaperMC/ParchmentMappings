@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/particle/ParticleResources
 	METHOD loadParticleDescription (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/packs/resources/Resource;)Ljava/util/Optional;
-		ARG 1 location
+		ARG 1 sprite
 		ARG 2 resource
 	METHOD onReload (Ljava/lang/Runnable;)V
 		ARG 1 onReload
@@ -15,4 +15,4 @@ CLASS net/minecraft/client/particle/ParticleResources
 			ARG 1 sprites
 	CLASS SpriteParticleRegistration
 		METHOD create (Lnet/minecraft/client/particle/SpriteSet;)Lnet/minecraft/client/particle/ParticleProvider;
-			ARG 1 spriteSet
+			ARG 1 sprites

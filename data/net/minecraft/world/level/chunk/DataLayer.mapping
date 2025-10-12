@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/chunk/DataLayer
 	COMMENT A representation of a 16x16x16 cube of nibbles (half-bytes).
 	METHOD <init> (I)V
-		ARG 1 size
+		ARG 1 defaultValue
 	METHOD <init> ([B)V
 		ARG 1 data
 	METHOD fill (I)V
@@ -25,7 +25,7 @@ CLASS net/minecraft/world/level/chunk/DataLayer
 	METHOD isDefinitelyFilledWith (I)Z
 		ARG 1 value
 	METHOD layerToString (I)Ljava/lang/String;
-		ARG 1 unused
+		ARG 1 layer
 	METHOD packFilled (I)B
 		ARG 0 value
 	METHOD set (II)V

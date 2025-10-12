@@ -8,7 +8,7 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 3 height
 	METHOD flipFrame (Lcom/mojang/blaze3d/platform/Window;Lcom/mojang/blaze3d/TracyFrameCapture;)V
 		ARG 0 window
-		ARG 1 frameCapture
+		ARG 1 tracyFrameCapture
 	METHOD getSequentialBuffer (Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;)Lcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer;
 		ARG 0 formatMode
 	METHOD getShaderTexture (I)Lcom/mojang/blaze3d/textures/GpuTextureView;

@@ -48,7 +48,6 @@ CLASS net/minecraft/world/SimpleContainer
 		ARG 1 index
 		ARG 2 stack
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player
 	METHOD storeAsItemList (Lnet/minecraft/world/level/storage/ValueOutput$TypedOutputList;)V
 		ARG 1 output

@@ -8,7 +8,7 @@ CLASS com/mojang/blaze3d/platform/ScreenManager
 	METHOD findBestMonitor (Lcom/mojang/blaze3d/platform/Window;)Lcom/mojang/blaze3d/platform/Monitor;
 		ARG 1 window
 	METHOD getMonitor (J)Lcom/mojang/blaze3d/platform/Monitor;
-		ARG 1 monitorID
+		ARG 1 monitorId
 	METHOD onMonitorChange (JI)V
-		ARG 1 monitorID
+		ARG 1 monitorId
 		ARG 3 opCode

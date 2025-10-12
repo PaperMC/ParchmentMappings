@@ -15,7 +15,7 @@ CLASS net/minecraft/client/renderer/texture/SpriteLoader
 		ARG 2 location
 		ARG 3 mipLevel
 		ARG 4 executor
-		ARG 5 sectionTypes
+		ARG 5 types
 	METHOD runSpriteSuppliers (Lnet/minecraft/client/renderer/texture/atlas/SpriteResourceLoader;Ljava/util/List;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 spriteResourceLoader
 		ARG 1 factories
@@ -26,4 +26,4 @@ CLASS net/minecraft/client/renderer/texture/SpriteLoader
 		ARG 3 executor
 	CLASS Preparations
 		METHOD getSprite (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
-			ARG 1 name
+			ARG 1 location

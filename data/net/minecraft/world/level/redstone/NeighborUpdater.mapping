@@ -30,7 +30,7 @@ CLASS net/minecraft/world/level/redstone/NeighborUpdater
 		ARG 3 pos
 		ARG 4 neighborPos
 		ARG 5 flags
-		ARG 6 recursionLevel
+		ARG 6 recursionLeft
 	METHOD updateNeighborsAtExceptFromFacing (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/redstone/Orientation;)V
 		ARG 1 pos
 		ARG 2 block

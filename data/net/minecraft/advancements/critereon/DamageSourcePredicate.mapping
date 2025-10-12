@@ -4,10 +4,10 @@ CLASS net/minecraft/advancements/critereon/DamageSourcePredicate
 	METHOD matches (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 level
 		ARG 2 position
-		ARG 3 source
+		ARG 3 damageSource
 	METHOD matches (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 player
-		ARG 2 source
+		ARG 2 damageSource
 	CLASS Builder
 		METHOD direct (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/DamageSourcePredicate$Builder;
 			ARG 1 directEntity

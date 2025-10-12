@@ -12,4 +12,4 @@ CLASS net/minecraft/server/commands/TeamMsgCommand
 		ARG 1 sender
 		ARG 2 team
 		ARG 3 teamMembers
-		ARG 4 chatMessage
+		ARG 4 message

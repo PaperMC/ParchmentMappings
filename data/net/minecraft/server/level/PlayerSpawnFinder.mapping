@@ -7,7 +7,7 @@ CLASS net/minecraft/server/level/PlayerSpawnFinder
 		ARG 0 level
 		ARG 1 pos
 	METHOD fixupSpawnHeight (Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
-		ARG 0 collisionGetter
+		ARG 0 level
 		ARG 1 pos
 	METHOD getCoprime (I)I
 		ARG 0 candidateCount
@@ -17,9 +17,9 @@ CLASS net/minecraft/server/level/PlayerSpawnFinder
 		ARG 2 z
 	METHOD getSpawnPosInChunk (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/core/BlockPos;
 		ARG 0 level
-		ARG 1 chunkPos
+		ARG 1 pos
 	METHOD noCollisionNoLiquid (Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Z
-		ARG 0 collisionGetter
+		ARG 0 level
 		ARG 1 pos
 	METHOD scheduleCandidate (IIILjava/util/function/Supplier;)V
 		ARG 1 x

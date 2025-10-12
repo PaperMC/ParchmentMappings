@@ -1,10 +1,8 @@
 CLASS net/minecraft/server/packs/metadata/pack/PackFormat
-	METHOD compareTo (Lnet/minecraft/server/packs/metadata/pack/PackFormat;)I
-		ARG 1 other
 	METHOD fullCodec (I)Lcom/mojang/serialization/Codec;
 		ARG 0 defaultMinorVersion
 	METHOD lastPreMinorVersion (Lnet/minecraft/server/packs/PackType;)I
-		ARG 0 type
+		ARG 0 packType
 	METHOD of (I)Lnet/minecraft/server/packs/metadata/pack/PackFormat;
 		ARG 0 major
 	METHOD of (II)Lnet/minecraft/server/packs/metadata/pack/PackFormat;
@@ -19,7 +17,7 @@ CLASS net/minecraft/server/packs/metadata/pack/PackFormat
 	CLASS IntermediaryFormat
 		METHOD fromRange (Lnet/minecraft/util/InclusiveRange;I)Lnet/minecraft/server/packs/metadata/pack/PackFormat$IntermediaryFormat;
 			ARG 0 range
-			ARG 1 versionThreshold
+			ARG 1 lastPreMinorVersion
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 		METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;

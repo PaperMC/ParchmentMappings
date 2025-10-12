@@ -1,11 +1,19 @@
 CLASS net/minecraft/client/gui/screens/achievement/StatsScreen
 	FIELD isLoading Z
-		COMMENT When true, the game will be paused when the gui is shown
+		COMMENT When {@code true}, the game will be paused when the gui is shown
 	METHOD <init> (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/stats/StatsCounter;)V
 		ARG 1 lastScreen
 		ARG 2 stats
 	METHOD getTranslationKey (Lnet/minecraft/stats/Stat;)Ljava/lang/String;
 		ARG 0 stat
+	METHOD lambda$init$2 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$init$3 (Lnet/minecraft/client/gui/components/AbstractWidget;)V
+		ARG 1 widget
+	METHOD lambda$new$0 (Lnet/minecraft/client/gui/screens/achievement/StatsScreen;Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
+		ARG 1 widget
+	METHOD lambda$new$1 (Lnet/minecraft/client/gui/screens/achievement/StatsScreen;Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
+		ARG 1 widget
 	METHOD setTabActiveStateAndTooltip (I)V
 		ARG 1 index
 	CLASS StatisticsTab
@@ -36,11 +44,11 @@ CLASS net/minecraft/client/gui/screens/achievement/StatsScreen
 				ARG 5 evenRow
 			CLASS ItemRowWidget
 				METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$ItemRow;Lnet/minecraft/world/item/ItemStack;)V
-					ARG 2 stack
+					ARG 2 itemStack
 		CLASS HeaderEntry
 			CLASS StatSortButton
 				METHOD <init> (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$HeaderEntry;ILnet/minecraft/resources/ResourceLocation;)V
-					ARG 2 column
+					ARG 2 index
 					ARG 3 sprite
 		CLASS ItemRowComparator
 			METHOD compare (Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$ItemRow;Lnet/minecraft/client/gui/screens/achievement/StatsScreen$ItemStatisticsList$ItemRow;)I

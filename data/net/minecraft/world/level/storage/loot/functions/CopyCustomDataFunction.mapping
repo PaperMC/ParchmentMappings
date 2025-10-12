@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/providers/nbt/NbtProvider;Ljava/util/List;)V
-		ARG 1 conditions
+		ARG 1 predicates
 		ARG 2 source
 		ARG 3 operations
 	METHOD copyData (Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction$Builder;

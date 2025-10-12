@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 	FIELD playerRenderers Ljava/util/Map;
-		COMMENT lists the various player skin types with their associated Renderer class instances.
+		COMMENT lists the various player skin types with their associated EntityRenderer class instances.
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/item/ItemModelResolver;Lnet/minecraft/client/renderer/entity/ItemRenderer;Lnet/minecraft/client/renderer/MapRenderer;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/resources/model/AtlasManager;Lnet/minecraft/client/gui/Font;Lnet/minecraft/client/Options;Ljava/util/function/Supplier;Lnet/minecraft/client/resources/model/EquipmentAssetManager;Lnet/minecraft/client/renderer/PlayerSkinRenderCache;)V
 		ARG 1 minecraft
 		ARG 2 textureManager
@@ -23,11 +23,11 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 1 renderer
 		ARG 2 crashReport
 	METHOD getAvatarRenderer (Ljava/util/Map;Lnet/minecraft/world/entity/Avatar;)Lnet/minecraft/client/renderer/entity/player/AvatarRenderer;
-		ARG 1 renderers
+		ARG 1 playerRenderers
 		ARG 2 avatar
 	METHOD getPackedLightCoords (Lnet/minecraft/world/entity/Entity;F)I
 		ARG 1 entity
-		ARG 2 partialTicks
+		ARG 2 partialTick
 	METHOD getPlayerRenderer (Lnet/minecraft/client/player/AbstractClientPlayer;)Lnet/minecraft/client/renderer/entity/player/AvatarRenderer;
 		ARG 1 player
 	METHOD getRenderer (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;)Lnet/minecraft/client/renderer/entity/EntityRenderer;
@@ -36,7 +36,7 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 		ARG 1 entity
 	METHOD prepare (Lnet/minecraft/client/Camera;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 camera
-		ARG 2 crosshairPickEntitty
+		ARG 2 crosshairPickEntity
 	METHOD shouldRender (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/client/renderer/culling/Frustum;DDD)Z
 		ARG 1 entity
 		ARG 2 frustum
@@ -46,8 +46,8 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderDispatcher
 	METHOD submit (Lnet/minecraft/client/renderer/entity/state/EntityRenderState;Lnet/minecraft/client/renderer/state/CameraRenderState;DDDLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;)V
 		ARG 1 renderState
 		ARG 2 cameraRenderState
-		ARG 3 camX
-		ARG 5 camY
-		ARG 7 camZ
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
 		ARG 9 poseStack
 		ARG 10 nodeCollector

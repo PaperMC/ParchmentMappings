@@ -35,7 +35,7 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultState
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 config
-		ARG 3 severData
+		ARG 3 serverData
 		ARG 4 sharedData
 		ARG 5 deactivationRange
 	CLASS LightLevel

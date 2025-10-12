@@ -147,6 +147,20 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 0 shape
 	METHOD lambda$dropResources$4 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 2 stack
+	METHOD lambda$dropResources$5 (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 2 stack
+	METHOD lambda$dropResources$6 (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 2 stack
+	METHOD lambda$getShapeForEachState$10 (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+		ARG 0 property
+	METHOD lambda$getShapeForEachState$11 (Lnet/minecraft/world/level/block/state/BlockState;Ljava/util/Map$Entry;)Z
+		ARG 1 entry
+	METHOD lambda$getShapeForEachState$12 (Ljava/util/Map;Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 state
+	METHOD lambda$getShapeForEachState$13 (Ljava/util/Map;Lcom/google/common/collect/ImmutableMap;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+		ARG 2 state
+	METHOD lambda$getShapeForEachState$9 (Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/properties/Property;
+		ARG 0 property
 	METHOD playerDestroy (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Called after a player has successfully harvested this block. This method will only be called if the player has used the correct tool and drops should be spawned.
 		ARG 1 level
@@ -198,8 +212,8 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 1 property
 		ARG 2 value
 	METHOD shouldRenderFace (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)Z
-		ARG 0 currentFace
-		ARG 1 neighboringFace
+		ARG 0 currentState
+		ARG 1 neighborState
 		ARG 2 face
 	METHOD spawnDestroyParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 level

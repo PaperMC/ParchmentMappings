@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/font/providers/UnihexProvider
 	METHOD <init> (Lnet/minecraft/client/gui/font/CodepointMap;)V
-		ARG 1 glyph
+		ARG 1 glyphs
 	METHOD copyUntil (Ljava/io/InputStream;Lit/unimi/dsi/fastutil/bytes/ByteList;I)Z
 		ARG 0 stream
 		ARG 1 byteList
@@ -61,7 +61,7 @@ CLASS net/minecraft/client/gui/font/providers/UnihexProvider
 			ARG 1 byteList
 	CLASS ReaderOutput
 		METHOD accept (ILnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;)V
-			ARG 1 codepoint
+			ARG 1 codePoint
 			ARG 2 lineData
 	CLASS OverrideRange
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;

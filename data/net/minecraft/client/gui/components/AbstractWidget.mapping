@@ -15,13 +15,16 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 3 mouseY
 	METHOD isValidClickButton (Lnet/minecraft/client/input/MouseButtonInfo;)Z
 		ARG 1 buttonInfo
+	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
+		ARG 2 dragX
+		ARG 4 dragY
 	METHOD onClick (Lnet/minecraft/client/input/MouseButtonEvent;Z)V
 		ARG 1 event
-		ARG 2 isDoubleClick
+		ARG 2 doubleClick
 	METHOD onDrag (Lnet/minecraft/client/input/MouseButtonEvent;DD)V
 		ARG 1 event
-		ARG 2 mouseX
-		ARG 4 mouseY
+		ARG 2 dragX
+		ARG 4 dragY
 	METHOD onRelease (Lnet/minecraft/client/input/MouseButtonEvent;)V
 		ARG 1 event
 	METHOD playButtonClickSound (Lnet/minecraft/client/sounds/SoundManager;)V

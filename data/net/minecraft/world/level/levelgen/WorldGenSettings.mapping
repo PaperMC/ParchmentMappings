@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/levelgen/WorldGenSettings
 	METHOD encode (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/core/RegistryAccess;)Lcom/mojang/serialization/DataResult;
 		ARG 0 ops
 		ARG 1 options
-		ARG 2 access
+		ARG 2 registryAccess
 	METHOD encode (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/world/level/levelgen/WorldOptions;Lnet/minecraft/world/level/levelgen/WorldDimensions;)Lcom/mojang/serialization/DataResult;
 		ARG 0 ops
 		ARG 1 options

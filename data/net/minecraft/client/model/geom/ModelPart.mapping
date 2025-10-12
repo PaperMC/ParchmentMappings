@@ -6,7 +6,7 @@ CLASS net/minecraft/client/model/geom/ModelPart
 		ARG 1 adder
 	METHOD compile (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
 		ARG 1 pose
-		ARG 2 buffer
+		ARG 2 consumer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 		ARG 5 color
@@ -29,12 +29,12 @@ CLASS net/minecraft/client/model/geom/ModelPart
 		ARG 1 offset
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 consumer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 consumer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 		ARG 5 color
@@ -78,7 +78,7 @@ CLASS net/minecraft/client/model/geom/ModelPart
 			ARG 15 visibleFaces
 		METHOD compile (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
 			ARG 1 pose
-			ARG 2 buffer
+			ARG 2 consumer
 			ARG 3 packedLight
 			ARG 4 packedOverlay
 			ARG 5 color
@@ -104,7 +104,7 @@ CLASS net/minecraft/client/model/geom/ModelPart
 			ARG 8 mirror
 			ARG 9 direction
 		METHOD mirrorFacing (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Direction;
-			ARG 0 direction
+			ARG 0 face
 	CLASS Visitor
 		METHOD visit (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Ljava/lang/String;ILnet/minecraft/client/model/geom/ModelPart$Cube;)V
 			ARG 1 pose

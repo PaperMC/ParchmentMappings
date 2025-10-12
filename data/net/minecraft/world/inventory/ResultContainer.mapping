@@ -18,5 +18,4 @@ CLASS net/minecraft/world/inventory/ResultContainer
 		ARG 1 index
 		ARG 2 stack
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player

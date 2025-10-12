@@ -1,9 +1,9 @@
 CLASS net/minecraft/world/level/BlockGetter
 	METHOD addCollisionsAlongTravel (Lit/unimi/dsi/fastutil/longs/LongSet;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/level/BlockGetter$BlockStepVisitor;)I
-		ARG 0 visited
+		ARG 0 output
 		ARG 1 travelVector
 		ARG 2 boundingBox
-		ARG 3 visitor
+		ARG 3 stepVisitor
 	METHOD clip (Lnet/minecraft/world/level/ClipContext;)Lnet/minecraft/world/phys/BlockHitResult;
 		COMMENT Checks if there's block between {@code from} and {@code to} of context.
 		COMMENT This uses the collision shape of provided block.
@@ -23,7 +23,7 @@ CLASS net/minecraft/world/level/BlockGetter
 		ARG 1 pos
 	METHOD getBlockEntity (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntityType;)Ljava/util/Optional;
 		ARG 1 pos
-		ARG 2 blockEntityType
+		ARG 2 type
 	METHOD getBlockFloorHeight (Lnet/minecraft/core/BlockPos;)D
 		ARG 1 pos
 	METHOD getBlockFloorHeight (Lnet/minecraft/world/phys/shapes/VoxelShape;Ljava/util/function/Supplier;)D
@@ -36,7 +36,7 @@ CLASS net/minecraft/world/level/BlockGetter
 	METHOD getFluidState (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 pos
 	METHOD getFurthestCorner (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/Vec3i;
-		ARG 0 travelVector
+		ARG 0 vector
 	METHOD getLightEmission (Lnet/minecraft/core/BlockPos;)I
 		ARG 1 pos
 	METHOD isBlockInLine (Lnet/minecraft/world/level/ClipBlockStateContext;)Lnet/minecraft/world/phys/BlockHitResult;

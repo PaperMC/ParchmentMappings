@@ -4,7 +4,7 @@ CLASS net/minecraft/client/gui/Gui
 	FIELD lastHealthTime J
 		COMMENT The last recorded system time
 	FIELD spectatorGui Lnet/minecraft/client/gui/components/spectator/SpectatorGui;
-		COMMENT The spectator GUI for this in-game GUI instance
+		COMMENT The spectator GUI for this GUI instance
 	FIELD subtitle Lnet/minecraft/network/chat/Component;
 		COMMENT The current sub-title displayed
 	FIELD titleFadeInTime I
@@ -14,14 +14,13 @@ CLASS net/minecraft/client/gui/Gui
 	FIELD title Lnet/minecraft/network/chat/Component;
 		COMMENT The current title displayed
 	FIELD titleStayTime I
-		COMMENT The time that the title is display
+		COMMENT The time that the title is displayed
 	FIELD titleTime I
 		COMMENT A timer for the current title and subtitle displayed
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 minecraft
 	METHOD canRenderCrosshairForSpectator (Lnet/minecraft/world/phys/HitResult;)Z
 		COMMENT Checks if the crosshair can be rendered for a spectator based on the provided {@link HitResult}.
-		COMMENT <p>
 		COMMENT @return {@code true} if the crosshair can be rendered for a spectator, {@code false} otherwise.
 		ARG 1 rayTrace
 			COMMENT the result of a ray trace operation.
@@ -37,13 +36,12 @@ CLASS net/minecraft/client/gui/Gui
 		ARG 1 vehicleMaxHealth
 		ARG 2 startX
 	METHOD getBossOverlay ()Lnet/minecraft/client/gui/components/BossHealthOverlay;
-		COMMENT {@return the {@link BossHealthOverlay} instance associated with the client}
+		COMMENT @return the {@link BossHealthOverlay} instance associated with the client
 	METHOD getCameraPlayer ()Lnet/minecraft/world/entity/player/Player;
 		COMMENT Retrieves the player entity that the camera is currently focused on.
-		COMMENT <p>
-		COMMENT @return the player entity that the camera is focused on, or null if the camera is not focused on a player.
+		COMMENT @return the player entity that the camera is focused on, or {@code null} if the camera is not focused on a player.
 	METHOD getChat ()Lnet/minecraft/client/gui/components/ChatComponent;
-		COMMENT {@return a pointer to the persistent Chat GUI, containing all previous chat messages and such}
+		COMMENT {@return a pointer to the persistent Chat GUI, containing all previous messages and such}
 	METHOD getCurrentAirSupplyBubble (III)I
 		ARG 0 currentAirSupply
 		ARG 1 maxAirSupply
@@ -52,33 +50,34 @@ CLASS net/minecraft/client/gui/Gui
 		ARG 0 airSupply
 		ARG 1 inWater
 	METHOD getFont ()Lnet/minecraft/client/gui/Font;
-		COMMENT {@return the {@link Font} used for rendering text in the GUI}
+		COMMENT @return the {@link Font} used for rendering text in the GUI
 	METHOD getGuiTicks ()I
 		COMMENT {@return the number of GUI ticks elapsed}
 	METHOD getMobEffectSprite (Lnet/minecraft/core/Holder;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 effect
 	METHOD getPlayerVehicleWithHealth ()Lnet/minecraft/world/entity/LivingEntity;
 		COMMENT Retrieves the living entity representing the player's vehicle with health, if any.
-		COMMENT <p>
-		COMMENT @return the living entity representing the player's vehicle with health, or null if the player is not in a vehicle or the vehicle does not have health.
+		COMMENT @return the living entity representing the player's vehicle with health, or {@code null} if the player is not in a vehicle or the vehicle does not have health.
 	METHOD getSpectatorGui ()Lnet/minecraft/client/gui/components/spectator/SpectatorGui;
-		COMMENT {@return the {@link SpectatorGui} instance}
+		COMMENT @return the {@link SpectatorGui} instance
 	METHOD getTabList ()Lnet/minecraft/client/gui/components/PlayerTabOverlay;
-		COMMENT {@return the {@link PlayerTabOverlay} overlay}
+		COMMENT @return the {@link PlayerTabOverlay} overlay
 	METHOD getVehicleMaxHearts (Lnet/minecraft/world/entity/LivingEntity;)I
 		COMMENT Retrieves the maximum number of hearts representing the vehicle's health for the given mount entity.
-		COMMENT <p>
-		COMMENT @return the maximum number of hearts representing the vehicle's health, or 0 if the mount entity is null or does not show vehicle health.
+		COMMENT @return the maximum number of hearts representing the vehicle's health, or 0 if the mount entity is {@code null} or does not show vehicle health.
 		ARG 1 vehicle
 			COMMENT the living entity representing the vehicle.
 	METHOD getVisibleVehicleHeartRows (I)I
 		COMMENT Retrieves the number of rows of visible hearts needed to represent the given mount health.
-		COMMENT <p>
 		COMMENT @return the number of rows of visible hearts needed to represent the mount health.
 		ARG 1 vehicleHealth
 			COMMENT the health of the mount entity.
 	METHOD isShowingChatDisabledByPlayer ()Z
-		COMMENT {@return {@code true} if the chat disabled message is being shown, {@code false} otherwise}
+		COMMENT @return {@code true} if the chat disabled message is being shown, {@code false} otherwise
+	METHOD lambda$displayScoreboardSidebar$7 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
+		ARG 0 entry
+	METHOD lambda$displayScoreboardSidebar$8 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
+		ARG 3 scoreEntry
 	METHOD onDisconnected ()V
 		COMMENT Called when the player is disconnected from the server.
 		COMMENT Resets various UI elements and clears messages.
@@ -238,7 +237,7 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD resetTitleTimes ()V
 		COMMENT Set the different times for the titles to their default values
 	METHOD setChatDisabledByPlayerShown (Z)V
-		COMMENT {@return {@code true} if the chat is disabled, {@code false} if chat is enabled}
+		COMMENT @return {@code true} if the chat is disabled, {@code false} if chat is enabled
 		ARG 1 chatDisabledByPlayerShown
 	METHOD setNowPlaying (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Sets the currently playing record display name and updates the overlay message.
@@ -284,12 +283,11 @@ CLASS net/minecraft/client/gui/Gui
 			ARG 5 half
 			ARG 6 halfBlinking
 			ARG 7 hardcoreFull
-			ARG 8 hardcoreBlinking
+			ARG 8 hardcoreFullBlinking
 			ARG 9 hardcoreHalf
 			ARG 10 hardcoreHalfBlinking
 		METHOD forPlayer (Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/client/gui/Gui$HeartType;
 			COMMENT Returns the {@link HeartType} based on the player's status effects.
-			COMMENT <p>
 			COMMENT @return the {@link HeartType} based on the player's status effects.
 			ARG 0 player
 				COMMENT the player for which to determine the HeartType.

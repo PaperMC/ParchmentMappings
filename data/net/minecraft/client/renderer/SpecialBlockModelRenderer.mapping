@@ -8,6 +8,6 @@ CLASS net/minecraft/client/renderer/SpecialBlockModelRenderer
 		ARG 4 nodeCollector
 		ARG 5 packedLight
 		ARG 6 packedOverlay
-		ARG 7 outlneColor
+		ARG 7 outlineColor
 	METHOD vanilla (Lnet/minecraft/client/renderer/special/SpecialModelRenderer$BakingContext;)Lnet/minecraft/client/renderer/SpecialBlockModelRenderer;
 		ARG 0 context

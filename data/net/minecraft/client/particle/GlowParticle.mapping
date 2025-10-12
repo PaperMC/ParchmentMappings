@@ -10,16 +10,16 @@ CLASS net/minecraft/client/particle/GlowParticle
 		ARG 14 sprites
 	CLASS WaxOnProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
+			ARG 1 sprite
 	CLASS ScrapeProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
+			ARG 1 sprite
 	CLASS WaxOffProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
+			ARG 1 sprite
 	CLASS GlowSquidProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
+			ARG 1 sprite
 	CLASS ElectricSparkProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
+			ARG 1 sprite

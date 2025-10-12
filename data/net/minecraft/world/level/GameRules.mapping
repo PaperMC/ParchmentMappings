@@ -39,6 +39,11 @@ CLASS net/minecraft/world/level/GameRules
 	METHOD lambda$static$10 (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/level/GameRules$IntegerValue;)V
 		ARG 0 server
 		ARG 1 value
+	METHOD lambda$static$11 (Lnet/minecraft/world/level/GameRules$BooleanValue;Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level
+	METHOD lambda$static$12 (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/level/GameRules$BooleanValue;)V
+		ARG 0 server
+		ARG 1 value
 	METHOD lambda$static$13 (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/level/GameRules$BooleanValue;)V
 		ARG 0 server
 		ARG 1 value
@@ -148,7 +153,7 @@ CLASS net/minecraft/world/level/GameRules
 			ARG 0 server
 			ARG 1 value
 		METHOD safeParse (Ljava/lang/String;)I
-			ARG 0 strValue
+			ARG 0 value
 		METHOD set (ILnet/minecraft/server/MinecraftServer;)V
 			ARG 1 value
 			ARG 2 server

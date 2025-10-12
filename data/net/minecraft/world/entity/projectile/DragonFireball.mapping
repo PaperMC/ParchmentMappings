@@ -4,5 +4,5 @@ CLASS net/minecraft/world/entity/projectile/DragonFireball
 		ARG 2 owner
 		ARG 3 movement
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
-		COMMENT Called when this EntityFireball hits a block or entity.
+		COMMENT Called when this projectile hits a block or entity.
 		ARG 1 result

@@ -92,7 +92,7 @@ CLASS com/mojang/blaze3d/platform/NativeImage
 	METHOD writeToFile (Ljava/io/File;)V
 		ARG 1 file
 	METHOD writeToFile (Ljava/nio/file/Path;)V
-		ARG 1 path
+		ARG 1 filePath
 	CLASS Format
 		METHOD <init> (Ljava/lang/String;IIZZZZZIIIIIZ)V
 			ARG 3 components

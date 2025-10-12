@@ -11,5 +11,5 @@ CLASS com/mojang/blaze3d/opengl/GlTexture
 	METHOD flushModeChanges (I)V
 		ARG 1 target
 	METHOD getFbo (Lcom/mojang/blaze3d/opengl/DirectStateAccess;Lcom/mojang/blaze3d/textures/GpuTexture;)I
-		ARG 1 directStateAccess
+		ARG 1 dsa
 		ARG 2 texture

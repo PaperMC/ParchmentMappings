@@ -5,7 +5,7 @@ CLASS net/minecraft/network/CompressionEncoder
 	METHOD <init> (I)V
 		ARG 1 threshold
 	METHOD encode (Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBuf;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 encodingByteBuf
 		ARG 3 byteBuf
 	METHOD setThreshold (I)V

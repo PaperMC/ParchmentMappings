@@ -20,13 +20,13 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 6 lastSentInput
 		ARG 7 wasSprinting
 	METHOD closeContainer ()V
-		COMMENT Sets the current crafting inventory back to the 2x2 square.
+		COMMENT Closes the container the player currently has open.
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
-		ARG 1 entityHit
+		ARG 1 target
 	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
-		ARG 1 chatComponent
-		ARG 2 actionBar
+		ARG 1 message
+		ARG 2 overlay
 	METHOD distanceToUnitSquare (Lnet/minecraft/world/phys/Vec2;)F
 		ARG 0 moveVector
 	METHOD drop (Z)Z
@@ -43,25 +43,25 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 1 inPortal
 	METHOD heal (F)V
 		COMMENT Heal living entity (param: amount of half-hearts)
-		ARG 1 healAmount
+		ARG 1 amount
 	METHOD hurtTo (F)V
 		COMMENT Updates health locally.
 		ARG 1 health
 	METHOD isLocalPlayer ()Z
 		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
 	METHOD isSprintingPossible (Z)Z
-		ARG 1 flying
+		ARG 1 ignoreWater
 	METHOD lambda$updateAutoJump$0 (Lnet/minecraft/world/phys/shapes/VoxelShape;)Ljava/util/stream/Stream;
 		ARG 0 voxelShape
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entityHit
+		ARG 1 target
 	METHOD modifyInput (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec2;
 		ARG 1 moveVector
 	METHOD modifyInputSpeedForSquareMovement (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec2;
 		ARG 0 moveVector
 	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 type
-		ARG 2 pos
+		ARG 2 movement
 	METHOD moveTowardsClosestSpace (DD)V
 		ARG 1 x
 		ARG 3 z

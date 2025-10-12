@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/pathfinder/NodeEvaluator
 	METHOD done ()V
-		COMMENT This method is called when all nodes have been processed and PathEntity is created.
+		COMMENT This method is called when all nodes have been processed and Path is created.
 	METHOD getNeighbors ([Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;)I
 		ARG 1 outputArray
 		ARG 2 node
@@ -45,6 +45,6 @@ CLASS net/minecraft/world/level/pathfinder/NodeEvaluator
 	METHOD setCanOpenDoors (Z)V
 		ARG 1 canOpenDoors
 	METHOD setCanPassDoors (Z)V
-		ARG 1 canEnterDoors
+		ARG 1 canPassDoors
 	METHOD setCanWalkOverFences (Z)V
 		ARG 1 canWalkOverFences

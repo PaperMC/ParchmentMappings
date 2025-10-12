@@ -20,7 +20,7 @@ CLASS net/minecraft/client/renderer/entity/AbstractMinecartRenderer
 		ARG 1 poseStack
 	METHOD submitMinecartContents (Lnet/minecraft/client/renderer/entity/state/MinecartRenderState;Lnet/minecraft/world/level/block/state/BlockState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;I)V
 		ARG 1 renderState
-		ARG 2 blockState
+		ARG 2 state
 		ARG 3 poseStack
 		ARG 4 nodeCollector
 		ARG 5 packedLight

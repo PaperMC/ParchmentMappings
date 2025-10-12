@@ -16,6 +16,8 @@ CLASS com/mojang/blaze3d/platform/Window
 	METHOD defaultErrorCallback (IJ)V
 		ARG 1 error
 		ARG 2 description
+	METHOD handle ()J
+		COMMENT Gets a pointer to the native window object that is passed to GLFW.
 	METHOD onEnter (JZ)V
 		ARG 1 window
 		ARG 3 cursorEntered

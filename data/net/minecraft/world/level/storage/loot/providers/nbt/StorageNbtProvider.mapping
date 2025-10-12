@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/storage/loot/providers/nbt/StorageNbtProvider
-	COMMENT An NbtProvider that provides NBT data from a named {@link CommandStorage}.
+	COMMENT A NbtProvider that provides NBT data from a named {@link net.minecraft.world.level.storage.CommandStorage}.
 	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 id
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;

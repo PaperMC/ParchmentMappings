@@ -4,10 +4,10 @@ CLASS net/minecraft/server/notifications/NotificationService
 	METHOD ipUnbanned (Ljava/lang/String;)V
 		ARG 1 ip
 	METHOD onGameRuleChanged (Ljava/lang/String;Lnet/minecraft/world/level/GameRules$Value;)V
-		ARG 1 gamerule
+		ARG 1 key
 		ARG 2 value
 	METHOD playerAddedToAllowlist (Lnet/minecraft/server/players/NameAndId;)V
-		ARG 1 player
+		ARG 1 nameAndId
 	METHOD playerBanned (Lnet/minecraft/server/players/UserBanListEntry;)V
 		ARG 1 entry
 	METHOD playerDeoped (Lnet/minecraft/server/players/ServerOpListEntry;)V
@@ -19,6 +19,6 @@ CLASS net/minecraft/server/notifications/NotificationService
 	METHOD playerOped (Lnet/minecraft/server/players/ServerOpListEntry;)V
 		ARG 1 entry
 	METHOD playerRemovedFromAllowlist (Lnet/minecraft/server/players/NameAndId;)V
-		ARG 1 player
+		ARG 1 nameAndId
 	METHOD playerUnbanned (Lnet/minecraft/server/players/NameAndId;)V
-		ARG 1 player
+		ARG 1 nameAndId

@@ -2,15 +2,20 @@ CLASS net/minecraft/client/renderer/blockentity/BlockEntityWithBoundingBoxRender
 	METHOD extract (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/client/renderer/blockentity/state/BlockEntityWithBoundingBoxRenderState;)V
 		ARG 0 blockEntity
 		ARG 1 renderState
+	METHOD lambda$renderStructureVoids$3 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/core/Direction;III)V
+		ARG 4 direction
+		ARG 5 x
+		ARG 6 y
+		ARG 7 z
 	METHOD renderStructureVoids (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityWithBoundingBoxRenderState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;)V
 		ARG 1 renderState
-		ARG 2 localPos
-		ARG 3 size
+		ARG 2 pos
+		ARG 3 boxSize
 		ARG 4 consumer
 		ARG 5 pose
 	METHOD submitInvisibleBlocks (Lnet/minecraft/client/renderer/blockentity/state/BlockEntityWithBoundingBoxRenderState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 renderState
-		ARG 2 localPos
-		ARG 3 size
+		ARG 2 pos
+		ARG 3 boxSize
 		ARG 4 nodeCollector
 		ARG 5 poseStack

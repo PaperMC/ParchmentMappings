@@ -2,7 +2,7 @@ CLASS net/minecraft/core/Registry
 	METHOD containsKey (Lnet/minecraft/resources/ResourceKey;)Z
 		ARG 1 key
 	METHOD containsKey (Lnet/minecraft/resources/ResourceLocation;)Z
-		ARG 1 name
+		ARG 1 key
 	METHOD createIntrusiveHolder (Ljava/lang/Object;)Lnet/minecraft/core/Holder$Reference;
 		ARG 1 value
 	METHOD get (I)Ljava/util/Optional;
@@ -15,7 +15,7 @@ CLASS net/minecraft/core/Registry
 	METHOD getOptional (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 1 registryKey
 	METHOD getOptional (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
-		ARG 1 name
+		ARG 1 key
 	METHOD getRandom (Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
 		ARG 1 random
 	METHOD getResourceKey (Ljava/lang/Object;)Ljava/util/Optional;
@@ -44,7 +44,7 @@ CLASS net/minecraft/core/Registry
 		ARG 2 value
 	METHOD register (Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 0 registry
-		ARG 1 name
+		ARG 1 key
 		ARG 2 value
 	METHOD registerForHolder (Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;)Lnet/minecraft/core/Holder$Reference;
 		ARG 0 registry
@@ -52,7 +52,7 @@ CLASS net/minecraft/core/Registry
 		ARG 2 value
 	METHOD registerForHolder (Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceLocation;Ljava/lang/Object;)Lnet/minecraft/core/Holder$Reference;
 		ARG 0 registry
-		ARG 1 name
+		ARG 1 key
 		ARG 2 value
 	METHOD registrationInfo (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 1 key

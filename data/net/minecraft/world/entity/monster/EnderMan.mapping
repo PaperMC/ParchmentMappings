@@ -18,7 +18,7 @@ CLASS net/minecraft/world/entity/monster/EnderMan
 		ARG 1 time
 	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
 		COMMENT Sets the active target the Task system uses for tracking
-		ARG 1 livingEntity
+		ARG 1 target
 	METHOD teleport ()Z
 		COMMENT Teleport the enderman to a random nearby position
 	METHOD teleport (DDD)Z
@@ -57,7 +57,7 @@ CLASS net/minecraft/world/entity/monster/EnderMan
 			ARG 1 enderman
 			ARG 2 selector
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD lambda$new$0 (Lnet/minecraft/world/entity/monster/EnderMan;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/level/ServerLevel;)Z

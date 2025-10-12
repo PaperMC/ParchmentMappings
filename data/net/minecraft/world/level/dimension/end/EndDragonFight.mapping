@@ -14,7 +14,7 @@ CLASS net/minecraft/world/level/dimension/end/EndDragonFight
 		ARG 2 endGatewayFeature
 	METHOD onCrystalDestroyed (Lnet/minecraft/world/entity/boss/enderdragon/EndCrystal;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 crystal
-		ARG 2 dmgSrc
+		ARG 2 damageSource
 	METHOD respawnDragon (Ljava/util/List;)V
 		ARG 1 crystals
 	METHOD setDragonKilled (Lnet/minecraft/world/entity/boss/enderdragon/EnderDragon;)V

@@ -2,7 +2,7 @@ CLASS net/minecraft/world/entity/ai/targeting/TargetingConditions
 	METHOD <init> (Z)V
 		ARG 1 isCombat
 	METHOD range (D)Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;
-		ARG 1 distance
+		ARG 1 range
 	METHOD selector (Lnet/minecraft/world/entity/ai/targeting/TargetingConditions$Selector;)Lnet/minecraft/world/entity/ai/targeting/TargetingConditions;
 		ARG 1 selector
 	METHOD test (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z

@@ -1,6 +1,6 @@
 CLASS net/minecraft/nbt/SnbtGrammar
 	METHOD canStartNumber (C)Z
-		ARG 0 c
+		ARG 0 character
 	METHOD cleanAndAppend (Ljava/lang/StringBuilder;Ljava/lang/String;)V
 		ARG 0 stringBuilder
 		ARG 1 text
@@ -29,9 +29,9 @@ CLASS net/minecraft/nbt/SnbtGrammar
 	METHOD createParser (Lcom/mojang/serialization/DynamicOps;)Lnet/minecraft/util/parsing/packrat/commands/Grammar;
 		ARG 0 ops
 	METHOD escapeControlCharacters (C)Ljava/lang/String;
-		ARG 0 c
+		ARG 0 character
 	METHOD isAllowedToStartUnquotedString (C)Z
-		ARG 0 c
+		ARG 0 character
 	METHOD joinList (Ljava/util/List;)Ljava/lang/String;
 		ARG 0 list
 	METHOD lambda$createParser$10 (Lnet/minecraft/util/parsing/packrat/Atom;Lnet/minecraft/util/parsing/packrat/Atom;Lnet/minecraft/util/parsing/packrat/Atom;Lnet/minecraft/util/parsing/packrat/Atom;Lnet/minecraft/util/parsing/packrat/Atom;Lnet/minecraft/util/parsing/packrat/ParseState;)Ljava/lang/String;
@@ -85,7 +85,7 @@ CLASS net/minecraft/nbt/SnbtGrammar
 	METHOD lambda$static$1 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 length
 	METHOD lambda$static$2 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
-		ARG 0 codepoint
+		ARG 0 codePoint
 	METHOD lambda$static$3 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 operation
 	METHOD needsUnderscoreRemoval (Ljava/lang/String;)Z

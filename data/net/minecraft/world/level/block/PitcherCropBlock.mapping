@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/block/PitcherCropBlock
 	METHOD canGrow (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
-		ARG 1 reader
+		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
 		ARG 4 age

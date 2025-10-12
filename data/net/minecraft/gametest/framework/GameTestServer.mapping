@@ -29,4 +29,4 @@ CLASS net/minecraft/gametest/framework/GameTestServer
 		ARG 0 test
 		ARG 1 level
 	METHOD startTests (Lnet/minecraft/server/level/ServerLevel;)V
-		ARG 1 serverLevel
+		ARG 1 level

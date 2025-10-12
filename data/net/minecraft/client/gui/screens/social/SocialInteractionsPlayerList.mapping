@@ -5,7 +5,7 @@ CLASS net/minecraft/client/gui/screens/social/SocialInteractionsPlayerList
 		ARG 3 width
 		ARG 4 height
 		ARG 5 y
-		ARG 6 itemHeight
+		ARG 6 defaultEntryHeight
 	METHOD addOnlinePlayers (Ljava/util/Collection;Ljava/util/Map;)V
 		ARG 1 ids
 		ARG 2 playerMap
@@ -13,11 +13,11 @@ CLASS net/minecraft/client/gui/screens/social/SocialInteractionsPlayerList
 		ARG 1 playerInfo
 		ARG 2 page
 	METHOD addSeenPlayers (Ljava/util/Map;)V
-		ARG 1 players
+		ARG 1 playerMap
 	METHOD collectProfilesFromChatLog (Lnet/minecraft/client/multiplayer/chat/ChatLog;)Ljava/util/Map;
 		ARG 0 chatLog
 	METHOD makePlayerEntry (Ljava/util/UUID;Lnet/minecraft/client/multiplayer/PlayerInfo;)Lnet/minecraft/client/gui/screens/social/PlayerEntry;
-		ARG 1 uuid
+		ARG 1 id
 		ARG 2 playerInfo
 	METHOD removePlayer (Ljava/util/UUID;)V
 		ARG 1 id

@@ -8,7 +8,7 @@ CLASS net/minecraft/world/scores/Team
 	METHOD getDeathMessageVisibility ()Lnet/minecraft/world/scores/Team$Visibility;
 		COMMENT Gets the visibility flags for player death messages.
 	METHOD getFormattedName (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
-		ARG 1 formattedName
+		ARG 1 name
 	METHOD getName ()Ljava/lang/String;
 		COMMENT Retrieve the name by which this team is registered in the scoreboard
 	METHOD getNameTagVisibility ()Lnet/minecraft/world/scores/Team$Visibility;
@@ -16,7 +16,7 @@ CLASS net/minecraft/world/scores/Team
 	METHOD getPlayers ()Ljava/util/Collection;
 		COMMENT Gets a collection of all members of this team.
 	METHOD isAlliedTo (Lnet/minecraft/world/scores/Team;)Z
-		COMMENT Same as ==
+		COMMENT Same as reference equality
 		ARG 1 other
 	METHOD isAllowFriendlyFire ()Z
 		COMMENT Checks whether friendly fire (PVP between members of the team) is allowed.

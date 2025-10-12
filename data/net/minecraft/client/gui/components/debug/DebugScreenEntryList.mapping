@@ -2,20 +2,20 @@ CLASS net/minecraft/client/gui/components/debug/DebugScreenEntryList
 	METHOD <init> (Ljava/io/File;)V
 		ARG 1 gameDirectory
 	METHOD getStatus (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/components/debug/DebugScreenEntryStatus;
-		ARG 1 entry
+		ARG 1 id
 	METHOD isCurrentlyEnabled (Lnet/minecraft/resources/ResourceLocation;)Z
-		ARG 1 entry
+		ARG 1 statusId
 	METHOD isUsingProfile (Lnet/minecraft/client/gui/components/debug/DebugScreenProfile;)Z
 		ARG 1 profile
 	METHOD loadProfile (Lnet/minecraft/client/gui/components/debug/DebugScreenProfile;)V
 		ARG 1 profile
 	METHOD setF3Visible (Z)V
-		ARG 1 f3Visible
+		ARG 1 isF3Visible
 	METHOD setStatus (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/gui/components/debug/DebugScreenEntryStatus;)V
-		ARG 1 entry
+		ARG 1 statusId
 		ARG 2 status
 	METHOD toggleStatus (Lnet/minecraft/resources/ResourceLocation;)Z
-		ARG 1 location
+		ARG 1 statusId
 	CLASS SerializedOptions
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

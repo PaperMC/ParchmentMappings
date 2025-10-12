@@ -1,2 +1,2 @@
 CLASS net/minecraft/world/level/storage/loot/parameters/LootContextParams
-	COMMENT Holds all known LootContextParams.
+	COMMENT Holds all known ContextKey.

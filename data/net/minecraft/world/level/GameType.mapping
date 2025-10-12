@@ -7,9 +7,9 @@ CLASS net/minecraft/world/level/GameType
 		ARG 0 id
 	METHOD byName (Ljava/lang/String;)Lnet/minecraft/world/level/GameType;
 		COMMENT Gets the game type registered with the specified name. If no matches were found, survival will be returned.
-		ARG 0 gamemodeName
+		ARG 0 name
 	METHOD byName (Ljava/lang/String;Lnet/minecraft/world/level/GameType;)Lnet/minecraft/world/level/GameType;
-		ARG 0 targetName
+		ARG 0 name
 		ARG 1 fallback
 	METHOD byNullableId (I)Lnet/minecraft/world/level/GameType;
 		ARG 0 id

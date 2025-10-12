@@ -4,19 +4,25 @@ CLASS net/minecraft/client/renderer/debug/BrainDebugRenderer
 	METHOD doRender (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;)V
 		ARG 1 poseStack
 		ARG 2 bufferSource
-		ARG 3 camX
-		ARG 5 camY
-		ARG 7 camZ
-		ARG 9 debugValueAccess
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+		ARG 9 valueAccess
 	METHOD getGhostPois (Lnet/minecraft/util/debug/DebugValueAccess;)Ljava/util/Map;
-		ARG 1 debugValueAccess
+		ARG 1 valueAccess
 	METHOD isMobSelected (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
+	METHOD lambda$doRender$0 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/Entity;Lnet/minecraft/util/debug/DebugBrainDump;)V
+		ARG 10 dump
+	METHOD lambda$getGhostPois$1 (Lnet/minecraft/core/BlockPos;)Ljava/util/List;
+		ARG 0 pos
+	METHOD lambda$updateLastLookedAtUuid$3 (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 targetedEntity
 	METHOD renderBrainInfo (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/util/debug/DebugBrainDump;DDD)V
 		ARG 1 poseStack
 		ARG 2 bufferSource
 		ARG 3 entity
-		ARG 4 brainDump
-		ARG 5 camX
-		ARG 7 camY
-		ARG 9 camZ
+		ARG 4 dump
+		ARG 5 x
+		ARG 7 y
+		ARG 9 z

@@ -4,18 +4,24 @@ CLASS net/minecraft/core/particles/SpellParticleOption
 		ARG 2 color
 		ARG 3 power
 	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/MapCodec;
-		ARG 0 particleType
+		ARG 0 type
 	METHOD create (Lnet/minecraft/core/particles/ParticleType;FFFF)Lnet/minecraft/core/particles/SpellParticleOption;
 		ARG 0 type
-		ARG 1 r
-		ARG 2 g
-		ARG 3 b
+		ARG 1 red
+		ARG 2 green
+		ARG 3 blue
 		ARG 4 power
 	METHOD create (Lnet/minecraft/core/particles/ParticleType;IF)Lnet/minecraft/core/particles/SpellParticleOption;
 		ARG 0 type
 		ARG 1 color
 		ARG 2 power
+	METHOD lambda$codec$2 (Lnet/minecraft/core/particles/ParticleType;Ljava/lang/Integer;Ljava/lang/Float;)Lnet/minecraft/core/particles/SpellParticleOption;
+		ARG 1 color
+		ARG 2 power
 	METHOD lambda$codec$3 (Lnet/minecraft/core/particles/ParticleType;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 1 instance
+	METHOD lambda$streamCodec$6 (Lnet/minecraft/core/particles/ParticleType;Ljava/lang/Integer;Ljava/lang/Float;)Lnet/minecraft/core/particles/SpellParticleOption;
+		ARG 1 color
+		ARG 2 power
 	METHOD streamCodec (Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/network/codec/StreamCodec;
-		ARG 0 particleType
+		ARG 0 type

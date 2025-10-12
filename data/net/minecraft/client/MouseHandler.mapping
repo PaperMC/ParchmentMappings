@@ -22,7 +22,7 @@ CLASS net/minecraft/client/MouseHandler
 	METHOD isMouseGrabbed ()Z
 		COMMENT Returns {@code true} if the mouse is grabbed.
 	METHOD onButton (JLnet/minecraft/client/input/MouseButtonInfo;I)V
-		ARG 1 window
+		ARG 1 windowPointer
 		ARG 3 buttonInfo
 		ARG 4 action
 	METHOD onDrop (JLjava/util/List;I)V
@@ -36,8 +36,8 @@ CLASS net/minecraft/client/MouseHandler
 		COMMENT
 		COMMENT @see GLFWCursorPosCallbackI
 		ARG 1 windowPointer
-		ARG 3 xpos
-		ARG 5 ypos
+		ARG 3 xPos
+		ARG 5 yPos
 	METHOD onScroll (JDD)V
 		COMMENT Will be called when a scrolling device is used, such as a mouse wheel or scrolling area of a touchpad.
 		COMMENT
@@ -46,11 +46,11 @@ CLASS net/minecraft/client/MouseHandler
 		ARG 3 xOffset
 		ARG 5 yOffset
 	METHOD releaseMouse ()V
-		COMMENT Resets the player keystate, disables the ingame focus, and ungrabs the mouse cursor.
+		COMMENT Resets the player key state, disables the in-game focus, and ungrabs the mouse cursor.
 	METHOD setup (Lcom/mojang/blaze3d/platform/Window;)V
 		ARG 1 window
 	METHOD simulateRightClick (Lnet/minecraft/client/input/MouseButtonInfo;Z)Lnet/minecraft/client/input/MouseButtonInfo;
 		ARG 1 buttonInfo
-		ARG 2 isPressed
+		ARG 2 pressed
 	METHOD turnPlayer (D)V
 		ARG 1 movementTime

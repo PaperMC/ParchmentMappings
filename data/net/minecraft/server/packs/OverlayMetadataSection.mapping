@@ -5,6 +5,8 @@ CLASS net/minecraft/server/packs/OverlayMetadataSection
 		ARG 0 packType
 	METHOD lambda$codecForPackType$1 (Lnet/minecraft/server/packs/PackType;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 1 instance
+	METHOD lambda$overlaysForVersion$2 (Lnet/minecraft/server/packs/metadata/pack/PackFormat;Lnet/minecraft/server/packs/OverlayMetadataSection$OverlayEntry;)Z
+		ARG 1 overlay
 	METHOD overlaysForVersion (Lnet/minecraft/server/packs/metadata/pack/PackFormat;)Ljava/util/List;
 		ARG 1 packFormat
 	METHOD validateOverlayDir (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;

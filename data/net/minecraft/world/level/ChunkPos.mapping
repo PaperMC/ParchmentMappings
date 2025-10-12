@@ -1,15 +1,15 @@
 CLASS net/minecraft/world/level/ChunkPos
 	FIELD INVALID_CHUNK_POS J
-		COMMENT Value representing an absent or invalid chunkpos
+		COMMENT Value representing an absent or invalid ChunkPos
 	METHOD <init> (II)V
 		ARG 1 x
-		ARG 2 y
+		ARG 2 z
 	METHOD <init> (J)V
 		ARG 1 packedPos
 	METHOD <init> (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD asLong (II)J
-		COMMENT Converts the chunk coordinate pair to a long
+		COMMENT Pack the ChunkPos into a long (z << 32 | x)
 		ARG 0 x
 		ARG 1 z
 	METHOD asLong (Lnet/minecraft/core/BlockPos;)J

@@ -110,14 +110,14 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 		ARG 7 finalize
 		ARG 8 problemReporter
 	METHOD placeInWorld (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/util/RandomSource;I)Z
-		ARG 1 serverLevel
+		ARG 1 level
 		ARG 2 offset
 		ARG 3 pos
 		ARG 4 settings
 		ARG 5 random
 		ARG 6 flags
 	METHOD processBlockInfos (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Ljava/util/List;)Ljava/util/List;
-		ARG 0 serverLevel
+		ARG 0 level
 		ARG 1 offset
 		ARG 2 pos
 		ARG 3 settings

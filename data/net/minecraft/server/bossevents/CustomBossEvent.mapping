@@ -22,7 +22,7 @@ CLASS net/minecraft/server/bossevents/CustomBossEvent
 	METHOD setMax (I)V
 		ARG 1 max
 	METHOD setPlayers (Ljava/util/Collection;)Z
-		ARG 1 serverPlayerList
+		ARG 1 players
 	METHOD setValue (I)V
 		ARG 1 value
 	CLASS Packed

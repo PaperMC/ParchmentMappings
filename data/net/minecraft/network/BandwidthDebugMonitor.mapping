@@ -1,5 +1,5 @@
 CLASS net/minecraft/network/BandwidthDebugMonitor
 	METHOD <init> (Lnet/minecraft/util/debugchart/LocalSampleLogger;)V
-		ARG 1 bandwithLogger
+		ARG 1 bandwidthLogger
 	METHOD onReceive (I)V
 		ARG 1 amount

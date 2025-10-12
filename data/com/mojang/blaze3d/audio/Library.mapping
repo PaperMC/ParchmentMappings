@@ -8,13 +8,13 @@ CLASS com/mojang/blaze3d/audio/Library
 		ARG 1 memoryStack
 		ARG 2 enableHrtf
 	METHOD getAvailableSoundDevices ()Ljava/util/List;
-		COMMENT {@return A list of strings representing the names of available sound devices, or an empty list if no devices are available.}
+		COMMENT {@return A list of strings representing the names of available sound devices, or an empty list if no devices are available}
 	METHOD getChannelCount ()I
 		COMMENT {@return the number of channels available for audio playback}
 	METHOD getCurrentDeviceName ()Ljava/lang/String;
-		COMMENT {@return the name of the default audio device, or {@code null} if it cannot be determined}
+		COMMENT @return the name of the default audio device, or {@code null} if it cannot be determined
 	METHOD getDefaultDeviceName ()Ljava/lang/String;
-		COMMENT {@return the name of the currently selected audio device, or {@code Unknown} if it cannot be determined}
+		COMMENT @return the name of the currently selected audio device, or {@code Unknown} if it cannot be determined
 	METHOD hasDefaultDeviceChanged ()Z
 		COMMENT Checks if the default audio device has changed since the last time this method was called.
 		COMMENT <p>
@@ -24,15 +24,15 @@ CLASS com/mojang/blaze3d/audio/Library
 		COMMENT Initializes the OpenAL device and context.
 		COMMENT @throws IllegalStateException if an error occurs during initialization.
 		ARG 1 deviceSpecifier
-			COMMENT A string specifying the name of the audio device to use, or null to use the default device.
+			COMMENT A string specifying the name of the audio device to use, or {@code null} to use the default device.
 		ARG 2 enableHrtf
 			COMMENT Whether to enable HRTF (head-related transfer function) for spatial audio.
 	METHOD openDeviceOrFallback (Ljava/lang/String;)J
-		COMMENT Opens the specified audio device, or the default device if the specifier is null.
+		COMMENT Opens the specified audio device, or the default device if the specifier is {@code null}.
 		COMMENT @return The handle of the opened device.
 		COMMENT @throws IllegalStateException if the device cannot be opened.
 		ARG 0 deviceSpecifier
-			COMMENT The name of the audio device to open, or null to open the default device.
+			COMMENT The name of the audio device to open, or {@code null} to open the default device.
 	METHOD releaseChannel (Lcom/mojang/blaze3d/audio/Channel;)V
 		COMMENT Releases a channel.
 		COMMENT @return whether the channel was successfully released
@@ -42,7 +42,7 @@ CLASS com/mojang/blaze3d/audio/Library
 		COMMENT Attempts to open the specified audio device.
 		COMMENT @return an {@linkplain OptionalLong} containing the handle of the opened device if successful, or empty if the device could not be opened
 		ARG 0 deviceSpecifier
-			COMMENT A string specifying the name of the audio device to open, or null to use the default device.
+			COMMENT A string specifying the name of the audio device to open, or {@code null} to use the default device.
 	CLASS ChannelPool
 		METHOD release (Lcom/mojang/blaze3d/audio/Channel;)Z
 			ARG 1 channel

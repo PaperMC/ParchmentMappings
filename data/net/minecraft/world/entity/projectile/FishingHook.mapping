@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/entity/projectile/FishingHook
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;II)V
-		ARG 1 entityType
+		ARG 1 type
 		ARG 2 level
 		ARG 3 luck
 		ARG 4 lureSpeed
@@ -14,13 +14,13 @@ CLASS net/minecraft/world/entity/projectile/FishingHook
 	METHOD catchingFish (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD getOpenWaterTypeForArea (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;
-		ARG 1 firstPos
-		ARG 2 secondPos
+		ARG 1 pos1
+		ARG 2 pos2
 	METHOD getOpenWaterTypeForBlock (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;
 		ARG 1 pos
 	METHOD lambda$getOpenWaterTypeForArea$0 (Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;)Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;
-		ARG 0 firstType
-		ARG 1 secondType
+		ARG 0 type1
+		ARG 1 type2
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
 		COMMENT Called when the arrow hits an entity
 		ARG 1 result

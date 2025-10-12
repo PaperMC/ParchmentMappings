@@ -8,7 +8,11 @@ CLASS net/minecraft/client/gui/screens/multiplayer/CodeOfConductScreen
 		ARG 1 serverData
 		ARG 2 parent
 		ARG 3 content
-		ARG 4 codeOfConductScreen
+		ARG 4 codeOfConductText
 		ARG 5 resultConsumer
+	METHOD lambda$addFooterButtons$0 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
+	METHOD lambda$addFooterButtons$1 (Lnet/minecraft/client/gui/components/Button;)V
+		ARG 1 button
 	METHOD onResult (Z)V
-		ARG 1 accepted
+		ARG 1 accept

@@ -15,6 +15,6 @@ CLASS net/minecraft/server/commands/GameModeCommand
 		ARG 0 player
 		ARG 1 gameMode
 	METHOD setMode (Lcom/mojang/brigadier/context/CommandContext;Ljava/util/Collection;Lnet/minecraft/world/level/GameType;)I
-		ARG 0 source
+		ARG 0 context
 		ARG 1 players
 		ARG 2 gameType

@@ -11,6 +11,6 @@ CLASS net/minecraft/world/level/pathfinder/PathTypeCache
 		ARG 1 level
 		ARG 2 pos
 	METHOD index (J)I
-		ARG 0 pos
+		ARG 0 packedPos
 	METHOD invalidate (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos

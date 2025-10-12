@@ -11,7 +11,7 @@ CLASS net/minecraft/world/level/storage/CommandStorage
 		ARG 1 namespace
 	METHOD set (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 id
-		ARG 2 nbt
+		ARG 2 tag
 	CLASS Container
 		METHOD <init> (Ljava/util/Map;)V
 			ARG 1 storage
@@ -23,6 +23,6 @@ CLASS net/minecraft/world/level/storage/CommandStorage
 			ARG 0 instance
 		METHOD put (Ljava/lang/String;Lnet/minecraft/nbt/CompoundTag;)V
 			ARG 1 id
-			ARG 2 nbt
+			ARG 2 tag
 		METHOD type (Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/SavedDataType;
 			ARG 0 namespace

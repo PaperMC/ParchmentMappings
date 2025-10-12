@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/block/FaceAttachedHorizontalDirectionalBlock
 	METHOD canAttach (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z
-		ARG 0 reader
+		ARG 0 level
 		ARG 1 pos
 		ARG 2 direction
 	METHOD canSurvive (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z

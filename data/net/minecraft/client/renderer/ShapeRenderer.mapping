@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/renderer/ShapeRenderer
 	METHOD addChainedFilledBoxVertices (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDDDDFFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 consumer
 		ARG 2 minX
 		ARG 4 minY
 		ARG 6 minZ
@@ -14,7 +14,7 @@ CLASS net/minecraft/client/renderer/ShapeRenderer
 		ARG 17 alpha
 	METHOD addChainedFilledBoxVertices (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFFFFFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 consumer
 		ARG 2 minX
 		ARG 3 minY
 		ARG 4 minZ
@@ -28,7 +28,7 @@ CLASS net/minecraft/client/renderer/ShapeRenderer
 	METHOD renderFace (Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/core/Direction;FFFFFFFFFF)V
 		ARG 0 pose
 		ARG 1 consumer
-		ARG 2 direction
+		ARG 2 face
 		ARG 3 x1
 		ARG 4 y1
 		ARG 5 z1
@@ -78,7 +78,7 @@ CLASS net/minecraft/client/renderer/ShapeRenderer
 		ARG 6 alpha
 	METHOD renderShape (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/phys/shapes/VoxelShape;DDDI)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 consumer
 		ARG 2 shape
 		ARG 3 x
 		ARG 5 y
@@ -86,7 +86,7 @@ CLASS net/minecraft/client/renderer/ShapeRenderer
 		ARG 9 color
 	METHOD renderVector (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Vector3f;Lnet/minecraft/world/phys/Vec3;I)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 consumer
 		ARG 2 startPos
 		ARG 3 vector
 		ARG 4 color

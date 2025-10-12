@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/LevelAccessor
 	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
-		ARG 1 particle
+		ARG 1 options
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
@@ -41,7 +41,7 @@ CLASS net/minecraft/world/level/LevelAccessor
 	METHOD getCurrentDifficultyAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/DifficultyInstance;
 		ARG 1 pos
 	METHOD getLevelData ()Lnet/minecraft/world/level/storage/LevelData;
-		COMMENT Returns the world's WorldInfo object
+		COMMENT Returns the world's LevelData object
 	METHOD hasChunk (II)Z
 		ARG 1 chunkX
 		ARG 2 chunkZ

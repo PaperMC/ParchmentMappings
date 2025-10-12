@@ -5,7 +5,7 @@ CLASS net/minecraft/world/item/CreativeModeTab
 		ARG 3 type
 		ARG 4 displayName
 		ARG 5 iconGenerator
-		ARG 6 displayItemGenerator
+		ARG 6 displayItemsGenerator
 	METHOD buildContents (Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;)V
 		ARG 1 parameters
 	METHOD builder (Lnet/minecraft/world/item/CreativeModeTab$Row;I)Lnet/minecraft/world/item/CreativeModeTab$Builder;

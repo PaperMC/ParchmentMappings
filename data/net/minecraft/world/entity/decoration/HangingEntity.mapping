@@ -1,13 +1,13 @@
 CLASS net/minecraft/world/entity/decoration/HangingEntity
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 entityType
+		ARG 1 type
 		ARG 2 level
 		ARG 3 pos
 	METHOD calculateBoundingBox (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 pos
 		ARG 2 direction
 	METHOD canCoexist (Z)Z
-		ARG 1 itemFrame
+		ARG 1 ignoreType
 	METHOD getDirection ()Lnet/minecraft/core/Direction;
 		COMMENT Gets the horizontal facing direction of this Entity.
 	METHOD mirror (Lnet/minecraft/world/level/block/Mirror;)F

@@ -22,10 +22,25 @@ CLASS net/minecraft/client/renderer/debug/BreezeDebugRenderer
 		ARG 11 color
 	METHOD drawLine (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;I)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 xOffset
 		ARG 4 yOffset
 		ARG 6 zOffset
 		ARG 8 fromPos
 		ARG 9 toPos
 		ARG 10 color
+	METHOD lambda$render$0 (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 attackTarget
+	METHOD lambda$render$1 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 9 vector
+	METHOD lambda$render$2 (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)V
+		ARG 9 pos
+	METHOD lambda$render$3 (Lnet/minecraft/client/multiplayer/ClientLevel;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/Entity;Lnet/minecraft/util/debug/DebugBreezeInfo;)V
+		ARG 10 breeze
+	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;Lnet/minecraft/client/renderer/culling/Frustum;)V
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 xOffset
+		ARG 5 yOffset
+		ARG 7 zOffset
+		ARG 9 valueAccess

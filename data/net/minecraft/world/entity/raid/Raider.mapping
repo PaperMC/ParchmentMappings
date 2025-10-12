@@ -2,10 +2,9 @@ CLASS net/minecraft/world/entity/raid/Raider
 	METHOD applyRaidBuffs (Lnet/minecraft/server/level/ServerLevel;IZ)V
 		ARG 1 level
 		ARG 2 wave
-		ARG 3 unused
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
-		ARG 1 cause
+		ARG 1 damageSource
 	METHOD lambda$static$0 (Lnet/minecraft/world/entity/item/ItemEntity;)Z
 		ARG 0 item
 	METHOD removeWhenFarAway (D)Z
@@ -56,7 +55,7 @@ CLASS net/minecraft/world/entity/raid/Raider
 			ARG 2 speedModifier
 			ARG 4 distanceToPoi
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD hasNotVisited (Lnet/minecraft/core/BlockPos;)Z

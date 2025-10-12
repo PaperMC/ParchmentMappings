@@ -8,5 +8,5 @@ CLASS net/minecraft/network/protocol/game/ServerboundContainerClickPacket
 	FIELD slotNum S
 		COMMENT Id of the clicked slot
 	METHOD handle (Lnet/minecraft/network/protocol/game/ServerGamePacketListener;)V
-		COMMENT Passes this Packet on to the NetHandler for processing.
+		COMMENT Passes this Packet on to the packet listener for processing.
 		ARG 1 handler

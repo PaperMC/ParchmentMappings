@@ -3,15 +3,15 @@ CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftApi
 		ARG 1 notificationManager
 		ARG 2 allowListService
 		ARG 3 banListService
-		ARG 4 playerListService
+		ARG 4 minecraftPlayerListService
 		ARG 5 gameRuleService
-		ARG 6 operatorListService
-		ARG 7 serverSettingService
-		ARG 8 serverStateService
+		ARG 6 minecraftOperatorListService
+		ARG 7 minecraftServerSettingsService
+		ARG 8 minecraftServerStateService
 		ARG 9 executorService
 	METHOD of (Lnet/minecraft/server/dedicated/DedicatedServer;)Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;
 		ARG 0 server
 	METHOD submit (Ljava/lang/Runnable;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 task
 	METHOD submit (Ljava/util/function/Supplier;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 task
+		ARG 1 supplier

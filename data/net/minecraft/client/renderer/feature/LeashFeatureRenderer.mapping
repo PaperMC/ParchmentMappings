@@ -10,11 +10,11 @@ CLASS net/minecraft/client/renderer/feature/LeashFeatureRenderer
 		ARG 7 dz
 		ARG 8 index
 		ARG 9 reverse
-		ARG 10 leashState
+		ARG 10 state
 	METHOD render (Lnet/minecraft/client/renderer/SubmitNodeCollection;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 nodeCollection
 		ARG 2 bufferSource
 	METHOD renderLeash (Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/entity/state/EntityRenderState$LeashState;)V
 		ARG 0 pose
 		ARG 1 bufferSource
-		ARG 2 leashState
+		ARG 2 state

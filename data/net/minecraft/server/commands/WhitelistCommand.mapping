@@ -10,6 +10,8 @@ CLASS net/minecraft/server/commands/WhitelistCommand
 		ARG 0 context
 	METHOD lambda$register$2 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
+	METHOD lambda$register$8 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
 	METHOD reload (Lnet/minecraft/commands/CommandSourceStack;)I

@@ -29,7 +29,7 @@ CLASS net/minecraft/world/entity/monster/Zombie
 		COMMENT Set whether this zombie is a child.
 		ARG 1 childZombie
 	METHOD setCanBreakDoors (Z)V
-		COMMENT Sets or removes EntityAIBreakDoor task
+		COMMENT Sets or removes BreakDoorGoal
 		ARG 1 canBreakDoors
 	METHOD setConversionTime (I)V
 		ARG 1 conversionTime

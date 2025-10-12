@@ -4,7 +4,7 @@ CLASS net/minecraft/world/item/SpawnEggItem
 	METHOD getType (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/EntityType;
 		ARG 1 stack
 	METHOD spawnMob (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;ZZ)Lnet/minecraft/world/InteractionResult;
-		ARG 1 source
+		ARG 1 owner
 		ARG 2 stack
 		ARG 3 level
 		ARG 4 pos
@@ -14,7 +14,7 @@ CLASS net/minecraft/world/item/SpawnEggItem
 		ARG 1 player
 		ARG 2 mob
 		ARG 3 entityType
-		ARG 4 serverLevel
+		ARG 4 level
 		ARG 5 pos
 		ARG 6 stack
 	METHOD spawnsEntity (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EntityType;)Z

@@ -2,7 +2,7 @@ CLASS net/minecraft/world/entity/ai/util/DefaultRandomPos
 	METHOD generateRandomPosTowardDirection (Lnet/minecraft/world/entity/PathfinderMob;IZLnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
 		ARG 0 mob
 		ARG 1 radius
-		ARG 2 shortCircuit
+		ARG 2 isRestricted
 		ARG 3 pos
 	METHOD getPos (Lnet/minecraft/world/entity/PathfinderMob;II)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 mob
@@ -12,10 +12,10 @@ CLASS net/minecraft/world/entity/ai/util/DefaultRandomPos
 		ARG 0 mob
 		ARG 1 radius
 		ARG 2 yRange
-		ARG 3 vectorPosition
+		ARG 3 avoidPos
 	METHOD getPosTowards (Lnet/minecraft/world/entity/PathfinderMob;IILnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 mob
 		ARG 1 radius
 		ARG 2 yRange
-		ARG 3 vectorPosition
+		ARG 3 targetPos
 		ARG 4 amplifier

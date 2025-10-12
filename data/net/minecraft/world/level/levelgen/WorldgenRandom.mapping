@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 	METHOD next (I)I
 		ARG 1 bits
 	METHOD seedSlimeChunk (IIJJ)Lnet/minecraft/util/RandomSource;
-		COMMENT Creates a new {@code RandomSource}, seeded for determining whether a chunk is a slime chunk or not.
+		COMMENT Creates a new {@code RandomSource}, seeded for determining whether a chunk is a slime chunk.
 		ARG 0 chunkX
 		ARG 1 chunkZ
 		ARG 2 levelSeed
@@ -34,7 +34,7 @@ CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 	METHOD setLargeFeatureWithSalt (JIII)V
 		COMMENT Seeds the current random for placing the starts of structure features.
 		COMMENT The region coordinates are the region which the target chunk lies in. For example, witch hut regions are 32x32 chunks, so all chunks within that region would be seeded identically.
-		COMMENT The size of the regions themselves are determined by the {@code spacing} of the structure settings.
+		COMMENT The size of the regions themselves is determined by the {@code spacing} of the structure settings.
 		ARG 1 levelSeed
 		ARG 3 regionX
 		ARG 4 regionZ

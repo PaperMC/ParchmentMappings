@@ -10,15 +10,19 @@ CLASS com/mojang/realmsclient/gui/screens/configuration/RealmsPlayersTab
 		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/configuration/RealmsPlayersTab;Lcom/mojang/realmsclient/dto/PlayerInfo;)V
 			ARG 2 playerInfo
 		METHOD deop (I)V
-			ARG 1 index
+			ARG 1 player
 		METHOD lambda$new$0 (ILnet/minecraft/client/gui/components/Button;)V
-			ARG 2 index
+			ARG 2 button
+		METHOD lambda$new$2 (ILnet/minecraft/client/gui/components/Button;)V
+			ARG 2 button
+		METHOD lambda$new$4 (ILnet/minecraft/client/gui/components/Button;)V
+			ARG 2 button
 		METHOD lambda$uninvite$14 (Lcom/mojang/realmsclient/dto/PlayerInfo;IZ)V
 			ARG 3 confirmed
 		METHOD op (I)V
-			ARG 1 index
+			ARG 1 player
 		METHOD uninvite (I)V
-			ARG 1 index
+			ARG 1 player
 		METHOD updateOps (Lcom/mojang/realmsclient/dto/Ops;)V
 			ARG 1 ops
 	CLASS InvitedObjectSelectionList

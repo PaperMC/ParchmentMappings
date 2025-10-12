@@ -7,7 +7,7 @@ CLASS net/minecraft/world/entity/ai/behavior/HarvestFarmland
 		ARG 1 level
 		ARG 2 owner
 	METHOD getValidFarmland (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/core/BlockPos;
-		ARG 1 serverLevel
+		ARG 1 level
 	METHOD start (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
 		ARG 1 level
 		ARG 2 entity
@@ -22,4 +22,4 @@ CLASS net/minecraft/world/entity/ai/behavior/HarvestFarmland
 		ARG 3 gameTime
 	METHOD validPos (Lnet/minecraft/core/BlockPos;Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 1 pos
-		ARG 2 serverLevel
+		ARG 2 level

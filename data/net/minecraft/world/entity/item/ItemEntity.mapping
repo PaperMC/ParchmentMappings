@@ -4,13 +4,13 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 		ARG 2 posX
 		ARG 4 posY
 		ARG 6 posZ
-		ARG 8 itemStack
+		ARG 8 stack
 	METHOD <init> (Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/item/ItemStack;DDD)V
 		ARG 1 level
 		ARG 2 posX
 		ARG 4 posY
 		ARG 6 posZ
-		ARG 8 itemStack
+		ARG 8 stack
 		ARG 9 deltaX
 		ARG 11 deltaY
 		ARG 13 deltaZ

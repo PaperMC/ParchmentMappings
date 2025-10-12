@@ -3,13 +3,13 @@ CLASS net/minecraft/world/level/LevelReader
 		ARG 1 pos
 	METHOD containsAnyLiquid (Lnet/minecraft/world/phys/AABB;)Z
 		COMMENT Checks if any of the blocks within the aabb are liquids.
-		ARG 1 bb
+		ARG 1 aabb
 	METHOD getBiome (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/Holder;
 		ARG 1 pos
 	METHOD getBlockStatesIfLoaded (Lnet/minecraft/world/phys/AABB;)Ljava/util/stream/Stream;
 		ARG 1 aabb
 	METHOD getBlockTint (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/ColorResolver;)I
-		ARG 1 blockPos
+		ARG 1 pos
 		ARG 2 colorResolver
 	METHOD getChunk (II)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 chunkX

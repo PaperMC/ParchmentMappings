@@ -42,6 +42,8 @@ CLASS net/minecraft/network/chat/Style
 		ARG 1 other
 	METHOD getClickEvent ()Lnet/minecraft/network/chat/ClickEvent;
 		COMMENT The effective chat click event.
+	METHOD getFont ()Lnet/minecraft/network/chat/FontDescription;
+		COMMENT The font to use for this Style
 	METHOD getHoverEvent ()Lnet/minecraft/network/chat/HoverEvent;
 		COMMENT The effective chat hover event.
 	METHOD getInsertion ()Ljava/lang/String;

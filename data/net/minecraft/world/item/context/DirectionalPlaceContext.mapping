@@ -3,5 +3,5 @@ CLASS net/minecraft/world/item/context/DirectionalPlaceContext
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 direction
-		ARG 4 itemStack
+		ARG 4 stack
 		ARG 5 face

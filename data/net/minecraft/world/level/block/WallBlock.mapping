@@ -23,8 +23,8 @@ CLASS net/minecraft/world/level/block/WallBlock
 		ARG 0 state
 		ARG 1 heightProperty
 	METHOD isCovered (Lnet/minecraft/world/phys/shapes/VoxelShape;Lnet/minecraft/world/phys/shapes/VoxelShape;)Z
-		ARG 0 firstShape
-		ARG 1 secondShape
+		ARG 0 shape1
+		ARG 1 shape2
 	METHOD lambda$makeShapes$0 (Lnet/minecraft/world/phys/shapes/VoxelShape;Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 3 state
 	METHOD makeShapes (FF)Ljava/util/function/Function;
@@ -33,7 +33,7 @@ CLASS net/minecraft/world/level/block/WallBlock
 	METHOD makeWallState (ZLnet/minecraft/world/phys/shapes/VoxelShape;Lnet/minecraft/world/phys/shapes/VoxelShape;)Lnet/minecraft/world/level/block/state/properties/WallSide;
 		ARG 1 allowConnection
 		ARG 2 shape
-		ARG 3 neighbourShape
+		ARG 3 neighborShape
 	METHOD mirror (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 mirror
@@ -42,25 +42,25 @@ CLASS net/minecraft/world/level/block/WallBlock
 		ARG 2 rotation
 	METHOD shouldRaisePost (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/shapes/VoxelShape;)Z
 		ARG 1 state
-		ARG 2 neighbour
+		ARG 2 neighborState
 		ARG 3 shape
 	METHOD sideUpdate (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 level
-		ARG 2 firstPos
-		ARG 3 firstState
-		ARG 4 secondPos
-		ARG 5 secondState
-		ARG 6 dir
+		ARG 2 currentPos
+		ARG 3 state
+		ARG 4 neighborPos
+		ARG 5 neighborState
+		ARG 6 direction
 	METHOD topUpdate (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 level
 		ARG 2 state
-		ARG 3 pos
-		ARG 4 secondState
+		ARG 3 neighborPos
+		ARG 4 neighborState
 	METHOD updateShape (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;ZZZZ)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 level
 		ARG 2 state
 		ARG 3 pos
-		ARG 4 neighbour
+		ARG 4 neighborState
 		ARG 5 northConnection
 		ARG 6 eastConnection
 		ARG 7 southConnection

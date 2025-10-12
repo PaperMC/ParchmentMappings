@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/block/LadderBlock
 	METHOD canAttachTo (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z
-		ARG 1 blockReader
+		ARG 1 level
 		ARG 2 pos
 		ARG 3 direction
 	METHOD canSurvive (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z

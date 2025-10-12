@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/storage/loot/parameters/LootContextParamSets
-	COMMENT Registry for {@link LootContextParamSet}s.
+	COMMENT Registry for {@link ContextKeySet}s.
 	METHOD lambda$static$10 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
 		ARG 0 builder
 	METHOD lambda$static$11 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
@@ -31,6 +31,10 @@ CLASS net/minecraft/world/level/storage/loot/parameters/LootContextParamSets
 	METHOD lambda$static$24 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
 		ARG 0 builder
 	METHOD lambda$static$25 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
+		ARG 0 builder
+	METHOD lambda$static$26 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
+		ARG 0 builder
+	METHOD lambda$static$27 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
 		ARG 0 builder
 	METHOD lambda$static$3 (Lnet/minecraft/util/context/ContextKeySet$Builder;)V
 		ARG 0 builder

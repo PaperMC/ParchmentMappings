@@ -8,7 +8,7 @@ CLASS net/minecraft/world/entity/projectile/WitherSkull
 		ARG 1 explosion
 		ARG 2 level
 		ARG 3 pos
-		ARG 4 blockState
+		ARG 4 state
 		ARG 5 fluidState
 		ARG 6 explosionPower
 	METHOD getInertia ()F
@@ -18,7 +18,7 @@ CLASS net/minecraft/world/entity/projectile/WitherSkull
 	METHOD isOnFire ()Z
 		COMMENT Returns {@code true} if the entity is on fire. Used by render to add the fire effect on rendering.
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
-		COMMENT Called when this EntityFireball hits a block or entity.
+		COMMENT Called when this projectile hits a block or entity.
 		ARG 1 result
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
 		COMMENT Called when the arrow hits an entity

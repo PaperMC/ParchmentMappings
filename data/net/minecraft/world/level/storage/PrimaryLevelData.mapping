@@ -33,7 +33,7 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 		ARG 4 worldGenSettingsLifecycle
 	METHOD createTag (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 registries
-		ARG 2 hostPlayerNBT
+		ARG 2 singlePlayerTag
 	METHOD getDayTime ()J
 		COMMENT Get current world time
 	METHOD getGameRules ()Lnet/minecraft/world/level/GameRules;
@@ -49,7 +49,7 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 	METHOD isHardcore ()Z
 		COMMENT Returns {@code true} if hardcore mode is enabled, otherwise {@code false}.
 	METHOD isInitialized ()Z
-		COMMENT Returns {@code true} if the World is initialized.
+		COMMENT Returns {@code true} if the world is initialized.
 	METHOD isRaining ()Z
 		COMMENT Returns {@code true} if it is raining, {@code false} otherwise.
 	METHOD isThundering ()Z
@@ -69,7 +69,7 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 	METHOD setClearWeatherTime (I)V
 		ARG 1 time
 	METHOD setCustomBossEvents (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 nbt
+		ARG 1 tag
 	METHOD setDayTime (J)V
 		COMMENT Set current world time
 		ARG 1 time
@@ -82,7 +82,7 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 	METHOD setGameType (Lnet/minecraft/world/level/GameType;)V
 		ARG 1 type
 	METHOD setInitialized (Z)V
-		COMMENT Sets the initialization status of the World.
+		COMMENT Sets the initialization status of the world.
 		ARG 1 initialized
 	METHOD setModdedInfo (Ljava/lang/String;Z)V
 		ARG 1 name
@@ -95,8 +95,8 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 		ARG 1 isRaining
 	METHOD setTagData (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 registry
-		ARG 2 nbt
-		ARG 3 playerNBT
+		ARG 2 tag
+		ARG 3 singlePlayerTag
 	METHOD setThunderTime (I)V
 		COMMENT Defines the number of ticks until next thunderbolt.
 		ARG 1 time

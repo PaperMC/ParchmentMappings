@@ -2,16 +2,16 @@ CLASS net/minecraft/server/jsonrpc/security/AuthenticationHandler
 	METHOD <init> (Lnet/minecraft/server/jsonrpc/security/SecurityConfig;)V
 		ARG 1 securityConfig
 	METHOD channelRead (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V
-		ARG 1 context
-		ARG 2 request
+		ARG 1 ctx
+		ARG 2 msg
 	METHOD getClientIp (Lio/netty/channel/ChannelHandlerContext;)Ljava/lang/String;
-		ARG 1 context
+		ARG 1 ctx
 	METHOD isValidApiKey (Ljava/lang/String;)Z
-		ARG 1 apiKey
+		ARG 1 key
 	METHOD performSecurityChecks (Lio/netty/handler/codec/http/HttpRequest;)Lnet/minecraft/server/jsonrpc/security/AuthenticationHandler$SecurityCheckResult;
 		ARG 1 request
 	METHOD sendUnauthorizedResponse (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/String;)V
-		ARG 1 context
+		ARG 1 ctx
 		ARG 2 message
 	METHOD validateAuthentication (Lio/netty/handler/codec/http/HttpRequest;)Z
 		ARG 1 request

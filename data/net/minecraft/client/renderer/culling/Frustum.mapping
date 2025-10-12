@@ -2,11 +2,11 @@ CLASS net/minecraft/client/renderer/culling/Frustum
 	METHOD <init> (Lnet/minecraft/client/renderer/culling/Frustum;)V
 		ARG 1 other
 	METHOD <init> (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
-		ARG 1 frustum
-		ARG 2 projection
+		ARG 1 frustumMatrix
+		ARG 2 projectionMatrix
 	METHOD calculateFrustum (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
-		ARG 1 frustum
-		ARG 2 projection
+		ARG 1 frustumMatrix
+		ARG 2 projectionMatrix
 	METHOD cubeInFrustum (DDDDDD)I
 		ARG 1 minX
 		ARG 3 minY

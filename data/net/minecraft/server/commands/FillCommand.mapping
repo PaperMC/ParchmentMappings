@@ -37,12 +37,12 @@ CLASS net/minecraft/server/commands/FillCommand
 			ARG 4 filter
 		METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/core/BlockPos;Lnet/minecraft/commands/arguments/blocks/BlockInput;Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/commands/arguments/blocks/BlockInput;
 			ARG 0 area
-			ARG 1 blockPos
+			ARG 1 pos
 			ARG 2 newBlock
 			ARG 3 level
 		METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/core/BlockPos;Lnet/minecraft/commands/arguments/blocks/BlockInput;Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/commands/arguments/blocks/BlockInput;
 			ARG 0 area
-			ARG 1 blockPos
+			ARG 1 pos
 			ARG 2 newBlock
 			ARG 3 level
 		METHOD lambda$static$2 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z

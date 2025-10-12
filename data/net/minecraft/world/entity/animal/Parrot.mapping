@@ -27,7 +27,7 @@ CLASS net/minecraft/world/entity/animal/Parrot
 	METHOD getPitch (Lnet/minecraft/util/RandomSource;)F
 		ARG 0 random
 	METHOD getVoicePitch ()F
-		COMMENT Gets the pitch of living sounds in living entities.
+		COMMENT Gets the pitch of living sounds from living entities.
 	METHOD imitateNearbyMobs (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 level
 		ARG 1 parrot

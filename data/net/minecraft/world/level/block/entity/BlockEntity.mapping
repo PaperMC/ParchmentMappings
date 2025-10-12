@@ -18,7 +18,7 @@ CLASS net/minecraft/world/level/block/entity/BlockEntity
 	METHOD collectImplicitComponents (Lnet/minecraft/core/component/DataComponentMap$Builder;)V
 		ARG 1 components
 	METHOD fillCrashReportCategory (Lnet/minecraft/CrashReportCategory;)V
-		ARG 1 reportCategory
+		ARG 1 category
 	METHOD getPosFromTag (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/core/BlockPos;
 		ARG 0 chunkPos
 		ARG 1 tag

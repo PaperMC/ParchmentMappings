@@ -5,10 +5,10 @@ CLASS net/minecraft/client/model/AxolotlModel
 		ARG 1 factor
 	METHOD setupGroundCrawlingAnimation (FF)V
 		ARG 1 ageInTicks
-		ARG 2 netHeadYaw
+		ARG 2 deltaYHeadRot
 	METHOD setupLayStillOnGroundAnimation (FF)V
 		ARG 1 ageInTicks
-		ARG 2 netHeadYaw
+		ARG 2 deltaYHeadRot
 	METHOD setupPlayDeadAnimation (F)V
 		ARG 1 playingDeadFactor
 	METHOD setupSwimmingAnimation (FFF)V

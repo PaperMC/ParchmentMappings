@@ -1,15 +1,15 @@
 CLASS net/minecraft/server/level/ChunkMap
 	FIELD modified Z
-		COMMENT True if changes have been made to {@link #loadedChunks} and thus a new copy of the collection has to be made into {@link #immutableLoadedChunks}.
+		COMMENT {@code true} if changes have been made to {@link #updatingChunkMap} and thus a new copy of the collection has to be made into {@link #visibleChunkMap}.
 	FIELD toDrop Lit/unimi/dsi/fastutil/longs/LongSet;
 		COMMENT Chunks that have been requested to be unloaded, but haven't been unloaded yet.
 	FIELD updatingChunkMap Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;
 		COMMENT Chunks in memory. This should only ever be manipulated by the main thread.
 	FIELD visibleChunkMap Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;
-		COMMENT Same as {@link #loadedChunks}, but immutable for access from other threads. <em>This should never be mutated.</em>
+		COMMENT Same as {@link #updatingChunkMap}, but immutable for access from other threads. <em>This should never be mutated.</em>
 	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/concurrent/Executor;Lnet/minecraft/util/thread/BlockableEventLoop;Lnet/minecraft/world/level/chunk/LightChunkGetter;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/entity/ChunkStatusUpdateListener;Ljava/util/function/Supplier;Lnet/minecraft/world/level/TicketStorage;IZ)V
 		ARG 1 level
-		ARG 2 storageSource
+		ARG 2 levelStorageAccess
 		ARG 3 fixerUpper
 		ARG 4 structureManager
 		ARG 5 dispatcher
@@ -105,6 +105,8 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 2 chunkPos
 	METHOD lambda$getChunkRangeFuture$1 (Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
 		ARG 0 chunkResult
+	METHOD lambda$prepareAccessibleChunk$28 (Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
+		ARG 0 chunkResult
 	METHOD lambda$prepareEntityTickingChunk$7 (Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
 		ARG 0 chunkResult
 	METHOD lambda$prepareTickingChunk$26 (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/server/level/ChunkResult;)Lnet/minecraft/server/level/ChunkResult;
@@ -174,7 +176,7 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 flush
 	METHOD saveChunkIfNeeded (Lnet/minecraft/server/level/ChunkHolder;J)Z
 		ARG 1 chunk
-		ARG 2 gametime
+		ARG 2 gameTime
 	METHOD saveChunksEagerly (Ljava/util/function/BooleanSupplier;)V
 		ARG 1 hasMoreTime
 	METHOD scheduleChunkLoad (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
@@ -205,7 +207,7 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 chunkPos
 		ARG 3 newLevel
 		ARG 4 holder
-			COMMENT The {@link net.minecraft.server.level.ChunkHolder} of the chunk if it is loaded, and null otherwise.
+			COMMENT The {@link net.minecraft.server.level.ChunkHolder} of the chunk if it is loaded, and {@code null} otherwise.
 		ARG 5 oldLevel
 	METHOD updateChunkTracking (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
@@ -231,6 +233,8 @@ CLASS net/minecraft/server/level/ChunkMap
 			ARG 1 player
 		METHOD scaledRange (I)I
 			ARG 1 trackingDistance
+		METHOD sendToTrackingPlayers (Lnet/minecraft/network/protocol/Packet;)V
+			ARG 1 packet
 		METHOD updatePlayer (Lnet/minecraft/server/level/ServerPlayer;)V
 			ARG 1 player
 		METHOD updatePlayers (Ljava/util/List;)V

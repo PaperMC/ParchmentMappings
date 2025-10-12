@@ -35,7 +35,7 @@ CLASS net/minecraft/world/entity/Display
 		ARG 2 partialTick
 	CLASS ItemDisplay
 		METHOD setItemStack (Lnet/minecraft/world/item/ItemStack;)V
-			ARG 1 itemStack
+			ARG 1 stack
 		METHOD setItemTransform (Lnet/minecraft/world/item/ItemDisplayContext;)V
 			ARG 1 itemTransform
 	CLASS TextDisplay
@@ -65,7 +65,7 @@ CLASS net/minecraft/world/entity/Display
 			ARG 0 flags
 			ARG 1 output
 			ARG 2 key
-			ARG 3 name
+			ARG 3 mask
 		CLASS Align
 			METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 				ARG 3 name
@@ -75,7 +75,7 @@ CLASS net/minecraft/world/entity/Display
 				ARG 2 maxWidth
 	CLASS BlockDisplay
 		METHOD setBlockState (Lnet/minecraft/world/level/block/state/BlockState;)V
-			ARG 1 blockState
+			ARG 1 state
 	CLASS IntInterpolator
 		METHOD constant (I)Lnet/minecraft/world/entity/Display$IntInterpolator;
 			ARG 0 value

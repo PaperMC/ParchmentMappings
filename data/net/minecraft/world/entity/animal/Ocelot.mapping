@@ -32,11 +32,11 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 	CLASS OcelotAvoidEntityGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Ocelot;Ljava/lang/Class;FDD)V
 			ARG 1 ocelot
-			ARG 2 entityClassToAvoid
+			ARG 2 avoidClass
 			ARG 3 maxDist
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			COMMENT Returns whether an in-progress Goal should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

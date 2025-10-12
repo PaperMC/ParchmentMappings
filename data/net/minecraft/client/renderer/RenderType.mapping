@@ -128,6 +128,8 @@ CLASS net/minecraft/client/renderer/RenderType
 		ARG 0 width
 	METHOD lambda$static$26 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 texture
+	METHOD lambda$static$27 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 texture
 	METHOD lambda$static$3 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 id
 	METHOD lambda$static$4 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
@@ -175,11 +177,11 @@ CLASS net/minecraft/client/renderer/RenderType
 			ARG 8 outlineProperty
 		CLASS CompositeStateBuilder
 			METHOD createCompositeState (Lnet/minecraft/client/renderer/RenderType$OutlineProperty;)Lnet/minecraft/client/renderer/RenderType$CompositeState;
-				ARG 1 outlineState
+				ARG 1 outlineProperty
 			METHOD createCompositeState (Z)Lnet/minecraft/client/renderer/RenderType$CompositeState;
 				ARG 1 outline
 			METHOD setLayeringState (Lnet/minecraft/client/renderer/RenderStateShard$LayeringStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;
-				ARG 1 layerState
+				ARG 1 layeringState
 			METHOD setLightmapState (Lnet/minecraft/client/renderer/RenderStateShard$LightmapStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;
 				ARG 1 lightmapState
 			METHOD setLineState (Lnet/minecraft/client/renderer/RenderStateShard$LineStateShard;)Lnet/minecraft/client/renderer/RenderType$CompositeState$CompositeStateBuilder;

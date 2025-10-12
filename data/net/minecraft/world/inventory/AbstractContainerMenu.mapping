@@ -3,7 +3,7 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 menuType
 		ARG 2 containerId
 	METHOD addDataSlot (Lnet/minecraft/world/inventory/DataSlot;)Lnet/minecraft/world/inventory/DataSlot;
-		ARG 1 intValue
+		ARG 1 slot
 	METHOD addDataSlots (Lnet/minecraft/world/inventory/ContainerData;)V
 		ARG 1 array
 	METHOD addInventoryExtendedSlots (Lnet/minecraft/world/Container;II)V
@@ -34,7 +34,7 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 stack
 		ARG 2 stackSizeMatters
 	METHOD canTakeItemForPickAll (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/Slot;)Z
-		COMMENT Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is null for the initial slot that was double-clicked.
+		COMMENT Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is {@code null} for the initial slot that was double-clicked.
 		ARG 1 stack
 		ARG 2 slot
 	METHOD checkContainerDataCount (Lnet/minecraft/world/inventory/ContainerData;I)V
@@ -47,16 +47,16 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 player
 		ARG 2 container
 	METHOD clickMenuButton (Lnet/minecraft/world/entity/player/Player;I)Z
-		COMMENT Handles the given Button-click on the server, currently only used by enchanting. Name is for legacy.
+		COMMENT Handles the given Button-click on the server, currently used by enchanting table, loom, lectern and stonecutter.
 		ARG 1 player
 		ARG 2 id
 	METHOD clicked (IILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 slotId
+		ARG 1 slotIndex
 		ARG 2 button
 		ARG 3 clickType
 		ARG 4 player
 	METHOD doClick (IILnet/minecraft/world/inventory/ClickType;Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 slotId
+		ARG 1 slotIndex
 		ARG 2 button
 		ARG 3 clickType
 		ARG 4 player
@@ -67,19 +67,19 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 container
 		ARG 2 slotIndex
 	METHOD getItems ()Lnet/minecraft/core/NonNullList;
-		COMMENT Returns a list if {@code ItemStacks}, for each slot.
+		COMMENT Returns a list of {@code ItemStack}s, for each slot.
 	METHOD getQuickCraftPlaceCount (Ljava/util/Set;ILnet/minecraft/world/item/ItemStack;)I
 		ARG 0 slots
 		ARG 1 type
 		ARG 2 stack
 	METHOD getQuickcraftHeader (I)I
-		COMMENT Args : clickedButton, Returns (0 : start drag, 1 : add slot, 2 : end drag)
+		COMMENT Returns (0 : start drag, 1 : add slot, 2 : end drag)
 		ARG 0 clickedButton
 	METHOD getQuickcraftMask (II)I
 		ARG 0 quickCraftingHeader
 		ARG 1 quickCraftingType
 	METHOD getQuickcraftType (I)I
-		COMMENT Extracts the drag mode. Args : eventButton. Return (0 : evenly split, 1 : one item by slot, 2 : not used ?)
+		COMMENT Extracts the drag mode. Return (0 : evenly split, 1 : one item by slot, 2 : not used ?)
 		ARG 0 eventButton
 	METHOD getRedstoneSignalFromBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;)I
 		COMMENT Like the version that takes an inventory. If the given BlockEntity is not an Inventory, 0 is returned instead.
@@ -87,7 +87,7 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 	METHOD getRedstoneSignalFromContainer (Lnet/minecraft/world/Container;)I
 		ARG 0 container
 	METHOD getSlot (I)Lnet/minecraft/world/inventory/Slot;
-		ARG 1 slotId
+		ARG 1 slotIndex
 	METHOD initializeContents (ILjava/util/List;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stateId
 		ARG 2 items
@@ -99,19 +99,19 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 slotIndex
 	METHOD lambda$stillValid$0 (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Ljava/lang/Boolean;
 		ARG 2 level
-		ARG 3 blockPos
+		ARG 3 pos
 	METHOD moveItemStackTo (Lnet/minecraft/world/item/ItemStack;IIZ)Z
-		COMMENT Merges provided ItemStack with the first available one in the container/player inventor between minIndex (included) and maxIndex (excluded). Args : stack, minIndex, maxIndex, negativeDirection. [!] the Container implementation do not check if the item is valid for the slot
+		COMMENT Merges provided ItemStack with the first available one in the container/player inventor between minIndex (included) and maxIndex (excluded). [!] the Container implementation do not check if the item is valid for the slot
 		ARG 1 stack
 		ARG 2 startIndex
 		ARG 3 endIndex
 		ARG 4 reverseDirection
 	METHOD quickMoveStack (Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Handle when the stack in slot {@code index} is shift-clicked. Normally this moves the stack between the player inventory and the other inventory(s).
+		COMMENT Handle when the stack in {@code slotIndex} is shift-clicked. Normally this moves the stack between the player inventory and the other inventory(s).
 		ARG 1 player
-		ARG 2 index
+		ARG 2 slotIndex
 	METHOD removeSlotListener (Lnet/minecraft/world/inventory/ContainerListener;)V
-		COMMENT Remove the given Listener. Method name is for legacy.
+		COMMENT Remove the given Listener.
 		ARG 1 listener
 	METHOD removed (Lnet/minecraft/world/entity/player/Player;)V
 		COMMENT Called when the container is closed.
@@ -125,7 +125,7 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 2 data
 	METHOD setItem (IILnet/minecraft/world/item/ItemStack;)V
 		COMMENT Puts an ItemStack in a slot.
-		ARG 1 slotId
+		ARG 1 slotIndex
 		ARG 2 stateId
 		ARG 3 stack
 	METHOD setRemoteCarried (Lnet/minecraft/network/HashedStack;)V

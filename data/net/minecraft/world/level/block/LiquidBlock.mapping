@@ -28,7 +28,7 @@ CLASS net/minecraft/world/level/block/LiquidBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 oldState
-		ARG 5 isMoving
+		ARG 5 movedByPiston
 	METHOD shouldSpreadLiquid (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 level
 		ARG 2 pos

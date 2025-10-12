@@ -9,7 +9,7 @@ CLASS net/minecraft/world/scores/criteria/ObjectiveCriteria
 		ARG 0 name
 	METHOD getStat (Lnet/minecraft/stats/StatType;Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
 		ARG 0 statType
-		ARG 1 resourceLocation
+		ARG 1 key
 	METHOD registerCustom (Ljava/lang/String;)Lnet/minecraft/world/scores/criteria/ObjectiveCriteria;
 		ARG 0 name
 	METHOD registerCustom (Ljava/lang/String;ZLnet/minecraft/world/scores/criteria/ObjectiveCriteria$RenderType;)Lnet/minecraft/world/scores/criteria/ObjectiveCriteria;

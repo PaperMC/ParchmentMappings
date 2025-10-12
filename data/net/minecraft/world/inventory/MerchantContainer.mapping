@@ -7,7 +7,7 @@ CLASS net/minecraft/world/inventory/MerchantContainer
 		COMMENT Returns the stack in the given slot.
 		ARG 1 index
 	METHOD isPaymentSlot (I)Z
-		COMMENT if par1 slot has changed, does resetRecipeAndSlots need to be called?
+		COMMENT if slot has changed, does updateSellItem need to be called?
 		ARG 1 slot
 	METHOD removeItem (II)Lnet/minecraft/world/item/ItemStack;
 		COMMENT Removes up to a specified number of items from an inventory slot and returns them in a new stack.
@@ -25,5 +25,4 @@ CLASS net/minecraft/world/inventory/MerchantContainer
 	METHOD setSelectionHint (I)V
 		ARG 1 currentRecipeIndex
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player

@@ -4,12 +4,12 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 2 width
 		ARG 3 height
 		ARG 4 y
-		ARG 5 itemHeight
+		ARG 5 defaultEntryHeight
 	METHOD addEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)I
 		ARG 1 entry
 	METHOD addEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;I)I
 		ARG 1 entry
-		ARG 2 index
+		ARG 2 height
 	METHOD addEntryToTop (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 entry
 	METHOD addEntryToTop (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;I)V
@@ -30,6 +30,8 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 index
 	METHOD getRowTop (I)I
 		ARG 1 index
+	METHOD lambda$nextEntry$1 (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)Z
+		ARG 0 entry
 	METHOD narrateListElementPosition (Lnet/minecraft/client/gui/narration/NarrationElementOutput;Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 narrationElementOutput
 		ARG 2 entry
@@ -53,7 +55,7 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 2 mouseX
 		ARG 3 mouseY
 		ARG 4 partialTick
-		ARG 5 item
+		ARG 5 entry
 	METHOD renderListBackground (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
 	METHOD renderListItems (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
@@ -100,7 +102,7 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 			ARG 1 guiGraphics
 			ARG 2 mouseX
 			ARG 3 mouseY
-			ARG 4 isHovering
+			ARG 4 hovering
 			ARG 5 partialTick
 		METHOD setHeight (I)V
 			ARG 1 height

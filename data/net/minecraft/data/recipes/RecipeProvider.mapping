@@ -87,18 +87,18 @@ CLASS net/minecraft/data/recipes/RecipeProvider
 		ARG 1 family
 		ARG 2 variant
 	METHOD getBlastingRecipeName (Lnet/minecraft/world/level/ItemLike;)Ljava/lang/String;
-		ARG 0 itemLike
+		ARG 0 item
 	METHOD getConversionRecipeName (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/world/level/ItemLike;)Ljava/lang/String;
 		ARG 0 result
 		ARG 1 ingredient
 	METHOD getHasName (Lnet/minecraft/world/level/ItemLike;)Ljava/lang/String;
-		ARG 0 itemLike
+		ARG 0 item
 	METHOD getItemName (Lnet/minecraft/world/level/ItemLike;)Ljava/lang/String;
-		ARG 0 itemLike
+		ARG 0 item
 	METHOD getSimpleRecipeName (Lnet/minecraft/world/level/ItemLike;)Ljava/lang/String;
-		ARG 0 itemLike
+		ARG 0 item
 	METHOD getSmeltingRecipeName (Lnet/minecraft/world/level/ItemLike;)Ljava/lang/String;
-		ARG 0 itemLike
+		ARG 0 item
 	METHOD grate (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 grateBlock
 		ARG 2 material
@@ -114,7 +114,7 @@ CLASS net/minecraft/data/recipes/RecipeProvider
 	METHOD has (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/Criterion;
 		ARG 1 tag
 	METHOD has (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/advancements/Criterion;
-		ARG 1 itemLike
+		ARG 1 item
 	METHOD insideOf (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/advancements/Criterion;
 		ARG 0 block
 	METHOD inventoryTrigger ([Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;)Lnet/minecraft/advancements/Criterion;
@@ -236,7 +236,7 @@ CLASS net/minecraft/data/recipes/RecipeProvider
 		ARG 3 count
 	METHOD shelf (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/world/level/ItemLike;)V
 		ARG 1 shelf
-		ARG 2 strippedLog
+		ARG 2 material
 	METHOD signBuilder (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/world/item/crafting/Ingredient;)Lnet/minecraft/data/recipes/RecipeBuilder;
 		ARG 1 sign
 		ARG 2 material

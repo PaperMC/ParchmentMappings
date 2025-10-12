@@ -38,4 +38,4 @@ CLASS net/minecraft/world/entity/animal/Animal
 		ARG 1 inLove
 	METHOD spawnChildFromBreeding (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/animal/Animal;)V
 		ARG 1 level
-		ARG 2 mate
+		ARG 2 partner

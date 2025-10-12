@@ -50,7 +50,7 @@ CLASS net/minecraft/world/level/block/FireBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 oldState
-		ARG 5 isMoving
+		ARG 5 movedByPiston
 	METHOD setFlammable (Lnet/minecraft/world/level/block/Block;II)V
 		ARG 1 block
 		ARG 2 encouragement

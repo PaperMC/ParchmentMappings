@@ -22,7 +22,7 @@ CLASS com/mojang/blaze3d/systems/RenderPass
 		ARG 3 width
 		ARG 4 height
 	METHOD pushDebugGroup (Ljava/util/function/Supplier;)V
-		ARG 1 name
+		ARG 1 label
 	METHOD setIndexBuffer (Lcom/mojang/blaze3d/buffers/GpuBuffer;Lcom/mojang/blaze3d/vertex/VertexFormat$IndexType;)V
 		ARG 1 indexBuffer
 		ARG 2 indexType

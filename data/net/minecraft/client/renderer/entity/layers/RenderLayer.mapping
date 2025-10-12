@@ -8,8 +8,8 @@ CLASS net/minecraft/client/renderer/entity/layers/RenderLayer
 		ARG 3 nodeCollector
 		ARG 4 packedLight
 		ARG 5 renderState
-		ARG 6 tintColor
-		ARG 7 outlineColor
+		ARG 6 color
+		ARG 7 order
 	METHOD renderColoredCutoutModel (Lnet/minecraft/client/model/Model;Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;II)V
 		ARG 0 model
 		ARG 1 textureLocation
@@ -17,8 +17,8 @@ CLASS net/minecraft/client/renderer/entity/layers/RenderLayer
 		ARG 3 nodeCollector
 		ARG 4 packedLight
 		ARG 5 renderState
-		ARG 6 tintColor
-		ARG 7 outlineColor
+		ARG 6 color
+		ARG 7 order
 	METHOD submit (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/renderer/entity/state/EntityRenderState;FF)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector

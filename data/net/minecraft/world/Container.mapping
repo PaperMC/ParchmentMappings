@@ -1,10 +1,10 @@
 CLASS net/minecraft/world/Container
 	METHOD canPlaceItem (ILnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Returns {@code true} if automation is allowed to insert the given stack (ignoring stack size) into the given slot. For guis use Slot.isItemValid
+		COMMENT Returns {@code true} if automation is allowed to insert the given stack (ignoring stack size) into the given slot. For guis use Slot.mayPlace
 		ARG 1 slot
 		ARG 2 stack
 	METHOD canTakeItem (Lnet/minecraft/world/Container;ILnet/minecraft/world/item/ItemStack;)Z
-		COMMENT {@return {@code true} if the given stack can be extracted into the target inventory}
+		COMMENT @return {@code true} if the given stack can be extracted into the target inventory
 		ARG 1 target
 			COMMENT the container into which the item should be extracted
 		ARG 2 slot
@@ -46,7 +46,6 @@ CLASS net/minecraft/world/Container
 	METHOD startOpen (Lnet/minecraft/world/entity/ContainerUser;)V
 		ARG 1 user
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player
 	METHOD stillValidBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 0 blockEntity
