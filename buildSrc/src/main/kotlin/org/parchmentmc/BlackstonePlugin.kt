@@ -64,6 +64,7 @@ class BlackstonePlugin : Plugin<Project> {
         val downloadVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadLauncherMeta.flatMap { it.output }
+            output = target.layout.buildDirectory.file(name + ".json") // Remove subdir to fix caching
             outputs.cacheIf { true }
         }
 
@@ -72,6 +73,11 @@ class BlackstonePlugin : Plugin<Project> {
         val downloadVersion by target.tasks.registering(DownloadVersion::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadVersionMeta.flatMap { it.output }
+            // Remove subdir to fix caching
+            output = target.layout.buildDirectory.dir(name)
+            doFirst {
+                output.asFile.get().deleteRecursively()
+            }
             outputs.cacheIf { !buildCachePush }
         }
 
