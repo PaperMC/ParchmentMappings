@@ -14,7 +14,7 @@ plugins {
     id("org.parchmentmc.compass")
 }
 
-//apply<org.parchmentmc.BlackstonePlugin>() apply when Parchment doesn't publish blackstone metadata in time for validate and sanitize tasks
+apply<org.parchmentmc.BlackstonePlugin>() // apply when Parchment doesn't publish blackstone metadata in time for validate and sanitize tasks
 
 val mcVersion = providers.gradleProperty("mcVersion")
 compass {

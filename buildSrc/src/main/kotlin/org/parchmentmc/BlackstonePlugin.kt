@@ -7,6 +7,9 @@ import org.gradle.api.publish.maven.MavenPublication
 import org.gradle.api.tasks.TaskProvider
 import org.gradle.api.tasks.bundling.Zip
 import org.gradle.kotlin.dsl.*
+import org.parchmentmc.compass.tasks.GenerateExport
+import org.parchmentmc.compass.tasks.SanitizeData
+import org.parchmentmc.compass.tasks.ValidateData
 import org.parchmentmc.lodestone.LodestoneExtension
 import org.parchmentmc.lodestone.tasks.*
 
@@ -20,6 +23,22 @@ class BlackstonePlugin : Plugin<Project> {
 
         val mcVersion = target.providers.gradleProperty("mcVersion")
         val createDistribution = registerTasks(target, mcVersion.get())
+
+        val blackstoneConfig = target.configurations.named("blackstone") {
+            val cfc = target.files(createDistribution.flatMap { it.archiveFile })
+            cfc.builtBy(createDistribution)
+            dependencies.add(target.dependencyFactory.create(cfc))
+        }
+        // Fix faulty task wiring
+        target.tasks.withType(SanitizeData::class.java).configureEach {
+            inputs.files(blackstoneConfig)
+        }
+        target.tasks.withType(ValidateData::class.java).configureEach {
+            inputs.files(blackstoneConfig)
+        }
+        target.tasks.withType(GenerateExport::class.java).configureEach {
+            inputs.files(blackstoneConfig)
+        }
 
         target.afterEvaluate {
             target.configure<LodestoneExtension> {
@@ -45,6 +64,7 @@ class BlackstonePlugin : Plugin<Project> {
         val downloadVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadLauncherMeta.flatMap { it.output }
+            outputs.cacheIf { true }
         }
 
         val downloadVersion by target.tasks.registering(DownloadVersion::class) {
@@ -55,18 +75,21 @@ class BlackstonePlugin : Plugin<Project> {
         val createProGuardMetadata by target.tasks.registering(ExtractMetadataFromProguardFile::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadVersion.flatMap { it.output.file("client.txt") }
+            outputs.cacheIf { true }
         }
 
         val createJarMetadata by target.tasks.registering(ExtractMetadataFromJarFiles::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadVersion.flatMap { it.output.file("client.jar") }
             libraries = downloadVersion.flatMap { it.output.dir("libraries") }
+            outputs.cacheIf { true }
         }
 
         val mergeMetadata by target.tasks.registering(MergeMetadata::class) {
             group = PLUGIN_TASK_GROUP
             leftSource = createJarMetadata.flatMap { it.output }
             rightSource = createProGuardMetadata.flatMap { it.output }
+            outputs.cacheIf { true }
         }
 
         val createDistribution by target.tasks.registering(Zip::class) {
