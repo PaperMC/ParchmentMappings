@@ -67,9 +67,12 @@ class BlackstonePlugin : Plugin<Project> {
             outputs.cacheIf { true }
         }
 
+        val buildCachePush = target.providers.gradleProperty("paperBuildCachePush").orNull?.toBoolean()
+            ?: System.getProperty("CI").toBoolean()
         val downloadVersion by target.tasks.registering(DownloadVersion::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadVersionMeta.flatMap { it.output }
+            outputs.cacheIf { !buildCachePush }
         }
 
         val createProGuardMetadata by target.tasks.registering(ExtractMetadataFromProguardFile::class) {
