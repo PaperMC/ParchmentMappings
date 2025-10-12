@@ -75,6 +75,7 @@ dependencies {
 val downloadClientJar by tasks.registering(VersionDownload::class) {
     group = CompassPlugin.COMPASS_GROUP
     description = "Downloads the client JAR for the current version set in Compass."
+    outputs.cacheIf { true }
 }
 
 val remapJar by tasks.registering(RemapJar::class) {
