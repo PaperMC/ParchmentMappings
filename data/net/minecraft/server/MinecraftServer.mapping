@@ -167,7 +167,7 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD sendDifficultyUpdate (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
 	METHOD setAutoSave (Z)Z
-		ARG 1 save
+		ARG 1 autoSave
 	METHOD setDefaultGameType (Lnet/minecraft/world/level/GameType;)V
 		COMMENT Sets the game type for all worlds.
 		ARG 1 gameMode

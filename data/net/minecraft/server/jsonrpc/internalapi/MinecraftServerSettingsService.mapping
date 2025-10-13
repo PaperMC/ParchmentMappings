@@ -6,7 +6,7 @@ CLASS net/minecraft/server/jsonrpc/internalapi/MinecraftServerSettingsService
 		ARG 1 allowFlight
 		ARG 2 client
 	METHOD setAutoSave (ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
-		ARG 1 save
+		ARG 1 autoSave
 		ARG 2 client
 	METHOD setDifficulty (Lnet/minecraft/world/Difficulty;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Lnet/minecraft/world/Difficulty;
 		ARG 1 difficulty

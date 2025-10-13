@@ -39,7 +39,7 @@ CLASS net/minecraft/server/jsonrpc/methods/ServerSettingsService
 		ARG 2 client
 	METHOD setAutosave (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;ZLnet/minecraft/server/jsonrpc/methods/ClientInfo;)Z
 		ARG 0 api
-		ARG 1 save
+		ARG 1 autoSave
 		ARG 2 client
 	METHOD setDifficulty (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Lnet/minecraft/world/Difficulty;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Lnet/minecraft/world/Difficulty;
 		ARG 0 api
