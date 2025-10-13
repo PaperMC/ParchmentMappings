@@ -71,7 +71,7 @@ CLASS net/minecraft/server/level/ServerChunkCache
 	METHOD removeEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD removeTicketWithRadius (Lnet/minecraft/server/level/TicketType;Lnet/minecraft/world/level/ChunkPos;I)V
-		ARG 1 ticket
+		ARG 1 ticketType
 		ARG 2 chunkPos
 		ARG 3 radius
 	METHOD save (Z)V

@@ -13,7 +13,7 @@ CLASS net/minecraft/server/packs/resources/PreparableReloadListener
 			ARG 1 key
 		METHOD set (Lnet/minecraft/server/packs/resources/PreparableReloadListener$StateKey;Ljava/lang/Object;)V
 			ARG 1 key
-			ARG 2 state
+			ARG 2 value
 	CLASS PreparationBarrier
 		METHOD wait (Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 backgroundResult

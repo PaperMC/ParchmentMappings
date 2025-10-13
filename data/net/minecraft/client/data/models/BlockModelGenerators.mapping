@@ -475,7 +475,7 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 	METHOD family (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/BlockModelGenerators$BlockFamilyProvider;
 		ARG 1 block
 	METHOD forEachHorizontalDirection (Ljava/util/function/BiConsumer;)V
-		ARG 0 rotation
+		ARG 0 action
 	METHOD generateSimpleSpecialItemModel (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/client/renderer/special/SpecialModelRenderer$Unbaked;)V
 		ARG 1 block
 		ARG 2 specialModel

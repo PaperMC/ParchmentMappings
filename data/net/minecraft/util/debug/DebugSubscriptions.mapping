@@ -1,6 +1,6 @@
 CLASS net/minecraft/util/debug/DebugSubscriptions
 	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lnet/minecraft/util/debug/DebugSubscription;
-		ARG 0 subscription
+		ARG 0 registry
 	METHOD registerSimple (Ljava/lang/String;)Lnet/minecraft/util/debug/DebugSubscription;
 		ARG 0 name
 	METHOD registerTemporaryValue (Ljava/lang/String;Lnet/minecraft/network/codec/StreamCodec;I)Lnet/minecraft/util/debug/DebugSubscription;

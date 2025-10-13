@@ -12,5 +12,5 @@ CLASS net/minecraft/server/level/progress/LevelLoadListener
 		ARG 2 readyChunks
 		ARG 3 totalChunks
 	METHOD updateFocus (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/ChunkPos;)V
-		ARG 1 level
-		ARG 2 pos
+		ARG 1 dimension
+		ARG 2 chunkPos

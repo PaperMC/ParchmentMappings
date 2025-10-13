@@ -3,5 +3,5 @@ CLASS net/minecraft/server/level/progress/ChunkLoadStatusView
 		ARG 1 x
 		ARG 2 z
 	METHOD moveTo (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/ChunkPos;)V
-		ARG 1 level
-		ARG 2 pos
+		ARG 1 dimension
+		ARG 2 chunkPos

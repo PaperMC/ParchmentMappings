@@ -76,7 +76,7 @@ CLASS net/minecraft/world/level/TicketStorage
 		ARG 3 radius
 	METHOD replaceTicketLevelOfType (ILnet/minecraft/server/level/TicketType;)V
 		ARG 1 level
-		ARG 2 type
+		ARG 2 ticketType
 	METHOD setLoadingChunkUpdatedListener (Lnet/minecraft/world/level/TicketStorage$ChunkUpdated;)V
 		ARG 1 loadingChunkUpdatedListener
 	METHOD setSimulationChunkUpdatedListener (Lnet/minecraft/world/level/TicketStorage$ChunkUpdated;)V

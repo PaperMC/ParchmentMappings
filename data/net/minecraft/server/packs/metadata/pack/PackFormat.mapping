@@ -17,7 +17,7 @@ CLASS net/minecraft/server/packs/metadata/pack/PackFormat
 	CLASS IntermediaryFormat
 		METHOD fromRange (Lnet/minecraft/util/InclusiveRange;I)Lnet/minecraft/server/packs/metadata/pack/PackFormat$IntermediaryFormat;
 			ARG 0 range
-			ARG 1 lastPreMinorVersion
+			ARG 1 versionThreshold
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 		METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;

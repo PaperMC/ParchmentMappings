@@ -7,7 +7,7 @@ CLASS net/minecraft/world/item/component/TypedEntityData
 	METHOD contains (Ljava/lang/String;)Z
 		ARG 1 key
 	METHOD equals (Ljava/lang/Object;)Z
-		ARG 1 obj
+		ARG 1 other
 	METHOD loadInto (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD loadInto (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/core/HolderLookup$Provider;)Z
