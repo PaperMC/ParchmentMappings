@@ -124,11 +124,11 @@ tasks.withType<ValidateData>().configureEach {
     if (validators.removeIf { validator -> validator is MemberExistenceValidator }) {
         validators.add(MemberExistenceValidatorV2())
     }
-    validators.add(DuplicateData.DataValidator())
+    //validators.add(DuplicateData.DataValidator())
 }
 
 tasks.withType<SanitizeData>().configureEach {
-    sanitizers.add(DuplicateData.DataSanitizer())
+    //sanitizers.add(DuplicateData.DataSanitizer())
 }
 
 tasks.withType<GenerateExport>().configureEach {
