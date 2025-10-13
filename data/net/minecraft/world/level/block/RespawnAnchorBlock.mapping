@@ -8,6 +8,8 @@ CLASS net/minecraft/world/level/block/RespawnAnchorBlock
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
+	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+		ARG 1 builder
 	METHOD explode (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 state
 		ARG 2 level
@@ -24,6 +26,8 @@ CLASS net/minecraft/world/level/block/RespawnAnchorBlock
 	METHOD getScaledChargeLevel (Lnet/minecraft/world/level/block/state/BlockState;I)I
 		ARG 0 state
 		ARG 1 scale
+	METHOD hasAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 state
 	METHOD isRespawnFuel (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
 	METHOD isWaterThatWouldFlow (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Level;)Z

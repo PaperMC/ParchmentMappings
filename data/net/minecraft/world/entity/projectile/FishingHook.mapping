@@ -21,13 +21,23 @@ CLASS net/minecraft/world/entity/projectile/FishingHook
 	METHOD lambda$getOpenWaterTypeForArea$0 (Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;)Lnet/minecraft/world/entity/projectile/FishingHook$OpenWaterType;
 		ARG 0 type1
 		ARG 1 type2
+	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
+		COMMENT Called when the arrow hits an entity
+		ARG 1 result
+	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
+		ARG 1 key
 	METHOD pullEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD retrieve (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 stack
 	METHOD setHookedEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 hookedEntity
+	METHOD shouldRenderAtSqrDistance (D)Z
+		COMMENT Checks if the entity is in range to render.
+		ARG 1 distance
 	METHOD shouldStopFishing (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.
 	METHOD updateOwnerInfo (Lnet/minecraft/world/entity/projectile/FishingHook;)V
 		ARG 1 fishingHook

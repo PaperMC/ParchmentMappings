@@ -22,6 +22,9 @@ CLASS net/minecraft/client/gui/screens/recipebook/RecipeBookComponent
 		ARG 4 widthTooNarrow
 	METHOD isCraftingSlot (Lnet/minecraft/world/inventory/Slot;)Z
 		ARG 1 slot
+	METHOD isMouseOver (DD)Z
+		ARG 1 mouseX
+		ARG 3 mouseY
 	METHOD lambda$initVisuals$1 (Lnet/minecraft/client/gui/screens/recipebook/RecipeBookTabButton;)Z
 		ARG 1 button
 	METHOD pirateSpeechForThePeople (Ljava/lang/String;)V

@@ -2,6 +2,13 @@ CLASS net/minecraft/world/entity/ai/behavior/ShowTradesToPlayer
 	METHOD <init> (II)V
 		ARG 1 minDuration
 		ARG 2 maxDuration
+	METHOD canStillUse (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)Z
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 gameTime
+	METHOD checkExtraStartConditions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;)Z
+		ARG 1 level
+		ARG 2 owner
 	METHOD clearHeldItem (Lnet/minecraft/world/entity/npc/Villager;)V
 		ARG 0 villager
 	METHOD displayAsHeldItem (Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/item/ItemStack;)V
@@ -18,5 +25,17 @@ CLASS net/minecraft/world/entity/ai/behavior/ShowTradesToPlayer
 		ARG 1 villager
 	METHOD playerItemStackMatchesCostOfOffer (Lnet/minecraft/world/item/trading/MerchantOffer;)Z
 		ARG 1 offer
+	METHOD start (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 gameTime
+	METHOD stop (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 gameTime
+	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+		ARG 1 level
+		ARG 2 owner
+		ARG 3 gameTime
 	METHOD updateDisplayItems (Lnet/minecraft/world/entity/npc/Villager;)V
 		ARG 1 villager

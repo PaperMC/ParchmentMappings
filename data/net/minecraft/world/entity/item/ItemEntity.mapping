@@ -22,6 +22,8 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 	METHOD getSpin (FF)F
 		ARG 0 age
 		ARG 1 bobOffset
+	METHOD isAttackable ()Z
+		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
 	METHOD lambda$mergeWithNeighbours$0 (Lnet/minecraft/world/entity/item/ItemEntity;)Z
 		ARG 1 neighbour
 	METHOD merge (Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;)V
@@ -39,6 +41,11 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 		ARG 2 amount
 	METHOD mergeWithNeighbours ()V
 		COMMENT Looks for other itemstacks nearby and tries to stack them together
+	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
+		ARG 1 key
+	METHOD playerTouch (Lnet/minecraft/world/entity/player/Player;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 1 entity
 	METHOD setFluidMovement (D)V
 		ARG 1 multiplier
 	METHOD setItem (Lnet/minecraft/world/item/ItemStack;)V
@@ -50,5 +57,7 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 		ARG 1 target
 	METHOD setThrower (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 thrower
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.
 	METHOD tryToMerge (Lnet/minecraft/world/entity/item/ItemEntity;)V
 		ARG 1 itemEntity

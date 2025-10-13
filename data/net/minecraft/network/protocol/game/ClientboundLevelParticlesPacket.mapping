@@ -29,5 +29,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundLevelParticlesPacket
 		COMMENT Gets the z coordinate to spawn the particle.
 	METHOD getZDist ()F
 		COMMENT Gets the z coordinate offset for the particle. The particle may use the offset for particle spread.
+	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
+		COMMENT Passes this Packet on to the packet listener for processing.
+		ARG 1 handler
 	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer

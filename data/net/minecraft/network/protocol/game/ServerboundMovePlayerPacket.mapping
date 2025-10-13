@@ -19,6 +19,9 @@ CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
 		ARG 1 defaultValue
 	METHOD getZ (D)D
 		ARG 1 defaultValue
+	METHOD handle (Lnet/minecraft/network/protocol/game/ServerGamePacketListener;)V
+		COMMENT Passes this Packet on to the packet listener for processing.
+		ARG 1 handler
 	METHOD packFlags (ZZ)I
 		ARG 0 onGround
 		ARG 1 horizontalCollision

@@ -4,6 +4,9 @@ CLASS net/minecraft/server/bossevents/CustomBossEvent
 		ARG 2 name
 	METHOD addOfflinePlayer (Ljava/util/UUID;)V
 		ARG 1 player
+	METHOD addPlayer (Lnet/minecraft/server/level/ServerPlayer;)V
+		COMMENT Makes the boss visible to the given player.
+		ARG 1 player
 	METHOD lambda$getDisplayName$0 (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
 		ARG 1 style
 	METHOD load (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/bossevents/CustomBossEvent$Packed;)Lnet/minecraft/server/bossevents/CustomBossEvent;
@@ -12,6 +15,9 @@ CLASS net/minecraft/server/bossevents/CustomBossEvent
 	METHOD onPlayerConnect (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
 	METHOD onPlayerDisconnect (Lnet/minecraft/server/level/ServerPlayer;)V
+		ARG 1 player
+	METHOD removePlayer (Lnet/minecraft/server/level/ServerPlayer;)V
+		COMMENT Makes the boss non-visible to the given player.
 		ARG 1 player
 	METHOD setMax (I)V
 		ARG 1 max

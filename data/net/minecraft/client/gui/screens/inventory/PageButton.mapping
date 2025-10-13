@@ -5,3 +5,5 @@ CLASS net/minecraft/client/gui/screens/inventory/PageButton
 		ARG 3 isForward
 		ARG 4 onPress
 		ARG 5 playTurnSound
+	METHOD playDownSound (Lnet/minecraft/client/sounds/SoundManager;)V
+		ARG 1 handler

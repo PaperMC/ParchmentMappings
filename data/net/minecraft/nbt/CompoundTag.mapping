@@ -156,6 +156,8 @@ CLASS net/minecraft/nbt/CompoundTag
 		ARG 1 key
 		ARG 2 codec
 		ARG 3 data
+	METHOD write (Ljava/io/DataOutput;)V
+		ARG 1 output
 	METHOD writeNamedTag (Ljava/lang/String;Lnet/minecraft/nbt/Tag;Ljava/io/DataOutput;)V
 		ARG 0 name
 		ARG 1 tag

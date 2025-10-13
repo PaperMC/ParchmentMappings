@@ -41,3 +41,6 @@ CLASS net/minecraft/world/item/MapItem
 		ARG 1 level
 		ARG 2 viewer
 		ARG 3 data
+	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
+		COMMENT Called when this item is used when targeting a Block
+		ARG 1 context

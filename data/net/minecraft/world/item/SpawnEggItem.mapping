@@ -20,3 +20,6 @@ CLASS net/minecraft/world/item/SpawnEggItem
 	METHOD spawnsEntity (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 1 stack
 		ARG 2 entityType
+	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
+		COMMENT Called when this item is used when targeting a Block
+		ARG 1 context

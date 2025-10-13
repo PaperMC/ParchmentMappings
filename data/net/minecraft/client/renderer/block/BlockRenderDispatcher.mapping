@@ -6,6 +6,8 @@ CLASS net/minecraft/client/renderer/block/BlockRenderDispatcher
 		ARG 4 blockColors
 	METHOD getBlockModel (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/client/renderer/block/model/BlockStateModel;
 		ARG 1 state
+	METHOD onResourceManagerReload (Lnet/minecraft/server/packs/resources/ResourceManager;)V
+		ARG 1 resourceManager
 	METHOD renderBatched (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/BlockAndTintGetter;Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;ZLjava/util/List;)V
 		ARG 1 state
 		ARG 2 pos

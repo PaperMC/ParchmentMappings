@@ -15,6 +15,22 @@ CLASS net/minecraft/server/ServerScoreboard
 		ARG 0 context
 	METHOD lambda$static$1 (Lnet/minecraft/world/level/saveddata/SavedData$Context;)Lcom/mojang/serialization/Codec;
 		ARG 0 context
+	METHOD onObjectiveAdded (Lnet/minecraft/world/scores/Objective;)V
+		ARG 1 objective
+	METHOD onObjectiveChanged (Lnet/minecraft/world/scores/Objective;)V
+		ARG 1 objective
+	METHOD onObjectiveRemoved (Lnet/minecraft/world/scores/Objective;)V
+		ARG 1 objective
+	METHOD onTeamAdded (Lnet/minecraft/world/scores/PlayerTeam;)V
+		ARG 1 team
+	METHOD onTeamChanged (Lnet/minecraft/world/scores/PlayerTeam;)V
+		ARG 1 team
+	METHOD onTeamRemoved (Lnet/minecraft/world/scores/PlayerTeam;)V
+		ARG 1 team
+	METHOD removePlayerFromTeam (Ljava/lang/String;Lnet/minecraft/world/scores/PlayerTeam;)V
+		COMMENT Removes the given player from the given PlayerTeam. If the player is not on the team then an IllegalStateException is thrown.
+		ARG 1 playerName
+		ARG 2 team
 	METHOD startTrackingObjective (Lnet/minecraft/world/scores/Objective;)V
 		ARG 1 objective
 	METHOD stopTrackingObjective (Lnet/minecraft/world/scores/Objective;)V

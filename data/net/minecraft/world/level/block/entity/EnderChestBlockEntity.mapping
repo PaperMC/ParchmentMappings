@@ -2,6 +2,8 @@ CLASS net/minecraft/world/level/block/entity/EnderChestBlockEntity
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 blockState
+	METHOD getOpenNess (F)F
+		ARG 1 partialTick
 	METHOD lidAnimateTick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/EnderChestBlockEntity;)V
 		ARG 0 level
 		ARG 1 pos
@@ -9,3 +11,6 @@ CLASS net/minecraft/world/level/block/entity/EnderChestBlockEntity
 		ARG 3 blockEntity
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
+	METHOD triggerEvent (II)Z
+		ARG 1 id
+		ARG 2 type

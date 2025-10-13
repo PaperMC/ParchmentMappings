@@ -7,12 +7,16 @@ CLASS net/minecraft/world/entity/animal/TropicalFish
 		ARG 4 random
 	METHOD getBaseColor (I)Lnet/minecraft/world/item/DyeColor;
 		ARG 0 variantId
+	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
+		ARG 1 damageSource
 	METHOD getPattern (I)Lnet/minecraft/world/entity/animal/TropicalFish$Pattern;
 		ARG 0 variantId
 	METHOD getPatternColor (I)Lnet/minecraft/world/item/DyeColor;
 		ARG 0 variantId
 	METHOD getPredefinedName (I)Ljava/lang/String;
 		ARG 0 variantId
+	METHOD isMaxGroupSizeReached (I)Z
+		ARG 1 size
 	METHOD packVariant (Lnet/minecraft/world/entity/animal/TropicalFish$Pattern;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/item/DyeColor;)I
 		ARG 0 pattern
 		ARG 1 baseColor

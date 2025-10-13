@@ -16,6 +16,12 @@ CLASS net/minecraft/client/renderer/entity/GuardianRenderer
 		ARG 3 attackTime
 		ARG 4 scale
 		ARG 5 animationTime
+	METHOD shouldRender (Lnet/minecraft/world/entity/monster/Guardian;Lnet/minecraft/client/renderer/culling/Frustum;DDD)Z
+		ARG 1 livingEntity
+		ARG 2 frustum
+		ARG 3 camX
+		ARG 5 camY
+		ARG 7 camZ
 	METHOD vertex (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFFIIIFF)V
 		ARG 0 consumer
 		ARG 1 pose

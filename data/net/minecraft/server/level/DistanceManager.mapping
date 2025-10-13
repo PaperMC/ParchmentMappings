@@ -40,6 +40,12 @@ CLASS net/minecraft/server/level/DistanceManager
 	CLASS PlayerTicketTracker
 		METHOD haveTicketFor (I)Z
 			ARG 1 level
+		METHOD onLevelChange (JII)V
+			COMMENT Called after {@link #setLevel(long, int)} puts/removes chunk into/from {@link #chunks}.
+			ARG 1 chunkPos
+			ARG 3 oldLevel
+				COMMENT Previous level of the chunk if it was smaller than {@link #maxDistance}, {@code maxDistance + 2} otherwise.
+			ARG 4 newLevel
 		METHOD onLevelChange (JIZZ)V
 			ARG 1 chunkPos
 			ARG 3 level
@@ -52,6 +58,10 @@ CLASS net/minecraft/server/level/DistanceManager
 			COMMENT Chunks that are at most {@link #maxDistance} chunks away from the closest player.
 		METHOD <init> (Lnet/minecraft/server/level/DistanceManager;I)V
 			ARG 2 maxDistance
+		METHOD getLevel (J)I
+			ARG 1 sectionPos
+		METHOD getLevelFromSource (J)I
+			ARG 1 pos
 		METHOD havePlayer (J)Z
 			ARG 1 chunkPos
 		METHOD onLevelChange (JII)V
@@ -60,3 +70,6 @@ CLASS net/minecraft/server/level/DistanceManager
 			ARG 3 oldLevel
 				COMMENT Previous level of the chunk if it was smaller than {@link #maxDistance}, {@code maxDistance + 2} otherwise.
 			ARG 4 newLevel
+		METHOD setLevel (JI)V
+			ARG 1 sectionPos
+			ARG 3 level

@@ -43,3 +43,6 @@ CLASS net/minecraft/world/item/BlockItem
 		ARG 3 stack
 	METHOD updatePlacementContext (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/item/context/BlockPlaceContext;
 		ARG 1 context
+	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
+		COMMENT Called when this item is used when targeting a Block
+		ARG 1 context

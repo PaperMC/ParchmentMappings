@@ -11,8 +11,13 @@ CLASS net/minecraft/world/entity/npc/Villager
 		ARG 3 villagerType
 	METHOD countFoodPointsInInventory ()I
 		COMMENT @return calculated food value from item stacks in this villager's inventory
+	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 1 damageSource
 	METHOD digestFood (I)V
 		ARG 1 level
+	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
+		ARG 1 damageSource
 	METHOD getPlayerReputation (Lnet/minecraft/world/entity/player/Player;)I
 		ARG 1 player
 	METHOD golemSpawnConditionsMet (J)Z
@@ -53,26 +58,50 @@ CLASS net/minecraft/world/entity/npc/Villager
 		ARG 2 entity
 	METHOD lambda$thunderHit$7 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/Witch;)V
 		ARG 2 witch
+	METHOD makeBrain (Lcom/mojang/serialization/Dynamic;)Lnet/minecraft/world/entity/ai/Brain;
+		ARG 1 dynamic
+	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
+		ARG 1 player
+		ARG 2 hand
+	METHOD onReputationEventFrom (Lnet/minecraft/world/entity/ai/village/ReputationEventType;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 type
+		ARG 2 target
 	METHOD refreshBrain (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD registerBrainGoals (Lnet/minecraft/world/entity/ai/Brain;)V
 		ARG 1 villagerBrain
 	METHOD releasePoi (Lnet/minecraft/world/entity/ai/memory/MemoryModuleType;)V
 		ARG 1 moduleType
+	METHOD removeWhenFarAway (D)Z
+		ARG 1 distanceToClosestPlayer
+	METHOD rewardTradeXp (Lnet/minecraft/world/item/trading/MerchantOffer;)V
+		ARG 1 offer
 	METHOD setGossips (Lnet/minecraft/world/entity/ai/gossip/GossipContainer;)V
 		ARG 1 gossips
+	METHOD setLastHurtByMob (Lnet/minecraft/world/entity/LivingEntity;)V
+		COMMENT Hint to AI tasks that we were attacked by the passed LivingEntity and should retaliate. Is not guaranteed to change our actual active target (for example if we are currently busy attacking someone else)
+		ARG 1 livingEntity
 	METHOD setOffers (Lnet/minecraft/world/item/trading/MerchantOffers;)V
 		ARG 1 offers
+	METHOD setTradingPlayer (Lnet/minecraft/world/entity/player/Player;)V
+		ARG 1 player
 	METHOD setVillagerXp (I)V
 		ARG 1 villagerXp
 	METHOD spawnGolemIfNeeded (Lnet/minecraft/server/level/ServerLevel;JI)V
 		ARG 1 level
 		ARG 2 gameTime
 		ARG 4 minVillagerAmount
+	METHOD startSleeping (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
 	METHOD startTrading (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
 	METHOD tellWitnessesThatIWasMurdered (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 murderer
+	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
+		ARG 1 level
+		ARG 2 lightning
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.
 	METHOD updateSpecialPrices (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
 	METHOD wantsToSpawnGolem (J)Z

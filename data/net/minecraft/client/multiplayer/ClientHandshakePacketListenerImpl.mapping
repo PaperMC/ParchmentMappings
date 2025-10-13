@@ -11,6 +11,14 @@ CLASS net/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl
 		ARG 9 state
 	METHOD authenticateServer (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
 		ARG 1 serverHash
+	METHOD handleCompression (Lnet/minecraft/network/protocol/login/ClientboundLoginCompressionPacket;)V
+		ARG 1 packet
+	METHOD handleCustomQuery (Lnet/minecraft/network/protocol/login/ClientboundCustomQueryPacket;)V
+		ARG 1 packet
+	METHOD handleDisconnect (Lnet/minecraft/network/protocol/login/ClientboundLoginDisconnectPacket;)V
+		ARG 1 packet
+	METHOD handleHello (Lnet/minecraft/network/protocol/login/ClientboundHelloPacket;)V
+		ARG 1 packet
 	METHOD lambda$switchState$0 (Lnet/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl$State;Lnet/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl$State;)Lnet/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl$State;
 		ARG 1 originalState
 	METHOD setEncryption (Lnet/minecraft/network/protocol/login/ServerboundKeyPacket;Ljavax/crypto/Cipher;Ljavax/crypto/Cipher;)V

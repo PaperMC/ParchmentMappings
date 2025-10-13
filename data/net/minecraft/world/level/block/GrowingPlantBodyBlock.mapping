@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/block/GrowingPlantBodyBlock
+	METHOD canBeReplaced (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
+		ARG 1 state
+		ARG 2 useContext
 	METHOD getHeadPos (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)Ljava/util/Optional;
 		ARG 1 level
 		ARG 2 pos

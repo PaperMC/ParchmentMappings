@@ -2,3 +2,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundChangeDifficultyPacket
 	METHOD <init> (Lnet/minecraft/world/Difficulty;Z)V
 		ARG 1 difficulty
 		ARG 2 locked
+	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
+		COMMENT Passes this Packet on to the packet listener for processing.
+		ARG 1 handler

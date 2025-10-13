@@ -1,6 +1,11 @@
 CLASS net/minecraft/world/entity/TamableAnimal
+	METHOD canAttack (Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 target
 	METHOD canTeleportTo (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
+	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
+		COMMENT Called when the mob's health reaches 0.
+		ARG 1 damageSource
 	METHOD isOwnedBy (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD maybeTeleportTo (III)Z

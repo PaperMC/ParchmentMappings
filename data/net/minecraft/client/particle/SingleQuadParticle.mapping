@@ -32,6 +32,8 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 		ARG 6 partialTick
 	METHOD getQuadSize (F)F
 		ARG 1 scaleFactor
+	METHOD scale (F)Lnet/minecraft/client/particle/Particle;
+		ARG 1 scale
 	METHOD setAlpha (F)V
 		ARG 1 alpha
 	METHOD setColor (FFF)V

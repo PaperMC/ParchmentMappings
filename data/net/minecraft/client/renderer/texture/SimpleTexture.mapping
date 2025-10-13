@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/texture/SimpleTexture
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 location

@@ -12,6 +12,8 @@ CLASS net/minecraft/server/level/ChunkHolder
 		ARG 4 lightEngine
 		ARG 5 onLevelChange
 		ARG 6 playerProvider
+	METHOD addSaveDependency (Ljava/util/concurrent/CompletableFuture;)V
+		ARG 1 dependency
 	METHOD addSendDependency (Ljava/util/concurrent/CompletableFuture;)V
 		ARG 1 dependency
 	METHOD blockChanged (Lnet/minecraft/core/BlockPos;)Z

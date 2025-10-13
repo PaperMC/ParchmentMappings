@@ -9,3 +9,5 @@ CLASS net/minecraft/world/phys/shapes/ArrayVoxelShape
 		ARG 2 xs
 		ARG 3 ys
 		ARG 4 zs
+	METHOD getCoords (Lnet/minecraft/core/Direction$Axis;)Lit/unimi/dsi/fastutil/doubles/DoubleList;
+		ARG 1 axis

@@ -10,6 +10,13 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 3 direction
 	METHOD chestCanConnectTo (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	METHOD combine (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/level/block/DoubleBlockCombiner$NeighborCombineResult;
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 override
+	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+		ARG 1 builder
 	METHOD getBlockType (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/DoubleBlockCombiner$BlockType;
 		ARG 0 state
 	METHOD getChestType (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/level/block/state/properties/ChestType;
@@ -28,6 +35,21 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 override
+	METHOD getFluidState (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/FluidState;
+		ARG 1 state
+	METHOD getMenuProvider (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/MenuProvider;
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+	METHOD getShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+		ARG 1 state
+		ARG 2 level
+		ARG 3 pos
+		ARG 4 context
+	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 context
+	METHOD hasAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 state
 	METHOD isBlockedChestByBlock (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 level
 		ARG 1 pos
@@ -39,8 +61,14 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 1 pos
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD mirror (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 state
+		ARG 2 mirror
 	METHOD opennessCombiner (Lnet/minecraft/world/level/block/entity/LidBlockEntity;)Lnet/minecraft/world/level/block/DoubleBlockCombiner$Combiner;
 		ARG 0 lid
+	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 state
+		ARG 2 rotation
 	CLASS 3
 		METHOD lambda$acceptDouble$0 (Lnet/minecraft/world/level/block/entity/ChestBlockEntity;Lnet/minecraft/world/level/block/entity/ChestBlockEntity;F)F
 			ARG 2 partialTick

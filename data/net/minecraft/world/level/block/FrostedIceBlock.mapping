@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/block/FrostedIceBlock
+	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+		ARG 1 builder
 	METHOD fewerNeigboursThan (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;I)Z
 		ARG 1 level
 		ARG 2 pos

@@ -7,3 +7,7 @@ CLASS net/minecraft/world/level/block/state/properties/IntegerProperty
 		ARG 0 name
 		ARG 1 min
 		ARG 2 max
+	METHOD getName (Ljava/lang/Integer;)Ljava/lang/String;
+		ARG 1 value
+	METHOD getValue (Ljava/lang/String;)Ljava/util/Optional;
+		ARG 1 value

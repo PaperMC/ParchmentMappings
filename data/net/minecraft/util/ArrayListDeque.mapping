@@ -4,6 +4,8 @@ CLASS net/minecraft/util/ArrayListDeque
 	METHOD add (ILjava/lang/Object;)V
 		ARG 1 index
 		ARG 2 element
+	METHOD addLast (Ljava/lang/Object;)V
+		ARG 1 element
 	METHOD copyCount ([Ljava/lang/Object;I)V
 		ARG 1 output
 		ARG 2 count

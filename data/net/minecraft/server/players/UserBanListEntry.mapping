@@ -9,3 +9,5 @@ CLASS net/minecraft/server/players/UserBanListEntry
 		ARG 3 source
 		ARG 4 expires
 		ARG 5 reason
+	METHOD serialize (Lcom/google/gson/JsonObject;)V
+		ARG 1 data

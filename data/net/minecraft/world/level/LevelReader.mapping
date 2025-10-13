@@ -8,6 +8,9 @@ CLASS net/minecraft/world/level/LevelReader
 		ARG 1 pos
 	METHOD getBlockStatesIfLoaded (Lnet/minecraft/world/phys/AABB;)Ljava/util/stream/Stream;
 		ARG 1 aabb
+	METHOD getBlockTint (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/ColorResolver;)I
+		ARG 1 pos
+		ARG 2 colorResolver
 	METHOD getChunk (II)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 chunkX
 		ARG 2 chunkZ
@@ -22,6 +25,9 @@ CLASS net/minecraft/world/level/LevelReader
 		ARG 4 requireChunk
 	METHOD getChunk (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 pos
+	METHOD getChunkForCollisions (II)Lnet/minecraft/world/level/BlockGetter;
+		ARG 1 chunkX
+		ARG 2 chunkZ
 	METHOD getHeight (Lnet/minecraft/world/level/levelgen/Heightmap$Types;II)I
 		ARG 1 heightmapType
 		ARG 2 x

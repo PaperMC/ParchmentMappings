@@ -11,6 +11,8 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 4 pathType
 	METHOD doesBlockHavePartialCollision (Lnet/minecraft/world/level/pathfinder/PathType;)Z
 		ARG 0 pathType
+	METHOD done ()V
+		COMMENT This method is called when all nodes have been processed and Path is created.
 	METHOD findAcceptedNode (IIIIDLnet/minecraft/core/Direction;Lnet/minecraft/world/level/pathfinder/PathType;)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 1 x
 		ARG 2 y

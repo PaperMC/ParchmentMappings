@@ -32,12 +32,25 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 1 level
 		ARG 2 hitResult
 		ARG 3 stack
+	METHOD isAttackable ()Z
+		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
 	METHOD isCritArrow ()Z
 		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.
 	METHOD isNoPhysics ()Z
 		COMMENT Whether the arrow can noPhysics
 	METHOD lambda$hitBlockEnchantmentEffects$0 (Lnet/minecraft/world/item/Item;)V
 		ARG 1 item
+	METHOD lerpMotion (Lnet/minecraft/world/phys/Vec3;)V
+		COMMENT Updates the entity motion clientside, called by packets from the server
+	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 type
+		ARG 2 movement
+	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
+		COMMENT Called when the arrow hits an entity
+		ARG 1 result
+	METHOD playerTouch (Lnet/minecraft/world/entity/player/Player;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 1 entity
 	METHOD setBaseDamage (D)V
 		ARG 1 baseDamage
 	METHOD setBaseDamageFromMob (F)V
@@ -53,14 +66,28 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 	METHOD setNoPhysics (Z)V
 		COMMENT Sets if this arrow can noPhysics
 		ARG 1 noPhysics
+	METHOD setOwner (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity
 	METHOD setPickupItemStack (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 pickupItemStack
 	METHOD setPierceLevel (B)V
 		ARG 1 pierceLevel
 	METHOD setSoundEvent (Lnet/minecraft/sounds/SoundEvent;)V
 		ARG 1 soundEvent
+	METHOD shoot (DDDFF)V
+		COMMENT Similar to shootFromRotation, it points the throwable entity to an x, y, z direction.
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 velocity
+		ARG 8 inaccuracy
+	METHOD shouldRenderAtSqrDistance (D)Z
+		COMMENT Checks if the entity is in range to render.
+		ARG 1 distance
 	METHOD stepMoveAndHit (Lnet/minecraft/world/phys/BlockHitResult;)V
 		ARG 1 hitResult
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.
 	METHOD tryPickup (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
 	CLASS Pickup

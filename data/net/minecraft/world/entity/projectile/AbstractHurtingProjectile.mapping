@@ -22,3 +22,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractHurtingProjectile
 		ARG 2 accelerationPower
 	METHOD getInertia ()F
 		COMMENT Return the motion factor for this projectile. The factor is multiplied by the original motion.
+	METHOD shouldRenderAtSqrDistance (D)Z
+		COMMENT Checks if the entity is in range to render.
+		ARG 1 distance
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.

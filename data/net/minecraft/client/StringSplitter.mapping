@@ -110,6 +110,11 @@ CLASS net/minecraft/client/StringSplitter
 		METHOD <init> (Ljava/lang/String;Lnet/minecraft/network/chat/Style;)V
 			ARG 1 contents
 			ARG 2 style
+		METHOD visit (Lnet/minecraft/network/chat/FormattedText$ContentConsumer;)Ljava/util/Optional;
+			ARG 1 acceptor
+		METHOD visit (Lnet/minecraft/network/chat/FormattedText$StyledContentConsumer;Lnet/minecraft/network/chat/Style;)Ljava/util/Optional;
+			ARG 1 acceptor
+			ARG 2 style
 	CLASS WidthProvider
 		METHOD getWidth (ILnet/minecraft/network/chat/Style;)F
 			ARG 1 codePoint

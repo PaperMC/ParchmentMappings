@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/model/WardenModel
+	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
+		ARG 1 root
 	METHOD animateHeadLookTarget (FF)V
 		ARG 1 yaw
 		ARG 2 pitch

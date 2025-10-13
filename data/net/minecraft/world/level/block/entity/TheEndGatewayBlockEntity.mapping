@@ -41,6 +41,8 @@ CLASS net/minecraft/world/level/block/entity/TheEndGatewayBlockEntity
 	METHOD setExitPosition (Lnet/minecraft/core/BlockPos;Z)V
 		ARG 1 exitPortal
 		ARG 2 exactTeleport
+	METHOD shouldRenderFace (Lnet/minecraft/core/Direction;)Z
+		ARG 1 face
 	METHOD spawnGatewayPortal (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/feature/configurations/EndGatewayConfiguration;)V
 		ARG 0 level
 		ARG 1 pos
@@ -50,3 +52,6 @@ CLASS net/minecraft/world/level/block/entity/TheEndGatewayBlockEntity
 		ARG 1 pos
 		ARG 2 state
 		ARG 3 blockEntity
+	METHOD triggerEvent (II)Z
+		ARG 1 id
+		ARG 2 type

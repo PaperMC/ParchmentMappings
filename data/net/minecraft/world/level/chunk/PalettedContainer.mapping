@@ -22,11 +22,21 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 		ARG 0 valueCodec
 		ARG 1 strategy
 		ARG 2 defaultValue
+	METHOD count (Lnet/minecraft/world/level/chunk/PalettedContainer$CountConsumer;)V
+		COMMENT Counts the number of instances of each state in the container.
+		COMMENT The provided consumer is invoked for each state with the number of instances.
+		ARG 1 countConsumer
 	METHOD createOrReuseData (Lnet/minecraft/world/level/chunk/PalettedContainer$Data;I)Lnet/minecraft/world/level/chunk/PalettedContainer$Data;
 		ARG 1 data
 		ARG 2 bits
 	METHOD get (I)Ljava/lang/Object;
 		ARG 1 index
+	METHOD get (III)Ljava/lang/Object;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD getAll (Ljava/util/function/Consumer;)V
+		ARG 1 consumer
 	METHOD getAndSet (IIILjava/lang/Object;)Ljava/lang/Object;
 		ARG 1 x
 		ARG 2 y
@@ -54,6 +64,8 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 		ARG 1 id
 	METHOD lambda$getAll$5 (Ljava/util/function/Consumer;Lnet/minecraft/world/level/chunk/Palette;I)V
 		ARG 2 id
+	METHOD maybeHas (Ljava/util/function/Predicate;)Z
+		ARG 1 predicate
 	METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD reencodeContents (Lnet/minecraft/util/BitStorage;Lnet/minecraft/world/level/chunk/Palette;Lnet/minecraft/world/level/chunk/Palette;)[I
@@ -71,6 +83,8 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 	METHOD unpack (Lnet/minecraft/world/level/chunk/Strategy;Lnet/minecraft/world/level/chunk/PalettedContainerRO$PackedData;)Lcom/mojang/serialization/DataResult;
 		ARG 0 strategy
 		ARG 1 packedData
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer
 	CLASS Data
 		METHOD copyFrom (Lnet/minecraft/world/level/chunk/Palette;Lnet/minecraft/util/BitStorage;)V
 			ARG 1 palette

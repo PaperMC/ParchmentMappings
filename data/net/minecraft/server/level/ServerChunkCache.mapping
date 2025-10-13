@@ -31,6 +31,8 @@ CLASS net/minecraft/server/level/ServerChunkCache
 	METHOD chunkAbsent (Lnet/minecraft/server/level/ChunkHolder;I)Z
 		ARG 1 chunkHolder
 		ARG 2 status
+	METHOD gatherStats ()Ljava/lang/String;
+		COMMENT Converts the instance data to a readable string.
 	METHOD getChunkDebugData (Lnet/minecraft/world/level/ChunkPos;)Ljava/lang/String;
 		ARG 1 chunkPos
 	METHOD getChunkFuture (IILnet/minecraft/world/level/chunk/status/ChunkStatus;Z)Ljava/util/concurrent/CompletableFuture;
@@ -43,11 +45,18 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 2 z
 		ARG 3 chunkStatus
 		ARG 4 requireChunk
+	METHOD getChunkNow (II)Lnet/minecraft/world/level/chunk/LevelChunk;
+		ARG 1 chunkX
+		ARG 2 chunkZ
 	METHOD getFullChunk (JLjava/util/function/Consumer;)V
 		ARG 1 chunkPos
 		ARG 3 fullChunkGetter
 	METHOD getVisibleChunkIfPresent (J)Lnet/minecraft/server/level/ChunkHolder;
 		ARG 1 chunkPos
+	METHOD hasChunk (II)Z
+		COMMENT Checks to see if a chunk exists at x, z
+		ARG 1 x
+		ARG 2 z
 	METHOD isPositionTicking (J)Z
 		ARG 1 chunkPos
 	METHOD lambda$getChunkFuture$2 (Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletionStage;
@@ -56,6 +65,9 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 1 player
 	METHOD onChunkReadyToSend (Lnet/minecraft/server/level/ChunkHolder;)V
 		ARG 1 chunkHolder
+	METHOD onLightUpdate (Lnet/minecraft/world/level/LightLayer;Lnet/minecraft/core/SectionPos;)V
+		ARG 1 lightLayer
+		ARG 2 pos
 	METHOD removeEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD removeTicketWithRadius (Lnet/minecraft/server/level/TicketType;Lnet/minecraft/world/level/ChunkPos;I)V
@@ -89,3 +101,9 @@ CLASS net/minecraft/server/level/ServerChunkCache
 	CLASS MainThreadExecutor
 		METHOD <init> (Lnet/minecraft/server/level/ServerChunkCache;Lnet/minecraft/world/level/Level;)V
 			ARG 2 level
+		METHOD doRunTask (Ljava/lang/Runnable;)V
+			ARG 1 task
+		METHOD shouldRun (Ljava/lang/Runnable;)Z
+			ARG 1 runnable
+		METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;
+			ARG 1 runnable

@@ -18,6 +18,17 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 2 recipeInput
 		ARG 3 items
 		ARG 4 maxStackSize
+	METHOD canPlaceItem (ILnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 index
+		ARG 2 stack
+	METHOD canPlaceItemThroughFace (ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)Z
+		ARG 1 index
+		ARG 2 stack
+		ARG 3 direction
+	METHOD canTakeItemThroughFace (ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)Z
+		ARG 1 index
+		ARG 2 stack
+		ARG 3 direction
 	METHOD createExperience (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;IF)V
 		ARG 0 level
 		ARG 1 popVec
@@ -29,6 +40,8 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 	METHOD getRecipesToAwardAndPopExperience (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/Vec3;)Ljava/util/List;
 		ARG 1 level
 		ARG 2 popVec
+	METHOD getSlotsForFace (Lnet/minecraft/core/Direction;)[I
+		ARG 1 side
 	METHOD getTotalCookTime (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;)I
 		ARG 0 level
 		ARG 1 furnace
@@ -37,3 +50,6 @@ CLASS net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity
 		ARG 1 pos
 		ARG 2 state
 		ARG 3 furnace
+	METHOD setItem (ILnet/minecraft/world/item/ItemStack;)V
+		ARG 1 index
+		ARG 2 stack

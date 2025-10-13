@@ -139,8 +139,12 @@ CLASS net/minecraft/client/Minecraft
 		ARG 1 guiScreen
 	METHOD setScreenAndShow (Lnet/minecraft/client/gui/screens/Screen;)V
 		ARG 1 screen
+	METHOD setWindowActive (Z)V
+		ARG 1 focused
 	METHOD shouldEntityAppearGlowing (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
+	METHOD shouldRun (Ljava/lang/Runnable;)Z
+		ARG 1 runnable
 	METHOD showOnlyReducedInfo ()Z
 		COMMENT Whether to use reduced debug info
 	METHOD startUseItem ()V
@@ -159,6 +163,8 @@ CLASS net/minecraft/client/Minecraft
 		ARG 1 reportEnvironment
 	METHOD useAmbientOcclusion ()Z
 		COMMENT Returns if ambient occlusion is enabled
+	METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;
+		ARG 1 runnable
 	CLASS ChatStatus
 		METHOD <init> (Ljava/lang/String;ILnet/minecraft/network/chat/Component;)V
 			ARG 3 message

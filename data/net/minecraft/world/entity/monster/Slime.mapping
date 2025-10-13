@@ -9,21 +9,51 @@ CLASS net/minecraft/world/entity/monster/Slime
 		ARG 1 livingEntity
 	METHOD doPlayJumpSound ()Z
 		COMMENT Returns {@code true} if the slime makes a sound when it jumps (based upon the slime's size)
+	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
+		ARG 1 damageSource
 	METHOD getJumpDelay ()I
 		COMMENT Gets the amount of time the slime needs to wait between jumps.
+	METHOD getMaxHeadXRot ()I
+		COMMENT The speed it takes to move the entity's head rotation through the setLookAt method.
 	METHOD getSize ()I
 		COMMENT Returns the size of the slime.
+	METHOD getSoundVolume ()F
+		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD isDealsDamage ()Z
 		COMMENT Indicates whether the slime is able to damage the player (based upon the slime's size)
+	METHOD jumpFromGround ()V
+		COMMENT Causes this entity to do an upwards motion (jumping).
+	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
+		ARG 1 key
+	METHOD playerTouch (Lnet/minecraft/world/entity/player/Player;)V
+		COMMENT Called by a player entity when they collide with an entity
+		ARG 1 entity
+	METHOD push (Lnet/minecraft/world/entity/Entity;)V
+		COMMENT Applies a velocity to the entities, to push them away from each other.
+		ARG 1 entity
 	METHOD setSize (IZ)V
 		ARG 1 size
 		ARG 2 resetHealth
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.
 	CLASS SlimeFloatGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
 	CLASS SlimeAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
+		METHOD canContinueToUse ()Z
+			COMMENT Returns whether an in-progress Goal should continue executing
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD start ()V
+			COMMENT Execute a one shot task or start executing a continuous task
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
 	CLASS SlimeMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
@@ -35,6 +65,14 @@ CLASS net/minecraft/world/entity/monster/Slime
 	CLASS SlimeKeepOnJumpingGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
 	CLASS SlimeRandomDirectionGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started

@@ -6,6 +6,8 @@ CLASS net/minecraft/client/multiplayer/ClientSuggestionProvider
 	METHOD completeCustomSuggestions (ILcom/mojang/brigadier/suggestion/Suggestions;)V
 		ARG 1 transaction
 		ARG 2 result
+	METHOD hasPermission (I)Z
+		ARG 1 level
 	METHOD lambda$suggestRegistryElements$0 (Lnet/minecraft/commands/SharedSuggestionProvider$ElementSuggestionType;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Lnet/minecraft/core/Registry;)Ljava/util/concurrent/CompletableFuture;
 		ARG 3 registry
 	METHOD modifyCustomCompletions (Lnet/minecraft/network/protocol/game/ClientboundCustomChatCompletionsPacket$Action;Ljava/util/List;)V

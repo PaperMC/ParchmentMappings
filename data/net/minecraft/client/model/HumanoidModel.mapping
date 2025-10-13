@@ -9,6 +9,8 @@ CLASS net/minecraft/client/model/HumanoidModel
 		COMMENT The Biped's Right Arm
 	FIELD rightLeg Lnet/minecraft/client/model/geom/ModelPart;
 		COMMENT The Biped's Right Leg
+	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
+		ARG 1 root
 	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;Ljava/util/function/Function;)V
 		ARG 1 root
 		ARG 2 renderType

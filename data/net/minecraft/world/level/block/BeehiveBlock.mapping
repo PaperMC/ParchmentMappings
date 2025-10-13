@@ -2,6 +2,8 @@ CLASS net/minecraft/world/level/block/BeehiveBlock
 	METHOD angerNearbyBees (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 level
 		ARG 2 pos
+	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+		ARG 1 builder
 	METHOD dropHoneycomb (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 level
 		ARG 1 stack
@@ -9,9 +11,20 @@ CLASS net/minecraft/world/level/block/BeehiveBlock
 		ARG 3 blockEntity
 		ARG 4 entity
 		ARG 5 pos
+	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 context
+	METHOD hasAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 state
 	METHOD hiveContainsBees (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 level
 		ARG 2 pos
+	METHOD playerDestroy (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 level
+		ARG 2 player
+		ARG 3 pos
+		ARG 4 state
+		ARG 5 blockEntity
+		ARG 6 stack
 	METHOD releaseBeesAndResetHoneyLevel (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/block/entity/BeehiveBlockEntity$BeeReleaseStatus;)V
 		ARG 1 level
 		ARG 2 state

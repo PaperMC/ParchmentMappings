@@ -54,6 +54,9 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 slot
 		ARG 2 mouseX
 		ARG 4 mouseY
+	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
+		ARG 2 dragX
+		ARG 4 dragY
 	METHOD onMouseClickAction (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/inventory/ClickType;)V
 		ARG 1 slot
 		ARG 2 type

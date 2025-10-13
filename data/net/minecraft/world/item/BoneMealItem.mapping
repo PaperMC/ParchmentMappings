@@ -14,3 +14,6 @@ CLASS net/minecraft/world/item/BoneMealItem
 		ARG 3 clickedSide
 	METHOD lambda$growWaterPlant$1 (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 0 holder
+	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
+		COMMENT Called when this item is used when targeting a Block
+		ARG 1 context

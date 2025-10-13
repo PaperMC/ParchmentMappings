@@ -13,7 +13,11 @@ CLASS net/minecraft/world/entity/projectile/Arrow
 		ARG 4 firedFromWeapon
 	METHOD addEffect (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effectInstance
+	METHOD doPostHurtEffects (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 target
 	METHOD makeParticle (I)V
 		ARG 1 particleAmount
 	METHOD setPotionContents (Lnet/minecraft/world/item/alchemy/PotionContents;)V
 		ARG 1 potionContents
+	METHOD tick ()V
+		COMMENT Called to update the entity's position/logic.

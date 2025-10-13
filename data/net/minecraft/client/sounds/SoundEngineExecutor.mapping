@@ -5,8 +5,24 @@ CLASS net/minecraft/client/sounds/SoundEngineExecutor
 	METHOD createThread ()Ljava/lang/Thread;
 		COMMENT Creates and starts a new thread for executing sound-related tasks.
 		COMMENT @return The created thread
+	METHOD getRunningThread ()Ljava/lang/Thread;
+		COMMENT {@return The currently running thread}
 	METHOD run ()V
 		COMMENT The main run loop of the SoundEngineExecutor.
 		COMMENT It continuously blocks until the shutdown state is {@code true}.
+	METHOD shouldRun (Ljava/lang/Runnable;)Z
+		COMMENT Determines whether the given runnable task should be run or not.
+		COMMENT It depends on the shutdown state of the SoundEngineExecutor.
+		COMMENT @return {@code true} if the task should run, {@code false} otherwise
+		ARG 1 runnable
+			COMMENT The runnable task
 	METHOD shutDown ()V
 		COMMENT Shutdowns the SoundEngineExecutor by interrupting the thread, joining the thread, dropping all pending tasks, and recreating the thread.
+	METHOD waitForTasks ()V
+		COMMENT Waits for all tasks to complete.
+		COMMENT This method uses LockSupport.park() to wait indefinitely.
+	METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;
+		COMMENT Wraps the given runnable task. In this case, the original runnable is returned as-is.
+		COMMENT @return The wrapped runnable task
+		ARG 1 runnable
+			COMMENT The original runnable task

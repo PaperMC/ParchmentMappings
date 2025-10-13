@@ -29,3 +29,16 @@ CLASS net/minecraft/world/inventory/ItemCombinerMenu
 	METHOD onTake (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 player
 		ARG 2 stack
+	METHOD quickMoveStack (Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;
+		COMMENT Handle when the stack in {@code slotIndex} is shift-clicked. Normally this moves the stack between the player inventory and the other inventory(s).
+		ARG 1 player
+		ARG 2 slotIndex
+	METHOD removed (Lnet/minecraft/world/entity/player/Player;)V
+		COMMENT Called when the container is closed.
+		ARG 1 player
+	METHOD slotsChanged (Lnet/minecraft/world/Container;)V
+		COMMENT Callback for when the crafting matrix is changed.
+		ARG 1 inventory
+	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
+		COMMENT Determines whether supplied player can use this container
+		ARG 1 player

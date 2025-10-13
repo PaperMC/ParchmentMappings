@@ -40,8 +40,13 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD findSlotMatchingItem (Lnet/minecraft/world/item/ItemStack;)I
 		COMMENT Finds the stack or an equivalent one in the main inventory
 		ARG 1 stack
+	METHOD getContainerSize ()I
+		COMMENT Returns the number of slots in the inventory.
 	METHOD getFreeSlot ()I
 		COMMENT Returns the first item stack that is empty.
+	METHOD getItem (I)Lnet/minecraft/world/item/ItemStack;
+		COMMENT Returns the stack in the given slot.
+		ARG 1 index
 	METHOD getSelectionSize ()I
 		COMMENT Get the size of the player hotbar inventory
 	METHOD getSlotWithRemainingSpace (Lnet/minecraft/world/item/ItemStack;)I
@@ -66,16 +71,31 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD removeFromSelected (Z)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 removeStack
 			COMMENT Whether to remove the entire stack of items. If {@code false}, removes a single item.
+	METHOD removeItem (II)Lnet/minecraft/world/item/ItemStack;
+		COMMENT Removes up to a specified number of items from an inventory slot and returns them in a new stack.
+		ARG 1 index
+		ARG 2 count
 	METHOD removeItem (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
+	METHOD removeItemNoUpdate (I)Lnet/minecraft/world/item/ItemStack;
+		COMMENT Removes a stack from the given slot and returns it.
+		ARG 1 index
 	METHOD replaceWith (Lnet/minecraft/world/entity/player/Inventory;)V
 		COMMENT Copy the ItemStack contents from another Inventory instance
 		ARG 1 playerInventory
 	METHOD save (Lnet/minecraft/world/level/storage/ValueOutput$TypedOutputList;)V
 		ARG 1 output
+	METHOD setChanged ()V
+		COMMENT For block entities, ensures the chunk containing the block entity is saved to disk later - the game won't think it hasn't changed and skip it.
+	METHOD setItem (ILnet/minecraft/world/item/ItemStack;)V
+		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		ARG 1 index
+		ARG 2 stack
 	METHOD setSelectedItem (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 	METHOD setSelectedSlot (I)V
 		ARG 1 slot
+	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
+		ARG 1 player
 	METHOD tick ()V
 		COMMENT Ticks every item in inventory. Used for animations. Is called on client and server.

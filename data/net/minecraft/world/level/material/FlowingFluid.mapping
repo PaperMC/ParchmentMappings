@@ -43,8 +43,14 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		ARG 3 state
 		ARG 4 spreadPos
 		ARG 5 spreadState
+	METHOD createFluidStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+		ARG 1 builder
 	METHOD getDropOff (Lnet/minecraft/world/level/LevelReader;)I
 		ARG 1 level
+	METHOD getFlow (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/FluidState;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 fluidState
 	METHOD getFlowing (IZ)Lnet/minecraft/world/level/material/FluidState;
 		ARG 1 level
 		ARG 2 falling

@@ -6,6 +6,14 @@ CLASS net/minecraft/client/sounds/SoundManager
 		ARG 2 musicManager
 	METHOD addListener (Lnet/minecraft/client/sounds/SoundEventListener;)V
 		ARG 1 listener
+	METHOD apply (Lnet/minecraft/client/sounds/SoundManager$Preparations;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V
+		COMMENT Applies the prepared sound event registrations and caches to the sound manager.
+		ARG 1 object
+			COMMENT The prepared sound event registrations and caches
+		ARG 2 resourceManager
+			COMMENT The resource manager
+		ARG 3 profiler
+			COMMENT The profiler
 	METHOD getAvailableSoundDevices ()Ljava/util/List;
 		COMMENT Retrieves a list of available sound devices.
 	METHOD getAvailableSounds ()Ljava/util/Collection;
@@ -29,6 +37,12 @@ CLASS net/minecraft/client/sounds/SoundManager
 			COMMENT The sound instance to play
 		ARG 2 delay
 			COMMENT The delay in ticks before playing the sound
+	METHOD prepare (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)Lnet/minecraft/client/sounds/SoundManager$Preparations;
+		COMMENT Performs any reloading that can be done off-thread, such as file IO
+		ARG 1 resourceManager
+			COMMENT The resource manager in-charge of loading sound files
+		ARG 2 profiler
+			COMMENT The sound profiler
 	METHOD queueTickingSound (Lnet/minecraft/client/resources/sounds/TickableSoundInstance;)V
 		COMMENT Queues a ticking sound to be played.
 		ARG 1 tickableSound

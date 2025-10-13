@@ -9,6 +9,13 @@ CLASS net/minecraft/client/renderer/debug/OctreeDebugRenderer
 		ARG 11 isLeafNode
 		ARG 12 recursionDepth
 		ARG 13 isNearby
+	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;Lnet/minecraft/client/renderer/culling/Frustum;)V
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 camX
+		ARG 5 camY
+		ARG 7 camZ
+		ARG 10 frustum
 	METHOD renderNode (Lnet/minecraft/client/renderer/Octree$Node;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDIZLorg/apache/commons/lang3/mutable/MutableInt;Z)V
 		ARG 1 node
 		ARG 2 poseStack

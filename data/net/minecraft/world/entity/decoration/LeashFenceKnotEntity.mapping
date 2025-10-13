@@ -5,3 +5,15 @@ CLASS net/minecraft/world/entity/decoration/LeashFenceKnotEntity
 	METHOD getOrCreateKnot (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/decoration/LeashFenceKnotEntity;
 		ARG 0 level
 		ARG 1 pos
+	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 partialTick
+	METHOD interact (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
+		ARG 1 player
+		ARG 2 hand
+	METHOD recalculateBoundingBox ()V
+		COMMENT Updates the entity bounding box based on current facing
+	METHOD shouldRenderAtSqrDistance (D)Z
+		COMMENT Checks if the entity is in range to render.
+		ARG 1 distance
+	METHOD survives ()Z
+		COMMENT Checks to make sure the {@code HangingEntity} can be placed there.

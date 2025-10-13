@@ -10,6 +10,24 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 8 isDebug
 		ARG 9 biomeZoomSeed
 		ARG 11 seaLevel
+	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
+		ARG 1 options
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xSpeed
+		ARG 10 ySpeed
+		ARG 12 zSpeed
+	METHOD addAlwaysVisibleParticle (Lnet/minecraft/core/particles/ParticleOptions;ZDDDDDD)V
+		ARG 1 options
+		ARG 2 overrideLimiter
+			COMMENT if {@code true}, the particle will be created regardless of its distance from the camera and the {@linkplain #calculateParticleLevel(boolean) calculated particle level}
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+		ARG 9 xSpeed
+		ARG 11 ySpeed
+		ARG 13 zSpeed
 	METHOD addBreakingBlockEffect (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)V
 		ARG 1 pos
 		ARG 2 direction
@@ -17,6 +35,14 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 entity
 	METHOD addMapData (Ljava/util/Map;)V
 		ARG 1 map
+	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
+		ARG 1 options
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xSpeed
+		ARG 10 ySpeed
+		ARG 12 zSpeed
 	METHOD animateTick (III)V
 		ARG 1 posX
 		ARG 2 posY
@@ -26,6 +52,10 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 2 colorResolver
 	METHOD calculateParticleLevel (Z)Lnet/minecraft/server/level/ParticleStatus;
 		ARG 1 decreased
+	METHOD destroyBlockProgress (ILnet/minecraft/core/BlockPos;I)V
+		ARG 1 breakerId
+		ARG 2 pos
+		ARG 3 progress
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 reason
 	METHOD doAddParticle (Lnet/minecraft/core/particles/ParticleOptions;ZZDDDDDD)V
@@ -48,8 +78,21 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 5 random
 		ARG 6 block
 		ARG 7 pos
+	METHOD fillReportDetails (Lnet/minecraft/CrashReport;)Lnet/minecraft/CrashReportCategory;
+		COMMENT Adds some basic stats of the world to the given crash report.
+		ARG 1 report
+	METHOD getBlockTint (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/ColorResolver;)I
+		ARG 1 pos
+		ARG 2 colorResolver
+	METHOD getChunkSource ()Lnet/minecraft/client/multiplayer/ClientChunkCache;
+		COMMENT Gets the world's chunk provider
 	METHOD getCloudColor (F)I
 		ARG 1 partialTick
+	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
+		COMMENT Returns the Entity with the given ID, or {@code null} if it doesn't exist in this Level.
+		ARG 1 id
+	METHOD getLevelData ()Lnet/minecraft/client/multiplayer/ClientLevel$ClientLevelData;
+		COMMENT Returns the world's LevelData object
 	METHOD getSkyColor (Lnet/minecraft/world/phys/Vec3;F)I
 		ARG 1 cameraPosition
 		ARG 2 partialTick
@@ -57,8 +100,15 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 partialTick
 	METHOD getStarBrightness (F)F
 		ARG 1 partialTick
+	METHOD globalLevelEvent (ILnet/minecraft/core/BlockPos;I)V
+		ARG 1 id
+		ARG 2 pos
+		ARG 3 data
 	METHOD handleBlockChangedAck (I)V
 		ARG 1 sequence
+	METHOD hasChunk (II)Z
+		ARG 1 chunkX
+		ARG 2 chunkZ
 	METHOD isTickingEntity (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD lambda$new$0 (Lnet/minecraft/core/BlockPos;)I
@@ -76,6 +126,15 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD overrideMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
 		ARG 1 mapId
 		ARG 2 mapData
+	METHOD playLocalSound (DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFZ)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 sound
+		ARG 8 source
+		ARG 9 volume
+		ARG 10 pitch
+		ARG 11 distanceDelay
 	METHOD playSound (DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFZJ)V
 		ARG 1 x
 		ARG 3 y
@@ -91,6 +150,18 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD removeEntity (ILnet/minecraft/world/entity/Entity$RemovalReason;)V
 		ARG 1 entityId
 		ARG 2 reason
+	METHOD sendBlockUpdated (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;I)V
+		COMMENT Flags are as in setBlock
+		ARG 1 pos
+		ARG 2 oldState
+		ARG 3 newState
+		ARG 4 flags
+	METHOD sendPacketToServer (Lnet/minecraft/network/protocol/Packet;)V
+		ARG 1 packet
+	METHOD setBlocksDirty (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V
+		ARG 1 pos
+		ARG 2 oldState
+		ARG 3 newState
 	METHOD setSectionDirtyWithNeighbors (III)V
 		ARG 1 sectionX
 		ARG 2 sectionY
@@ -108,6 +179,8 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 1 pos
 		ARG 2 state
 		ARG 3 flags
+	METHOD setSkyFlashTime (I)V
+		ARG 1 timeFlash
 	METHOD setTimeFromServer (JJZ)V
 		ARG 1 gameTime
 		ARG 3 dayTime
@@ -153,8 +226,16 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 			ARG 1 difficulty
 			ARG 2 hardcore
 			ARG 3 isFlat
+		METHOD getDayTime ()J
+			COMMENT Get current world time
 		METHOD getHorizonHeight (Lnet/minecraft/world/level/LevelHeightAccessor;)D
 			ARG 1 level
+		METHOD isHardcore ()Z
+			COMMENT Returns {@code true} if hardcore mode is enabled, otherwise {@code false}.
+		METHOD isRaining ()Z
+			COMMENT Returns {@code true} if it is raining, {@code false} otherwise.
+		METHOD isThundering ()Z
+			COMMENT Returns {@code true} if it is thundering, {@code false} otherwise.
 		METHOD setDayTime (J)V
 			ARG 1 dayTime
 		METHOD setDifficulty (Lnet/minecraft/world/Difficulty;)V
@@ -163,3 +244,6 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 			ARG 1 difficultyLocked
 		METHOD setGameTime (J)V
 			ARG 1 gameTime
+		METHOD setRaining (Z)V
+			COMMENT Sets whether it is raining or not.
+			ARG 1 isRaining

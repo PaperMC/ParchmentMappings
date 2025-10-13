@@ -37,3 +37,10 @@ CLASS net/minecraft/client/renderer/debug/BreezeDebugRenderer
 		ARG 9 pos
 	METHOD lambda$render$3 (Lnet/minecraft/client/multiplayer/ClientLevel;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/world/entity/Entity;Lnet/minecraft/util/debug/DebugBreezeInfo;)V
 		ARG 10 breeze
+	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDLnet/minecraft/util/debug/DebugValueAccess;Lnet/minecraft/client/renderer/culling/Frustum;)V
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 xOffset
+		ARG 5 yOffset
+		ARG 7 zOffset
+		ARG 9 valueAccess

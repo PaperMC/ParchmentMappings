@@ -6,6 +6,15 @@ CLASS net/minecraft/client/sounds/LoopingAudioStream
 	METHOD close ()V
 		COMMENT Closes the current {@linkplain AudioStream} and {@linkplain BufferedInputStream}.
 		COMMENT @throws IOException if an I/O error occurs while closing the {@linkplain AudioStream} or {@linkplain BufferedInputStream}
+	METHOD getFormat ()Ljavax/sound/sampled/AudioFormat;
+		COMMENT @return the {@linkplain AudioFormat} of the stream
+	METHOD read (I)Ljava/nio/ByteBuffer;
+		COMMENT Reads audio data from the stream and returns a byte buffer containing at most the specified number of bytes.
+		COMMENT The method reads audio frames from the stream and adds them to the output buffer until the buffer contains at least the specified number of bytes or the end of the stream is reached.
+		COMMENT @return a byte buffer containing at most the specified number of bytes to read
+		COMMENT @throws IOException if an I/O error occurs while reading the audio data
+		ARG 1 size
+			COMMENT the maximum number of bytes to read
 	CLASS NoCloseBuffer
 		COMMENT A {@linkplain FilterInputStream} that does not close the underlying {@linkplain InputStream}.
 		METHOD <init> (Ljava/io/InputStream;)V
