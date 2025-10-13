@@ -1,4 +1,4 @@
-package org.parchmentmc.util
+package org.parchmentmc.validation
 
 import org.parchmentmc.compass.data.validation.impl.MemberExistenceValidator
 import org.parchmentmc.feather.mapping.MappingDataContainer
