@@ -10,6 +10,3 @@ CLASS net/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket
 	METHOD create (Lnet/minecraft/world/level/block/entity/BlockEntity;Ljava/util/function/BiFunction;)Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;
 		ARG 0 blockEntity
 		ARG 1 dataGetter
-	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the packet listener for processing.
-		ARG 1 handler

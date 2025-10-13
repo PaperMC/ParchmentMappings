@@ -10,9 +10,6 @@ CLASS net/minecraft/client/gui/screens/inventory/StonecutterScreen
 		ARG 3 title
 	METHOD containerChanged ()V
 		COMMENT Called every time this screen's container is changed (is marked as dirty).
-	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
-		ARG 2 dragX
-		ARG 4 dragY
 	METHOD renderButtons (Lnet/minecraft/client/gui/GuiGraphics;IIIII)V
 		ARG 1 guiGraphics
 		ARG 2 mouseX

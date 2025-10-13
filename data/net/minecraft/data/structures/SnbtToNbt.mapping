@@ -7,8 +7,6 @@ CLASS net/minecraft/data/structures/SnbtToNbt
 	METHOD applyFilters (Ljava/lang/String;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 fileName
 		ARG 2 tag
-	METHOD getName ()Ljava/lang/String;
-		COMMENT Gets a name for this provider, to use in logging.
 	METHOD getName (Ljava/nio/file/Path;Ljava/nio/file/Path;)Ljava/lang/String;
 		COMMENT Gets the name of the given SNBT file, based on its path and the input directory. The result does not have the ".snbt" extension.
 		ARG 1 inputFolder

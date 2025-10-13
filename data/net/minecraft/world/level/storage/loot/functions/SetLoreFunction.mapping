@@ -6,9 +6,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetLoreFunction
 		ARG 2 lore
 		ARG 3 mode
 		ARG 4 resolutionContext
-	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 stack
-		ARG 2 context
 	METHOD updateLore (Lnet/minecraft/world/item/component/ItemLore;Lnet/minecraft/world/level/storage/loot/LootContext;)Ljava/util/List;
 		ARG 1 itemLore
 		ARG 2 context

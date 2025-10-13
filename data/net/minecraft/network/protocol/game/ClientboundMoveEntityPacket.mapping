@@ -11,9 +11,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundMoveEntityPacket
 		ARG 9 hasPos
 	METHOD getEntity (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
-	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the packet listener for processing.
-		ARG 1 handler
 	CLASS Pos
 		METHOD <init> (ISSSZ)V
 			ARG 1 entityId

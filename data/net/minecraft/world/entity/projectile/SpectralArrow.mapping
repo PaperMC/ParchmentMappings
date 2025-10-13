@@ -11,7 +11,3 @@ CLASS net/minecraft/world/entity/projectile/SpectralArrow
 		ARG 2 owner
 		ARG 3 pickupItemStack
 		ARG 4 firedFromWeapon
-	METHOD doPostHurtEffects (Lnet/minecraft/world/entity/LivingEntity;)V
-		ARG 1 target
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

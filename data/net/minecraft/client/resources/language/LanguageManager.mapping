@@ -8,7 +8,5 @@ CLASS net/minecraft/client/resources/language/LanguageManager
 		ARG 1 code
 	METHOD lambda$extractLanguages$0 (Ljava/util/Map;Lnet/minecraft/server/packs/PackResources;)V
 		ARG 1 resource
-	METHOD onResourceManagerReload (Lnet/minecraft/server/packs/resources/ResourceManager;)V
-		ARG 1 resourceManager
 	METHOD setSelected (Ljava/lang/String;)V
 		ARG 1 code

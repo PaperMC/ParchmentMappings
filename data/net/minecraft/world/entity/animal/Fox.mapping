@@ -5,8 +5,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 		ARG 1 entity
 	METHOD canEat (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
-	METHOD canHoldItem (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 1 stack
 	METHOD checkFoxSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 entityType
 		ARG 1 level
@@ -21,18 +19,9 @@ CLASS net/minecraft/world/entity/animal/Fox
 		ARG 1 flagId
 	METHOD getHeadRollAngle (F)F
 		ARG 1 partialTick
-	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
-		ARG 1 damageSource
-	METHOD isFood (Lnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
-		ARG 1 stack
-	METHOD isImmobile ()Z
-		COMMENT Dead and sleeping entities cannot move
 	METHOD isPathClear (Lnet/minecraft/world/entity/animal/Fox;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 fox
 		ARG 1 livingEntity
-	METHOD isSleeping ()Z
-		COMMENT Returns whether player is sleeping or not
 	METHOD lambda$registerGoals$4 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 entity
 		ARG 1 level
@@ -56,11 +45,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 		ARG 0 entity
 	METHOD lambda$static$3 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
-	METHOD onOffspringSpawnedFromEgg (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Mob;)V
-		ARG 1 player
-		ARG 2 child
-	METHOD playAmbientSound ()V
-		COMMENT Plays living's sound at its position
 	METHOD setDefending (Z)V
 		ARG 1 defending
 	METHOD setFaceplanted (Z)V
@@ -78,15 +62,10 @@ CLASS net/minecraft/world/entity/animal/Fox
 		ARG 1 sitting
 	METHOD setSleeping (Z)V
 		ARG 1 sleeping
-	METHOD setTarget (Lnet/minecraft/world/entity/LivingEntity;)V
-		COMMENT Sets the active target the Task system uses for tracking
-		ARG 1 target
 	METHOD setVariant (Lnet/minecraft/world/entity/animal/Fox$Variant;)V
 		ARG 1 variant
 	METHOD spitOutItem (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	METHOD trusts (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	CLASS Variant
@@ -97,154 +76,46 @@ CLASS net/minecraft/world/entity/animal/Fox
 			ARG 0 biome
 		METHOD byId (I)Lnet/minecraft/world/entity/animal/Fox$Variant;
 			ARG 0 id
-	CLASS SleepGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
 	CLASS FoxBreedGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;D)V
 			ARG 2 speedModifier
-		METHOD breed ()V
-			COMMENT Spawns a baby animal of the same type.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS FoxFloatGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS FoxGroupData
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox$Variant;)V
 			ARG 1 variant
 	CLASS FoxPanicGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;D)V
 			ARG 2 speedModifier
-	CLASS FaceplantGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
-	CLASS FoxPounceGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
-	CLASS StalkPreyGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
-	CLASS FoxLookControl
-		METHOD tick ()V
-			COMMENT Updates look
 	CLASS SeekShelterGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;D)V
 			ARG 2 speedModifier
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS FoxEatBerriesGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;DII)V
 			ARG 2 speedModifier
 			ARG 4 searchRange
 			ARG 5 verticalSearchRange
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD isValidTarget (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
-			COMMENT Return {@code true} to set given position as destination
-			ARG 1 level
-			ARG 2 pos
 		METHOD pickGlowBerry (Lnet/minecraft/world/level/block/state/BlockState;)V
 			ARG 1 state
 		METHOD pickSweetBerries (Lnet/minecraft/world/level/block/state/BlockState;)V
 			ARG 1 state
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS FoxMeleeAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;DZ)V
 			ARG 2 speedModifier
 			ARG 4 followingTargetEvenIfNotSeen
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS PerchAndSearchGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS FoxFollowParentGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;D)V
 			ARG 1 fox
 			ARG 2 speedModifier
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS FoxLookAtPlayerGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;Lnet/minecraft/world/entity/Mob;Ljava/lang/Class;F)V
 			ARG 2 mob
 			ARG 3 lookAtType
 			ARG 4 lookDistance
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	CLASS FoxSearchForItemsGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS DefendTrustedTargetGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;Ljava/lang/Class;ZZLnet/minecraft/world/entity/ai/targeting/TargetingConditions$Selector;)V
 			ARG 2 targetType
 			ARG 3 mustSee
 			ARG 4 mustReach
 			ARG 5 selector
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS FoxStrollThroughVillageGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;II)V
 			ARG 3 interval
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task

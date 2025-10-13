@@ -20,6 +20,3 @@ CLASS net/minecraft/world/item/AxeItem
 		ARG 3 state
 		ARG 4 sound
 		ARG 5 levelEvent
-	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
-		COMMENT Called when this item is used when targeting a Block
-		ARG 1 context

@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/level/pathfinder/FlyNodeEvaluator
-	METHOD done ()V
-		COMMENT This method is called when all nodes have been processed and Path is created.
 	METHOD findAcceptedNode (III)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 1 x
 		ARG 2 y

@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/entity/boss/enderdragon/phases/DragonSittingScanningPhase
-	METHOD begin ()V
-		COMMENT Called when this phase is set to active

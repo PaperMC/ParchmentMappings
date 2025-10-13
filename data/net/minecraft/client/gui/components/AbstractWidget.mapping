@@ -10,14 +10,8 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 3 y
 	METHOD defaultButtonNarrationText (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
 		ARG 1 narrationElementOutput
-	METHOD isMouseOver (DD)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
 	METHOD isValidClickButton (Lnet/minecraft/client/input/MouseButtonInfo;)Z
 		ARG 1 buttonInfo
-	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
-		ARG 2 dragX
-		ARG 4 dragY
 	METHOD onClick (Lnet/minecraft/client/input/MouseButtonEvent;Z)V
 		ARG 1 event
 		ARG 2 doubleClick
@@ -62,8 +56,6 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 4 partialTick
 	METHOD setAlpha (F)V
 		ARG 1 alpha
-	METHOD setFocused (Z)V
-		ARG 1 focused
 	METHOD setHeight (I)V
 		ARG 1 height
 	METHOD setMessage (Lnet/minecraft/network/chat/Component;)V
@@ -84,10 +76,6 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 1 tooltipDelay
 	METHOD setWidth (I)V
 		ARG 1 width
-	METHOD setX (I)V
-		ARG 1 x
-	METHOD setY (I)V
-		ARG 1 y
 	METHOD updateWidgetNarration (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
 		ARG 1 narrationElementOutput
 	METHOD wrapDefaultNarrationMessage (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;

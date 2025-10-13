@@ -5,8 +5,6 @@ CLASS net/minecraft/nbt/LongTag
 		ARG 1 other
 	METHOD valueOf (J)Lnet/minecraft/nbt/LongTag;
 		ARG 0 value
-	METHOD write (Ljava/io/DataOutput;)V
-		ARG 1 output
 	CLASS 1
 		METHOD readAccounted (Ljava/io/DataInput;Lnet/minecraft/nbt/NbtAccounter;)J
 			ARG 0 input

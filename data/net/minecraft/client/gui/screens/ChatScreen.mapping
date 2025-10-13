@@ -17,9 +17,6 @@ CLASS net/minecraft/client/gui/screens/ChatScreen
 	METHOD handleChatInput (Ljava/lang/String;Z)V
 		ARG 1 message
 		ARG 2 addToRecentChat
-	METHOD insertText (Ljava/lang/String;Z)V
-		ARG 1 text
-		ARG 2 overwrite
 	METHOD moveInHistory (I)V
 		COMMENT Input is relative and is applied directly to the sentHistoryCursor so -1 is the previous message, 1 is the next message from the current cursor position.
 		ARG 1 msgPos
@@ -27,10 +24,6 @@ CLASS net/minecraft/client/gui/screens/ChatScreen
 		ARG 1 message
 	METHOD onEdited (Ljava/lang/String;)V
 		ARG 1 value
-	METHOD resize (Lnet/minecraft/client/Minecraft;II)V
-		ARG 1 minecraft
-		ARG 2 width
-		ARG 3 height
 	CLASS ChatConstructor
 		METHOD create (Ljava/lang/String;Z)Lnet/minecraft/client/gui/screens/ChatScreen;
 			ARG 1 text

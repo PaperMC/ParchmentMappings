@@ -15,9 +15,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/EnchantWithLevelsFunction
 		ARG 0 function
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
-	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 stack
-		ARG 2 context
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)V
 			ARG 1 levels

@@ -3,13 +3,8 @@ CLASS net/minecraft/nbt/ListTag
 		ARG 1 list
 	METHOD addAndUnwrap (Lnet/minecraft/nbt/Tag;)V
 		ARG 1 tag
-	METHOD addTag (ILnet/minecraft/nbt/Tag;)Z
-		ARG 1 index
-		ARG 2 tag
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
-	METHOD get (I)Lnet/minecraft/nbt/Tag;
-		ARG 1 index
 	METHOD getCompound (I)Ljava/util/Optional;
 		ARG 1 index
 	METHOD getCompoundOrEmpty (I)Lnet/minecraft/nbt/CompoundTag;
@@ -53,11 +48,6 @@ CLASS net/minecraft/nbt/ListTag
 		ARG 2 defaultValue
 	METHOD isWrapper (Lnet/minecraft/nbt/CompoundTag;)Z
 		ARG 0 tag
-	METHOD remove (I)Lnet/minecraft/nbt/Tag;
-		ARG 1 index
-	METHOD setTag (ILnet/minecraft/nbt/Tag;)Z
-		ARG 1 index
-		ARG 2 tag
 	METHOD tryUnwrap (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/Tag;
 		ARG 0 tag
 	METHOD wrapElement (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/CompoundTag;
@@ -65,8 +55,6 @@ CLASS net/minecraft/nbt/ListTag
 	METHOD wrapIfNeeded (BLnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/Tag;
 		ARG 0 elementType
 		ARG 1 tag
-	METHOD write (Ljava/io/DataOutput;)V
-		ARG 1 output
 	CLASS 1
 		METHOD loadList (Ljava/io/DataInput;Lnet/minecraft/nbt/NbtAccounter;)Lnet/minecraft/nbt/ListTag;
 			ARG 0 input

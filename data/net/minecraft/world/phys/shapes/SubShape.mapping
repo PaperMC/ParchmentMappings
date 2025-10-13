@@ -10,11 +10,3 @@ CLASS net/minecraft/world/phys/shapes/SubShape
 	METHOD clampToShape (Lnet/minecraft/core/Direction$Axis;I)I
 		ARG 1 axis
 		ARG 2 value
-	METHOD firstFull (Lnet/minecraft/core/Direction$Axis;)I
-		ARG 1 axis
-	METHOD isFull (III)Z
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-	METHOD lastFull (Lnet/minecraft/core/Direction$Axis;)I
-		ARG 1 axis

@@ -10,6 +10,3 @@ CLASS net/minecraft/stats/ServerStatsCounter
 		ARG 2 json
 	METHOD sendStats (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
-	METHOD setValue (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/stats/Stat;I)V
-		ARG 1 player
-		ARG 2 stat

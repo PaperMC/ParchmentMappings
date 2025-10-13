@@ -10,18 +10,5 @@ CLASS net/minecraft/client/sounds/WeighedSoundEvents
 		COMMENT Adds a sound event to the collection.
 		ARG 1 accessor
 			COMMENT The weighted accessor for the sound event to be added
-	METHOD getSound (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/client/resources/sounds/Sound;
-		COMMENT Retrieves a randomly selected sound from the sound events based on their weights.
-		COMMENT The selection is performed using the provided random source.
-		COMMENT @return A randomly selected sound from the sound events
 	METHOD getSubtitle ()Lnet/minecraft/network/chat/Component;
 		COMMENT @return The subtitle component, or {@code null} if no subtitle is provided
-	METHOD getWeight ()I
-		COMMENT Retrieves the total weight of the sound events.
-		COMMENT The weight is calculated as the sum of the weights of all the individual sound events.
-		COMMENT @return The total weight of the sound events
-	METHOD preloadIfRequired (Lnet/minecraft/client/sounds/SoundEngine;)V
-		COMMENT Preloads the sound events into the sound engine if required.
-		COMMENT This method is called to preload the sounds associated with the sound events into the sound engine, ensuring they are ready for playback.
-		ARG 1 engine
-			COMMENT The sound engine used for sound preloading

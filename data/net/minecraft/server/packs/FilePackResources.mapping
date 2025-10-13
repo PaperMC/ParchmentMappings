@@ -8,8 +8,6 @@ CLASS net/minecraft/server/packs/FilePackResources
 	METHOD extractNamespace (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 directory
 		ARG 1 name
-	METHOD getNamespaces (Lnet/minecraft/server/packs/PackType;)Ljava/util/Set;
-		ARG 1 type
 	METHOD getPathFromLocation (Lnet/minecraft/server/packs/PackType;Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/String;
 		ARG 0 packType
 		ARG 1 location

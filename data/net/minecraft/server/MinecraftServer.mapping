@@ -28,8 +28,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 player
 	METHOD createTextFilterForPlayer (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/server/network/TextFilter;
 		ARG 1 player
-	METHOD doRunTask (Lnet/minecraft/server/TickTask;)V
-		ARG 1 task
 	METHOD dumpClasspath (Ljava/nio/file/Path;)V
 		ARG 1 path
 	METHOD dumpGameRules (Ljava/nio/file/Path;)V
@@ -62,10 +60,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 dimension
 	METHOD getLocalIp ()Ljava/lang/String;
 		COMMENT "getServerIp" is already taken, but both return the hostname.
-	METHOD getPlayerCount ()I
-		COMMENT Returns the number of players currently on the server.
-	METHOD getPlayerNames ()[Ljava/lang/String;
-		COMMENT Returns an array of the usernames of all the connected players.
 	METHOD getPort ()I
 		COMMENT Gets port.
 	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)I
@@ -75,8 +69,6 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;Z)Lnet/minecraft/world/level/DataPackConfig;
 		ARG 0 packRepository
 		ARG 1 safeMode
-	METHOD getServerVersion ()Ljava/lang/String;
-		COMMENT Returns the server's Minecraft version as string.
 	METHOD getWorldPath (Lnet/minecraft/world/level/storage/LevelResource;)Ljava/nio/file/Path;
 		ARG 1 levelResource
 	METHOD halt (Z)V
@@ -213,8 +205,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 usingWhitelist
 	METHOD setupDebugLevel (Lnet/minecraft/world/level/storage/WorldData;)V
 		ARG 1 worldData
-	METHOD shouldRun (Lnet/minecraft/server/TickTask;)Z
-		ARG 1 runnable
 	METHOD spin (Ljava/util/function/Function;)Lnet/minecraft/server/MinecraftServer;
 		ARG 0 threadFunction
 	METHOD startRecordingMetrics (Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V
@@ -235,8 +225,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 hasTimeLeft
 	METHOD waitUntilNextTick ()V
 		COMMENT Runs all pending tasks and waits for more tasks until haveTime is reached.
-	METHOD wrapRunnable (Ljava/lang/Runnable;)Lnet/minecraft/server/TickTask;
-		ARG 1 runnable
 	CLASS TimeProfiler
 		METHOD <init> (JI)V
 			ARG 1 startNanos

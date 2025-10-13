@@ -1,3 +1,0 @@
-CLASS net/minecraft/util/thread/ReentrantBlockableEventLoop
-	METHOD doRunTask (Ljava/lang/Runnable;)V
-		ARG 1 task

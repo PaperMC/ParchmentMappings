@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/animal/Salmon
-	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
-		ARG 1 damageSource
 	METHOD setVariant (Lnet/minecraft/world/entity/animal/Salmon$Variant;)V
 		ARG 1 variant
 	CLASS Variant

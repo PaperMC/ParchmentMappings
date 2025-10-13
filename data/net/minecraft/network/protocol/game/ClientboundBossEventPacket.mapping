@@ -22,9 +22,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundBossEventPacket
 		ARG 0 darkenScreen
 		ARG 1 playMusic
 		ARG 2 createWorldFog
-	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the packet listener for processing.
-		ARG 1 handler
 	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	CLASS Handler

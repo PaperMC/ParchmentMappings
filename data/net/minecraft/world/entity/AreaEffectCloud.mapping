@@ -6,14 +6,10 @@ CLASS net/minecraft/world/entity/AreaEffectCloud
 		ARG 6 z
 	METHOD addEffect (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effectInstance
-	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
-		ARG 1 pose
 	METHOD isWaiting ()Z
 		COMMENT Returns {@code true} if the cloud is waiting. While waiting, the radius is ignored and the cloud shows fewer particles in its area.
 	METHOD lambda$serverTick$0 (Ljava/util/Map$Entry;)Z
 		ARG 1 victim
-	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
-		ARG 1 key
 	METHOD serverTick (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD setCustomParticle (Lnet/minecraft/core/particles/ParticleOptions;)V
@@ -39,5 +35,3 @@ CLASS net/minecraft/world/entity/AreaEffectCloud
 	METHOD setWaiting (Z)V
 		COMMENT Sets if the cloud is waiting. While waiting, the radius is ignored and the cloud shows fewer particles in its area.
 		ARG 1 waiting
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

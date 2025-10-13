@@ -6,8 +6,6 @@ CLASS net/minecraft/client/particle/DripParticle
 		ARG 6 z
 		ARG 8 type
 		ARG 9 sprite
-	METHOD getLightColor (F)I
-		ARG 1 partialTick
 	CLASS FallingParticle
 		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;ILnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 			ARG 1 level
@@ -17,12 +15,6 @@ CLASS net/minecraft/client/particle/DripParticle
 			ARG 8 type
 			ARG 9 lifeTime
 			ARG 10 sprite
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
 	CLASS DripHangParticle
 		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 			ARG 1 level

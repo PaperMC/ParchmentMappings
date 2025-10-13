@@ -1,10 +1,6 @@
 CLASS net/minecraft/core/BlockPos
 	FIELD ZERO Lnet/minecraft/core/BlockPos;
 		COMMENT An immutable BlockPos with zero as all coordinates.
-	METHOD <init> (III)V
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
 	METHOD <init> (Lnet/minecraft/core/Vec3i;)V
 		ARG 1 vector
 	METHOD asLong (III)J
@@ -74,8 +70,6 @@ CLASS net/minecraft/core/BlockPos
 		ARG 4 z
 	METHOD containing (Lnet/minecraft/core/Position;)Lnet/minecraft/core/BlockPos;
 		ARG 0 position
-	METHOD cross (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/BlockPos;
-		ARG 1 vector
 	METHOD findClosestMatch (Lnet/minecraft/core/BlockPos;IILjava/util/function/Predicate;)Ljava/util/Optional;
 		ARG 0 pos
 		ARG 1 width
@@ -132,12 +126,8 @@ CLASS net/minecraft/core/BlockPos
 		ARG 1 amount
 		ARG 2 center
 		ARG 3 radius
-	METHOD relative (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
-		ARG 1 direction
 	METHOD rotate (Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/core/BlockPos;
 		ARG 1 rotation
-	METHOD south (I)Lnet/minecraft/core/BlockPos;
-		ARG 1 distance
 	METHOD spiralAround (Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Ljava/lang/Iterable;
 		ARG 0 center
 		ARG 1 size
@@ -145,8 +135,6 @@ CLASS net/minecraft/core/BlockPos
 		ARG 3 expansionDirection
 	METHOD squareOutSouthEast (Lnet/minecraft/core/BlockPos;)Ljava/util/stream/Stream;
 		ARG 0 pos
-	METHOD subtract (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/BlockPos;
-		ARG 1 vector
 	METHOD withinManhattan (Lnet/minecraft/core/BlockPos;III)Ljava/lang/Iterable;
 		ARG 0 pos
 		ARG 1 xSize

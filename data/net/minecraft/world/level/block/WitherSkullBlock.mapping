@@ -18,9 +18,3 @@ CLASS net/minecraft/world/level/block/WitherSkullBlock
 		ARG 0 block
 	METHOD lambda$getOrCreateWitherFull$1 (Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
 		ARG 0 block
-	METHOD setPlacedBy (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 state
-		ARG 4 placer
-		ARG 5 stack

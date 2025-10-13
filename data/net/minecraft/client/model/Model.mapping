@@ -17,7 +17,3 @@ CLASS net/minecraft/client/model/Model
 		ARG 1 location
 	METHOD setupAnim (Ljava/lang/Object;)V
 		ARG 1 state
-	CLASS Simple
-		METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;Ljava/util/function/Function;)V
-			ARG 1 root
-			ARG 2 renderType

@@ -7,8 +7,6 @@ CLASS net/minecraft/world/level/block/GrowingPlantHeadBlock
 		ARG 5 growPerTickProbability
 	METHOD canGrowInto (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
-	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
-		ARG 1 builder
 	METHOD getBlocksToGrowWhenBonemealed (Lnet/minecraft/util/RandomSource;)I
 		ARG 1 random
 	METHOD getGrowIntoState (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/block/state/BlockState;
@@ -17,8 +15,6 @@ CLASS net/minecraft/world/level/block/GrowingPlantHeadBlock
 	METHOD getMaxAgeState (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 	METHOD isMaxAge (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		ARG 1 state
-	METHOD isRandomlyTicking (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
 	METHOD updateBodyAfterConvertedFromHead (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 head

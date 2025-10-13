@@ -19,75 +19,30 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 5 recipeBook
 		ARG 6 lastSentInput
 		ARG 7 wasSprinting
-	METHOD closeContainer ()V
-		COMMENT Closes the container the player currently has open.
-	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
-		COMMENT Called when the entity is dealt a critical hit.
-		ARG 1 target
-	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
-		ARG 1 message
-		ARG 2 overlay
 	METHOD distanceToUnitSquare (Lnet/minecraft/world/phys/Vec2;)F
 		ARG 0 moveVector
 	METHOD drop (Z)Z
 		ARG 1 fullStack
-	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 partialTick
-	METHOD getViewXRot (F)F
-		COMMENT Gets the current pitch of the entity.
-		ARG 1 partialTick
-	METHOD getViewYRot (F)F
-		COMMENT Gets the current yaw of the entity
-		ARG 1 partialTick
 	METHOD handlePortalTransitionEffect (Z)V
 		ARG 1 inPortal
-	METHOD heal (F)V
-		COMMENT Heal living entity (param: amount of half-hearts)
-		ARG 1 amount
 	METHOD hurtTo (F)V
 		COMMENT Updates health locally.
 		ARG 1 health
-	METHOD isLocalPlayer ()Z
-		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
 	METHOD isSprintingPossible (Z)Z
 		ARG 1 ignoreWater
 	METHOD lambda$updateAutoJump$0 (Lnet/minecraft/world/phys/shapes/VoxelShape;)Ljava/util/stream/Stream;
 		ARG 0 voxelShape
-	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 target
 	METHOD modifyInput (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec2;
 		ARG 1 moveVector
 	METHOD modifyInputSpeedForSquareMovement (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec2;
 		ARG 0 moveVector
-	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 type
-		ARG 2 movement
 	METHOD moveTowardsClosestSpace (DD)V
 		ARG 1 x
 		ARG 3 z
 	METHOD onGameModeChanged (Lnet/minecraft/world/level/GameType;)V
 		ARG 1 gameMode
-	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
-		ARG 1 key
-	METHOD onUpdateAbilities ()V
-		COMMENT Sends the player's abilities to the server (if there is one).
-	METHOD openCommandBlock (Lnet/minecraft/world/level/block/entity/CommandBlockEntity;)V
-		ARG 1 commandBlock
-	METHOD openItemGui (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
-		ARG 1 stack
-		ARG 2 hand
-	METHOD openMinecartCommandBlock (Lnet/minecraft/world/level/BaseCommandBlock;)V
-		ARG 1 commandBlock
-	METHOD openStructureBlock (Lnet/minecraft/world/level/block/entity/StructureBlockEntity;)V
-		ARG 1 structure
-	METHOD playSound (Lnet/minecraft/sounds/SoundEvent;FF)V
-		ARG 1 sound
-		ARG 2 volume
-		ARG 3 pitch
 	METHOD removeRecipeHighlight (Lnet/minecraft/world/item/crafting/display/RecipeDisplayId;)V
 		ARG 1 recipe
-	METHOD rideTick ()V
-		COMMENT Handles updating while riding another entity
 	METHOD sendPosition ()V
 		COMMENT Called every tick when the player is on foot. Performs all the things that normally happen during movement.
 	METHOD setDoLimitedCrafting (Z)V
@@ -101,14 +56,8 @@ CLASS net/minecraft/client/player/LocalPlayer
 		ARG 1 permissionLevel
 	METHOD setShowDeathScreen (Z)V
 		ARG 1 show
-	METHOD startUsingItem (Lnet/minecraft/world/InteractionHand;)V
-		ARG 1 hand
 	METHOD suffocatesAt (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
-	METHOD swing (Lnet/minecraft/world/InteractionHand;)V
-		ARG 1 hand
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	METHOD updateAutoJump (FF)V
 		ARG 1 movementX
 		ARG 2 movementZ

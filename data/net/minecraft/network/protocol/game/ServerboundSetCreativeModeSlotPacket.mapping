@@ -2,6 +2,3 @@ CLASS net/minecraft/network/protocol/game/ServerboundSetCreativeModeSlotPacket
 	METHOD <init> (ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slotNum
 		ARG 2 itemStack
-	METHOD handle (Lnet/minecraft/network/protocol/game/ServerGamePacketListener;)V
-		COMMENT Passes this Packet on to the packet listener for processing.
-		ARG 1 handler

@@ -16,8 +16,6 @@ CLASS net/minecraft/server/level/ServerLevel
 	METHOD addEntity (Lnet/minecraft/world/entity/Entity;)Z
 		COMMENT Called when an entity is spawned in the world. This includes players.
 		ARG 1 entity
-	METHOD addFreshEntity (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
 	METHOD addLegacyChunkEntities (Ljava/util/stream/Stream;)V
 		ARG 1 entities
 	METHOD addNewPlayer (Lnet/minecraft/server/level/ServerPlayer;)V
@@ -39,23 +37,10 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 chunkPos
 	METHOD areEntitiesLoaded (J)Z
 		ARG 1 chunkPos
-	METHOD blockEvent (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;II)V
-		ARG 1 pos
-		ARG 2 block
-		ARG 3 eventId
-		ARG 4 eventParam
-	METHOD broadcastEntityEvent (Lnet/minecraft/world/entity/Entity;B)V
-		COMMENT Sends a {@link net.minecraft.network.protocol.game.ClientboundEntityEventPacket} to all tracked players of that entity.
-		ARG 1 entity
-		ARG 2 state
 	METHOD canSpawnEntitiesInChunk (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 1 chunkPos
 	METHOD clearBlockEvents (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
 		ARG 1 boundingBox
-	METHOD destroyBlockProgress (ILnet/minecraft/core/BlockPos;I)V
-		ARG 1 breakerId
-		ARG 2 pos
-		ARG 3 progress
 	METHOD doBlockEvent (Lnet/minecraft/world/level/BlockEventData;)Z
 		ARG 1 event
 	METHOD dumpBlockEntityTickers (Ljava/io/Writer;)V
@@ -80,8 +65,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 4 skipKnownStructures
 	METHOD getAllEntities ()Ljava/lang/Iterable;
 		COMMENT Gets an unmodifiable iterator of all loaded entities in the world.
-	METHOD getChunkSource ()Lnet/minecraft/server/level/ServerChunkCache;
-		COMMENT Gets the world's chunk provider
 	METHOD getDestroyType (Lnet/minecraft/world/level/GameRules$Key;)Lnet/minecraft/world/level/Explosion$BlockInteraction;
 		ARG 1 decayGameRule
 	METHOD getEntities (Lnet/minecraft/world/level/entity/EntityTypeTest;Ljava/util/function/Predicate;)Ljava/util/List;
@@ -96,9 +79,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 2 predicate
 		ARG 3 output
 		ARG 4 maxResults
-	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
-		COMMENT Returns the Entity with the given ID, or {@code null} if it doesn't exist in this Level.
-		ARG 1 id
 	METHOD getEntityOrPart (I)Lnet/minecraft/world/entity/Entity;
 		ARG 1 id
 	METHOD getPlayers (Ljava/util/function/Predicate;)Ljava/util/List;
@@ -110,15 +90,9 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 pos
 	METHOD getRandomSequence (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/RandomSource;
 		ARG 1 location
-	METHOD getSeed ()J
-		COMMENT Gets the random world seed.
 	METHOD getTypeCount (Ljava/lang/Iterable;Ljava/util/function/Function;)Ljava/lang/String;
 		ARG 0 objects
 		ARG 1 typeGetter
-	METHOD globalLevelEvent (ILnet/minecraft/core/BlockPos;I)V
-		ARG 1 id
-		ARG 2 pos
-		ARG 3 data
 	METHOD isCloseToVillage (Lnet/minecraft/core/BlockPos;I)Z
 		ARG 1 pos
 		ARG 2 sections
@@ -175,12 +149,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 join
 	METHOD sectionsToVillage (Lnet/minecraft/core/SectionPos;)I
 		ARG 1 pos
-	METHOD sendBlockUpdated (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;I)V
-		COMMENT Flags are as in setBlock
-		ARG 1 pos
-		ARG 2 oldState
-		ARG 3 newState
-		ARG 4 flags
 	METHOD sendParticles (Lnet/minecraft/core/particles/ParticleOptions;DDDIDDDD)I
 		ARG 1 options
 		ARG 2 x

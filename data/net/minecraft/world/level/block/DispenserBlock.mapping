@@ -1,8 +1,6 @@
 CLASS net/minecraft/world/level/block/DispenserBlock
 	FIELD DISPENSER_REGISTRY Ljava/util/Map;
 		COMMENT Registry for all dispense behaviors.
-	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
-		ARG 1 builder
 	METHOD dispenseFrom (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 level
 		ARG 2 state
@@ -18,18 +16,8 @@ CLASS net/minecraft/world/level/block/DispenserBlock
 		ARG 0 blockSource
 		ARG 1 multiplier
 		ARG 3 offset
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
-	METHOD hasAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		ARG 1 state
-	METHOD mirror (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 state
-		ARG 2 mirror
 	METHOD registerBehavior (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/core/dispenser/DispenseItemBehavior;)V
 		ARG 0 item
 		ARG 1 behavior
 	METHOD registerProjectileBehavior (Lnet/minecraft/world/level/ItemLike;)V
 		ARG 0 item
-	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 state
-		ARG 2 rotation

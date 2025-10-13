@@ -9,14 +9,6 @@ CLASS net/minecraft/world/entity/projectile/ThrownEnderpearl
 	METHOD isAllowedToTeleportOwner (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;)Z
 		ARG 0 entity
 		ARG 1 level
-	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
-		COMMENT Called when this projectile hits a block or entity.
-		ARG 1 result
-	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
-		COMMENT Called when the arrow hits an entity
-		ARG 1 result
 	METHOD playSound (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 level
 		ARG 2 pos
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

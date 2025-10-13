@@ -5,8 +5,6 @@ CLASS net/minecraft/client/gui/components/spectator/SpectatorGui
 		ARG 1 slot
 	METHOD onMouseScrolled (I)V
 		ARG 1 amount
-	METHOD onSpectatorMenuClosed (Lnet/minecraft/client/gui/spectator/SpectatorMenu;)V
-		ARG 1 menu
 	METHOD renderAction (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
 	METHOD renderHotbar (Lnet/minecraft/client/gui/GuiGraphics;)V

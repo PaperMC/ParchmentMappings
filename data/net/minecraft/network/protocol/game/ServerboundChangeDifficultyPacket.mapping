@@ -1,6 +1,3 @@
 CLASS net/minecraft/network/protocol/game/ServerboundChangeDifficultyPacket
 	METHOD <init> (Lnet/minecraft/world/Difficulty;)V
 		ARG 1 difficulty
-	METHOD handle (Lnet/minecraft/network/protocol/game/ServerGamePacketListener;)V
-		COMMENT Passes this Packet on to the packet listener for processing.
-		ARG 1 handler

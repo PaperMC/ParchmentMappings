@@ -6,5 +6,3 @@ CLASS net/minecraft/world/entity/ai/behavior/EntityTracker
 		ARG 1 entity
 		ARG 2 trackEyeHeight
 		ARG 3 targetEyeHeight
-	METHOD isVisibleBy (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 1 entity

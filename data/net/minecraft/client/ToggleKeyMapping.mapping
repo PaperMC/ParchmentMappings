@@ -12,5 +12,3 @@ CLASS net/minecraft/client/ToggleKeyMapping
 		ARG 4 category
 		ARG 5 needsToggle
 		ARG 6 shouldRestore
-	METHOD setDown (Z)V
-		ARG 1 isDown

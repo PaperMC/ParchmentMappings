@@ -43,10 +43,6 @@ CLASS net/minecraft/world/level/levelgen/feature/TreeFeature
 		ARG 4 box
 	METHOD lambda$validTreePos$2 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
-	METHOD setBlock (Lnet/minecraft/world/level/LevelWriter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 state
 	METHOD setBlockKnownShape (Lnet/minecraft/world/level/LevelWriter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 0 level
 		ARG 1 pos

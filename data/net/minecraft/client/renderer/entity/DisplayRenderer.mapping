@@ -9,23 +9,8 @@ CLASS net/minecraft/client/renderer/entity/DisplayRenderer
 	METHOD entityYRot (Lnet/minecraft/world/entity/Display;F)F
 		ARG 0 entity
 		ARG 1 partialTick
-	METHOD getBlockLightLevel (Lnet/minecraft/world/entity/Display;Lnet/minecraft/core/BlockPos;)I
-		ARG 1 display
-		ARG 2 pos
 	METHOD getBrightnessOverride (Lnet/minecraft/world/entity/Display;)I
 		ARG 0 display
-	METHOD getShadowRadius (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;)F
-		ARG 1 entityRenderState
-	METHOD getShadowStrength (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;)F
-		ARG 1 entityRenderState
-	METHOD getSkyLightLevel (Lnet/minecraft/world/entity/Display;Lnet/minecraft/core/BlockPos;)I
-		ARG 1 display
-		ARG 2 pos
-	METHOD submit (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/state/CameraRenderState;)V
-		ARG 1 entityRenderState
-		ARG 2 poseStack
-		ARG 3 nodeCollector
-		ARG 4 cameraRenderState
 	METHOD submitInner (Lnet/minecraft/client/renderer/entity/state/DisplayEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IF)V
 		ARG 1 entityRenderState
 		ARG 2 poseStack

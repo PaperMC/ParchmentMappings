@@ -233,8 +233,6 @@ CLASS net/minecraft/server/level/ChunkMap
 			ARG 1 player
 		METHOD scaledRange (I)I
 			ARG 1 trackingDistance
-		METHOD sendToTrackingPlayers (Lnet/minecraft/network/protocol/Packet;)V
-			ARG 1 packet
 		METHOD updatePlayer (Lnet/minecraft/server/level/ServerPlayer;)V
 			ARG 1 player
 		METHOD updatePlayers (Ljava/util/List;)V
@@ -244,10 +242,3 @@ CLASS net/minecraft/server/level/ChunkMap
 			ARG 2 ticketStorage
 			ARG 3 dispatcher
 			ARG 4 mainThreadExecutor
-		METHOD getChunk (J)Lnet/minecraft/server/level/ChunkHolder;
-			ARG 1 chunkPos
-		METHOD updateChunkScheduling (JILnet/minecraft/server/level/ChunkHolder;I)Lnet/minecraft/server/level/ChunkHolder;
-			ARG 1 chunkPos
-			ARG 3 newLevel
-			ARG 4 holder
-			ARG 5 oldLevel

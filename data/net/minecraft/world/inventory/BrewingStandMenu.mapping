@@ -7,26 +7,11 @@ CLASS net/minecraft/world/inventory/BrewingStandMenu
 		ARG 2 playerInventory
 		ARG 3 brewingStandContainer
 		ARG 4 brewingStandData
-	METHOD quickMoveStack (Lnet/minecraft/world/entity/player/Player;I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Handle when the stack in {@code slotIndex} is shift-clicked. Normally this moves the stack between the player inventory and the other inventory(s).
-		ARG 1 player
-		ARG 2 slotIndex
-	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Determines whether supplied player can use this container
-		ARG 1 player
 	CLASS FuelSlot
-		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
-			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
-			ARG 1 stack
 		METHOD mayPlaceItem (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Returns {@code true} if the given {@link net.minecraft.world.item.ItemStack} is usable as fuel in the brewing stand.
 			ARG 0 stack
 	CLASS PotionSlot
-		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a given slot (usually the same as Container#getMaxStackSize, but 1 in the case of armor slots)
-		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
-			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
-			ARG 1 stack
 		METHOD mayPlaceItem (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Returns {@code true} if this {@link net.minecraft.world.item.ItemStack} can be filled with a potion.
 			ARG 0 stack
@@ -37,6 +22,3 @@ CLASS net/minecraft/world/inventory/BrewingStandMenu
 			ARG 3 slot
 			ARG 4 x
 			ARG 5 y
-		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
-			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
-			ARG 1 stack

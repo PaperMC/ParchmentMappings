@@ -6,6 +6,3 @@ CLASS net/minecraft/world/item/ShovelItem
 		ARG 2 attackDamage
 		ARG 3 attackSpeed
 		ARG 4 properties
-	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
-		COMMENT Called when this item is used when targeting a Block
-		ARG 1 context

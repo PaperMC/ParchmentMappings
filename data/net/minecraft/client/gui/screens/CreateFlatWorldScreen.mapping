@@ -20,8 +20,6 @@ CLASS net/minecraft/client/gui/screens/CreateFlatWorldScreen
 	CLASS DetailsList
 		METHOD deleteLayer (Lnet/minecraft/client/gui/screens/CreateFlatWorldScreen$DetailsList$LayerEntry;)V
 			ARG 1 layer
-		METHOD setSelected (Lnet/minecraft/client/gui/screens/CreateFlatWorldScreen$DetailsList$Entry;)V
-			ARG 1 entry
 		CLASS LayerEntry
 			METHOD <init> (Lnet/minecraft/client/gui/screens/CreateFlatWorldScreen$DetailsList;Lnet/minecraft/world/level/levelgen/flat/FlatLayerInfo;I)V
 				ARG 2 layerInfo

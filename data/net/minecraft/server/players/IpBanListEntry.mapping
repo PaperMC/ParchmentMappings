@@ -11,5 +11,3 @@ CLASS net/minecraft/server/players/IpBanListEntry
 		ARG 5 reason
 	METHOD createIpInfo (Lcom/google/gson/JsonObject;)Ljava/lang/String;
 		ARG 0 json
-	METHOD serialize (Lcom/google/gson/JsonObject;)V
-		ARG 1 data

@@ -23,8 +23,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD areAllEffectsAmbient (Ljava/util/Collection;)Z
 		COMMENT Returns {@code true} if all the potion effects in the specified collection are ambient.
 		ARG 0 effects
-	METHOD baseTick ()V
-		COMMENT Gets called every tick from main Entity class
 	METHOD blockUsingItem (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 entity
@@ -40,8 +38,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 3 damageMultiplier
 	METHOD calculateFallPower (D)D
 		ARG 1 fallDistance
-	METHOD canAttack (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 1 target
 	METHOD canAttackType (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 1 entityType
 	METHOD canBeAffected (Lnet/minecraft/world/effect/MobEffectInstance;)Z
@@ -60,11 +56,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD checkAutoSpinAttack (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/phys/AABB;)V
 		ARG 1 boundingBoxBeforeSpin
 		ARG 2 boundingBoxAfterSpin
-	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 y
-		ARG 3 onGround
-		ARG 4 state
-		ARG 5 pos
 	METHOD checkTotemDeathProtection (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 damageSource
 	METHOD completeUsingItem ()V
@@ -189,8 +180,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 2 damageAmount
 	METHOD getDefaultDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
 		ARG 1 pose
-	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
-		ARG 1 pose
 	METHOD getEffect (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/effect/MobEffectInstance;
 		ARG 1 effect
 	METHOD getEffectBlendFactor (Lnet/minecraft/core/Holder;F)F
@@ -217,8 +206,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 friction
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD getItemBySlot (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 slot
 	METHOD getItemHeldByArm (Lnet/minecraft/world/entity/HumanoidArm;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 arm
 	METHOD getItemInHand (Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/item/ItemStack;
@@ -245,16 +232,10 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Gets the movement speed used for the new AI system.
 	METHOD getSwimAmount (F)F
 		ARG 1 partialTick
-	METHOD getViewYRot (F)F
-		COMMENT Gets the current yaw of the entity
-		ARG 1 partialTick
 	METHOD getVisibilityPercent (Lnet/minecraft/world/entity/Entity;)D
 		ARG 1 lookingEntity
 	METHOD getVoicePitch ()F
 		COMMENT Gets the pitch of living sounds from living entities.
-	METHOD handleEntityEvent (B)V
-		COMMENT Handles an entity event fired from {@link net.minecraft.world.level.Level#broadcastEntityEvent}
-		ARG 1 id
 	METHOD handleEquipmentChanges (Ljava/util/Map;)V
 		ARG 1 equipment
 	METHOD handleExtraItemsCreatedOnUse (Lnet/minecraft/world/item/ItemStack;)V
@@ -298,8 +279,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 absorptionAmount
 	METHOD isAffectedByPotions ()Z
 		COMMENT Returns {@code false} if the entity is an armor stand. Returns {@code true} for all other living entities.
-	METHOD isAlive ()Z
-		COMMENT Returns {@code true} if the entity has not been {@link #isRemoved}.
 	METHOD isAlwaysExperienceDropper ()Z
 		COMMENT Only use is to identify if class is an instance of player for experience dropping
 	METHOD isBaby ()Z
@@ -313,8 +292,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 item
 	METHOD isImmobile ()Z
 		COMMENT Dead and sleeping entities cannot move
-	METHOD isInWall ()Z
-		COMMENT Checks if this entity is inside an opaque block.
 	METHOD isInvertedHealAndHarm ()Z
 		COMMENT Returns {@code true} if this entity is undead.
 	METHOD isInvulnerableTo (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)Z
@@ -326,10 +303,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 4 scaleByDistance
 		ARG 5 visual
 		ARG 6 yValues
-	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
-	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
 	METHOD isSleeping ()Z
 		COMMENT Returns whether player is sleeping or not
 	METHOD jumpFromGround ()V
@@ -347,12 +320,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD lerpHeadRotationStep (ID)V
 		ARG 1 steps
 		ARG 2 yRot
-	METHOD lerpHeadTo (FI)V
-		ARG 1 yRot
-		ARG 2 steps
-	METHOD lookAt (Lnet/minecraft/commands/arguments/EntityAnchorArgument$Anchor;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 anchor
-		ARG 2 target
 	METHOD makeBrain (Lcom/mojang/serialization/Dynamic;)Lnet/minecraft/world/entity/ai/Brain;
 		ARG 1 dynamic
 	METHOD makeSound (Lnet/minecraft/sounds/SoundEvent;)V
@@ -386,17 +353,12 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 itemEntity
 	METHOD onLeaveCombat ()V
 		COMMENT Sends a ClientboundPlayerCombatEndPacket to the client
-	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
-		ARG 1 key
 	METHOD playBlockFallSound ()V
 		COMMENT Plays the fall sound for the block landed on
 	METHOD playHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 damageSource
 	METHOD playSecondaryHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 damageSource
-	METHOD push (Lnet/minecraft/world/entity/Entity;)V
-		COMMENT Applies a velocity to the entities, to push them away from each other.
-		ARG 1 entity
 	METHOD randomTeleport (DDDZ)Z
 		ARG 1 x
 		ARG 3 y
@@ -414,8 +376,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 damageSource
 	METHOD resolvePlayerResponsibleForDamage (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/world/entity/player/Player;
 		ARG 1 damageSource
-	METHOD rideTick ()V
-		COMMENT Handles updating while riding another entity
 	METHOD sanitizeScale (F)F
 		ARG 1 scale
 	METHOD sendEffectToPassengers (Lnet/minecraft/world/effect/MobEffectInstance;)V
@@ -432,14 +392,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD setItemInHand (Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 hand
 		ARG 2 stack
-	METHOD setItemSlot (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 slot
-		ARG 2 stack
 	METHOD setJumping (Z)V
 		ARG 1 jumping
-	METHOD setLastHurtByMob (Lnet/minecraft/world/entity/LivingEntity;)V
-		COMMENT Hint to AI tasks that we were attacked by the passed LivingEntity and should retaliate. Is not guaranteed to change our actual active target (for example if we are currently busy attacking someone else)
-		ARG 1 livingEntity
 	METHOD setLastHurtByPlayer (Ljava/util/UUID;I)V
 		ARG 1 uuid
 		ARG 2 memoryTime
@@ -468,17 +422,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD setSpeed (F)V
 		COMMENT Sets the movement speed used for the new AI system.
 		ARG 1 speed
-	METHOD setSprinting (Z)V
-		COMMENT Set sprinting switch for Entity.
-		ARG 1 sprinting
 	METHOD setStingerCount (I)V
 		ARG 1 stingerCount
-	METHOD setYBodyRot (F)V
-		COMMENT Set the render yaw offset
-		ARG 1 offset
-	METHOD setYHeadRot (F)V
-		COMMENT Sets the head's yaw rotation of the entity.
-		ARG 1 rotation
 	METHOD shouldDropExperience ()Z
 		COMMENT Entity won't drop experience points if this returns {@code false}
 	METHOD shouldDropLoot (Lnet/minecraft/server/level/ServerLevel;)Z
@@ -495,8 +440,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 stack
 		ARG 2 slot
 		ARG 3 attributeMap
-	METHOD stopRiding ()V
-		COMMENT Dismounts this entity from the entity it is riding.
 	METHOD swing (Lnet/minecraft/world/InteractionHand;)V
 		ARG 1 hand
 	METHOD swing (Lnet/minecraft/world/InteractionHand;Z)V
@@ -506,8 +449,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Called when the entity picks up an item.
 		ARG 1 entity
 		ARG 2 amount
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	METHOD tickDeath ()V
 		COMMENT Handles entity death timer, experience orb, and particle creation.
 	METHOD tickHeadTurn (F)V

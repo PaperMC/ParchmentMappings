@@ -1,6 +1,3 @@
 CLASS net/minecraft/network/protocol/game/ClientboundAwardStatsPacket
 	METHOD <init> (Lit/unimi/dsi/fastutil/objects/Object2IntMap;)V
 		ARG 1 stats
-	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
-		COMMENT Passes this Packet on to the packet listener for processing.
-		ARG 1 handler

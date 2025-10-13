@@ -65,8 +65,3 @@ CLASS net/minecraft/network/chat/Component
 		ARG 0 location
 	METHOD translationArg (Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/network/chat/Component;
 		ARG 0 chunkPos
-	METHOD visit (Lnet/minecraft/network/chat/FormattedText$ContentConsumer;)Ljava/util/Optional;
-		ARG 1 acceptor
-	METHOD visit (Lnet/minecraft/network/chat/FormattedText$StyledContentConsumer;Lnet/minecraft/network/chat/Style;)Ljava/util/Optional;
-		ARG 1 acceptor
-		ARG 2 style

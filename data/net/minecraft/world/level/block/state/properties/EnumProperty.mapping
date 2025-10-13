@@ -23,9 +23,5 @@ CLASS net/minecraft/world/level/block/state/properties/EnumProperty
 		ARG 0 name
 		ARG 1 clazz
 		ARG 2 values
-	METHOD getName (Ljava/lang/Enum;)Ljava/lang/String;
-		ARG 1 value
-	METHOD getValue (Ljava/lang/String;)Ljava/util/Optional;
-		ARG 1 value
 	METHOD lambda$create$0 (Ljava/lang/Enum;)Z
 		ARG 0 type

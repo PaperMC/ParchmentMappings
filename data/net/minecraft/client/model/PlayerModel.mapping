@@ -7,5 +7,3 @@ CLASS net/minecraft/client/model/PlayerModel
 		ARG 1 slim
 	METHOD getRandomBodyPart (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/client/model/geom/ModelPart;
 		ARG 1 random
-	METHOD setAllVisible (Z)V
-		ARG 1 visible

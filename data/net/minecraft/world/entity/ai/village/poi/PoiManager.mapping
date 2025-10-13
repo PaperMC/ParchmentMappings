@@ -105,8 +105,6 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		ARG 1 pos
 	METHOD sectionsToVillage (Lnet/minecraft/core/SectionPos;)I
 		ARG 1 sectionPos
-	METHOD setDirty (J)V
-		ARG 1 sectionPos
 	METHOD take (Ljava/util/function/Predicate;Ljava/util/function/BiPredicate;Lnet/minecraft/core/BlockPos;I)Ljava/util/Optional;
 		ARG 1 typePredicate
 		ARG 2 combinedTypePosPredicate
@@ -121,11 +119,3 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 			ARG 3 test
 		METHOD lambda$static$0 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
 			ARG 0 test
-	CLASS DistanceTracker
-		METHOD getLevel (J)I
-			ARG 1 sectionPos
-		METHOD getLevelFromSource (J)I
-			ARG 1 pos
-		METHOD setLevel (JI)V
-			ARG 1 sectionPos
-			ARG 3 level

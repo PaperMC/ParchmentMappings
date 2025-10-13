@@ -20,6 +20,3 @@ CLASS net/minecraft/world/item/DebugStickItem
 	METHOD message (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/network/chat/Component;)V
 		ARG 0 player
 		ARG 1 message
-	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
-		COMMENT Called when this item is used when targeting a Block
-		ARG 1 context

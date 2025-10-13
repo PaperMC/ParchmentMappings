@@ -115,19 +115,11 @@ CLASS net/minecraft/world/level/GameRules
 			ARG 0 defaultValue
 			ARG 1 changeListener
 			ARG 2 requiredFeatures
-		METHOD deserialize (Ljava/lang/String;)V
-			ARG 1 value
 		METHOD lambda$create$0 (ZLnet/minecraft/world/level/GameRules$Type;)Lnet/minecraft/world/level/GameRules$BooleanValue;
 			ARG 1 type
 		METHOD set (ZLnet/minecraft/server/MinecraftServer;)V
 			ARG 1 value
 			ARG 2 server
-		METHOD setFrom (Lnet/minecraft/world/level/GameRules$BooleanValue;Lnet/minecraft/server/MinecraftServer;)V
-			ARG 1 value
-			ARG 2 server
-		METHOD updateFromArgument (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)V
-			ARG 1 context
-			ARG 2 paramName
 	CLASS IntegerValue
 		METHOD <init> (Lnet/minecraft/world/level/GameRules$Type;I)V
 			ARG 1 type
@@ -143,8 +135,6 @@ CLASS net/minecraft/world/level/GameRules
 		METHOD create (ILjava/util/function/BiConsumer;)Lnet/minecraft/world/level/GameRules$Type;
 			ARG 0 defaultValue
 			ARG 1 changeListener
-		METHOD deserialize (Ljava/lang/String;)V
-			ARG 1 value
 		METHOD lambda$create$0 (ILnet/minecraft/world/level/GameRules$Type;)Lnet/minecraft/world/level/GameRules$IntegerValue;
 			ARG 1 type
 		METHOD lambda$create$2 (ILnet/minecraft/world/level/GameRules$Type;)Lnet/minecraft/world/level/GameRules$IntegerValue;
@@ -157,14 +147,8 @@ CLASS net/minecraft/world/level/GameRules
 		METHOD set (ILnet/minecraft/server/MinecraftServer;)V
 			ARG 1 value
 			ARG 2 server
-		METHOD setFrom (Lnet/minecraft/world/level/GameRules$IntegerValue;Lnet/minecraft/server/MinecraftServer;)V
-			ARG 1 value
-			ARG 2 server
 		METHOD tryDeserialize (Ljava/lang/String;)Z
 			ARG 1 name
-		METHOD updateFromArgument (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)V
-			ARG 1 context
-			ARG 2 paramName
 	CLASS VisitorCaller
 		METHOD call (Lnet/minecraft/world/level/GameRules$GameRuleTypeVisitor;Lnet/minecraft/world/level/GameRules$Key;Lnet/minecraft/world/level/GameRules$Type;)V
 			ARG 1 visitor

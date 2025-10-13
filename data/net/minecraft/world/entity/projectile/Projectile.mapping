@@ -101,8 +101,6 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 7 z
 		ARG 9 velocity
 		ARG 10 inaccuracy
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.
 	CLASS ProjectileFactory
 		METHOD create (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/Projectile;
 			ARG 1 level

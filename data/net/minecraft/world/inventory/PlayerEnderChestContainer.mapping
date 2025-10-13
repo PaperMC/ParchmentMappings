@@ -5,7 +5,5 @@ CLASS net/minecraft/world/inventory/PlayerEnderChestContainer
 		ARG 1 enderChest
 	METHOD setActiveChest (Lnet/minecraft/world/level/block/entity/EnderChestBlockEntity;)V
 		ARG 1 enderChestBlockEntity
-	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player
 	METHOD storeAsSlots (Lnet/minecraft/world/level/storage/ValueOutput$TypedOutputList;)V
 		ARG 1 output

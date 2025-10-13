@@ -13,9 +13,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetNameFunction
 		ARG 1 resolutionContext
 	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
-	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 stack
-		ARG 2 context
 	METHOD setName (Lnet/minecraft/network/chat/Component;Lnet/minecraft/world/level/storage/loot/functions/SetNameFunction$Target;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 name
 		ARG 1 target

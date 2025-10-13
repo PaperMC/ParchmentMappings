@@ -16,10 +16,5 @@ CLASS net/minecraft/world/entity/LightningBolt
 		ARG 1 cause
 	METHOD setVisualOnly (Z)V
 		ARG 1 visualOnly
-	METHOD shouldRenderAtSqrDistance (D)Z
-		COMMENT Checks if the entity is in range to render.
-		ARG 1 distance
 	METHOD spawnFire (I)V
 		ARG 1 extraIgnitions
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

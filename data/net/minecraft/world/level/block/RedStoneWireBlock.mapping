@@ -1,8 +1,4 @@
 CLASS net/minecraft/world/level/block/RedStoneWireBlock
-	METHOD canSurvive (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
 	METHOD canSurviveOn (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 level
 		ARG 2 pos
@@ -11,8 +7,6 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		COMMENT Calls {@link net.minecraft.world.level.Level#updateNeighborsAt} for all neighboring blocks, but only if the given block is a redstone wire.
 		ARG 1 level
 		ARG 2 pos
-	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
-		ARG 1 builder
 	METHOD getBlockSignal (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 level
 		ARG 2 pos
@@ -31,45 +25,14 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 1 level
 		ARG 2 state
 		ARG 3 pos
-	METHOD getDirectSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 side
 	METHOD getMissingConnections (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 level
 		ARG 2 state
 		ARG 3 pos
-	METHOD getShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 context
-	METHOD getSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 side
-	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 context
 	METHOD isCross (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
 	METHOD isDot (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
-	METHOD isSignalSource (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		ARG 1 state
-	METHOD mirror (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 state
-		ARG 2 mirror
-	METHOD onPlace (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 oldState
-		ARG 5 movedByPiston
-	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 state
-		ARG 2 rotation
 	METHOD shouldConnectTo (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
 	METHOD shouldConnectTo (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)Z
@@ -84,12 +47,6 @@ CLASS net/minecraft/world/level/block/RedStoneWireBlock
 		ARG 5 perpendicularDirection
 		ARG 6 start
 		ARG 7 end
-	METHOD updateIndirectNeighbourShapes (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;II)V
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 flags
-		ARG 5 recursionLeft
 	METHOD updateNeighborsOfNeighboringWires (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 level
 		ARG 2 pos

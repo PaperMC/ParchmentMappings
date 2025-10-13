@@ -1,8 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 	METHOD <init> (Lnet/minecraft/util/RandomSource;)V
 		ARG 1 randomSource
-	METHOD next (I)I
-		ARG 1 bits
 	METHOD seedSlimeChunk (IIJJ)Lnet/minecraft/util/RandomSource;
 		COMMENT Creates a new {@code RandomSource}, seeded for determining whether a chunk is a slime chunk.
 		ARG 0 chunkX

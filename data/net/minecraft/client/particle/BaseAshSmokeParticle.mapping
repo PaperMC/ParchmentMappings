@@ -16,5 +16,3 @@ CLASS net/minecraft/client/particle/BaseAshSmokeParticle
 		ARG 20 lifetime
 		ARG 21 gravity
 		ARG 22 hasPhysics
-	METHOD getQuadSize (F)F
-		ARG 1 scaleFactor

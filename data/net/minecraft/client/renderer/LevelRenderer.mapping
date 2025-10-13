@@ -100,8 +100,6 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 0 frustum
 	METHOD onChunkReadyToRender (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
-	METHOD onResourceManagerReload (Lnet/minecraft/server/packs/resources/ResourceManager;)V
-		ARG 1 resourceManager
 	METHOD onSectionBecomingNonEmpty (J)V
 		ARG 1 sectionPos
 	METHOD prepareChunkRenders (Lorg/joml/Matrix4fc;DDD)Lnet/minecraft/client/renderer/chunk/ChunkSectionsToRender;

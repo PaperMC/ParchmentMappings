@@ -1,6 +1,0 @@
-CLASS net/minecraft/world/entity/boss/enderdragon/phases/DragonSittingAttackingPhase
-	METHOD begin ()V
-		COMMENT Called when this phase is set to active
-	METHOD doClientTick ()V
-		COMMENT Generates particle effects appropriate to the phase (or sometimes sounds).
-		COMMENT Called by dragon's aiStep. Only used when level is not an instance of ServerLevel.

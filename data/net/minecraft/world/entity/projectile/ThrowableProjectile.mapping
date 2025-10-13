@@ -5,8 +5,3 @@ CLASS net/minecraft/world/entity/projectile/ThrowableProjectile
 		ARG 4 y
 		ARG 6 z
 		ARG 8 level
-	METHOD shouldRenderAtSqrDistance (D)Z
-		COMMENT Checks if the entity is in range to render.
-		ARG 1 distance
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

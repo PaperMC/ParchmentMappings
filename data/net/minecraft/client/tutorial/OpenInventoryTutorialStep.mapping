@@ -1,5 +1,3 @@
 CLASS net/minecraft/client/tutorial/OpenInventoryTutorialStep
 	METHOD <init> (Lnet/minecraft/client/tutorial/Tutorial;)V
 		ARG 1 tutorial
-	METHOD onOpenInventory ()V
-		COMMENT Called when the player opens his inventory
