@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/Stopwatch
 	METHOD <init> (J)V
 		ARG 1 creationTime
-	METHOD elapsedSeconds (J)D
+	METHOD elapsedMilliseconds (J)J
 		ARG 1 time
-	METHOD elapsedTime (J)J
+	METHOD elapsedSeconds (J)D
 		ARG 1 time

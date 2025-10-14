@@ -9,9 +9,6 @@ CLASS net/minecraft/client/renderer/DimensionSpecialEffects
 		ARG 2 brightness
 	METHOD getSunriseOrSunsetColor (F)I
 		ARG 1 timeOfDay
-	METHOD isFoggyAt (II)Z
-		ARG 1 x
-		ARG 2 y
 	METHOD isSunriseOrSunset (F)Z
 		ARG 1 timeOfDay
 	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;)V

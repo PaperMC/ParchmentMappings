@@ -1,12 +1,14 @@
 CLASS net/minecraft/world/level/dimension/DimensionType
+	METHOD createDirectCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 attributesCodec
 	METHOD getStorageFolder (Lnet/minecraft/resources/ResourceKey;Ljava/nio/file/Path;)Ljava/nio/file/Path;
 		ARG 0 dimensionKey
 		ARG 1 levelFolder
 	METHOD getTeleportationScale (Lnet/minecraft/world/level/dimension/DimensionType;Lnet/minecraft/world/level/dimension/DimensionType;)D
 		ARG 0 firstType
 		ARG 1 secondType
-	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
+	METHOD lambda$createDirectCodec$0 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 1 instance
 	METHOD moonPhase (J)Lnet/minecraft/world/level/MoonPhase;
 		ARG 1 dayTime
 	METHOD timeOfDay (J)F

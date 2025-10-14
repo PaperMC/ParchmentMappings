@@ -1,6 +1,0 @@
-CLASS net/minecraft/util/CubicSampler
-	METHOD sampleVec3 (Ljava/util/function/Function;)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 sampler
-	METHOD update (Lnet/minecraft/world/level/biome/BiomeManager;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 biomeManager
-		ARG 2 position

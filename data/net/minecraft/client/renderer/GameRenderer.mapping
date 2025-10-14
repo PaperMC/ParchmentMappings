@@ -70,3 +70,7 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		COMMENT Updates the entity renderer
 	METHOD tickFov ()V
 		COMMENT Update FOV modifier hand
+	CLASS 1
+		METHOD renderDebugMarkers (Lnet/minecraft/client/gui/font/ActiveArea;Z)V
+			ARG 1 area
+			ARG 2 isEmpty

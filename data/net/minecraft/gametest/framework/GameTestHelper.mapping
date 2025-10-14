@@ -83,6 +83,11 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 pos
 		ARG 2 type
 		ARG 3 predicate
+	METHOD assertEntityData (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/entity/EntityType;Ljava/util/function/Function;Ljava/lang/Object;)V
+		ARG 1 box
+		ARG 2 type
+		ARG 3 entityDataGetter
+		ARG 4 testEntityData
 	METHOD assertEntityInstancePresent (Lnet/minecraft/world/entity/Entity;III)V
 		ARG 1 entity
 		ARG 2 x
@@ -196,6 +201,10 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 	METHOD assertTrue (ZLnet/minecraft/network/chat/Component;)V
 		ARG 1 condition
 		ARG 2 message
+	METHOD assertValueEqual (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)V
+		ARG 1 expected
+		ARG 2 actual
+		ARG 3 name
 	METHOD assertValueEqual (Ljava/lang/Object;Ljava/lang/Object;Lnet/minecraft/network/chat/Component;)V
 		ARG 1 expected
 		ARG 2 actual

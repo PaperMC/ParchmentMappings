@@ -12,26 +12,9 @@ CLASS net/minecraft/client/renderer/texture/MipmapGenerator
 		ARG 1 col1
 		ARG 2 col2
 		ARG 3 col3
-	METHOD gammaBlend (IIII)I
-		ARG 0 col0
-		ARG 1 col1
-		ARG 2 col2
-		ARG 3 col3
-	METHOD gammaBlend (IIIII)I
-		ARG 0 col0
-		ARG 1 col1
-		ARG 2 col2
-		ARG 3 col3
-		ARG 4 bitOffset
 	METHOD generateMipLevels ([Lcom/mojang/blaze3d/platform/NativeImage;IZ)[Lcom/mojang/blaze3d/platform/NativeImage;
 		ARG 0 images
 		ARG 1 mipLevel
 		ARG 2 darkenedCutoutMipmap
-	METHOD getInversePow22 (F)F
-		ARG 0 value
-	METHOD getPow22 (I)F
-		ARG 0 value
 	METHOD hasTransparentPixel (Lcom/mojang/blaze3d/platform/NativeImage;)Z
 		ARG 0 image
-	METHOD lambda$static$0 ([F)V
-		ARG 0 pow22

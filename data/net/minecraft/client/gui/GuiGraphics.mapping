@@ -1,11 +1,15 @@
 CLASS net/minecraft/client/gui/GuiGraphics
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/render/state/GuiRenderState;)V
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/render/state/GuiRenderState;II)V
 		ARG 1 minecraft
 		ARG 2 guiRenderState
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lorg/joml/Matrix3x2fStack;Lnet/minecraft/client/gui/render/state/GuiRenderState;)V
+		ARG 3 mouseX
+		ARG 4 mouseY
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lorg/joml/Matrix3x2fStack;Lnet/minecraft/client/gui/render/state/GuiRenderState;II)V
 		ARG 1 minecraft
 		ARG 2 pose
 		ARG 3 guiRenderState
+		ARG 4 mouseX
+		ARG 5 mouseY
 	METHOD applyCursor (Lcom/mojang/blaze3d/platform/Window;)V
 		ARG 1 window
 	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIFFIIII)V
@@ -182,6 +186,8 @@ CLASS net/minecraft/client/gui/GuiGraphics
 	METHOD containsPointInScissor (II)Z
 		ARG 1 x
 		ARG 2 y
+	METHOD createDefaultTextParameters (F)Lnet/minecraft/client/gui/ActiveTextCollector$Parameters;
+		ARG 1 opacity
 	METHOD disableScissor ()V
 		COMMENT Disables scissoring.
 	METHOD drawCenteredString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V
@@ -658,6 +664,14 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 3 maxX
 		ARG 4 maxY
 		ARG 5 invertColor
+	METHOD textRenderer (Lnet/minecraft/client/gui/GuiGraphics$HoveredTextEffects;)Lnet/minecraft/client/gui/ActiveTextCollector;
+		ARG 1 hoveredTextEffects
+	METHOD textRenderer (Lnet/minecraft/client/gui/GuiGraphics$HoveredTextEffects;Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/ActiveTextCollector;
+		ARG 1 hoveredTextEffects
+		ARG 2 additionalConsumer
+	METHOD textRendererForWidget (Lnet/minecraft/client/gui/components/AbstractWidget;Lnet/minecraft/client/gui/GuiGraphics$HoveredTextEffects;)Lnet/minecraft/client/gui/ActiveTextCollector;
+		ARG 1 widget
+		ARG 2 hoveredTextEffects
 	METHOD vLine (IIII)V
 		COMMENT Draws a vertical line from minY to maxY at the specified x-coordinate with the given color.
 		ARG 1 x
@@ -682,3 +696,16 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT @return The resulting intersection of the pushed rectangle with the previous top rectangle on the stack, or the pushed rectangle if the stack is empty.
 			ARG 1 scissor
 				COMMENT the screen rectangle to push.
+	CLASS HoveredTextEffects
+		METHOD <init> (Ljava/lang/String;IZZ)V
+			ARG 3 allowTooltip
+			ARG 4 allowCursorChanges
+		METHOD notClickable (Z)Lnet/minecraft/client/gui/GuiGraphics$HoveredTextEffects;
+			ARG 0 withTooltip
+	CLASS RenderingTextCollector
+		METHOD <init> (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/ActiveTextCollector$Parameters;Lnet/minecraft/client/gui/GuiGraphics$HoveredTextEffects;Ljava/util/function/Consumer;)V
+			ARG 2 defaultParameters
+			ARG 3 hoveredTextEffects
+			ARG 4 additionalConsumer
+		METHOD accept (Lnet/minecraft/network/chat/Style;)V
+			ARG 1 style

@@ -15,21 +15,9 @@ CLASS net/minecraft/client/gui/components/MultiLineLabel
 	METHOD create (Lnet/minecraft/client/gui/Font;[Lnet/minecraft/network/chat/Component;)Lnet/minecraft/client/gui/components/MultiLineLabel;
 		ARG 0 font
 		ARG 1 components
-	METHOD getStyle (Lnet/minecraft/client/gui/components/MultiLineLabel$Align;IIIDD)Lnet/minecraft/network/chat/Style;
-		ARG 1 align
+	METHOD visitLines (Lnet/minecraft/client/gui/TextAlignment;IIILnet/minecraft/client/gui/ActiveTextCollector;)I
+		ARG 1 alignment
 		ARG 2 x
 		ARG 3 y
 		ARG 4 lineHeight
-		ARG 5 mouseX
-		ARG 7 mouseY
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/components/MultiLineLabel$Align;IIIZI)I
-		ARG 1 guiGraphics
-		ARG 2 align
-		ARG 3 x
-		ARG 4 y
-		ARG 5 lineHeight
-		ARG 7 color
-	CLASS Align
-		METHOD calculateLeft (II)I
-			ARG 1 x
-			ARG 2 width
+		ARG 5 textCollector

@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/item/component/PiercingWeapon
-	METHOD attack (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/entity/EquipmentSlot;)V
-		ARG 1 player
+	METHOD attack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;)V
+		ARG 1 entity
 		ARG 2 slot
 	METHOD canHitEntity (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity

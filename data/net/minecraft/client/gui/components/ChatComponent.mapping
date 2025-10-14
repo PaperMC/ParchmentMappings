@@ -20,6 +20,11 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 	METHOD addRecentChat (Ljava/lang/String;)V
 		COMMENT Adds this string to the list of sent messages, for recall using the up/down arrow keys
 		ARG 1 message
+	METHOD captureClickableText (Lnet/minecraft/client/gui/ActiveTextCollector;IIZ)V
+		ARG 1 textCollector
+		ARG 2 height
+		ARG 3 tickCount
+		ARG 4 focused
 	METHOD clearMessages (Z)V
 		COMMENT Clears the chat.
 		ARG 1 clearSentMsgHistory
@@ -33,44 +38,13 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 1 messageSignature
 	METHOD deleteMessageOrDelay (Lnet/minecraft/network/chat/MessageSignature;)Lnet/minecraft/client/gui/components/ChatComponent$DelayedMessageDeletion;
 		ARG 1 messageSignature
-	METHOD drawTagIcon (Lnet/minecraft/client/gui/GuiGraphics;IILnet/minecraft/client/GuiMessageTag$Icon;)V
-		ARG 1 guiGraphics
-		ARG 2 left
-		ARG 3 bottom
-		ARG 4 tagIcon
-	METHOD forEachLine (IIZILnet/minecraft/client/gui/components/ChatComponent$LineConsumer;)I
-		ARG 1 linesPerPage
-		ARG 2 tickCount
-		ARG 3 focused
-		ARG 4 bottomY
-		ARG 5 action
-	METHOD getClickedComponentStyleAt (DD)Lnet/minecraft/network/chat/Style;
-		ARG 1 mouseX
-		ARG 3 mouseY
+	METHOD forEachLine (Lnet/minecraft/client/gui/components/ChatComponent$AlphaCalculator;Lnet/minecraft/client/gui/components/ChatComponent$LineConsumer;)I
+		ARG 1 alphaCalculator
+		ARG 2 action
 	METHOD getHeight (D)I
 		ARG 0 height
-	METHOD getMessageEndIndexAt (DD)I
-		ARG 1 mouseX
-		ARG 3 mouseY
-	METHOD getMessageLineIndexAt (DD)I
-		ARG 1 mouseX
-		ARG 3 mouseY
-	METHOD getMessageTagAt (DD)Lnet/minecraft/client/GuiMessageTag;
-		ARG 1 mouseX
-		ARG 3 mouseY
-	METHOD getTagIconLeft (Lnet/minecraft/client/GuiMessage$Line;)I
-		ARG 1 line
-	METHOD getTimeFactor (I)D
-		ARG 0 counter
 	METHOD getWidth (D)I
 		ARG 0 width
-	METHOD handleChatQueueClicked (DD)Z
-		ARG 1 mouseX
-		ARG 3 mouseY
-	METHOD hasSelectedMessageTag (DLnet/minecraft/client/GuiMessage$Line;Lnet/minecraft/client/GuiMessageTag;)Z
-		ARG 1 x
-		ARG 3 line
-		ARG 4 tag
 	METHOD isChatFocused ()Z
 		COMMENT Returns {@code true} if the chat GUI is open
 	METHOD logChatMessage (Lnet/minecraft/client/GuiMessage;)V
@@ -78,22 +52,24 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 	METHOD openScreen (Lnet/minecraft/client/gui/components/ChatComponent$ChatMethod;Lnet/minecraft/client/gui/screens/ChatScreen$ChatConstructor;)V
 		ARG 1 method
 		ARG 2 constructor
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIIZ)V
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;IIIZ)V
 		ARG 1 guiGraphics
-		ARG 2 tickCount
-		ARG 3 mouseX
-		ARG 4 mouseY
-		ARG 5 focused
+		ARG 2 font
+		ARG 3 tickCount
+		ARG 4 mouseX
+		ARG 5 mouseY
+		ARG 6 focused
+	METHOD render (Lnet/minecraft/client/gui/components/ChatComponent$ChatGraphicsAccess;IIZ)V
+		ARG 1 graphicsAccess
+		ARG 2 height
+		ARG 3 tickCount
+		ARG 4 focused
 	METHOD resetChatScroll ()V
 		COMMENT Resets the chat scroll (executed when the GUI is closed, among others)
 	METHOD restoreState (Lnet/minecraft/client/gui/components/ChatComponent$State;)V
 		ARG 1 state
 	METHOD saveAsDraft (Ljava/lang/String;)V
 		ARG 1 text
-	METHOD screenToChatX (D)D
-		ARG 1 x
-	METHOD screenToChatY (D)D
-		ARG 1 y
 	METHOD scrollChat (I)V
 		ARG 1 posInc
 	CLASS State
@@ -107,10 +83,58 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		METHOD isDraftRestorable (Lnet/minecraft/client/gui/components/ChatComponent$Draft;)Z
 			ARG 1 draft
 	CLASS LineConsumer
-		METHOD accept (IIILnet/minecraft/client/GuiMessage$Line;IF)V
+		METHOD accept (Lnet/minecraft/client/GuiMessage$Line;IF)V
+			ARG 1 line
+			ARG 2 x
+			ARG 3 fade
+	CLASS AlphaCalculator
+		METHOD calculate (Lnet/minecraft/client/GuiMessage$Line;)F
+			ARG 1 line
+		METHOD lambda$static$0 (Lnet/minecraft/client/GuiMessage$Line;)F
+			ARG 0 line
+		METHOD timeBased (I)Lnet/minecraft/client/gui/components/ChatComponent$AlphaCalculator;
+			ARG 0 time
+	CLASS ChatGraphicsAccess
+		METHOD fill (IIIII)V
+			ARG 1 minX
+			ARG 2 minY
+			ARG 3 maxX
+			ARG 4 maxY
+			ARG 5 color
+		METHOD handleMessage (IFLnet/minecraft/util/FormattedCharSequence;)Z
+			ARG 1 y
+			ARG 2 opacity
+			ARG 3 text
+		METHOD handleTag (IIIIFLnet/minecraft/client/GuiMessageTag;)V
+			ARG 1 minX
+			ARG 2 minY
+			ARG 3 maxX
+			ARG 4 maxY
+			ARG 5 alpha
+			ARG 6 tag
+		METHOD handleTagIcon (IIZLnet/minecraft/client/GuiMessageTag;Lnet/minecraft/client/GuiMessageTag$Icon;)V
 			ARG 1 x
-			ARG 2 startY
-			ARG 3 endY
-			ARG 4 line
-			ARG 5 index
-			ARG 6 fade
+			ARG 2 y
+			ARG 3 alwaysVisible
+			ARG 4 tag
+			ARG 5 icon
+		METHOD updatePose (Ljava/util/function/Consumer;)V
+			ARG 1 pose
+	CLASS DrawingGraphicsAccess
+		METHOD <init> (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;II)V
+			ARG 1 graphics
+			ARG 2 font
+			ARG 3 globalMouseX
+			ARG 4 globalMouseY
+		METHOD accept (Lnet/minecraft/network/chat/Style;)V
+			ARG 1 style
+		METHOD isMouseOver (IIII)Z
+			ARG 1 minX
+			ARG 2 minY
+			ARG 3 maxX
+			ARG 4 maxY
+		METHOD showTooltip (Lnet/minecraft/client/GuiMessageTag;)V
+			ARG 1 tooltip
+	CLASS ClickableTextOnlyGraphicsAccess
+		METHOD <init> (Lnet/minecraft/client/gui/ActiveTextCollector;)V
+			ARG 1 output

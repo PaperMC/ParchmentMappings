@@ -43,11 +43,6 @@ CLASS net/minecraft/client/gui/screens/Screen
 	METHOD getTooltipFromItem (Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/item/ItemStack;)Ljava/util/List;
 		ARG 0 minecraft
 		ARG 1 item
-	METHOD handleClickEvent (Lnet/minecraft/client/Minecraft;Lnet/minecraft/network/chat/ClickEvent;)V
-		ARG 1 minecraft
-		ARG 2 clickEvent
-	METHOD handleComponentClicked (Lnet/minecraft/network/chat/Style;)Z
-		ARG 1 style
 	METHOD init (II)V
 		ARG 1 width
 		ARG 2 height

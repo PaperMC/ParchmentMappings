@@ -1,3 +1,0 @@
-CLASS net/minecraft/util/ColorRGBA
-	METHOD lambda$static$2 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 color

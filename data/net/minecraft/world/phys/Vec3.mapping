@@ -69,8 +69,6 @@ CLASS net/minecraft/world/phys/Vec3
 		ARG 1 vec
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
-	METHOD fromRGB24 (I)Lnet/minecraft/world/phys/Vec3;
-		ARG 0 packed
 	METHOD get (Lnet/minecraft/core/Direction$Axis;)D
 		ARG 1 axis
 	METHOD lambda$static$1 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;

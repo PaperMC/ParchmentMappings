@@ -176,10 +176,11 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 isStrong
 		ARG 2 isCritical
 		ARG 3 extraKnockback
-	METHOD itemAttackInteraction (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/damagesource/DamageSource;)V
+	METHOD itemAttackInteraction (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/damagesource/DamageSource;Z)V
 		ARG 1 entity
 		ARG 2 stack
 		ARG 3 damageSource
+		ARG 4 postAttackEffects
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 target
 	METHOD makeStuckInBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/Vec3;)V
@@ -291,5 +292,5 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 clicked
 		ARG 3 action
 	CLASS BedSleepingProblem
-		METHOD <init> (Ljava/lang/String;ILnet/minecraft/network/chat/Component;)V
-			ARG 3 message
+		METHOD <init> (Lnet/minecraft/network/chat/Component;)V
+			ARG 1 message

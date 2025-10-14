@@ -3,49 +3,38 @@ CLASS net/minecraft/server/jsonrpc/IncomingRpcMethod
 		ARG 1 api
 		ARG 2 params
 		ARG 3 client
-	METHOD lambda$method$0 (Lcom/mojang/serialization/Codec;Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$ParameterlessRpcMethodFunction;Lnet/minecraft/server/jsonrpc/api/MethodInfo;Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$Attributes;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$ParameterlessMethod;
-		ARG 2 info
-		ARG 3 attributes
-	METHOD lambda$method$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$RpcMethodFunction;Lnet/minecraft/server/jsonrpc/api/MethodInfo;Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$Attributes;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$Method;
-		ARG 3 info
-		ARG 4 attributes
-	METHOD lambda$method$3 (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;Lnet/minecraft/server/jsonrpc/api/MethodInfo;Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$Attributes;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$ParameterlessMethod;
-		ARG 2 info
-		ARG 3 attributes
-	METHOD method (Ljava/util/function/Function;Lcom/mojang/serialization/Codec;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
-		ARG 0 callback
-		ARG 1 resultCodec
-	METHOD method (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$ParameterlessRpcMethodFunction;Lcom/mojang/serialization/Codec;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
-		ARG 0 supplier
-		ARG 1 resultCodec
-	METHOD method (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$RpcMethodFunction;Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
-		ARG 0 function
-		ARG 1 paramsCodec
-		ARG 2 resultCodec
-	CLASS Factory
-		METHOD create (Lnet/minecraft/server/jsonrpc/api/MethodInfo;Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$Attributes;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod;
-			ARG 1 info
-			ARG 2 attributes
+	METHOD method (Ljava/util/function/Function;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
+		ARG 0 parameterlessFunction
+	METHOD method (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$ParameterlessRpcMethodFunction;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
+		ARG 0 parameterlessFunction
+	METHOD method (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$RpcMethodFunction;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
+		ARG 0 parameterFunction
 	CLASS RpcMethodFunction
 		METHOD apply (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Ljava/lang/Object;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/lang/Object;
 			ARG 1 api
 			ARG 2 params
 			ARG 3 client
 	CLASS IncomingRpcMethodBuilder
-		METHOD <init> (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$Factory;)V
-			ARG 1 method
+		METHOD <init> (Ljava/util/function/Function;)V
+			ARG 1 parameterlessFunction
+		METHOD <init> (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$ParameterlessRpcMethodFunction;)V
+			ARG 1 parameterlessFunction
+		METHOD <init> (Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$RpcMethodFunction;)V
+			ARG 1 parameterFunction
 		METHOD description (Ljava/lang/String;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
 			ARG 1 description
-		METHOD param (Lnet/minecraft/server/jsonrpc/api/ParamInfo;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
-			ARG 1 paramInfo
+		METHOD param (Ljava/lang/String;Lnet/minecraft/server/jsonrpc/api/Schema;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
+			ARG 1 name
+			ARG 2 schema
 		METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod;
 			ARG 1 registry
 			ARG 2 namespace
 		METHOD register (Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod;
 			ARG 1 registry
 			ARG 2 id
-		METHOD response (Lnet/minecraft/server/jsonrpc/api/ResultInfo;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
-			ARG 1 resultInfo
+		METHOD response (Ljava/lang/String;Lnet/minecraft/server/jsonrpc/api/Schema;)Lnet/minecraft/server/jsonrpc/IncomingRpcMethod$IncomingRpcMethodBuilder;
+			ARG 1 name
+			ARG 2 schema
 	CLASS ParameterlessRpcMethodFunction
 		METHOD apply (Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;Lnet/minecraft/server/jsonrpc/methods/ClientInfo;)Ljava/lang/Object;
 			ARG 1 api

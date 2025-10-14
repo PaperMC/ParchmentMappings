@@ -567,7 +567,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 usingItem
 	METHOD updateWalkAnimation (F)V
 		ARG 1 partialTick
-	METHOD wasRecentlyStabbed (Lnet/minecraft/world/entity/Entity;)Z
+	METHOD wasRecentlyStabbed (Lnet/minecraft/world/entity/Entity;I)Z
 		ARG 1 entity
+		ARG 2 contactCooldownTicks
 	METHOD wouldNotSuffocateAtTargetPose (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
