@@ -36,11 +36,9 @@ class DuplicateData {
                 return false
             }
 
-            if (methodMetadata.overrides.isNotEmpty()) {
-                for (override in methodMetadata.overrides) {
-                    error("Duplicate method already inherited from ${override.owner.mojangName.orElseThrow()}")
-                    return false
-                }
+            if (methodMetadata.parent.isPresent) {
+                error("Duplicate method already inherited from ${methodMetadata.parent.get().name}")
+                return false
             }
 
             if (methodMetadata.name.mojangName.orElseThrow() == ConstantDescs.INIT_NAME && !classMetadata.superName.isEmpty) {
@@ -83,10 +81,8 @@ class DuplicateData {
                 return ModifyingDataVisitor.Action.skip()
             }
 
-            if (methodMetadata.overrides.isNotEmpty()) {
-                for (override in methodMetadata.overrides) {
-                    return ModifyingDataVisitor.Action.delete()
-                }
+            if (methodMetadata.parent.isPresent) {
+                return ModifyingDataVisitor.Action.delete()
             }
 
             if (methodMetadata.name.mojangName.orElseThrow() == ConstantDescs.INIT_NAME && !classMetadata.superName.isEmpty) {
