@@ -1,14 +1,13 @@
 import org.parchmentmc.compass.CompassPlugin
 import org.parchmentmc.compass.data.validation.impl.MemberExistenceValidator
-import org.parchmentmc.compass.tasks.GenerateExport
-import org.parchmentmc.compass.tasks.GenerateSanitizedExport
-import org.parchmentmc.compass.tasks.SanitizeData
-import org.parchmentmc.compass.tasks.ValidateData
-import org.parchmentmc.compass.tasks.VersionDownload
+import org.parchmentmc.compass.data.validation.impl.MethodStandardsValidator
+import org.parchmentmc.compass.tasks.*
 import org.parchmentmc.tasks.*
 import org.parchmentmc.util.ArtifactVersionProvider
+import org.parchmentmc.util.replace
 import org.parchmentmc.validation.DuplicateData
 import org.parchmentmc.validation.MemberExistenceValidatorV2
+import org.parchmentmc.validation.MethodStandardsValidatorV2
 
 plugins {
     java
@@ -122,9 +121,8 @@ tasks.register<EnigmaRunner>("enigma") {
 }
 
 tasks.withType<ValidateData>().configureEach {
-    if (validators.removeIf { validator -> validator is MemberExistenceValidator }) {
-        validators.add(MemberExistenceValidatorV2())
-    }
+    validators.replace(MemberExistenceValidator::class) { -> MemberExistenceValidatorV2() }
+    validators.replace(MethodStandardsValidator::class) { -> MethodStandardsValidatorV2() }
     //validators.add(DuplicateData.DataValidator())
 }
 

@@ -20,7 +20,7 @@ There are two ways to configure the migration system:
     ```gradle
     compass {
         migration {
-            targetVersion = "1.19.4"
+            targetVersion = "25w41a"
         }
     }
     ```
@@ -29,7 +29,7 @@ There are two ways to configure the migration system:
    `gradle.properties` file or (as more recommended) the command-line:
 
     ```sh
-    ./gradlew -Pmigration-targetVersion="1.19.4" migrateData
+    ./gradlew -Pmigration-targetVersion="25w41a" migrateData
     ```
 
 Configuring the property through the extension overrides configuring the property through the project property.

@@ -3,6 +3,7 @@ package org.parchmentmc.util
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import nl.adaptivity.xmlutil.serialization.XML
+import org.gradle.api.NamedDomainObjectList
 import org.gradle.api.file.FileSystemLocation
 import org.gradle.api.provider.Provider
 import java.net.HttpURLConnection
@@ -13,6 +14,7 @@ import java.net.http.HttpResponse
 import java.nio.file.*
 import java.util.stream.Stream
 import java.util.stream.StreamSupport
+import kotlin.reflect.KClass
 
 val json = Json {
     ignoreUnknownKeys = true
@@ -23,6 +25,12 @@ val xml = XML {
     recommended()
     defaultPolicy {
         ignoreUnknownChildren()
+    }
+}
+
+fun <V : Any, O : V, N : V> NamedDomainObjectList<V>.replace(oldValueClass: KClass<O>, newValue: () -> N) {
+    if (removeIf { it::class == oldValueClass }) {
+        add(newValue())
     }
 }
 
