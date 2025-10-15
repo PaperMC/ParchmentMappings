@@ -61,6 +61,7 @@ dependencies {
 
     // Enigma, pretty interface for editing mappings
     enigma("cuchaz:enigma-swing:2.5.2")
+    enigma("org.vineflower:vineflower:1.11.1") // sync with mache
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer("org.parchmentmc.jam:jam-parchment:0.1.0")
