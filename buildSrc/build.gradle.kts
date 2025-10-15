@@ -31,8 +31,8 @@ dependencies {
     implementation("io.github.pdvrieze.xmlutil:core-jvm:0.86.3")
     implementation("io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3")
 
-    implementation("org.ow2.asm:asm:9.8")
-    implementation("org.ow2.asm:asm-tree:9.8")
+    implementation("org.ow2.asm:asm:9.9")
+    implementation("org.ow2.asm:asm-tree:9.9")
 
     implementation("org.parchmentmc:lodestone:0.10.0")
     implementation("org.parchmentmc:compass:0.10.0")

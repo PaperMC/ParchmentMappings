@@ -42,7 +42,7 @@ val remapper by configurations.registering
 val minecraft by configurations.registering
 
 configurations.jammer {
-    val asmVersion = "9.8"
+    val asmVersion = "9.9"
     resolutionStrategy.force(
         "org.ow2.asm:asm-tree:$asmVersion", // bump ParchmentJam's ASM for Java 21+ required since MC 1.20.5
         // update JarAwareMapping versions too to match the new version
