@@ -10,7 +10,7 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Attacks for the player the targeted entity with the currently equipped item. The equipped item has hurtEnemy called on it.
 		ARG 1 target
 	METHOD attackVisualEffects (Lnet/minecraft/world/entity/Entity;ZZZF)V
-		ARG 1 entity
+		ARG 1 target
 		ARG 2 isCritical
 		ARG 3 isSweep
 		ARG 4 isStrong
@@ -36,7 +36,7 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 pos
 		ARG 3 gameMode
 	METHOD canCriticalAttack (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
+		ARG 1 target
 	METHOD canEat (Z)Z
 		ARG 1 canAlwaysEat
 	METHOD canFallAtLeast (DDD)Z
@@ -57,7 +57,7 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD canPlayerFitWithinBlocksAndEntitiesWhen (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
 	METHOD cannotAttack (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
+		ARG 1 target
 	METHOD cannotAttackWithItem (Lnet/minecraft/world/item/ItemStack;I)Z
 		ARG 1 stack
 		ARG 2 adjustTicks
@@ -76,12 +76,12 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 target
 	METHOD damageStatsAndHearts (Lnet/minecraft/world/entity/Entity;F)V
-		ARG 1 entity
+		ARG 1 target
 		ARG 2 previousHealth
 	METHOD decorateDisplayNameComponent (Lnet/minecraft/network/chat/MutableComponent;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 1 displayName
 	METHOD deflectProjectile (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
+		ARG 1 target
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
 		ARG 1 damageSource
@@ -177,7 +177,7 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 isCritical
 		ARG 3 extraKnockback
 	METHOD itemAttackInteraction (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/damagesource/DamageSource;Z)V
-		ARG 1 entity
+		ARG 1 target
 		ARG 2 stack
 		ARG 3 damageSource
 		ARG 4 postAttackEffects
