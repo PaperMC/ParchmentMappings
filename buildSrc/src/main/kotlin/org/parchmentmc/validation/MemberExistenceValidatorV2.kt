@@ -14,7 +14,7 @@ class MemberExistenceValidatorV2 : MemberExistenceValidator() {
         super.visitField(classData, fieldData, classMetadata, fieldMetadata)
         if (fieldMetadata != null) {
             if (fieldMetadata.descriptor.mojangName.orElseThrow() != fieldData.descriptor) {
-                error("Field descriptor does not match according to metadata");
+                error("Field descriptor does not match according to metadata.")
             }
         } else {
             // Fields existence are already checked in MemberExistenceValidator

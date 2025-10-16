@@ -1,0 +1,10 @@
+{
+  "services": {
+    "name_proposal": {
+      "id": "paper:name_proposal"
+    },
+    "jar_indexer": {
+      "id": "paper:jar_indexer"
+    }
+  }
+}

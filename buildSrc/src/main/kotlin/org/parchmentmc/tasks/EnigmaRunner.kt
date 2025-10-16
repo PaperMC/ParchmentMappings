@@ -20,11 +20,15 @@ abstract class EnigmaArgumentProvider : CommandLineArgumentProvider {
     @get:InputDirectory
     abstract val mappings: DirectoryProperty
 
+    @get:InputFile
+    abstract val profile: RegularFileProperty
+
     override fun asArguments(): Iterable<String> {
         val args = mutableListOf("--no-edit-all", "--edit-parameters", "--edit-javadocs", "--single-class-tree")
 
         args.add("--jar=${inputJar.get().asFile.absolutePath}")
         args.add("--mappings=${mappings.get().asFile.absolutePath}")
+        args.add("--profile=${profile.get().asFile.absolutePath}")
 
         return args.toList()
     }
@@ -41,10 +45,14 @@ abstract class EnigmaRunner @Inject constructor(
     @get:InputDirectory
     abstract val mappings: DirectoryProperty
 
+    @get:InputFile
+    abstract val profile: RegularFileProperty
+
     init {
         val provider = objects.newInstance<EnigmaArgumentProvider>()
         provider.inputJar.set(inputJar)
         provider.mappings.set(mappings)
+        provider.profile.set(profile)
         argumentProviders.add(provider)
 
         // Enigma runs on Java 17. If the Gradle JVM supports Java 17, then we are fine

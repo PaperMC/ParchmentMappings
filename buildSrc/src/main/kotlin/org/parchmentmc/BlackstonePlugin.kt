@@ -30,13 +30,13 @@ class BlackstonePlugin : Plugin<Project> {
             dependencies.add(target.dependencyFactory.create(cfc))
         }
         // Fix faulty task wiring
-        target.tasks.withType(SanitizeData::class.java).configureEach {
+        target.tasks.withType<SanitizeData>().configureEach {
             inputs.files(blackstoneConfig)
         }
-        target.tasks.withType(ValidateData::class.java).configureEach {
+        target.tasks.withType<ValidateData>().configureEach {
             inputs.files(blackstoneConfig)
         }
-        target.tasks.withType(GenerateExport::class.java).configureEach {
+        target.tasks.withType<GenerateExport>().configureEach {
             inputs.files(blackstoneConfig)
         }
 
@@ -64,7 +64,7 @@ class BlackstonePlugin : Plugin<Project> {
         val downloadVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
             group = PLUGIN_TASK_GROUP
             input = downloadLauncherMeta.flatMap { it.output }
-            output = target.layout.buildDirectory.file(name + ".json") // Remove subdir to fix caching
+            output = target.layout.buildDirectory.file("$name.json") // Remove subdir to fix caching
             outputs.cacheIf { true }
         }
 
