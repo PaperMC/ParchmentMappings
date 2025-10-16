@@ -93,6 +93,10 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
                 }
 
                 val paramIndex = fromLvtToParamIndex(obfEntry.index, parent, offsetLvtIndex)
+                if (paramIndex == -1) {
+                    return Optional.empty() // happens for faulty param detection (like Player#actuallyHurt)
+                }
+
                 val desc = parent.desc.argumentDescs[paramIndex]
                 if (desc.isPrimitive) {
                     return Optional.empty()
