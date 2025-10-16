@@ -25,6 +25,10 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lnet/minecraft/client/renderer/SubmitNodeCollection;" to "nodeCollection",
         "Lnet/minecraft/client/renderer/SubmitNodeStorage;" to "nodeStorage",
         "Lnet/minecraft/client/gui/ActiveTextCollector;" to "textCollector",
+        "Lnet/minecraft/world/attribute/SpatialAttributeInterpolator;" to "interpolator",
+        "Lnet/minecraft/client/gui/TextAlignment;" to "alignment",
+        "Lnet/minecraft/util/FormattedCharSequence;" to "text",
+        "Lnet/minecraft/client/gui/navigation/ScreenRectangle;" to "rectangle",
         // server
         "Lcom/mojang/authlib/GameProfile;" to "profile",
 
@@ -33,7 +37,10 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lnet/minecraft/world/level/block/state/BlockState;" to "state",
         "Lnet/minecraft/core/BlockPos;" to "pos",
         $$"Lnet/minecraft/core/BlockPos$MutableBlockPos;" to "pos",
+        "Lnet/minecraft/world/entity/EquipmentSlot;" to "slot",
         "Lnet/minecraft/resources/ResourceLocation;" to "location",
+        "Lnet/minecraft/world/entity/ContainerUser;" to "user",
+        "Lnet/minecraft/world/effect/MobEffectInstance;" to "effectInstance",
 
         "Lnet/minecraft/server/level/WorldGenRegion;" to "region",
         "Lnet/minecraft/server/level/ServerLevel;" to "level",
