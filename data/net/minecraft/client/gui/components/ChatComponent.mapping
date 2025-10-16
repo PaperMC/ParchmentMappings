@@ -85,7 +85,7 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 	CLASS LineConsumer
 		METHOD accept (Lnet/minecraft/client/GuiMessage$Line;IF)V
 			ARG 1 line
-			ARG 2 x
+			ARG 2 index
 			ARG 3 fade
 	CLASS AlphaCalculator
 		METHOD calculate (Lnet/minecraft/client/GuiMessage$Line;)F
@@ -110,7 +110,7 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 			ARG 2 minY
 			ARG 3 maxX
 			ARG 4 maxY
-			ARG 5 alpha
+			ARG 5 opacity
 			ARG 6 tag
 		METHOD handleTagIcon (IIZLnet/minecraft/client/GuiMessageTag;Lnet/minecraft/client/GuiMessageTag$Icon;)V
 			ARG 1 x

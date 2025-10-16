@@ -82,7 +82,7 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 7 reachRange
 		ARG 8 speedModifier
 	METHOD moveTo (Lnet/minecraft/world/entity/Entity;D)Z
-		COMMENT Try to find and set a path to LivingEntity. Returns {@code true} if successful.
+		COMMENT Try to find and set a path to the entity. Returns {@code true} if successful.
 		ARG 1 entity
 		ARG 2 speedModifier
 	METHOD moveTo (Lnet/minecraft/world/level/pathfinder/Path;D)Z

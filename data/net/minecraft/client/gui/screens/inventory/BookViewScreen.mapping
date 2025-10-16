@@ -11,6 +11,8 @@ CLASS net/minecraft/client/gui/screens/inventory/BookViewScreen
 	METHOD forcePage (I)Z
 		COMMENT I'm not sure why this exists. The function it calls is public and does all the work.
 		ARG 1 pageNum
+	METHOD handleClickEvent (Lnet/minecraft/network/chat/ClickEvent;)Z
+		ARG 1 clickEvent
 	METHOD lambda$createMenuControls$0 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$createPageControlButtons$1 (Lnet/minecraft/client/gui/components/Button;)V
@@ -26,6 +28,9 @@ CLASS net/minecraft/client/gui/screens/inventory/BookViewScreen
 	METHOD setPage (I)Z
 		COMMENT Moves the book to the specified page and returns {@code true} if it exists, {@code false} otherwise.
 		ARG 1 pageNum
+	METHOD visitText (Lnet/minecraft/client/gui/ActiveTextCollector;Z)V
+		ARG 1 textCollector
+		ARG 2 contentOnly
 	CLASS BookAccess
 		METHOD fromItem (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/client/gui/screens/inventory/BookViewScreen$BookAccess;
 			ARG 0 stack

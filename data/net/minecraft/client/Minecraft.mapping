@@ -85,7 +85,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD getLevelSource ()Lnet/minecraft/world/level/storage/LevelStorageSource;
 		COMMENT Returns the save loader that is currently being used
 	METHOD getMusicManager ()Lnet/minecraft/client/sounds/MusicManager;
-		COMMENT Return the musicTicker's instance
+		COMMENT Return the musicManager's instance
 	METHOD getSingleplayerServer ()Lnet/minecraft/client/server/IntegratedServer;
 		COMMENT Returns the currently running integrated server
 	METHOD getTickTargetMillis (F)F

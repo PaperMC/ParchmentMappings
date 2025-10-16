@@ -10,5 +10,5 @@ CLASS net/minecraft/world/attribute/GaussianSampler
 			ARG 3 z
 	CLASS Accumulator
 		METHOD accumulate (DLjava/lang/Object;)V
-			ARG 1 value
-			ARG 3 object
+			ARG 1 weight
+			ARG 3 value
