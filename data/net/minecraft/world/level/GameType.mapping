@@ -20,7 +20,7 @@ CLASS net/minecraft/world/level/GameType
 	METHOD getNullableId (Lnet/minecraft/world/level/GameType;)I
 		ARG 0 gameType
 	METHOD isBlockPlacingRestricted ()Z
-		COMMENT Returns {@code true} if this is the ADVENTURE game type
+		COMMENT Returns {@code true} if this is the ADVENTURE or SPECTATOR game type
 	METHOD isCreative ()Z
 		COMMENT Returns {@code true} if this is the CREATIVE game type
 	METHOD isSurvival ()Z

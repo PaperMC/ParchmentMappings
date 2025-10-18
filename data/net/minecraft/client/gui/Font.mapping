@@ -85,7 +85,7 @@ CLASS net/minecraft/client/gui/Font
 		ARG 1 text
 		ARG 2 maxWidth
 	METHOD width (Ljava/lang/String;)I
-		COMMENT Returns the width of this string. Equivalent of StringSplitter.stringWidth(text).
+		COMMENT Returns the width of this string. Equivalent of FontMetrics.stringWidth(text).
 		ARG 1 text
 	METHOD width (Lnet/minecraft/network/chat/FormattedText;)I
 		ARG 1 text
