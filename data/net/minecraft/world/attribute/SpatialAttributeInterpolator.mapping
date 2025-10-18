@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/attribute/SpatialAttributeInterpolator
 	METHOD accumulate (DLnet/minecraft/world/attribute/EnvironmentAttributeMap;)Lnet/minecraft/world/attribute/SpatialAttributeInterpolator;
-		ARG 1 value
+		ARG 1 weight
 		ARG 3 attributes
 	METHOD applyAttributeLayer (Lnet/minecraft/world/attribute/EnvironmentAttribute;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 attribute
