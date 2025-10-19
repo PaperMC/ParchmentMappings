@@ -64,18 +64,18 @@ dependencies {
     remapper("net.neoforged:AutoRenamingTool:2.0.15")
 
     // Enigma, pretty interface for editing mappings
-    enigma("cuchaz:enigma-swing:2.5.2")
+    enigma("cuchaz:enigma-swing:4.0.2")
     enigma("org.vineflower:vineflower:1.11.1") // sync with mache
 
     enigma(enigmaPlugin.output)
 
     enigmaPlugin.implementationConfigurationName(gradleKotlinDsl())
-    enigmaPlugin.implementationConfigurationName("cuchaz:enigma:2.5.2")
+    enigmaPlugin.implementationConfigurationName("cuchaz:enigma:4.0.2")
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer("org.parchmentmc.jam:jam-parchment:0.1.0")
 
-    // Minecraft classpath for inheritance check in ART and later for enigma v3+
+    // Minecraft classpath for inheritance check in ART
     val manifest = project.plugins.getPlugin(CompassPlugin::class).manifestsDownloader.versionManifest
     for (library in manifest.get().libraries) {
         minecraft(library.name) {

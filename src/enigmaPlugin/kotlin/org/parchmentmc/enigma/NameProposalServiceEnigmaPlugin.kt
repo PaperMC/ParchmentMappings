@@ -9,7 +9,7 @@ class NameProposalServiceEnigmaPlugin : EnigmaPlugin {
 
     override fun init(ctx: EnigmaPluginContext) {
         val service = EnigmaNameProposalService()
-        ctx.registerService("paper:name_proposal", NameProposalService.TYPE) { _ -> service }
-        ctx.registerService("paper:jar_indexer", JarIndexerService.TYPE) { _ -> service }
+        ctx.registerService("paper:name_proposal", NameProposalService.TYPE, { service })
+        ctx.registerService("paper:jar_indexer", JarIndexerService.TYPE, { service })
     }
 }

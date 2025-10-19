@@ -1,8 +1,8 @@
 package org.parchmentmc.enigma
 
-import cuchaz.enigma.analysis.index.JarIndex
 import cuchaz.enigma.api.service.JarIndexerService
 import cuchaz.enigma.api.service.NameProposalService
+import cuchaz.enigma.api.view.index.JarIndexView
 import cuchaz.enigma.classprovider.ClassProvider
 import cuchaz.enigma.translation.mapping.EntryRemapper
 import cuchaz.enigma.translation.representation.MethodDescriptor
@@ -13,9 +13,12 @@ import cuchaz.enigma.translation.representation.entry.MethodEntry
 import java.util.*
 import javax.lang.model.SourceVersion
 
+const val ACC_STATIC = 0x0008
+const val ACC_ENUM = 0x4000
+
 class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
 
-    lateinit var indexer: JarIndex
+    lateinit var indexer: JarIndexView
 
     val suggestions = mapOf(
         // client
@@ -124,7 +127,7 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lnet/minecraft/network/RegistryFriendlyByteBuf;" to "buffer",
     )
 
-    override fun acceptJar(scope: Set<String>, classProvider: ClassProvider, jarIndex: JarIndex) {
+    override fun acceptJar(scope: Set<String>, classProvider: ClassProvider, jarIndex: JarIndexView) {
         indexer = jarIndex
     }
 
@@ -142,19 +145,23 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         return false
     }
 
+    operator fun Int.contains(value: Int): Boolean {
+        return value and this != 0
+    }
+
     private fun isEnumConstructor(method: MethodEntry): Boolean {
         if (!method.isConstructor) {
             return false
         }
 
-        return indexer.entryIndex.getClassAccess(method.parent)?.isEnum ?: false
+        return ACC_ENUM in indexer.entryIndex.getAccess(method.parent)
     }
 
     override fun proposeName(obfEntry: Entry<*>, remapper: EntryRemapper): Optional<String> {
         if (obfEntry is LocalVariableEntry && obfEntry.isArgument) {
             val parent = obfEntry.parent
             if (parent != null) {
-                val isStatic = indexer.entryIndex.getMethodAccess(parent)?.isStatic ?: false
+                val isStatic = ACC_STATIC in indexer.entryIndex.getAccess(parent)
 
                 var offsetLvtIndex = 0
                 if (!isStatic) {

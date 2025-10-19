@@ -36,7 +36,7 @@ dependencies {
 
     implementation("org.parchmentmc:lodestone:0.10.0")
     implementation("org.parchmentmc:compass:0.10.0")
-    implementation("cuchaz:enigma:2.5.2")
+    implementation("cuchaz:enigma:4.0.2")
     implementation("org.cadixdev:lorenz:0.5.8")
     implementation("org.cadixdev:lorenz-io-enigma:0.5.8")
 }
