@@ -23,6 +23,8 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
     val suggestions = mapOf(
         // client
         "Lcom/mojang/blaze3d/vertex/VertexConsumer;" to "consumer",
+        "Lcom/mojang/blaze3d/platform/NativeImage;" to "image",
+        "Lcom/mojang/blaze3d/pipeline/RenderPipeline;" to "pipeline",
         "Lnet/minecraft/client/renderer/MultiBufferSource;" to "bufferSource",
         "Lnet/minecraft/client/renderer/SubmitNodeCollector;" to "nodeCollector",
         "Lnet/minecraft/client/renderer/SubmitNodeCollection;" to "nodeCollection",
@@ -35,6 +37,7 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lnet/minecraft/client/resources/model/MaterialSet;" to "materials",
         "Lnet/minecraft/client/particle/SpriteSet;" to "sprites",
         "Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;" to "sprite",
+        "Lnet/minecraft/client/renderer/texture/MipmapStrategy;" to "strategy",
         "Lnet/minecraft/client/multiplayer/ClientLevel;" to "level",
         "Lnet/minecraft/client/player/AbstractClientPlayer;" to "player",
         "Lnet/minecraft/client/input/KeyEvent;" to "event",
