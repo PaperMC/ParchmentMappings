@@ -11,5 +11,5 @@ CLASS com/mojang/realmsclient/gui/screens/configuration/RealmsSubscriptionTab
 		ARG 3 button
 	METHOD lambda$new$2 (Lnet/minecraft/client/Minecraft;Lcom/mojang/realmsclient/gui/screens/configuration/RealmsConfigureWorldScreen;Lnet/minecraft/client/gui/components/Button;)V
 		ARG 3 button
-	METHOD localPresentation (J)Lnet/minecraft/network/chat/Component;
-		ARG 0 time
+	METHOD localPresentation (Ljava/time/Instant;)Lnet/minecraft/network/chat/Component;
+		ARG 0 date

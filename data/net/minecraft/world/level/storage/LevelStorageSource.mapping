@@ -55,9 +55,9 @@ CLASS net/minecraft/world/level/storage/LevelStorageSource
 	METHOD validateAndCreateAccess (Ljava/lang/String;)Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;
 		ARG 1 saveName
 	CLASS LevelDirectory
-		METHOD corruptedDataFile (Ljava/time/LocalDateTime;)Ljava/nio/file/Path;
+		METHOD corruptedDataFile (Ljava/time/ZonedDateTime;)Ljava/nio/file/Path;
 			ARG 1 dateTime
-		METHOD rawDataFile (Ljava/time/LocalDateTime;)Ljava/nio/file/Path;
+		METHOD rawDataFile (Ljava/time/ZonedDateTime;)Ljava/nio/file/Path;
 			ARG 1 dateTime
 		METHOD resourcePath (Lnet/minecraft/world/level/storage/LevelResource;)Ljava/nio/file/Path;
 			ARG 1 resource

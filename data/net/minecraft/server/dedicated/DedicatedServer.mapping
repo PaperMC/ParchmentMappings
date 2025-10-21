@@ -24,8 +24,6 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 		ARG 2 source
 	METHOD initServer ()Z
 		COMMENT Initialises the server and starts it.
-	METHOD isEpollEnabled ()Z
-		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD isPublished ()Z
 		COMMENT Returns {@code true} if this integrated server is open to LAN
 	METHOD isUnderSpawnProtection (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Z
@@ -73,3 +71,5 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 		ARG 1 viewDistance
 	METHOD stopServer ()V
 		COMMENT Saves all necessary data as preparation for stopping the server.
+	METHOD useNativeTransport ()Z
+		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux

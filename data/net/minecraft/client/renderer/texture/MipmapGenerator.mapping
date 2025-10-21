@@ -2,19 +2,20 @@ CLASS net/minecraft/client/renderer/texture/MipmapGenerator
 	METHOD accumulate (I[F)V
 		ARG 0 color
 		ARG 1 buffer
-	METHOD alphaBlend (IIII)I
-		ARG 0 col0
-		ARG 1 col1
-		ARG 2 col2
-		ARG 3 col3
+	METHOD alphaBlend (IILcom/mojang/blaze3d/platform/NativeImage;ILnet/minecraft/client/renderer/texture/MipmapStrategy;)I
+		ARG 0 x
+		ARG 1 y
+		ARG 2 image
+		ARG 3 index
+		ARG 4 strategy
 	METHOD darkenedAlphaBlend (IIII)I
 		ARG 0 col0
 		ARG 1 col1
 		ARG 2 col2
 		ARG 3 col3
-	METHOD generateMipLevels ([Lcom/mojang/blaze3d/platform/NativeImage;IZ)[Lcom/mojang/blaze3d/platform/NativeImage;
+	METHOD generateMipLevels ([Lcom/mojang/blaze3d/platform/NativeImage;ILnet/minecraft/client/renderer/texture/MipmapStrategy;)[Lcom/mojang/blaze3d/platform/NativeImage;
 		ARG 0 images
 		ARG 1 mipLevel
-		ARG 2 darkenedCutoutMipmap
+		ARG 2 strategy
 	METHOD hasTransparentPixel (Lcom/mojang/blaze3d/platform/NativeImage;)Z
 		ARG 0 image

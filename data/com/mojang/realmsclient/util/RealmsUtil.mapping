@@ -1,7 +1,7 @@
 CLASS com/mojang/realmsclient/util/RealmsUtil
 	METHOD convertToAgePresentation (J)Lnet/minecraft/network/chat/Component;
 		ARG 0 millis
-	METHOD convertToAgePresentationFromInstant (Ljava/util/Date;)Lnet/minecraft/network/chat/Component;
+	METHOD convertToAgePresentationFromInstant (Ljava/time/Instant;)Lnet/minecraft/network/chat/Component;
 		ARG 0 date
 	METHOD openScreenAndLogOnFailure (Ljava/util/function/Function;Ljava/lang/String;)Ljava/util/function/Consumer;
 		ARG 0 screenSupplier

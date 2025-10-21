@@ -11,8 +11,6 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 1 tracyFrameCapture
 	METHOD getSequentialBuffer (Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;)Lcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer;
 		ARG 0 formatMode
-	METHOD getShaderTexture (I)Lcom/mojang/blaze3d/systems/RenderSystem$TextureAndSampler;
-		ARG 0 id
 	METHOD initRenderer (JIZLjava/util/function/BiFunction;Z)V
 		ARG 0 window
 		ARG 2 glDebugVerbosity
@@ -40,15 +38,6 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 0 shaderFog
 	METHOD setShaderLights (Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
 		ARG 0 shaderLights
-	METHOD setShaderTexture (ILcom/mojang/blaze3d/textures/GpuTextureView;Lcom/mojang/blaze3d/textures/GpuSampler;)V
-		ARG 0 textureId
-		ARG 1 texture
-		ARG 2 sampler
-	METHOD setTextureMatrix (Lorg/joml/Matrix4f;)V
-		ARG 0 textureMatrix
-	METHOD setupOverlayColor (Lcom/mojang/blaze3d/textures/GpuTextureView;Lcom/mojang/blaze3d/textures/GpuSampler;)V
-		ARG 0 texture
-		ARG 1 sampler
 	CLASS AutoStorageIndexBuffer
 		METHOD <init> (IILcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer$IndexGenerator;)V
 			ARG 1 vertexStride

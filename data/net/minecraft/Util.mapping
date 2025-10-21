@@ -173,6 +173,8 @@ CLASS net/minecraft/Util
 		ARG 0 provider
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
+	METHOD localizedDateFormatter (Ljava/time/format/FormatStyle;)Ljava/time/format/DateTimeFormatter;
+		ARG 0 dateTimeStyle
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V
 		ARG 0 message
 	METHOD logAndPauseIfInIde (Ljava/lang/String;Ljava/lang/Throwable;)V

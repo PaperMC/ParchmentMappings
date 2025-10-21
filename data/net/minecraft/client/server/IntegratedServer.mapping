@@ -14,8 +14,6 @@ CLASS net/minecraft/client/server/IntegratedServer
 		ARG 1 waitForShutdown
 	METHOD initServer ()Z
 		COMMENT Initialises the server and starts it.
-	METHOD isEpollEnabled ()Z
-		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD isPublished ()Z
 		COMMENT Returns {@code true} if this integrated server is open to LAN
 	METHOD onServerCrash (Lnet/minecraft/CrashReport;)V
@@ -35,3 +33,5 @@ CLASS net/minecraft/client/server/IntegratedServer
 	METHOD tickServer (Ljava/util/function/BooleanSupplier;)V
 		COMMENT Main function called by runServer() every loop.
 		ARG 1 hasTimeLeft
+	METHOD useNativeTransport ()Z
+		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux

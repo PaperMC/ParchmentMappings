@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/renderer/special/SkullSpecialRenderer
-	METHOD <init> (Lnet/minecraft/client/model/SkullModelBase;FLnet/minecraft/client/renderer/RenderType;)V
+	METHOD <init> (Lnet/minecraft/client/model/SkullModelBase;FLnet/minecraft/client/renderer/rendertype/RenderType;)V
 		ARG 1 model
 		ARG 2 animation
 		ARG 3 renderType

@@ -5,6 +5,6 @@ CLASS net/minecraft/client/renderer/feature/ModelPartFeatureRenderer
 		ARG 3 outlineBufferSource
 		ARG 4 crumblingBufferSource
 	CLASS Storage
-		METHOD add (Lnet/minecraft/client/renderer/RenderType;Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelPartSubmit;)V
+		METHOD add (Lnet/minecraft/client/renderer/rendertype/RenderType;Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelPartSubmit;)V
 			ARG 1 renderType
 			ARG 2 submit

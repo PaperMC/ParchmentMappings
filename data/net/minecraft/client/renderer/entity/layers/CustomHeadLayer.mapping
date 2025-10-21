@@ -10,7 +10,7 @@ CLASS net/minecraft/client/renderer/entity/layers/CustomHeadLayer
 		ARG 4 transforms
 	METHOD lambda$new$0 (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/model/SkullModelBase;
 		ARG 1 type
-	METHOD resolveSkullRenderType (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/renderer/RenderType;
+	METHOD resolveSkullRenderType (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 1 renderState
 		ARG 2 type
 	METHOD translateToHead (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/entity/layers/CustomHeadLayer$Transforms;)V

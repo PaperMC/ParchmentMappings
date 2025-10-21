@@ -249,6 +249,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Gets the movement speed used for the new AI system.
 	METHOD getSwimAmount (F)F
 		ARG 1 partialTick
+	METHOD getTicksSinceEnemyHit (F)F
+		ARG 1 partialTick
 	METHOD getTicksUsingItem (F)F
 		ARG 1 partialTick
 	METHOD getViewYRot (F)F

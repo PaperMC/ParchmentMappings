@@ -219,10 +219,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 2 elementReader
 	METHOD readContainerId (Lio/netty/buffer/ByteBuf;)I
 		ARG 0 buffer
-	METHOD readDate ()Ljava/util/Date;
-		COMMENT Read a timestamp as milliseconds since the unix epoch.
-		COMMENT
-		COMMENT @see #writeDate
 	METHOD readEither (Lnet/minecraft/network/codec/StreamDecoder;Lnet/minecraft/network/codec/StreamDecoder;)Lcom/mojang/datafixers/util/Either;
 		ARG 1 leftReader
 		ARG 2 rightReader
@@ -293,6 +289,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 length
 	METHOD readSlice (I)Lio/netty/buffer/ByteBuf;
 		ARG 1 length
+	METHOD readString (ILjava/nio/charset/Charset;)Ljava/lang/String;
+		ARG 1 length
+		ARG 2 charset
 	METHOD readUUID ()Ljava/util/UUID;
 		COMMENT Reads a UUID encoded as two longs from this buffer.
 		COMMENT
@@ -525,11 +524,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeContainerId (Lio/netty/buffer/ByteBuf;I)V
 		ARG 0 buffer
 		ARG 1 containerId
-	METHOD writeDate (Ljava/util/Date;)Lnet/minecraft/network/FriendlyByteBuf;
-		COMMENT Write a timestamp as milliseconds since the unix epoch.
-		COMMENT
-		COMMENT @see #readDate
-		ARG 1 time
 	METHOD writeDouble (D)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
 	METHOD writeEither (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;)V

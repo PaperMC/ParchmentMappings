@@ -10,7 +10,7 @@ CLASS net/minecraft/client/renderer/entity/LivingEntityRenderer
 	METHOD getOverlayCoords (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;F)I
 		ARG 0 renderState
 		ARG 1 overlay
-	METHOD getRenderType (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;ZZZ)Lnet/minecraft/client/renderer/RenderType;
+	METHOD getRenderType (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;ZZZ)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 1 renderState
 		ARG 2 isVisible
 		ARG 3 renderTranslucent

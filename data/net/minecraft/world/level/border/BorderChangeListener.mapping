@@ -1,9 +1,10 @@
 CLASS net/minecraft/world/level/border/BorderChangeListener
-	METHOD onLerpSize (Lnet/minecraft/world/level/border/WorldBorder;DDJ)V
+	METHOD onLerpSize (Lnet/minecraft/world/level/border/WorldBorder;DDJJ)V
 		ARG 1 border
 		ARG 2 oldSize
 		ARG 4 newSize
 		ARG 6 time
+		ARG 8 gameTime
 	METHOD onSetCenter (Lnet/minecraft/world/level/border/WorldBorder;DD)V
 		ARG 1 border
 		ARG 2 x

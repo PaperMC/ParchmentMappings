@@ -4,19 +4,19 @@ CLASS net/minecraft/client/renderer/blockentity/SkullBlockRenderer
 	METHOD createModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/model/SkullModelBase;
 		ARG 0 modelSet
 		ARG 1 type
-	METHOD getPlayerSkinRenderType (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+	METHOD getPlayerSkinRenderType (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 textureLocation
-	METHOD getSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
+	METHOD getSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 type
 		ARG 1 textureLocation
 	METHOD lambda$new$1 (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/model/SkullModelBase;
 		ARG 1 type
 	METHOD lambda$static$0 (Ljava/util/HashMap;)V
 		ARG 0 skinByType
-	METHOD resolveSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/level/block/entity/SkullBlockEntity;)Lnet/minecraft/client/renderer/RenderType;
+	METHOD resolveSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/level/block/entity/SkullBlockEntity;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 1 type
 		ARG 2 blockEntity
-	METHOD submitSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/RenderType;ILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
+	METHOD submitSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/rendertype/RenderType;ILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
 		ARG 0 direction
 		ARG 1 yRot
 		ARG 2 mouthAnimation

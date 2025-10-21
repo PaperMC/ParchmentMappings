@@ -44,8 +44,9 @@ CLASS net/minecraft/client/model/HumanoidModel
 	CLASS ArmPose
 		METHOD <init> (Ljava/lang/String;IZ)V
 			ARG 3 twoHanded
-		METHOD animateUseItem (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
-			ARG 1 poseStack
-			ARG 2 ticksUsingItem
-			ARG 3 arm
-			ARG 4 stack
+		METHOD animateUseItem (Lnet/minecraft/client/renderer/entity/state/ArmedEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
+			ARG 1 renderState
+			ARG 2 poseStack
+			ARG 3 ticksUsingItem
+			ARG 4 arm
+			ARG 5 stack

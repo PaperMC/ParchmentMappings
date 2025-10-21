@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/renderer/MultiBufferSource
-	METHOD getBuffer (Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+	METHOD getBuffer (Lnet/minecraft/client/renderer/rendertype/RenderType;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 renderType
 	METHOD immediate (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder;)Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
 		ARG 0 sharedBuffer
@@ -10,8 +10,8 @@ CLASS net/minecraft/client/renderer/MultiBufferSource
 		METHOD <init> (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder;Ljava/util/SequencedMap;)V
 			ARG 1 sharedBuffer
 			ARG 2 fixedBuffers
-		METHOD endBatch (Lnet/minecraft/client/renderer/RenderType;)V
+		METHOD endBatch (Lnet/minecraft/client/renderer/rendertype/RenderType;)V
 			ARG 1 renderType
-		METHOD endBatch (Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/BufferBuilder;)V
+		METHOD endBatch (Lnet/minecraft/client/renderer/rendertype/RenderType;Lcom/mojang/blaze3d/vertex/BufferBuilder;)V
 			ARG 1 renderType
 			ARG 2 builder

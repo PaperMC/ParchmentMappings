@@ -4,11 +4,14 @@ CLASS net/minecraft/client/model/SpearAnimations
 		ARG 1 poseStack
 		ARG 2 direction
 		ARG 3 arm
-	METHOD firstPersonUse (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 0 poseStack
-		ARG 1 ticksUsingItem
-		ARG 2 arm
-		ARG 3 stack
+	METHOD firstPersonUse (FLcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 0 ticksSinceEnemyHit
+		ARG 1 poseStack
+		ARG 2 ticksUsingItem
+		ARG 3 arm
+		ARG 4 stack
+	METHOD hitFeedbackAmount (F)F
+		ARG 0 ticksSinceEnemyHit
 	METHOD progress (FFF)F
 		ARG 0 swingProgress
 		ARG 1 from
@@ -25,11 +28,12 @@ CLASS net/minecraft/client/model/SpearAnimations
 		ARG 2 isRight
 		ARG 3 stack
 		ARG 4 renderState
-	METHOD thirdPersonUseItem (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 0 poseStack
-		ARG 1 ticksUsingItem
-		ARG 2 arm
-		ARG 3 stack
+	METHOD thirdPersonUseItem (Lnet/minecraft/client/renderer/entity/state/ArmedEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 0 renderState
+		ARG 1 poseStack
+		ARG 2 ticksUsingItem
+		ARG 3 arm
+		ARG 4 stack
 	CLASS UseParams
 		METHOD fromKineticWeapon (Lnet/minecraft/world/item/component/KineticWeapon;F)Lnet/minecraft/client/model/SpearAnimations$UseParams;
 			ARG 0 weapon

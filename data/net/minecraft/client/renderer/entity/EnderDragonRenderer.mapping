@@ -7,7 +7,7 @@ CLASS net/minecraft/client/renderer/entity/EnderDragonRenderer
 		ARG 4 poseStack
 		ARG 5 nodeCollector
 		ARG 6 packedLight
-	METHOD submitRays (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/RenderType;)V
+	METHOD submitRays (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/client/renderer/SubmitNodeCollector;Lnet/minecraft/client/renderer/rendertype/RenderType;)V
 		ARG 0 poseStack
 		ARG 1 dragonDeathCompletion
 		ARG 2 nodeCollector

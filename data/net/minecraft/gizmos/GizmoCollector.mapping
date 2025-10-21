@@ -1,3 +1,5 @@
 CLASS net/minecraft/gizmos/GizmoCollector
 	METHOD add (Lnet/minecraft/gizmos/Gizmo;)Lnet/minecraft/gizmos/GizmoProperties;
 		ARG 1 gizmo
+	METHOD lambda$static$0 (Lnet/minecraft/gizmos/Gizmo;)Lnet/minecraft/gizmos/GizmoProperties;
+		ARG 0 gizmo

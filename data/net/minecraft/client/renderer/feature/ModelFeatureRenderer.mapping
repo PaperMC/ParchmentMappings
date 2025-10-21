@@ -9,7 +9,7 @@ CLASS net/minecraft/client/renderer/feature/ModelFeatureRenderer
 		ARG 2 outlineBufferSource
 		ARG 3 submits
 		ARG 4 crumblingBufferSource
-	METHOD renderModel (Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/OutlineBufferSource;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
+	METHOD renderModel (Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;Lnet/minecraft/client/renderer/rendertype/RenderType;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/renderer/OutlineBufferSource;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 submit
 		ARG 2 renderType
 		ARG 3 consumer
@@ -21,6 +21,6 @@ CLASS net/minecraft/client/renderer/feature/ModelFeatureRenderer
 		ARG 3 translucentSubmits
 		ARG 4 crumblingBufferSource
 	CLASS Storage
-		METHOD add (Lnet/minecraft/client/renderer/RenderType;Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;)V
+		METHOD add (Lnet/minecraft/client/renderer/rendertype/RenderType;Lnet/minecraft/client/renderer/SubmitNodeStorage$ModelSubmit;)V
 			ARG 1 renderType
 			ARG 2 submit

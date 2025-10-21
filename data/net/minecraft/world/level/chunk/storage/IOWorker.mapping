@@ -14,7 +14,7 @@ CLASS net/minecraft/world/level/chunk/storage/IOWorker
 	METHOD isOldChunkAround (Lnet/minecraft/world/level/ChunkPos;I)Z
 		ARG 1 chunkPos
 		ARG 2 radius
-	METHOD lambda$createOldDataForRegion$0 (Ljava/util/BitSet;Lnet/minecraft/world/level/ChunkPos;)V
+	METHOD lambda$createOldDataForRegion$1 (Ljava/util/BitSet;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 2 currentChunk
 	METHOD loadAsync (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkPos

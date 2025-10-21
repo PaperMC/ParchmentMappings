@@ -89,8 +89,6 @@ CLASS net/minecraft/server/MinecraftServer
 		COMMENT Initialises the server and starts it.
 	METHOD isDemo ()Z
 		COMMENT Gets whether this is a demo or not.
-	METHOD isEpollEnabled ()Z
-		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD isHardcore ()Z
 		COMMENT Defaults to {@code false}.
 	METHOD isPublished ()Z
@@ -227,6 +225,8 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD tickServer (Ljava/util/function/BooleanSupplier;)V
 		COMMENT Main function called by runServer() every loop.
 		ARG 1 hasTimeLeft
+	METHOD useNativeTransport ()Z
+		COMMENT Get if native transport should be used. Native transport means linux server performance improvements and optimized packet sending/receiving on linux
 	METHOD waitUntilNextTick ()V
 		COMMENT Runs all pending tasks and waits for more tasks until haveTime is reached.
 	METHOD wrapRunnable (Ljava/lang/Runnable;)Lnet/minecraft/server/TickTask;
