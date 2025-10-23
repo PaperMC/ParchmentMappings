@@ -134,11 +134,11 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         indexer = jarIndex
     }
 
-    private fun paramCanConflict(startIndex: Int, methodDesc: MethodDescriptor, entry: ClassEntry): Boolean {
+    private fun paramCanConflict(startIndex: Int, methodDesc: MethodDescriptor, param: ClassEntry): Boolean {
         var alreadyFound = false
         for (index in startIndex..methodDesc.argumentDescs.lastIndex) {
             val desc = methodDesc.argumentDescs[index]
-            if (desc.containsType() && desc.typeEntry.equals(entry)) {
+            if (desc.containsType() && desc.typeEntry.equals(param)) {
                 if (alreadyFound) {
                     return true
                 }
@@ -180,14 +180,18 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
                     return Optional.empty() // happens for faulty param detection (like Player#actuallyHurt)
                 }
 
-                val desc = parent.desc.argumentDescs[paramIndex]
-                if (!desc.containsType()) { // primitive / array of primitive
+                val paramDesc = parent.desc.argumentDescs[paramIndex]
+                if (!paramDesc.containsType()) { // primitive / array of primitive
                     return Optional.empty()
                 }
 
-                val strDesc = desc.toString()
-                var name = suggestions[strDesc] ?: strDesc.substringAfterLast('/').substringAfterLast('$').dropLast(1).replaceFirstChar { it.lowercase() } // relevant type
-                if (paramCanConflict(descStartIndex, parent.desc, desc.typeEntry)) { // not completely accurate for lambda/inner classes
+                var paramDescStr = paramDesc.toString()
+                if (paramDesc.isArray) {
+                    paramDescStr = paramDescStr.drop(paramDesc.arrayDimension) // for array, the element type is often more relevant than the array itself
+                }
+
+                var name = suggestions[paramDescStr] ?: paramDescStr.substringAfterLast('/').substringAfterLast('$').dropLast(1).replaceFirstChar { it.lowercase() } // relevant type
+                if (paramCanConflict(descStartIndex, parent.desc, paramDesc.typeEntry)) { // not completely accurate for lambda/inner classes
                     name += (paramIndex + 1)
                 }
                 if (SourceVersion.isKeyword(name)) {
