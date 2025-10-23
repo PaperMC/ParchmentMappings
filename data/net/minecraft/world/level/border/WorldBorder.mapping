@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/border/WorldBorder
 	METHOD addListener (Lnet/minecraft/world/level/border/BorderChangeListener;)V
 		ARG 1 listener
 	METHOD applyInitialSettings (J)V
-		ARG 1 gameTime
+		ARG 1 lerpBegin
 	METHOD clampToBounds (DDD)Lnet/minecraft/core/BlockPos;
 		ARG 1 x
 		ARG 3 y
@@ -59,7 +59,7 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 1 oldSize
 		ARG 3 newSize
 		ARG 5 time
-		ARG 7 gameTime
+		ARG 7 startTime
 	METHOD removeListener (Lnet/minecraft/world/level/border/BorderChangeListener;)V
 		ARG 1 listener
 	METHOD setAbsoluteMaxSize (I)V

@@ -6,7 +6,7 @@ CLASS net/minecraft/client/renderer/texture/MipmapGenerator
 		ARG 0 x
 		ARG 1 y
 		ARG 2 image
-		ARG 3 index
+		ARG 3 mipLevel
 		ARG 4 strategy
 	METHOD darkenedAlphaBlend (IIII)I
 		ARG 0 col0
