@@ -89,10 +89,10 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 	METHOD getCloudColor (F)I
 		ARG 1 partialTick
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
-		COMMENT Returns the Entity with the given ID, or {@code null} if it doesn't exist in this Level.
+		COMMENT @return the Entity with the given ID, or {@code null} if it doesn't exist in this Level
 		ARG 1 id
 	METHOD getLevelData ()Lnet/minecraft/client/multiplayer/ClientLevel$ClientLevelData;
-		COMMENT Returns the world's LevelData object
+		COMMENT @return the world's LevelData object
 	METHOD getSkyColor (Lnet/minecraft/client/Camera;F)I
 		ARG 1 camera
 		ARG 2 partialTick
@@ -231,11 +231,11 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		METHOD getHorizonHeight (Lnet/minecraft/world/level/LevelHeightAccessor;)D
 			ARG 1 level
 		METHOD isHardcore ()Z
-			COMMENT Returns {@code true} if hardcore mode is enabled, otherwise {@code false}.
+			COMMENT @return {@code true} if hardcore mode is enabled, otherwise {@code false}
 		METHOD isRaining ()Z
-			COMMENT Returns {@code true} if it is raining, {@code false} otherwise.
+			COMMENT @return {@code true} if it is raining, {@code false} otherwise
 		METHOD isThundering ()Z
-			COMMENT Returns {@code true} if it is thundering, {@code false} otherwise.
+			COMMENT @return {@code true} if it is thundering, {@code false} otherwise
 		METHOD setDayTime (J)V
 			ARG 1 dayTime
 		METHOD setDifficulty (Lnet/minecraft/world/Difficulty;)V

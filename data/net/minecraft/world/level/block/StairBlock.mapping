@@ -17,7 +17,7 @@ CLASS net/minecraft/world/level/block/StairBlock
 		ARG 3 pos
 		ARG 4 context
 	METHOD getStairsShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/properties/StairsShape;
-		COMMENT Returns a stair shape property based on the surrounding stairs from the given blockstate and position
+		COMMENT {@return a stair shape property based on the surrounding stairs from the given blockstate and position}
 		ARG 0 state
 		ARG 1 level
 		ARG 2 pos

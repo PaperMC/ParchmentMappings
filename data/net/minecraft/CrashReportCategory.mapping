@@ -2,7 +2,9 @@ CLASS net/minecraft/CrashReportCategory
 	METHOD <init> (Ljava/lang/String;)V
 		ARG 1 title
 	METHOD fillInStackTrace (I)I
-		COMMENT Resets our stack trace according to the current trace, pruning the deepest 3 entries. The parameter indicates how many additional deepest entries to prune. Returns the number of entries in the resulting pruned stack trace.
+		COMMENT Resets our stack trace according to the current trace, pruning the deepest 3 entries.
+		COMMENT The parameter indicates how many additional deepest entries to prune.
+		COMMENT @return the number of entries in the resulting pruned stack trace
 		ARG 1 size
 	METHOD formatLocation (DDD)Ljava/lang/String;
 		ARG 0 x

@@ -7,7 +7,7 @@ CLASS net/minecraft/client/gui/screens/inventory/BookEditScreen
 	METHOD appendPageToBook ()V
 		COMMENT Adds a new page to the book (capped at 100 pages)
 	METHOD getNumPages ()I
-		COMMENT Returns the number of pages in the book
+		COMMENT @return the number of pages in the book
 	METHOD lambda$init$4 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD pageBack ()V

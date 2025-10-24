@@ -25,7 +25,7 @@ CLASS net/minecraft/world/level/block/entity/BlockEntity
 	METHOD getUpdateTag (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 registries
 	METHOD hasLevel ()Z
-		COMMENT @return whether this BlockEntity's level has been set
+		COMMENT {@return whether this BlockEntity's level has been set}
 	METHOD isValidBlockState (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
 	METHOD loadAdditional (Lnet/minecraft/world/level/storage/ValueInput;)V

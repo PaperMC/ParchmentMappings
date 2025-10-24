@@ -73,7 +73,7 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 amount
 		ARG 2 entity
 	METHOD copy ()Lnet/minecraft/world/item/ItemStack;
-		COMMENT Returns a new stack with the same properties.
+		COMMENT {@return a new stack with the same properties}
 	METHOD copyFrom (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/core/component/DataComponentGetter;)V
 		ARG 1 componentType
 		ARG 2 componentGetter
@@ -85,7 +85,8 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 enchantment
 		ARG 2 level
 	METHOD finishUsingItem (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Called when the item in use count reach 0, e.g. item food eaten. Return the new ItemStack.
+		COMMENT Called when the item in use count reach 0, e.g. item food eaten.
+		COMMENT @return the new ItemStack
 		ARG 1 level
 		ARG 2 livingEntity
 	METHOD forEachModifier (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
@@ -102,13 +103,13 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD getDisplayName ()Lnet/minecraft/network/chat/Component;
 		COMMENT Get a Component for this Item's display name that shows this Item on hover
 	METHOD getFrame ()Lnet/minecraft/world/entity/decoration/ItemFrame;
-		COMMENT Return the item frame this stack is on. Returns {@code null} if not on an item frame.
+		COMMENT @return the item frame this stack is on or {@code null} if not on an item frame
 	METHOD getItem ()Lnet/minecraft/world/item/Item;
-		COMMENT Returns the object corresponding to the stack.
+		COMMENT {@return the object corresponding to the stack}
 	METHOD getMaxDamage ()I
-		COMMENT Returns the max damage an item in the stack can take.
+		COMMENT {@return the max damage an item in the stack can take}
 	METHOD getMaxStackSize ()I
-		COMMENT Returns maximum size of the stack.
+		COMMENT {@return maximum size of the stack}
 	METHOD getTooltipLines (Lnet/minecraft/world/item/Item$TooltipContext;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/TooltipFlag;)Ljava/util/List;
 		ARG 1 tooltipContext
 		ARG 2 player
@@ -169,15 +170,15 @@ CLASS net/minecraft/world/item/ItemStack
 		COMMENT Check whether the given Block can be harvested using this ItemStack.
 		ARG 1 state
 	METHOD isDamageableItem ()Z
-		COMMENT Returns {@code true} if this {@code ItemStack} is damageable.
+		COMMENT @return {@code true} if this {@code ItemStack} is damageable
 	METHOD isDamaged ()Z
-		COMMENT Returns {@code true} when a damageable item is damaged.
+		COMMENT @return {@code true} when a damageable item is damaged
 	METHOD isEnchantable ()Z
-		COMMENT {@code true} if it is a tool and has no enchantments to begin with
+		COMMENT @return {@code true} if it is a tool and has no enchantments to begin with
 	METHOD isEnchanted ()Z
-		COMMENT {@code true} if the item has enchantment data
+		COMMENT @return {@code true} if the item has enchantment data
 	METHOD isFramed ()Z
-		COMMENT Return whether this stack is on an item frame.
+		COMMENT {@return whether this stack is on an item frame}
 	METHOD isItemEnabled (Lnet/minecraft/world/flag/FeatureFlagSet;)Z
 		ARG 1 enabledFlags
 	METHOD isSameItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
@@ -187,7 +188,7 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 0 stack
 		ARG 1 other
 	METHOD isStackable ()Z
-		COMMENT Returns {@code true} if the {@code ItemStack} can hold 2 or more units of the item.
+		COMMENT @return {@code true} if the {@code ItemStack} can hold 2 or more units of the item
 	METHOD isValidRepairItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 item
 	METHOD lambda$getDisplayName$20 (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
@@ -217,7 +218,8 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 0 list
 		ARG 1 other
 	METHOD matches (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Compares both {@code ItemStacks}, returns {@code true} if both {@code ItemStacks} are equal.
+		COMMENT Compares both {@code ItemStacks}.
+		COMMENT @return {@code true} if both {@code ItemStacks} are equal
 		ARG 0 stack
 		ARG 1 other
 	METHOD matchesIgnoringComponents (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Predicate;)Z

@@ -29,7 +29,7 @@ CLASS net/minecraft/core/Registry
 	METHOD getValueOrThrow (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;
 		ARG 1 key
 	METHOD keySet ()Ljava/util/Set;
-		COMMENT @return all keys in this registry
+		COMMENT {@return all keys in this registry}
 	METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
 		ARG 1 ops
 	METHOD prepareTagReload (Lnet/minecraft/tags/TagLoader$LoadResult;)Lnet/minecraft/core/Registry$PendingTags;

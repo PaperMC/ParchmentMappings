@@ -2,11 +2,11 @@ CLASS net/minecraft/world/entity/ai/navigation/GroundPathNavigation
 	METHOD canUpdatePath ()Z
 		COMMENT If on ground or swimming and can swim
 	METHOD createPath (Lnet/minecraft/core/BlockPos;I)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns path to given BlockPos
+		COMMENT {@return a path to the given BlockPos}
 		ARG 1 pos
 		ARG 2 reachRange
 	METHOD createPath (Lnet/minecraft/world/entity/Entity;I)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns a path to the given entity or {@code null}
+		COMMENT @return a path to the given entity or {@code null}
 		ARG 1 entity
 	METHOD findSurfacePosition (Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/core/BlockPos;I)Lnet/minecraft/core/BlockPos;
 		ARG 1 chunk

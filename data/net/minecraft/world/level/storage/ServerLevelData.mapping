@@ -4,11 +4,11 @@ CLASS net/minecraft/world/level/storage/ServerLevelData
 	METHOD getLevelName ()Ljava/lang/String;
 		COMMENT Get current world name
 	METHOD getRainTime ()I
-		COMMENT Return the number of ticks until rain.
+		COMMENT {@return the number of ticks until rain}
 	METHOD getThunderTime ()I
-		COMMENT Returns the number of ticks until next thunderbolt.
+		COMMENT {@return the number of ticks until next thunderbolt}
 	METHOD isInitialized ()Z
-		COMMENT Returns {@code true} if the world is initialized.
+		COMMENT @return {@code true} if the world is initialized
 	METHOD setClearWeatherTime (I)V
 		ARG 1 time
 	METHOD setDayTime (J)V

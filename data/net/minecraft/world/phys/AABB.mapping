@@ -51,7 +51,7 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 3 y
 		ARG 5 z
 	METHOD contains (Lnet/minecraft/world/phys/Vec3;)Z
-		COMMENT Returns if the supplied Vec3 is completely inside the bounding box
+		COMMENT {@return if the supplied Vec3 is completely inside the bounding box}
 		ARG 1 vec
 	METHOD contract (DDD)Lnet/minecraft/world/phys/AABB;
 		COMMENT Creates a new {@link AABB} that has been contracted by the given amount, with positive changes decreasing max values and negative changes increasing min values.
@@ -74,7 +74,7 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT <li>{@link #deflate(double)} - contracts in all directions (like {@link #inflate(double)})</li>
 		COMMENT </ul>
 		COMMENT
-		COMMENT @return A new modified bounding box.
+		COMMENT @return a new modified bounding box
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -85,7 +85,7 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT <br/>
 		COMMENT If contracting and the amount to contract by is larger than the length of a side, then the side will wrap (still creating a valid AABB - see samples on {@link #inflate(double, double, double)}).
 		COMMENT
-		COMMENT @return A modified AABB.
+		COMMENT @return a modified AABB
 		ARG 1 value
 	METHOD deflate (DDD)Lnet/minecraft/world/phys/AABB;
 		ARG 1 x
@@ -118,7 +118,7 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT <li>{@link #deflate(double)} - contracts in all directions (like {@link #inflate(double)})</li>
 		COMMENT </ul>
 		COMMENT
-		COMMENT @return A modified bounding box that will always be equal or greater in volume to this bounding box.
+		COMMENT @return a modified bounding box that will always be equal or greater in volume to this bounding box
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -146,7 +146,7 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 6 deltaY
 		ARG 8 deltaZ
 	METHOD getSize ()D
-		COMMENT Returns the average length of the edges of the bounding box.
+		COMMENT {@return the average length of the edges of the bounding box}
 	METHOD inflate (D)Lnet/minecraft/world/phys/AABB;
 		COMMENT Creates a new {@link AABB} that is expanded by the given value in all directions. Equivalent to {@link #inflate(double, double, double)} with the given value for all 3 params. Negative values will shrink the AABB.
 		COMMENT <br/>
@@ -154,7 +154,7 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT <br/>
 		COMMENT If contracting and the amount to contract by is larger than the length of a side, then the side will wrap (still creating a valid AABB - see samples on {@link #inflate(double, double, double)}).
 		COMMENT
-		COMMENT @return A modified AABB.
+		COMMENT @return a modified AABB
 		ARG 1 value
 	METHOD inflate (DDD)Lnet/minecraft/world/phys/AABB;
 		COMMENT Creates a new {@link AABB} that has been contracted by the given amount in both directions. Negative values will shrink the AABB instead of expanding it.
@@ -180,7 +180,7 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT <li>{@link #deflate(double)} - contracts in all directions</li>
 		COMMENT </ul>
 		COMMENT
-		COMMENT @return A modified bounding box.
+		COMMENT @return a modified bounding box
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

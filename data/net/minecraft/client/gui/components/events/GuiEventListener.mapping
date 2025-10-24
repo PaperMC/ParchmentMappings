@@ -4,54 +4,54 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 	COMMENT It extends the {@code TabOrderedElement} interface, providing tab order functionality for GUI components.
 	METHOD charTyped (Lnet/minecraft/client/input/CharacterEvent;)Z
 		COMMENT Called when a character is typed within the GUI element.
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
+		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise
 		ARG 1 event
 	METHOD getBorderForArrowNavigation (Lnet/minecraft/client/gui/navigation/ScreenDirection;)Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 		ARG 1 direction
 	METHOD getCurrentFocusPath ()Lnet/minecraft/client/gui/ComponentPath;
-		COMMENT @return the current focus path as a ComponentPath, or {@code null} if there is no current focus path.
+		COMMENT @return the current focus path as a ComponentPath, or {@code null} if there is no current focus path
 	METHOD getRectangle ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 		COMMENT @return the {@link ScreenRectangle} occupied by the GUI element
 	METHOD isFocused ()Z
 		COMMENT @return {@code true} if the GUI element is focused, {@code false} otherwise
 	METHOD isMouseOver (DD)Z
 		COMMENT Checks if the given mouse coordinates are over the GUI element.
-		COMMENT @return {@code true} if the mouse is over the GUI element, {@code false} otherwise.
+		COMMENT @return {@code true} if the mouse is over the GUI element, {@code false} otherwise
 		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
+			COMMENT the X coordinate of the mouse
 		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
+			COMMENT the Y coordinate of the mouse
 	METHOD keyPressed (Lnet/minecraft/client/input/KeyEvent;)Z
 		COMMENT Called when a keyboard key is pressed within the GUI element.
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
+		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise
 		ARG 1 event
 	METHOD keyReleased (Lnet/minecraft/client/input/KeyEvent;)Z
 		COMMENT Called when a keyboard key is released within the GUI element.
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
+		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise
 		ARG 1 event
 	METHOD mouseClicked (Lnet/minecraft/client/input/MouseButtonEvent;Z)Z
 		COMMENT Called when a mouse button is clicked within the GUI element.
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
+		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise
 		ARG 1 event
 		ARG 2 doubleClick
-			COMMENT when the button was clicked twice in row.
+			COMMENT when the button was clicked twice in row
 	METHOD mouseDragged (Lnet/minecraft/client/input/MouseButtonEvent;DD)Z
 		COMMENT Called when the mouse is dragged within the GUI element.
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
+		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise
 		ARG 1 event
 		ARG 2 dragX
-			COMMENT the X distance of the drag.
+			COMMENT the X distance of the drag
 		ARG 4 dragY
-			COMMENT the Y distance of the drag.
+			COMMENT the Y distance of the drag
 	METHOD mouseMoved (DD)V
 		COMMENT Called when the mouse is moved within the GUI element.
 		ARG 1 mouseX
-			COMMENT the X coordinate of the mouse.
+			COMMENT the X coordinate of the mouse
 		ARG 3 mouseY
-			COMMENT the Y coordinate of the mouse.
+			COMMENT the Y coordinate of the mouse
 	METHOD mouseReleased (Lnet/minecraft/client/input/MouseButtonEvent;)Z
 		COMMENT Called when a mouse button is released within the GUI element.
-		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise.
+		COMMENT @return {@code true} if the event is consumed, {@code false} otherwise
 		ARG 1 event
 	METHOD mouseScrolled (DDDD)Z
 		ARG 1 mouseX
@@ -60,9 +60,9 @@ CLASS net/minecraft/client/gui/components/events/GuiEventListener
 		ARG 7 scrollY
 	METHOD nextFocusPath (Lnet/minecraft/client/gui/navigation/FocusNavigationEvent;)Lnet/minecraft/client/gui/ComponentPath;
 		COMMENT Retrieves the next focus path based on the given focus navigation event.
-		COMMENT @return the next focus path as a ComponentPath, or {@code null} if there is no next focus path.
+		COMMENT @return the next focus path as a ComponentPath, or {@code null} if there is no next focus path
 		ARG 1 event
-			COMMENT the focus navigation event.
+			COMMENT the focus navigation event
 	METHOD setFocused (Z)V
 		COMMENT Sets the focus state of the GUI element.
 		ARG 1 focused

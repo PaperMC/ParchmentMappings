@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/entity/animal/Animal
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
-		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
+		COMMENT @return {@code true} if the mob is currently able to mate with the specified mob
 		ARG 1 otherAnimal
 	METHOD checkAnimalSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 entityType
@@ -24,7 +24,7 @@ CLASS net/minecraft/world/entity/animal/Animal
 		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
 		ARG 1 stack
 	METHOD isInLove ()Z
-		COMMENT Returns if the entity is currently in 'love mode'.
+		COMMENT {@return if the entity is currently in 'love mode'}
 	METHOD lambda$finalizeSpawnChildFromBreeding$1 (Lnet/minecraft/world/entity/animal/Animal;Lnet/minecraft/world/entity/AgeableMob;Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 3 player
 	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;

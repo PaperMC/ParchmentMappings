@@ -52,17 +52,17 @@ CLASS net/minecraft/client/gui/components/EditBox
 	METHOD getCursorPos (I)I
 		ARG 1 delta
 	METHOD getCursorPosition ()I
-		COMMENT Returns the current position of the cursor.
+		COMMENT @return the current position of the cursor
 	METHOD getHighlighted ()Ljava/lang/String;
-		COMMENT Returns the text between the cursorPos and highlightPos.
+		COMMENT @return the text between the cursorPos and highlightPos
 	METHOD getInnerWidth ()I
-		COMMENT Returns the width of the textbox depending on if background drawing is enabled.
+		COMMENT @return the width of the textbox depending on if background drawing is enabled
 	METHOD getMaxLength ()I
-		COMMENT Returns the maximum number of characters that can be contained in this textbox.
+		COMMENT @return the maximum number of characters that can be contained in this textbox
 	METHOD getScreenX (I)I
 		ARG 1 charNum
 	METHOD getValue ()Ljava/lang/String;
-		COMMENT Returns the contents of the textbox
+		COMMENT @return the contents of the textbox
 	METHOD getWordPosition (I)I
 		COMMENT Gets the starting index of the word at the specified number of words away from the cursor position.
 		ARG 1 numWords
@@ -81,7 +81,7 @@ CLASS net/minecraft/client/gui/components/EditBox
 	METHOD isBordered ()Z
 		COMMENT Gets whether the background and outline of this text box should be drawn ({@code true} if so).
 	METHOD isVisible ()Z
-		COMMENT Returns {@code true} if this textbox is visible.
+		COMMENT @return {@code true} if this textbox is visible
 	METHOD moveCursor (IZ)V
 		ARG 1 delta
 		ARG 2 select

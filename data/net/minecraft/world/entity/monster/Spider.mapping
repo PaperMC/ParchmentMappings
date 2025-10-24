@@ -11,7 +11,7 @@ CLASS net/minecraft/world/entity/monster/Spider
 		ARG 1 state
 		ARG 2 motionMultiplier
 	METHOD onClimbable ()Z
-		COMMENT Returns {@code true} if this entity should move as if it were on a ladder (either because it's actually on a ladder, or for AI reasons)
+		COMMENT @return {@code true} if this entity should move as if it were on a ladder (either because it's actually on a ladder, or for AI reasons)
 	METHOD playStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 block
@@ -24,7 +24,7 @@ CLASS net/minecraft/world/entity/monster/Spider
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Spider;)V
 			ARG 1 spider
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS SpiderTargetGoal

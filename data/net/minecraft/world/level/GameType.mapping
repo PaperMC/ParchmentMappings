@@ -14,17 +14,17 @@ CLASS net/minecraft/world/level/GameType
 	METHOD byNullableId (I)Lnet/minecraft/world/level/GameType;
 		ARG 0 id
 	METHOD getId ()I
-		COMMENT Returns the ID of this game type
+		COMMENT {@return the ID of this game type}
 	METHOD getName ()Ljava/lang/String;
-		COMMENT Returns the name of this game type
+		COMMENT {@return the name of this game type}
 	METHOD getNullableId (Lnet/minecraft/world/level/GameType;)I
 		ARG 0 gameType
 	METHOD isBlockPlacingRestricted ()Z
-		COMMENT Returns {@code true} if this is the ADVENTURE or SPECTATOR game type
+		COMMENT @return {@code true} if this is the ADVENTURE or SPECTATOR game type
 	METHOD isCreative ()Z
-		COMMENT Returns {@code true} if this is the CREATIVE game type
+		COMMENT @return {@code true} if this is the CREATIVE game type
 	METHOD isSurvival ()Z
-		COMMENT Returns {@code true} if this is the SURVIVAL or ADVENTURE game type
+		COMMENT @return {@code true} if this is the SURVIVAL or ADVENTURE game type
 	METHOD isValidId (I)Z
 		ARG 0 id
 	METHOD lambda$isValidId$0 (ILnet/minecraft/world/level/GameType;)Z

@@ -10,7 +10,8 @@ CLASS net/minecraft/world/phys/Vec3
 	METHOD add (D)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 amount
 	METHOD add (DDD)Lnet/minecraft/world/phys/Vec3;
-		COMMENT Adds the specified x, y, z vector components to this vector and returns the resulting vector. Does not change this vector.
+		COMMENT Adds the specified x, y, z vector components to this vector
+		COMMENT @return the resulting vector (does not change this vector)
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -46,14 +47,14 @@ CLASS net/minecraft/world/phys/Vec3
 		ARG 2 horizontalDistance
 		ARG 4 verticalDistance
 	METHOD cross (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns a new vector with the result of this vector x the specified vector.
+		COMMENT {@return a new vector with the result of this vector x the specified vector}
 		ARG 1 vec
 	METHOD directionFromRotation (FF)Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns a {@link net.minecraft.world.phys.Vec3} from the given pitch and yaw degrees.
+		COMMENT @return a {@link net.minecraft.world.phys.Vec3} from the given pitch and yaw degrees
 		ARG 0 pitch
 		ARG 1 yaw
 	METHOD directionFromRotation (Lnet/minecraft/world/phys/Vec2;)Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns a {@link net.minecraft.world.phys.Vec3} from the given pitch and yaw degrees as {@link net.minecraft.world.phys.Vec2}.
+		COMMENT @return a {@link net.minecraft.world.phys.Vec3} from the given pitch and yaw degrees as {@link net.minecraft.world.phys.Vec2}
 		ARG 0 rot
 	METHOD distanceTo (Lnet/minecraft/world/phys/Vec3;)D
 		COMMENT Euclidean distance between this and the specified vector, returned as double.
@@ -74,7 +75,7 @@ CLASS net/minecraft/world/phys/Vec3
 	METHOD lambda$static$1 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
 	METHOD length ()D
-		COMMENT Returns the length of the vector.
+		COMMENT {@return the length of the vector}
 	METHOD lerp (Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Lerps between this vector and the given vector.
 		COMMENT @see net.minecraft.util.Mth#lerp(double, double, double)
@@ -114,7 +115,7 @@ CLASS net/minecraft/world/phys/Vec3
 		ARG 0 toCopy
 		ARG 1 verticalOffset
 	METHOD vectorTo (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns a new vector with the result of the specified vector minus this.
+		COMMENT {@return a new vector with the result of the specified vector minus this}
 		ARG 1 vec
 	METHOD with (Lnet/minecraft/core/Direction$Axis;D)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 axis

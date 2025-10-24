@@ -4,7 +4,7 @@ CLASS net/minecraft/world/entity/ai/goal/MeleeAttackGoal
 		ARG 2 speedModifier
 		ARG 4 followingTargetEvenIfNotSeen
 	METHOD canContinueToUse ()Z
-		COMMENT Returns whether an in-progress Goal should continue executing
+		COMMENT {@return whether an in-progress Goal should continue executing}
 	METHOD canPerformAttack (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD canUse ()Z

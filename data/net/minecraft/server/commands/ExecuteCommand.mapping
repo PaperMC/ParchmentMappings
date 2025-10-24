@@ -64,7 +64,8 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 	METHOD expandOneToOneEntityRelation (Ljava/util/function/Function;)Lcom/mojang/brigadier/RedirectModifier;
 		ARG 0 relation
 	METHOD expect (Lcom/mojang/brigadier/context/CommandContext;ZZ)Ljava/util/Collection;
-		COMMENT If actual and expected match, returns a collection containing only the source player.
+		COMMENT If {@code actual} and {@code expected} match
+		COMMENT @return a collection containing only the source player
 		ARG 0 context
 		ARG 1 actual
 		ARG 2 expected

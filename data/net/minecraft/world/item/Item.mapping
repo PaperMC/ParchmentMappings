@@ -31,7 +31,7 @@ CLASS net/minecraft/world/item/Item
 	METHOD getBarWidth (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 stack
 	METHOD getDescriptionId ()Ljava/lang/String;
-		COMMENT Returns the unlocalized name of this item.
+		COMMENT {@return the unlocalized name of this item}
 	METHOD getDestroySpeed (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)F
 		ARG 1 stack
 		ARG 2 state
@@ -57,7 +57,8 @@ CLASS net/minecraft/world/item/Item
 		ARG 2 target
 		ARG 3 attacker
 	METHOD interactLivingEntity (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
-		COMMENT Try interacting with given entity. Return {@code InteractionResult.PASS} if nothing should happen.
+		COMMENT Try interacting with given entity.
+		COMMENT @return {@code InteractionResult.PASS} if nothing should happen
 		ARG 1 stack
 		ARG 2 player
 		ARG 3 interactionTarget
@@ -80,7 +81,8 @@ CLASS net/minecraft/world/item/Item
 	METHOD lambda$static$1 (Lnet/minecraft/core/Holder;)Lcom/mojang/serialization/DataResult;
 		ARG 0 holder
 	METHOD mineBlock (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/LivingEntity;)Z
-		COMMENT Called when a {@link net.minecraft.world.level.block.Block} is destroyed using this Item. Return {@code true} to trigger the "Used Item" statistic.
+		COMMENT Called when a {@link net.minecraft.world.level.block.Block} is destroyed using this Item.
+		COMMENT @return {@code true} to trigger the "Used Item" statistic
 		ARG 1 stack
 		ARG 2 level
 		ARG 3 state

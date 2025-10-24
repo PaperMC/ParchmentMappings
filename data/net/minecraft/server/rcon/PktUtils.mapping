@@ -19,5 +19,5 @@ CLASS net/minecraft/server/rcon/PktUtils
 		ARG 1 offset
 		ARG 2 length
 	METHOD toHexString (B)Ljava/lang/String;
-		COMMENT Returns a String representation of the byte in hexadecimal format
+		COMMENT {@return a String representation of the byte in hexadecimal format}
 		ARG 0 input

@@ -33,7 +33,7 @@ CLASS net/minecraft/world/entity/ai/gossip/GossipContainer
 		ARG 2 existing
 		ARG 3 additive
 	METHOD mergeValuesForTransfer (II)I
-		COMMENT Returns the greater of two int values
+		COMMENT {@return the greater of two int values}
 		ARG 0 value1
 		ARG 1 value2
 	METHOD putAll (Lnet/minecraft/world/entity/ai/gossip/GossipContainer;)V

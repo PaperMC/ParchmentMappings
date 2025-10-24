@@ -23,7 +23,7 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 		ARG 0 age
 		ARG 1 bobOffset
 	METHOD isAttackable ()Z
-		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
+		COMMENT @return {@code true} if it's possible to attack this entity with an item
 	METHOD lambda$mergeWithNeighbours$0 (Lnet/minecraft/world/entity/item/ItemEntity;)Z
 		ARG 1 neighbour
 	METHOD merge (Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;)V

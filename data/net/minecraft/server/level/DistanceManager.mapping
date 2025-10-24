@@ -14,7 +14,7 @@ CLASS net/minecraft/server/level/DistanceManager
 		ARG 1 chunkPos
 		ARG 3 simulate
 	METHOD getNaturalSpawnChunkCount ()I
-		COMMENT Returns the number of chunks taken into account when calculating the mob cap
+		COMMENT @return the number of chunks taken into account when calculating the mob cap
 	METHOD hasPlayersNearby (J)Lnet/minecraft/util/TriState;
 		ARG 1 chunkPos
 	METHOD inBlockTickingRange (J)Z
@@ -44,7 +44,7 @@ CLASS net/minecraft/server/level/DistanceManager
 			COMMENT Called after {@link #setLevel(long, int)} puts/removes chunk into/from {@link #chunks}.
 			ARG 1 chunkPos
 			ARG 3 oldLevel
-				COMMENT Previous level of the chunk if it was smaller than {@link #maxDistance}, {@code maxDistance + 2} otherwise.
+				COMMENT previous level of the chunk if it was smaller than {@link #maxDistance}, {@code maxDistance + 2} otherwise
 			ARG 4 newLevel
 		METHOD onLevelChange (JIZZ)V
 			ARG 1 chunkPos
@@ -68,7 +68,7 @@ CLASS net/minecraft/server/level/DistanceManager
 			COMMENT Called after {@link #setLevel(long, int)} puts/removes chunk into/from {@link #chunks}.
 			ARG 1 chunkPos
 			ARG 3 oldLevel
-				COMMENT Previous level of the chunk if it was smaller than {@link #maxDistance}, {@code maxDistance + 2} otherwise.
+				COMMENT previous level of the chunk if it was smaller than {@link #maxDistance}, {@code maxDistance + 2} otherwise
 			ARG 4 newLevel
 		METHOD setLevel (JI)V
 			ARG 1 sectionPos

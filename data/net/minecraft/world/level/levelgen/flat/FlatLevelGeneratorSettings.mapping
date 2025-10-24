@@ -17,7 +17,7 @@ CLASS net/minecraft/world/level/levelgen/flat/FlatLevelGeneratorSettings
 	METHOD createLakesList (Lnet/minecraft/core/HolderGetter;)Ljava/util/List;
 		ARG 0 placedFeatureGetter
 	METHOD getBiome ()Lnet/minecraft/core/Holder;
-		COMMENT Return the biome used on this preset.
+		COMMENT {@return the biome used on this preset}
 	METHOD getBiome (Ljava/util/Optional;Lnet/minecraft/core/Holder;)Lnet/minecraft/core/Holder;
 		ARG 0 biome
 		ARG 1 defaultBiome
@@ -28,7 +28,7 @@ CLASS net/minecraft/world/level/levelgen/flat/FlatLevelGeneratorSettings
 	METHOD getDefaultBiome (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/core/Holder;
 		ARG 0 biomes
 	METHOD getLayersInfo ()Ljava/util/List;
-		COMMENT Return the list of layers on this preset.
+		COMMENT {@return the list of layers on this preset}
 	METHOD lambda$static$4 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD validateHeight (Lnet/minecraft/world/level/levelgen/flat/FlatLevelGeneratorSettings;)Lcom/mojang/serialization/DataResult;

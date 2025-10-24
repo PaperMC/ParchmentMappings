@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/entity/animal/Cat
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
-		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
+		COMMENT @return {@code true} if the mob is currently able to mate with the specified mob
 		ARG 1 otherAnimal
 	METHOD getAmbientSoundInterval ()I
 		COMMENT Get number of ticks, at least during which the living entity will be silent.
@@ -52,14 +52,14 @@ CLASS net/minecraft/world/entity/animal/Cat
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS CatRelaxOnOwnerGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Cat;)V
 			ARG 1 cat
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD lambda$canUse$0 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;

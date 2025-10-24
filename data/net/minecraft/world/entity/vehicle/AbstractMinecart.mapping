@@ -38,9 +38,9 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecart
 	METHOD getRedstoneDirection (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 pos
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other Entities should be prevented from moving through this Entity
 	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
+		COMMENT @return {@code true} if this entity should push and be pushed by other entities when colliding
 	METHOD isRedstoneConductor (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD lambda$getDismountLocationForPassenger$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;

@@ -8,7 +8,7 @@ CLASS net/minecraft/world/entity/ai/goal/EatBlockGoal
 	METHOD <init> (Lnet/minecraft/world/entity/Mob;)V
 		ARG 1 mob
 	METHOD canContinueToUse ()Z
-		COMMENT Returns whether an in-progress Goal should continue executing
+		COMMENT {@return whether an in-progress Goal should continue executing}
 	METHOD canUse ()Z
 		COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	METHOD getEatAnimationTick ()I

@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/chunk/PaletteResize
 		ARG 1 addedValue
 	METHOD onResize (ILjava/lang/Object;)I
 		COMMENT Called when the underlying palette needs to resize itself to support additional values.
-		COMMENT @return The new integer mapping for the added value.
+		COMMENT @return the new integer mapping for the added value
 		ARG 1 bits
-			COMMENT The new palette size, in bits.
+			COMMENT the new palette size, in bits
 		ARG 2 addedValue

@@ -19,7 +19,8 @@ CLASS net/minecraft/network/chat/MutableComponent
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD setStyle (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/MutableComponent;
-		COMMENT Sets the style for this component and returns the component itself.
+		COMMENT Sets the style for this component
+		COMMENT @return the component itself for chaining
 		ARG 1 style
 	METHOD withColor (I)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 1 color

@@ -4,5 +4,5 @@ CLASS net/minecraft/client/searchtree/SearchTree
 		ARG 1 filter
 	METHOD search (Ljava/lang/String;)Ljava/util/List;
 		COMMENT Searches this search tree for the given text.
-		COMMENT @return A list of all matching items in this search tree.
+		COMMENT @return a list of all matching items in this search tree
 		ARG 1 query

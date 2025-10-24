@@ -79,15 +79,15 @@ CLASS net/minecraft/client/Minecraft
 	METHOD formatSeconds (D)Ljava/lang/String;
 		ARG 0 seconds
 	METHOD getInstance ()Lnet/minecraft/client/Minecraft;
-		COMMENT Return the singleton Minecraft instance for the game
+		COMMENT {@return the singleton Minecraft instance for the game}
 	METHOD getLaunchedVersion ()Ljava/lang/String;
 		COMMENT Gets the version that Minecraft was launched under (the name of a version JSON). Specified via the {@code --version} flag.
 	METHOD getLevelSource ()Lnet/minecraft/world/level/storage/LevelStorageSource;
-		COMMENT Returns the save loader that is currently being used
+		COMMENT @return the save loader that is currently being used
 	METHOD getMusicManager ()Lnet/minecraft/client/sounds/MusicManager;
-		COMMENT Return the musicManager's instance
+		COMMENT @return the musicManager's instance
 	METHOD getSingleplayerServer ()Lnet/minecraft/client/server/IntegratedServer;
-		COMMENT Returns the currently running integrated server
+		COMMENT @return the currently running integrated server
 	METHOD getTickTargetMillis (F)F
 		ARG 1 defaultValue
 	METHOD getVersionType ()Ljava/lang/String;
@@ -95,7 +95,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD grabPanoramixScreenshot (Ljava/io/File;)Lnet/minecraft/network/chat/Component;
 		ARG 1 gameDirectory
 	METHOD hasSingleplayerServer ()Z
-		COMMENT Returns {@code true} if there is only one player playing, and the current server is the integrated one.
+		COMMENT @return {@code true} if there is only one player playing, and the current server is the integrated one
 	METHOD isBlocked (Ljava/util/UUID;)Z
 		ARG 1 playerUUID
 	METHOD isDemo ()Z
@@ -162,7 +162,7 @@ CLASS net/minecraft/client/Minecraft
 	METHOD updateReportEnvironment (Lnet/minecraft/client/multiplayer/chat/report/ReportEnvironment;)V
 		ARG 1 reportEnvironment
 	METHOD useAmbientOcclusion ()Z
-		COMMENT Returns if ambient occlusion is enabled
+		COMMENT @return if ambient occlusion is enabled
 	METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;
 		ARG 1 runnable
 	CLASS ChatStatus

@@ -14,7 +14,7 @@ CLASS net/minecraft/util/StringUtil
 	METHOD isBlank (Ljava/lang/String;)Z
 		ARG 0 string
 	METHOD isNullOrEmpty (Ljava/lang/String;)Z
-		COMMENT Returns a value indicating whether the given string is {@code null} or empty.
+		COMMENT @return a value indicating whether the given string is {@code null} or empty
 		ARG 0 string
 	METHOD isValidPlayerName (Ljava/lang/String;)Z
 		ARG 0 playerName

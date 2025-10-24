@@ -6,9 +6,9 @@ CLASS net/minecraft/world/entity/monster/Creeper
 	METHOD getMaxFallDistance ()I
 		COMMENT The maximum height from where the entity is allowed to jump (used in pathfinder)
 	METHOD getSwellDir ()I
-		COMMENT Returns the current state of creeper, -1 is idle, 1 is 'in fuse'
+		COMMENT {@return the current state of creeper, -1 is idle, 1 is 'in fuse'}
 	METHOD getSwelling (F)F
-		COMMENT Returns the intensity of the creeper's flash when it is ignited.
+		COMMENT {@return the intensity of the creeper's flash when it is ignited}
 		ARG 1 partialTick
 	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player

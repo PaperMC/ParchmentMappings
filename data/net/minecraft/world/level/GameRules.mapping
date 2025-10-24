@@ -23,7 +23,7 @@ CLASS net/minecraft/world/level/GameRules
 	METHOD copy (Lnet/minecraft/world/flag/FeatureFlagSet;)Lnet/minecraft/world/level/GameRules;
 		ARG 1 enabledFeatures
 	METHOD createTag ()Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Return the defined game rules as NBT.
+		COMMENT {@return the defined game rules as a tag}
 	METHOD getBoolean (Lnet/minecraft/world/level/GameRules$Key;)Z
 		ARG 1 key
 	METHOD getInt (Lnet/minecraft/world/level/GameRules$Key;)I

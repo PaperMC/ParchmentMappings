@@ -27,7 +27,7 @@ CLASS net/minecraft/world/level/block/ChestBlock
 		ARG 0 pos
 		ARG 1 state
 	METHOD getConnectedDirection (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/core/Direction;
-		COMMENT @return the Direction pointing from the given state to its attached double chest
+		COMMENT {@return the Direction pointing from the given state to its attached double chest}
 		ARG 0 state
 	METHOD getContainer (Lnet/minecraft/world/level/block/ChestBlock;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/Container;
 		ARG 0 chest

@@ -4,4 +4,4 @@ CLASS net/minecraft/world/phys/HitResult
 	METHOD distanceTo (Lnet/minecraft/world/entity/Entity;)D
 		ARG 1 entity
 	METHOD getLocation ()Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns the hit position of the raycast, in absolute world coordinates
+		COMMENT {@return the hit position of the raycast, in absolute world coordinates}

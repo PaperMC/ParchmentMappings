@@ -6,8 +6,8 @@ CLASS net/minecraft/world/level/gameevent/PositionSourceType
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/level/gameevent/PositionSourceType;)Lnet/minecraft/world/level/gameevent/PositionSourceType;
 		COMMENT Registers a new PositionSource type with the game registry.
 		COMMENT @see net.minecraft.core.registries.BuiltInRegistries#POSITION_SOURCE_TYPE
-		COMMENT @return The newly registered source type.
+		COMMENT @return the newly registered source type
 		ARG 0 id
-			COMMENT The Id to register the type to.
+			COMMENT the Id to register the type to
 		ARG 1 type
-			COMMENT The type to register.
+			COMMENT the type to register

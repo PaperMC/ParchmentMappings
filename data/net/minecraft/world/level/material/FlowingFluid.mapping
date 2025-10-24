@@ -97,7 +97,7 @@ CLASS net/minecraft/world/level/material/FlowingFluid
 		ARG 4 belowPos
 		ARG 5 belowState
 	METHOD sourceNeighborCount (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)I
-		COMMENT Returns the number of immediately adjacent source blocks of the same fluid that lie on the horizontal plane.
+		COMMENT {@return the number of immediately adjacent source blocks of the same fluid that lie on the horizontal plane}
 		ARG 1 level
 		ARG 2 pos
 	METHOD spread (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;)V

@@ -30,7 +30,7 @@ CLASS net/minecraft/world/level/levelgen/synth/PerlinNoise
 	METHOD edgeValue (D)D
 		ARG 1 multiplier
 	METHOD getOctaveNoise (I)Lnet/minecraft/world/level/levelgen/synth/ImprovedNoise;
-		COMMENT @return A single octave of Perlin noise.
+		COMMENT @return a single octave of Perlin noise
 		ARG 1 octave
 	METHOD getValue (DDD)D
 		ARG 1 x

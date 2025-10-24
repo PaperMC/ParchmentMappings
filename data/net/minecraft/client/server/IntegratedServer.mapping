@@ -15,7 +15,7 @@ CLASS net/minecraft/client/server/IntegratedServer
 	METHOD initServer ()Z
 		COMMENT Initialises the server and starts it.
 	METHOD isPublished ()Z
-		COMMENT Returns {@code true} if this integrated server is open to LAN
+		COMMENT @return {@code true} if this integrated server is open to LAN
 	METHOD onServerCrash (Lnet/minecraft/CrashReport;)V
 		COMMENT Called on exit from the main run() loop.
 		ARG 1 report

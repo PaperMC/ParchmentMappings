@@ -7,9 +7,9 @@ CLASS net/minecraft/world/item/alchemy/Potion
 		ARG 2 effects
 	METHOD getEffects ()Ljava/util/List;
 		COMMENT Gets the base effects applied by the potion.
-		COMMENT @return The effects applied by the potion.
+		COMMENT @return the effects applied by the potion
 	METHOD hasInstantEffects ()Z
 		COMMENT Checks if the potion contains any instant effects such as instant health or instant damage.
-		COMMENT @return Whether the potion contained an instant effect.
+		COMMENT @return whether the potion contained an instant effect
 	METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/alchemy/Potion;
 		ARG 1 requiredFeatures

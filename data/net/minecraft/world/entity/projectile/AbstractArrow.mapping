@@ -38,7 +38,7 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 	METHOD hitTargetsOrDeflectSelf (Ljava/util/Collection;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
 		ARG 1 hitResults
 	METHOD isAttackable ()Z
-		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
+		COMMENT @return {@code true} if it's possible to attack this entity with an item
 	METHOD isCritArrow ()Z
 		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.
 	METHOD isNoPhysics ()Z

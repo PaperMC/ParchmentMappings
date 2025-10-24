@@ -104,24 +104,18 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD freeAt (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD getAbsorptionAmount ()F
-		COMMENT Returns the amount of health added by the Absorption effect.
+		COMMENT {@return the amount of health added by the absorption effect}
 	METHOD getAttackStrengthScale (F)F
-		COMMENT Returns the percentage of attack power available based on the cooldown (zero to one).
+		COMMENT {@return the percentage of attack power available based on the cooldown normalized between [0, 1]}
 		ARG 1 adjustTicks
 	METHOD getDestroySpeed (Lnet/minecraft/world/level/block/state/BlockState;)F
 		ARG 1 state
 	METHOD getDimensionChangingDelay ()I
-		COMMENT Return the amount of cooldown before this entity can use a portal again.
+		COMMENT {@return the amount of cooldown before this entity can use a portal again}
 	METHOD getEnchantedDamage (Lnet/minecraft/world/entity/Entity;FLnet/minecraft/world/damagesource/DamageSource;)F
 		ARG 1 entity
 		ARG 2 damage
 		ARG 3 damageSource
-	METHOD getEnderChestInventory ()Lnet/minecraft/world/inventory/PlayerEnderChestContainer;
-		COMMENT Returns the PlayerEnderChestContainer of this player.
-	METHOD getFoodData ()Lnet/minecraft/world/food/FoodData;
-		COMMENT Returns the player's FoodData object.
-	METHOD getGameProfile ()Lcom/mojang/authlib/GameProfile;
-		COMMENT Returns the GameProfile for this player
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getItemSwapScale (F)F
@@ -131,7 +125,7 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTick
 	METHOD getScoreboardName ()Ljava/lang/String;
-		COMMENT Returns a String to use as this entity's name in the scoreboard/entity selector systems
+		COMMENT {@return a String to use as this entity's name in the scoreboard/entity selector systems}
 	METHOD getSpeed ()F
 		COMMENT Gets the movement speed used for the new AI system.
 	METHOD getXpNeededForNextLevel ()I
@@ -165,13 +159,13 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD isImmobile ()Z
 		COMMENT Dead and sleeping entities cannot move
 	METHOD isLocalPlayer ()Z
-		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
+		COMMENT @return whether this is a {@link net.minecraft.client.player.LocalPlayer}
 	METHOD isReducedDebugInfo ()Z
 		COMMENT Whether the "reducedDebugInfo" option is active for this player.
 	METHOD isSleepingLongEnough ()Z
-		COMMENT Returns whether the player is asleep and the screen has fully faded.
+		COMMENT {@return whether the player is asleep and the screen has fully faded}
 	METHOD isSpectator ()Z
-		COMMENT Returns {@code true} if the player is in spectator mode.
+		COMMENT @return {@code true} if the player is in spectator game mode
 	METHOD isSweepAttack (ZZZ)Z
 		ARG 1 isStrong
 		ARG 2 isCritical
@@ -191,7 +185,7 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT <p>
 		COMMENT The position being queried is {@code pos.relative(facing.getOpposite())}.
 		COMMENT
-		COMMENT @return Whether this player may modify the queried location in the current world
+		COMMENT @return whether this player may modify the queried location in the current world
 		COMMENT @see ItemStack#canPlaceOnBlockInAdventureMode(BlockInWorld)
 		COMMENT @see Abilities#mayBuild
 		ARG 1 pos

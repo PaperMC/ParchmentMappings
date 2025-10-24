@@ -8,17 +8,15 @@ CLASS net/minecraft/world/entity/monster/Slime
 	METHOD dealDamage (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 livingEntity
 	METHOD doPlayJumpSound ()Z
-		COMMENT Returns {@code true} if the slime makes a sound when it jumps (based upon the slime's size)
+		COMMENT @return {@code true} if the slime makes a sound when it jumps (based upon the slime's size)
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getJumpDelay ()I
 		COMMENT Gets the amount of time the slime needs to wait between jumps.
 	METHOD getMaxHeadXRot ()I
 		COMMENT The speed it takes to move the entity's head rotation through the setLookAt method.
-	METHOD getSize ()I
-		COMMENT Returns the size of the slime.
 	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
+		COMMENT {@return the volume for the sounds this mob makes}
 	METHOD isDealsDamage ()Z
 		COMMENT Indicates whether the slime is able to damage the player (based upon the slime's size)
 	METHOD jumpFromGround ()V
@@ -47,7 +45,7 @@ CLASS net/minecraft/world/entity/monster/Slime
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V

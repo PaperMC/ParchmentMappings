@@ -91,7 +91,7 @@ CLASS net/minecraft/client/Options
 	METHOD updateResourcePacks (Lnet/minecraft/server/packs/repository/PackRepository;)V
 		ARG 1 packRepository
 	METHOD useNativeTransport ()Z
-		COMMENT Returns {@code true} if the client connect to a server using the native transport system.
+		COMMENT @return {@code true} if the client connect to a server using the native transport system
 	CLASS 3
 		METHOD writePrefix (Ljava/lang/String;)V
 			ARG 1 prefix

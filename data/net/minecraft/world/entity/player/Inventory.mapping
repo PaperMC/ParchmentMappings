@@ -3,11 +3,13 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 player
 		ARG 2 equipment
 	METHOD add (ILnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Adds the stack to the specified slot in the player's inventory. Returns {@code false} if it's not possible to place the entire stack in the inventory.
+		COMMENT Adds the stack to the specified slot in the player's inventory.
+		COMMENT @return {@code true} if it's possible to place the entire stack in the inventory
 		ARG 1 slot
 		ARG 2 stack
 	METHOD add (Lnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Adds the stack to the first empty slot in the player's inventory. Returns {@code false} if it's not possible to place the entire stack in the inventory.
+		COMMENT Adds the stack to the first empty slot in the player's inventory.
+		COMMENT @return {@code true} if it's possible to place the entire stack in the inventory
 		ARG 1 stack
 	METHOD addAndPickItem (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
@@ -26,7 +28,7 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD contains (Lnet/minecraft/tags/TagKey;)Z
 		ARG 1 tag
 	METHOD contains (Lnet/minecraft/world/item/ItemStack;)Z
-		COMMENT Returns {@code true} if the specified {@link net.minecraft.world.item.ItemStack} exists in the inventory.
+		COMMENT @return {@code true} if the specified {@link net.minecraft.world.item.ItemStack} exists in the inventory
 		ARG 1 stack
 	METHOD createInventoryUpdatePacket (I)Lnet/minecraft/network/protocol/game/ClientboundSetPlayerInventoryPacket;
 		ARG 1 slot
@@ -41,11 +43,11 @@ CLASS net/minecraft/world/entity/player/Inventory
 		COMMENT Finds the stack or an equivalent one in the main inventory
 		ARG 1 stack
 	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
+		COMMENT {@return the number of slots in the inventory}
 	METHOD getFreeSlot ()I
-		COMMENT Returns the first item stack that is empty.
+		COMMENT {@return the first item stack that is empty}
 	METHOD getItem (I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Returns the stack in the given slot.
+		COMMENT {@return the stack in the given slot}
 		ARG 1 index
 	METHOD getSelectionSize ()I
 		COMMENT Get the size of the player hotbar inventory
@@ -70,7 +72,7 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 2 sendPacket
 	METHOD removeFromSelected (Z)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 removeStack
-			COMMENT Whether to remove the entire stack of items. If {@code false}, removes a single item.
+			COMMENT whether to remove the entire stack of items. If {@code false}, removes a single item.
 	METHOD removeItem (II)Lnet/minecraft/world/item/ItemStack;
 		COMMENT Removes up to a specified number of items from an inventory slot and returns them in a new stack.
 		ARG 1 index

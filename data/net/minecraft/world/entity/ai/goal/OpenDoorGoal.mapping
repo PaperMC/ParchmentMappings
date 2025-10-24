@@ -3,7 +3,7 @@ CLASS net/minecraft/world/entity/ai/goal/OpenDoorGoal
 		ARG 1 mob
 		ARG 2 closeDoor
 	METHOD canContinueToUse ()Z
-		COMMENT Returns whether an in-progress Goal should continue executing
+		COMMENT {@return whether an in-progress Goal should continue executing}
 	METHOD start ()V
 		COMMENT Execute a one shot task or start executing a continuous task
 	METHOD stop ()V

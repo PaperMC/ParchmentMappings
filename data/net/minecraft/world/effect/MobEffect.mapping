@@ -33,13 +33,13 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD createParticleOptions (Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/core/particles/ParticleOptions;
 		ARG 1 effect
 	METHOD getColor ()I
-		COMMENT Returns the color of the potion liquid.
+		COMMENT @return the color of the potion liquid
 	METHOD getDescriptionId ()Ljava/lang/String;
-		COMMENT Returns the name of the effect.
+		COMMENT @return the name of the effect
 	METHOD isBeneficial ()Z
 		COMMENT Get if the potion is beneficial to the player. Beneficial potions are shown on the first row of the HUD
 	METHOD isInstantenous ()Z
-		COMMENT Returns {@code true} if the potion has an instant effect instead of a continuous one (e.g. Harming)
+		COMMENT @return {@code true} if the potion has an instant effect instead of a continuous one (e.g. Harming)
 	METHOD lambda$new$0 (ILnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/core/particles/ParticleOptions;
 		ARG 1 effect
 	METHOD lambda$new$1 (Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/core/particles/ParticleOptions;

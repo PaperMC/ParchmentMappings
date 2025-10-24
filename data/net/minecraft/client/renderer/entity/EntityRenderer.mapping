@@ -29,7 +29,7 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 	METHOD getBoundingBoxForCulling (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 minecraft
 	METHOD getFont ()Lnet/minecraft/client/gui/Font;
-		COMMENT Returns the font renderer from the set render manager
+		COMMENT @return the font renderer from the set render manager
 	METHOD getNameTag (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/network/chat/Component;
 		ARG 1 entity
 	METHOD getPackedLightCoords (Lnet/minecraft/world/entity/Entity;F)I

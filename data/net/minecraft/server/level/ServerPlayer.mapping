@@ -72,7 +72,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 3 traceItem
 	METHOD drop (Z)Z
 		ARG 1 dropStack
-			COMMENT Whether to drop the entire stack of items. If {@code false}, drops a single item.
+			COMMENT whether to drop the entire stack of items. If {@code false}, drops a single item.
 	METHOD findRespawnAndUseSpawnBlock (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerPlayer$RespawnConfig;Z)Ljava/util/Optional;
 		ARG 0 level
 		ARG 1 respawnConfig
@@ -83,7 +83,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD getIpAddress ()Ljava/lang/String;
 		COMMENT Gets the player's IP address. Used in /ban-ip.
 	METHOD getTabListDisplayName ()Lnet/minecraft/network/chat/Component;
-		COMMENT Returns {@code null} which indicates the tab list should just display the player's name, return a different value to display the specified text instead of the player's name
+		COMMENT @return {@code null} which indicates the tab list should just display the player's name, return a different value to display the specified text instead of the player's name
 	METHOD giveExperienceLevels (I)V
 		COMMENT Add experience levels to this player.
 		ARG 1 levels
@@ -94,7 +94,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD initMenu (Lnet/minecraft/world/inventory/AbstractContainerMenu;)V
 		ARG 1 menu
 	METHOD isPvpAllowed ()Z
-		COMMENT Returns if other players can attack this player
+		COMMENT @return if other players can attack this player
 	METHOD isReachableBedBlock (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD lambda$awardRecipesByKey$17 (Lnet/minecraft/resources/ResourceKey;)Ljava/util/stream/Stream;

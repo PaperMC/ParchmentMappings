@@ -5,21 +5,18 @@ CLASS net/minecraft/server/commands/data/DataCommands
 		ARG 0 tag
 	METHOD getData (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/commands/data/DataAccessor;)I
 		COMMENT Gets all NBT on the object, and applies syntax highlighting.
-		COMMENT
-		COMMENT @return 1
+		COMMENT @return {@link com.mojang.brigadier.Command#SINGLE_SUCCESS}
 		ARG 0 source
 		ARG 1 accessor
 	METHOD getData (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/commands/data/DataAccessor;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;)I
 		COMMENT Gets a value, which can be of any known NBT type.
-		COMMENT
-		COMMENT @return The value associated with the element: length for strings, size for lists and compounds, and numeric value for primitives.
+		COMMENT @return the value associated with the element: length for strings, size for lists and compounds, and numeric value for primitives
 		ARG 0 source
 		ARG 1 accessor
 		ARG 2 path
 	METHOD getNumeric (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/commands/data/DataAccessor;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;D)I
 		COMMENT Gets a single numeric element, scaled by the given amount.
-		COMMENT
-		COMMENT @return The element's value, scaled by scale.
+		COMMENT @return the element's value, scaled by scale
 		ARG 0 source
 		ARG 1 accessor
 		ARG 2 path
@@ -80,9 +77,8 @@ CLASS net/minecraft/server/commands/data/DataCommands
 		ARG 2 dataManipulator
 		ARG 3 tags
 	METHOD mergeData (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/commands/data/DataAccessor;Lnet/minecraft/nbt/CompoundTag;)I
-		COMMENT Merges the given NBT into the targeted object's NBT.
-		COMMENT
-		COMMENT @return 1
+		COMMENT Merges the given tag into the targeted object's tag.
+		COMMENT @return {@link com.mojang.brigadier.Command#SINGLE_SUCCESS}
 		ARG 0 source
 		ARG 1 accessor
 		ARG 2 tag
@@ -90,8 +86,7 @@ CLASS net/minecraft/server/commands/data/DataCommands
 		ARG 0 dispatcher
 	METHOD removeData (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/commands/data/DataAccessor;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;)I
 		COMMENT Removes the tag at the end of the path.
-		COMMENT
-		COMMENT @return 1
+		COMMENT @return {@link com.mojang.brigadier.Command#SINGLE_SUCCESS}
 		ARG 0 source
 		ARG 1 accessor
 		ARG 2 path

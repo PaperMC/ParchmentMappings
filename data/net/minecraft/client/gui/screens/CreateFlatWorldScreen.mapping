@@ -6,7 +6,7 @@ CLASS net/minecraft/client/gui/screens/CreateFlatWorldScreen
 		ARG 2 applySettings
 		ARG 3 generator
 	METHOD hasValidSelection ()Z
-		COMMENT Returns whether there is a valid layer selection
+		COMMENT @return whether there is a valid layer selection
 	METHOD lambda$init$1 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$init$2 (Lnet/minecraft/client/gui/components/Button;)V

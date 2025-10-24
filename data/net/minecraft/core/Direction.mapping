@@ -25,26 +25,26 @@ CLASS net/minecraft/core/Direction
 		COMMENT @return the Direction specified by the given name or {@code null} if no such Direction exists
 		ARG 0 name
 	METHOD from2DDataValue (I)Lnet/minecraft/core/Direction;
-		COMMENT @return the Direction corresponding to the given horizontal index (0-3). Out of bounds values are wrapped around. The order is S-W-N-E.
+		COMMENT Returns the Direction corresponding to the given horizontal index (0-3). Out of bounds values are wrapped around. The order is S-W-N-E.
 		COMMENT @see #get2DDataValue
 		ARG 0 horizontalIndex
 	METHOD from3DDataValue (I)Lnet/minecraft/core/Direction;
-		COMMENT @return the {@code Direction} corresponding to the given index (0-5). Out of bounds values are wrapped around. The order is D-U-N-S-W-E.
+		COMMENT Returns the Direction corresponding to the given index (0-5). Out of bounds values are wrapped around. The order is D-U-N-S-W-E.
 		COMMENT @see #get3DDataValue
 		ARG 0 index
 	METHOD fromAxisAndDirection (Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/core/Direction$AxisDirection;)Lnet/minecraft/core/Direction;
 		ARG 0 axis
 		ARG 1 direction
 	METHOD fromYRot (D)Lnet/minecraft/core/Direction;
-		COMMENT @return the Direction corresponding to the given angle in degrees (0-360). Out of bounds values are wrapped around. An angle of 0 is SOUTH, an angle of 90 would be WEST.
+		COMMENT Returns the Direction corresponding to the given angle in degrees (0-360). Out of bounds values are wrapped around. An angle of 0 is SOUTH, an angle of 90 would be WEST.
 		ARG 0 yRot
 	METHOD get (Lnet/minecraft/core/Direction$AxisDirection;Lnet/minecraft/core/Direction$Axis;)Lnet/minecraft/core/Direction;
 		ARG 0 direction
 		ARG 1 axis
 	METHOD get2DDataValue ()I
-		COMMENT @return the index of this horizontal facing (0-3). The order is S-W-N-E
+		COMMENT Returns the index of this horizontal facing (0-3). The order is S-W-N-E
 	METHOD get3DDataValue ()I
-		COMMENT @return the index of this Direction (0-5). The order is D-U-N-S-W-E
+		COMMENT Returns the index of this Direction (0-5). The order is D-U-N-S-W-E
 	METHOD getApproximateNearest (DDD)Lnet/minecraft/core/Direction;
 		ARG 0 x
 		ARG 2 y
@@ -75,15 +75,15 @@ CLASS net/minecraft/core/Direction
 		ARG 0 vector
 		ARG 1 defaultValue
 	METHOD getOpposite ()Lnet/minecraft/core/Direction;
-		COMMENT @return the opposite Direction (e.g. DOWN => UP)
+		COMMENT {@return the opposite Direction (e.g. DOWN => UP)}
 	METHOD getRandom (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/core/Direction;
 		ARG 0 random
 	METHOD getStepX ()I
-		COMMENT @return the offset in the x direction
+		COMMENT {@return the offset in the x direction}
 	METHOD getStepY ()I
-		COMMENT @return the offset in the y direction
+		COMMENT {@return the offset in the y direction}
 	METHOD getStepZ ()I
-		COMMENT @return the offset in the z direction
+		COMMENT {@return the offset in the z direction}
 	METHOD getYRot (Lnet/minecraft/core/Direction;)F
 		ARG 0 direction
 	METHOD isFacingAngle (F)Z
@@ -108,7 +108,7 @@ CLASS net/minecraft/core/Direction
 		ARG 0 matrix
 		ARG 1 direction
 	METHOD toYRot ()F
-		COMMENT @return the angle in degrees corresponding to this Direction.
+		COMMENT @return the angle in degrees corresponding to this Direction
 		COMMENT @see #fromYRot
 	METHOD verifyVertical (Lnet/minecraft/core/Direction;)Lcom/mojang/serialization/DataResult;
 		ARG 0 direction
@@ -131,7 +131,7 @@ CLASS net/minecraft/core/Direction
 			ARG 2 y
 			ARG 3 z
 		METHOD getPlane ()Lnet/minecraft/core/Direction$Plane;
-			COMMENT @return this Axis' Plane (VERTICAL for Y, HORIZONTAL for X and Z)
+			COMMENT {@return this Axis' Plane (VERTICAL for Y, HORIZONTAL for X and Z)}
 		METHOD getRandom (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/core/Direction$Axis;
 			ARG 0 random
 		METHOD isHorizontal ()Z
@@ -155,4 +155,4 @@ CLASS net/minecraft/core/Direction
 			ARG 3 step
 			ARG 4 name
 		METHOD getStep ()I
-			COMMENT @return the offset for this AxisDirection. 1 for POSITIVE, -1 for NEGATIVE
+			COMMENT {@return the offset for this AxisDirection: 1 for POSITIVE, -1 for NEGATIVE}

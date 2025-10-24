@@ -21,7 +21,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 2 damageSource
 		ARG 3 damageAmount
 	METHOD areAllEffectsAmbient (Ljava/util/Collection;)Z
-		COMMENT Returns {@code true} if all the potion effects in the specified collection are ambient.
+		COMMENT @return {@code true} if all the potion effects in the specified collection are ambient
 		ARG 0 effects
 	METHOD baseTick ()V
 		COMMENT Gets called every tick from main Entity class
@@ -163,7 +163,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 effectInstance
 		ARG 2 entity
 	METHOD getAbsorptionAmount ()F
-		COMMENT Returns the amount of health added by the Absorption effect.
+		COMMENT @return the amount of health added by the Absorption effect
 	METHOD getArrowCount ()I
 		COMMENT Counts the amount of arrows stuck in the entity. Getting hit by arrows increases this, used for rendering.
 	METHOD getAttackAnim (F)F
@@ -235,7 +235,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD getLocalBoundsForPose (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 pose
 	METHOD getMaxHealth ()F
-		COMMENT Returns the maximum health of the entity (what it is able to regenerate up to, what it spawned with, etc.)
+		COMMENT {@return the maximum health of the entity (what it is able to regenerate up to, what it spawned with, etc.)}
 	METHOD getProjectile (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 weaponStack
 	METHOD getRiddenInput (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
@@ -244,7 +244,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD getRiddenSpeed (Lnet/minecraft/world/entity/player/Player;)F
 		ARG 1 player
 	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
+		COMMENT {@return the volume for the sounds this mob makes}
 	METHOD getSpeed ()F
 		COMMENT Gets the movement speed used for the new AI system.
 	METHOD getSwimAmount (F)F
@@ -307,7 +307,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD isAffectedByPotions ()Z
 		COMMENT Returns {@code false} if the entity is an armor stand. Returns {@code true} for all other living entities.
 	METHOD isAlive ()Z
-		COMMENT Returns {@code true} if the entity has not been {@link #isRemoved}.
+		COMMENT @return {@code true} if the entity has not been {@link #isRemoved}
 	METHOD isAlwaysExperienceDropper ()Z
 		COMMENT Only use is to identify if class is an instance of player for experience dropping
 	METHOD isBaby ()Z
@@ -324,7 +324,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD isInWall ()Z
 		COMMENT Checks if this entity is inside an opaque block.
 	METHOD isInvertedHealAndHarm ()Z
-		COMMENT Returns {@code true} if this entity is undead.
+		COMMENT @return {@code true} if this entity is undead
 	METHOD isInvulnerableTo (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 level
 		ARG 2 damageSource
@@ -335,11 +335,9 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 5 visual
 		ARG 6 yValues
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other Entities should be prevented from moving through this Entity
 	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
-	METHOD isSleeping ()Z
-		COMMENT Returns whether player is sleeping or not
+		COMMENT @return {@code true} if this entity should push and be pushed by other entities when colliding
 	METHOD jumpFromGround ()V
 		COMMENT Causes this entity to do an upwards motion (jumping).
 	METHOD jumpInLiquid (Lnet/minecraft/tags/TagKey;)V
@@ -371,7 +369,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 level
 		ARG 2 pos
 	METHOD onClimbable ()Z
-		COMMENT Returns {@code true} if this entity should move as if it were on a ladder (either because it's actually on a ladder, or for AI reasons)
+		COMMENT @return {@code true} if this entity should move as if it were on a ladder (either because it's actually on a ladder, or for AI reasons)
 	METHOD onEffectAdded (Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 effectInstance
 		ARG 2 entity

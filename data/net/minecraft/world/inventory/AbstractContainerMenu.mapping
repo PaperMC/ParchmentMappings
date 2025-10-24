@@ -67,19 +67,20 @@ CLASS net/minecraft/world/inventory/AbstractContainerMenu
 		ARG 1 container
 		ARG 2 slotIndex
 	METHOD getItems ()Lnet/minecraft/core/NonNullList;
-		COMMENT Returns a list of {@code ItemStack}s, for each slot.
+		COMMENT @return a list of {@code ItemStack}s, for each slot
 	METHOD getQuickCraftPlaceCount (Ljava/util/Set;ILnet/minecraft/world/item/ItemStack;)I
 		ARG 0 slots
 		ARG 1 type
 		ARG 2 stack
 	METHOD getQuickcraftHeader (I)I
-		COMMENT Returns (0 : start drag, 1 : add slot, 2 : end drag)
+		COMMENT {@return (0 : start drag, 1 : add slot, 2 : end drag)}
 		ARG 0 clickedButton
 	METHOD getQuickcraftMask (II)I
 		ARG 0 quickCraftingHeader
 		ARG 1 quickCraftingType
 	METHOD getQuickcraftType (I)I
-		COMMENT Extracts the drag mode. Return (0 : evenly split, 1 : one item by slot, 2 : not used ?)
+		COMMENT Extracts the drag mode.
+		COMMENT @return (0 : evenly split, 1 : one item by slot, 2 : not used ?)
 		ARG 0 eventButton
 	METHOD getRedstoneSignalFromBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;)I
 		COMMENT Like the version that takes an inventory. If the given BlockEntity is not an Inventory, 0 is returned instead.

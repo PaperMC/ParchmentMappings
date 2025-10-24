@@ -12,7 +12,7 @@ CLASS net/minecraft/world/entity/monster/Ghast
 	METHOD getMaxSpawnClusterSize ()I
 		COMMENT Will return how many at most can spawn in a chunk at once.
 	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
+		COMMENT {@return the volume for the sounds this mob makes}
 	METHOD isReflectedFireball (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 0 damageSource
 	METHOD setCharging (Z)V
@@ -45,7 +45,7 @@ CLASS net/minecraft/world/entity/monster/Ghast
 			ARG 1 ghast
 			ARG 2 distanceToBlocks
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD chooseRandomPosition (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/phys/Vec3;

@@ -180,9 +180,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 y
 		ARG 5 z
 	METHOD displayFireAnimation ()Z
-		COMMENT Return whether this entity should be rendered as on fire.
+		COMMENT {@return whether this entity should be rendered as on fire}
 	METHOD distanceTo (Lnet/minecraft/world/entity/Entity;)F
-		COMMENT Returns the distance to the entity.
+		COMMENT {@return the distance to the entity}
 		ARG 1 entity
 	METHOD distanceToSqr (DDD)D
 		COMMENT Gets the squared distance to the position.
@@ -190,7 +190,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 y
 		ARG 5 z
 	METHOD distanceToSqr (Lnet/minecraft/world/entity/Entity;)D
-		COMMENT Returns the squared distance to the entity.
+		COMMENT {@return the squared distance to the entity}
 		ARG 1 entity
 	METHOD distanceToSqr (Lnet/minecraft/world/phys/Vec3;)D
 		ARG 1 pos
@@ -242,7 +242,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 passenger
 		ARG 2 attachments
 	METHOD getDimensionChangingDelay ()I
-		COMMENT Return the amount of cooldown before this entity can use a portal again.
+		COMMENT {@return the amount of cooldown before this entity can use a portal again}
 	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
 		ARG 1 pose
 	METHOD getDirection ()Lnet/minecraft/core/Direction;
@@ -250,7 +250,7 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD getDismountLocationForPassenger (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 passenger
 	METHOD getEncodeId ()Ljava/lang/String;
-		COMMENT Returns the string that identifies this Entity's class
+		COMMENT {@return the string that identifies this Entity's class}
 	METHOD getEyeHeight (Lnet/minecraft/world/entity/Pose;)F
 		ARG 1 pose
 	METHOD getEyePosition (F)Lnet/minecraft/world/phys/Vec3;
@@ -266,7 +266,7 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD getLightProbePosition (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTick
 	METHOD getLookAngle ()Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns a (normalized) vector of where this entity is looking.
+		COMMENT {@return a (normalized) vector of where this entity is looking}
 	METHOD getMaxFallDistance ()I
 		COMMENT The maximum height from where the entity is allowed to jump (used in pathfinder)
 	METHOD getMotionDirection ()Lnet/minecraft/core/Direction;
@@ -295,11 +295,11 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD getRopeHoldPosition (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTick
 	METHOD getRotationVector ()Lnet/minecraft/world/phys/Vec2;
-		COMMENT Returns the Entity's pitch and yaw as a {@link net.minecraft.world.phys.Vec2}.
+		COMMENT @return the entity's pitch and yaw as a {@link net.minecraft.world.phys.Vec2}
 	METHOD getScoreboardName ()Ljava/lang/String;
-		COMMENT Returns a String to use as this entity's name in the scoreboard/entity selector systems
+		COMMENT @return a String to use as this entity's name in the scoreboard/entity selector systems
 	METHOD getSharedFlag (I)Z
-		COMMENT Returns {@code true} if the flag is active for the entity. Known flags: 0: burning 1: sneaking 2: unused 3: sprinting 4: swimming 5: invisible 6: glowing 7: elytra flying
+		COMMENT @return {@code true} if the flag is active for the entity. Known flags: 0: burning 1: sneaking 2: unused 3: sprinting 4: swimming 5: invisible 6: glowing 7: elytra flying
 		ARG 1 flag
 	METHOD getSlot (I)Lnet/minecraft/world/entity/SlotAccess;
 		ARG 1 slot
@@ -313,10 +313,10 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Gets the interpolated look vector.
 		ARG 1 partialTick
 	METHOD getViewXRot (F)F
-		COMMENT Returns the current X rotation of the entity.
+		COMMENT {@return the current X rotation of the entity}
 		ARG 1 partialTick
 	METHOD getViewYRot (F)F
-		COMMENT Returns the current Y rotation of the entity.
+		COMMENT {@return the current Y rotation of the entity}
 		ARG 1 partialTick
 	METHOD getX (D)D
 		ARG 1 scale
@@ -375,18 +375,18 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 vec
 		ARG 3 hand
 	METHOD is (Lnet/minecraft/world/entity/Entity;)Z
-		COMMENT Returns {@code true} if Entity argument is equal to this Entity
+		COMMENT @return {@code true} if Entity argument is equal to this Entity
 		ARG 1 entity
 	METHOD isAlive ()Z
-		COMMENT Returns {@code true} if the entity has not been {@link #isRemoved}.
+		COMMENT @return {@code true} if the entity has not been {@link #isRemoved}
 	METHOD isAlliedTo (Lnet/minecraft/world/entity/Entity;)Z
-		COMMENT Returns whether this Entity is on the same team as the given Entity.
+		COMMENT @return whether this Entity is on the same team as the given Entity
 		ARG 1 entity
 	METHOD isAlliedTo (Lnet/minecraft/world/scores/Team;)Z
-		COMMENT Returns whether this Entity is on the given scoreboard team.
+		COMMENT @return whether this Entity is on the given scoreboard team
 		ARG 1 team
 	METHOD isAttackable ()Z
-		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
+		COMMENT @return {@code true} if it's possible to attack this entity with an item
 	METHOD isColliding (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 pos
 		ARG 2 state
@@ -403,7 +403,7 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD isHorizontalCollisionMinor (Lnet/minecraft/world/phys/Vec3;)Z
 		ARG 1 deltaMovement
 	METHOD isIgnoringBlockTriggers ()Z
-		COMMENT Return whether this entity should NOT trigger a pressure plate or a tripwire.
+		COMMENT {@return whether this entity should NOT trigger a pressure plate or a tripwire}
 	METHOD isInWall ()Z
 		COMMENT Checks if this entity is inside an opaque block.
 	METHOD isInWater ()Z
@@ -422,13 +422,13 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD isPassengerOfSameVehicle (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other Entities should be prevented from moving through this Entity
 	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
+		COMMENT @return {@code true} if this entity should push and be pushed by other entities when colliding
 	METHOD isSilent ()Z
 		COMMENT @return {@code true} if this entity will not play sounds
 	METHOD isSpectator ()Z
-		COMMENT Returns {@code true} if the player is in spectator mode.
+		COMMENT @return {@code true} if the player is in spectator mode
 	METHOD isSprinting ()Z
 		COMMENT Get if the Entity is sprinting.
 	METHOD isStateClimbable (Lnet/minecraft/world/level/block/state/BlockState;)Z

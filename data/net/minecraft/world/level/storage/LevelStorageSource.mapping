@@ -28,7 +28,7 @@ CLASS net/minecraft/world/level/storage/LevelStorageSource
 	METHOD isNewLevelIdAcceptable (Ljava/lang/String;)Z
 		ARG 1 saveName
 	METHOD levelExists (Ljava/lang/String;)Z
-		COMMENT Return whether the given world can be loaded.
+		COMMENT {@return whether the given world can be loaded}
 		ARG 1 saveName
 	METHOD loadLevelSummaries (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelCandidates;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 candidates

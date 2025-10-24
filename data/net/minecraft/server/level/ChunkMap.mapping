@@ -210,7 +210,7 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 chunkPos
 		ARG 3 newLevel
 		ARG 4 holder
-			COMMENT The {@link net.minecraft.server.level.ChunkHolder} of the chunk if it is loaded, and {@code null} otherwise.
+			COMMENT the {@link net.minecraft.server.level.ChunkHolder} of the chunk if it is loaded, and {@code null} otherwise
 		ARG 5 oldLevel
 	METHOD updateChunkTracking (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player

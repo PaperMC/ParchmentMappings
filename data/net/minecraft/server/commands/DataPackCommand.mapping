@@ -5,14 +5,12 @@ CLASS net/minecraft/server/commands/DataPackCommand
 		ARG 2 description
 	METHOD disablePack (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/packs/repository/Pack;)I
 		COMMENT Disables the given pack.
-		COMMENT
-		COMMENT @return The number of packs that are loaded after this operation.
+		COMMENT @return the number of packs that are loaded after this operation
 		ARG 0 source
 		ARG 1 pack
 	METHOD enablePack (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/packs/repository/Pack;Lnet/minecraft/server/commands/DataPackCommand$Inserter;)I
 		COMMENT Enables the given pack.
-		COMMENT
-		COMMENT @return The number of packs that are loaded after this operation.
+		COMMENT @return the number of packs that are loaded after this operation
 		ARG 0 source
 		ARG 1 pack
 		ARG 2 priorityCallback
@@ -45,18 +43,15 @@ CLASS net/minecraft/server/commands/DataPackCommand
 		ARG 0 name
 	METHOD listAvailablePacks (Lnet/minecraft/commands/CommandSourceStack;)I
 		COMMENT Sends a list of available packs to the user.
-		COMMENT
-		COMMENT @return The number of available packs.
+		COMMENT @return the number of available packs
 		ARG 0 source
 	METHOD listEnabledPacks (Lnet/minecraft/commands/CommandSourceStack;)I
 		COMMENT Sends a list of enabled packs to the user.
-		COMMENT
-		COMMENT @return The number of enabled packs.
+		COMMENT @return the number of enabled packs
 		ARG 0 source
 	METHOD listPacks (Lnet/minecraft/commands/CommandSourceStack;)I
 		COMMENT Sends a list of both enabled and available packs to the user.
-		COMMENT
-		COMMENT @return The total number of packs.
+		COMMENT @return the total number of packs
 		ARG 0 source
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher

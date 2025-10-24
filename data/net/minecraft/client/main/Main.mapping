@@ -23,7 +23,7 @@ CLASS net/minecraft/client/main/Main
 		ARG 0 set
 		ARG 1 option
 	METHOD stringHasValue (Ljava/lang/String;)Z
-		COMMENT Returns {@code true} if the given string is neither {@code null} nor empty.
+		COMMENT @return {@code true} if the given string is neither {@code null} nor empty
 		ARG 0 str
 	METHOD unescapeJavaArgument (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 arg

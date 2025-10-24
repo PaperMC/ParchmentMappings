@@ -31,8 +31,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 	METHOD isPathClear (Lnet/minecraft/world/entity/animal/Fox;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 fox
 		ARG 1 livingEntity
-	METHOD isSleeping ()Z
-		COMMENT Returns whether player is sleeping or not
 	METHOD lambda$registerGoals$4 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 entity
 		ARG 1 level
@@ -99,7 +97,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 			ARG 0 id
 	CLASS SleepGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -126,7 +124,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 			ARG 2 speedModifier
 	CLASS FaceplantGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -137,7 +135,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 			COMMENT Keep ticking a continuous task that has already been started
 	CLASS FoxPounceGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -173,7 +171,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD isValidTarget (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
-			COMMENT Return {@code true} to set given position as destination
+			COMMENT @return {@code true} to set the given position as destination
 			ARG 1 level
 			ARG 2 pos
 		METHOD pickGlowBerry (Lnet/minecraft/world/level/block/state/BlockState;)V
@@ -194,7 +192,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS PerchAndSearchGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -208,7 +206,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 			ARG 1 fox
 			ARG 2 speedModifier
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -219,7 +217,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 			ARG 3 lookAtType
 			ARG 4 lookDistance
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS FoxSearchForItemsGoal
@@ -243,7 +241,7 @@ CLASS net/minecraft/world/entity/animal/Fox
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;II)V
 			ARG 3 interval
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V

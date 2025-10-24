@@ -5,7 +5,7 @@ CLASS net/minecraft/commands/arguments/NbtPathArgument
 		ARG 0 context
 		ARG 1 name
 	METHOD isAllowedInUnquotedName (C)Z
-		COMMENT @return {@code true} if the given character is normal for a tag name; otherwise {@code false} if it has special meaning for paths.
+		COMMENT @return {@code true} if the given character is normal for a tag name; otherwise {@code false} if it has special meaning for paths
 		ARG 0 ch
 	METHOD lambda$createTagPredicate$3 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)Z
 		ARG 1 other

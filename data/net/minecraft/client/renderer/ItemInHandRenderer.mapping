@@ -24,7 +24,7 @@ CLASS net/minecraft/client/renderer/ItemInHandRenderer
 		ARG 2 arm
 		ARG 3 equippedProg
 	METHOD calculateMapTilt (F)F
-		COMMENT Return the angle to render the Map
+		COMMENT {@return the angle to render the Map}
 		ARG 1 pitch
 	METHOD evaluateWhichHandsToRender (Lnet/minecraft/client/player/LocalPlayer;)Lnet/minecraft/client/renderer/ItemInHandRenderer$HandRenderSelection;
 		ARG 0 player

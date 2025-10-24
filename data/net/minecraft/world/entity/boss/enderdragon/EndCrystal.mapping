@@ -5,7 +5,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EndCrystal
 		ARG 4 y
 		ARG 6 z
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other entities should be prevented from moving through this entity
 	METHOD onDestroyedBy (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 level
 		ARG 2 damageSource

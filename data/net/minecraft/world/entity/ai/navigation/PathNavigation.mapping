@@ -15,7 +15,7 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 	METHOD canUpdatePath ()Z
 		COMMENT If on ground or swimming and can swim
 	METHOD createPath (DDDI)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns path to given BlockPos
+		COMMENT {@return a path to given BlockPos}
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -24,7 +24,7 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 1 targets
 		ARG 2 reachRange
 	METHOD createPath (Ljava/util/Set;IZI)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns a path to one of the given targets or {@code null}
+		COMMENT @return a path to one of the given targets or {@code null}
 		ARG 1 targets
 		ARG 2 regionOffset
 		ARG 3 offsetUpward
@@ -36,11 +36,11 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 4 reachRange
 		ARG 5 followRange
 	METHOD createPath (Ljava/util/stream/Stream;I)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns a path to one of the elements of the stream or {@code null}
+		COMMENT @return a path to one of the elements of the stream or {@code null}
 		ARG 1 targets
 		ARG 2 reachRange
 	METHOD createPath (Lnet/minecraft/core/BlockPos;I)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns path to given BlockPos
+		COMMENT @return a path to the given BlockPos
 		ARG 1 pos
 		ARG 2 reachRange
 	METHOD createPath (Lnet/minecraft/core/BlockPos;II)Lnet/minecraft/world/level/pathfinder/Path;
@@ -48,7 +48,7 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 2 reachRange
 		ARG 3 followRange
 	METHOD createPath (Lnet/minecraft/world/entity/Entity;I)Lnet/minecraft/world/level/pathfinder/Path;
-		COMMENT Returns a path to the given entity or {@code null}
+		COMMENT @return a path to the given entity or {@code null}
 		ARG 1 entity
 		ARG 2 reachRange
 	METHOD createPathFinder (I)Lnet/minecraft/world/level/pathfinder/PathFinder;
@@ -70,7 +70,8 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 	METHOD isStableDestination (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD moveTo (DDDD)Z
-		COMMENT Try to find and set a path to XYZ. Returns {@code true} if successful.
+		COMMENT Try to find and set a path to the position.
+		COMMENT @return {@code true} if successful
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -82,7 +83,8 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 7 reachRange
 		ARG 8 speedModifier
 	METHOD moveTo (Lnet/minecraft/world/entity/Entity;D)Z
-		COMMENT Try to find and set a path to the entity. Returns {@code true} if successful.
+		COMMENT Try to find and set a path to the entity.
+		COMMENT @return {@code true} if successful
 		ARG 1 entity
 		ARG 2 speedModifier
 	METHOD moveTo (Lnet/minecraft/world/level/pathfinder/Path;D)Z

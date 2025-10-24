@@ -8,9 +8,9 @@ CLASS net/minecraft/world/entity/item/PrimedTnt
 	METHOD getFuse ()I
 		COMMENT Gets the fuse from the data manager
 	METHOD getOwner ()Lnet/minecraft/world/entity/LivingEntity;
-		COMMENT Returns {@code null} or the livingEntity it was ignited by
+		COMMENT @return {@code null} or the livingEntity it was ignited by
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other entities should be prevented from moving through this entity
 	METHOD setBlockState (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
 	METHOD setFuse (I)V

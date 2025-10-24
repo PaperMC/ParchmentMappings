@@ -20,7 +20,7 @@ CLASS net/minecraft/client/MouseHandler
 	METHOD grabMouse ()V
 		COMMENT Will set the focus to in-game if the Minecraft window is the active with focus. Also clears any GUI screen currently displayed
 	METHOD isMouseGrabbed ()Z
-		COMMENT Returns {@code true} if the mouse is grabbed.
+		COMMENT @return {@code true} if the mouse is grabbed
 	METHOD onButton (JLnet/minecraft/client/input/MouseButtonInfo;I)V
 		ARG 1 windowPointer
 		ARG 3 buttonInfo

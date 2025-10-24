@@ -18,7 +18,6 @@ CLASS net/minecraft/resources/ResourceKey
 		ARG 0 registryKey
 	METHOD create (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceKey;
 		COMMENT Constructs a new {@code ResourceKey} for a resource with the specified {@code location} within the registry specified by the given {@code registryKey}.
-		COMMENT
 		COMMENT @return the created resource key. The registry name is set to the location of the specified {@code registryKey} and with the specified {@code location} as the location of the resource.
 		ARG 0 registryKey
 		ARG 1 location
@@ -26,10 +25,11 @@ CLASS net/minecraft/resources/ResourceKey
 		ARG 0 registryName
 		ARG 1 location
 	METHOD createRegistryKey (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceKey;
-		COMMENT @return the created registry key. The registry name is set to {@code minecraft:root} with the specified {@code location}.
+		COMMENT The registry name is set to {@code minecraft:root} with the specified {@code location}.
+		COMMENT @return the created registry key
 		ARG 0 location
 	METHOD isFor (Lnet/minecraft/resources/ResourceKey;)Z
-		COMMENT @return {@code true} if this resource key is a direct child of the specified {@code registryKey}.
+		COMMENT @return {@code true} if this resource key is a direct child of the specified {@code registryKey}
 		ARG 1 registryKey
 	METHOD lambda$codec$0 (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceKey;
 		ARG 1 path

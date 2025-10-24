@@ -30,7 +30,7 @@ CLASS net/minecraft/world/level/lighting/DynamicGraphMinFixedPoint
 	METHOD checkNode (J)V
 		ARG 1 pos
 	METHOD computeLevelFromNeighbor (JJI)I
-		COMMENT Returns level propagated from start position with specified level to the neighboring end position.
+		COMMENT {@return level propagated from start position with specified level to the neighboring end position}
 		ARG 1 startPos
 		ARG 3 endPos
 		ARG 5 startLevel

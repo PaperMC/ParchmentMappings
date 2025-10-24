@@ -37,6 +37,6 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 			ARG 4 walkSpeedModifier
 			ARG 6 sprintSpeedModifier
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

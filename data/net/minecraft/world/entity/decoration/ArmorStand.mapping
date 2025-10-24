@@ -38,13 +38,13 @@ CLASS net/minecraft/world/entity/decoration/ArmorStand
 	METHOD isDisabled (Lnet/minecraft/world/entity/EquipmentSlot;)Z
 		ARG 1 slot
 	METHOD isEffectiveAi ()Z
-		COMMENT Returns whether the entity is in a server world
+		COMMENT {@return whether the entity is in a server world}
 	METHOD isMarker ()Z
 		COMMENT Gets whether the armor stand has marker enabled. If {@code true}, the armor stand's bounding box is set to zero and cannot be interacted with.
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other entities should be prevented from moving through this entity
 	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
+		COMMENT @return {@code true} if this entity should push and be pushed by other entities when colliding
 	METHOD lambda$static$0 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V

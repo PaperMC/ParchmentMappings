@@ -111,7 +111,7 @@ CLASS net/minecraft/world/level/block/entity/HopperBlockEntity
 		ARG 4 validator
 	METHOD tryTakeInItemFromSlot (Lnet/minecraft/world/level/block/entity/Hopper;Lnet/minecraft/world/Container;ILnet/minecraft/core/Direction;)Z
 		COMMENT Pulls from the specified slot in the container and places in any available slot in the hopper.
-		COMMENT @return {@code true} if the entire stack was moved.
+		COMMENT @return {@code true} if the entire stack was moved
 		ARG 0 hopper
 		ARG 1 container
 		ARG 2 slot

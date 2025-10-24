@@ -8,19 +8,19 @@ CLASS net/minecraft/world/entity/ai/util/RandomPos
 		COMMENT @return a random (x, y, z) coordinate by picking a point (x, z), adding a random angle, up to a difference of {@code maxAngleDelta}. The y position is randomly chosen from the range {@code [y - yRange, y + yRange]}. Will be {@code null} if the chosen coordinate is outside a distance of {@code maxDistance} from the origin.
 		ARG 0 random
 		ARG 1 minDistance
-			COMMENT The minimum value in x and z, in absolute value, that could be returned.
+			COMMENT the minimum value in x and z, in absolute value, that could be returned
 		ARG 3 maxDistance
-			COMMENT The maximum value in x and z, in absolute value, that could be returned.
+			COMMENT the maximum value in x and z, in absolute value, that could be returned
 		ARG 5 yRange
-			COMMENT The range plus or minus the y position to be chosen
+			COMMENT the range plus or minus the y position to be chosen
 		ARG 6 y
-			COMMENT The target y position
+			COMMENT the target y position
 		ARG 7 x
-			COMMENT The x offset to the target position
+			COMMENT the x offset to the target position
 		ARG 9 z
-			COMMENT The z offset to the target position
+			COMMENT the z offset to the target position
 		ARG 11 maxAngleDelta
-			COMMENT The maximum variance of the returned angle, from the base angle being a vector from (0, 0) to (x, z).
+			COMMENT the maximum variance of the returned angle, from the base angle being a vector from (0, 0) to (x, z)
 	METHOD generateRandomPos (Ljava/util/function/Supplier;Ljava/util/function/ToDoubleFunction;)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Tries 10 times to maximize the return value of the position to double function based on the supplied position
 		ARG 0 posSupplier

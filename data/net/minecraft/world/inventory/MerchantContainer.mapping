@@ -2,9 +2,9 @@ CLASS net/minecraft/world/inventory/MerchantContainer
 	METHOD <init> (Lnet/minecraft/world/item/trading/Merchant;)V
 		ARG 1 merchant
 	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
+		COMMENT {@return the number of slots in the inventory}
 	METHOD getItem (I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Returns the stack in the given slot.
+		COMMENT {@return the stack in the given slot}
 		ARG 1 index
 	METHOD isPaymentSlot (I)Z
 		COMMENT if slot has changed, does updateSellItem need to be called?

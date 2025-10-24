@@ -4,7 +4,7 @@ CLASS net/minecraft/server/rcon/NetworkDataOutputStream
 	METHOD reset ()V
 		COMMENT Resets the byte array output.
 	METHOD toByteArray ()[B
-		COMMENT Returns the contents of the output stream as a byte array
+		COMMENT {@return the contents of the output stream as a byte array}
 	METHOD write (I)V
 		COMMENT Writes the given int to the output stream
 		ARG 1 data

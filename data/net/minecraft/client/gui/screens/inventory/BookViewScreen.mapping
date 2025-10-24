@@ -37,4 +37,4 @@ CLASS net/minecraft/client/gui/screens/inventory/BookViewScreen
 		METHOD getPage (I)Lnet/minecraft/network/chat/Component;
 			ARG 1 page
 		METHOD getPageCount ()I
-			COMMENT Returns the size of the book
+			COMMENT @return the size of the book

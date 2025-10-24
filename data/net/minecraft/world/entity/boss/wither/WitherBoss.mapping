@@ -8,9 +8,9 @@ CLASS net/minecraft/world/entity/boss/wither/WitherBoss
 	METHOD checkDespawn ()V
 		COMMENT Makes the entity despawn if requirements are reached
 	METHOD getAlternativeTarget (I)I
-		COMMENT Returns the target entity ID if present, or -1 if not
+		COMMENT @return the target entity ID if present, or -1 if not
 		ARG 1 head
-			COMMENT The target offset, should be from 0-2
+			COMMENT the target offset, should be from 0-2
 	METHOD getHeadX (I)D
 		ARG 1 head
 	METHOD getHeadY (I)D
@@ -25,7 +25,7 @@ CLASS net/minecraft/world/entity/boss/wither/WitherBoss
 		ARG 1 state
 		ARG 2 motionMultiplier
 	METHOD performRangedAttack (IDDDZ)V
-		COMMENT Launches a Wither skull toward XYZ
+		COMMENT Launches a wither skull toward the position
 		ARG 1 head
 		ARG 2 x
 		ARG 4 y

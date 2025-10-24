@@ -13,7 +13,7 @@ CLASS net/minecraft/world/entity/ai/goal/target/TargetGoal
 		ARG 1 potentialTarget
 		ARG 2 targetPredicate
 	METHOD canContinueToUse ()Z
-		COMMENT Returns whether an in-progress Goal should continue executing
+		COMMENT {@return whether an in-progress Goal should continue executing}
 	METHOD canReach (Lnet/minecraft/world/entity/LivingEntity;)Z
 		COMMENT Checks to see if this entity can find a short path to the given target.
 		ARG 1 target

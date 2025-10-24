@@ -10,7 +10,7 @@ CLASS com/mojang/realmsclient/client/FileDownload
 		COMMENT Modifies a folder name to make sure it is valid to store on disk.
 		COMMENT @return the modified folder name
 		ARG 0 folderName
-			COMMENT The folder name to modify
+			COMMENT the folder name to modify
 	METHOD untarGzipArchive (Ljava/lang/String;Ljava/io/File;Lnet/minecraft/world/level/storage/LevelStorageSource;)V
 		ARG 1 worldName
 		ARG 2 tempFile

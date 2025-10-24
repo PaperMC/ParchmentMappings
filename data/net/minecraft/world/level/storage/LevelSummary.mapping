@@ -12,9 +12,9 @@ CLASS net/minecraft/world/level/storage/LevelSummary
 	METHOD getGameMode ()Lnet/minecraft/world/level/GameType;
 		COMMENT Gets the GameType.
 	METHOD getLevelId ()Ljava/lang/String;
-		COMMENT Returns the file name.
+		COMMENT {@return the file name}
 	METHOD getLevelName ()Ljava/lang/String;
-		COMMENT Return the display name of the save.
+		COMMENT {@return the display name of the save}
 	CLASS BackupStatus
 		METHOD <init> (Ljava/lang/String;IZZLjava/lang/String;)V
 			ARG 3 shouldBackup

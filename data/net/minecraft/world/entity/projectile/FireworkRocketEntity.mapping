@@ -36,7 +36,7 @@ CLASS net/minecraft/world/entity/projectile/FireworkRocketEntity
 	METHOD explode (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD isAttackable ()Z
-		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
+		COMMENT @return {@code true} if it's possible to attack this entity with an item
 	METHOD lambda$tick$0 (I)V
 		ARG 1 target
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V

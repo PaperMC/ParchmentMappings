@@ -117,13 +117,13 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 player
 		ARG 2 hand
 	METHOD isEffectiveAi ()Z
-		COMMENT Returns whether the entity is in a server world
+		COMMENT {@return whether the entity is in a server world}
 	METHOD isMaxGroupSizeReached (I)Z
 		ARG 1 size
 	METHOD isNoAi ()Z
 		COMMENT Get whether this Entity's AI is disabled
 	METHOD isPersistenceRequired ()Z
-		COMMENT @return {@code true} if this entity may not naturally despawn.
+		COMMENT @return {@code true} if this entity may not naturally despawn
 	METHOD isWithinHome (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD isWithinHome (Lnet/minecraft/world/phys/Vec3;)Z

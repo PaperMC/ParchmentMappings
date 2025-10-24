@@ -8,7 +8,7 @@ CLASS net/minecraft/world/entity/monster/Phantom
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
+		COMMENT {@return the volume for the sounds this mob makes}
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
 		ARG 1 key
 	METHOD setPhantomSize (I)V
@@ -26,7 +26,7 @@ CLASS net/minecraft/world/entity/monster/Phantom
 			ARG 2 mob
 	CLASS PhantomSweepAttackGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
@@ -51,7 +51,7 @@ CLASS net/minecraft/world/entity/monster/Phantom
 			COMMENT Update the Head and Body rendering angles
 	CLASS PhantomAttackPlayerTargetGoal
 		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress Goal should continue executing
+			COMMENT {@return whether an in-progress Goal should continue executing}
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS PhantomCircleAroundAnchorGoal

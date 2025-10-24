@@ -20,17 +20,17 @@ CLASS net/minecraft/util/StringDecomposer
 		COMMENT Iterate a String while applying legacy formatting codes starting with a {@code §} sign.
 		ARG 0 text
 		ARG 1 skip
-			COMMENT The amount of character to skip from the beginning.
+			COMMENT the amount of character to skip from the beginning
 		ARG 2 currentStyle
-			COMMENT The current style at the starting position after the skip.
+			COMMENT the current style at the starting position after the skip
 		ARG 3 defaultStyle
-			COMMENT The default style for the sequence that should be applied after a reset format code ({@code §r})
+			COMMENT the default style for the sequence that should be applied after a reset format code ({@code §r})
 		ARG 4 sink
 	METHOD iterateFormatted (Ljava/lang/String;ILnet/minecraft/network/chat/Style;Lnet/minecraft/util/FormattedCharSink;)Z
 		COMMENT Iterate a String while applying legacy formatting codes starting with a {@code §} sign.
 		ARG 0 text
 		ARG 1 skip
-			COMMENT The amount of characters to skip from the beginning.
+			COMMENT the amount of characters to skip from the beginning
 		ARG 2 style
 		ARG 3 sink
 	METHOD iterateFormatted (Ljava/lang/String;Lnet/minecraft/network/chat/Style;Lnet/minecraft/util/FormattedCharSink;)Z

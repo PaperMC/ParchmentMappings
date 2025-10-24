@@ -28,7 +28,7 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 	METHOD clearMessages (Z)V
 		COMMENT Clears the chat.
 		ARG 1 clearSentMsgHistory
-			COMMENT Whether to clear the user's sent message history
+			COMMENT whether to clear the user's sent message history
 	METHOD createDeletedMarker (Lnet/minecraft/client/GuiMessage;)Lnet/minecraft/client/GuiMessage;
 		ARG 1 message
 	METHOD createScreen (Lnet/minecraft/client/gui/components/ChatComponent$ChatMethod;Lnet/minecraft/client/gui/screens/ChatScreen$ChatConstructor;)Lnet/minecraft/client/gui/screens/ChatScreen;
@@ -46,7 +46,7 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 	METHOD getWidth (D)I
 		ARG 0 width
 	METHOD isChatFocused ()Z
-		COMMENT Returns {@code true} if the chat GUI is open
+		COMMENT @return {@code true} if the chat GUI is open
 	METHOD logChatMessage (Lnet/minecraft/client/GuiMessage;)V
 		ARG 1 message
 	METHOD openScreen (Lnet/minecraft/client/gui/components/ChatComponent$ChatMethod;Lnet/minecraft/client/gui/screens/ChatScreen$ChatConstructor;)V

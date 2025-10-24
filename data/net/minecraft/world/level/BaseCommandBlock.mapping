@@ -11,11 +11,7 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 	METHOD createSource (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/BaseCommandBlock$CloseableCommandBlockSource;
 		ARG 1 level
 	METHOD getCommand ()Ljava/lang/String;
-		COMMENT Returns the command of the command block.
-	METHOD getLastOutput ()Lnet/minecraft/network/chat/Component;
-		COMMENT Returns the lastOutput.
-	METHOD getSuccessCount ()I
-		COMMENT Returns the {@code successCount} int.
+		COMMENT {@return the command of the command block}
 	METHOD load (Lnet/minecraft/world/level/storage/ValueInput;)V
 		ARG 1 input
 	METHOD onUpdated (Lnet/minecraft/server/level/ServerLevel;)V

@@ -24,7 +24,7 @@ CLASS net/minecraft/world/level/block/CampfireBlock
 	METHOD isLitCampfire (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
 	METHOD isSmokeSource (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		COMMENT @return whether the given block state produces the thicker signal fire smoke when put below a campfire.
+		COMMENT {@return whether the given block state produces the thicker signal fire smoke when put below a campfire}
 		ARG 1 state
 	METHOD isSmokeyPos (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 level

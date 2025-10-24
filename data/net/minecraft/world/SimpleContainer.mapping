@@ -13,9 +13,9 @@ CLASS net/minecraft/world/SimpleContainer
 	METHOD fromItemList (Lnet/minecraft/world/level/storage/ValueInput$TypedInputList;)V
 		ARG 1 input
 	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
+		COMMENT {@return the number of slots in the inventory}
 	METHOD getItem (I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Returns the stack in the given slot.
+		COMMENT {@return the stack in the given slot}
 		ARG 1 index
 	METHOD lambda$removeAllItems$0 (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack

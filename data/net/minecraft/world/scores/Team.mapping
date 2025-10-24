@@ -10,13 +10,13 @@ CLASS net/minecraft/world/scores/Team
 	METHOD getFormattedName (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 1 name
 	METHOD getName ()Ljava/lang/String;
-		COMMENT Retrieve the name by which this team is registered in the scoreboard
+		COMMENT Retrieve the name by which this team is registered in the scoreboard.
 	METHOD getNameTagVisibility ()Lnet/minecraft/world/scores/Team$Visibility;
 		COMMENT Gets the visibility flags for player name tags.
 	METHOD getPlayers ()Ljava/util/Collection;
 		COMMENT Gets a collection of all members of this team.
 	METHOD isAlliedTo (Lnet/minecraft/world/scores/Team;)Z
-		COMMENT Same as reference equality
+		COMMENT Same as reference equality.
 		ARG 1 other
 	METHOD isAllowFriendlyFire ()Z
 		COMMENT Checks whether friendly fire (PVP between members of the team) is allowed.

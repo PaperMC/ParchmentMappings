@@ -8,15 +8,16 @@ CLASS net/minecraft/world/inventory/MerchantResultSlot
 		ARG 6 y
 	METHOD checkTakeAchievements (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
-			COMMENT the output - i.e., iron ingots, and pickaxes, not ore and wood.
+			COMMENT the output - i.e., iron ingots, and pickaxes, not ore and wood
 	METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 		ARG 1 stack
 	METHOD onQuickCraft (Lnet/minecraft/world/item/ItemStack;I)V
 		COMMENT Typically increases an internal count, then calls {@code checkTakeAchievements(item)}.
 		ARG 1 stack
-			COMMENT the output - i.e., iron ingots, and pickaxes, not ore and wood.
+			COMMENT the output - i.e., iron ingots, and pickaxes, not ore and wood
 		ARG 2 amount
 	METHOD remove (I)Lnet/minecraft/world/item/ItemStack;
-		COMMENT Decrease the size of the stack in the slot by the amount specified. Returns the new stack.
+		COMMENT Decrease the size of the stack in the slot by the amount specified.
+		COMMENT @return the new stack
 		ARG 1 amount

@@ -68,8 +68,6 @@ CLASS net/minecraft/client/multiplayer/MultiPlayerGameMode
 		ARG 2 target
 		ARG 3 ray
 		ARG 4 hand
-	METHOD isDestroying ()Z
-		COMMENT Return isHittingBlock
 	METHOD isServerControlledInventory ()Z
 		COMMENT Checks if the player is riding a horse, used to choose the GUI to open
 	METHOD lambda$continueDestroyBlock$2 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;I)Lnet/minecraft/network/protocol/Packet;

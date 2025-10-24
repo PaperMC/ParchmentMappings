@@ -35,8 +35,7 @@ CLASS net/minecraft/server/commands/AdvancementCommands
 		ARG 1 criterion
 	METHOD perform (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Lnet/minecraft/server/commands/AdvancementCommands$Action;Ljava/util/Collection;)I
 		COMMENT Performs the given action on each advancement in the list, for each player.
-		COMMENT
-		COMMENT @return The number of affected advancements across all players.
+		COMMENT @return the number of affected advancements across all players
 		ARG 0 source
 		ARG 1 targets
 		ARG 2 action

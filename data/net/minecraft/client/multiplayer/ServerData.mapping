@@ -12,7 +12,7 @@ CLASS net/minecraft/client/multiplayer/ServerData
 	METHOD hasAcceptedCodeOfConduct (Ljava/lang/String;)Z
 		ARG 1 text
 	METHOD isLan ()Z
-		COMMENT Returns {@code true} if the server is a LAN server.
+		COMMENT @return {@code true} if the server is a LAN server
 	METHOD read (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/client/multiplayer/ServerData;
 		COMMENT Takes a CompoundTag with 'name' and 'ip' keys, returns a ServerData instance.
 		ARG 0 tag
@@ -25,7 +25,7 @@ CLASS net/minecraft/client/multiplayer/ServerData
 	METHOD validateIcon ([B)[B
 		ARG 0 iconBytes
 	METHOD write ()Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Returns a CompoundTag with the server's name, IP and maybe an icon or acceptTextures.
+		COMMENT @return a CompoundTag with the server's name, IP and maybe an icon or acceptTextures
 	CLASS ServerPackStatus
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 name

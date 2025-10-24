@@ -3,7 +3,7 @@ CLASS net/minecraft/server/commands/TimeCommand
 		ARG 0 source
 		ARG 1 amount
 	METHOD getDayTime (Lnet/minecraft/server/level/ServerLevel;)I
-		COMMENT Returns the day time (time wrapped within a day)
+		COMMENT {@return the day time (time wrapped within a day)}
 		ARG 0 level
 	METHOD lambda$register$0 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context

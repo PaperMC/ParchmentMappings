@@ -18,7 +18,7 @@ CLASS com/mojang/realmsclient/client/FileUpload
 		ARG 2 uploadResult
 	METHOD requestUpload (I)Lcom/mojang/realmsclient/gui/screens/UploadResult;
 		ARG 1 retries
-			COMMENT The number of times this upload has already been attempted
+			COMMENT the number of times this upload has already been attempted
 	METHOD retryUploadAfter (JI)Lcom/mojang/realmsclient/gui/screens/UploadResult;
 		ARG 1 seconds
 		ARG 3 retries

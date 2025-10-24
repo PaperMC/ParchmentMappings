@@ -5,7 +5,7 @@ CLASS net/minecraft/world/entity/projectile/EyeOfEnder
 		ARG 4 y
 		ARG 6 z
 	METHOD isAttackable ()Z
-		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
+		COMMENT @return {@code true} if it's possible to attack this entity with an item
 	METHOD setItem (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
 	METHOD shouldRenderAtSqrDistance (D)Z

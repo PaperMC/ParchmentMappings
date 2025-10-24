@@ -79,9 +79,9 @@ CLASS net/minecraft/client/sounds/SoundEngine
 	METHOD playDelayed (Lnet/minecraft/client/resources/sounds/SoundInstance;I)V
 		COMMENT Plays a sound with a delay in ticks.
 		ARG 1 sound
-			COMMENT The sound instance to play
+			COMMENT the sound instance to play
 		ARG 2 delay
-			COMMENT The delay in ticks before playing the sound
+			COMMENT the delay in ticks before playing the sound
 	METHOD queueTickingSound (Lnet/minecraft/client/resources/sounds/TickableSoundInstance;)V
 		COMMENT Queues a new {@linkplain TickableSoundInstance}
 		ARG 1 tickableSound
@@ -120,15 +120,15 @@ CLASS net/minecraft/client/sounds/SoundEngine
 		COMMENT </ul>
 		COMMENT <p>
 		COMMENT Finally, the device pool state is set to indicate that the device check is complete.
-		COMMENT @return {@code true} if a change in the audio device is needed, {@code false} otherwise.
+		COMMENT @return {@code true} if a change in the audio device is needed, {@code false} otherwise
 	METHOD shouldLoopAutomatically (Lnet/minecraft/client/resources/sounds/SoundInstance;)Z
 		COMMENT @return {@code true} if the SoundInstance should loop automatically, {@code false} otherwise
 		ARG 0 sound
-			COMMENT The SoundInstance to check
+			COMMENT the SoundInstance to check
 	METHOD shouldLoopManually (Lnet/minecraft/client/resources/sounds/SoundInstance;)Z
 		COMMENT @return {@code true} if the SoundInstance should loop manually, {@code false} otherwise
 		ARG 0 sound
-			COMMENT The SoundInstance to check
+			COMMENT the SoundInstance to check
 	METHOD stop (Lnet/minecraft/client/resources/sounds/SoundInstance;)V
 		COMMENT Stops the provided {@linkplain SoundInstance} from continuing to play.
 		ARG 1 sound

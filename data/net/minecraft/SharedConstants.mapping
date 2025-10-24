@@ -96,7 +96,7 @@ CLASS net/minecraft/SharedConstants
 	METHOD debugVoidTerrain (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 0 chunkPos
 	METHOD getCurrentVersion ()Lnet/minecraft/WorldVersion;
-		COMMENT @return the {@link WorldVersion world version}
+		COMMENT @return the {@linkplain WorldVersion world version}
 		COMMENT @throws IllegalStateException if a world version has not been set previously
 	METHOD getProtocolVersion ()I
 		COMMENT {@return the networking protocol version in use by this game version}

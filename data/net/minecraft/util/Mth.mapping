@@ -11,14 +11,14 @@ CLASS net/minecraft/util/Mth
 		ARG 0 x
 		ARG 2 y
 	METHOD approach (FFF)F
-		COMMENT Changes value by stepSize towards the limit and returns the result.
-		COMMENT If value is smaller than limit, the result will never be bigger than limit.
-		COMMENT If value is bigger than limit, the result will never be smaller than limit.
+		COMMENT Changes {@code value} by {@code stepSize} towards the {@code limit} and returns the result.
+		COMMENT If {@code value} is smaller than {@code limit}, the result will never be bigger than {@code limit}.
+		COMMENT If {@code value} is bigger than {@code limit}, the result will never be smaller than {@code limit}.
 		ARG 0 value
 		ARG 1 limit
 		ARG 2 stepSize
 	METHOD approachDegrees (FFF)F
-		COMMENT Changes the angle by stepSize towards the limit in the direction where the distance is smaller.
+		COMMENT Changes the {@code angle} by {@code stepSize} towards the {@code limit} in the direction where the distance is smaller.
 		COMMENT {@see #approach(float, float, float)}
 		ARG 0 angle
 		ARG 1 limit
@@ -46,29 +46,35 @@ CLASS net/minecraft/util/Mth
 		COMMENT Uses a B(2, 5) De Bruijn sequence and a lookup table to efficiently calculate the log-base-two of the given value. Optimized for cases where the input value is a power-of-two. If the input value is not a power-of-two, then subtract 1 from the return value.
 		ARG 0 value
 	METHOD clamp (DDD)D
-		COMMENT {@return the given value if between the lower and the upper bound. If the value is less than the lower bound, returns the lower bound} If the value is greater than the upper bound, returns the upper bound.
+		COMMENT If the value is less than the lower bound, returns the lower bound.
+		COMMENT If the value is greater than the upper bound, returns the upper bound.
+		COMMENT @return the given value between the lower and the upper bound
 		ARG 0 value
-			COMMENT The value that is clamped.
+			COMMENT the value that is clamped
 		ARG 2 min
-			COMMENT The lower bound for the clamp.
+			COMMENT the lower bound for the clamp
 		ARG 4 max
-			COMMENT The upper bound for the clamp.
+			COMMENT the upper bound for the clamp
 	METHOD clamp (FFF)F
-		COMMENT {@return the given value if between the lower and the upper bound. If the value is less than the lower bound, returns the lower bound} If the value is greater than the upper bound, returns the upper bound.
+		COMMENT If the value is less than the lower bound, returns the lower bound.
+		COMMENT If the value is greater than the upper bound, returns the upper bound.
+		COMMENT @return the given value between the lower and the upper bound
 		ARG 0 value
-			COMMENT The value that is clamped.
+			COMMENT the value that is clamped
 		ARG 1 min
-			COMMENT The lower bound for the clamp.
+			COMMENT the lower bound for the clamp
 		ARG 2 max
-			COMMENT The upper bound for the clamp.
+			COMMENT the upper bound for the clamp
 	METHOD clamp (III)I
-		COMMENT {@return the given value if between the lower and the upper bound. If the value is less than the lower bound, returns the lower bound} If the value is greater than the upper bound, returns the upper bound.
+		COMMENT If the value is less than the lower bound, returns the lower bound.
+		COMMENT If the value is greater than the upper bound, returns the upper bound.
+		COMMENT @return the given value between the lower and the upper bound
 		ARG 0 value
-			COMMENT The value that is clamped.
+			COMMENT the value that is clamped
 		ARG 1 min
-			COMMENT The lower bound for the clamp.
+			COMMENT the lower bound for the clamp
 		ARG 2 max
-			COMMENT The upper bound for the clamp.
+			COMMENT the upper bound for the clamp
 	METHOD clamp (JJJ)J
 		ARG 0 value
 		ARG 2 min
@@ -76,19 +82,19 @@ CLASS net/minecraft/util/Mth
 	METHOD clampedLerp (DDD)D
 		COMMENT Method for linear interpolation of doubles.
 		ARG 0 start
-			COMMENT Start value for the lerp.
+			COMMENT start value for the interpolation
 		ARG 2 end
-			COMMENT End value for the lerp.
+			COMMENT end value for the interpolation
 		ARG 4 delta
-			COMMENT A value between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value) If the value is not between 0 and 1, it is clamped.
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value) If the value is not between 0 and 1, it is clamped.
 	METHOD clampedLerp (FFF)F
 		COMMENT Method for linear interpolation of floats.
 		ARG 0 start
-			COMMENT Start value for the lerp.
+			COMMENT start value for the interpolation
 		ARG 1 end
-			COMMENT End value for the lerp.
+			COMMENT end value for the interpolation
 		ARG 2 delta
-			COMMENT A value between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value) If the value is not between 0 and 1, it is clamped.
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value) If the value is not between 0 and 1, it is clamped.
 	METHOD clampedMap (DDDDD)D
 		ARG 0 input
 		ARG 2 inputMin
@@ -204,11 +210,11 @@ CLASS net/minecraft/util/Mth
 	METHOD lerp (DDD)D
 		COMMENT Method for linear interpolation of doubles
 		ARG 0 delta
-			COMMENT A value usually between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value)
+			COMMENT a value usually between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value)
 		ARG 2 start
-			COMMENT Start value for the lerp
+			COMMENT start value for the interpolation
 		ARG 4 end
-			COMMENT End value for the lerp
+			COMMENT end value for the interpolation
 	METHOD lerp (DLnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 delta
 		ARG 2 start
@@ -216,11 +222,11 @@ CLASS net/minecraft/util/Mth
 	METHOD lerp (FFF)F
 		COMMENT Method for linear interpolation of floats
 		ARG 0 delta
-			COMMENT A value usually between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value)
+			COMMENT a value usually between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value)
 		ARG 1 start
-			COMMENT Start value for the lerp
+			COMMENT start value for the interpolation
 		ARG 2 end
-			COMMENT End value for the lerp
+			COMMENT end value for the interpolation
 	METHOD lerp2 (DDDDDD)D
 		ARG 0 delta1
 		ARG 2 delta2
@@ -300,7 +306,7 @@ CLASS net/minecraft/util/Mth
 	METHOD packDegrees (F)B
 		ARG 0 degrees
 	METHOD positiveCeilDiv (II)I
-		COMMENT Returns the smallest (closest to negative infinity) int value that is greater than or equal to the algebraic quotient.
+		COMMENT @return the smallest (closest to negative infinity) int value that is greater than or equal to the algebraic quotient
 		COMMENT @see java.lang.Math#floorDiv(int, int)
 		ARG 0 x
 		ARG 1 y
@@ -336,7 +342,7 @@ CLASS net/minecraft/util/Mth
 	METHOD rotLerp (FFF)F
 		COMMENT Linearly interpolates an angle between the start and end values given as degrees.
 		ARG 0 delta
-			COMMENT A value between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value)
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value)
 		ARG 1 start
 		ARG 2 end
 	METHOD rotLerpRad (FFF)F
@@ -347,7 +353,7 @@ CLASS net/minecraft/util/Mth
 		COMMENT Takes a rotation and compares it to another rotation.
 		COMMENT If the difference is greater than a given maximum, clamps the original rotation between to have at most the given difference to the actual rotation.
 		COMMENT This is used to match the body rotation of entities to their head rotation.
-		COMMENT @return The new value for the rotation that was adjusted
+		COMMENT @return the new value for the rotation that was adjusted
 		ARG 0 rotationToAdjust
 		ARG 1 actualRotation
 		ARG 2 maxDifference
@@ -357,7 +363,7 @@ CLASS net/minecraft/util/Mth
 		ARG 2 output
 	METHOD roundToward (II)I
 		COMMENT Rounds the given value up to a multiple of factor.
-		COMMENT @return The smallest integer multiple of factor that is greater than or equal to the value
+		COMMENT @return the smallest integer multiple of factor that is greater than or equal to the value
 		ARG 0 value
 		ARG 1 factor
 	METHOD sign (D)I

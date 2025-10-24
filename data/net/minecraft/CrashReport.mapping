@@ -17,7 +17,7 @@ CLASS net/minecraft/CrashReport
 		COMMENT Gets the various sections of the crash report into the given StringBuilder
 		ARG 1 builder
 	METHOD getException ()Ljava/lang/Throwable;
-		COMMENT Returns the Throwable object that is the cause for the crash and Crash Report.
+		COMMENT {@return the Throwable object that is the cause for the crash and crash report}
 	METHOD getExceptionMessage ()Ljava/lang/String;
 		COMMENT Gets the stack trace of the Throwable that caused this crash report, or if that fails, the cause {@code .toString()}.
 	METHOD getFriendlyReport (Lnet/minecraft/ReportType;)Ljava/lang/String;
@@ -26,7 +26,7 @@ CLASS net/minecraft/CrashReport
 		ARG 1 type
 		ARG 2 links
 	METHOD getTitle ()Ljava/lang/String;
-		COMMENT Returns the description of the Crash Report.
+		COMMENT {@return the description of the crash report}
 	METHOD saveToFile (Ljava/nio/file/Path;Lnet/minecraft/ReportType;)Z
 		ARG 1 path
 		ARG 2 type

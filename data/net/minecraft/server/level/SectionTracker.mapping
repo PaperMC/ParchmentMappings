@@ -4,7 +4,7 @@ CLASS net/minecraft/server/level/SectionTracker
 		ARG 3 level
 		ARG 4 isDecreasing
 	METHOD computeLevelFromNeighbor (JJI)I
-		COMMENT Returns level propagated from start position with specified level to the neighboring end position.
+		COMMENT @return level propagated from the start position with specified level to the neighboring end position
 		ARG 1 startPos
 		ARG 3 endPos
 		ARG 5 startLevel

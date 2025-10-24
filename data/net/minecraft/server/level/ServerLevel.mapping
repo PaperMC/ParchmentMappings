@@ -97,7 +97,7 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 3 output
 		ARG 4 maxResults
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
-		COMMENT Returns the Entity with the given ID, or {@code null} if it doesn't exist in this Level.
+		COMMENT @return the Entity with the given ID, or {@code null} if it doesn't exist in this Level
 		ARG 1 id
 	METHOD getEntityOrPart (I)Lnet/minecraft/world/entity/Entity;
 		ARG 1 id

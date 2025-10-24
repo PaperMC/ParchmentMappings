@@ -88,9 +88,9 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 		METHOD getAquiferStatus (I)Lnet/minecraft/world/level/levelgen/Aquifer$FluidStatus;
 			COMMENT Calculates the aquifer at a given location. Internally references a cache using the grid positions as an index. If the cache is not populated, computes a new aquifer at that grid location using {@link #computeFluid}.
 			ARG 1 packedPos
-				COMMENT The aquifer block position, packed into an {@code int}.
+				COMMENT the aquifer block position, packed into an {@code int}
 		METHOD getIndex (III)I
-			COMMENT @return A cache index based on grid positions.
+			COMMENT @return a cache index based on grid positions
 			ARG 1 gridX
 			ARG 2 gridY
 			ARG 3 gridZ
@@ -102,6 +102,6 @@ CLASS net/minecraft/world/level/levelgen/Aquifer
 			ARG 0 z
 		METHOD similarity (II)D
 			COMMENT Compares two distances (between aquifers).
-			COMMENT @return {@code 1.0} if the distances are equal, and returns smaller values the more different in absolute value the two distances are.
+			COMMENT @return {@code 1.0} if the distances are equal, and returns smaller values the more different in absolute value the two distances are
 			ARG 0 firstDistance
 			ARG 1 secondDistance

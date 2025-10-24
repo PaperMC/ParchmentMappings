@@ -13,7 +13,7 @@ CLASS net/minecraft/client/multiplayer/PlayerInfo
 	METHOD fallbackMessageValidator (Z)Lnet/minecraft/network/chat/SignedMessageValidator;
 		ARG 0 enforceSecureChat
 	METHOD getProfile ()Lcom/mojang/authlib/GameProfile;
-		COMMENT Returns the GameProfile for the player represented by this PlayerInfo instance
+		COMMENT @return the GameProfile for the player represented by this PlayerInfo instance
 	METHOD setChatSession (Lnet/minecraft/network/chat/RemoteChatSession;)V
 		ARG 1 chatSession
 	METHOD setGameMode (Lnet/minecraft/world/level/GameType;)V

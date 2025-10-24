@@ -19,13 +19,13 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/ProcessorRule
 		ARG 2 tag
 	METHOD test (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 1 inputState
-			COMMENT The incoming state from the structure.
+			COMMENT the incoming state from the structure
 		ARG 2 existingState
-			COMMENT The current state in the world.
+			COMMENT the current state in the world
 		ARG 3 localPos
-			COMMENT The local position of the target state, relative to the structure origin.
+			COMMENT the local position of the target state, relative to the structure origin
 		ARG 4 relativePos
-			COMMENT The actual position of the target state. {@code existingState} is the current in world state at this position.
+			COMMENT the actual position of the target state. {@code existingState} is the current in world state at this position.
 		ARG 5 structurePos
-			COMMENT The origin position of the structure.
+			COMMENT the origin position of the structure
 		ARG 6 random

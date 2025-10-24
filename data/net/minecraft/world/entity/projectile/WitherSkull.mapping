@@ -14,7 +14,7 @@ CLASS net/minecraft/world/entity/projectile/WitherSkull
 	METHOD getInertia ()F
 		COMMENT Return the motion factor for this projectile. The factor is multiplied by the original motion.
 	METHOD isDangerous ()Z
-		COMMENT Return whether this skull comes from an invulnerable (aura) wither boss.
+		COMMENT {@return whether this skull comes from an invulnerable (aura) wither boss}
 	METHOD isOnFire ()Z
 		COMMENT Returns {@code true} if the entity is on fire. Used by render to add the fire effect on rendering.
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V

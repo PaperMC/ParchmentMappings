@@ -60,7 +60,6 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 4 pos
 	METHOD getDirectSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
 		COMMENT Returns the direct signal this block emits in the given direction.
-		COMMENT
 		COMMENT <p>
 		COMMENT NOTE: directions in redstone signal related methods are backwards, so this method
 		COMMENT checks for the signal emitted in the <i>opposite</i> direction of the one given.
@@ -94,7 +93,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		COMMENT The type of render function called. MODEL for mixed tesr and static model, ENTITYBLOCK_ANIMATED for TESR-only, LIQUID for vanilla liquids, INVISIBLE to skip all rendering
 		ARG 1 state
 	METHOD getSeed (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)J
-		COMMENT Return a random long to be passed to {@link net.minecraft.client.renderer.block.model.BlockModelPart#getQuads}, used for random model rotations
+		COMMENT @return a random long to be passed to {@link net.minecraft.client.renderer.block.model.BlockModelPart#getQuads}, used for random model rotations
 		ARG 1 state
 		ARG 2 pos
 	METHOD getShadeBrightness (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)F
@@ -108,7 +107,6 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 4 context
 	METHOD getSignal (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
 		COMMENT Returns the signal this block emits in the given direction.
-		COMMENT
 		COMMENT <p>
 		COMMENT NOTE: directions in redstone signal related methods are backwards, so this method
 		COMMENT checks for the signal emitted in the <i>opposite</i> direction of the one given.
@@ -135,7 +133,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 	METHOD isRandomlyTicking (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
 	METHOD isSignalSource (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		COMMENT Returns whether this block is capable of emitting redstone signals.
+		COMMENT {@return whether this block is capable of emitting redstone signals}
 		ARG 1 state
 	METHOD lambda$onExplosionHit$1 (Ljava/util/function/BiConsumer;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 2 stack
@@ -511,7 +509,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		METHOD lambda$static$1 ([Lnet/minecraft/world/phys/shapes/VoxelShape;)V
 			ARG 0 shape
 		METHOD mirror (Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
-			COMMENT @return the blockstate mirrored in the given way. If inapplicable, returns itself.
+			COMMENT Returns the blockstate mirrored in the given way. If inapplicable, returns itself.
 			ARG 1 mirror
 		METHOD onExplosionHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;Ljava/util/function/BiConsumer;)V
 			ARG 1 level
@@ -533,7 +531,7 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 2 pos
 			ARG 3 random
 		METHOD rotate (Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
-			COMMENT @return the blockstate with the given rotation. If inapplicable, returns itself.
+			COMMENT Returns the blockstate with the given rotation. If inapplicable, returns itself.
 			ARG 1 rotation
 		METHOD shouldChangedStateKeepBlockEntity (Lnet/minecraft/world/level/block/state/BlockState;)Z
 			ARG 1 state

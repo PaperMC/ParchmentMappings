@@ -11,7 +11,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 	METHOD findClosestNode ()I
 		COMMENT Generates values for the fields nodes, and nodeAdjacency, and then returns the nearest node to the specified position.
 	METHOD findClosestNode (DDD)I
-		COMMENT Returns the index into nodes of the nearest Node.
+		COMMENT {@return the index into nodes of the nearest Node}
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -27,7 +27,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
+		COMMENT {@return the volume for the sounds this mob makes}
 	METHOD hurt (Lnet/minecraft/server/level/ServerLevel;Ljava/util/List;)V
 		ARG 1 level
 		ARG 2 entities
@@ -37,7 +37,7 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 		ARG 3 damageSource
 		ARG 4 amount
 	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
+		COMMENT @return {@code true} if other entities should be prevented from moving through this entity
 	METHOD knockBack (Lnet/minecraft/server/level/ServerLevel;Ljava/util/List;)V
 		ARG 1 level
 		ARG 2 targets

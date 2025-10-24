@@ -7,9 +7,9 @@ CLASS net/minecraft/world/entity/boss/enderdragon/phases/DragonPhaseInstance
 	METHOD doServerTick (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD getFlySpeed ()F
-		COMMENT Returns the maximum amount dragon may rise or fall during this phase
+		COMMENT {@return the maximum amount the dragon may rise or fall during this phase}
 	METHOD getFlyTargetLocation ()Lnet/minecraft/world/phys/Vec3;
-		COMMENT Returns the location the dragon is flying toward
+		COMMENT {@return the location the dragon is flying toward}
 	METHOD onCrystalDestroyed (Lnet/minecraft/world/entity/boss/enderdragon/EndCrystal;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 crystal
 		ARG 2 pos

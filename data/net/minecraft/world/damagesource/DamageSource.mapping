@@ -26,7 +26,7 @@ CLASS net/minecraft/world/damagesource/DamageSource
 		COMMENT Gets the death message that is displayed when the player dies
 		ARG 1 livingEntity
 	METHOD getMsgId ()Ljava/lang/String;
-		COMMENT Return the name of damage type.
+		COMMENT {@return the name of damage type, used mainly as a part of translation key of the death message}
 	METHOD getSourcePosition ()Lnet/minecraft/world/phys/Vec3;
 		COMMENT Gets the location from which the damage originates.
 	METHOD is (Lnet/minecraft/resources/ResourceKey;)Z
@@ -34,4 +34,4 @@ CLASS net/minecraft/world/damagesource/DamageSource
 	METHOD is (Lnet/minecraft/tags/TagKey;)Z
 		ARG 1 damageTypeKey
 	METHOD scalesWithDifficulty ()Z
-		COMMENT Return whether this damage source will have its damage amount scaled based on the current difficulty.
+		COMMENT {@return whether this damage source will have its damage amount scaled based on the current difficulty}

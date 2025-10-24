@@ -9,7 +9,7 @@ CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 		ARG 1 chunkZ
 		ARG 2 levelSeed
 		ARG 4 salt
-			COMMENT For vanilla slimes, this is always {@code 987234911L}
+			COMMENT for vanilla slimes, this is always {@code 987234911L}
 	METHOD setDecorationSeed (JII)J
 		COMMENT Seeds the current random for chunk decoration, including spawning mobs and for use in feature placement.
 		COMMENT The coordinates correspond to the minimum block position within a given chunk.
@@ -20,15 +20,15 @@ CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 		COMMENT Seeds the current random for placing features.
 		COMMENT Each feature is seeded differently in order to seem more random. However, it does not do a good job of this, and issues can arise from the salt being small with features that have the same decoration step and are close together in the feature lists.
 		ARG 1 decorationSeed
-			COMMENT The seed computed by {@link #setDecorationSeed(long, int, int)}
+			COMMENT the seed computed by {@link #setDecorationSeed(long, int, int)}
 		ARG 3 index
-			COMMENT The cumulative index of the generating feature within the biome's list of features.
+			COMMENT the cumulative index of the generating feature within the biome's list of features
 		ARG 4 decorationStep
-			COMMENT The ordinal of the {@link net.minecraft.world.level.levelgen.GenerationStep.Decoration} of the generating feature.
+			COMMENT the ordinal of the {@link net.minecraft.world.level.levelgen.GenerationStep.Decoration} of the generating feature.
 	METHOD setLargeFeatureSeed (JII)V
 		COMMENT Seeds the current random for placing large features such as caves, strongholds, and mineshafts.
 		ARG 1 baseSeed
-			COMMENT This is passed in as the level seed, or in some cases such as carvers, as an offset from the level seed unique to each carver.
+			COMMENT this is passed in as the level seed, or in some cases such as carvers, as an offset from the level seed unique to each carver
 		ARG 3 chunkX
 		ARG 4 chunkZ
 	METHOD setLargeFeatureWithSalt (JIII)V
@@ -39,7 +39,7 @@ CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 		ARG 3 regionX
 		ARG 4 regionZ
 		ARG 5 salt
-			COMMENT A salt unique to each structure.
+			COMMENT a salt unique to each structure
 	CLASS Algorithm
 		METHOD <init> (Ljava/lang/String;ILjava/util/function/LongFunction;)V
 			ARG 3 constructor

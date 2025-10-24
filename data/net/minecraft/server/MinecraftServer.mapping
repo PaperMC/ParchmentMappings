@@ -63,9 +63,9 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD getLocalIp ()Ljava/lang/String;
 		COMMENT "getServerIp" is already taken, but both return the hostname.
 	METHOD getPlayerCount ()I
-		COMMENT Returns the number of players currently on the server.
+		COMMENT {@return the number of players currently on the server}
 	METHOD getPlayerNames ()[Ljava/lang/String;
-		COMMENT Returns an array of the usernames of all the connected players.
+		COMMENT {@return an array of the usernames of all the connected players}
 	METHOD getPort ()I
 		COMMENT Gets port.
 	METHOD getProfilePermissions (Lnet/minecraft/server/players/NameAndId;)Lnet/minecraft/server/permissions/LevelBasedPermissionSet;
@@ -76,7 +76,7 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 0 packRepository
 		ARG 1 safeMode
 	METHOD getServerVersion ()Ljava/lang/String;
-		COMMENT Returns the server's Minecraft version as string.
+		COMMENT {@return the server's Minecraft version as string}
 	METHOD getWorldPath (Lnet/minecraft/world/level/storage/LevelResource;)Ljava/nio/file/Path;
 		ARG 1 levelResource
 	METHOD halt (Z)V
@@ -92,7 +92,7 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD isHardcore ()Z
 		COMMENT Defaults to {@code false}.
 	METHOD isPublished ()Z
-		COMMENT Returns {@code true} if this integrated server is open to LAN
+		COMMENT @return {@code true} if this integrated server is open to LAN
 	METHOD isSingleplayerOwner (Lnet/minecraft/server/players/NameAndId;)Z
 		ARG 1 nameAndId
 	METHOD isUnderSpawnProtection (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Z

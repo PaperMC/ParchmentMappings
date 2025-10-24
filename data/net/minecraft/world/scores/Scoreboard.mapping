@@ -20,7 +20,7 @@ CLASS net/minecraft/world/scores/Scoreboard
 	METHOD getDisplayObjective (Lnet/minecraft/world/scores/DisplaySlot;)Lnet/minecraft/world/scores/Objective;
 		ARG 1 slot
 	METHOD getObjective (Ljava/lang/String;)Lnet/minecraft/world/scores/Objective;
-		COMMENT Returns an Objective for the objective name
+		COMMENT {@return an Objective for the objective name}
 		ARG 1 name
 	METHOD getOrCreatePlayerInfo (Ljava/lang/String;)Lnet/minecraft/world/scores/PlayerScores;
 		ARG 1 playerName

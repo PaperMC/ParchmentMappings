@@ -10,7 +10,7 @@ CLASS net/minecraft/world/level/pathfinder/Path
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD getEndNode ()Lnet/minecraft/world/level/pathfinder/Node;
-		COMMENT Returns the last {@link net.minecraft.world.level.pathfinder.Node} of the Array.
+		COMMENT @return the last {@link net.minecraft.world.level.pathfinder.Node} of the array
 	METHOD getEntityPosAtNode (Lnet/minecraft/world/entity/Entity;I)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Gets the vector of the {@link net.minecraft.world.level.pathfinder.Node} associated with the given index.
 		ARG 1 entity
@@ -19,12 +19,12 @@ CLASS net/minecraft/world/level/pathfinder/Path
 		COMMENT @return the current {@code Path} target node as a {@code Vec3}
 		ARG 1 entity
 	METHOD getNode (I)Lnet/minecraft/world/level/pathfinder/Node;
-		COMMENT Returns the {@link net.minecraft.world.level.pathfinder.Node} located at the specified index, usually the current one.
+		COMMENT @return the {@link net.minecraft.world.level.pathfinder.Node} located at the specified index, usually the current one
 		ARG 1 index
 	METHOD getNodePos (I)Lnet/minecraft/core/BlockPos;
 		ARG 1 index
 	METHOD isDone ()Z
-		COMMENT Returns {@code true} if this path has reached the end
+		COMMENT @return {@code true} if this path has reached the end
 	METHOD readNodeArray (Lnet/minecraft/network/FriendlyByteBuf;)[Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 0 buffer
 	METHOD replaceNode (ILnet/minecraft/world/level/pathfinder/Node;)V

@@ -6,7 +6,7 @@ CLASS net/minecraft/world/level/block/state/pattern/BlockPattern
 		ARG 1 forceLoad
 	METHOD find (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch;
 		COMMENT Calculates whether the given world position matches the pattern. Warning, fairly heavy function.
-		COMMENT @return a BlockPatternMatch if found, {@code null} otherwise.
+		COMMENT @return a BlockPatternMatch if found, {@code null} otherwise
 		ARG 1 level
 		ARG 2 pos
 	METHOD matches (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;Lcom/google/common/cache/LoadingCache;)Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch;
@@ -22,7 +22,6 @@ CLASS net/minecraft/world/level/block/state/pattern/BlockPattern
 		ARG 4 thumb
 	METHOD translateAndRotate (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;III)Lnet/minecraft/core/BlockPos;
 		COMMENT Offsets the position of pos in the direction of finger and thumb facing by offset amounts, follows the right-hand rule for cross products (finger, thumb, palm)
-		COMMENT
 		COMMENT @return a new BlockPos offset in the facing directions
 		ARG 0 pos
 		ARG 1 finger

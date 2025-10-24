@@ -15,13 +15,13 @@ CLASS net/minecraft/world/entity/ambient/Bat
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getSoundVolume ()F
-		COMMENT Returns the volume for the sounds this mob makes.
+		COMMENT {@return the volume for the sounds this mob makes}
 	METHOD getVoicePitch ()F
 		COMMENT Gets the pitch of living sounds from living entities.
 	METHOD isIgnoringBlockTriggers ()Z
-		COMMENT Return whether this entity should NOT trigger a pressure plate or a tripwire.
+		COMMENT {@return whether this entity should NOT trigger a pressure plate or a tripwire}
 	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
+		COMMENT @return {@code true} if this entity should push and be pushed by other entities when colliding
 	METHOD setResting (Z)V
 		ARG 1 isResting
 	METHOD tick ()V

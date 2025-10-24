@@ -60,7 +60,7 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 1 entity
 		ARG 2 damageSource
 	METHOD getEnchantmentCost (Lnet/minecraft/util/RandomSource;IILnet/minecraft/world/item/ItemStack;)I
-		COMMENT Returns the enchantability of itemstack, using a separate calculation for each enchantNum (0, 1 or 2), cutting to the max enchantability power of the table, which is locked to a max of 15.
+		COMMENT Returns the enchantability of itemstack, using a separate calculation for each {@code enchantNum} (0, 1 or 2), cutting to the max enchantability power of the table, which is locked to a max of 15.
 		ARG 0 random
 		ARG 1 enchantNum
 		ARG 2 power

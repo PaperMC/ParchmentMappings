@@ -253,7 +253,8 @@ CLASS net/minecraft/Util
 		ARG 0 fileName
 		ARG 1 characterValidator
 	METHOD sequence (Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;
-		COMMENT Takes a list of futures and returns a future of list that completes when all of them succeed or any of them error,
+		COMMENT Takes a list of futures.
+		COMMENT @return a future of list that completes when all of them succeed or any of them error
 		ARG 0 futures
 	METHOD sequenceFailFast (Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 completableFutures

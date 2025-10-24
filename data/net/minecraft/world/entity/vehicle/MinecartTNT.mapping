@@ -21,7 +21,7 @@ CLASS net/minecraft/world/entity/vehicle/MinecartTNT
 	METHOD getFuse ()I
 		COMMENT Gets the remaining fuse time in ticks.
 	METHOD isPrimed ()Z
-		COMMENT Returns {@code true} if the TNT minecart is ignited.
+		COMMENT @return {@code true} if the TNT minecart is ignited
 	METHOD primeFuse (Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 damageSource
 	METHOD shouldBlockExplode (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;F)Z

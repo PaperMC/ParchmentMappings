@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/entity/animal/Parrot
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
-		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
+		COMMENT @return {@code true} if the mob is currently able to mate with the specified mob
 		ARG 1 otherAnimal
 	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 y
@@ -37,7 +37,7 @@ CLASS net/minecraft/world/entity/animal/Parrot
 		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
 		ARG 1 stack
 	METHOD isPushable ()Z
-		COMMENT Returns {@code true} if this entity should push and be pushed by other entities when colliding.
+		COMMENT @return {@code true} if this entity should push and be pushed by other entities when colliding
 	METHOD lambda$static$0 (Ljava/util/HashMap;)V
 		ARG 0 map
 	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;

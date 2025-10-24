@@ -14,4 +14,4 @@ CLASS net/minecraft/client/gui/narration/NarratableEntry
 			COMMENT No narration priority.
 		METHOD isTerminal ()Z
 			COMMENT Checks if the narration priority is terminal, indicating that no further narration will occur after this.
-			COMMENT @return {@code true} if the narration priority is terminal, {@code false} otherwise.
+			COMMENT @return {@code true} if the narration priority is terminal, {@code false} otherwise

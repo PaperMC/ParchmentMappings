@@ -7,12 +7,12 @@ CLASS net/minecraft/world/level/block/state/properties/Property
 	METHOD getInternalIndex (Ljava/lang/Comparable;)I
 		ARG 1 value
 	METHOD getName (Ljava/lang/Comparable;)Ljava/lang/String;
-		COMMENT @return the name for the given value.
+		COMMENT {@return the name for the given value}
 		ARG 1 value
 	METHOD getValue (Ljava/lang/String;)Ljava/util/Optional;
 		ARG 1 value
 	METHOD getValueClass ()Ljava/lang/Class;
-		COMMENT @return the class of the values of this property
+		COMMENT {@return the class of the values of this property}
 	METHOD lambda$new$1 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 1 key
 	METHOD lambda$new$2 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;

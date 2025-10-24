@@ -5,4 +5,4 @@ CLASS net/minecraft/world/entity/PathfinderMob
 		ARG 1 pos
 		ARG 2 level
 	METHOD isPathFinding ()Z
-		COMMENT Returns whether the entity got a {@link net.minecraft.world.level.pathfinder.Path}.
+		COMMENT @return whether the entity got a {@link net.minecraft.world.level.pathfinder.Path}

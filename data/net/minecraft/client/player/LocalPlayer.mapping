@@ -48,7 +48,7 @@ CLASS net/minecraft/client/player/LocalPlayer
 		COMMENT Updates health locally.
 		ARG 1 health
 	METHOD isLocalPlayer ()Z
-		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
+		COMMENT @return whether this is a {@link net.minecraft.client.player.LocalPlayer}
 	METHOD isSprintingPossible (Z)Z
 		ARG 1 ignoreWater
 	METHOD lambda$updateAutoJump$0 (Lnet/minecraft/world/phys/shapes/VoxelShape;)Ljava/util/stream/Stream;

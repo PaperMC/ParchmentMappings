@@ -15,7 +15,7 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD canEnchant (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Checks if the enchantment can be applied to a given ItemStack.
 		ARG 1 stack
-			COMMENT The ItemStack to test.
+			COMMENT the ItemStack to test
 	METHOD constantCost (I)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 cost
 	METHOD damageContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/world/level/storage/loot/LootContext;
@@ -79,14 +79,14 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD getMaxLevel ()I
 		COMMENT Gets the maximum level of the enchantment under normal circumstances such as the enchanting table. This limit is not strictly enforced and may be ignored through custom item NBT or other customizations.
 	METHOD getMinCost (I)I
-		COMMENT Returns the minimal value of enchantability needed on the enchantment level passed.
+		COMMENT {@return the minimal value of enchantability needed on the enchantment level passed}
 		ARG 1 level
 	METHOD getMinLevel ()I
 		COMMENT Gets the minimum level of the enchantment under normal circumstances such as the enchanting table. This limit is not strictly enforced and may be ignored through custom item NBT or other customizations.
 	METHOD getSlotItems (Lnet/minecraft/world/entity/LivingEntity;)Ljava/util/Map;
 		COMMENT Creates a new map containing all items equipped by an entity in slots that the enchantment cares about. These items are not tested for having the enchantment.
 		ARG 1 entity
-			COMMENT The entity to collect equipment for.
+			COMMENT the entity to collect equipment for
 	METHOD isImmuneToDamage (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 level
 		ARG 2 enchantmentLevel

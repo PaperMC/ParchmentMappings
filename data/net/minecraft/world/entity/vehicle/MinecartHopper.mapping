@@ -9,7 +9,7 @@ CLASS net/minecraft/world/entity/vehicle/MinecartHopper
 		ARG 1 id
 		ARG 2 playerInventory
 	METHOD getContainerSize ()I
-		COMMENT Returns the number of slots in the inventory.
+		COMMENT {@return the number of slots in the inventory}
 	METHOD getLevelX ()D
 		COMMENT Gets the world X position for this hopper entity.
 	METHOD getLevelY ()D

@@ -10,7 +10,7 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 		ARG 2 enabledFeatures
 		ARG 3 displayOperatorCreativeTab
 	METHOD canScroll ()Z
-		COMMENT Returns (if you are not on the TAB_INVENTORY) and (the flag isn't set) and (you have more than 1 page of items).
+		COMMENT {@return (if you are not on the TAB_INVENTORY) and (the flag isn't set) and (you have more than 1 page of items)}
 	METHOD checkTabClicked (Lnet/minecraft/world/item/CreativeModeTab;DD)Z
 		ARG 1 creativeModeTab
 		ARG 2 relativeMouseX
@@ -81,21 +81,22 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 		METHOD getItem ()Lnet/minecraft/world/item/ItemStack;
 			COMMENT Helper function to get the stack in the slot.
 		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a given slot (usually the same as Container#getMaxStackSize, but 1 in the case of armor slots)
+			COMMENT @return the maximum stack size for a given slot (usually the same as Container#getMaxStackSize, but 1 in the case of armor slots)
 		METHOD getMaxStackSize (Lnet/minecraft/world/item/ItemStack;)I
 			ARG 1 stack
 		METHOD hasItem ()Z
-			COMMENT Returns if this slot contains a stack.
+			COMMENT @return if this slot contains a stack
 		METHOD isActive ()Z
 			COMMENT Actually only called when we want to render the white square effect over the slots. Return always {@code true}, except for the armor slot of the Donkey/Mule (we can't interact with the Undead and Skeleton horses)
 		METHOD mayPickup (Lnet/minecraft/world/entity/player/Player;)Z
-			COMMENT Return whether this slot's stack can be taken from this slot.
+			COMMENT {@return whether this slot's stack can be taken from this slot}
 			ARG 1 player
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 			ARG 1 stack
 		METHOD remove (I)Lnet/minecraft/world/item/ItemStack;
-			COMMENT Decrease the size of the stack in the slot by the amount specified. Returns the new stack.
+			COMMENT Decrease the size of the stack in the slot by the amount specified.
+			COMMENT @return the new stack
 			ARG 1 amount
 		METHOD set (Lnet/minecraft/world/item/ItemStack;)V
 			COMMENT Helper method to put a stack in the slot.
@@ -108,7 +109,8 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 		METHOD <init> (Lnet/minecraft/world/entity/player/Player;)V
 			ARG 1 player
 		METHOD canDragTo (Lnet/minecraft/world/inventory/Slot;)Z
-			COMMENT Returns {@code true} if the player can "drag-spilt" items into this slot. Returns {@code true} by default. Called to check if the slot can be added to a list of Slots to split the held ItemStack across.
+			COMMENT Called to check if the slot can be added to a list of Slots to split the held ItemStack across.
+			COMMENT Returns {@code true} if the player can "drag-spilt" items into this slot. Returns {@code true} by default.
 			ARG 1 slot
 		METHOD canTakeItemForPickAll (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/Slot;)Z
 			COMMENT Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is {@code null} for the initial slot that was double-clicked.
@@ -133,5 +135,5 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 			ARG 2 input
 	CLASS CustomCreativeSlot
 		METHOD mayPickup (Lnet/minecraft/world/entity/player/Player;)Z
-			COMMENT Return whether this slot's stack can be taken from this slot.
+			COMMENT {@return whether this slot's stack can be taken from this slot}
 			ARG 1 player

@@ -5,7 +5,7 @@ CLASS net/minecraft/world/level/pathfinder/NodeEvaluator
 		ARG 1 outputArray
 		ARG 2 node
 	METHOD getNode (III)Lnet/minecraft/world/level/pathfinder/Node;
-		COMMENT Returns a mapped point or creates and adds one
+		COMMENT {@return a mapped point or creates and adds one}
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z

@@ -29,7 +29,7 @@ CLASS net/minecraft/world/inventory/BeaconMenu
 		ARG 2 secondaryEffect
 	CLASS PaymentSlot
 		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a given slot (usually the same as Container#getMaxStackSize, but 1 in the case of armor slots)
+			COMMENT {@return the maximum stack size for a given slot (usually the same as Container#getMaxStackSize, but 1 in the case of armor slots)}
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 			ARG 1 stack

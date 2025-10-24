@@ -31,7 +31,8 @@ CLASS net/minecraft/network/Connection
 	METHOD connectToLocalServer (Ljava/net/SocketAddress;)Lnet/minecraft/network/Connection;
 		COMMENT Prepares a clientside Connection for a local in-memory connection ("single player").
 		COMMENT Establishes a connection to the socket supplied and configures the channel pipeline (only the packet handler is necessary,
-		COMMENT since this is for an in-memory connection). Returns the newly created instance.
+		COMMENT since this is for an in-memory connection).
+		COMMENT @return the newly created instance
 		ARG 0 address
 	METHOD connectToServer (Ljava/net/InetSocketAddress;Lnet/minecraft/server/network/EventLoopGroupHolder;Lnet/minecraft/util/debugchart/LocalSampleLogger;)Lnet/minecraft/network/Connection;
 		ARG 0 address
@@ -102,11 +103,11 @@ CLASS net/minecraft/network/Connection
 		ARG 2 port
 		ARG 3 packetListener
 	METHOD isConnected ()Z
-		COMMENT Returns {@code true} if this {@code Connection} has an active channel, {@code false} otherwise.
+		COMMENT @return {@code true} if this {@code Connection} has an active channel, {@code false} otherwise
 	METHOD isConnecting ()Z
-		COMMENT Returns {@code true} while this connection is still connecting, i.e. {@link #channelActive} has not fired yet.
+		COMMENT @return {@code true} while this connection is still connecting, i.e. {@link #channelActive} has not fired yet
 	METHOD isMemoryConnection ()Z
-		COMMENT {@code true} if this {@code Connection} uses a memory connection (single player game). {@code false} may imply both an active TCP connection or simply no active connection at all
+		COMMENT @return {@code true} if this {@code Connection} uses a memory connection (single player game), {@code false} may imply both an active TCP connection or simply no active connection at all
 	METHOD outboundHandlerName (Z)Ljava/lang/String;
 		ARG 0 clientbound
 	METHOD runOnceConnected (Ljava/util/function/Consumer;)V
