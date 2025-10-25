@@ -12,6 +12,7 @@ import org.parchmentmc.compass.tasks.SanitizeData
 import org.parchmentmc.compass.tasks.ValidateData
 import org.parchmentmc.lodestone.LodestoneExtension
 import org.parchmentmc.lodestone.tasks.*
+import org.parchmentmc.tasks.DownloadSingleVersionDownload
 import org.parchmentmc.tasks.RemapUnpickDefinitions
 
 class BlackstonePlugin : Plugin<Project> {
@@ -64,15 +65,22 @@ class BlackstonePlugin : Plugin<Project> {
         val intermediary = target.configurations.register("unpickDefinitionsIntermediary")
         val ext = target.extensions.create<UnpickExtension>("unpick")
 
+        val downloadIntermediaryVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
+            input = project.tasks.named<DownloadLauncherMetadata>("downloadLauncherMeta").flatMap { it.output }
+            output = target.layout.buildDirectory.file("$name-intermediary.json")
+            outputs.cacheIf { true }
+            mcVersion.set(ext.intermediaryMcVersion)
+        }
+        val dlMaps = target.tasks.register<DownloadSingleVersionDownload>("downloadIntermediaryMojmap") {
+            download.set("client_mappings")
+            output.set(project.layout.buildDirectory.file("intermediary-mojmap.txt"))
+            versionManifest.set(downloadIntermediaryVersionMeta.flatMap { it.output })
+        }
         target.tasks.register<RemapUnpickDefinitions>("remapUnpickDefinitions") {
             inputDefinitionsJar.setFrom(defs)
             outputDefinitionsFile.set(target.layout.buildDirectory.file("definitions.unpick"))
             intermediaryJar.setFrom(intermediary)
-            mojangMappings.set(
-                target.tasks.named("downloadVersion", DownloadVersion::class).flatMap {
-                    it.output.file("client.txt")
-                }
-            )
+            mojangMappings.set(dlMaps.flatMap { it.output })
         }
     }
 
