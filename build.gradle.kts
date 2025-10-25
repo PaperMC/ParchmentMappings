@@ -14,10 +14,8 @@ plugins {
     java
     `maven-publish`
     id("org.parchmentmc.compass")
+    id("blackstone")
 }
-
-// Generates metadata for sanitize tasks
-apply<org.parchmentmc.BlackstonePlugin>()
 
 val mcVersion = providers.gradleProperty("mcVersion")
 compass {
@@ -55,6 +53,9 @@ configurations.jammer {
 dependencies {
     // MCPConfig for the SRG intermediate
     mcpconfig("de.oceanlabs.mcp:mcp_config:1.19.3-20221207.122022")
+
+    unpickDefinitions("net.fabricmc:yarn:25w43a+build.7:mergedv2")
+    unpickDefinitionsIntermediary("net.fabricmc:intermediary:25w43a:v2")
 
     // ART for remapping the client JAR
     remapper("net.neoforged:AutoRenamingTool:2.0.15")
@@ -157,6 +158,7 @@ val officialExportZip by tasks.registering(Zip::class) {
     group = LifecycleBasePlugin.BUILD_GROUP
     description = "Creates a ZIP archive containing the export produced by the \"official\" intermediate provider and production data"
     from(tasks.named<GenerateExport>("generateOfficialExport").flatMap { it.output })
+    unpick.includeDefinitions(this)
     archiveBaseName = "officialExport"
 }
 
@@ -164,6 +166,7 @@ val officialSanitizedExportZip by tasks.registering(Zip::class) {
     group = LifecycleBasePlugin.BUILD_GROUP
     description = "Creates a ZIP archive containing the sanitized export produced by the \"official\" intermediate provider and production data"
     from(generateSanitizedExport.flatMap { it.output })
+    unpick.includeDefinitions(this)
     archiveBaseName = "officialSanitizedExport"
 }
 
@@ -171,11 +174,12 @@ val officialStagingExportZip by tasks.registering(Zip::class) {
     group = LifecycleBasePlugin.BUILD_GROUP
     description = "Creates a ZIP archive containing the export produced by the \"official\" intermediate provider and staging data"
     from(tasks.named<GenerateExport>("generateOfficialStagingExport").flatMap { it.output })
+    unpick.includeDefinitions(this)
     archiveBaseName = "officialStagingExport"
 }
 
 tasks.withType<Zip>().named { name -> name.startsWith("official") }.configureEach {
-    rename { "parchment.json" }
+    rename(".*\\.json", "parchment.json")
     destinationDirectory = project.layout.buildDirectory.dir("exportZips")
 }
 
