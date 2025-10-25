@@ -12,10 +12,12 @@ import org.parchmentmc.compass.tasks.SanitizeData
 import org.parchmentmc.compass.tasks.ValidateData
 import org.parchmentmc.lodestone.LodestoneExtension
 import org.parchmentmc.lodestone.tasks.*
-
-const val PLUGIN_TASK_GROUP = "blackstone"
+import org.parchmentmc.tasks.RemapUnpickDefinitions
 
 class BlackstonePlugin : Plugin<Project> {
+    companion object {
+        const val PLUGIN_TASK_GROUP = "blackstone"
+    }
 
     override fun apply(target: Project) {
         target.apply(plugin = "org.parchmentmc.lodestone")
@@ -23,6 +25,7 @@ class BlackstonePlugin : Plugin<Project> {
 
         val mcVersion = target.providers.gradleProperty("mcVersion")
         val createDistribution = registerTasks(target, mcVersion.get())
+        applyUnpick(target)
 
         val blackstoneConfig = target.configurations.named("blackstone") {
             val cfc = target.files(createDistribution.flatMap { it.archiveFile })
@@ -53,6 +56,23 @@ class BlackstonePlugin : Plugin<Project> {
                     groupId = "org.parchmentmc.data"
                 }
             }
+        }
+    }
+
+    private fun applyUnpick(target: Project) {
+        val defs = target.configurations.register("unpickDefinitions")
+        val intermediary = target.configurations.register("unpickDefinitionsIntermediary")
+        val ext = target.extensions.create<UnpickExtension>("unpick")
+
+        target.tasks.register<RemapUnpickDefinitions>("remapUnpickDefinitions") {
+            inputDefinitionsJar.setFrom(defs)
+            outputDefinitionsFile.set(target.layout.buildDirectory.file("definitions.unpick"))
+            intermediaryJar.setFrom(intermediary)
+            mojangMappings.set(
+                target.tasks.named("downloadVersion", DownloadVersion::class).flatMap {
+                    it.output.file("client.txt")
+                }
+            )
         }
     }
 
