@@ -54,9 +54,6 @@ dependencies {
     // MCPConfig for the SRG intermediate
     mcpconfig("de.oceanlabs.mcp:mcp_config:1.19.3-20221207.122022")
 
-    unpickDefinitions("net.fabricmc:yarn:25w43a+build.7:mergedv2")
-    unpickDefinitionsIntermediary("net.fabricmc:intermediary:25w43a:v2")
-
     // ART for remapping the client JAR
     remapper("net.neoforged:AutoRenamingTool:2.0.15")
 
@@ -74,6 +71,20 @@ dependencies {
             isTransitive = false
         }
     }
+}
+
+// For unpick definitions
+val yarnVersion = "25w43a+build.7"
+val intermediaryVersion = yarnVersion.substringBefore("+")
+
+dependencies {
+    unpickDefinitions("net.fabricmc:yarn:${yarnVersion}:mergedv2")
+    unpickDefinitionsIntermediary("net.fabricmc:intermediary:${intermediaryVersion}:v2")
+}
+
+unpick {
+    intermediaryMcVersion = intermediaryVersion
+    remapIntermediaryDefinitions = true
 }
 
 val downloadClientJar by tasks.registering(VersionDownload::class) {

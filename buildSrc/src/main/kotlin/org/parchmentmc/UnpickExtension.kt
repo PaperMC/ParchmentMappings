@@ -7,6 +7,7 @@ import org.parchmentmc.tasks.RemapUnpickDefinitions
 
 abstract class UnpickExtension {
     abstract val remapIntermediaryDefinitions: Property<Boolean>
+    abstract val intermediaryMcVersion: Property<String>
 
     init {
         init()
