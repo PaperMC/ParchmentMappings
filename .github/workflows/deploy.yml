@@ -1,7 +1,9 @@
 name: Deploy Release
 on:
   push:
-    branches: ['main']
+    branches:
+      - 'main'
+      - 'mc/**'
     paths-ignore:
       - 'docs/**'
       - 'README.md'
