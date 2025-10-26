@@ -247,10 +247,6 @@ publishing {
 val printVersion = tasks.register("printVersion") {
     inputs.property("ver", artifactVersionProvider)
     doFirst {
-        println("Publishing Parchment ${artifactVersionProvider.get()}")
+        println(artifactVersionProvider.get())
     }
-}
-
-tasks.named("publishExportPublicationToPaperRepository") {
-    dependsOn(printVersion)
 }
