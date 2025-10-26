@@ -128,7 +128,7 @@ tasks.register<ScanParameter>("scanParameter") {
     inputMapping = project.compass.productionData
 }
 
-tasks.register<JavadocLint>("checkJavadoc") {
+tasks.register<JavadocLint>("scanJavadocs") {
     group = LifecycleBasePlugin.VERIFICATION_GROUP
     inputMapping = project.compass.productionData
 }

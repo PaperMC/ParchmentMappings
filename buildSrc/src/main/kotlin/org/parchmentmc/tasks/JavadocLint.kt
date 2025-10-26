@@ -18,10 +18,8 @@ import org.gradle.kotlin.dsl.submit
 import org.gradle.work.InputChanges
 import org.gradle.workers.WorkAction
 import org.gradle.workers.WorkParameters
-import java.io.File
+import org.parchmentmc.util.path
 import java.io.IOException
-import java.util.regex.Pattern
-import kotlin.streams.asStream
 
 abstract class JavadocLint : IncrementalDataTask() {
 
@@ -41,77 +39,73 @@ abstract class JavadocLint : IncrementalDataTask() {
 
         companion object {
             @JvmStatic
-            val PARAM_DOC_LINE: Pattern = Pattern.compile("^@param\\s+[^<].*$")
+            val PARAM_DOC_LINE = Regex("^@param\\s+[^<].*$")
+        }
 
-            private fun isRegularMethodParameter(line: String): Boolean {
-                return PARAM_DOC_LINE.matcher(line).matches()
+        private fun isRegularMethodParameter(line: String): Boolean {
+            return PARAM_DOC_LINE.matches(line)
+        }
+
+        private fun getFullName(mappings: EntryTree<EntryMapping>, entry: Entry<*>): String? {
+            var name = if (entry is MethodEntry) {
+                entry.name + ' ' +  entry.desc.toString()
+            } else if (entry is ClassEntry) {
+                entry.name
+            } else {
+                mappings.get(entry)?.targetName()
             }
 
-            private fun getFirstWord(str: String): String {
-                val i = str.indexOf(' ')
-                return if (i != -1) str.take(i) else str
+            if (entry.parent != null) {
+                name = getFullName(mappings, entry.parent!!) + '.' + name
             }
 
-            private fun getFullName(mappings: EntryTree<EntryMapping>, entry: Entry<*>): String? {
-                var name = if (entry is MethodEntry) {
-                    entry.name + ' ' +  entry.desc.toString()
-                } else if (entry is ClassEntry) {
-                    entry.name
-                } else {
-                    mappings.get(entry)?.targetName()
-                }
+            return name
+        }
 
-                if (entry.parent != null) {
-                    name = getFullName(mappings, entry.parent!!) + '.' + name
-                }
-
-                return name
-            }
+        private fun String.replaceBetween(prefix: String, suffix: String, value: String): String {
+            return replace("(?<=$prefix).*?(?=$suffix)", value)
         }
 
         override fun execute() {
             try {
-                val files = parameters.inputMapping.asFileTree.map(File::toPath)
                 val mappings = HashEntryTree<EntryMapping>()
+                val tree = MappingFormat.ENIGMA_DIRECTORY.read(
+                    parameters.inputMapping.path,
+                    ProgressListener.none(),
+                    MappingSaveParameters(MappingFileNameFormat.BY_DEOBF),
+                    null
+                )
 
-                for (file in files) {
-                    val read = MappingFormat.ENIGMA_FILE.read(
-                        file,
-                        ProgressListener.none(),
-                        MappingSaveParameters(MappingFileNameFormat.BY_DEOBF),
-                        null
-                    )
-                    read.forEach { entry ->
-                        mappings.insert(
-                            entry.entry,
-                            entry.getValue()
-                        )
-                    }
+                tree.forEach { node ->
+                    mappings.insert(node.entry, node.value)
                 }
 
                 val errors = mutableListOf<String>()
 
-                mappings.allEntries.parallel().forEach { entry ->
-                    val mapping = mappings.get(entry)!!
+                mappings.allEntries.parallel().forEachOrdered { entry ->
+                    val mapping = mappings[entry] ?: error("Mapping entry not found")
                     val javadoc = mapping.javadoc()
                     if (javadoc != null && javadoc.isNotEmpty()) {
                         val localErrors = mutableListOf<String>()
 
                         if (entry is LocalVariableEntry && entry.isArgument) {
-                            if (javadoc.endsWith('.')) {
+                            if (javadoc
+                                    .replaceBetween("{", "}", "") // skip javadoc tags
+                                    .replaceBetween("<", ">", "") // skip html tags
+                                    .count { it == '.' } == 1) {
                                 localErrors.add("parameter javadoc ends with '.'")
                             }
 
                             if (javadoc[0].isUpperCase()) {
-                                val word = getFirstWord(javadoc)
+                                val word = javadoc.substringBefore(' ') // first word
 
-                                // ignore single-letter "words" (like X or Z)
-                                if (word.length > 1) {
-                                    localErrors.add("parameter javadoc starts with uppercase word '$word'")
-                                }
+                                // ignore single-letter "words" (like X or Z) and abbreviation like UUID, AABB
+                                //if (word.any { it.isLowerCase() }) { // todo maybe but should be 100% accurate
+                                localErrors.add("parameter javadoc starts with uppercase word '$word'")
+                                //}
                             }
                         } else if (entry is MethodEntry) {
-                            if (javadoc.lineSequence().asStream().anyMatch(LintAction::isRegularMethodParameter)) {
+                            if (javadoc.lineSequence().any(::isRegularMethodParameter)) {
                                 localErrors.add("method javadoc contains parameter docs, which should be on the parameter itself")
                             }
                         }
@@ -132,7 +126,7 @@ abstract class JavadocLint : IncrementalDataTask() {
                         println("lint: $error")
                     }
 
-                    throw GradleException("Found ${errors.size} javadoc format errors! See the log for details.")
+                    error("Found ${errors.size} javadoc format errors! See the log for details.")
                 }
             } catch (e: IOException) {
                 throw GradleException("Could not read and parse mappings", e)
