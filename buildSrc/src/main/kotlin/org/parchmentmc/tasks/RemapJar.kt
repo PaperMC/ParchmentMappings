@@ -50,11 +50,11 @@ abstract class RemapJar @Inject constructor(
 ) : DefaultTask() {
 
     @get:InputFile
-    @get:PathSensitive(PathSensitivity.RELATIVE)
+    @get:PathSensitive(PathSensitivity.NONE)
     abstract val inputJar: RegularFileProperty
 
     @get:InputFile
-    @get:PathSensitive(PathSensitivity.RELATIVE)
+    @get:PathSensitive(PathSensitivity.NONE)
     abstract val mappings: RegularFileProperty
 
     @get:CompileClasspath

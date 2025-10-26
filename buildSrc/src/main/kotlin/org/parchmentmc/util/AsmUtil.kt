@@ -1,8 +1,8 @@
 package org.parchmentmc.util
 
-import org.cadixdev.bombe.type.BaseType
-import org.cadixdev.bombe.type.FieldType
+import cuchaz.enigma.translation.representation.TypeDescriptor
 import org.objectweb.asm.Opcodes
+import org.objectweb.asm.Type
 import org.objectweb.asm.tree.MethodNode
 
 interface AsmUtil {
@@ -21,17 +21,13 @@ interface AsmUtil {
         var currentParamIndex = 0
         var currentLvtIndex = if (Opcodes.ACC_STATIC in method.access) 0 else 1
 
-        for (param in method.parameters) {
+        for (param in Type.getArgumentTypes(method.desc)) {
             if (currentLvtIndex == lvtIndex) {
                 return currentParamIndex
             }
 
             currentParamIndex++
-            currentLvtIndex++
-
-            if (param.name == "java/lang/Long" || param.name == "java/lang/Double") {
-                currentLvtIndex++
-            }
+            currentLvtIndex += param.size
         }
         return -1
     }
@@ -43,17 +39,32 @@ interface AsmUtil {
         var currentLvtIndex = if (Opcodes.ACC_STATIC in method.access) 0 else 1
         var currentParamIndex = 0
 
-        for (param in method.parameters) {
+        for (param in Type.getArgumentTypes(method.desc)) {
             if (currentParamIndex == paramIndex) {
                 return currentLvtIndex
             }
 
             currentParamIndex++
-            currentLvtIndex++
+            currentLvtIndex += param.size
+        }
 
-            if (param.name == "java/lang/Long" || param.name == "java/lang/Double") {
-                currentLvtIndex++
+        return -1
+    }
+
+    /*
+     * Transform the given param index into a lvt index.
+     */
+    fun fromParamToLvtIndex(paramIndex: Int, isStatic: Boolean, parameters: List<TypeDescriptor>): Int {
+        var currentLvtIndex = if (isStatic) 0 else 1
+        var currentParamIndex = 0
+
+        for (param in parameters) {
+            if (currentParamIndex == paramIndex) {
+                return currentLvtIndex
             }
+
+            currentParamIndex++
+            currentLvtIndex += param.size
         }
 
         return -1
@@ -62,7 +73,7 @@ interface AsmUtil {
     /*
      * Transform the given LVT index into a parameter index.
      */
-    fun fromLvtToParamIndex(lvtIndex: Int, isStatic: Boolean, parameters: List<FieldType>): Int {
+    fun fromLvtToParamIndex(lvtIndex: Int, isStatic: Boolean, parameters: List<TypeDescriptor>): Int {
         var currentParamIndex = 0
         var currentLvtIndex = if (isStatic) 0 else 1
 
@@ -72,35 +83,8 @@ interface AsmUtil {
             }
 
             currentParamIndex++
-            currentLvtIndex++
-
-            if (param == BaseType.LONG || param == BaseType.DOUBLE) {
-                currentLvtIndex++
-            }
+            currentLvtIndex += param.size
         }
-        return -1
-    }
-
-    /*
-     * Transform the given param index into a lvt index.
-     */
-    fun fromParamToLvtIndex(paramIndex: Int, isStatic: Boolean, parameters: List<FieldType>): Int {
-        var currentLvtIndex = if (isStatic) 0 else 1
-        var currentParamIndex = 0
-
-        for (param in parameters) {
-            if (currentParamIndex == paramIndex) {
-                return currentLvtIndex
-            }
-
-            currentParamIndex++
-            currentLvtIndex++
-
-            if (param == BaseType.LONG || param == BaseType.DOUBLE) {
-                currentLvtIndex++
-            }
-        }
-
         return -1
     }
 }

@@ -26,6 +26,7 @@ import kotlin.io.path.writeText
 
 @CacheableTask
 abstract class RemapUnpickDefinitions : DefaultTask() {
+
     @get:InputFiles
     @get:PathSensitive(PathSensitivity.NONE)
     abstract val inputDefinitionsJar: ConfigurableFileCollection

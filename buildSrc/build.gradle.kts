@@ -37,10 +37,8 @@ dependencies {
     implementation("org.parchmentmc:lodestone:0.10.0")
     implementation("org.parchmentmc:compass:0.10.0")
     implementation("cuchaz:enigma:4.0.2")
-    implementation("org.cadixdev:lorenz:0.5.8")
-    implementation("org.cadixdev:lorenz-io-enigma:0.5.8")
+    implementation("net.fabricmc:mapping-io:0.7.1")
 
     implementation("net.fabricmc.unpick:unpick:3.0.0-beta.11")
     implementation("net.fabricmc.unpick:unpick-format-utils:3.0.0-beta.11")
-    implementation("net.fabricmc:mapping-io:0.7.1")
 }

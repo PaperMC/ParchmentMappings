@@ -13,10 +13,11 @@ import cuchaz.enigma.translation.representation.entry.MethodEntry
 import java.util.*
 import javax.lang.model.SourceVersion
 
-const val ACC_STATIC = 0x0008
-const val ACC_ENUM = 0x4000
-
 class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
+    companion object {
+        const val ACC_STATIC = 0x0008
+        const val ACC_ENUM = 0x4000
+    }
 
     lateinit var indexer: JarIndexView
 
@@ -162,25 +163,25 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
 
     override fun proposeName(obfEntry: Entry<*>, remapper: EntryRemapper): Optional<String> {
         if (obfEntry is LocalVariableEntry && obfEntry.isArgument) {
-            val parent = obfEntry.parent
-            if (parent != null) {
-                val isStatic = ACC_STATIC in indexer.entryIndex.getAccess(parent)
+            val method = obfEntry.parent
+            if (method != null) {
+                val isStatic = ACC_STATIC in indexer.entryIndex.getAccess(method)
 
                 var offsetLvtIndex = 0
                 if (!isStatic) {
                     offsetLvtIndex++ // (this, ...)
                 }
                 var descStartIndex = 0 // ignore implicit argument in descriptors for conflict check
-                if (isEnumConstructor(parent)) {
+                if (isEnumConstructor(method)) {
                     descStartIndex += 2 // (name, ordinal, ...)
                 }
 
-                val paramIndex = fromLvtToParamIndex(obfEntry.index, parent, offsetLvtIndex)
+                val paramIndex = fromLvtToParamIndex(obfEntry.index, method, offsetLvtIndex)
                 if (paramIndex == -1) {
                     return Optional.empty() // happens for faulty param detection (like Player#actuallyHurt)
                 }
 
-                val paramDesc = parent.desc.argumentDescs[paramIndex]
+                val paramDesc = method.desc.argumentDescs[paramIndex]
                 if (!paramDesc.containsType()) { // primitive / array of primitive
                     return Optional.empty()
                 }
@@ -191,7 +192,7 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
                 }
 
                 var name = suggestions[paramDescStr] ?: paramDescStr.substringAfterLast('/').substringAfterLast('$').dropLast(1).replaceFirstChar { it.lowercase() } // relevant type
-                if (paramCanConflict(descStartIndex, parent.desc, paramDesc.typeEntry)) { // not completely accurate for lambda/inner classes
+                if (paramCanConflict(descStartIndex, method.desc, paramDesc.typeEntry)) { // not completely accurate for lambda/inner classes
                     name += (paramIndex + 1)
                 }
                 if (SourceVersion.isKeyword(name)) {

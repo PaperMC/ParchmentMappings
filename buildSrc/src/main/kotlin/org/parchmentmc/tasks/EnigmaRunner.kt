@@ -40,12 +40,15 @@ abstract class EnigmaRunner @Inject constructor(
 ) : JavaExec() {
 
     @get:InputFile
+    @get:PathSensitive(PathSensitivity.NONE)
     abstract val inputJar: RegularFileProperty
 
     @get:InputDirectory
+    @get:PathSensitive(PathSensitivity.RELATIVE)
     abstract val mappings: DirectoryProperty
 
     @get:InputFile
+    @get:PathSensitive(PathSensitivity.NONE)
     abstract val profile: RegularFileProperty
 
     init {

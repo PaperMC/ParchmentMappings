@@ -123,9 +123,10 @@ tasks.register<ScanInitParamsJar>("scanInitParams") {
     inputMapping = project.compass.productionData
 }
 
-tasks.register<ScanParameter>("scanParameter") {
+tasks.register<ScanParameter>("scanParam") {
     group = LifecycleBasePlugin.VERIFICATION_GROUP
     inputMapping = project.compass.productionData
+    inputJar = remapJar.flatMap { it.outputJar }
 }
 
 tasks.register<JavadocLint>("scanJavadocs") {
