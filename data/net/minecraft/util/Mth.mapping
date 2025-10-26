@@ -86,7 +86,7 @@ CLASS net/minecraft/util/Mth
 		ARG 2 end
 			COMMENT end value for the interpolation
 		ARG 4 delta
-			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value) If the value is not between 0 and 1, it is clamped.
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value). If the value is not between 0 and 1, it is clamped.
 	METHOD clampedLerp (FFF)F
 		COMMENT Method for linear interpolation of floats.
 		ARG 0 start
@@ -94,7 +94,7 @@ CLASS net/minecraft/util/Mth
 		ARG 1 end
 			COMMENT end value for the interpolation
 		ARG 2 delta
-			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value) If the value is not between 0 and 1, it is clamped.
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value). If the value is not between 0 and 1, it is clamped.
 	METHOD clampedMap (DDDDD)D
 		ARG 0 input
 		ARG 2 inputMin
@@ -210,7 +210,7 @@ CLASS net/minecraft/util/Mth
 	METHOD lerp (DDD)D
 		COMMENT Method for linear interpolation of doubles
 		ARG 0 delta
-			COMMENT a value usually between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value)
+			COMMENT a value usually between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value)
 		ARG 2 start
 			COMMENT start value for the interpolation
 		ARG 4 end
@@ -222,7 +222,7 @@ CLASS net/minecraft/util/Mth
 	METHOD lerp (FFF)F
 		COMMENT Method for linear interpolation of floats
 		ARG 0 delta
-			COMMENT a value usually between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value)
+			COMMENT a value usually between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value)
 		ARG 1 start
 			COMMENT start value for the interpolation
 		ARG 2 end
@@ -342,7 +342,7 @@ CLASS net/minecraft/util/Mth
 	METHOD rotLerp (FFF)F
 		COMMENT Linearly interpolates an angle between the start and end values given as degrees.
 		ARG 0 delta
-			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation. (0 will give the start value and 1 will give the end value)
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value)
 		ARG 1 start
 		ARG 2 end
 	METHOD rotLerpRad (FFF)F
