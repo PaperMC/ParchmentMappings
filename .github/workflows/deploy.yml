@@ -23,8 +23,36 @@ jobs:
       - uses: gradle/actions/setup-gradle@v5
       - name: Validate data
         run: ./gradlew validateData --stacktrace --console=colored
+      - name: "Get version"
+        run: |
+          PARCHMENT_VERSION=$(./gradlew printVersion --console=plain --quiet)
+          echo "PARCHMENT_VERSION=$PARCHMENT_VERSION" >> $GITHUB_ENV
+      - uses: neoforged/action-github-status@v1
+        name: Set build pending status
+        if: always()
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: 'Publishing'
+          state: 'pending'
+          description: "Version: ${{ env.PARCHMENT_VERSION }}"
+          target_url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       - name: Deploy release version
-        run: ./gradlew publishExportPublicationToPaperRepository --stacktrace --console=colored
+        run: |
+          ./gradlew publishExportPublicationToPaperRepository --stacktrace --console=colored
+          if [ $? -eq 0 ]; then
+            echo "GRADLE_SUCCESS=success" >> $GITHUB_ENV
+          else
+            echo "GRADLE_SUCCESS=failure" >> $GITHUB_ENV
+          fi
         env:
           ORG_GRADLE_PROJECT_paperUsername: ${{ secrets.ARTIFACTORY_USERNAME }}
           ORG_GRADLE_PROJECT_paperPassword: ${{ secrets.ARTIFACTORY_PASSWORD }}
+      - uses: neoforged/action-github-status@v1
+        name: Set build completion status
+        if: always()
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: 'Publishing'
+          state: ${{ env.GRADLE_SUCCESS || 'failure' }}
+          description: "Version: ${{ env.PARCHMENT_VERSION }}"
+          target_url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
