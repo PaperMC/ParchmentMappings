@@ -74,11 +74,11 @@ dependencies {
 }
 
 // For unpick definitions
-val yarnVersion = "25w43a+build.12"
+val yarnVersion = "1.21.10+build.2"
 val intermediaryVersion = yarnVersion.substringBefore("+")
 
 dependencies {
-    unpickDefinitions("net.fabricmc:yarn:${yarnVersion}:extras")
+    unpickDefinitions("net.fabricmc:yarn:${yarnVersion}:mergedv2") // no extras jar available for 1.21.10 currently
     unpickDefinitionsIntermediary("net.fabricmc:intermediary:${intermediaryVersion}:v2")
 }
 
