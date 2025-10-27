@@ -1,0 +1,10 @@
+--- a/definitions.unpick
++++ b/definitions.unpick
+@@ -1646,6 +_,7 @@
+ 	return s2c_animation_id
+ 
+ group int s2c_game_state_demo_value
++	@scope class net.minecraft.server.level.DemoMode
+ 	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_INTRO
+ 	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_1
+ 	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_2
