@@ -17,7 +17,7 @@ import java.io.File
 abstract class UnpickPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
-        target.apply(BlackstonePlugin::class) // Ensure downloadLauncherMeta exists
+        target.plugins.apply(BlackstonePlugin::class) // Ensure downloadLauncherMeta exists
 
         val defs = target.configurations.register("unpickDefinitions")
         val intermediary = target.configurations.register("unpickDefinitionsIntermediary")
