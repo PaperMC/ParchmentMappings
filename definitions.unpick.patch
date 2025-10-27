@@ -1,6 +1,6 @@
 --- a/definitions.unpick
 +++ b/definitions.unpick
-@@ -25,163 +_,6 @@
+@@ -25,178 +_,6 @@
  target_method net.minecraft.server.level.TicketType flags ()I
  	return chunk_ticket_type_flags
  
@@ -52,7 +52,7 @@
 -	param 0 argb_color
 -	return argb_color
 -
--target_method net.minecraft.util.ARGB srgbLerp (FII)I
+-target_method net.minecraft.util.ARGB lerp (FII)I
 -	param 1 argb_color
 -	param 2 argb_color
 -	return argb_color
@@ -103,6 +103,18 @@
 -	param 3 argb_color
 -	param 4 argb_color
 -
+-target_method net.minecraft.client.renderer.debug.DebugRenderer renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;IIII)V
+-	param 6 argb_color
+-
+-target_method net.minecraft.client.renderer.debug.DebugRenderer renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;DDDI)V
+-	param 6 argb_color
+-
+-target_method net.minecraft.client.renderer.debug.DebugRenderer renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;DDDIF)V
+-	param 6 argb_color
+-
+-target_method net.minecraft.client.renderer.debug.DebugRenderer renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;DDDIFZFZ)V
+-	param 6 argb_color
+-
 -target_method net.minecraft.client.gui.GuiGraphics drawCenteredString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V
 -	param 4 argb_color
 -
@@ -130,6 +142,9 @@
 -target_method net.minecraft.client.gui.GuiGraphics drawWordWrap (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/FormattedText;IIII)V
 -	param 5 argb_color
 -
+-target_method net.minecraft.client.gui.components.AbstractStringWidget setColor (I)Lnet/minecraft/client/gui/components/AbstractStringWidget;
+-	param 0 argb_color
+-
 -target_method net.minecraft.client.gui.GuiGraphics hLine (IIII)V
 -	param 3 argb_color
 -
@@ -146,7 +161,7 @@
 -	param 4 argb_color
 -	param 5 argb_color
 -
--target_method net.minecraft.client.gui.GuiGraphics renderOutline (IIIII)V
+-target_method net.minecraft.client.gui.GuiGraphics submitOutline (IIIII)V
 -	param 4 argb_color
 -
 -target_method com.mojang.blaze3d.vertex.VertexConsumer setColor (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
@@ -164,7 +179,7 @@
  group int cursor_shape
  	org.lwjgl.glfw.GLFW.GLFW_ARROW_CURSOR
  	org.lwjgl.glfw.GLFW.GLFW_IBEAM_CURSOR
-@@ -277,7 +_,6 @@
+@@ -292,7 +_,6 @@
  
  #: Flags used in {@link net.minecraft.entity.mob.VexEntity#VEX_FLAGS VEX_FLAGS}.
  group int vex_flags
@@ -172,7 +187,7 @@
  	net.minecraft.world.entity.monster.Vex.FLAG_IS_CHARGING
  
  target_method net.minecraft.world.entity.monster.Vex getVexFlag (I)Z
-@@ -1628,6 +_,7 @@
+@@ -1646,6 +_,7 @@
  	return s2c_animation_id
  
  group int s2c_game_state_demo_value
@@ -180,7 +195,7 @@
  	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_INTRO
  	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_1
  	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_2
-@@ -1903,3 +_,6 @@
+@@ -1921,3 +_,6 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
  	return world_event
