@@ -12,6 +12,7 @@ import org.parchmentmc.compass.tasks.SanitizeData
 import org.parchmentmc.compass.tasks.ValidateData
 import org.parchmentmc.lodestone.LodestoneExtension
 import org.parchmentmc.lodestone.tasks.*
+import org.parchmentmc.util.maybeRegister
 
 class BlackstonePlugin : Plugin<Project> {
     companion object {
@@ -58,9 +59,7 @@ class BlackstonePlugin : Plugin<Project> {
     }
 
     private fun registerTasks(target: Project, mcVersion: String): TaskProvider<Zip> {
-        val downloadLauncherMeta by target.tasks.registering(DownloadLauncherMetadata::class) {
-            group = PLUGIN_TASK_GROUP
-        }
+        val downloadLauncherMeta = target.tasks.maybeRegister<DownloadLauncherMetadata>("downloadLauncherMeta") {}
 
         val downloadVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
             group = PLUGIN_TASK_GROUP

@@ -4,8 +4,13 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import nl.adaptivity.xmlutil.serialization.XML
 import org.gradle.api.NamedDomainObjectList
+import org.gradle.api.Task
 import org.gradle.api.file.FileSystemLocation
 import org.gradle.api.provider.Provider
+import org.gradle.api.tasks.TaskContainer
+import org.gradle.api.tasks.TaskProvider
+import org.gradle.kotlin.dsl.named
+import org.gradle.kotlin.dsl.register
 import java.net.HttpURLConnection
 import java.net.URI
 import java.net.http.HttpClient
@@ -14,9 +19,8 @@ import java.net.http.HttpResponse
 import java.nio.file.*
 import java.util.stream.Stream
 import java.util.stream.StreamSupport
-import kotlin.reflect.KClass
-
 import kotlin.io.path.exists
+import kotlin.reflect.KClass
 
 val json = Json {
     ignoreUnknownKeys = true
@@ -34,6 +38,15 @@ fun <V : Any, O : V, N : V> NamedDomainObjectList<V>.replace(oldValueClass: KCla
     if (removeIf { it::class == oldValueClass }) {
         add(newValue())
     }
+}
+
+inline fun <reified T : Task> TaskContainer.maybeRegister(
+    taskName: String,
+    noinline configuration: T.() -> Unit
+): TaskProvider<T> = if (taskName in names) {
+    named<T>(taskName)
+} else {
+    register(taskName, configuration)
 }
 
 fun FileSystem.walk(): Stream<Path> {

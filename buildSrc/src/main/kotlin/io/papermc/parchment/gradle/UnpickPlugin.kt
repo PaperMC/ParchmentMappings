@@ -8,23 +8,23 @@ import io.papermc.parchment.gradle.task.RemapUnpickDefinitions
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.*
-import org.parchmentmc.BlackstonePlugin
 import org.parchmentmc.lodestone.tasks.DownloadLauncherMetadata
 import org.parchmentmc.lodestone.tasks.DownloadVersionMetadata
 import org.parchmentmc.util.fileExists
+import org.parchmentmc.util.maybeRegister
 import java.io.File
 
 abstract class UnpickPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
-        target.plugins.apply(BlackstonePlugin::class) // Ensure downloadLauncherMeta exists
+        val downloadLauncherMeta = target.tasks.maybeRegister<DownloadLauncherMetadata>("downloadLauncherMeta") {}
 
         val defs = target.configurations.register("unpickDefinitions")
         val intermediary = target.configurations.register("unpickDefinitionsIntermediary")
         val ext = target.extensions.create<UnpickExtension>("unpick")
 
         val downloadIntermediaryVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
-            input = project.tasks.named<DownloadLauncherMetadata>("downloadLauncherMeta").flatMap { it.output }
+            input = downloadLauncherMeta.flatMap { it.output }
             output = target.layout.buildDirectory.file("$name-intermediary.json")
             outputs.cacheIf { true }
             mcVersion.set(ext.intermediaryMcVersion)
