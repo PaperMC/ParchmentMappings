@@ -16,6 +16,8 @@ import java.util.stream.Stream
 import java.util.stream.StreamSupport
 import kotlin.reflect.KClass
 
+import kotlin.io.path.exists
+
 val json = Json {
     ignoreUnknownKeys = true
     prettyPrint = true
@@ -45,6 +47,10 @@ val Provider<out FileSystemLocation>.path: Path
     get() = get().path
 val Provider<out FileSystemLocation>.pathOrNull: Path?
     get() = orNull?.path
+
+fun <T : FileSystemLocation> Provider<out T>.fileExists(): Provider<out T> {
+    return map { it.takeIf { f -> f.path.exists() } }
+}
 
 private fun Path.jarUri(): URI {
     return URI.create("jar:${toUri()}")

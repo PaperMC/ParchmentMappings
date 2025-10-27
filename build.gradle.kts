@@ -92,6 +92,7 @@ dependencies {
 }
 
 unpick {
+    disablePatch = false
     intermediaryMcVersion = intermediaryVersion
     remapIntermediaryDefinitions = true
 }

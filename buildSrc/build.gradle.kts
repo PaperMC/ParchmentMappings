@@ -41,4 +41,6 @@ dependencies {
 
     implementation("net.fabricmc.unpick:unpick:3.0.0-beta.11")
     implementation("net.fabricmc.unpick:unpick-format-utils:3.0.0-beta.11")
+
+    implementation("io.codechicken:DiffPatch:2.0.1.40")
 }
