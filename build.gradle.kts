@@ -15,6 +15,7 @@ plugins {
     `maven-publish`
     id("org.parchmentmc.compass")
     id("blackstone")
+    id("unpick")
 }
 
 val mcVersion = providers.gradleProperty("mcVersion")

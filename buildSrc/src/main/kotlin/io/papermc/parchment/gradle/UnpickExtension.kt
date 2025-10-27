@@ -1,11 +1,9 @@
-package org.parchmentmc
+package io.papermc.parchment.gradle
 
-import org.gradle.api.file.RegularFileProperty
+import io.papermc.parchment.gradle.task.ApplyFilePatch
 import org.gradle.api.provider.Property
 import org.gradle.api.tasks.bundling.AbstractArchiveTask
 import org.gradle.kotlin.dsl.named
-import org.parchmentmc.tasks.ApplyFilePatch
-import org.parchmentmc.tasks.RemapUnpickDefinitions
 
 abstract class UnpickExtension {
     abstract val disablePatch: Property<Boolean>

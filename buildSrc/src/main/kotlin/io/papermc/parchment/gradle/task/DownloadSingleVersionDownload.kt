@@ -1,4 +1,4 @@
-package org.parchmentmc.tasks
+package io.papermc.parchment.gradle.task
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.RegularFileProperty

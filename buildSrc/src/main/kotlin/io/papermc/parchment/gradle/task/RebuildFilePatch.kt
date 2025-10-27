@@ -1,18 +1,11 @@
-package org.parchmentmc.tasks
+package io.papermc.parchment.gradle.task
 
 import io.codechicken.diffpatch.cli.DiffOperation
-import io.codechicken.diffpatch.util.Input.SingleInput
 import io.codechicken.diffpatch.util.LogLevel
 import io.codechicken.diffpatch.util.Output
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.RegularFileProperty
-import org.gradle.api.provider.Property
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.InputFile
-import org.gradle.api.tasks.OutputFile
-import org.gradle.api.tasks.PathSensitive
-import org.gradle.api.tasks.PathSensitivity
-import org.gradle.api.tasks.TaskAction
+import org.gradle.api.tasks.*
 import org.parchmentmc.util.path
 import java.io.PrintStream
 import java.nio.file.StandardOpenOption
@@ -60,7 +53,14 @@ abstract class RebuildFilePatch : DefaultTask() {
                 .autoHeader(true)
                 .baseInput(io.codechicken.diffpatch.util.Input.MultiInput.folder(aDir.toPath()))
                 .changedInput(io.codechicken.diffpatch.util.Input.MultiInput.folder(bDir.toPath()))
-                .patchesOutput(Output.SingleOutput.path(patchFile.path, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE))
+                .patchesOutput(
+                    Output.SingleOutput.path(
+                        patchFile.path,
+                        StandardOpenOption.WRITE,
+                        StandardOpenOption.TRUNCATE_EXISTING,
+                        StandardOpenOption.CREATE
+                    )
+                )
                 .build()
                 .operate()
         }

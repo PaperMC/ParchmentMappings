@@ -1,6 +1,5 @@
 package org.parchmentmc
 
-import io.codechicken.diffpatch.util.PatchMode
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.publish.PublishingExtension
@@ -13,12 +12,6 @@ import org.parchmentmc.compass.tasks.SanitizeData
 import org.parchmentmc.compass.tasks.ValidateData
 import org.parchmentmc.lodestone.LodestoneExtension
 import org.parchmentmc.lodestone.tasks.*
-import org.parchmentmc.tasks.ApplyFilePatch
-import org.parchmentmc.tasks.DownloadSingleVersionDownload
-import org.parchmentmc.tasks.RebuildFilePatch
-import org.parchmentmc.tasks.RemapUnpickDefinitions
-import org.parchmentmc.util.fileExists
-import java.io.File
 
 class BlackstonePlugin : Plugin<Project> {
     companion object {
@@ -31,7 +24,6 @@ class BlackstonePlugin : Plugin<Project> {
 
         val mcVersion = target.providers.gradleProperty("mcVersion")
         val createDistribution = registerTasks(target, mcVersion.get())
-        applyUnpick(target)
 
         val blackstoneConfig = target.configurations.named("blackstone") {
             val cfc = target.files(createDistribution.flatMap { it.archiveFile })
@@ -60,58 +52,6 @@ class BlackstonePlugin : Plugin<Project> {
                     artifactId = "blackstone"
                     version = mcVersion.get()
                     groupId = "org.parchmentmc.data"
-                }
-            }
-        }
-    }
-
-    private fun applyUnpick(target: Project) {
-        val defs = target.configurations.register("unpickDefinitions")
-        val intermediary = target.configurations.register("unpickDefinitionsIntermediary")
-        val ext = target.extensions.create<UnpickExtension>("unpick")
-
-        val downloadIntermediaryVersionMeta by target.tasks.registering(DownloadVersionMetadata::class) {
-            input = project.tasks.named<DownloadLauncherMetadata>("downloadLauncherMeta").flatMap { it.output }
-            output = target.layout.buildDirectory.file("$name-intermediary.json")
-            outputs.cacheIf { true }
-            mcVersion.set(ext.intermediaryMcVersion)
-        }
-        val dlMaps = target.tasks.register<DownloadSingleVersionDownload>("downloadIntermediaryMojmap") {
-            download.set("client_mappings")
-            output.set(project.layout.buildDirectory.file("intermediary-mojmap.txt"))
-            versionManifest.set(downloadIntermediaryVersionMeta.flatMap { it.output })
-        }
-        val remap = target.tasks.register<RemapUnpickDefinitions>("remapUnpickDefinitions") {
-            inputDefinitionsJar.setFrom(defs)
-            outputDefinitionsFile.set(target.layout.buildDirectory.file("definitions.unpick"))
-            intermediaryJar.setFrom(intermediary)
-            mojangMappings.set(dlMaps.flatMap { it.output })
-        }
-        val patchUnpickDefinitions = target.tasks.register<ApplyFilePatch>("applyUnpickDefinitionsPatch") {
-            patchFile.convention(project.provider { project.layout.projectDirectory.file("definitions.unpick.patch") }.fileExists())
-            targetFile.convention(remap.flatMap { it.outputDefinitionsFile })
-            mode.convention(PatchMode.OFFSET)
-            minFuzz.convention("0.5")
-            outputFile.convention(target.layout.projectDirectory.file("definitions.unpick"))
-            rejectsFile.convention(target.layout.projectDirectory.file("definitions.unpick.rej"))
-        }
-        val rebuildUnpickPatch = target.tasks.register<RebuildFilePatch>("rebuildUnpickDefinitionsPatch") {
-            originalFile.convention(remap.flatMap { it.outputDefinitionsFile })
-            modifiedFile.convention(target.layout.projectDirectory.file("definitions.unpick"))
-            patchFile.convention(project.layout.projectDirectory.file("definitions.unpick.patch"))
-        }
-        target.afterEvaluate {
-            if (!ext.remapIntermediaryDefinitions.get()) {
-                patchUnpickDefinitions {
-                    targetFile.convention(target.layout.file(defs.map { it.singleFile }))
-                }
-                rebuildUnpickPatch {
-                    originalFile.convention(target.layout.file(defs.map { it.singleFile }) )
-                }
-            }
-            if (ext.disablePatch.get()) {
-                patchUnpickDefinitions {
-                    patchFile.set(null as File?)
                 }
             }
         }

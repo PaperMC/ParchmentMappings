@@ -1,8 +1,6 @@
-package org.parchmentmc.tasks
+package io.papermc.parchment.gradle.task
 
-import io.codechicken.diffpatch.cli.DiffPatchCli
 import io.codechicken.diffpatch.cli.PatchOperation
-import io.codechicken.diffpatch.patch.Patcher
 import io.codechicken.diffpatch.util.Input.SingleInput
 import io.codechicken.diffpatch.util.LogLevel
 import io.codechicken.diffpatch.util.Output
@@ -10,20 +8,13 @@ import io.codechicken.diffpatch.util.PatchMode
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.provider.Property
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.InputFile
-import org.gradle.api.tasks.Optional
-import org.gradle.api.tasks.OutputFile
-import org.gradle.api.tasks.PathSensitive
-import org.gradle.api.tasks.PathSensitivity
-import org.gradle.api.tasks.TaskAction
+import org.gradle.api.tasks.*
 import org.parchmentmc.util.path
 import java.io.PrintStream
 import java.nio.file.StandardOpenOption
 import kotlin.io.path.copyTo
 import kotlin.io.path.createParentDirectories
 import kotlin.io.path.deleteIfExists
-import kotlin.io.path.exists
 
 abstract class ApplyFilePatch : DefaultTask() {
     @get:InputFile
@@ -68,8 +59,22 @@ abstract class ApplyFilePatch : DefaultTask() {
                 .summary(false)
                 .baseInput(SingleInput.path(targetFile.path))
                 .patchesInput(SingleInput.path(patchFile.path))
-                .patchedOutput(Output.SingleOutput.path(outputFile.path, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE))
-                .rejectsOutput(Output.SingleOutput.path(rejectsFile.path, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE))
+                .patchedOutput(
+                    Output.SingleOutput.path(
+                        outputFile.path,
+                        StandardOpenOption.WRITE,
+                        StandardOpenOption.TRUNCATE_EXISTING,
+                        StandardOpenOption.CREATE
+                    )
+                )
+                .rejectsOutput(
+                    Output.SingleOutput.path(
+                        rejectsFile.path,
+                        StandardOpenOption.WRITE,
+                        StandardOpenOption.TRUNCATE_EXISTING,
+                        StandardOpenOption.CREATE
+                    )
+                )
                 .build()
                 .operate()
         }
