@@ -59,7 +59,8 @@ abstract class ScanParameter : IncrementalDataTask() {
     abstract class ScanAction : WorkAction<ScanParams>, AsmUtil {
 
         private val desc: TypeDescriptor by lazy {
-            TypeDescriptor(TypeDescriptor.parseFirst(parameters.descriptor.get()))
+            val desc = parameters.descriptor.get()
+            TypeDescriptor(TypeDescriptor.parseFirst(desc) ?: error("Invalid type descriptor: $desc"))
         }
 
         private fun paramMatches(param: LocalVariableEntry, expectedName: String, currentName: String, isStatic: ()->Boolean): Boolean {

@@ -77,8 +77,8 @@ abstract class RemapUnpickDefinitions : DefaultTask() {
     fun makeRemapper(downstream: UnpickV3Visitor, tree: MemoryMappingTree): UnpickV3Remapper {
         return object : UnpickV3Remapper(downstream) {
             override fun mapClassName(className: String): String {
-                return tree.getClass(className.replace(".", "/"))
-                    ?.getName("mojang")?.replace("/", ".")
+                return tree.getClass(className.replace('.', '/'))
+                    ?.getName("mojang")?.replace('/', '.')
                     ?: className
             }
 
@@ -87,7 +87,7 @@ abstract class RemapUnpickDefinitions : DefaultTask() {
                 fieldName: String,
                 fieldDesc: String
             ): String {
-                val classMapping = tree.getClass(className.replace(".", "/")) ?: return fieldName
+                val classMapping = tree.getClass(className.replace('.', '/')) ?: return fieldName
                 val fieldMapping = classMapping.getField(fieldName, fieldDesc) ?: return fieldName
                 return fieldMapping.getName("mojang") ?: fieldName
             }
@@ -97,7 +97,7 @@ abstract class RemapUnpickDefinitions : DefaultTask() {
                 methodName: String,
                 methodDesc: String
             ): String {
-                val classMapping = tree.getClass(className.replace(".", "/")) ?: return methodName
+                val classMapping = tree.getClass(className.replace('.', '/')) ?: return methodName
                 val methodMapping = classMapping.getMethod(methodName, methodDesc) ?: return methodName
                 return methodMapping.getName("mojang") ?: methodName
             }
@@ -105,14 +105,14 @@ abstract class RemapUnpickDefinitions : DefaultTask() {
             override fun getClassesInPackage(pkg: String): List<String> {
                 return tree.classes
                     .filter {
-                        val pkgSlash = pkg.replace(".", "/") + "/"
+                        val pkgSlash = pkg.replace('.', '/') + "/"
                         it.srcName.startsWith(pkgSlash) && !it.srcName.substringAfter(pkgSlash).contains('/')
                     }
-                    .map { it.srcName.replace("/", ".") }
+                    .map { it.srcName.replace('/', '.') }
             }
 
             override fun getFieldDesc(className: String, fieldName: String): String {
-                val classMapping = tree.getClass(className.replace(".", "/")) ?: return ""
+                val classMapping = tree.getClass(className.replace('.', '/')) ?: return ""
                 val fieldMapping = classMapping.getField(fieldName, null) ?: return ""
                 return fieldMapping.srcDesc ?: ""
             }

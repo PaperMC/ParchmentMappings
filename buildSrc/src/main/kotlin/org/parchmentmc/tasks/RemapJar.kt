@@ -76,7 +76,7 @@ abstract class RemapJar @Inject constructor(
             provider.inputJar.set(inputJar)
             provider.mappings.set(mappings)
             provider.outputJar.set(outputJar)
-            provider.minecraftClasspath.from(minecraftClasspath)
+            provider.minecraftClasspath.setFrom(minecraftClasspath)
 
             argumentProviders.add(provider)
 

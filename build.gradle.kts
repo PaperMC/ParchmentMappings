@@ -84,7 +84,7 @@ dependencies {
 
 // For unpick definitions
 val yarnVersion = "25w43a+build.12"
-val intermediaryVersion = yarnVersion.substringBefore("+")
+val intermediaryVersion = yarnVersion.substringBefore('+')
 
 dependencies {
     unpickDefinitions("net.fabricmc:yarn:${yarnVersion}:extras")
@@ -110,8 +110,8 @@ val remapJar by tasks.registering(RemapJar::class) {
     inputJar = downloadClientJar.flatMap { it.outputFile }
     mappings = obfDL.obfuscationMap.flatMap {  _ -> obfDL.clientDownloadOutput }
 
-    remapperClasspath.from(remapper)
-    minecraftClasspath.from(minecraft)
+    remapperClasspath.setFrom(remapper)
+    minecraftClasspath.setFrom(minecraft)
 
     outputJar = project.layout.buildDirectory.dir("remapped")
         .zip(mcVersion) { d, ver -> d.file("$ver-client.jar") }
