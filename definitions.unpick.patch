@@ -1,6 +1,170 @@
 --- a/definitions.unpick
 +++ b/definitions.unpick
-@@ -1646,6 +_,7 @@
+@@ -25,163 +_,6 @@
+ target_method net.minecraft.server.level.TicketType flags ()I
+ 	return chunk_ticket_type_flags
+ 
+-#: Integers in ARGB color format.
+-group int argb_color
+-	@format hex
+-	net.minecraft.util.CommonColors.*
+-	net.minecraft.realms.RealmsScreen.COLOR_DARK_GRAY
+-	net.minecraft.realms.RealmsScreen.COLOR_MEDIUM_GRAY
+-	net.minecraft.realms.RealmsScreen.COLOR_GREEN
+-	net.minecraft.realms.RealmsScreen.COLOR_LINK
+-	net.minecraft.realms.RealmsScreen.COLOR_LINK_HOVER
+-
+-target_method net.minecraft.util.ARGB alpha (I)I
+-	param 0 argb_color
+-
+-target_method net.minecraft.util.ARGB red (I)I
+-	param 0 argb_color
+-
+-target_method net.minecraft.util.ARGB green (I)I
+-	param 0 argb_color
+-
+-target_method net.minecraft.util.ARGB blue (I)I
+-	param 0 argb_color
+-
+-target_method net.minecraft.util.ARGB color (IIII)I
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB color (III)I
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB color (Lnet/minecraft/world/phys/Vec3;)I
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB multiply (II)I
+-	param 0 argb_color
+-	param 1 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB scaleRGB (IF)I
+-	param 0 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB scaleRGB (II)I
+-	param 0 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB greyscale (I)I
+-	param 0 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB srgbLerp (FII)I
+-	param 1 argb_color
+-	param 2 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB opaque (I)I
+-	param 0 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB transparent (I)I
+-	param 0 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB color (II)I
+-	param 1 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB color (FI)I
+-	param 1 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB white (F)I
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB colorFromFloat (FFFF)I
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB average (II)I
+-	param 0 argb_color
+-	param 1 argb_color
+-	return argb_color
+-
+-target_method net.minecraft.util.ARGB toABGR (I)I
+-	param 0 argb_color
+-
+-target_method net.minecraft.util.ARGB fromABGR (I)I
+-	return argb_color
+-
+-target_method net.minecraft.client.gui.Font drawInBatch (Ljava/lang/String;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)V
+-	param 3 argb_color
+-
+-target_method net.minecraft.client.gui.Font drawInBatch (Lnet/minecraft/network/chat/Component;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)V
+-	param 3 argb_color
+-
+-target_method net.minecraft.client.gui.Font drawInBatch (Lnet/minecraft/util/FormattedCharSequence;FFIZLorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/gui/Font$DisplayMode;II)V
+-	param 3 argb_color
+-
+-target_method net.minecraft.client.gui.Font drawInBatch8xOutline (Lnet/minecraft/util/FormattedCharSequence;FFIILorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
+-	param 3 argb_color
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawCenteredString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawCenteredString (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;III)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawCenteredString (Lnet/minecraft/client/gui/Font;Lnet/minecraft/util/FormattedCharSequence;III)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;IIIZ)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawString (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;III)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawString (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IIIZ)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawWordWrap (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/FormattedText;IIIIZ)V
+-	param 5 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics drawWordWrap (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/FormattedText;IIII)V
+-	param 5 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics hLine (IIII)V
+-	param 3 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics vLine (IIII)V
+-	param 3 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics fill (IIIII)V
+-	param 4 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics fill (Lcom/mojang/blaze3d/pipeline/RenderPipeline;IIIII)V
+-	param 5 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics fillGradient (IIIIII)V
+-	param 4 argb_color
+-	param 5 argb_color
+-
+-target_method net.minecraft.client.gui.GuiGraphics renderOutline (IIIII)V
+-	param 4 argb_color
+-
+-target_method com.mojang.blaze3d.vertex.VertexConsumer setColor (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+-	param 0 argb_color
+-
+-target_method net.minecraft.network.chat.TextColor fromRgb (I)Lnet/minecraft/network/chat/TextColor;
+-	param 0 argb_color
+-
+-target_method net.minecraft.network.chat.Style withColor (I)Lnet/minecraft/network/chat/Style;
+-	param 0 argb_color
+-
+-target_method net.minecraft.network.chat.MutableComponent withColor (I)Lnet/minecraft/network/chat/MutableComponent;
+-	param 0 argb_color
+-
+ group int cursor_shape
+ 	org.lwjgl.glfw.GLFW.GLFW_ARROW_CURSOR
+ 	org.lwjgl.glfw.GLFW.GLFW_IBEAM_CURSOR
+@@ -1628,6 +_,7 @@
  	return s2c_animation_id
  
  group int s2c_game_state_demo_value
@@ -8,3 +172,10 @@
  	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_INTRO
  	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_1
  	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_2
+@@ -1903,3 +_,6 @@
+ 
+ target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
+ 	return world_event
++
++target_method net.minecraft.world.item.AxeItem spawnSoundAndParticle (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/sounds/SoundEvent;I)V
++	param 5 world_event
