@@ -164,6 +164,14 @@
  group int cursor_shape
  	org.lwjgl.glfw.GLFW.GLFW_ARROW_CURSOR
  	org.lwjgl.glfw.GLFW.GLFW_IBEAM_CURSOR
+@@ -277,7 +_,6 @@
+ 
+ #: Flags used in {@link net.minecraft.entity.mob.VexEntity#VEX_FLAGS VEX_FLAGS}.
+ group int vex_flags
+-	@flags
+ 	net.minecraft.world.entity.monster.Vex.FLAG_IS_CHARGING
+ 
+ target_method net.minecraft.world.entity.monster.Vex getVexFlag (I)Z
 @@ -1628,6 +_,7 @@
  	return s2c_animation_id
  
