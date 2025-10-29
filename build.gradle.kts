@@ -42,7 +42,9 @@ val enigma by configurations.registering {
     extendsFrom(configurations.getByName(enigmaPlugin.implementationConfigurationName))
 }
 val remapper by configurations.registering
-val minecraft by configurations.registering
+val minecraft by configurations.registering {
+    isTransitive = false
+}
 
 configurations.jammer {
     val asmVersion = "9.9"
@@ -74,12 +76,10 @@ dependencies {
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer("org.parchmentmc.jam:jam-parchment:0.1.0")
 
-    // Minecraft classpath for inheritance check in ART
+    // Minecraft classpath for inheritance check in ART and to prevent types coming from libraries to be printed as FQN in enigma
     val manifest = project.plugins.getPlugin(CompassPlugin::class).manifestsDownloader.versionManifest
     for (library in manifest.get().libraries) {
-        minecraft(library.name) {
-            isTransitive = false
-        }
+        minecraft(library.name)
     }
 }
 
@@ -137,6 +137,7 @@ tasks.register<EnigmaRunner>("enigma") {
     inputJar = remapJar.flatMap { it.outputJar }
     mappings = project.compass.productionData
     profile = project.layout.projectDirectory.file("enigma_profile.json")
+    libraries.setFrom(minecraft)
 }
 
 tasks.withType<ValidateData>().configureEach {
@@ -173,7 +174,7 @@ val generateSanitizedExport by tasks.registering(GenerateSanitizedExport::class)
 val officialExportZip by tasks.registering(Zip::class) {
     group = LifecycleBasePlugin.BUILD_GROUP
     description = "Creates a ZIP archive containing the export produced by the \"official\" intermediate provider and production data"
-    from(tasks.named<GenerateExport>("generateOfficialExport").flatMap { it.output })
+    from(tasks.generateOfficialExport.flatMap { it.output })
     unpick.includeDefinitions(this)
     archiveBaseName = "officialExport"
 }
@@ -189,7 +190,7 @@ val officialSanitizedExportZip by tasks.registering(Zip::class) {
 val officialStagingExportZip by tasks.registering(Zip::class) {
     group = LifecycleBasePlugin.BUILD_GROUP
     description = "Creates a ZIP archive containing the export produced by the \"official\" intermediate provider and staging data"
-    from(tasks.named<GenerateExport>("generateOfficialStagingExport").flatMap { it.output })
+    from(tasks.generateOfficialStagingExport.flatMap { it.output })
     unpick.includeDefinitions(this)
     archiveBaseName = "officialStagingExport"
 }
