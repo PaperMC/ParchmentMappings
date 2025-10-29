@@ -24,7 +24,7 @@ CLASS net/minecraft/world/level/levelgen/WorldgenRandom
 		ARG 3 index
 			COMMENT the cumulative index of the generating feature within the biome's list of features
 		ARG 4 decorationStep
-			COMMENT the ordinal of the {@link net.minecraft.world.level.levelgen.GenerationStep.Decoration} of the generating feature.
+			COMMENT the ordinal of the {@link net.minecraft.world.level.levelgen.GenerationStep.Decoration} of the generating feature
 	METHOD setLargeFeatureSeed (JII)V
 		COMMENT Seeds the current random for placing large features such as caves, strongholds, and mineshafts.
 		ARG 1 baseSeed

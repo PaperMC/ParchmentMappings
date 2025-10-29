@@ -26,6 +26,9 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lcom/mojang/blaze3d/vertex/VertexConsumer;" to "consumer",
         "Lcom/mojang/blaze3d/platform/NativeImage;" to "image",
         "Lcom/mojang/blaze3d/pipeline/RenderPipeline;" to "pipeline",
+        "Lcom/mojang/blaze3d/textures/GpuTexture;" to "texture",
+        "Lcom/mojang/blaze3d/textures/GpuTextureView;" to "texture",
+        $$"Lcom/mojang/realmsclient/gui/screens/RealmsDownloadLatestWorldScreen$DownloadStatus;" to "status",
         "Lnet/minecraft/client/renderer/MultiBufferSource;" to "bufferSource",
         "Lnet/minecraft/client/renderer/SubmitNodeCollector;" to "nodeCollector",
         "Lnet/minecraft/client/renderer/SubmitNodeCollection;" to "nodeCollection",
@@ -45,6 +48,7 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lnet/minecraft/client/input/CharacterEvent;" to "event",
         "Lnet/minecraft/client/input/MouseButtonEvent;" to "event",
         "Lnet/minecraft/client/input/MouseButtonInfo;" to "buttonInfo",
+        "Lnet/minecraft/client/OptionInstance;" to "option",
 
         // server
         "Lcom/mojang/authlib/GameProfile;" to "profile",
@@ -95,7 +99,14 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lnet/minecraft/world/scores/PlayerTeam;" to "team",
         "Lnet/minecraft/world/InteractionHand;" to "hand",
         "Lnet/minecraft/CrashReportCategory;" to "category",
+        "Lnet/minecraft/world/entity/EntityProcessor;" to "processor",
         "Lnet/minecraft/world/entity/EntitySpawnReason;" to "spawnReason",
+        "Lnet/minecraft/world/level/gamerules/GameRule;" to "rule",
+        "Lnet/minecraft/world/level/gamerules/GameRuleMap;" to "rules",
+        "Lnet/minecraft/world/level/gamerules/GameRuleCategory;" to "category",
+        "Lnet/minecraft/world/level/gamerules/GameRuleType;" to "type",
+        "Lnet/minecraft/server/jsonrpc/internalapi/MinecraftApi;" to "api",
+        "Lnet/minecraft/server/jsonrpc/methods/ClientInfo;" to "client",
 
         "Lnet/minecraft/world/level/chunk/LevelChunk;" to "chunk",
         "Lnet/minecraft/world/level/chunk/ChunkAccess;" to "chunk",
@@ -129,6 +140,8 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
         "Lio/netty/buffer/ByteBuf;" to "buffer",
         "Lnet/minecraft/network/FriendlyByteBuf;" to "buffer",
         "Lnet/minecraft/network/RegistryFriendlyByteBuf;" to "buffer",
+        "Lio/netty/handler/codec/http/HttpRequest;" to "request",
+        "Ljava/net/http/HttpResponse;" to "response",
     )
 
     override fun acceptJar(scope: Set<String>, classProvider: ClassProvider, jarIndex: JarIndexView) {
