@@ -172,15 +172,7 @@
  	net.minecraft.world.entity.monster.Vex.FLAG_IS_CHARGING
  
  target_method net.minecraft.world.entity.monster.Vex getVexFlag (I)Z
-@@ -1628,6 +_,7 @@
- 	return s2c_animation_id
- 
- group int s2c_game_state_demo_value
-+	@scope class net.minecraft.server.level.DemoMode
- 	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_INTRO
- 	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_1
- 	net.minecraft.network.protocol.game.ClientboundGameEventPacket.DEMO_PARAM_HINT_2
-@@ -1903,3 +_,6 @@
+@@ -1904,3 +_,6 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
  	return world_event
