@@ -124,11 +124,6 @@ tasks.register<ScanParameter>("scanParam") {
     inputJar = remapJar.flatMap { it.outputJar }
 }
 
-tasks.register<JavadocLint>("scanJavadocs") {
-    group = LifecycleBasePlugin.VERIFICATION_GROUP
-    inputMapping = project.compass.productionData
-}
-
 tasks.register<EnigmaRunner>("enigma") {
     group = "parchment"
     description = "Runs the Enigma mapping tool"

@@ -1,9 +1,11 @@
 package org.parchmentmc.validation
 
 import org.parchmentmc.compass.data.validation.impl.MethodStandardsValidator
+import org.parchmentmc.compass.data.visitation.DataVisitor
 import org.parchmentmc.feather.mapping.MappingDataContainer
 import org.parchmentmc.feather.metadata.ClassMetadata
 import org.parchmentmc.feather.metadata.MethodMetadata
+import org.parchmentmc.util.JavadocsChecker
 
 class MethodStandardsValidatorV2 : MethodStandardsValidator() {
 
@@ -17,6 +19,10 @@ class MethodStandardsValidatorV2 : MethodStandardsValidator() {
             ParamInfo(1, "other")
         )
     )
+
+    override fun preVisit(type: DataVisitor.DataType): Boolean {
+        return DataVisitor.DataType.METHODS.test(type) || DataVisitor.DataType.PARAMETERS.test(type)
+    }
 
     override fun visitMethod(
         classData: MappingDataContainer.ClassData, methodData: MappingDataContainer.MethodData,
@@ -32,6 +38,20 @@ class MethodStandardsValidatorV2 : MethodStandardsValidator() {
             }
         }
 
-        return super.visitMethod(classData, methodData, classMetadata, methodMetadata)
+        JavadocsChecker.enforceMethod(methodData.javadoc) { message ->
+            error(message)
+        }
+        return true // keep checking parameter for possible mistakes too
+    }
+
+    override fun visitParameter(
+        classData: MappingDataContainer.ClassData, methodData: MappingDataContainer.MethodData, paramData: MappingDataContainer.ParameterData,
+        classMetadata: ClassMetadata?, methodMetadata: MethodMetadata?
+    ) {
+        paramData.javadoc?.let {
+            JavadocsChecker.enforceParam(listOf(it)) { message ->
+                error(message)
+            }
+        }
     }
 }
