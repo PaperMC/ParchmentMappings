@@ -47,34 +47,32 @@ val minecraft by configurations.registering {
 }
 
 configurations.jammer {
-    val asmVersion = "9.9"
     resolutionStrategy.force(
-        "org.ow2.asm:asm-tree:$asmVersion", // bump ParchmentJam's ASM for Java 21+ required since MC 1.20.5
+        libs.asm.tree, // bump ParchmentJam's ASM for Java 21+ required since MC 1.20.5
         // update JarAwareMapping versions too to match the new version
-        "org.ow2.asm:asm:$asmVersion",
-        "org.ow2.asm:asm-util:$asmVersion",
-        "org.ow2.asm:asm-commons:$asmVersion"
+        libs.asm.core,
+        libs.asm.commons
     )
 }
 
 dependencies {
     // MCPConfig for the SRG intermediate
-    mcpconfig("de.oceanlabs.mcp:mcp_config:1.19.3-20221207.122022")
+    mcpconfig(libs.mcp.config)
 
     // ART for remapping the client JAR
-    remapper("net.neoforged:AutoRenamingTool:2.0.15")
+    remapper(libs.art)
 
     // Enigma, pretty interface for editing mappings
-    enigma("cuchaz:enigma-swing:4.0.2")
-    enigma("org.vineflower:vineflower:1.11.1") // sync with mache
+    enigma(libs.enigma.gui)
+    enigma(libs.vineflower)
 
     enigma(enigmaPlugin.output)
 
     enigmaPlugin.implementationConfigurationName(gradleKotlinDsl())
-    enigmaPlugin.implementationConfigurationName("cuchaz:enigma:4.0.2")
+    enigmaPlugin.implementationConfigurationName(libs.bundles.enigma.plugin)
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
-    jammer("org.parchmentmc.jam:jam-parchment:0.1.0")
+    jammer(libs.jammer)
 
     // Minecraft classpath for inheritance check in ART and to prevent types coming from libraries to be printed as FQN in enigma
     val manifest = project.plugins.getPlugin(CompassPlugin::class).manifestsDownloader.versionManifest

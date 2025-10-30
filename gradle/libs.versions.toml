@@ -1,0 +1,44 @@
+[versions]
+serialize = "1.9.0"
+xml = "0.86.3"
+asm = "9.9"
+parchment = "0.10.0"
+jammer = "0.1.0" # use patched local version during update!
+vineflower = "1.11.1" # sync with mache
+enigma = "4.0.2"
+unpick = "3.0.0-beta.11"
+
+[libraries]
+serialize-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialize" }
+serialize-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialize" }
+
+xml-core = { module = "io.github.pdvrieze.xmlutil:core", version.ref = "xml" }
+xml-serialize = { module = "io.github.pdvrieze.xmlutil:serialization-jvm", version.ref = "xml" }
+
+asm-core = { module = "org.ow2.asm:asm", version.ref = "asm" }
+asm-tree = { module = "org.ow2.asm:asm-tree", version.ref = "asm" }
+asm-commons = { module = "org.ow2.asm:asm-commons", version.ref = "asm" }
+
+vineflower = { module = "org.vineflower:vineflower", version.ref = "vineflower" }
+enigma = { module = "cuchaz:enigma", version.ref = "enigma" }
+enigma-gui = { module = "cuchaz:enigma-swing", version.ref = "enigma" }
+unpick = { module = "net.fabricmc.unpick:unpick", version.ref = "unpick" }
+unpick-format = { module = "net.fabricmc.unpick:unpick-format-utils", version.ref = "unpick" }
+
+art = "net.neoforged:AutoRenamingTool:2.0.15"
+mapping-io = "net.fabricmc:mapping-io:0.7.1"
+diffpatch = "io.codechicken:DiffPatch:2.0.1.40"
+
+jammer = { module = "org.parchmentmc.jam:jam-parchment", version.ref = "jammer" }
+mcp-config = "de.oceanlabs.mcp:mcp_config:1.19.3-20221207.122022"
+
+[plugins]
+parchment-lodestone = { id = "org.parchmentmc.lodestone", version.ref = "parchment" }
+parchment-compass = { id = "org.parchmentmc.compass", version.ref = "parchment" }
+
+[bundles]
+serialize = ["serialize-core", "serialize-json"]
+xml = ["xml-core", "xml-serialize"]
+asm = ["asm-core", "asm-tree"]
+unpick = ["unpick", "unpick-format"]
+enigma-plugin = ["enigma", "unpick-format", "unpick", "asm-core", "asm-tree"]

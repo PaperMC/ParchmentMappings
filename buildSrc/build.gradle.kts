@@ -24,23 +24,15 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.9.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
-
-    implementation("io.github.pdvrieze.xmlutil:core-jvm:0.86.3")
-    implementation("io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3")
-
-    implementation("org.ow2.asm:asm:9.9")
-    implementation("org.ow2.asm:asm-tree:9.9")
+    implementation(libs.bundles.serialize)
+    implementation(libs.bundles.xml)
+    implementation(libs.bundles.asm)
 
     implementation("org.parchmentmc:lodestone:0.10.0")
     implementation("org.parchmentmc:compass:0.10.0")
-    implementation("cuchaz:enigma:4.0.2")
-    implementation("net.fabricmc:mapping-io:0.7.1")
 
-    implementation("net.fabricmc.unpick:unpick:3.0.0-beta.11")
-    implementation("net.fabricmc.unpick:unpick-format-utils:3.0.0-beta.11")
-
-    implementation("io.codechicken:DiffPatch:2.0.1.40")
+    implementation(libs.enigma)
+    implementation(libs.mapping.io)
+    implementation(libs.bundles.unpick)
+    implementation(libs.diffpatch)
 }
