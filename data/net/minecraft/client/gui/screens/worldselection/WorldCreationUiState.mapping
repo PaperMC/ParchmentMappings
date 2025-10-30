@@ -22,7 +22,7 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldCreationUiState
 		ARG 1 difficulty
 	METHOD setGameMode (Lnet/minecraft/client/gui/screens/worldselection/WorldCreationUiState$SelectedGameMode;)V
 		ARG 1 gameMode
-	METHOD setGameRules (Lnet/minecraft/world/level/GameRules;)V
+	METHOD setGameRules (Lnet/minecraft/world/level/gamerules/GameRules;)V
 		ARG 1 gameRules
 	METHOD setGenerateStructures (Z)V
 		ARG 1 generateStructures

@@ -1,11 +1,11 @@
 CLASS net/minecraft/stats/ServerStatsCounter
 	COMMENT Server-side implementation of {@link net.minecraft.stats.StatsCounter}; handles counting, serialising, and de-serialising statistics, as well as sending them to connected clients via the {@linkplain net.minecraft.network.protocol.game.ClientboundAwardStatsPacket award stats packet}.
-	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Ljava/io/File;)V
+	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Ljava/nio/file/Path;)V
 		ARG 1 server
 		ARG 2 file
 	METHOD createTypedStatsCodec (Lnet/minecraft/stats/StatType;)Lcom/mojang/serialization/Codec;
 		ARG 0 type
-	METHOD parseLocal (Lcom/mojang/datafixers/DataFixer;Ljava/lang/String;)V
+	METHOD parse (Lcom/mojang/datafixers/DataFixer;Lcom/google/gson/JsonElement;)V
 		ARG 1 fixerUpper
 		ARG 2 json
 	METHOD sendStats (Lnet/minecraft/server/level/ServerPlayer;)V

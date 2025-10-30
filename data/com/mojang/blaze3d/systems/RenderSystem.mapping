@@ -11,7 +11,7 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 		ARG 1 tracyFrameCapture
 	METHOD getSequentialBuffer (Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;)Lcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer;
 		ARG 0 formatMode
-	METHOD initRenderer (JIZLjava/util/function/BiFunction;Z)V
+	METHOD initRenderer (JIZLcom/mojang/blaze3d/shaders/ShaderSource;Z)V
 		ARG 0 window
 		ARG 2 glDebugVerbosity
 		ARG 3 synchronous

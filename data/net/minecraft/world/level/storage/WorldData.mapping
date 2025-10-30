@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/storage/WorldData
 		ARG 2 singlePlayerTag
 	METHOD fillCrashReportCategory (Lnet/minecraft/CrashReportCategory;)V
 		ARG 1 category
-	METHOD getGameRules ()Lnet/minecraft/world/level/GameRules;
+	METHOD getGameRules ()Lnet/minecraft/world/level/gamerules/GameRules;
 		COMMENT Gets the GameRules class Instance.
 	METHOD getGameType ()Lnet/minecraft/world/level/GameType;
 		COMMENT Gets the GameType.

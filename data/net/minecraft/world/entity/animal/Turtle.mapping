@@ -31,8 +31,6 @@ CLASS net/minecraft/world/entity/animal/Turtle
 	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
 		ARG 1 level
 		ARG 2 lightning
-	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 travelVector
 	CLASS TurtleBreedGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Turtle;D)V
 			ARG 1 turtle

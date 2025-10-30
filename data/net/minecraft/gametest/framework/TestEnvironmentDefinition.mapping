@@ -40,14 +40,8 @@ CLASS net/minecraft/gametest/framework/TestEnvironmentDefinition
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 	CLASS SetGameRules
-		METHOD entry (Lnet/minecraft/world/level/GameRules$Key;Ljava/lang/Object;)Lnet/minecraft/gametest/framework/TestEnvironmentDefinition$SetGameRules$Entry;
-			ARG 0 key
-			ARG 1 value
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
-		CLASS Entry
-			METHOD codec (Ljava/lang/Class;Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
-				ARG 0 valueClass
-				ARG 1 valueCodec
-			METHOD lambda$codec$0 (Ljava/lang/Class;Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-				ARG 2 instance
+		METHOD resetRule (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gamerules/GameRule;)V
+			ARG 1 level
+			ARG 2 rule

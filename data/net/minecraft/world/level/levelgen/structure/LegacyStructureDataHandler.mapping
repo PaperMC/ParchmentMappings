@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/levelgen/structure/LegacyStructureDataHandler
 		ARG 2 legacyKeys
 		ARG 3 currentKeys
 		ARG 4 dataFixer
-	METHOD getLegacyStructureHandler (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/storage/DimensionDataStorage;Lcom/mojang/datafixers/DataFixer;)Lnet/minecraft/world/level/levelgen/structure/LegacyStructureDataHandler;
+	METHOD getLegacyTagFixer (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Supplier;Lcom/mojang/datafixers/DataFixer;)Ljava/util/function/Supplier;
 		ARG 0 level
 		ARG 1 storage
 		ARG 2 dataFixer

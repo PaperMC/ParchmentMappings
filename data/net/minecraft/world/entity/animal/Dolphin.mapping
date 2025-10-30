@@ -20,8 +20,6 @@ CLASS net/minecraft/world/entity/animal/Dolphin
 		ARG 1 moistnessLevel
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
-	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 travelVector
 	CLASS PlayWithItemsGoal
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

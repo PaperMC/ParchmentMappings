@@ -11,8 +11,6 @@ CLASS net/minecraft/world/entity/animal/AbstractFish
 		ARG 2 block
 	METHOD removeWhenFarAway (D)Z
 		ARG 1 distanceToClosestPlayer
-	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 travelVector
 	CLASS FishSwimGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractFish;)V
 			ARG 1 fish

@@ -83,7 +83,7 @@ dependencies {
 }
 
 // For unpick definitions
-val yarnVersion = "25w43a+build.14"
+val yarnVersion = "25w44a+build.4"
 val intermediaryVersion = yarnVersion.substringBefore('+')
 
 dependencies {

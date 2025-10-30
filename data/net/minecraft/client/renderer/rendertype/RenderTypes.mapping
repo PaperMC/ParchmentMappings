@@ -1,85 +1,85 @@
 CLASS net/minecraft/client/renderer/rendertype/RenderTypes
 	METHOD armorCutoutNoCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD armorTranslucent (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD beaconBeam (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
-		ARG 1 colorFlag
+		ARG 0 texture
+		ARG 1 translucent
 	METHOD blockScreenEffect (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
 	METHOD breezeEyes (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD breezeWind (Lnet/minecraft/resources/ResourceLocation;FF)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 		ARG 1 u
 		ARG 2 v
 	METHOD createArmorDecalCutoutNoCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD createWeather (Lcom/mojang/blaze3d/pipeline/RenderPipeline;)Ljava/util/function/Function;
-		ARG 0 renderPipeline
+		ARG 0 pipeline
 	METHOD crumbling (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD dragonExplosionAlpha (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD energySwirl (Lnet/minecraft/resources/ResourceLocation;FF)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 		ARG 1 u
 		ARG 2 v
 	METHOD entityCutout (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityCutoutNoCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityCutoutNoCull (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
-		ARG 1 outline
+		ARG 0 texture
+		ARG 1 affectsOutline
 	METHOD entityCutoutNoCullZOffset (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityCutoutNoCullZOffset (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
-		ARG 1 outline
+		ARG 0 texture
+		ARG 1 affectsOutline
 	METHOD entityDecal (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityNoOutline (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityShadow (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entitySmoothCutout (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entitySolid (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entitySolidZOffsetForward (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityTranslucent (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityTranslucent (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
-		ARG 1 outline
+		ARG 0 texture
+		ARG 1 affectsOutline
 	METHOD entityTranslucentEmissive (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD entityTranslucentEmissive (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
-		ARG 1 outline
+		ARG 0 texture
+		ARG 1 affectsOutline
 	METHOD eyes (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD fireScreenEffect (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
 	METHOD itemEntityTranslucentCull (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD outline (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD text (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD textIntensity (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD textIntensityPolygonOffset (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD textIntensitySeeThrough (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD textPolygonOffset (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD textSeeThrough (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 location
+		ARG 0 texture
 	METHOD weather (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
 		ARG 1 depthWrite

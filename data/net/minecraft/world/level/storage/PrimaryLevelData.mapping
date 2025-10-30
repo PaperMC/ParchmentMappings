@@ -36,7 +36,7 @@ CLASS net/minecraft/world/level/storage/PrimaryLevelData
 		ARG 2 singlePlayerTag
 	METHOD getDayTime ()J
 		COMMENT Get current world time
-	METHOD getGameRules ()Lnet/minecraft/world/level/GameRules;
+	METHOD getGameRules ()Lnet/minecraft/world/level/gamerules/GameRules;
 		COMMENT Gets the GameRules class Instance.
 	METHOD getGameType ()Lnet/minecraft/world/level/GameType;
 		COMMENT Gets the GameType.

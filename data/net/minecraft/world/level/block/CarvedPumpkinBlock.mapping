@@ -11,14 +11,10 @@ CLASS net/minecraft/world/level/block/CarvedPumpkinBlock
 		ARG 1 context
 	METHOD getWeatherStateFromPattern (Lnet/minecraft/world/level/block/state/pattern/BlockPattern$BlockPatternMatch;)Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;
 		ARG 1 patternMatch
-	METHOD lambda$getOrCreateCopperGolemBase$5 (Lnet/minecraft/world/level/block/state/BlockState;)Z
+	METHOD lambda$getOrCreateCopperGolemBase$3 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
-	METHOD lambda$getOrCreateCopperGolemFull$6 (Lnet/minecraft/world/level/block/state/BlockState;)Z
+	METHOD lambda$getOrCreateCopperGolemFull$4 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
-	METHOD lambda$getOrCreateIronGolemBase$3 (Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
-		ARG 0 block
-	METHOD lambda$getOrCreateIronGolemFull$4 (Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
-		ARG 0 block
 	METHOD lambda$getWeatherStateFromPattern$0 (Lnet/minecraft/world/level/block/Block;)Z
 		ARG 0 block
 	METHOD lambda$getWeatherStateFromPattern$1 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/WeatheringCopper;

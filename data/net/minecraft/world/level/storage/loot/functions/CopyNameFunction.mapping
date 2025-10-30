@@ -1,12 +1,12 @@
 CLASS net/minecraft/world/level/storage/loot/functions/CopyNameFunction
 	COMMENT LootItemFunction that sets the stack's name by copying it from somewhere else, such as the killing player.
-	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/CopyNameFunction$Source;)V
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/LootContextArg;)V
 		ARG 1 predicates
 		ARG 2 source
-	METHOD copyName (Lnet/minecraft/world/level/storage/loot/functions/CopyNameFunction$Source;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
+	METHOD copyName (Lnet/minecraft/world/level/storage/loot/LootContextArg;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 source
-	METHOD lambda$copyName$2 (Lnet/minecraft/world/level/storage/loot/functions/CopyNameFunction$Source;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;
-		ARG 1 conditions
+	METHOD lambda$copyName$2 (Lnet/minecraft/world/level/storage/loot/LootContextArg;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;
+		ARG 1 predicates
 	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;

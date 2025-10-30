@@ -60,10 +60,6 @@ CLASS net/minecraft/server/level/WorldGenRegion
 	METHOD isStateAtPosition (Lnet/minecraft/core/BlockPos;Ljava/util/function/Predicate;)Z
 		ARG 1 pos
 		ARG 2 state
-	METHOD lambda$new$0 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/ticks/TickContainerAccess;
-		ARG 1 pos
-	METHOD lambda$new$1 (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/ticks/TickContainerAccess;
-		ARG 1 pos
 	METHOD markPosForPostprocessing (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD removeBlock (Lnet/minecraft/core/BlockPos;Z)Z

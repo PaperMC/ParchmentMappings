@@ -17,6 +17,8 @@ CLASS net/minecraft/server/commands/FillBiomeCommand
 		ARG 3 biome
 		ARG 4 filter
 		ARG 5 messageOutput
+	METHOD lambda$register$2 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD lambda$register$3 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$static$0 (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;

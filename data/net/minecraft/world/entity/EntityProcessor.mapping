@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/entity/EntityProcessor
+	METHOD lambda$static$0 (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
+		ARG 0 entity
+	METHOD process (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 entity

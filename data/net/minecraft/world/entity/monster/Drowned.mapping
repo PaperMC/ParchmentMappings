@@ -20,8 +20,6 @@ CLASS net/minecraft/world/entity/monster/Drowned
 		ARG 2 distanceFactor
 	METHOD setSearchingForLand (Z)V
 		ARG 1 searchingForLand
-	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 travelVector
 	CLASS DrownedAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Drowned;DZ)V
 			ARG 1 drowned

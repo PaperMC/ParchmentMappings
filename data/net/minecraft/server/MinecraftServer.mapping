@@ -126,8 +126,8 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 3 header
 	METHOD logTickMethodTime (J)V
 		ARG 1 startTime
-	METHOD onGameRuleChanged (Ljava/lang/String;Lnet/minecraft/world/level/GameRules$Value;)V
-		ARG 1 key
+	METHOD onGameRuleChanged (Lnet/minecraft/world/level/gamerules/GameRule;Ljava/lang/Object;)V
+		ARG 1 rule
 		ARG 2 value
 	METHOD onServerCrash (Lnet/minecraft/CrashReport;)V
 		COMMENT Called on exit from the main run() loop.

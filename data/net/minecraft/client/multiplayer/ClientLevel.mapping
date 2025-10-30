@@ -86,8 +86,9 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 2 colorResolver
 	METHOD getChunkSource ()Lnet/minecraft/client/multiplayer/ClientChunkCache;
 		COMMENT Gets the world's chunk provider
-	METHOD getCloudColor (F)I
+	METHOD getCloudColor (FLnet/minecraft/client/Camera;)I
 		ARG 1 partialTick
+		ARG 2 camera
 	METHOD getEntity (I)Lnet/minecraft/world/entity/Entity;
 		COMMENT @return the Entity with the given ID, or {@code null} if it doesn't exist in this Level
 		ARG 1 id

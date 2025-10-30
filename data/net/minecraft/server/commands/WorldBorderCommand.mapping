@@ -1,4 +1,6 @@
 CLASS net/minecraft/server/commands/WorldBorderCommand
+	METHOD formatTicksToSeconds (J)Ljava/lang/String;
+		ARG 0 time
 	METHOD getSize (Lnet/minecraft/commands/CommandSourceStack;)I
 		ARG 0 source
 	METHOD lambda$register$0 (Lcom/mojang/brigadier/context/CommandContext;)I

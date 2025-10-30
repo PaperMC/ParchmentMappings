@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/entity/SlotProvider
+	METHOD getSlot (I)Lnet/minecraft/world/entity/SlotAccess;
+		ARG 1 slotIndex

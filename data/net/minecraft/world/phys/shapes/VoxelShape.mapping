@@ -36,7 +36,7 @@ CLASS net/minecraft/world/phys/shapes/VoxelShape
 		ARG 1 side
 	METHOD isCubeLikeAlong (Lnet/minecraft/core/Direction$Axis;)Z
 		ARG 1 axis
-	METHOD lambda$closestPointTo$5 (Lnet/minecraft/world/phys/Vec3;[Lnet/minecraft/world/phys/Vec3;DDDDDD)V
+	METHOD lambda$closestPointTo$5 (Lnet/minecraft/world/phys/Vec3;Lorg/apache/commons/lang3/mutable/MutableObject;DDDDDD)V
 		ARG 2 x1
 		ARG 4 y1
 		ARG 6 z1

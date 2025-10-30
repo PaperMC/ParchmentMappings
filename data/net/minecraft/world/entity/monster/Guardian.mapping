@@ -32,8 +32,6 @@ CLASS net/minecraft/world/entity/monster/Guardian
 		ARG 1 activeAttackTargetId
 	METHOD setMoving (Z)V
 		ARG 1 moving
-	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 travelVector
 	CLASS GuardianAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Guardian;)V
 			ARG 1 guardian

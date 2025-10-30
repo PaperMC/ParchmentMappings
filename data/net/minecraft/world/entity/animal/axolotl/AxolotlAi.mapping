@@ -18,8 +18,6 @@ CLASS net/minecraft/world/entity/animal/axolotl/AxolotlAi
 		ARG 0 brain
 	METHOD initPlayDeadActivity (Lnet/minecraft/world/entity/ai/Brain;)V
 		ARG 0 brain
-	METHOD lambda$getTemptations$0 (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 stack
 	METHOD makeBrain (Lnet/minecraft/world/entity/ai/Brain;)Lnet/minecraft/world/entity/ai/Brain;
 		ARG 0 brain
 	METHOD updateActivity (Lnet/minecraft/world/entity/animal/axolotl/Axolotl;)V

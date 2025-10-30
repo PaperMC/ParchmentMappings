@@ -1,15 +1,15 @@
 CLASS net/minecraft/server/commands/GameRuleCommand
-	METHOD queryRule (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/level/GameRules$Key;)I
+	METHOD queryRule (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/level/gamerules/GameRule;)I
 		ARG 0 source
-		ARG 1 gameRule
+		ARG 1 rule
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
 		ARG 1 commandBuildContext
-	METHOD setRule (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/world/level/GameRules$Key;)I
+	METHOD setRule (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/world/level/gamerules/GameRule;)I
 		ARG 0 context
-		ARG 1 gameRule
+		ARG 1 rule
 	CLASS 1
-		METHOD lambda$visit$0 (Lnet/minecraft/world/level/GameRules$Key;Lcom/mojang/brigadier/context/CommandContext;)I
+		METHOD lambda$visit$0 (Lnet/minecraft/world/level/gamerules/GameRule;Lcom/mojang/brigadier/context/CommandContext;)I
 			ARG 1 context
-		METHOD lambda$visit$1 (Lnet/minecraft/world/level/GameRules$Key;Lcom/mojang/brigadier/context/CommandContext;)I
+		METHOD lambda$visit$1 (Lnet/minecraft/world/level/gamerules/GameRule;Lcom/mojang/brigadier/context/CommandContext;)I
 			ARG 1 context

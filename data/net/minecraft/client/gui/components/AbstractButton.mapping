@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/gui/components/AbstractButton
-	METHOD handleCursor (Lnet/minecraft/client/gui/GuiGraphics;)V
-		ARG 1 guiGraphics
 	METHOD onPress (Lnet/minecraft/client/input/InputWithModifiers;)V
 		ARG 1 input
 	METHOD renderContents (Lnet/minecraft/client/gui/GuiGraphics;IIF)V

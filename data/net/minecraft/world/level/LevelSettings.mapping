@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/LevelSettings
-	METHOD <init> (Ljava/lang/String;Lnet/minecraft/world/level/GameType;ZLnet/minecraft/world/Difficulty;ZLnet/minecraft/world/level/GameRules;Lnet/minecraft/world/level/WorldDataConfiguration;)V
+	METHOD <init> (Ljava/lang/String;Lnet/minecraft/world/level/GameType;ZLnet/minecraft/world/Difficulty;ZLnet/minecraft/world/level/gamerules/GameRules;Lnet/minecraft/world/level/WorldDataConfiguration;)V
 		ARG 1 levelName
 		ARG 2 gameType
 		ARG 3 hardcore
