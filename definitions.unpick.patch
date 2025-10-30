@@ -172,6 +172,19 @@
  	net.minecraft.world.entity.monster.Vex.FLAG_IS_CHARGING
  
  target_method net.minecraft.world.entity.monster.Vex getVexFlag (I)Z
+@@ -1569,6 +_,12 @@
+ target_method net.minecraft.nbt.TagTypes getType (I)Lnet/minecraft/nbt/TagType;
+ 	param 0 nbt_type_id
+ 
++target_method net.minecraft.nbt.ListTag wrapIfNeeded (BLnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/Tag;
++	param 0 nbt_type_id
++
++target_method net.minecraft.nbt.ListTag identifyRawElementType ()B
++	return nbt_type_id
++
+ group int max_string_length
+ 	net.minecraft.network.FriendlyByteBuf.MAX_STRING_LENGTH
+ 	net.minecraft.network.FriendlyByteBuf.MAX_COMPONENT_STRING_LENGTH
 @@ -1904,3 +_,6 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
