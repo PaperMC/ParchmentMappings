@@ -5,7 +5,7 @@ object JavadocsChecker {
     @JvmStatic
     val PARAM_DOC_LINE = Regex("^@param\\s+[^<].*$")
     @JvmStatic
-    val RETURN_DOC_LINE = Regex("^\\{@return\\s+(?<ireturn>[^<].*)}|@return\\s+(?<return>[^<].*)$")
+    val RETURN_DOC_LINE = Regex("^(?:\\{@return\\s+(?<ireturn>[^<].*)}|@return\\s+(?<return>[^<].*))$")
 
     private fun String.replaceBetween(prefix: String, suffix: String, value: String): String {
         return replace(Regex("(?<=$prefix).*?(?=$suffix)"), value)
