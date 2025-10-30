@@ -10,14 +10,11 @@ import cuchaz.enigma.translation.representation.entry.ClassEntry
 import cuchaz.enigma.translation.representation.entry.Entry
 import cuchaz.enigma.translation.representation.entry.LocalVariableEntry
 import cuchaz.enigma.translation.representation.entry.MethodEntry
+import org.objectweb.asm.Opcodes
 import java.util.*
 import javax.lang.model.SourceVersion
 
 class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
-    companion object {
-        const val ACC_STATIC = 0x0008
-        const val ACC_ENUM = 0x4000
-    }
 
     lateinit var indexer: JarIndexView
 
@@ -171,14 +168,14 @@ class EnigmaNameProposalService() : JarIndexerService, NameProposalService {
             return false
         }
 
-        return ACC_ENUM in indexer.entryIndex.getAccess(method.parent)
+        return Opcodes.ACC_ENUM in indexer.entryIndex.getAccess(method.parent)
     }
 
     override fun proposeName(obfEntry: Entry<*>, remapper: EntryRemapper): Optional<String> {
         if (obfEntry is LocalVariableEntry && obfEntry.isArgument) {
             val method = obfEntry.parent
             if (method != null) {
-                val isStatic = ACC_STATIC in indexer.entryIndex.getAccess(method)
+                val isStatic = Opcodes.ACC_STATIC in indexer.entryIndex.getAccess(method)
 
                 var offsetLvtIndex = 0
                 if (!isStatic) {
