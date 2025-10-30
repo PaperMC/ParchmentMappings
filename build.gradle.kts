@@ -51,6 +51,7 @@ configurations.jammer {
         libs.asm.tree, // bump ParchmentJam's ASM for Java 21+ required since MC 1.20.5
         // update JarAwareMapping versions too to match the new version
         libs.asm.core,
+        libs.asm.util,
         libs.asm.commons
     )
 }
