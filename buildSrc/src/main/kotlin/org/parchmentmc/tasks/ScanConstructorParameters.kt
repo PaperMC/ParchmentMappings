@@ -16,7 +16,7 @@ import org.objectweb.asm.tree.VarInsnNode
 import org.parchmentmc.util.*
 import java.lang.constant.ConstantDescs
 
-abstract class ScanInitParamsJar : DefaultTask() {
+abstract class ScanConstructorParameters : DefaultTask() {
 
     @get:InputFile
     @get:PathSensitive(PathSensitivity.NONE)

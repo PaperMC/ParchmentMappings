@@ -18,98 +18,84 @@ class UnpickGuiService : GuiService {
         registrar.addSeparator()
 
         registrar.add("unpick.copyTargetReference")
-            .setEnabledWhen { getCursorTargetReference(gui) != null }
-            .setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, KeyEvent.CTRL_DOWN_MASK))
+            .setEnabledWhen { getUnpickReferenceOnCursor(gui) != null }
+            .setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, KeyEvent.CTRL_DOWN_MASK)) // hopefully keybinds will be controllable at some point
             .setAction {
-                val textToCopy = getCursorTargetReference(gui)
-                if (textToCopy != null) {
-                    Toolkit.getDefaultToolkit().systemClipboard.setContents(StringSelection(textToCopy), null)
-                }
+                val textToCopy = getUnpickReferenceOnCursor(gui) ?: return@setAction
+                Toolkit.getDefaultToolkit().systemClipboard.setContents(StringSelection(textToCopy), null)
             }
         registrar.add("unpick.copyConstantReference")
-            .setEnabledWhen { canBeConstant(gui.project, gui.cursorReference) }
+            .setEnabledWhen { getEligibleConstantOnCursor(gui) != null }
             .setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, KeyEvent.CTRL_DOWN_MASK or KeyEvent.SHIFT_DOWN_MASK))
             .setAction {
-                val project = gui.project ?: return@setAction
-                if (!canBeConstant(project, gui.cursorReference)) {
-                    return@setAction
-                }
-
-                val obfField = gui.cursorReference!!.entry as FieldEntryView
-                val deobfField = project.deobfuscate(obfField)
-                val textToCopy = deobfField.parent.fullName.replace('/', '.') + "." + deobfField.name
+                val field = getEligibleConstantOnCursor(gui) ?: return@setAction
+                val textToCopy = field.parent.fullName.replace('/', '.') + "." + field.name
                 Toolkit.getDefaultToolkit().systemClipboard.setContents(StringSelection(textToCopy), null)
             }
     }
 
-    private fun getCursorTargetReference(gui: GuiView): String? {
+    private fun getUnpickReferenceOnCursor(gui: GuiView): String? {
         val hoveredReference = gui.cursorReference ?: return null
         val project = gui.project ?: return null
 
-        val obfEntry = hoveredReference.entry
-        val deobfEntry = project.deobfuscate(hoveredReference.entry)
-
-        return when (deobfEntry) {
-            // todo uncomment for unpick v4
-            /*is ClassEntryView if (project.jarIndex.entryIndex.getAccess(deobfEntry) and Opcodes.ACC_ANNOTATION) != 0 -> "target_annotation %s".format(
-                deobfEntry.fullName.replace('/', '.')
-            )*/
+        val entry = hoveredReference.entry
+        return when (entry) {
+            is ClassEntryView if (project.jarIndex.entryIndex.getAccess(entry) and Opcodes.ACC_ANNOTATION) != 0 -> "target_annotation %s".format(
+                entry.fullName.replace('/', '.')
+            )
 
             is FieldEntryView -> "target_field %s %s %s".format(
-                deobfEntry.parent.fullName.replace('/', '.'),
-                deobfEntry.name,
-                deobfEntry.descriptor
+                entry.parent.fullName.replace('/', '.'),
+                entry.name,
+                entry.descriptor
             )
 
             is MethodEntryView -> "target_method %s %s %s".format(
-                deobfEntry.parent.fullName.replace('/', '.'),
-                deobfEntry.name,
-                deobfEntry.descriptor
+                entry.parent.fullName.replace('/', '.'),
+                entry.name,
+                entry.descriptor
             )
 
-            is LocalVariableEntryView -> {
-                val localIndex = getLocalIndex(project, obfEntry as LocalVariableEntryView)
-                if (localIndex == -1) null else "param $localIndex"
+            is LocalVariableEntryView if (entry.isArgument) -> {
+                val paramIndex = getParamIndex(project, entry) // should never be -1 except for https://github.com/FabricMC/Enigma/issues/572
+                if (paramIndex == -1) null else "param $paramIndex"
             }
 
             else -> null
         }
     }
 
-    private fun getLocalIndex(project: ProjectView, local: LocalVariableEntryView): Int {
+    private fun getParamIndex(project: ProjectView, local: LocalVariableEntryView): Int {
         val argTypes = Type.getArgumentTypes(local.parent.descriptor)
-        val methodAccess = project.jarIndex.entryIndex.getAccess(local.parent)
-        var varIndex = if ((methodAccess and Opcodes.ACC_STATIC) != 0) 0 else 1
+        var lvtIndex = if ((project.jarIndex.entryIndex.getAccess(local.parent) and Opcodes.ACC_STATIC) != 0) 0 else 1
 
-        for (localIndex in argTypes.indices) {
-            if (varIndex == local.index) {
-                return localIndex
+        for (paramIndex in argTypes.indices) {
+            if (lvtIndex == local.index) {
+                return paramIndex
             }
 
-            varIndex += argTypes[localIndex].size
+            lvtIndex += argTypes[paramIndex].size
         }
 
         return -1
     }
 
-    private fun canBeConstant(project: ProjectView?, reference: EntryReferenceView?): Boolean {
-        if (reference == null || project == null) {
-            return false
-        }
+    private fun getEligibleConstantOnCursor(gui: GuiView): FieldEntryView? {
+        val hoveredReference = gui.cursorReference ?: return null
+        val project = gui.project ?: return null
 
-        val field = reference.entry
+        val field = hoveredReference.entry
         if (field !is FieldEntryView) {
-            return false
+            return null
         }
 
-        val access = project.jarIndex.entryIndex.getAccess(field)
-        if ((access and Opcodes.ACC_FINAL) == 0) {
-            return false
+        if ((project.jarIndex.entryIndex.getAccess(field) and Opcodes.ACC_FINAL) == 0) {
+            return null
         }
 
         return when (field.descriptor) {
-            "B", "C", "D", "F", "I", "J", "S", "Ljava/lang/String;", "Ljava/lang/Class;" -> true
-            else -> false
+            "B", "C", "D", "F", "I", "J", "S", "Ljava/lang/String;", "Ljava/lang/Class;" -> field
+            else -> null
         }
     }
 }

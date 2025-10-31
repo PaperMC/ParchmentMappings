@@ -111,7 +111,7 @@ val remapJar by tasks.registering(RemapJar::class) {
         .zip(mcVersion) { d, ver -> d.file("$ver-client.jar") }
 }
 
-tasks.register<ScanInitParamsJar>("scanInitParams") {
+tasks.register<ScanConstructorParameters>("scanInitParams") {
     group = LifecycleBasePlugin.VERIFICATION_GROUP
     inputJar = remapJar.flatMap { it.outputJar }
     inputMapping = project.compass.productionData
