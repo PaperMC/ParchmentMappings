@@ -28,11 +28,14 @@ dependencies {
     implementation(libs.bundles.xml)
     implementation(libs.bundles.asm)
 
-    implementation("org.parchmentmc:lodestone:0.10.0")
-    implementation("org.parchmentmc:compass:0.10.0")
+    implementation(plugin(libs.plugins.parchment.lodestone))
+    implementation(plugin(libs.plugins.parchment.compass))
 
     implementation(libs.enigma)
     implementation(libs.mapping.io)
     implementation(libs.bundles.unpick)
     implementation(libs.diffpatch)
 }
+
+fun DependencyHandlerScope.plugin(plugin: Provider<PluginDependency>) =
+    plugin.map { "${it.pluginId}:${it.pluginId}.gradle.plugin:${it.version}" }
