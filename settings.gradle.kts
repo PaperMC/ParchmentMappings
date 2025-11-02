@@ -4,6 +4,8 @@ plugins {
 
 rootProject.name = "Parchment"
 
+include("enigma-plugin")
+
 if (providers.gradleProperty("paperBuildCacheEnabled").orNull.toBoolean()) {
     val buildCacheUsername = providers.gradleProperty("paperBuildCacheUsername").orElse("").get()
     val buildCachePassword = providers.gradleProperty("paperBuildCachePassword").orElse("").get()

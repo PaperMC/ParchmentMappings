@@ -9,10 +9,11 @@
 *.ipr
 *.iws
 *.iml
-/.idea
+.idea
 
 /build
 /buildSrc/build
+/enigma-plugin/build
 .gradle
 .kotlin
 

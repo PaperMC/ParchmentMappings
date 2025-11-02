@@ -11,7 +11,6 @@ import org.parchmentmc.validation.MethodStandardsValidatorV2
 
 plugins {
     java
-    `kotlin-dsl`
     `maven-publish`
     id("org.parchmentmc.compass")
     id("blackstone")
@@ -36,11 +35,7 @@ repositories {
     }
 }
 
-val enigmaPlugin by sourceSets.creating
-
-val enigma by configurations.registering {
-    extendsFrom(configurations.getByName(enigmaPlugin.implementationConfigurationName))
-}
+val enigma by configurations.registering
 val remapper by configurations.registering
 val minecraft by configurations.registering {
     isTransitive = false
@@ -66,11 +61,7 @@ dependencies {
     // Enigma, pretty interface for editing mappings
     enigma(libs.enigma.gui)
     enigma(libs.vineflower)
-
-    enigma(enigmaPlugin.output)
-
-    enigmaPlugin.implementationConfigurationName(gradleKotlinDsl())
-    enigmaPlugin.implementationConfigurationName(libs.bundles.enigma.plugin)
+    enigma(project(":enigma-plugin", "runtimeElements"))
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer(libs.jammer)
@@ -130,7 +121,7 @@ tasks.register<EnigmaRunner>("enigma") {
     mainClass = "cuchaz.enigma.gui.Main"
     inputJar = remapJar.flatMap { it.outputJar }
     mappings = project.compass.productionData
-    profile = project.layout.projectDirectory.file("enigma_profile.json")
+    profile = project.layout.projectDirectory.file("enigma-plugin/profile.json")
     libraries.setFrom(minecraft)
 }
 
