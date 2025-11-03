@@ -8,7 +8,7 @@ jammer = "0.1.0" # use patched local version during update!
 
 vineflower = "1.11.1" # sync with mache
 enigma = "4.0.2"
-unpick = "3.0.0-beta.11"
+unpick = "3.0.0-beta.13"
 
 [libraries]
 serialize-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialize" }

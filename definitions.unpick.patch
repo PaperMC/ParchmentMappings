@@ -1,9 +1,21 @@
 --- a/definitions.unpick
 +++ b/definitions.unpick
-@@ -25,163 +_,6 @@
- target_method net.minecraft.server.level.TicketType flags ()I
- 	return chunk_ticket_type_flags
+@@ -13,174 +_,14 @@
  
+ target_method net.minecraft.server.level.TicketType register (Ljava/lang/String;JI)Lnet/minecraft/server/level/TicketType;
+ 	param 1 chunk_ticket_type_expiration
+-	param 2 chunk_ticket_type_flags
+ 
+ target_method net.minecraft.server.level.TicketType <init> (JI)V
+ 	param 0 chunk_ticket_type_expiration
+-	param 1 chunk_ticket_type_flags
+ 
+ target_method net.minecraft.server.level.TicketType timeout ()J
+ 	return chunk_ticket_type_expiration
+ 
+-target_method net.minecraft.server.level.TicketType flags ()I
+-	return chunk_ticket_type_flags
+-
 -#: Integers in ARGB color format.
 -group int argb_color
 -	@format hex
@@ -160,10 +172,10 @@
 -
 -target_method net.minecraft.network.chat.MutableComponent withColor (I)Lnet/minecraft/network/chat/MutableComponent;
 -	param 0 argb_color
--
++target_annotation net.minecraft.server.level.TicketType$Flags chunk_ticket_type_flags
+ 
  group int cursor_shape
  	org.lwjgl.glfw.GLFW.GLFW_ARROW_CURSOR
- 	org.lwjgl.glfw.GLFW.GLFW_IBEAM_CURSOR
 @@ -277,7 +_,6 @@
  
  #: Flags used in {@link net.minecraft.entity.mob.VexEntity#VEX_FLAGS VEX_FLAGS}.
@@ -185,7 +197,7 @@
  group int max_string_length
  	net.minecraft.network.FriendlyByteBuf.MAX_STRING_LENGTH
  	net.minecraft.network.FriendlyByteBuf.MAX_COMPONENT_STRING_LENGTH
-@@ -1904,3 +_,6 @@
+@@ -1837,3 +_,6 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
  	return world_event
