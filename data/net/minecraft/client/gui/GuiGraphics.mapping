@@ -12,7 +12,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 mouseY
 	METHOD applyCursor (Lcom/mojang/blaze3d/platform/Window;)V
 		ARG 1 window
-	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIFFIIII)V
+	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIFFIIII)V
 		ARG 1 pipeline
 		ARG 2 atlas
 		ARG 3 x
@@ -23,7 +23,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 8 height
 		ARG 9 textureWidth
 		ARG 10 textureHeight
-	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIFFIIIII)V
+	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIFFIIIII)V
 		ARG 1 pipeline
 		ARG 2 atlas
 		ARG 3 x
@@ -35,7 +35,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 9 textureWidth
 		ARG 10 textureHeight
 		ARG 11 color
-	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIFFIIIIII)V
+	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIFFIIIIII)V
 		ARG 1 pipeline
 		ARG 2 atlas
 		ARG 3 x
@@ -48,7 +48,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 10 vHeight
 		ARG 11 textureWidth
 		ARG 12 textureHeight
-	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIFFIIIIIII)V
+	METHOD blit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIFFIIIIIII)V
 		ARG 1 pipeline
 		ARG 2 atlas
 		ARG 3 x
@@ -62,7 +62,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 11 textureWidth
 		ARG 12 textureHeight
 		ARG 13 color
-	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIIIFFFF)V
+	METHOD blit (Lnet/minecraft/resources/Identifier;IIIIFFFF)V
 		ARG 1 atlas
 		ARG 2 x0
 		ARG 3 y0
@@ -123,14 +123,14 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 9 width
 		ARG 10 height
 		ARG 11 color
-	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIII)V
+	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIII)V
 		ARG 1 pipeline
 		ARG 2 sprite
 		ARG 3 x
 		ARG 4 y
 		ARG 5 width
 		ARG 6 height
-	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIIIF)V
+	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIIF)V
 		ARG 1 pipeline
 		ARG 2 sprite
 		ARG 3 x
@@ -138,7 +138,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 width
 		ARG 6 height
 		ARG 7 fade
-	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIIII)V
+	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIII)V
 		ARG 1 pipeline
 		ARG 2 sprite
 		ARG 3 x
@@ -146,7 +146,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 width
 		ARG 6 height
 		ARG 7 color
-	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIIIIIII)V
+	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIIIIII)V
 		ARG 1 pipeline
 		ARG 2 sprite
 		ARG 3 textureWidth
@@ -157,7 +157,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 8 y
 		ARG 9 width
 		ARG 10 height
-	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIIIIIIII)V
+	METHOD blitSprite (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIIIIIII)V
 		ARG 1 pipeline
 		ARG 2 sprite
 		ARG 3 textureWidth
@@ -362,7 +362,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the line
 		ARG 4 color
 			COMMENT the color of the line
-	METHOD innerBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/ResourceLocation;IIIIFFFFI)V
+	METHOD innerBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIIFFFFI)V
 		ARG 1 pipeline
 		ARG 2 atlas
 		ARG 3 x0
@@ -483,7 +483,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 3 width
 		ARG 4 height
 		ARG 5 color
-	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;)V
+	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/Identifier;)V
 		ARG 1 font
 		ARG 2 components
 		ARG 3 x
@@ -497,7 +497,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 2 lines
 		ARG 3 x
 		ARG 4 y
-	METHOD setComponentTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/ResourceLocation;)V
+	METHOD setComponentTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/Identifier;)V
 		ARG 1 font
 		ARG 2 lines
 		ARG 3 x
@@ -512,7 +512,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 2 lines
 		ARG 3 x
 		ARG 4 y
-	METHOD setTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/ResourceLocation;)V
+	METHOD setTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/Identifier;)V
 		ARG 1 font
 		ARG 2 lines
 		ARG 3 x
@@ -524,7 +524,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 3 tooltipImage
 		ARG 4 x
 		ARG 5 y
-	METHOD setTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;IILnet/minecraft/resources/ResourceLocation;)V
+	METHOD setTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;IILnet/minecraft/resources/Identifier;)V
 		ARG 1 font
 		ARG 2 lines
 		ARG 3 tooltipImage
@@ -543,7 +543,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 2 text
 		ARG 3 x
 		ARG 4 y
-	METHOD setTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IILnet/minecraft/resources/ResourceLocation;)V
+	METHOD setTooltipForNextFrame (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IILnet/minecraft/resources/Identifier;)V
 		ARG 1 font
 		ARG 2 text
 		ARG 3 x
@@ -558,7 +558,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
-	METHOD setTooltipForNextFrameInternal (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;Z)V
+	METHOD setTooltipForNextFrameInternal (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/Identifier;Z)V
 		ARG 1 font
 		ARG 2 components
 		ARG 3 x
@@ -587,7 +587,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 10 v0
 		ARG 11 v1
 		ARG 12 color
-	METHOD submitBookModelRenderState (Lnet/minecraft/client/model/BookModel;Lnet/minecraft/resources/ResourceLocation;FFFIIII)V
+	METHOD submitBookModelRenderState (Lnet/minecraft/client/model/BookModel;Lnet/minecraft/resources/Identifier;FFFIIII)V
 		ARG 1 bookModel
 		ARG 2 texture
 		ARG 3 scale
@@ -632,7 +632,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 y0
 		ARG 6 x1
 		ARG 7 y1
-	METHOD submitSkinRenderState (Lnet/minecraft/client/model/PlayerModel;Lnet/minecraft/resources/ResourceLocation;FFFFIIII)V
+	METHOD submitSkinRenderState (Lnet/minecraft/client/model/PlayerModel;Lnet/minecraft/resources/Identifier;FFFFIIII)V
 		ARG 1 playerModel
 		ARG 2 texture
 		ARG 3 scale

@@ -281,10 +281,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 0 buffer
 	METHOD readResourceKey (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/resources/ResourceKey;
 		ARG 1 registryKey
-	METHOD readResourceLocation ()Lnet/minecraft/resources/ResourceLocation;
-		COMMENT Read a ResourceLocation using its String representation.
+	METHOD readIdentifier ()Lnet/minecraft/resources/Identifier;
+		COMMENT Read a Identifier using its String representation.
 		COMMENT
-		COMMENT @see #writeResourceLocation
+		COMMENT @see #writeIdentifier
 	METHOD readRetainedSlice (I)Lio/netty/buffer/ByteBuf;
 		ARG 1 length
 	METHOD readSlice (I)Lio/netty/buffer/ByteBuf;
@@ -610,10 +610,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 quaternion
 	METHOD writeResourceKey (Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 resourceKey
-	METHOD writeResourceLocation (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/network/FriendlyByteBuf;
-		COMMENT Write a ResourceLocation using its String representation.
+	METHOD writeIdentifier (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/network/FriendlyByteBuf;
+		COMMENT Write a Identifier using its String representation.
 		COMMENT
-		COMMENT @see #readResourceLocation
+		COMMENT @see #readIdentifier
 		ARG 1 resourceLocation
 	METHOD writeShort (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value

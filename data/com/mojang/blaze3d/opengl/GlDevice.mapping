@@ -16,7 +16,7 @@ CLASS com/mojang/blaze3d/opengl/GlDevice
 		ARG 2 shaderSource
 	METHOD getOrCompilePipeline (Lcom/mojang/blaze3d/pipeline/RenderPipeline;)Lcom/mojang/blaze3d/opengl/GlRenderPipeline;
 		ARG 1 pipeline
-	METHOD getOrCompileShader (Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/shaders/ShaderType;Lnet/minecraft/client/renderer/ShaderDefines;Lcom/mojang/blaze3d/shaders/ShaderSource;)Lcom/mojang/blaze3d/opengl/GlShaderModule;
+	METHOD getOrCompileShader (Lnet/minecraft/resources/Identifier;Lcom/mojang/blaze3d/shaders/ShaderType;Lnet/minecraft/client/renderer/ShaderDefines;Lcom/mojang/blaze3d/shaders/ShaderSource;)Lcom/mojang/blaze3d/opengl/GlShaderModule;
 		ARG 1 shader
 		ARG 2 type
 		ARG 3 defines

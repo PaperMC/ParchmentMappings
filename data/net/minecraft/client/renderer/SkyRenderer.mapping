@@ -19,7 +19,7 @@ CLASS net/minecraft/client/renderer/SkyRenderer
 		ARG 2 partialTick
 		ARG 3 camera
 		ARG 4 renderState
-	METHOD getTexture (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/texture/AbstractTexture;
+	METHOD getTexture (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/texture/AbstractTexture;
 		ARG 1 textureManager
 		ARG 2 location
 	METHOD renderEndFlash (Lcom/mojang/blaze3d/vertex/PoseStack;FFF)V

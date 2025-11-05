@@ -20,7 +20,7 @@ CLASS com/mojang/realmsclient/dto/RealmsNotification
 			ARG 0 notification
 			ARG 1 json
 	CLASS InfoPopup
-		METHOD <init> (Lcom/mojang/realmsclient/dto/RealmsNotification;Lcom/mojang/realmsclient/dto/RealmsText;Lcom/mojang/realmsclient/dto/RealmsText;Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/realmsclient/dto/RealmsNotification$UrlButton;)V
+		METHOD <init> (Lcom/mojang/realmsclient/dto/RealmsNotification;Lcom/mojang/realmsclient/dto/RealmsText;Lcom/mojang/realmsclient/dto/RealmsText;Lnet/minecraft/resources/Identifier;Lcom/mojang/realmsclient/dto/RealmsNotification$UrlButton;)V
 			ARG 1 notification
 			ARG 2 title
 			ARG 3 message

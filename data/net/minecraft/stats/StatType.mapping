@@ -1,7 +1,7 @@
 CLASS net/minecraft/stats/StatType
 	COMMENT Holds a map of {@linkplain net.minecraft.stats.Stat statistics} with type {@code T} for a corresponding {@link #registry}.
 	COMMENT <p>
-	COMMENT A single type usually defines a particular thing to be counted, such as {@linkplain net.minecraft.stats.Stats#ITEM_USED the number of items used} or {@link net.minecraft.stats.Stats#BLOCK_MINED the number of blocks mined}. However, there is also a {@link net.minecraft.stats.Stats#CUSTOM custom type} which uses entries from the {@linkplain net.minecraft.core.registries.BuiltInRegistries#CUSTOM_STAT custom stat registry}. This is keyed by a {@link net.minecraft.resources.ResourceLocation} and can be used to count any statistic that doesn't require an associated {@link net.minecraft.core.Registry} entry.
+	COMMENT A single type usually defines a particular thing to be counted, such as {@linkplain net.minecraft.stats.Stats#ITEM_USED the number of items used} or {@link net.minecraft.stats.Stats#BLOCK_MINED the number of blocks mined}. However, there is also a {@link net.minecraft.stats.Stats#CUSTOM custom type} which uses entries from the {@linkplain net.minecraft.core.registries.BuiltInRegistries#CUSTOM_STAT custom stat registry}. This is keyed by a {@link net.minecraft.resources.Identifier} and can be used to count any statistic that doesn't require an associated {@link net.minecraft.core.Registry} entry.
 	COMMENT
 	COMMENT @param <T> the type of the associated registry's entry values
 	COMMENT @see net.minecraft.stats.Stat

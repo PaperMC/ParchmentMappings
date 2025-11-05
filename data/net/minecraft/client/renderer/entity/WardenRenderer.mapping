@@ -1,21 +1,21 @@
 CLASS net/minecraft/client/renderer/entity/WardenRenderer
-	METHOD lambda$new$0 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/ResourceLocation;
+	METHOD lambda$new$0 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/Identifier;
 		ARG 0 renderState
 	METHOD lambda$new$1 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;F)F
 		ARG 0 renderState
-	METHOD lambda$new$2 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/ResourceLocation;
+	METHOD lambda$new$2 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/Identifier;
 		ARG 0 renderState
 	METHOD lambda$new$3 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;F)F
 		ARG 0 renderState
-	METHOD lambda$new$4 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/ResourceLocation;
+	METHOD lambda$new$4 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/Identifier;
 		ARG 0 renderState
 	METHOD lambda$new$5 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;F)F
 		ARG 0 renderState
-	METHOD lambda$new$6 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/ResourceLocation;
+	METHOD lambda$new$6 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/Identifier;
 		ARG 0 renderState
 	METHOD lambda$new$7 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;F)F
 		ARG 0 renderState
-	METHOD lambda$new$8 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/ResourceLocation;
+	METHOD lambda$new$8 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Lnet/minecraft/resources/Identifier;
 		ARG 0 renderState
 	METHOD lambda$new$9 (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;F)F
 		ARG 0 renderState

@@ -17,7 +17,7 @@ CLASS net/minecraft/server/jsonrpc/OutgoingRpcMethod
 			ARG 2 schema
 		METHOD register (Ljava/lang/String;)Lnet/minecraft/core/Holder$Reference;
 			ARG 1 namespace
-		METHOD register (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/core/Holder$Reference;
+		METHOD register (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/core/Holder$Reference;
 			ARG 1 id
 		METHOD response (Ljava/lang/String;Lnet/minecraft/server/jsonrpc/api/Schema;)Lnet/minecraft/server/jsonrpc/OutgoingRpcMethod$OutgoingRpcMethodBuilder;
 			ARG 1 name

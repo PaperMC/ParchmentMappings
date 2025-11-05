@@ -15,9 +15,9 @@ CLASS net/minecraft/client/resources/model/ModelManager
 		ARG 0 inputModels
 		ARG 1 loadedModels
 		ARG 2 loadedClientInfos
-	METHOD getItemModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ItemModel;
+	METHOD getItemModel (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/item/ItemModel;
 		ARG 1 modelLocation
-	METHOD getItemProperties (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ClientItem$Properties;
+	METHOD getItemProperties (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/item/ClientItem$Properties;
 		ARG 1 itemId
 	METHOD lambda$createBlockStateToModelDispatch$15 (Ljava/util/Map;Lnet/minecraft/client/renderer/block/model/BlockStateModel;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 2 state

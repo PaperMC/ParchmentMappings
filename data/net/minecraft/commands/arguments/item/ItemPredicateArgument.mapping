@@ -26,7 +26,7 @@ CLASS net/minecraft/commands/arguments/item/ItemPredicateArgument
 		METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
 			ARG 1 registries
 	CLASS ComponentWrapper
-		METHOD create (Lcom/mojang/brigadier/ImmutableStringReader;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/commands/arguments/item/ItemPredicateArgument$ComponentWrapper;
+		METHOD create (Lcom/mojang/brigadier/ImmutableStringReader;Lnet/minecraft/resources/Identifier;Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/commands/arguments/item/ItemPredicateArgument$ComponentWrapper;
 			ARG 0 reader
 			ARG 1 id
 			ARG 2 component

@@ -110,7 +110,7 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 2 maxResults
 	METHOD getRaidAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/raid/Raid;
 		ARG 1 pos
-	METHOD getRandomSequence (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/RandomSource;
+	METHOD getRandomSequence (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/util/RandomSource;
 		ARG 1 location
 	METHOD getSeed ()J
 		COMMENT Gets the random world seed.

@@ -132,7 +132,7 @@ CLASS net/minecraft/client/sounds/SoundEngine
 	METHOD stop (Lnet/minecraft/client/resources/sounds/SoundInstance;)V
 		COMMENT Stops the provided {@linkplain SoundInstance} from continuing to play.
 		ARG 1 sound
-	METHOD stop (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/sounds/SoundSource;)V
+	METHOD stop (Lnet/minecraft/resources/Identifier;Lnet/minecraft/sounds/SoundSource;)V
 		ARG 1 soundName
 		ARG 2 source
 	METHOD stopAll ()V

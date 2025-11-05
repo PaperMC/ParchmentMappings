@@ -1,5 +1,5 @@
 CLASS com/mojang/blaze3d/pipeline/RenderPipeline
-	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/ShaderDefines;Ljava/util/List;Ljava/util/List;Ljava/util/Optional;Lcom/mojang/blaze3d/platform/DepthTestFunction;Lcom/mojang/blaze3d/platform/PolygonMode;ZZZZLcom/mojang/blaze3d/platform/LogicOp;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;FFI)V
+	METHOD <init> (Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/renderer/ShaderDefines;Ljava/util/List;Ljava/util/List;Ljava/util/Optional;Lcom/mojang/blaze3d/platform/DepthTestFunction;Lcom/mojang/blaze3d/platform/PolygonMode;ZZZZLcom/mojang/blaze3d/platform/LogicOp;Lcom/mojang/blaze3d/vertex/VertexFormat;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;FFI)V
 		ARG 1 location
 		ARG 2 vertexShader
 		ARG 3 fragmentShader
@@ -42,11 +42,11 @@ CLASS com/mojang/blaze3d/pipeline/RenderPipeline
 			ARG 1 writeDepth
 		METHOD withFragmentShader (Ljava/lang/String;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 fragmentShader
-		METHOD withFragmentShader (Lnet/minecraft/resources/ResourceLocation;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
+		METHOD withFragmentShader (Lnet/minecraft/resources/Identifier;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 fragmentShader
 		METHOD withLocation (Ljava/lang/String;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 location
-		METHOD withLocation (Lnet/minecraft/resources/ResourceLocation;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
+		METHOD withLocation (Lnet/minecraft/resources/Identifier;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 location
 		METHOD withPolygonMode (Lcom/mojang/blaze3d/platform/PolygonMode;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 polygonMode
@@ -74,7 +74,7 @@ CLASS com/mojang/blaze3d/pipeline/RenderPipeline
 			ARG 2 vertexFormatMode
 		METHOD withVertexShader (Ljava/lang/String;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 vertexShader
-		METHOD withVertexShader (Lnet/minecraft/resources/ResourceLocation;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
+		METHOD withVertexShader (Lnet/minecraft/resources/Identifier;)Lcom/mojang/blaze3d/pipeline/RenderPipeline$Builder;
 			ARG 1 vertexShader
 	CLASS UniformDescription
 		METHOD <init> (Ljava/lang/String;Lcom/mojang/blaze3d/shaders/UniformType;)V

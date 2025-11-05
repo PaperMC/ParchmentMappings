@@ -18,8 +18,8 @@ CLASS net/minecraft/client/sounds/SoundManager
 		COMMENT Retrieves a list of available sound devices.
 	METHOD getAvailableSounds ()Ljava/util/Collection;
 		COMMENT {@return the collection of available sound event locations}
-	METHOD getSoundEvent (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/sounds/WeighedSoundEvents;
-		COMMENT @return the sound event associated with the specific {@link ResourceLocation}, or {@code null} if not found
+	METHOD getSoundEvent (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/sounds/WeighedSoundEvents;
+		COMMENT @return the sound event associated with the specific {@link Identifier}, or {@code null} if not found
 		ARG 1 location
 			COMMENT the location of the sound event
 	METHOD isActive (Lnet/minecraft/client/resources/sounds/SoundInstance;)Z
@@ -54,7 +54,7 @@ CLASS net/minecraft/client/sounds/SoundManager
 		ARG 2 volume
 	METHOD stop (Lnet/minecraft/client/resources/sounds/SoundInstance;)V
 		ARG 1 sound
-	METHOD stop (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/sounds/SoundSource;)V
+	METHOD stop (Lnet/minecraft/resources/Identifier;Lnet/minecraft/sounds/SoundSource;)V
 		COMMENT Stops all sounds associated with the specified ID and category.
 		ARG 1 id
 			COMMENT the ID of the sounds to stop, or {@code null} to stop all sounds
@@ -72,7 +72,7 @@ CLASS net/minecraft/client/sounds/SoundManager
 		COMMENT Updates the volume of the specified sound source category.
 		ARG 1 source
 			COMMENT the sound source
-	METHOD validateSoundResource (Lnet/minecraft/client/resources/sounds/Sound;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/packs/resources/ResourceProvider;)Z
+	METHOD validateSoundResource (Lnet/minecraft/client/resources/sounds/Sound;Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/ResourceProvider;)Z
 		COMMENT Validates a sound resource
 		COMMENT @return {@code true} if the sound resource is valid, {@code false} otherwise
 		ARG 0 sound
@@ -91,7 +91,7 @@ CLASS net/minecraft/client/sounds/SoundManager
 				COMMENT the sound cache to apply to
 			ARG 3 soundEngine
 				COMMENT the sound engine to apply to
-		METHOD handleRegistration (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/resources/sounds/SoundEventRegistration;)V
+		METHOD handleRegistration (Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/resources/sounds/SoundEventRegistration;)V
 			ARG 1 location
 			ARG 2 registration
 		METHOD listResources (Lnet/minecraft/server/packs/resources/ResourceManager;)V
