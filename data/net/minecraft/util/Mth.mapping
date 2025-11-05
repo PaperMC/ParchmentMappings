@@ -107,9 +107,6 @@ CLASS net/minecraft/util/Mth
 		ARG 2 inputMax
 		ARG 3 outputMin
 		ARG 4 outputMax
-	METHOD cos (F)F
-		COMMENT cos looked up in the sin table with the appropriate offset
-		ARG 0 value
 	METHOD createInsecureUUID ()Ljava/util/UUID;
 		COMMENT Generates a random UUID using the shared random
 	METHOD createInsecureUUID (Lnet/minecraft/util/RandomSource;)Ljava/util/UUID;
@@ -368,9 +365,6 @@ CLASS net/minecraft/util/Mth
 		ARG 1 factor
 	METHOD sign (D)I
 		ARG 0 x
-	METHOD sin (F)F
-		COMMENT sin looked up in a table
-		ARG 0 value
 	METHOD smallestEncompassingPowerOfTwo (I)I
 		COMMENT {@return the input value rounded up to the next highest power of two}
 		ARG 0 value

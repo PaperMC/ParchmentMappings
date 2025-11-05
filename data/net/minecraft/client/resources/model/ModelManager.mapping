@@ -26,13 +26,6 @@ CLASS net/minecraft/client/resources/model/ModelManager
 	METHOD loadBlockModels (Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 resourceManager
 		ARG 1 executor
-	METHOD loadModels (Lnet/minecraft/client/renderer/texture/SpriteLoader$Preparations;Lnet/minecraft/client/resources/model/ModelBakery;Lit/unimi/dsi/fastutil/objects/Object2IntMap;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/renderer/SpecialBlockModelRenderer;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
-		ARG 0 preparations
-		ARG 1 modelBakery
-		ARG 2 modelGroups
-		ARG 3 entityModelSet
-		ARG 4 specialBlockModelRenderer
-		ARG 5 executor
 	METHOD requiresRender (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 oldState
 		ARG 2 newState

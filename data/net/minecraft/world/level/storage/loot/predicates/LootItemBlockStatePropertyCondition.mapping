@@ -11,5 +11,3 @@ CLASS net/minecraft/world/level/storage/loot/predicates/LootItemBlockStateProper
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/block/Block;)V
 			ARG 1 block
-		METHOD setProperties (Lnet/minecraft/advancements/critereon/StatePropertiesPredicate$Builder;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemBlockStatePropertyCondition$Builder;
-			ARG 1 statePredicateBuilder

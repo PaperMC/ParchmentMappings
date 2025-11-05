@@ -190,8 +190,6 @@ CLASS net/minecraft/world/level/Level
 		ARG 2 boundingBox
 	METHOD getRainLevel (F)F
 		ARG 1 partialTick
-	METHOD getSunAngle (F)F
-		ARG 1 partialTick
 	METHOD getThunderLevel (F)F
 		ARG 1 partialTick
 	METHOD getWorldBorderAdjustedRespawnData (Lnet/minecraft/world/level/storage/LevelData$RespawnData;)Lnet/minecraft/world/level/storage/LevelData$RespawnData;

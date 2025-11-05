@@ -31,22 +31,12 @@ CLASS net/minecraft/client/renderer/SkyRenderer
 		ARG 1 phase
 		ARG 2 alpha
 		ARG 3 poseStack
-	METHOD renderSkyDisc (FFF)V
-		ARG 1 red
-		ARG 2 green
-		ARG 3 blue
 	METHOD renderStars (FLcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 starBrightness
 		ARG 2 poseStack
 	METHOD renderSun (FLcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 alpha
 		ARG 2 poseStack
-	METHOD renderSunMoonAndStars (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/level/MoonPhase;FF)V
-		ARG 1 poseStack
-		ARG 2 timeOfDay
-		ARG 3 moonPhase
-		ARG 4 rainLevel
-		ARG 5 starBrightness
 	METHOD renderSunriseAndSunset (Lcom/mojang/blaze3d/vertex/PoseStack;FI)V
 		ARG 1 poseStack
 		ARG 2 sunAngle

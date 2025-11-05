@@ -40,12 +40,6 @@ CLASS net/minecraft/client/renderer/CloudRenderer
 		ARG 2 eastEmpty
 		ARG 3 southEmpty
 		ARG 4 westEmpty
-	METHOD render (ILnet/minecraft/client/CloudStatus;FLnet/minecraft/world/phys/Vec3;F)V
-		ARG 1 cloudColor
-		ARG 2 cloudStatus
-		ARG 3 height
-		ARG 4 cameraPosition
-		ARG 5 ticks
 	METHOD tryBuildCell (Lnet/minecraft/client/renderer/CloudRenderer$RelativeCameraPos;Ljava/nio/ByteBuffer;IIZIIII[J)V
 		ARG 1 relativeCameraPos
 		ARG 2 buffer

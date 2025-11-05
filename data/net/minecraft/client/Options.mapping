@@ -52,10 +52,6 @@ CLASS net/minecraft/client/Options
 		ARG 0 framerateLimit
 	METHOD lambda$new$8 (Ljava/lang/Integer;)V
 		ARG 0 framerateLimit
-	METHOD lambda$new$95 (Ljava/lang/Double;)V
-		ARG 0 darknessScale
-	METHOD lambda$new$96 (Ljava/lang/Double;)V
-		ARG 0 glintSpeed
 	METHOD load ()V
 		COMMENT Loads the options from the options file. It appears that this has replaced the previous 'loadOptions'
 	METHOD loadSelectedResourcePacks (Lnet/minecraft/server/packs/repository/PackRepository;)V

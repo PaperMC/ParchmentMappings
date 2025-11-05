@@ -58,8 +58,6 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 2 height
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
-	METHOD setPanoramicMode (Z)V
-		ARG 1 panoramicMode
 	METHOD setPostEffect (Lnet/minecraft/resources/Identifier;)V
 		ARG 1 postEffectId
 	METHOD setRenderBlockOutline (Z)V

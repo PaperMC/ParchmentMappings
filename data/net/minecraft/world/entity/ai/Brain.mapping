@@ -90,8 +90,6 @@ CLASS net/minecraft/world/entity/ai/Brain
 		ARG 1 memoryType
 		ARG 2 memory
 		ARG 3 timeToLive
-	METHOD setSchedule (Lnet/minecraft/world/entity/schedule/Schedule;)V
-		ARG 1 newSchedule
 	METHOD startEachNonRunningBehavior (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 entity
@@ -107,9 +105,6 @@ CLASS net/minecraft/world/entity/ai/Brain
 	METHOD tickSensors (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 brainHolder
-	METHOD updateActivityFromSchedule (JJ)V
-		ARG 1 dayTime
-		ARG 3 gameTime
 	CLASS 1
 		METHOD decode (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
 			ARG 1 ops

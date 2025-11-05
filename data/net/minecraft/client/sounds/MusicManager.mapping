@@ -28,8 +28,6 @@ CLASS net/minecraft/client/sounds/MusicManager
 	METHOD tick ()V
 		COMMENT Called every tick to manage the playing of music.
 	CLASS MusicFrequency
-		METHOD <init> (Ljava/lang/String;II)V
-			ARG 3 id
 		METHOD getNextSongDelay (Lnet/minecraft/sounds/Music;Lnet/minecraft/util/RandomSource;)I
 			ARG 1 music
 			ARG 2 random

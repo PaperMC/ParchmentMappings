@@ -120,21 +120,6 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 			ARG 5 icon
 		METHOD updatePose (Ljava/util/function/Consumer;)V
 			ARG 1 pose
-	CLASS DrawingGraphicsAccess
-		METHOD <init> (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;II)V
-			ARG 1 graphics
-			ARG 2 font
-			ARG 3 globalMouseX
-			ARG 4 globalMouseY
-		METHOD accept (Lnet/minecraft/network/chat/Style;)V
-			ARG 1 style
-		METHOD isMouseOver (IIII)Z
-			ARG 1 minX
-			ARG 2 minY
-			ARG 3 maxX
-			ARG 4 maxY
-		METHOD showTooltip (Lnet/minecraft/client/GuiMessageTag;)V
-			ARG 1 tooltip
 	CLASS ClickableTextOnlyGraphicsAccess
 		METHOD <init> (Lnet/minecraft/client/gui/ActiveTextCollector;)V
 			ARG 1 output

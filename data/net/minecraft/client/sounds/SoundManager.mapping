@@ -1,9 +1,6 @@
 CLASS net/minecraft/client/sounds/SoundManager
 	COMMENT The SoundManager class is responsible for managing sound events and playing sounds.
 	COMMENT It handles sound event registrations, caching of sound resources, and sound playback.
-	METHOD <init> (Lnet/minecraft/client/Options;Lnet/minecraft/client/sounds/MusicManager;)V
-		ARG 1 options
-		ARG 2 musicManager
 	METHOD addListener (Lnet/minecraft/client/sounds/SoundEventListener;)V
 		ARG 1 listener
 	METHOD apply (Lnet/minecraft/client/sounds/SoundManager$Preparations;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V
@@ -49,9 +46,6 @@ CLASS net/minecraft/client/sounds/SoundManager
 			COMMENT the ticking sound instance
 	METHOD removeListener (Lnet/minecraft/client/sounds/SoundEventListener;)V
 		ARG 1 listener
-	METHOD setVolume (Lnet/minecraft/client/resources/sounds/SoundInstance;F)V
-		ARG 1 sound
-		ARG 2 volume
 	METHOD stop (Lnet/minecraft/client/resources/sounds/SoundInstance;)V
 		ARG 1 sound
 	METHOD stop (Lnet/minecraft/resources/Identifier;Lnet/minecraft/sounds/SoundSource;)V
@@ -68,10 +62,6 @@ CLASS net/minecraft/client/sounds/SoundManager
 		COMMENT Updates the sound source position based on the active camera.
 		ARG 1 camera
 			COMMENT the active camera
-	METHOD updateSourceVolume (Lnet/minecraft/sounds/SoundSource;)V
-		COMMENT Updates the volume of the specified sound source category.
-		ARG 1 source
-			COMMENT the sound source
 	METHOD validateSoundResource (Lnet/minecraft/client/resources/sounds/Sound;Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/ResourceProvider;)Z
 		COMMENT Validates a sound resource
 		COMMENT @return {@code true} if the sound resource is valid, {@code false} otherwise

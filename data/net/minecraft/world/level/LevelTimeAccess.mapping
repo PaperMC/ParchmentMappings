@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/level/LevelTimeAccess
-	METHOD getTimeOfDay (F)F
-		ARG 1 partialTick

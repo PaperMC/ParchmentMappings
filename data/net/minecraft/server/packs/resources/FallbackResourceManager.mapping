@@ -15,10 +15,10 @@ CLASS net/minecraft/server/packs/resources/FallbackResourceManager
 	METHOD createStackMetadataFinder (Lnet/minecraft/resources/Identifier;I)Lnet/minecraft/server/packs/resources/IoSupplier;
 		ARG 1 location
 		ARG 2 fallbackIndex
-	METHOD getMetadataLocation (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/resources/Identifier;
-		ARG 0 location
 	METHOD getIdentifierFromMetadata (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/resources/Identifier;
 		ARG 0 metadataIdentifier
+	METHOD getMetadataLocation (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/resources/Identifier;
+		ARG 0 location
 	METHOD isMetadata (Lnet/minecraft/resources/Identifier;)Z
 		ARG 0 location
 	METHOD lambda$listPackResources$6 (Ljava/util/function/Predicate;Ljava/util/Map;Lnet/minecraft/server/packs/PackResources;Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/IoSupplier;)V

@@ -57,11 +57,6 @@ CLASS net/minecraft/client/OptionInstance
 		ARG 0 value
 	METHOD lambda$createBoolean$2 (Ljava/lang/Boolean;)V
 		ARG 0 value
-	METHOD lambda$createButton$7 (Ljava/lang/Object;)V
-		ARG 0 value
-	METHOD lambda$forOptionEnum$6 (Lnet/minecraft/network/chat/Component;Lnet/minecraft/util/OptionEnum;)Lnet/minecraft/network/chat/Component;
-		ARG 0 caption
-		ARG 1 optionEnum
 	METHOD lambda$new$3 (Lnet/minecraft/client/OptionInstance$CaptionBasedToString;Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
 		ARG 2 value
 	METHOD lambda$noTooltip$4 (Ljava/lang/Object;)Lnet/minecraft/client/gui/components/Tooltip;

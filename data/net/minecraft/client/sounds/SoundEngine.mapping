@@ -24,11 +24,6 @@ CLASS net/minecraft/client/sounds/SoundEngine
 		COMMENT A counter for how long the sound manager has been running
 	FIELD tickingSounds Ljava/util/List;
 		COMMENT A subset of {@link #queuedSounds}, this contains only {@linkplain TickableSoundInstance}
-	METHOD <init> (Lnet/minecraft/client/sounds/MusicManager;Lnet/minecraft/client/sounds/SoundManager;Lnet/minecraft/client/Options;Lnet/minecraft/server/packs/resources/ResourceProvider;)V
-		ARG 1 musicManager
-		ARG 2 soundManager
-		ARG 3 options
-		ARG 4 resourceManager
 	METHOD addEventListener (Lnet/minecraft/client/sounds/SoundEventListener;)V
 		ARG 1 listener
 	METHOD calculatePitch (Lnet/minecraft/client/resources/sounds/SoundInstance;)F
@@ -62,13 +57,6 @@ CLASS net/minecraft/client/sounds/SoundEngine
 		ARG 1 buffer
 	METHOD lambda$play$8 (Lnet/minecraft/client/sounds/AudioStream;Lcom/mojang/blaze3d/audio/Channel;)V
 		ARG 1 channel
-	METHOD lambda$setVolume$2 (FLnet/minecraft/client/resources/sounds/SoundInstance;Lcom/mojang/blaze3d/audio/Channel;)V
-		ARG 3 channel
-	METHOD lambda$updateCategoryVolume$0 (FLcom/mojang/blaze3d/audio/Channel;)V
-		ARG 1 channel
-	METHOD lambda$updateCategoryVolume$1 (Lnet/minecraft/client/resources/sounds/SoundInstance;Lnet/minecraft/client/sounds/ChannelAccess$ChannelHandle;)V
-		ARG 1 instance
-		ARG 2 source
 	METHOD loadLibrary ()V
 		COMMENT Loads the sound library if it has not been loaded already.
 		COMMENT If loading is successful, the library is initialized, and the sound engine is started, otherwise, an error message is logged, and sounds and music are turned off.
@@ -101,9 +89,6 @@ CLASS net/minecraft/client/sounds/SoundEngine
 			COMMENT the SoundInstance to check
 	METHOD resume ()V
 		COMMENT Resumes playing all currently playing sounds (after pauseAllExcept)
-	METHOD setVolume (Lnet/minecraft/client/resources/sounds/SoundInstance;F)V
-		ARG 1 soundInstance
-		ARG 2 volume
 	METHOD shouldChangeDevice ()Z
 		COMMENT The audio device change is checked by this method.
 		COMMENT <p>
@@ -140,17 +125,5 @@ CLASS net/minecraft/client/sounds/SoundEngine
 	METHOD tick (Z)V
 		COMMENT Ticks all active instances of {@code TickableSoundInstance}
 		ARG 1 isGamePaused
-	METHOD updateCategoryVolume (Lnet/minecraft/sounds/SoundSource;)V
-		COMMENT Updates the volume for a specific sound category.
-		COMMENT <p>
-		COMMENT If the sound engine has not been loaded, the method returns without performing any action.
-		COMMENT <p>
-		COMMENT If the category is the "MASTER" category, the overall listener gain (volume) is set to the specified value.
-		COMMENT <p>
-		COMMENT For other categories, the volume is updated for each sound instance associated with the category.
-		COMMENT <p>
-		COMMENT If the calculated volume for an instance is less than or equal to 0.0, the instance is stopped.
-		COMMENT Otherwise, the volume of the instance is set to the calculated value.
-		ARG 1 category
 	METHOD updateSource (Lnet/minecraft/client/Camera;)V
 		ARG 1 camera

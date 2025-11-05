@@ -236,6 +236,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 output
 	METHOD readFixedSizeLongArray ([J)[J
 		ARG 1 output
+	METHOD readIdentifier ()Lnet/minecraft/resources/Identifier;
+		COMMENT Read a Identifier using its String representation.
+		COMMENT
+		COMMENT @see #writeIdentifier
 	METHOD readIntIdList ()Lit/unimi/dsi/fastutil/ints/IntList;
 		COMMENT Read an IntList of VarInts from this buffer.
 		COMMENT
@@ -281,10 +285,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 0 buffer
 	METHOD readResourceKey (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/resources/ResourceKey;
 		ARG 1 registryKey
-	METHOD readIdentifier ()Lnet/minecraft/resources/Identifier;
-		COMMENT Read a Identifier using its String representation.
-		COMMENT
-		COMMENT @see #writeIdentifier
 	METHOD readRetainedSlice (I)Lio/netty/buffer/ByteBuf;
 		ARG 1 length
 	METHOD readSlice (I)Lio/netty/buffer/ByteBuf;
@@ -550,6 +550,11 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 value
 	METHOD writeGlobalPos (Lnet/minecraft/core/GlobalPos;)V
 		ARG 1 pos
+	METHOD writeIdentifier (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/network/FriendlyByteBuf;
+		COMMENT Write a Identifier using its String representation.
+		COMMENT
+		COMMENT @see #readIdentifier
+		ARG 1 resourceLocation
 	METHOD writeInstant (Ljava/time/Instant;)V
 		ARG 1 instant
 	METHOD writeInt (I)Lnet/minecraft/network/FriendlyByteBuf;
@@ -610,11 +615,6 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 quaternion
 	METHOD writeResourceKey (Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 resourceKey
-	METHOD writeIdentifier (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/network/FriendlyByteBuf;
-		COMMENT Write a Identifier using its String representation.
-		COMMENT
-		COMMENT @see #readIdentifier
-		ARG 1 resourceLocation
 	METHOD writeShort (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
 	METHOD writeShortLE (I)Lnet/minecraft/network/FriendlyByteBuf;
