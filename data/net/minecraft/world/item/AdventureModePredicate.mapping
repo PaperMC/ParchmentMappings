@@ -11,6 +11,8 @@ CLASS net/minecraft/world/item/AdventureModePredicate
 		ARG 0 predicates
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD lambda$computeTooltip$2 (Lnet/minecraft/advancements/criterion/BlockPredicate;)Ljava/util/stream/Stream;
+		ARG 0 predicate
 	METHOD saveBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/util/ProblemReporter;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 blockEntity
 		ARG 1 registryAccess

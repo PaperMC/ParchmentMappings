@@ -2,6 +2,11 @@ CLASS net/minecraft/server/commands/RandomCommand
 	METHOD drawRandomValueTree (Ljava/lang/String;Z)Lcom/mojang/brigadier/builder/LiteralArgumentBuilder;
 		ARG 0 subcommand
 		ARG 1 displayResult
+	METHOD randomSample (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/advancements/criterion/MinMaxBounds$Ints;Lnet/minecraft/resources/Identifier;Z)I
+		ARG 0 source
+		ARG 1 range
+		ARG 2 sequence
+		ARG 3 displayResult
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
 	METHOD resetAllSequences (Lnet/minecraft/commands/CommandSourceStack;)I
