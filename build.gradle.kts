@@ -125,6 +125,18 @@ tasks.register<EnigmaRunner>("enigma") {
     libraries.setFrom(minecraft)
 }
 
+val unobfuscatedClient = providers.gradleProperty("unobfuscatedClient")
+if (unobfuscatedClient.isPresent) {
+    val downloadUnobfuscated by tasks.registering(DownloadFile::class) {
+        url = unobfuscatedClient
+        output = project.layout.buildDirectory.file("$name/client.jar")
+    }
+    tasks.named<EnigmaRunner>("enigma").configure {
+        inputs.file(downloadUnobfuscated.flatMap { it.output })
+        systemProperty("client.unobfuscated", downloadUnobfuscated.flatMap { it.output }.get().asFile.absolutePath)
+    }
+}
+
 tasks.withType<ValidateData>().configureEach {
     validators.replace(MemberExistenceValidator::class) { -> MemberExistenceValidatorV2() }
     validators.replace(MethodStandardsValidator::class) { -> MethodStandardsValidatorV2() }
