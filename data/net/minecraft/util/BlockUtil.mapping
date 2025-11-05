@@ -1,5 +1,5 @@
-CLASS net/minecraft/BlockUtil
-	METHOD getLargestRectangleAround (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction$Axis;ILnet/minecraft/core/Direction$Axis;ILjava/util/function/Predicate;)Lnet/minecraft/BlockUtil$FoundRectangle;
+CLASS net/minecraft/util/BlockUtil
+	METHOD getLargestRectangleAround (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction$Axis;ILnet/minecraft/core/Direction$Axis;ILjava/util/function/Predicate;)Lnet/minecraft/util/BlockUtil$FoundRectangle;
 		COMMENT Finds the rectangle with the largest area containing centerPos within the blocks specified by the predicate
 		ARG 0 centerPos
 		ARG 1 axis1

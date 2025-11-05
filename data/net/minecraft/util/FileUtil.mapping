@@ -1,4 +1,4 @@
-CLASS net/minecraft/FileUtil
+CLASS net/minecraft/util/FileUtil
 	METHOD containsAllowedCharactersOnly (Ljava/lang/String;)Z
 		ARG 0 segment
 	METHOD createDirectoriesSafe (Ljava/nio/file/Path;)V
