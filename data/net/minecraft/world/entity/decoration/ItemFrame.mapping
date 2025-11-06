@@ -33,7 +33,7 @@ CLASS net/minecraft/world/entity/decoration/ItemFrame
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
 		ARG 1 key
 	METHOD push (DDD)V
-		COMMENT Adds to the current velocity of the entity, and sets {@link #hasImpulse} to {@code true}.
+		COMMENT Adds to the current velocity of the entity, and sets {@link #needsSync} to {@code true}.
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

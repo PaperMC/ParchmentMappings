@@ -16,7 +16,7 @@ CLASS net/minecraft/client/data/models/ItemModelGenerators
 		ARG 2 modelTemplate
 	METHOD createFlatItemModel (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/client/data/models/model/ModelTemplate;)Lnet/minecraft/resources/Identifier;
 		ARG 1 item
-		ARG 2 layerZeroItem
+		ARG 2 textureDonor
 		ARG 3 modelTemplate
 	METHOD createFlatModelDispatch (Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;)Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;
 		ARG 0 itemModel
@@ -54,7 +54,7 @@ CLASS net/minecraft/client/data/models/ItemModelGenerators
 		ARG 2 modelTemplate
 	METHOD generateFlatItem (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/client/data/models/model/ModelTemplate;)V
 		ARG 1 item
-		ARG 2 layerZeroItem
+		ARG 2 textureDonor
 		ARG 3 modelTemplate
 	METHOD generateGoatHorn (Lnet/minecraft/world/item/Item;)V
 		ARG 1 goatHornItem
@@ -66,16 +66,16 @@ CLASS net/minecraft/client/data/models/ItemModelGenerators
 		ARG 1 item
 		ARG 2 tintSource
 	METHOD generateLayeredItem (Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/resources/Identifier;
-		ARG 1 modelLocation
+		ARG 1 target
 		ARG 2 layer0
 		ARG 3 layer1
 	METHOD generateLayeredItem (Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)V
-		ARG 1 modelLocation
+		ARG 1 target
 		ARG 2 layer0
 		ARG 3 layer1
 		ARG 4 layer2
 	METHOD generateLayeredItem (Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/resources/Identifier;
-		ARG 1 item
+		ARG 1 target
 		ARG 2 layer0
 		ARG 3 layer1
 	METHOD generatePotion (Lnet/minecraft/world/item/Item;)V
@@ -95,11 +95,11 @@ CLASS net/minecraft/client/data/models/ItemModelGenerators
 	METHOD generateTrident (Lnet/minecraft/world/item/Item;)V
 		ARG 1 tridentItem
 	METHOD generateTrimmableItem (Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/Identifier;Z)V
-		ARG 1 item
-		ARG 2 equipmentAsset
-		ARG 3 modelId
-		ARG 4 usesSecondLayer
+		ARG 1 armor
+		ARG 2 equipmentAssetId
+		ARG 3 slotTrimPrefix
+		ARG 4 hasDyedLayer
 	METHOD generateTwoLayerDyedItem (Lnet/minecraft/world/item/Item;)V
 		ARG 1 item
 	METHOD prefixForSlotTrim (Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
-		ARG 0 name
+		ARG 0 slotName

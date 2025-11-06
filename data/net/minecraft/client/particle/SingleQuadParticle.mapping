@@ -26,9 +26,9 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 	METHOD extractRotatedQuad (Lnet/minecraft/client/renderer/state/QuadParticleRenderState;Lorg/joml/Quaternionf;FFFF)V
 		ARG 1 renderState
 		ARG 2 rotation
-		ARG 3 xOffset
-		ARG 4 yOffset
-		ARG 5 zOffset
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
 		ARG 6 partialTick
 	METHOD getQuadSize (F)F
 		ARG 1 scaleFactor
@@ -37,23 +37,23 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 	METHOD setAlpha (F)V
 		ARG 1 alpha
 	METHOD setColor (FFF)V
-		ARG 1 rCol
-		ARG 2 gCol
-		ARG 3 bCol
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
 	METHOD setSprite (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 		ARG 1 sprite
 	METHOD setSpriteFromAge (Lnet/minecraft/client/particle/SpriteSet;)V
 		ARG 1 sprites
 	CLASS FacingCameraMode
 		METHOD lambda$static$0 (Lorg/joml/Quaternionf;Lnet/minecraft/client/Camera;F)V
-			ARG 0 rotation
+			ARG 0 target
 			ARG 1 camera
 			ARG 2 partialTick
 		METHOD lambda$static$1 (Lorg/joml/Quaternionf;Lnet/minecraft/client/Camera;F)V
-			ARG 0 rotation
+			ARG 0 target
 			ARG 1 camera
 			ARG 2 partialTick
 		METHOD setRotation (Lorg/joml/Quaternionf;Lnet/minecraft/client/Camera;F)V
-			ARG 1 rotation
+			ARG 1 target
 			ARG 2 camera
 			ARG 3 partialTick

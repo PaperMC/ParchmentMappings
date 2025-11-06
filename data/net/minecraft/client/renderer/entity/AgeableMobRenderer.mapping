@@ -3,4 +3,4 @@ CLASS net/minecraft/client/renderer/entity/AgeableMobRenderer
 		ARG 1 context
 		ARG 2 adultModel
 		ARG 3 babyModel
-		ARG 4 scale
+		ARG 4 shadowRadius

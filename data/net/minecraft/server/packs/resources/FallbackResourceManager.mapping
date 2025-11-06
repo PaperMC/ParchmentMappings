@@ -22,15 +22,15 @@ CLASS net/minecraft/server/packs/resources/FallbackResourceManager
 	METHOD isMetadata (Lnet/minecraft/resources/Identifier;)Z
 		ARG 0 location
 	METHOD lambda$listPackResources$6 (Ljava/util/function/Predicate;Ljava/util/Map;Lnet/minecraft/server/packs/PackResources;Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/IoSupplier;)V
-		ARG 3 path
+		ARG 3 id
 		ARG 4 inputStream
 	METHOD lambda$listPacks$7 (Lnet/minecraft/server/packs/resources/FallbackResourceManager$PackEntry;)Lnet/minecraft/server/packs/PackResources;
 		ARG 0 fallback
 	METHOD lambda$listResources$2 (Ljava/util/function/Predicate;Ljava/util/Map;Lnet/minecraft/server/packs/PackResources;ILjava/util/Map;Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/IoSupplier;)V
-		ARG 5 path
+		ARG 5 location
 		ARG 6 inputStream
 	METHOD lambda$listResources$3 (Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/FallbackResourceManager$1ResourceWithSourceAndIndex;)V
-		ARG 2 path
+		ARG 2 location
 		ARG 3 resource
 	METHOD listPackResources (Lnet/minecraft/server/packs/resources/FallbackResourceManager$PackEntry;Ljava/lang/String;Ljava/util/function/Predicate;Ljava/util/Map;)V
 		ARG 1 entry

@@ -27,7 +27,7 @@ CLASS net/minecraft/client/particle/Particle
 	METHOD setBoundingBox (Lnet/minecraft/world/phys/AABB;)V
 		ARG 1 bb
 	METHOD setLifetime (I)V
-		ARG 1 particleLifeTime
+		ARG 1 lifetime
 	METHOD setParticleSpeed (DDD)V
 		ARG 1 xd
 		ARG 3 yd
@@ -37,10 +37,10 @@ CLASS net/minecraft/client/particle/Particle
 		ARG 3 y
 		ARG 5 z
 	METHOD setPower (F)Lnet/minecraft/client/particle/Particle;
-		ARG 1 multiplier
+		ARG 1 power
 	METHOD setSize (FF)V
-		ARG 1 width
-		ARG 2 height
+		ARG 1 w
+		ARG 2 h
 	CLASS LifetimeAlpha
 		METHOD currentAlphaForAge (IIF)F
 			ARG 1 age

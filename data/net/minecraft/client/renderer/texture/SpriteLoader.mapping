@@ -8,17 +8,17 @@ CLASS net/minecraft/client/renderer/texture/SpriteLoader
 		ARG 0 atlas
 	METHOD getStitchedSprites (Lnet/minecraft/client/renderer/texture/Stitcher;II)Ljava/util/Map;
 		ARG 1 stitcher
-		ARG 2 x
-		ARG 3 y
+		ARG 2 atlasWidth
+		ARG 3 atlasHeight
 	METHOD loadAndStitch (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/Identifier;ILjava/util/concurrent/Executor;Ljava/util/Set;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 resourceManager
-		ARG 2 location
+		ARG 2 atlasInfoLocation
 		ARG 3 mipLevel
-		ARG 4 executor
-		ARG 5 types
+		ARG 4 taskExecutor
+		ARG 5 additionalMetadata
 	METHOD runSpriteSuppliers (Lnet/minecraft/client/renderer/texture/atlas/SpriteResourceLoader;Ljava/util/List;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 spriteResourceLoader
-		ARG 1 factories
+		ARG 1 sprites
 		ARG 2 executor
 	METHOD stitch (Ljava/util/List;ILjava/util/concurrent/Executor;)Lnet/minecraft/client/renderer/texture/SpriteLoader$Preparations;
 		ARG 1 contents
@@ -26,4 +26,4 @@ CLASS net/minecraft/client/renderer/texture/SpriteLoader
 		ARG 3 executor
 	CLASS Preparations
 		METHOD getSprite (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
-			ARG 1 location
+			ARG 1 id

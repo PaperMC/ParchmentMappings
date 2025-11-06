@@ -14,15 +14,15 @@ CLASS net/minecraft/client/renderer/block/model/Variant
 	METHOD withUvLock (Z)Lnet/minecraft/client/renderer/block/model/Variant;
 		ARG 1 uvLock
 	METHOD withXRot (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant;
-		ARG 1 xRot
+		ARG 1 x
 	METHOD withYRot (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant;
-		ARG 1 yRot
+		ARG 1 y
 	CLASS SimpleModelState
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 		METHOD withUvLock (Z)Lnet/minecraft/client/renderer/block/model/Variant$SimpleModelState;
 			ARG 1 uvLock
 		METHOD withX (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant$SimpleModelState;
-			ARG 1 xRot
+			ARG 1 x
 		METHOD withY (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant$SimpleModelState;
-			ARG 1 yRot
+			ARG 1 y

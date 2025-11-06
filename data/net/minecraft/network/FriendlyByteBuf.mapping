@@ -237,7 +237,7 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD readFixedSizeLongArray ([J)[J
 		ARG 1 output
 	METHOD readIdentifier ()Lnet/minecraft/resources/Identifier;
-		COMMENT Read a Identifier using its String representation.
+		COMMENT Read an Identifier using its String representation.
 		COMMENT
 		COMMENT @see #writeIdentifier
 	METHOD readIntIdList ()Lit/unimi/dsi/fastutil/ints/IntList;
@@ -551,10 +551,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeGlobalPos (Lnet/minecraft/core/GlobalPos;)V
 		ARG 1 pos
 	METHOD writeIdentifier (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/network/FriendlyByteBuf;
-		COMMENT Write a Identifier using its String representation.
+		COMMENT Write an Identifier using its String representation.
 		COMMENT
 		COMMENT @see #readIdentifier
-		ARG 1 resourceLocation
+		ARG 1 id
 	METHOD writeInstant (Ljava/time/Instant;)V
 		ARG 1 instant
 	METHOD writeInt (I)Lnet/minecraft/network/FriendlyByteBuf;

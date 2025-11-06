@@ -9,7 +9,7 @@ CLASS net/minecraft/client/KeyboardHandler
 		ARG 2 pos
 		ARG 3 tag
 	METHOD copyCreateEntityCommand (Lnet/minecraft/resources/Identifier;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 entityId
+		ARG 1 id
 		ARG 2 pos
 		ARG 3 tag
 	METHOD copyRecreateCommand (ZZ)V

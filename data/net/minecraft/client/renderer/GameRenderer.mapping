@@ -12,28 +12,28 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 2 partialTick
 	METHOD checkEntityPostEffect (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT What shader to use when spectating this entity
-		ARG 1 entity
+		ARG 1 cameraEntity
 	METHOD displayItemActivation (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
 	METHOD extractCamera (F)V
 		ARG 1 partialTick
 	METHOD filterHitResult (Lnet/minecraft/world/phys/HitResult;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/HitResult;
 		ARG 0 hitResult
-		ARG 1 pos
-		ARG 2 blockInteractionRange
+		ARG 1 from
+		ARG 2 maxRange
 	METHOD getDarkenWorldAmount (F)F
 		ARG 1 partialTick
 	METHOD getFov (Lnet/minecraft/client/Camera;FZ)F
 		ARG 1 camera
 		ARG 2 partialTick
-		ARG 3 useFovSetting
+		ARG 3 applyEffects
 	METHOD getNightVisionScale (Lnet/minecraft/world/entity/LivingEntity;F)F
-		ARG 0 livingEntity
+		ARG 0 entity
 		ARG 1 nanoTime
 	METHOD getProjectionMatrix (F)Lorg/joml/Matrix4f;
 		ARG 1 fov
 	METHOD getProjectionMatrixForCulling (F)Lorg/joml/Matrix4f;
-		ARG 1 fov
+		ARG 1 fovWithEffects
 	METHOD pick (F)V
 		COMMENT Gets the block or object that is being moused over.
 		ARG 1 partialTick
@@ -49,7 +49,7 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 2 renderLevel
 	METHOD renderItemInHand (FZLorg/joml/Matrix4f;)V
 		ARG 1 partialTick
-		ARG 2 sleeping
+		ARG 2 isSleeping
 		ARG 3 projectionMatrix
 	METHOD renderLevel (Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 deltaTracker
@@ -58,12 +58,14 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 2 height
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
+	METHOD setPanoramicScreenshotParameters (Lnet/minecraft/client/renderer/PanoramicScreenshotParameters;)V
+		ARG 1 panoramicScreenshotParameters
 	METHOD setPostEffect (Lnet/minecraft/resources/Identifier;)V
-		ARG 1 postEffectId
+		ARG 1 id
 	METHOD setRenderBlockOutline (Z)V
 		ARG 1 renderBlockOutline
 	METHOD takeAutoScreenshot (Ljava/nio/file/Path;)V
-		ARG 1 path
+		ARG 1 screenshotFile
 	METHOD tick ()V
 		COMMENT Updates the entity renderer
 	METHOD tickFov ()V

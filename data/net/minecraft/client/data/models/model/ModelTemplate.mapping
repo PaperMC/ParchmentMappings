@@ -4,7 +4,7 @@ CLASS net/minecraft/client/data/models/model/ModelTemplate
 		ARG 2 suffix
 		ARG 3 requiredSlots
 	METHOD create (Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/data/models/model/TextureMapping;Ljava/util/function/BiConsumer;)Lnet/minecraft/resources/Identifier;
-		ARG 1 modelLocation
+		ARG 1 target
 		ARG 2 textureMapping
 		ARG 3 output
 	METHOD create (Lnet/minecraft/world/item/Item;Lnet/minecraft/client/data/models/model/TextureMapping;Ljava/util/function/BiConsumer;)Lnet/minecraft/resources/Identifier;

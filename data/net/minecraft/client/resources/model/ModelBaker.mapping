@@ -2,7 +2,7 @@ CLASS net/minecraft/client/resources/model/ModelBaker
 	METHOD compute (Lnet/minecraft/client/resources/model/ModelBaker$SharedOperationKey;)Ljava/lang/Object;
 		ARG 1 key
 	METHOD getModel (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/resources/model/ResolvedModel;
-		ARG 1 modelLocation
+		ARG 1 location
 	CLASS SharedOperationKey
 		METHOD compute (Lnet/minecraft/client/resources/model/ModelBaker;)Ljava/lang/Object;
-			ARG 1 baker
+			ARG 1 modelBakery

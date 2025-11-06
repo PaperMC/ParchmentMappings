@@ -63,9 +63,33 @@ CLASS net/minecraft/commands/arguments/selector/options/EntitySelectorOptions
 		ARG 0 parser
 	METHOD lambda$bootStrap$39 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
 		ARG 0 parser
+	METHOD lambda$bootStrap$46 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
+	METHOD lambda$bootStrap$47 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
+		ARG 0 parser
+	METHOD lambda$bootStrap$49 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
 	METHOD lambda$bootStrap$5 (Ljava/lang/String;ZLnet/minecraft/world/entity/Entity;)Z
 		ARG 2 entity
+	METHOD lambda$bootStrap$50 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
+		ARG 0 parser
+	METHOD lambda$bootStrap$52 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
+	METHOD lambda$bootStrap$53 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
+		ARG 0 parser
+	METHOD lambda$bootStrap$55 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
+	METHOD lambda$bootStrap$56 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
+		ARG 0 parser
 	METHOD lambda$bootStrap$6 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
+	METHOD lambda$bootStrap$61 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
+	METHOD lambda$bootStrap$62 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
+		ARG 0 parser
+	METHOD lambda$bootStrap$64 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+		ARG 0 parser
+	METHOD lambda$bootStrap$65 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
 		ARG 0 parser
 	METHOD lambda$bootStrap$7 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
 		ARG 0 parser

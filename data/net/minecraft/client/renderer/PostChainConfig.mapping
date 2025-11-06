@@ -10,3 +10,6 @@ CLASS net/minecraft/client/renderer/PostChainConfig
 	CLASS TextureInput
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+	CLASS InternalTarget
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

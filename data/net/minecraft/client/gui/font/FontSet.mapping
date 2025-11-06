@@ -2,7 +2,7 @@ CLASS net/minecraft/client/gui/font/FontSet
 	METHOD <init> (Lnet/minecraft/client/gui/font/GlyphStitcher;)V
 		ARG 1 stitcher
 	METHOD computeGlyphInfo (I)Lnet/minecraft/client/gui/font/FontSet$SelectedGlyphs;
-		ARG 1 character
+		ARG 1 codePoint
 	METHOD getGlyph (I)Lnet/minecraft/client/gui/font/FontSet$SelectedGlyphs;
 		ARG 1 character
 	METHOD getRandomGlyph (Lnet/minecraft/util/RandomSource;I)Lnet/minecraft/client/gui/font/glyphs/BakedGlyph;

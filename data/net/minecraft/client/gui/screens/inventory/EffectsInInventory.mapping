@@ -7,11 +7,31 @@ CLASS net/minecraft/client/gui/screens/inventory/EffectsInInventory
 		ARG 1 guiGraphics
 		ARG 2 mouseX
 		ARG 3 mouseY
+	METHOD renderBackground (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;IIZI)I
+		ARG 1 guiGraphics
+		ARG 2 font
+		ARG 3 effectName
+		ARG 4 duration
+		ARG 5 x0
+		ARG 6 y0
+		ARG 7 isAmbient
+		ARG 8 maxTextureWidth
 	METHOD renderEffects (Lnet/minecraft/client/gui/GuiGraphics;Ljava/util/Collection;IIIII)V
 		ARG 1 guiGraphics
 		ARG 2 activeEffects
-		ARG 3 x
-		ARG 4 height
+		ARG 3 x0
+		ARG 4 yStep
 		ARG 5 mouseX
 		ARG 6 mouseY
-		ARG 7 width
+		ARG 7 maxWidth
+	METHOD renderText (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/Font;IIIIII)V
+		ARG 1 guiGraphics
+		ARG 2 effectText
+		ARG 3 duration
+		ARG 4 font
+		ARG 5 x0
+		ARG 6 y0
+		ARG 7 textureWidth
+		ARG 8 yStep
+		ARG 9 mouseX
+		ARG 10 mouseY

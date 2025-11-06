@@ -88,6 +88,9 @@ CLASS net/minecraft/client/Options
 		ARG 1 packRepository
 	METHOD useNativeTransport ()Z
 		COMMENT @return {@code true} if the client connect to a server using the native transport system
+	CLASS 2
+		METHOD getValue (Ljava/lang/String;)Ljava/lang/String;
+			ARG 1 name
 	CLASS 3
 		METHOD writePrefix (Ljava/lang/String;)V
 			ARG 1 prefix

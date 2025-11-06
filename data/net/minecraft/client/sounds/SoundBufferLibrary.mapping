@@ -8,13 +8,13 @@ CLASS net/minecraft/client/sounds/SoundBufferLibrary
 		COMMENT Clears the cache of all {@linkplain SoundBuffer} instances.
 	METHOD getCompleteBuffer (Lnet/minecraft/resources/Identifier;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Returns a {@linkplain CompletableFuture} containing the complete {@linkplain SoundBuffer}. The {@linkplain SoundBuffer} is loaded asynchronously and cached.
-		ARG 1 soundId
+		ARG 1 location
 			COMMENT the {@linkplain Identifier} of the sound
 	METHOD getStream (Lnet/minecraft/resources/Identifier;Z)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Returns a {@linkplain CompletableFuture} containing the {@linkplain AudioStream}. The {@linkplain AudioStream} is loaded asynchronously.
-		ARG 1 resourceLocation
+		ARG 1 location
 			COMMENT the {@linkplain Identifier} of the sound
-		ARG 2 isWrapper
+		ARG 2 looping
 			COMMENT whether the {@linkplain AudioStream} should be a {@linkplain LoopingAudioStream}
 	METHOD lambda$clear$3 (Ljava/util/concurrent/CompletableFuture;)V
 		ARG 0 buffer

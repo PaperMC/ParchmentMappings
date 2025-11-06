@@ -13,7 +13,7 @@ CLASS net/minecraft/client/resources/sounds/SimpleSoundInstance
 		ARG 13 z
 		ARG 15 relative
 	METHOD <init> (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFLnet/minecraft/util/RandomSource;DDD)V
-		ARG 1 soundEvent
+		ARG 1 sound
 		ARG 2 source
 		ARG 3 volume
 		ARG 4 pitch
@@ -22,14 +22,14 @@ CLASS net/minecraft/client/resources/sounds/SimpleSoundInstance
 		ARG 8 y
 		ARG 10 z
 	METHOD <init> (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFLnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 soundEvent
+		ARG 1 sound
 		ARG 2 source
 		ARG 3 volume
 		ARG 4 pitch
 		ARG 5 random
-		ARG 6 entity
+		ARG 6 pos
 	METHOD <init> (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFLnet/minecraft/util/RandomSource;ZILnet/minecraft/client/resources/sounds/SoundInstance$Attenuation;DDD)V
-		ARG 1 soundEvent
+		ARG 1 sound
 		ARG 2 source
 		ARG 3 volume
 		ARG 4 pitch
@@ -43,7 +43,7 @@ CLASS net/minecraft/client/resources/sounds/SimpleSoundInstance
 	METHOD forAmbientAddition (Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/client/resources/sounds/SimpleSoundInstance;
 		ARG 0 sound
 	METHOD forAmbientMood (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/util/RandomSource;DDD)Lnet/minecraft/client/resources/sounds/SimpleSoundInstance;
-		ARG 0 soundEvent
+		ARG 0 sound
 		ARG 1 random
 		ARG 2 x
 		ARG 4 y
@@ -55,8 +55,10 @@ CLASS net/minecraft/client/resources/sounds/SimpleSoundInstance
 		ARG 0 sound
 		ARG 1 volume
 		ARG 2 pitch
+	METHOD forMusic (Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/client/resources/sounds/SimpleSoundInstance;
+		ARG 0 sound
 	METHOD forUI (Lnet/minecraft/core/Holder;F)Lnet/minecraft/client/resources/sounds/SimpleSoundInstance;
-		ARG 0 soundHolder
+		ARG 0 sound
 		ARG 1 pitch
 	METHOD forUI (Lnet/minecraft/sounds/SoundEvent;F)Lnet/minecraft/client/resources/sounds/SimpleSoundInstance;
 		ARG 0 sound

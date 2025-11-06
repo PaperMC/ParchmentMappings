@@ -4,6 +4,6 @@ CLASS net/minecraft/client/renderer/special/BedSpecialRenderer
 		ARG 2 material
 	CLASS Unbaked
 		METHOD <init> (Lnet/minecraft/world/item/DyeColor;)V
-			ARG 1 color
+			ARG 1 dyeColor
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

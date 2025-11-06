@@ -5,4 +5,4 @@ CLASS net/minecraft/client/renderer/texture/atlas/SpriteSourceList
 		ARG 1 resourceManager
 	METHOD load (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/texture/atlas/SpriteSourceList;
 		ARG 0 resourceManager
-		ARG 1 sprite
+		ARG 1 atlasId

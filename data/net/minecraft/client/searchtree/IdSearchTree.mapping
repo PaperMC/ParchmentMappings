@@ -6,4 +6,4 @@ CLASS net/minecraft/client/searchtree/IdSearchTree
 		ARG 1 namespace
 		ARG 2 path
 	METHOD searchPlainText (Ljava/lang/String;)Ljava/util/List;
-		ARG 1 query
+		ARG 1 text

@@ -5,5 +5,5 @@ CLASS net/minecraft/client/renderer/special/NoDataSpecialModelRenderer
 		ARG 3 nodeCollector
 		ARG 4 packedLight
 		ARG 5 packedOverlay
-		ARG 6 hasFoilType
+		ARG 6 hasFoil
 		ARG 7 outlineColor

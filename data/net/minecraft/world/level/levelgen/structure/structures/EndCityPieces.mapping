@@ -34,7 +34,7 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/EndCityPieces
 			ARG 1 structureTemplateManager
 			ARG 2 tag
 		METHOD makeIdentifier (Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
-			ARG 0 name
+			ARG 0 templateName
 		METHOD makeSettings (ZLnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
 			ARG 0 overwrite
 			ARG 1 rotation

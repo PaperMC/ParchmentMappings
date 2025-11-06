@@ -14,7 +14,7 @@ CLASS net/minecraft/client/model/Model
 		ARG 4 packedOverlay
 		ARG 5 color
 	METHOD renderType (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 1 location
+		ARG 1 texture
 	METHOD setupAnim (Ljava/lang/Object;)V
 		ARG 1 state
 	CLASS Simple

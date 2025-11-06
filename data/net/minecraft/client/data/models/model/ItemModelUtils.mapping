@@ -21,7 +21,7 @@ CLASS net/minecraft/client/data/models/model/ItemModelUtils
 		ARG 0 model
 		ARG 1 threshold
 	METHOD plainModel (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;
-		ARG 0 model
+		ARG 0 id
 	METHOD rangeSelect (Lnet/minecraft/client/renderer/item/properties/numeric/RangeSelectItemModelProperty;FLjava/util/List;)Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;
 		ARG 0 property
 		ARG 1 scale
@@ -64,7 +64,7 @@ CLASS net/minecraft/client/data/models/model/ItemModelUtils
 		ARG 0 base
 		ARG 1 specialModel
 	METHOD tintedModel (Lnet/minecraft/resources/Identifier;[Lnet/minecraft/client/color/item/ItemTintSource;)Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;
-		ARG 0 model
+		ARG 0 id
 		ARG 1 tintSources
 	METHOD when (Ljava/lang/Object;Lnet/minecraft/client/renderer/item/ItemModel$Unbaked;)Lnet/minecraft/client/renderer/item/SelectItemModel$SwitchCase;
 		ARG 0 value

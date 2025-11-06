@@ -1,4 +1,6 @@
 CLASS net/minecraft/server/commands/DebugCommand
+	METHOD lambda$register$0 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD lambda$register$1 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V

@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/gui/components/PopupScreen
 	METHOD <init> (Lnet/minecraft/client/gui/screens/Screen;ILnet/minecraft/resources/Identifier;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/util/List;Ljava/lang/Runnable;)V
 		ARG 1 backgroundScreen
-		ARG 2 width
+		ARG 2 backgroundWidth
 		ARG 3 image
 		ARG 4 title
 		ARG 5 message

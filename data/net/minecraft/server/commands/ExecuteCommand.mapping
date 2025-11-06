@@ -72,11 +72,33 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 	METHOD isChunkLoaded (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 level
 		ARG 1 pos
+	METHOD lambda$addConditional$65 (ZLnet/minecraft/server/commands/ExecuteCommand$CommandPredicate;Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 2 context
+	METHOD lambda$addConditional$67 (ZLnet/minecraft/server/commands/ExecuteCommand$CommandPredicate;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 2 context
+	METHOD lambda$addConditionals$35 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$36 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$37 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
 	METHOD lambda$addConditionals$38 (Lcom/mojang/brigadier/context/CommandContext;)Z
 		ARG 0 context
 	METHOD lambda$addConditionals$40 (Lcom/mojang/brigadier/context/CommandContext;)Z
 		ARG 0 context
+	METHOD lambda$addConditionals$42 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$44 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$46 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$48 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
 	METHOD lambda$addConditionals$49 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$50 (ZLcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 1 context
+	METHOD lambda$addConditionals$51 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$addConditionals$52 (Lcom/mojang/brigadier/context/CommandContext;)Z
 		ARG 0 context
@@ -84,6 +106,26 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 		ARG 1 context
 	METHOD lambda$addConditionals$54 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
+	METHOD lambda$addConditionals$55 (ZLcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 1 context
+	METHOD lambda$addConditionals$56 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$addConditionals$57 (Lcom/mojang/brigadier/context/CommandContext;)Z
+		ARG 0 context
+	METHOD lambda$addConditionals$58 (ZLnet/minecraft/server/commands/data/DataCommands$DataProvider;Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 2 context
+	METHOD lambda$addConditionals$59 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$addIfBlocksConditional$68 (ZZLcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 2 context
+	METHOD lambda$addIfBlocksConditional$69 (ZLcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$addIfBlocksConditional$70 (ZLcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$createNumericConditionalHandler$62 (Lnet/minecraft/server/commands/ExecuteCommand$CommandNumericPredicate;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
+	METHOD lambda$createNumericConditionalHandler$64 (Lnet/minecraft/server/commands/ExecuteCommand$CommandNumericPredicate;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
 	METHOD lambda$createRelationOperations$80 (Lnet/minecraft/world/entity/Entity;)Ljava/util/Optional;
 		ARG 0 entity
 	METHOD lambda$createRelationOperations$81 (Lnet/minecraft/world/entity/Entity;)Ljava/util/Optional;
@@ -92,13 +134,27 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 		ARG 0 entity
 	METHOD lambda$createRelationOperations$83 (Lnet/minecraft/world/entity/Entity;)Ljava/util/Optional;
 		ARG 0 entity
+	METHOD lambda$register$10 (Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 0 context
 	METHOD lambda$register$11 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 0 context
+	METHOD lambda$register$12 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 0 context
+	METHOD lambda$register$13 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
 		ARG 0 context
 	METHOD lambda$register$14 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
 		ARG 0 context
 	METHOD lambda$register$15 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
 		ARG 0 context
+	METHOD lambda$register$3 (Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 0 context
+	METHOD lambda$register$4 (Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 0 context
+	METHOD lambda$register$5 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 0 context
 	METHOD lambda$register$6 (Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+		ARG 0 context
+	METHOD lambda$register$7 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
 		ARG 0 context
 	METHOD lambda$register$8 (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
 		ARG 0 context
@@ -112,6 +168,24 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 	METHOD lambda$static$2 (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 function
 		ARG 1 message
+	METHOD lambda$wrapStores$16 (ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 1 context
+	METHOD lambda$wrapStores$17 (ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 1 context
+	METHOD lambda$wrapStores$18 (ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 1 context
+	METHOD lambda$wrapStores$20 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 2 context
+	METHOD lambda$wrapStores$22 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 2 context
+	METHOD lambda$wrapStores$24 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 2 context
+	METHOD lambda$wrapStores$26 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 2 context
+	METHOD lambda$wrapStores$28 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 2 context
+	METHOD lambda$wrapStores$30 (Lnet/minecraft/server/commands/data/DataCommands$DataProvider;ZLcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/commands/CommandSourceStack;
+		ARG 2 context
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
 		ARG 1 buildContext
@@ -161,3 +235,5 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 	CLASS ExecuteIfFunctionCustomModifier
 		METHOD <init> (Z)V
 			ARG 1 invert
+		METHOD lambda$apply$2 (Lcom/mojang/brigadier/context/CommandContext;)Ljava/util/Collection;
+			ARG 0 context

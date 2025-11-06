@@ -23,6 +23,8 @@ CLASS net/minecraft/world/level/levelgen/synth/BlendedNoise
 		ARG 4 xzFactor
 		ARG 6 yFactor
 		ARG 8 smearScaleMultiplier
+	METHOD lambda$static$5 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD parityConfigString (Ljava/lang/StringBuilder;)V
 		ARG 1 builder
 	METHOD withNewRandom (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/levelgen/synth/BlendedNoise;

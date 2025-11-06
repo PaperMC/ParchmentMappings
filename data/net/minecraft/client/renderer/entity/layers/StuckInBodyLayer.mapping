@@ -6,14 +6,14 @@ CLASS net/minecraft/client/renderer/entity/layers/StuckInBodyLayer
 		ARG 4 texture
 		ARG 5 placementStyle
 	METHOD numStuck (Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;)I
-		ARG 1 renderState
+		ARG 1 state
 	METHOD snapToFace (F)F
 		ARG 0 value
 	METHOD submitStuckItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;IFFFI)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector
 		ARG 3 packedLight
-		ARG 4 x
-		ARG 5 y
-		ARG 6 z
-		ARG 7 color
+		ARG 4 directionX
+		ARG 5 directionY
+		ARG 6 directionZ
+		ARG 7 outlineColor

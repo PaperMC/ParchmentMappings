@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/particle/SpriteSet
 	METHOD get (II)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
-		ARG 1 age
-		ARG 2 lifetime
+		ARG 1 index
+		ARG 2 max
 	METHOD get (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 		ARG 1 random

@@ -217,8 +217,8 @@ CLASS net/minecraft/client/gui/Gui
 		COMMENT Renders a texture overlay on the screen with the specified shader location and alpha value.
 		ARG 1 guiGraphics
 			COMMENT the graphics object used for rendering
-		ARG 2 shaderLocation
-			COMMENT the location of the shader texture
+		ARG 2 texture
+			COMMENT the identifier of the shader texture
 		ARG 3 alpha
 			COMMENT the alpha value to apply to the overlay
 	METHOD renderTitle (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V

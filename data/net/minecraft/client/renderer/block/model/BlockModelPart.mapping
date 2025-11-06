@@ -3,4 +3,4 @@ CLASS net/minecraft/client/renderer/block/model/BlockModelPart
 		ARG 1 direction
 	CLASS Unbaked
 		METHOD bake (Lnet/minecraft/client/resources/model/ModelBaker;)Lnet/minecraft/client/renderer/block/model/BlockModelPart;
-			ARG 1 modelBaker
+			ARG 1 modelBakery

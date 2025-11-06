@@ -2,7 +2,7 @@ CLASS net/minecraft/client/renderer/texture/ReloadableTexture
 	METHOD <init> (Lnet/minecraft/resources/Identifier;)V
 		ARG 1 resourceId
 	METHOD apply (Lnet/minecraft/client/renderer/texture/TextureContents;)V
-		ARG 1 textureContents
+		ARG 1 contents
 	METHOD doLoad (Lcom/mojang/blaze3d/platform/NativeImage;)V
 		ARG 1 image
 	METHOD loadContents (Lnet/minecraft/server/packs/resources/ResourceManager;)Lnet/minecraft/client/renderer/texture/TextureContents;

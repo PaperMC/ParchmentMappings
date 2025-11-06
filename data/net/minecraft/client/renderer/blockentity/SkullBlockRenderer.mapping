@@ -5,10 +5,10 @@ CLASS net/minecraft/client/renderer/blockentity/SkullBlockRenderer
 		ARG 0 modelSet
 		ARG 1 type
 	METHOD getPlayerSkinRenderType (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 0 textureLocation
+		ARG 0 texture
 	METHOD getSkullRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 type
-		ARG 1 textureLocation
+		ARG 1 texture
 	METHOD lambda$new$1 (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/SkullBlock$Type;)Lnet/minecraft/client/model/SkullModelBase;
 		ARG 1 type
 	METHOD lambda$static$0 (Ljava/util/HashMap;)V
@@ -18,8 +18,8 @@ CLASS net/minecraft/client/renderer/blockentity/SkullBlockRenderer
 		ARG 2 blockEntity
 	METHOD submitSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/rendertype/RenderType;ILnet/minecraft/client/renderer/feature/ModelFeatureRenderer$CrumblingOverlay;)V
 		ARG 0 direction
-		ARG 1 yRot
-		ARG 2 mouthAnimation
+		ARG 1 rot
+		ARG 2 animationValue
 		ARG 3 poseStack
 		ARG 4 nodeCollector
 		ARG 5 packedLight

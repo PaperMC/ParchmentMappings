@@ -7,7 +7,7 @@ CLASS net/minecraft/client/sounds/Weighted
 		COMMENT Retrieves the sound associated with the element.
 		COMMENT The sound is obtained using the provided random source.
 		COMMENT @return the sound associated with the element
-		ARG 1 randomSource
+		ARG 1 random
 			COMMENT the random source used for sound selection
 	METHOD getWeight ()I
 		COMMENT {@return the weight of the element}

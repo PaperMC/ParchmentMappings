@@ -3,5 +3,19 @@ CLASS net/minecraft/world/attribute/LerpFunction
 		ARG 1 delta
 		ARG 2 start
 		ARG 3 end
+	METHOD lambda$ofConstant$1 (FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 delta
+		ARG 1 start
+		ARG 2 end
+	METHOD lambda$ofDegrees$0 (FFLjava/lang/Float;Ljava/lang/Float;)Ljava/lang/Float;
+		ARG 1 delta
+		ARG 2 start
+		ARG 3 end
+	METHOD lambda$ofStep$2 (FFLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 1 delta
+		ARG 2 start
+		ARG 3 end
+	METHOD ofDegrees (F)Lnet/minecraft/world/attribute/LerpFunction;
+		ARG 0 maxDelta
 	METHOD ofStep (F)Lnet/minecraft/world/attribute/LerpFunction;
-		ARG 0 step
+		ARG 0 threshold

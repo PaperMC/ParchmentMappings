@@ -5,7 +5,7 @@ CLASS net/minecraft/client/renderer/special/SkullSpecialRenderer
 		ARG 3 renderType
 	CLASS Unbaked
 		METHOD <init> (Lnet/minecraft/world/level/block/SkullBlock$Type;)V
-			ARG 1 type
+			ARG 1 kind
 		METHOD lambda$bake$1 (Ljava/lang/String;)Ljava/lang/String;
 			ARG 0 name
 		METHOD lambda$bake$2 (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/resources/Identifier;

@@ -2,5 +2,5 @@ CLASS net/minecraft/client/gui/narration/NarrationSupplier
 	COMMENT An interface for providing narration information.
 	METHOD updateNarration (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
 		COMMENT Updates the narration output with the current narration information.
-		ARG 1 narrationElementOutput
+		ARG 1 output
 			COMMENT the output to update with narration information

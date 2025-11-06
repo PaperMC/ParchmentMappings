@@ -1,21 +1,61 @@
 CLASS net/minecraft/util/Ease
+	METHOD inBack (F)F
+		ARG 0 progress
+	METHOD inBounce (F)F
+		ARG 0 progress
 	METHOD inCirc (F)F
 		ARG 0 progress
+	METHOD inCubic (F)F
+		ARG 0 progress
+	METHOD inElastic (F)F
+		ARG 0 progress
+	METHOD inExpo (F)F
+		ARG 0 progress
 	METHOD inOutBack (F)F
+		ARG 0 progress
+	METHOD inOutBounce (F)F
+		ARG 0 progress
+	METHOD inOutCirc (F)F
+		ARG 0 progress
+	METHOD inOutCubic (F)F
 		ARG 0 progress
 	METHOD inOutElastic (F)F
 		ARG 0 progress
 	METHOD inOutExpo (F)F
 		ARG 0 progress
+	METHOD inOutQuad (F)F
+		ARG 0 progress
+	METHOD inOutQuart (F)F
+		ARG 0 progress
+	METHOD inOutQuint (F)F
+		ARG 0 progress
 	METHOD inOutSine (F)F
 		ARG 0 progress
 	METHOD inQuad (F)F
 		ARG 0 progress
+	METHOD inQuart (F)F
+		ARG 0 progress
+	METHOD inQuint (F)F
+		ARG 0 progress
+	METHOD inSine (F)F
+		ARG 0 progress
 	METHOD outBack (F)F
+		ARG 0 progress
+	METHOD outBounce (F)F
 		ARG 0 progress
 	METHOD outCirc (F)F
 		ARG 0 progress
 	METHOD outCubic (F)F
 		ARG 0 progress
+	METHOD outElastic (F)F
+		ARG 0 progress
+	METHOD outExpo (F)F
+		ARG 0 progress
+	METHOD outQuad (F)F
+		ARG 0 progress
 	METHOD outQuart (F)F
+		ARG 0 progress
+	METHOD outQuint (F)F
+		ARG 0 progress
+	METHOD outSine (F)F
 		ARG 0 progress

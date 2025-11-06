@@ -328,6 +328,12 @@ CLASS net/minecraft/data/recipes/RecipeProvider
 		METHOD createRecipeProvider (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/data/recipes/RecipeOutput;)Lnet/minecraft/data/recipes/RecipeProvider;
 			ARG 1 registries
 			ARG 2 output
+		CLASS 1
+			METHOD saveAdvancement (Lnet/minecraft/advancements/AdvancementHolder;)V
+				ARG 1 advancement
+			METHOD saveRecipe (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/crafting/Recipe;)V
+				ARG 1 id
+				ARG 2 recipe
 	CLASS FamilyRecipeProvider
 		METHOD create (Lnet/minecraft/data/recipes/RecipeProvider;Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/data/recipes/RecipeBuilder;
 			ARG 1 recipeProvider

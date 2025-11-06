@@ -16,7 +16,7 @@ CLASS net/minecraft/client/renderer/entity/HumanoidMobRenderer
 		ARG 5 transforms
 	METHOD extractHumanoidRenderState (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;FLnet/minecraft/client/renderer/item/ItemModelResolver;)V
 		ARG 0 entity
-		ARG 1 reusedState
+		ARG 1 state
 		ARG 2 partialTick
 		ARG 3 itemModelResolver
 	METHOD getArmPose (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/HumanoidArm;)Lnet/minecraft/client/model/HumanoidModel$ArmPose;

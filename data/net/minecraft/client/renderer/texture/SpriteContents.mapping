@@ -12,8 +12,8 @@ CLASS net/minecraft/client/renderer/texture/SpriteContents
 		ARG 6 mipmapStrategy
 	METHOD createAnimatedTexture (Lnet/minecraft/client/resources/metadata/animation/FrameSize;IILnet/minecraft/client/resources/metadata/animation/AnimationMetadataSection;)Lnet/minecraft/client/renderer/texture/SpriteContents$AnimatedTexture;
 		ARG 1 frameSize
-		ARG 2 width
-		ARG 3 height
+		ARG 2 fullWidth
+		ARG 3 fullHeight
 		ARG 4 metadata
 	METHOD createAnimationState (Lcom/mojang/blaze3d/buffers/GpuBufferSlice;I)Lnet/minecraft/client/renderer/texture/SpriteContents$AnimationState;
 		ARG 1 spriteUbos

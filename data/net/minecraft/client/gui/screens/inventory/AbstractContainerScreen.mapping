@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 	FIELD INVENTORY_LOCATION Lnet/minecraft/resources/Identifier;
-		COMMENT The location of the inventory background texture
+		COMMENT The identifier of the inventory background texture
 	FIELD clickedSlot Lnet/minecraft/world/inventory/Slot;
 		COMMENT Used when touchscreen is enabled
 	FIELD draggingItem Lnet/minecraft/world/item/ItemStack;

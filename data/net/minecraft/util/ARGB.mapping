@@ -5,13 +5,13 @@ CLASS net/minecraft/util/ARGB
 	METHOD alpha (I)I
 		ARG 0 color
 	METHOD alphaBlend (II)I
-		ARG 0 color1
-		ARG 1 color2
+		ARG 0 destination
+		ARG 1 source
 	METHOD alphaBlendChannel (IIII)I
-		ARG 0 alphaBlended
-		ARG 1 alpha
-		ARG 2 value1
-		ARG 3 value2
+		ARG 0 resultAlpha
+		ARG 1 sourceAlpha
+		ARG 2 destination
+		ARG 3 source
 	METHOD alphaFloat (I)F
 		ARG 0 color
 	METHOD as8BitChannel (F)I
@@ -64,21 +64,21 @@ CLASS net/minecraft/util/ARGB
 	METHOD greyscale (I)I
 		ARG 0 color
 	METHOD linearChannelMean (IIII)I
-		ARG 0 value1
-		ARG 1 value2
-		ARG 2 value3
-		ARG 3 value4
+		ARG 0 c1
+		ARG 1 c2
+		ARG 2 c3
+		ARG 3 c4
 	METHOD linearLerp (FII)I
 		ARG 0 delta
 		ARG 1 color1
 		ARG 2 color2
 	METHOD linearToSrgbChannel (F)I
-		ARG 0 value
+		ARG 0 linear
 	METHOD meanLinear (IIII)I
-		ARG 0 color1
-		ARG 1 color2
-		ARG 2 color3
-		ARG 3 color4
+		ARG 0 srgb1
+		ARG 1 srgb2
+		ARG 2 srgb3
+		ARG 3 srgb4
 	METHOD multiply (II)I
 		ARG 0 color1
 		ARG 1 color2
@@ -110,7 +110,7 @@ CLASS net/minecraft/util/ARGB
 		ARG 1 color1
 		ARG 2 color2
 	METHOD srgbToLinearChannel (I)F
-		ARG 0 value
+		ARG 0 srgb
 	METHOD subtractRgb (II)I
 		ARG 0 color1
 		ARG 1 color2
@@ -119,6 +119,8 @@ CLASS net/minecraft/util/ARGB
 	METHOD transparent (I)I
 		ARG 0 color
 	METHOD vector3fFromRGB24 (I)Lorg/joml/Vector3f;
+		ARG 0 color
+	METHOD vector4fFromARGB32 (I)Lorg/joml/Vector4f;
 		ARG 0 color
 	METHOD white (F)I
 		ARG 0 alpha

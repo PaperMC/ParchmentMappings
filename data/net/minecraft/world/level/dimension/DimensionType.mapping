@@ -9,6 +9,12 @@ CLASS net/minecraft/world/level/dimension/DimensionType
 		ARG 1 secondType
 	METHOD lambda$createDirectCodec$0 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 1 instance
+	CLASS Skybox
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 name
 	CLASS MonsterSettings
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+	CLASS CardinalLightType
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 name

@@ -1,25 +1,25 @@
 CLASS net/minecraft/client/resources/model/ResolvedModel
 	METHOD bakeTopGeometry (Lnet/minecraft/client/renderer/block/model/TextureSlots;Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/resources/model/ModelState;)Lnet/minecraft/client/resources/model/QuadCollection;
 		ARG 1 textureSlots
-		ARG 2 modelBaker
-		ARG 3 modelState
+		ARG 2 baker
+		ARG 3 state
 	METHOD findTopAmbientOcclusion (Lnet/minecraft/client/resources/model/ResolvedModel;)Z
-		ARG 0 model
+		ARG 0 current
 	METHOD findTopGeometry (Lnet/minecraft/client/resources/model/ResolvedModel;)Lnet/minecraft/client/resources/model/UnbakedGeometry;
-		ARG 0 model
+		ARG 0 current
 	METHOD findTopGuiLight (Lnet/minecraft/client/resources/model/ResolvedModel;)Lnet/minecraft/client/resources/model/UnbakedModel$GuiLight;
-		ARG 0 model
+		ARG 0 current
 	METHOD findTopTextureSlots (Lnet/minecraft/client/resources/model/ResolvedModel;)Lnet/minecraft/client/renderer/block/model/TextureSlots;
-		ARG 0 model
+		ARG 0 top
 	METHOD findTopTransform (Lnet/minecraft/client/resources/model/ResolvedModel;Lnet/minecraft/world/item/ItemDisplayContext;)Lnet/minecraft/client/renderer/block/model/ItemTransform;
-		ARG 0 model
+		ARG 0 current
 		ARG 1 displayContext
 	METHOD findTopTransforms (Lnet/minecraft/client/resources/model/ResolvedModel;)Lnet/minecraft/client/renderer/block/model/ItemTransforms;
-		ARG 0 model
+		ARG 0 top
 	METHOD resolveParticleSprite (Lnet/minecraft/client/renderer/block/model/TextureSlots;Lnet/minecraft/client/resources/model/ModelBaker;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 		ARG 1 textureSlots
-		ARG 2 modelBaker
+		ARG 2 baker
 	METHOD resolveParticleSprite (Lnet/minecraft/client/renderer/block/model/TextureSlots;Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/resources/model/ModelDebugName;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 		ARG 0 textureSlots
-		ARG 1 modelBaker
-		ARG 2 debugName
+		ARG 1 baker
+		ARG 2 resolvedModel

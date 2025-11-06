@@ -1,14 +1,14 @@
 CLASS net/minecraft/client/renderer/state/QuadParticleRenderState
 	METHOD add (Lnet/minecraft/client/particle/SingleQuadParticle$Layer;FFFFFFFFFFFFII)V
 		ARG 1 layer
-		ARG 2 xOffset
-		ARG 3 yOffset
-		ARG 4 zOffset
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 		ARG 5 xRot
 		ARG 6 yRot
 		ARG 7 zRot
 		ARG 8 wRot
-		ARG 9 quadSize
+		ARG 9 scale
 		ARG 10 u0
 		ARG 11 u1
 		ARG 12 v0
@@ -16,14 +16,14 @@ CLASS net/minecraft/client/renderer/state/QuadParticleRenderState
 		ARG 14 color
 		ARG 15 packedLight
 	METHOD lambda$prepare$1 (Lcom/mojang/blaze3d/vertex/BufferBuilder;FFFFFFFFFFFFII)V
-		ARG 2 xOffset
-		ARG 3 yOffset
-		ARG 4 zOffset
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 		ARG 5 xRot
 		ARG 6 yRot
 		ARG 7 zRot
 		ARG 8 wRot
-		ARG 9 quadSize
+		ARG 9 scale
 		ARG 10 u0
 		ARG 11 u1
 		ARG 12 v0
@@ -32,14 +32,14 @@ CLASS net/minecraft/client/renderer/state/QuadParticleRenderState
 		ARG 15 packedLight
 	METHOD renderRotatedQuad (Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFFFFFFFFFII)V
 		ARG 1 consumer
-		ARG 2 xOffset
-		ARG 3 yOffset
-		ARG 4 zOffset
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 		ARG 5 xRot
 		ARG 6 yRot
 		ARG 7 zRot
 		ARG 8 wRot
-		ARG 9 quadSize
+		ARG 9 scale
 		ARG 10 u0
 		ARG 11 u1
 		ARG 12 v0
@@ -49,26 +49,26 @@ CLASS net/minecraft/client/renderer/state/QuadParticleRenderState
 	METHOD renderVertex (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Quaternionf;FFFFFFFFII)V
 		ARG 1 consumer
 		ARG 2 rotation
-		ARG 3 xOffset
-		ARG 4 yOffset
-		ARG 5 zOffset
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
 		ARG 6 cornerX
 		ARG 7 cornerY
-		ARG 8 quadSize
+		ARG 8 scale
 		ARG 9 u
 		ARG 10 v
 		ARG 11 color
 		ARG 12 packedLight
 	CLASS Storage
 		METHOD add (FFFFFFFFFFFFII)V
-			ARG 1 xOffset
-			ARG 2 yOffset
-			ARG 3 zOffset
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
 			ARG 4 xRot
 			ARG 5 yRot
 			ARG 6 zRot
 			ARG 7 wRot
-			ARG 8 quadSize
+			ARG 8 scale
 			ARG 9 u0
 			ARG 10 u1
 			ARG 11 v0
@@ -79,14 +79,14 @@ CLASS net/minecraft/client/renderer/state/QuadParticleRenderState
 			ARG 1 consumer
 	CLASS ParticleConsumer
 		METHOD consume (FFFFFFFFFFFFII)V
-			ARG 1 xOffset
-			ARG 2 yOffset
-			ARG 3 zOffset
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
 			ARG 4 xRot
 			ARG 5 yRot
 			ARG 6 zRot
 			ARG 7 wRot
-			ARG 8 quadSize
+			ARG 8 scale
 			ARG 9 u0
 			ARG 10 u1
 			ARG 11 v0

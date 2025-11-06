@@ -12,6 +12,8 @@ CLASS net/minecraft/server/commands/StopwatchCommand
 		ARG 0 context
 	METHOD lambda$register$7 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
+	METHOD lambda$static$2 (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 context
 	METHOD queryStopwatch (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/resources/Identifier;D)I
 		ARG 0 source
 		ARG 1 id

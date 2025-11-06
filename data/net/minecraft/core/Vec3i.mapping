@@ -54,7 +54,7 @@ CLASS net/minecraft/core/Vec3i
 	METHOD lambda$static$0 ([I)Lnet/minecraft/core/Vec3i;
 		ARG 0 positions
 	METHOD lambda$static$1 (Ljava/util/stream/IntStream;)Lcom/mojang/serialization/DataResult;
-		ARG 0 vec3i
+		ARG 0 positions
 	METHOD lambda$static$2 (Lnet/minecraft/core/Vec3i;)Ljava/util/stream/IntStream;
 		ARG 0 vec3i
 	METHOD multiply (I)Lnet/minecraft/core/Vec3i;

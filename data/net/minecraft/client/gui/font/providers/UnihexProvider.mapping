@@ -2,27 +2,27 @@ CLASS net/minecraft/client/gui/font/providers/UnihexProvider
 	METHOD <init> (Lnet/minecraft/client/gui/font/CodepointMap;)V
 		ARG 1 glyphs
 	METHOD copyUntil (Ljava/io/InputStream;Lit/unimi/dsi/fastutil/bytes/ByteList;I)Z
-		ARG 0 stream
-		ARG 1 byteList
-		ARG 2 value
+		ARG 0 input
+		ARG 1 output
+		ARG 2 delimiter
 	METHOD decodeHex (IB)I
-		ARG 0 lineNumber
+		ARG 0 line
 		ARG 1 data
 	METHOD decodeHex (ILit/unimi/dsi/fastutil/bytes/ByteList;I)I
-		ARG 0 lineNumber
-		ARG 1 byteList
+		ARG 0 line
+		ARG 1 input
 		ARG 2 index
 	METHOD readFromStream (Ljava/io/InputStream;Lnet/minecraft/client/gui/font/providers/UnihexProvider$ReaderOutput;)V
-		ARG 0 stream
+		ARG 0 input
 		ARG 1 output
 	METHOD unpackBitsToBytes (Ljava/nio/IntBuffer;III)V
-		ARG 0 buffer
-		ARG 1 lineData
+		ARG 0 output
+		ARG 1 value
 		ARG 2 left
 		ARG 3 right
 	METHOD unpackBitsToBytes (Ljava/nio/IntBuffer;Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;II)V
-		ARG 0 buffer
-		ARG 1 lineData
+		ARG 0 output
+		ARG 1 data
 		ARG 2 left
 		ARG 3 right
 	CLASS LineData
@@ -37,36 +37,36 @@ CLASS net/minecraft/client/gui/font/providers/UnihexProvider
 		METHOD load (Lnet/minecraft/server/packs/resources/ResourceManager;)Lcom/mojang/blaze3d/font/GlyphProvider;
 			ARG 1 resourceManager
 		METHOD loadData (Ljava/io/InputStream;)Lnet/minecraft/client/gui/font/providers/UnihexProvider;
-			ARG 1 inputStream
+			ARG 1 zipFile
 	CLASS Dimensions
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 		METHOD left (I)I
-			ARG 0 packedDimensions
+			ARG 0 packed
 		METHOD pack (II)I
 			ARG 0 left
 			ARG 1 right
 		METHOD right (I)I
-			ARG 0 packedDimensions
+			ARG 0 packed
 	CLASS IntContents
 		METHOD read24 (ILit/unimi/dsi/fastutil/bytes/ByteList;)Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;
-			ARG 0 index
-			ARG 1 byteList
+			ARG 0 line
+			ARG 1 input
 		METHOD read32 (ILit/unimi/dsi/fastutil/bytes/ByteList;)Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;
-			ARG 0 index
-			ARG 1 byteList
+			ARG 0 line
+			ARG 1 input
 	CLASS ByteContents
 		METHOD read (ILit/unimi/dsi/fastutil/bytes/ByteList;)Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;
-			ARG 0 index
-			ARG 1 byteList
+			ARG 0 line
+			ARG 1 input
 	CLASS ReaderOutput
 		METHOD accept (ILnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;)V
 			ARG 1 codePoint
-			ARG 2 lineData
+			ARG 2 glyph
 	CLASS OverrideRange
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 	CLASS ShortContents
 		METHOD read (ILit/unimi/dsi/fastutil/bytes/ByteList;)Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;
-			ARG 0 index
-			ARG 1 byteList
+			ARG 0 line
+			ARG 1 input

@@ -48,7 +48,7 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 1 railBlock
 	METHOD createAirLikeBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/Identifier;)V
 		ARG 1 airLikeBlock
-		ARG 2 particleTexture
+		ARG 2 particle
 	METHOD createAirLikeBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/Item;)V
 		ARG 1 airLikeBlock
 		ARG 2 particleItem
@@ -75,12 +75,12 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 3 color
 	METHOD createBars (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)V
 		ARG 1 block
-		ARG 2 postEnds
-		ARG 3 post
-		ARG 4 cap
-		ARG 5 capAlt
-		ARG 6 postSide
-		ARG 7 postSideAlt
+		ARG 2 postEndResource
+		ARG 3 postResource
+		ARG 4 capResource
+		ARG 5 capAltResource
+		ARG 6 sideResource
+		ARG 7 sideAltResource
 	METHOD createBarsAndItem (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 barsBlock
 	METHOD createBarsAndItem (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
@@ -280,7 +280,7 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 		ARG 1 headBlock
 		ARG 2 wallHeadBlock
 		ARG 3 type
-		ARG 4 modelLocation
+		ARG 4 itemBase
 	METHOD createHorizontallyRotatedBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/client/data/models/model/TexturedModel$Provider;)V
 		ARG 1 horizontallyRotatedBlock
 		ARG 2 provider
@@ -482,9 +482,9 @@ CLASS net/minecraft/client/data/models/BlockModelGenerators
 	METHOD or ([Lnet/minecraft/client/data/models/blockstates/ConditionBuilder;)Lnet/minecraft/client/renderer/block/model/multipart/Condition;
 		ARG 0 conditions
 	METHOD plainModel (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/block/model/Variant;
-		ARG 0 modelLocation
+		ARG 0 model
 	METHOD plainVariant (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/MultiVariant;
-		ARG 0 id
+		ARG 0 model
 	METHOD registerSimpleFlatItemModel (Lnet/minecraft/world/item/Item;)V
 		ARG 1 item
 	METHOD registerSimpleFlatItemModel (Lnet/minecraft/world/level/block/Block;)V

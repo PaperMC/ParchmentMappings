@@ -3,4 +3,4 @@ CLASS net/minecraft/client/resources/model/ResolvableModel
 		ARG 1 resolver
 	CLASS Resolver
 		METHOD markDependency (Lnet/minecraft/resources/Identifier;)V
-			ARG 1 dependency
+			ARG 1 id

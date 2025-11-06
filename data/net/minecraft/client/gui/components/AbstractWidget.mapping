@@ -9,7 +9,7 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 1 x
 		ARG 3 y
 	METHOD defaultButtonNarrationText (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
-		ARG 1 narrationElementOutput
+		ARG 1 output
 	METHOD handleCursor (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
 	METHOD isMouseOver (DD)Z
@@ -71,7 +71,7 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 	METHOD setY (I)V
 		ARG 1 y
 	METHOD updateWidgetNarration (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
-		ARG 1 narrationElementOutput
+		ARG 1 output
 	METHOD wrapDefaultNarrationMessage (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 message
 	CLASS WithInactiveMessage

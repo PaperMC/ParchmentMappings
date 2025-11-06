@@ -12,8 +12,8 @@ CLASS net/minecraft/client/renderer/rendertype/RenderTypes
 		ARG 0 texture
 	METHOD breezeWind (Lnet/minecraft/resources/Identifier;FF)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
-		ARG 1 u
-		ARG 2 v
+		ARG 1 uOffset
+		ARG 2 vOffset
 	METHOD createArmorDecalCutoutNoCull (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
 	METHOD createWeather (Lcom/mojang/blaze3d/pipeline/RenderPipeline;)Ljava/util/function/Function;
@@ -24,8 +24,8 @@ CLASS net/minecraft/client/renderer/rendertype/RenderTypes
 		ARG 0 texture
 	METHOD energySwirl (Lnet/minecraft/resources/Identifier;FF)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
-		ARG 1 u
-		ARG 2 v
+		ARG 1 uOffset
+		ARG 2 vOffset
 	METHOD entityCutout (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/rendertype/RenderType;
 		ARG 0 texture
 	METHOD entityCutoutNoCull (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/rendertype/RenderType;

@@ -4,4 +4,4 @@ CLASS net/minecraft/client/renderer/entity/layers/WingsLayer
 		ARG 2 models
 		ARG 3 equipmentRenderer
 	METHOD getPlayerElytraTexture (Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)Lnet/minecraft/resources/Identifier;
-		ARG 0 renderState
+		ARG 0 state

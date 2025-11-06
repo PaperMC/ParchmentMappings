@@ -1,7 +1,7 @@
 CLASS com/mojang/blaze3d/preprocessor/GlslPreprocessor
 	METHOD applyImport (ZLjava/lang/String;)Ljava/lang/String;
-		ARG 1 useFullPath
-		ARG 2 directory
+		ARG 1 isRelative
+		ARG 2 path
 	METHOD injectDefines (Ljava/lang/String;Lnet/minecraft/client/renderer/ShaderDefines;)Ljava/lang/String;
 		ARG 0 shaderSource
 		ARG 1 defines
@@ -17,10 +17,10 @@ CLASS com/mojang/blaze3d/preprocessor/GlslPreprocessor
 	METHOD processImports (Ljava/lang/String;Lcom/mojang/blaze3d/preprocessor/GlslPreprocessor$Context;Ljava/lang/String;)Ljava/util/List;
 		ARG 1 shaderData
 		ARG 2 context
-		ARG 3 includeDirectory
+		ARG 3 parentPath
 	METHOD processVersions (Ljava/lang/String;Lcom/mojang/blaze3d/preprocessor/GlslPreprocessor$Context;)Ljava/lang/String;
 		ARG 1 versionData
 		ARG 2 context
 	METHOD setVersion (Ljava/lang/String;I)Ljava/lang/String;
 		ARG 1 versionData
-		ARG 2 glslVersion
+		ARG 2 version

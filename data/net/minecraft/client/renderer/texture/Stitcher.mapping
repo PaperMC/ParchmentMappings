@@ -3,7 +3,7 @@ CLASS net/minecraft/client/renderer/texture/Stitcher
 		ARG 1 maxWidth
 		ARG 2 maxHeight
 		ARG 3 mipLevel
-		ARG 4 maxAnisotropyBit
+		ARG 4 anisotropyBit
 	METHOD addToStorage (Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)Z
 		COMMENT Attempts to find space for specified {@code holder}.
 		COMMENT @return {@code true} if there was space; {@code false} otherwise
@@ -23,10 +23,10 @@ CLASS net/minecraft/client/renderer/texture/Stitcher
 	METHOD lambda$stitch$3 (Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)Lnet/minecraft/client/renderer/texture/Stitcher$Entry;
 		ARG 0 stitcherHolder
 	METHOD registerSprite (Lnet/minecraft/client/renderer/texture/Stitcher$Entry;)V
-		ARG 1 stitcherEntry
+		ARG 1 entry
 	METHOD smallestFittingMinTexel (II)I
-		ARG 0 dimension
-		ARG 1 mipLevel
+		ARG 0 input
+		ARG 1 maxMipLevel
 	CLASS Region
 		METHOD <init> (IIII)V
 			ARG 1 originX
@@ -36,7 +36,7 @@ CLASS net/minecraft/client/renderer/texture/Stitcher
 		METHOD add (Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)Z
 			ARG 1 holder
 		METHOD walk (Lnet/minecraft/client/renderer/texture/Stitcher$SpriteLoader;I)V
-			ARG 1 spriteLoader
+			ARG 1 output
 			ARG 2 padding
 	CLASS SpriteLoader
 		METHOD load (Lnet/minecraft/client/renderer/texture/Stitcher$Entry;III)V

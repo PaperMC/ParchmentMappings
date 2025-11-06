@@ -2,11 +2,11 @@ CLASS net/minecraft/client/resources/sounds/AbstractSoundInstance
 	FIELD delay I
 		COMMENT The number of ticks between repeating the sound
 	METHOD <init> (Lnet/minecraft/resources/Identifier;Lnet/minecraft/sounds/SoundSource;Lnet/minecraft/util/RandomSource;)V
-		ARG 1 location
+		ARG 1 identifier
 		ARG 2 source
 		ARG 3 random
 	METHOD <init> (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;Lnet/minecraft/util/RandomSource;)V
-		ARG 1 soundEvent
+		ARG 1 event
 		ARG 2 source
 		ARG 3 random
 	METHOD isRelative ()Z

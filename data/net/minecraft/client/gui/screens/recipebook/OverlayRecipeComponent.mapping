@@ -4,18 +4,18 @@ CLASS net/minecraft/client/gui/screens/recipebook/OverlayRecipeComponent
 		ARG 2 isFurnaceMenu
 	METHOD init (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/util/context/ContextMap;ZIIIIF)V
 		ARG 1 collection
-		ARG 2 contextMap
+		ARG 2 context
 		ARG 3 isFiltering
-		ARG 4 x
-		ARG 5 y
-		ARG 6 overlayX
-		ARG 7 overlayY
-		ARG 8 width
+		ARG 4 buttonX
+		ARG 5 buttonY
+		ARG 6 centerX
+		ARG 7 centerY
+		ARG 8 buttonWidth
 	METHOD isMouseOver (DD)Z
 		ARG 1 mouseX
 		ARG 3 mouseY
 	METHOD setVisible (Z)V
-		ARG 1 isVisible
+		ARG 1 visible
 	CLASS OverlayRecipeButton
 		METHOD <init> (Lnet/minecraft/client/gui/screens/recipebook/OverlayRecipeComponent;IILnet/minecraft/world/item/crafting/display/RecipeDisplayId;ZLjava/util/List;)V
 			ARG 2 x
@@ -28,21 +28,21 @@ CLASS net/minecraft/client/gui/screens/recipebook/OverlayRecipeComponent
 			ARG 1 y
 			ARG 2 possibleItems
 		METHOD getSprite (Z)Lnet/minecraft/resources/Identifier;
-			ARG 1 enabled
+			ARG 1 isCraftable
 		CLASS Pos
 			METHOD <init> (IILjava/util/List;)V
 				ARG 1 x
 				ARG 2 y
 				ARG 3 ingredients
 			METHOD selectIngredient (I)Lnet/minecraft/world/item/ItemStack;
-				ARG 1 index
+				ARG 1 currentIndex
 	CLASS OverlayCraftingRecipeButton
 		METHOD <init> (Lnet/minecraft/client/gui/screens/recipebook/OverlayRecipeComponent;IILnet/minecraft/world/item/crafting/display/RecipeDisplayId;Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/util/context/ContextMap;Z)V
 			ARG 2 x
 			ARG 3 y
-			ARG 4 recipe
-			ARG 5 recipeDisplay
-			ARG 6 contextMap
+			ARG 4 id
+			ARG 5 recipe
+			ARG 6 context
 			ARG 7 isCraftable
 		METHOD calculateIngredientsPositions (Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/util/context/ContextMap;)Ljava/util/List;
 			ARG 0 recipeDisplay
@@ -51,10 +51,10 @@ CLASS net/minecraft/client/gui/screens/recipebook/OverlayRecipeComponent
 		METHOD <init> (Lnet/minecraft/client/gui/screens/recipebook/OverlayRecipeComponent;IILnet/minecraft/world/item/crafting/display/RecipeDisplayId;Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/util/context/ContextMap;Z)V
 			ARG 2 x
 			ARG 3 y
-			ARG 4 recipe
-			ARG 5 recipeDisplay
-			ARG 6 contextMap
+			ARG 4 id
+			ARG 5 recipe
+			ARG 6 context
 			ARG 7 isCraftable
 		METHOD calculateIngredientsPositions (Lnet/minecraft/world/item/crafting/display/RecipeDisplay;Lnet/minecraft/util/context/ContextMap;)Ljava/util/List;
-			ARG 0 recipeDisplay
-			ARG 1 contextMap
+			ARG 0 recipe
+			ARG 1 context

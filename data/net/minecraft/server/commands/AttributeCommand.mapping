@@ -43,6 +43,12 @@ CLASS net/minecraft/server/commands/AttributeCommand
 		ARG 0 context
 	METHOD lambda$register$14 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
+	METHOD lambda$register$16 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$register$17 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$register$4 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD lambda$register$5 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$6 (Lcom/mojang/brigadier/context/CommandContext;)I

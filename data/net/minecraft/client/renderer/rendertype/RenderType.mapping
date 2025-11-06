@@ -6,4 +6,4 @@ CLASS net/minecraft/client/renderer/rendertype/RenderType
 		ARG 0 name
 		ARG 1 state
 	METHOD draw (Lcom/mojang/blaze3d/vertex/MeshData;)V
-		ARG 1 meshData
+		ARG 1 mesh

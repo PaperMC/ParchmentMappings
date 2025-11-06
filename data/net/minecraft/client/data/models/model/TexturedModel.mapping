@@ -6,7 +6,7 @@ CLASS net/minecraft/client/data/models/model/TexturedModel
 		ARG 1 block
 		ARG 2 output
 	METHOD createAllSame (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TexturedModel;
-		ARG 0 location
+		ARG 0 id
 	METHOD createDefault (Ljava/util/function/Function;Lnet/minecraft/client/data/models/model/ModelTemplate;)Lnet/minecraft/client/data/models/model/TexturedModel$Provider;
 		ARG 0 textureMappingGetter
 		ARG 1 template

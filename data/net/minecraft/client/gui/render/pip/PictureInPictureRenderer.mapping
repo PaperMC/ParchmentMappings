@@ -12,7 +12,7 @@ CLASS net/minecraft/client/gui/render/pip/PictureInPictureRenderer
 		ARG 2 guiRenderState
 		ARG 3 guiScale
 	METHOD prepareTexturesAndProjection (ZII)V
-		ARG 1 resetTexture
+		ARG 1 needsAResize
 		ARG 2 width
 		ARG 3 height
 	METHOD renderToTexture (Lnet/minecraft/client/gui/render/state/pip/PictureInPictureRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;)V

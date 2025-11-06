@@ -3,14 +3,14 @@ CLASS net/minecraft/client/resources/SkinManager
 		ARG 1 skinDirectory
 		ARG 2 services
 		ARG 3 skinTextureDownloader
-		ARG 4 executor
+		ARG 4 mainThreadExecutor
 	METHOD createLookup (Lcom/mojang/authlib/GameProfile;Z)Ljava/util/function/Supplier;
 		ARG 1 profile
 		ARG 2 requireSecure
 	METHOD get (Lcom/mojang/authlib/GameProfile;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 profile
 	METHOD registerTextures (Ljava/util/UUID;Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 uuid
+		ARG 1 profileId
 		ARG 2 textures
 	CLASS 1
 		METHOD lambda$load$1 (Lnet/minecraft/client/resources/SkinManager$CacheKey;Lcom/mojang/authlib/minecraft/MinecraftProfileTextures;)Ljava/util/concurrent/CompletionStage;
@@ -27,6 +27,6 @@ CLASS net/minecraft/client/resources/SkinManager
 		METHOD getOrLoad (Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 texture
 		METHOD getTextureLocation (Ljava/lang/String;)Lnet/minecraft/resources/Identifier;
-			ARG 1 name
+			ARG 1 textureHash
 		METHOD registerTexture (Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 texture

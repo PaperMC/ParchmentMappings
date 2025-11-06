@@ -2,15 +2,15 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 	METHOD getFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/rendertype/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 bufferSource
 		ARG 1 renderType
-		ARG 2 isItem
+		ARG 2 sheeted
 		ARG 3 hasFoil
 	METHOD getFoilRenderTypes (Lnet/minecraft/client/renderer/rendertype/RenderType;ZZ)Ljava/util/List;
 		ARG 0 renderType
-		ARG 1 isItem
+		ARG 1 sheeted
 		ARG 2 hasFoil
 	METHOD getLayerColorSafe ([II)I
-		ARG 0 tintLayers
-		ARG 1 index
+		ARG 0 layers
+		ARG 1 layer
 	METHOD getSpecialFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/rendertype/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 bufferSource
 		ARG 1 renderType

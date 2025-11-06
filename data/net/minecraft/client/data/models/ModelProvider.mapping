@@ -14,7 +14,6 @@ CLASS net/minecraft/client/data/models/ModelProvider
 			ARG 2 pathProvider
 	CLASS SimpleModelCollector
 		METHOD accept (Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/data/models/model/ModelInstance;)V
-			ARG 1 location
 			ARG 2 model
 		METHOD save (Lnet/minecraft/data/CachedOutput;Lnet/minecraft/data/PackOutput$PathProvider;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 output

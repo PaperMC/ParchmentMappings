@@ -20,7 +20,7 @@ CLASS net/minecraft/client/gui/screens/Screen
 	METHOD clickUrlAction (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Ljava/net/URI;)Z
 		ARG 0 minecraft
 		ARG 1 screen
-		ARG 2 url
+		ARG 2 uri
 	METHOD createArrowEvent (Lnet/minecraft/client/gui/navigation/ScreenDirection;)Lnet/minecraft/client/gui/navigation/FocusNavigationEvent$ArrowNavigation;
 		ARG 1 direction
 	METHOD createTabEvent (Z)Lnet/minecraft/client/gui/navigation/FocusNavigationEvent$TabNavigation;
@@ -53,11 +53,11 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 1 mouseX
 		ARG 3 mouseY
 	METHOD isValidCharacterForName (Ljava/lang/String;II)Z
-		ARG 1 text
-		ARG 2 codePoint
+		ARG 1 currentName
+		ARG 2 newChar
 		ARG 3 cursorPos
 	METHOD onFilesDrop (Ljava/util/List;)V
-		ARG 1 packs
+		ARG 1 files
 	METHOD removeWidget (Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
 		ARG 1 listener
 	METHOD renderBackground (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
@@ -77,11 +77,11 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 5 height
 	METHOD renderMenuBackgroundTexture (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/Identifier;IIFFII)V
 		ARG 0 guiGraphics
-		ARG 1 texture
+		ARG 1 menuBackground
 		ARG 2 x
 		ARG 3 y
-		ARG 4 uOffset
-		ARG 5 vOffset
+		ARG 4 u
+		ARG 5 v
 		ARG 6 width
 		ARG 7 height
 	METHOD renderPanorama (Lnet/minecraft/client/gui/GuiGraphics;F)V
@@ -98,24 +98,24 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 1 width
 		ARG 2 height
 	METHOD runNarration (Z)V
-		ARG 1 onlyNarrateNew
+		ARG 1 onlyChanged
 	METHOD scheduleNarration (JZ)V
 		ARG 1 delay
-		ARG 3 stopSuppression
+		ARG 3 ignoreSuppression
 	METHOD setInitialFocus (Lnet/minecraft/client/gui/components/events/GuiEventListener;)V
 		ARG 1 listener
 	METHOD setNarrationSuppressTime (J)V
 		ARG 1 narrationSuppressTime
 	METHOD suppressNarration (J)V
-		ARG 1 time
+		ARG 1 duration
 	METHOD triggerImmediateNarration (Z)V
-		ARG 1 onlyNarrateNew
+		ARG 1 onlyChanged
 	METHOD updateNarratedWidget (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
-		ARG 1 narrationElementOutput
+		ARG 1 output
 	METHOD updateNarrationState (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
 		ARG 1 output
 	METHOD updateNarratorStatus (Z)V
-		ARG 1 narratorEnabled
+		ARG 1 wasDisabled
 	CLASS NarratableSearchResult
 		METHOD <init> (Lnet/minecraft/client/gui/narration/NarratableEntry;ILnet/minecraft/client/gui/narration/NarratableEntry$NarrationPriority;)V
 			ARG 1 entry

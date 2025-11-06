@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/particle/ParticleResources
 	METHOD loadParticleDescription (Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/Resource;)Ljava/util/Optional;
-		ARG 1 sprite
+		ARG 1 id
 		ARG 2 resource
 	METHOD onReload (Ljava/lang/Runnable;)V
 		ARG 1 onReload

@@ -121,7 +121,7 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 			ARG 3 y
 			ARG 4 mouseX
 			ARG 5 mouseY
-			ARG 6 spriteLocation
+			ARG 6 sprite
 			ARG 7 tooltipSupplier
 		METHOD firstLineY (I)I
 			ARG 1 top
@@ -202,7 +202,7 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 	CLASS NotificationButton
 		METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/gui/components/Button$OnPress;Lnet/minecraft/network/chat/Component;)V
 			ARG 1 message
-			ARG 2 sprite
+			ARG 2 texture
 			ARG 3 onPress
 			ARG 4 tooltipMessage
 		METHOD drawNotificationCounter (Lnet/minecraft/client/gui/GuiGraphics;)V
@@ -230,7 +230,7 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 			ARG 4 text
 			ARG 5 url
 		METHOD lambda$renderContent$1 (Lnet/minecraft/client/gui/GuiGraphics;FIILnet/minecraft/client/gui/components/AbstractWidget;)V
-			ARG 5 widget
+			ARG 5 child
 		METHOD refreshLayout (I)V
 			ARG 1 width
 		METHOD textWidth (I)I

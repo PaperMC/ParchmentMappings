@@ -5,36 +5,36 @@ CLASS net/minecraft/client/renderer/PostChain
 		ARG 3 externalTargets
 		ARG 4 projectionMatrixBuffer
 	METHOD addToFrame (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;IILnet/minecraft/client/renderer/PostChain$TargetBundle;)V
-		ARG 1 frameGraphBuilder
-		ARG 2 width
-		ARG 3 height
-		ARG 4 targetBundle
+		ARG 1 frame
+		ARG 2 screenWidth
+		ARG 3 screenHeight
+		ARG 4 providedTargets
 	METHOD createPass (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/PostChainConfig$Pass;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/renderer/PostPass;
 		ARG 0 textureManager
-		ARG 1 pass
-		ARG 2 location
+		ARG 1 config
+		ARG 2 id
 	METHOD getOrCreatePersistentTarget (Lnet/minecraft/resources/Identifier;Lcom/mojang/blaze3d/resource/RenderTargetDescriptor;)Lcom/mojang/blaze3d/pipeline/RenderTarget;
-		ARG 1 name
+		ARG 1 id
 		ARG 2 descriptor
 	METHOD lambda$load$0 (Lnet/minecraft/client/renderer/PostChainConfig;Lnet/minecraft/resources/Identifier;)Z
-		ARG 1 location
+		ARG 1 targetId
 	METHOD load (Lnet/minecraft/client/renderer/PostChainConfig;Lnet/minecraft/client/renderer/texture/TextureManager;Ljava/util/Set;Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/renderer/CachedOrthoProjectionMatrixBuffer;)Lnet/minecraft/client/renderer/PostChain;
 		ARG 0 config
 		ARG 1 textureManager
-		ARG 2 externalTargets
-		ARG 3 name
+		ARG 2 allowedExternalTargets
+		ARG 3 id
 		ARG 4 projectionMatrixBuffer
 	METHOD process (Lcom/mojang/blaze3d/pipeline/RenderTarget;Lcom/mojang/blaze3d/resource/GraphicsResourceAllocator;)V
-		ARG 1 target
-		ARG 2 graphicsResourceAllocator
+		ARG 1 mainTarget
+		ARG 2 resourceAllocator
 	CLASS TargetBundle
 		METHOD get (Lnet/minecraft/resources/Identifier;)Lcom/mojang/blaze3d/resource/ResourceHandle;
 			ARG 1 id
 		METHOD getOrThrow (Lnet/minecraft/resources/Identifier;)Lcom/mojang/blaze3d/resource/ResourceHandle;
 			ARG 1 id
 		METHOD of (Lnet/minecraft/resources/Identifier;Lcom/mojang/blaze3d/resource/ResourceHandle;)Lnet/minecraft/client/renderer/PostChain$TargetBundle;
-			ARG 0 id
-			ARG 1 handle
+			ARG 0 targetId
+			ARG 1 target
 		METHOD replace (Lnet/minecraft/resources/Identifier;Lcom/mojang/blaze3d/resource/ResourceHandle;)V
 			ARG 1 id
 			ARG 2 handle

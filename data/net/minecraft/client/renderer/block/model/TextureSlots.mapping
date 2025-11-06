@@ -2,16 +2,22 @@ CLASS net/minecraft/client/renderer/block/model/TextureSlots
 	METHOD <init> (Ljava/util/Map;)V
 		ARG 1 resolvedValues
 	METHOD getMaterial (Ljava/lang/String;)Lnet/minecraft/client/resources/model/Material;
-		ARG 1 name
+		ARG 1 reference
 	METHOD isTextureReference (Ljava/lang/String;)Z
-		ARG 0 name
+		ARG 0 texture
+	METHOD parseEntry (Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/client/renderer/block/model/TextureSlots$Data$Builder;)V
+		ARG 0 slot
+		ARG 1 value
+		ARG 2 output
+	METHOD parseTextureMap (Lcom/google/gson/JsonObject;)Lnet/minecraft/client/renderer/block/model/TextureSlots$Data;
+		ARG 0 json
 	CLASS Data
 		CLASS Builder
 			METHOD addReference (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/client/renderer/block/model/TextureSlots$Data$Builder;
-				ARG 1 name
-				ARG 2 material
+				ARG 1 slot
+				ARG 2 reference
 			METHOD addTexture (Ljava/lang/String;Lnet/minecraft/client/resources/model/Material;)Lnet/minecraft/client/renderer/block/model/TextureSlots$Data$Builder;
-				ARG 1 name
+				ARG 1 slot
 				ARG 2 material
 	CLASS Resolver
 		METHOD addFirst (Lnet/minecraft/client/renderer/block/model/TextureSlots$Data;)Lnet/minecraft/client/renderer/block/model/TextureSlots$Resolver;
@@ -19,4 +25,4 @@ CLASS net/minecraft/client/renderer/block/model/TextureSlots
 		METHOD addLast (Lnet/minecraft/client/renderer/block/model/TextureSlots$Data;)Lnet/minecraft/client/renderer/block/model/TextureSlots$Resolver;
 			ARG 1 data
 		METHOD resolve (Lnet/minecraft/client/resources/model/ModelDebugName;)Lnet/minecraft/client/renderer/block/model/TextureSlots;
-			ARG 1 name
+			ARG 1 debugNameProvider

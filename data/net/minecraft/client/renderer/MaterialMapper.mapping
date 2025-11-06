@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/renderer/MaterialMapper
 	METHOD apply (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/resources/model/Material;
-		ARG 1 name
+		ARG 1 path
 	METHOD defaultNamespaceApply (Ljava/lang/String;)Lnet/minecraft/client/resources/model/Material;
-		ARG 1 name
+		ARG 1 path

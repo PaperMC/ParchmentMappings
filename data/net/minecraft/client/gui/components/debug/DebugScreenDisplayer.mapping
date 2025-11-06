@@ -5,7 +5,7 @@ CLASS net/minecraft/client/gui/components/debug/DebugScreenDisplayer
 		ARG 1 line
 	METHOD addToGroup (Lnet/minecraft/resources/Identifier;Ljava/lang/String;)V
 		ARG 1 group
-		ARG 2 line
+		ARG 2 lines
 	METHOD addToGroup (Lnet/minecraft/resources/Identifier;Ljava/util/Collection;)V
 		ARG 1 group
 		ARG 2 lines

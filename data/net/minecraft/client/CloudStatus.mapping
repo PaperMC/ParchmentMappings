@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/CloudStatus
+	METHOD <init> (Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+		ARG 3 legacyName
+		ARG 4 key

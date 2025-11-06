@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/attribute/modifier/ColorModifier
+	CLASS 2
+		METHOD lambda$argumentKeyframeLerp$0 (FLnet/minecraft/world/attribute/modifier/ColorModifier$BlendToGray;Lnet/minecraft/world/attribute/modifier/ColorModifier$BlendToGray;)Lnet/minecraft/world/attribute/modifier/ColorModifier$BlendToGray;
+			ARG 0 delta
+			ARG 1 start
+			ARG 2 end
+	CLASS BlendToGray
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

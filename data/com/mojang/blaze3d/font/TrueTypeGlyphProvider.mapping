@@ -16,8 +16,8 @@ CLASS com/mojang/blaze3d/font/TrueTypeGlyphProvider
 		ARG 3 index
 	CLASS Glyph
 		METHOD <init> (Lcom/mojang/blaze3d/font/TrueTypeGlyphProvider;FFIIFI)V
-			ARG 2 bearingX
-			ARG 3 bearingY
+			ARG 2 left
+			ARG 3 top
 			ARG 4 width
 			ARG 5 height
 			ARG 6 advance

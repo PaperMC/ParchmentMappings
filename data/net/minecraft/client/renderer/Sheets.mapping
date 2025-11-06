@@ -3,12 +3,12 @@ CLASS net/minecraft/client/renderer/Sheets
 		ARG 0 decal
 	METHOD chooseMaterial (Lnet/minecraft/client/renderer/blockentity/state/ChestRenderState$ChestMaterialType;Lnet/minecraft/world/level/block/state/properties/ChestType;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 materialType
-		ARG 1 chestType
+		ARG 1 type
 	METHOD chooseMaterial (Lnet/minecraft/world/level/block/state/properties/ChestType;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/client/resources/model/Material;Lnet/minecraft/client/resources/model/Material;)Lnet/minecraft/client/resources/model/Material;
-		ARG 0 chestType
-		ARG 1 singleMaterial
-		ARG 2 leftMaterial
-		ARG 3 rightMaterial
+		ARG 0 type
+		ARG 1 single
+		ARG 2 left
+		ARG 3 right
 	METHOD colorToResourceMaterial (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/resources/Identifier;
 		ARG 0 color
 	METHOD colorToShulkerMaterial (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/resources/Identifier;
@@ -16,22 +16,22 @@ CLASS net/minecraft/client/renderer/Sheets
 	METHOD createBedMaterial (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 color
 	METHOD createHangingSignMaterial (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/resources/model/Material;
-		ARG 0 woodType
+		ARG 0 type
 	METHOD createShulkerMaterial (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 color
 	METHOD createSignMaterial (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/resources/model/Material;
-		ARG 0 woodType
+		ARG 0 type
 	METHOD getBannerMaterial (Lnet/minecraft/core/Holder;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 pattern
 	METHOD getBedMaterial (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 color
 	METHOD getDecoratedPotMaterial (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/client/resources/model/Material;
-		ARG 0 key
+		ARG 0 pattern
 	METHOD getHangingSignMaterial (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/resources/model/Material;
-		ARG 0 woodType
+		ARG 0 type
 	METHOD getShieldMaterial (Lnet/minecraft/core/Holder;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 pattern
 	METHOD getShulkerBoxMaterial (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 color
 	METHOD getSignMaterial (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/resources/model/Material;
-		ARG 0 woodType
+		ARG 0 type

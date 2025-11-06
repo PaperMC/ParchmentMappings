@@ -3,11 +3,11 @@ CLASS net/minecraft/client/renderer/ShaderManager
 		ARG 1 textureManager
 		ARG 2 recoveryHandler
 	METHOD createPreprocessor (Ljava/util/Map;Lnet/minecraft/resources/Identifier;)Lcom/mojang/blaze3d/preprocessor/GlslPreprocessor;
-		ARG 0 shaderResources
-		ARG 1 shaderLocation
+		ARG 0 files
+		ARG 1 location
 	METHOD getPostChain (Lnet/minecraft/resources/Identifier;Ljava/util/Set;)Lnet/minecraft/client/renderer/PostChain;
 		ARG 1 id
-		ARG 2 externalTargets
+		ARG 2 allowedTargets
 	METHOD getShader (Lnet/minecraft/resources/Identifier;Lcom/mojang/blaze3d/shaders/ShaderType;)Ljava/lang/String;
 		ARG 1 id
 		ARG 2 type
@@ -21,7 +21,7 @@ CLASS net/minecraft/client/renderer/ShaderManager
 		ARG 0 location
 		ARG 1 shader
 		ARG 2 type
-		ARG 3 shaderResources
+		ARG 3 files
 		ARG 4 output
 	METHOD tryTriggerRecovery (Ljava/lang/Exception;)V
 		ARG 1 exception
@@ -29,14 +29,14 @@ CLASS net/minecraft/client/renderer/ShaderManager
 		METHOD <init> (Lnet/minecraft/client/renderer/ShaderManager;Lnet/minecraft/client/renderer/ShaderManager$Configs;)V
 			ARG 2 configs
 		METHOD getOrLoadPostChain (Lnet/minecraft/resources/Identifier;Ljava/util/Set;)Lnet/minecraft/client/renderer/PostChain;
-			ARG 1 name
-			ARG 2 externalTargets
+			ARG 1 id
+			ARG 2 allowedTargets
 		METHOD getShaderSource (Lnet/minecraft/resources/Identifier;Lcom/mojang/blaze3d/shaders/ShaderType;)Ljava/lang/String;
 			ARG 1 id
 			ARG 2 type
 		METHOD loadPostChain (Lnet/minecraft/resources/Identifier;Ljava/util/Set;)Lnet/minecraft/client/renderer/PostChain;
-			ARG 1 name
-			ARG 2 externalTargets
+			ARG 1 id
+			ARG 2 allowedTargets
 	CLASS CompilationException
 		METHOD <init> (Ljava/lang/String;)V
 			ARG 1 message

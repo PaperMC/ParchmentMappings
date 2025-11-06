@@ -7,10 +7,10 @@ CLASS net/minecraft/client/renderer/texture/atlas/SpriteSource
 			ARG 1 loader
 	CLASS Output
 		METHOD add (Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/renderer/texture/atlas/SpriteSource$DiscardableLoader;)V
-			ARG 1 location
-			ARG 2 loader
+			ARG 1 id
+			ARG 2 sprite
 		METHOD add (Lnet/minecraft/resources/Identifier;Lnet/minecraft/server/packs/resources/Resource;)V
-			ARG 1 location
+			ARG 1 id
 			ARG 2 resource
 		METHOD removeAll (Ljava/util/function/Predicate;)V
 			ARG 1 predicate

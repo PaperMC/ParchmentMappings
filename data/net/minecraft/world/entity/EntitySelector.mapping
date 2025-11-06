@@ -23,6 +23,8 @@ CLASS net/minecraft/world/entity/EntitySelector
 		ARG 0 entity
 	METHOD lambda$static$4 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
+	METHOD lambda$static$5 (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 0 entity
 	METHOD notRiding (Lnet/minecraft/world/entity/Entity;)Ljava/util/function/Predicate;
 		ARG 0 entity
 	METHOD pushableBy (Lnet/minecraft/world/entity/Entity;)Ljava/util/function/Predicate;

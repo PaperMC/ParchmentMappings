@@ -1,8 +1,8 @@
 CLASS net/minecraft/client/renderer/item/ItemModel
 	METHOD update (Lnet/minecraft/client/renderer/item/ItemStackRenderState;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/client/renderer/item/ItemModelResolver;Lnet/minecraft/world/item/ItemDisplayContext;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/ItemOwner;I)V
-		ARG 1 renderState
-		ARG 2 stack
-		ARG 3 itemModelResolver
+		ARG 1 output
+		ARG 2 item
+		ARG 3 resolver
 		ARG 4 displayContext
 		ARG 5 level
 		ARG 6 owner

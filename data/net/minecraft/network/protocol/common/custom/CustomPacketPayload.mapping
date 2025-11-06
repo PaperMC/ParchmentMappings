@@ -8,6 +8,8 @@ CLASS net/minecraft/network/protocol/common/custom/CustomPacketPayload
 	METHOD createType (Ljava/lang/String;)Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload$Type;
 		ARG 0 id
 	CLASS 1
+		METHOD findCodec (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/network/codec/StreamCodec;
+			ARG 1 typeId
 		METHOD writeCap (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload$Type;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
 			ARG 1 buffer
 			ARG 2 type

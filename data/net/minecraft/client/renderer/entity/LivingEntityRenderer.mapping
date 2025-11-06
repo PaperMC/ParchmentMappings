@@ -6,40 +6,40 @@ CLASS net/minecraft/client/renderer/entity/LivingEntityRenderer
 	METHOD addLayer (Lnet/minecraft/client/renderer/entity/layers/RenderLayer;)Z
 		ARG 1 layer
 	METHOD getModelTint (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)I
-		ARG 1 renderState
+		ARG 1 state
 	METHOD getOverlayCoords (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;F)I
-		ARG 0 renderState
-		ARG 1 overlay
+		ARG 0 state
+		ARG 1 whiteOverlayProgress
 	METHOD getRenderType (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;ZZZ)Lnet/minecraft/client/renderer/rendertype/RenderType;
-		ARG 1 renderState
-		ARG 2 isVisible
-		ARG 3 renderTranslucent
-		ARG 4 appearsGlowing
+		ARG 1 state
+		ARG 2 isBodyVisible
+		ARG 3 forceTransparent
+		ARG 4 appearGlowing
 	METHOD getTextureLocation (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Lnet/minecraft/resources/Identifier;
-		ARG 1 renderState
+		ARG 1 state
 	METHOD getWhiteOverlayProgress (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)F
-		ARG 1 renderState
+		ARG 1 state
 	METHOD isBodyVisible (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Z
-		ARG 1 renderState
+		ARG 1 state
 	METHOD isEntityUpsideDown (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD isShaking (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Z
-		ARG 1 renderState
+		ARG 1 state
 	METHOD isUpsideDownName (Ljava/lang/String;)Z
 		ARG 0 name
 	METHOD scale (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;)V
-		ARG 1 renderState
+		ARG 1 state
 		ARG 2 poseStack
 	METHOD setupRotations (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;FF)V
-		ARG 1 renderState
+		ARG 1 state
 		ARG 2 poseStack
 		ARG 3 bodyRot
-		ARG 4 scale
+		ARG 4 entityScale
 	METHOD shouldRenderLayers (Lnet/minecraft/client/renderer/entity/state/LivingEntityRenderState;)Z
-		ARG 1 renderState
+		ARG 1 state
 	METHOD sleepDirectionToRotation (Lnet/minecraft/core/Direction;)F
-		ARG 0 facing
+		ARG 0 direction
 	METHOD solveBodyRot (Lnet/minecraft/world/entity/LivingEntity;FF)F
 		ARG 0 entity
-		ARG 1 yHeadRot
+		ARG 1 headRot
 		ARG 2 partialTick

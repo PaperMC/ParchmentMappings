@@ -6,32 +6,40 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 4 renderBuffers
 		ARG 5 levelRenderState
 		ARG 6 featureRenderDispatcher
+	METHOD addCloudsPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/CloudStatus;Lnet/minecraft/world/phys/Vec3;JFIF)V
+		ARG 1 frame
+		ARG 2 cloudStatus
+		ARG 3 cameraPosition
+		ARG 4 gameTime
+		ARG 6 partialTick
+		ARG 7 cloudColor
+		ARG 8 cloudHeight
 	METHOD addLateDebugPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/state/CameraRenderState;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lorg/joml/Matrix4f;)V
-		ARG 1 frameGraphBuilder
+		ARG 1 frame
 		ARG 2 cameraRenderState
-		ARG 3 shaderFog
+		ARG 3 fog
 		ARG 4 frustumMatrix
 	METHOD addMainPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/renderer/culling/Frustum;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;ZLnet/minecraft/client/renderer/state/LevelRenderState;Lnet/minecraft/client/DeltaTracker;Lnet/minecraft/util/profiling/ProfilerFiller;)V
-		ARG 1 frameGraphBuilder
+		ARG 1 frame
 		ARG 2 frustum
 		ARG 3 frustumMatrix
-		ARG 4 shaderFog
+		ARG 4 terrainFog
 		ARG 5 renderBlockOutline
 		ARG 6 renderState
 		ARG 7 deltaTracker
 		ARG 8 profiler
 	METHOD addParticlesPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
-		ARG 1 frameGraphBuilder
-		ARG 2 shaderFog
+		ARG 1 frame
+		ARG 2 fog
 	METHOD addRecentlyCompiledSection (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;)V
 		ARG 1 renderSection
 	METHOD addSkyPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lnet/minecraft/client/Camera;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
-		ARG 1 frameGraphBuilder
+		ARG 1 frame
 		ARG 2 camera
-		ARG 3 shaderFog
+		ARG 3 skyFog
 	METHOD addWeatherPass (Lcom/mojang/blaze3d/framegraph/FrameGraphBuilder;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;)V
-		ARG 1 frameGraphBuilder
-		ARG 2 shaderFog
+		ARG 1 frame
+		ARG 2 fog
 	METHOD allChanged ()V
 		COMMENT Loads all renderers and sets up the basic options usage.
 	METHOD applyFrustum (Lnet/minecraft/client/renderer/culling/Frustum;)V
@@ -51,9 +59,9 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 	METHOD cullTerrain (Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/culling/Frustum;Z)V
 		ARG 1 camera
 		ARG 2 frustum
-		ARG 3 isSpectator
+		ARG 3 spectator
 	METHOD destroyBlockProgress (ILnet/minecraft/core/BlockPos;I)V
-		ARG 1 breakerId
+		ARG 1 id
 		ARG 2 pos
 		ARG 3 progress
 	METHOD doesMobEffectBlockSky (Lnet/minecraft/client/Camera;)Z
@@ -86,6 +94,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 	METHOD getLightColor (Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;)I
 		ARG 0 level
 		ARG 1 pos
+	METHOD isSectionCompiledAndVisible (Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 pos
 	METHOD offsetFrustum (Lnet/minecraft/client/renderer/culling/Frustum;)Lnet/minecraft/client/renderer/culling/Frustum;
 		ARG 0 frustum
 	METHOD onChunkReadyToRender (Lnet/minecraft/world/level/ChunkPos;)V
@@ -96,15 +106,15 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 sectionPos
 	METHOD prepareChunkRenders (Lorg/joml/Matrix4fc;DDD)Lnet/minecraft/client/renderer/chunk/ChunkSectionsToRender;
 		ARG 1 frustumMatrix
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
+		ARG 2 camX
+		ARG 4 camY
+		ARG 6 camZ
 	METHOD prepareCullFrustum (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/client/renderer/culling/Frustum;
 		ARG 1 frustumMatrix
 		ARG 2 projectionMatrix
-		ARG 3 cameraPosition
+		ARG 3 cameraPos
 	METHOD removeProgress (Lnet/minecraft/server/level/BlockDestructionProgress;)V
-		ARG 1 progress
+		ARG 1 block
 	METHOD renderBlockDestroyAnimation (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lnet/minecraft/client/renderer/state/LevelRenderState;)V
 		ARG 1 poseStack
 		ARG 2 bufferSource
@@ -112,7 +122,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 	METHOD renderBlockOutline (Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;Lcom/mojang/blaze3d/vertex/PoseStack;ZLnet/minecraft/client/renderer/state/LevelRenderState;)V
 		ARG 1 bufferSource
 		ARG 2 poseStack
-		ARG 3 sort
+		ARG 3 onlyTranslucentBlocks
 		ARG 4 renderState
 	METHOD renderHitOutline (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDLnet/minecraft/client/renderer/state/BlockOutlineRenderState;IF)V
 		ARG 1 poseStack
@@ -122,36 +132,36 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 7 camZ
 		ARG 9 renderState
 		ARG 10 color
-		ARG 11 lineWidth
+		ARG 11 width
 	METHOD renderLevel (Lcom/mojang/blaze3d/resource/GraphicsResourceAllocator;Lnet/minecraft/client/DeltaTracker;ZLnet/minecraft/client/Camera;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/buffers/GpuBufferSlice;Lorg/joml/Vector4f;Z)V
-		ARG 1 graphicsResourceAllocator
+		ARG 1 resourceAllocator
 		ARG 2 deltaTracker
-		ARG 3 renderBlockOutline
+		ARG 3 renderOutline
 		ARG 4 camera
 		ARG 5 frustumMatrix
 		ARG 6 projectionMatrix
 		ARG 7 cullingProjectionMatrix
-		ARG 8 fogBuffer
+		ARG 8 terrainFog
 		ARG 9 fogColor
-		ARG 10 renderSky
+		ARG 10 shouldRenderSky
 	METHOD resize (II)V
 		ARG 1 width
 		ARG 2 height
 	METHOD scheduleResort (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Lnet/minecraft/client/renderer/chunk/TranslucencyPointOfView;Lnet/minecraft/world/phys/Vec3;ZZ)V
 		ARG 1 section
 		ARG 2 pointOfView
-		ARG 3 cameraPosition
-		ARG 4 force
-		ARG 5 ignoreAxisAlignment
+		ARG 3 cameraPos
+		ARG 4 blockPosChanged
+		ARG 5 isNearby
 	METHOD scheduleTranslucentSectionResort (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 cameraPosition
+		ARG 1 cameraPos
 	METHOD setBlockDirty (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 oldState
 		ARG 3 newState
 	METHOD setBlockDirty (Lnet/minecraft/core/BlockPos;Z)V
 		ARG 1 pos
-		ARG 2 reRenderOnMainThread
+		ARG 2 playerChanged
 	METHOD setBlocksDirty (IIIIII)V
 		COMMENT Re-renders all blocks in the specified range.
 		ARG 1 minX
@@ -171,18 +181,18 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 sectionX
 		ARG 2 sectionY
 		ARG 3 sectionZ
-		ARG 4 reRenderOnMainThread
+		ARG 4 playerChanged
 	METHOD setSectionDirtyWithNeighbors (III)V
 		ARG 1 sectionX
 		ARG 2 sectionY
 		ARG 3 sectionZ
 	METHOD setSectionRangeDirty (IIIIII)V
-		ARG 1 minY
-		ARG 2 minX
-		ARG 3 minZ
-		ARG 4 maxY
-		ARG 5 maxX
-		ARG 6 maxZ
+		ARG 1 minSectionX
+		ARG 2 minSectionY
+		ARG 3 minSectionZ
+		ARG 4 maxSectionX
+		ARG 5 maxSectionY
+		ARG 6 maxSectionZ
 	METHOD submitBlockEntities (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/state/LevelRenderState;Lnet/minecraft/client/renderer/SubmitNodeStorage;)V
 		ARG 1 poseStack
 		ARG 2 renderState

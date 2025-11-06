@@ -3,7 +3,7 @@ CLASS net/minecraft/client/gui/font/GlyphStitcher
 		ARG 1 textureManager
 		ARG 2 texturePrefix
 	METHOD stitch (Lcom/mojang/blaze3d/font/GlyphInfo;Lcom/mojang/blaze3d/font/GlyphBitmap;)Lnet/minecraft/client/gui/font/glyphs/BakedSheetGlyph;
-		ARG 1 glyph
+		ARG 1 info
 		ARG 2 glyphBitmap
 	METHOD textureName (I)Lnet/minecraft/resources/Identifier;
-		ARG 1 total
+		ARG 1 index

@@ -9,7 +9,7 @@ CLASS net/minecraft/client/gui/screens/advancements/AdvancementTabType
 		ARG 1 guiGraphics
 		ARG 2 offsetX
 		ARG 3 offsetY
-		ARG 4 isSelected
+		ARG 4 selected
 		ARG 5 index
 	METHOD drawIcon (Lnet/minecraft/client/gui/GuiGraphics;IIILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 guiGraphics

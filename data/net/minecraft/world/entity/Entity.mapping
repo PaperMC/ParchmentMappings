@@ -572,7 +572,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 damageMultiplier
 		ARG 4 damageSource
 	METHOD push (DDD)V
-		COMMENT Adds to the current velocity of the entity, and sets {@link #hasImpulse} to {@code true}.
+		COMMENT Adds to the current velocity of the entity, and sets {@link #needsSync} to {@code true}.
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

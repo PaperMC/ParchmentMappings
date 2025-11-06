@@ -1,4 +1,6 @@
 CLASS net/minecraft/server/commands/ScheduleCommand
+	METHOD lambda$register$2 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD lambda$register$3 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$4 (Lcom/mojang/brigadier/context/CommandContext;)I

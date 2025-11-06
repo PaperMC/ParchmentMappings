@@ -4,18 +4,18 @@ CLASS net/minecraft/client/renderer/entity/player/AvatarRenderer
 		ARG 2 slim
 	METHOD extractCapeState (Lnet/minecraft/world/entity/Avatar;Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;F)V
 		ARG 1 entity
-		ARG 2 reusedState
+		ARG 2 state
 		ARG 3 partialTick
 	METHOD extractFlightData (Lnet/minecraft/world/entity/Avatar;Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;F)V
 		ARG 1 entity
-		ARG 2 reusedState
+		ARG 2 state
 		ARG 3 partialTick
 	METHOD getArmPose (Lnet/minecraft/world/entity/Avatar;Lnet/minecraft/world/entity/HumanoidArm;)Lnet/minecraft/client/model/HumanoidModel$ArmPose;
 		ARG 0 avatar
 		ARG 1 arm
 	METHOD getArmPose (Lnet/minecraft/world/entity/Avatar;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/client/model/HumanoidModel$ArmPose;
 		ARG 0 avatar
-		ARG 1 stack
+		ARG 1 itemInHand
 		ARG 2 hand
 	METHOD isPlayerUpsideDown (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 0 player
@@ -25,16 +25,16 @@ CLASS net/minecraft/client/renderer/entity/player/AvatarRenderer
 		ARG 3 packedLight
 		ARG 4 skinTexture
 		ARG 5 model
-		ARG 6 sleeveShown
+		ARG 6 hasSleeve
 	METHOD renderLeftHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/Identifier;Z)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector
 		ARG 3 packedLight
 		ARG 4 skinTexture
-		ARG 5 sleeveShown
+		ARG 5 hasSleeve
 	METHOD renderRightHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/SubmitNodeCollector;ILnet/minecraft/resources/Identifier;Z)V
 		ARG 1 poseStack
 		ARG 2 nodeCollector
 		ARG 3 packedLight
 		ARG 4 skinTexture
-		ARG 5 sleeveShown
+		ARG 5 hasSleeve

@@ -68,6 +68,8 @@ CLASS net/minecraft/gametest/framework/TestCommand
 		ARG 0 context
 	METHOD lambda$register$42 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
+	METHOD lambda$runWithRetryOptions$13 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 1 context
 	METHOD lambda$runWithRetryOptions$14 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 1 context
 	METHOD lambda$runWithRetryOptions$15 (Lnet/minecraft/server/commands/InCommandFunction;Lcom/mojang/brigadier/context/CommandContext;)I

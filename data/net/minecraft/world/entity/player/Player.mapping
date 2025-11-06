@@ -229,6 +229,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 source
 		ARG 3 volume
 		ARG 4 pitch
+	METHOD playServerSideSound (Lnet/minecraft/sounds/SoundEvent;)V
+		ARG 1 sound
 	METHOD playSound (Lnet/minecraft/sounds/SoundEvent;FF)V
 		ARG 1 sound
 		ARG 2 volume

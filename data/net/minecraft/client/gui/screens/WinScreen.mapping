@@ -7,7 +7,7 @@ CLASS net/minecraft/client/gui/screens/WinScreen
 	METHOD addCreditsLine (Lnet/minecraft/network/chat/Component;ZZ)V
 		ARG 1 text
 		ARG 2 centered
-		ARG 3 narrate
+		ARG 3 narrated
 	METHOD addPoemFile (Ljava/io/Reader;)V
 		ARG 1 reader
 	METHOD addPoemLines (Ljava/lang/String;)V
@@ -15,7 +15,7 @@ CLASS net/minecraft/client/gui/screens/WinScreen
 	METHOD renderVignette (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
 	METHOD wrapCreditsIO (Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/gui/screens/WinScreen$CreditsReader;)V
-		ARG 1 location
+		ARG 1 file
 		ARG 2 reader
 	CLASS CreditsReader
 		METHOD read (Ljava/io/Reader;)V

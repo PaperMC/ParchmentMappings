@@ -6,5 +6,5 @@ CLASS net/minecraft/client/renderer/rendertype/TextureTransform
 		ARG 0 scale
 	CLASS OffsetTextureTransform
 		METHOD <init> (FF)V
-			ARG 1 u
-			ARG 2 v
+			ARG 1 uOffset
+			ARG 2 vOffset

@@ -9,7 +9,7 @@ CLASS net/minecraft/client/gui/screens/multiplayer/ServerSelectionList
 	METHOD setSelected (Lnet/minecraft/client/gui/screens/multiplayer/ServerSelectionList$Entry;)V
 		ARG 1 entry
 	METHOD updateNetworkServers (Ljava/util/List;)V
-		ARG 1 lanServers
+		ARG 1 servers
 	METHOD updateOnlineServers (Lnet/minecraft/client/multiplayer/ServerList;)V
 		ARG 1 servers
 	CLASS Entry
@@ -23,10 +23,10 @@ CLASS net/minecraft/client/gui/screens/multiplayer/ServerSelectionList
 			ARG 1 guiGraphics
 			ARG 2 x
 			ARG 3 y
-			ARG 4 icon
+			ARG 4 location
 		METHOD swap (II)V
-			ARG 1 pos1
-			ARG 2 pos2
+			ARG 1 currentIndex
+			ARG 2 newIndex
 		METHOD uploadServerIcon ([B)Z
 			ARG 1 iconBytes
 	CLASS NetworkServerEntry

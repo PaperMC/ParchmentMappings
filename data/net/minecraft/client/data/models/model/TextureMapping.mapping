@@ -10,7 +10,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 0 block
 		ARG 1 lit
 	METHOD cauldron (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 contentTextureId
 	METHOD column (Lnet/minecraft/resources/Identifier;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 side
 		ARG 1 end
@@ -22,7 +22,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 0 block
 	METHOD copyAndUpdate (Lnet/minecraft/client/data/models/model/TextureSlot;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 1 slot
-		ARG 2 texture
+		ARG 2 id
 	METHOD copyForced (Lnet/minecraft/client/data/models/model/TextureSlot;Lnet/minecraft/client/data/models/model/TextureSlot;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 1 source
 		ARG 2 destination
@@ -33,15 +33,15 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 0 block
 		ARG 1 bottom
 	METHOD crop (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 block
+		ARG 0 crop
 	METHOD cross (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 cross
 	METHOD cross (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD crossEmissive (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD cube (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 all
 	METHOD cube (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD cubeBottomTop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -91,7 +91,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 	METHOD lantern (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD layer0 (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 layer0
 	METHOD layer0 (Lnet/minecraft/world/item/Item;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 item
 	METHOD layer0 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -115,7 +115,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 0 block
 		ARG 1 edgeBlock
 	METHOD particle (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 particle
 	METHOD particle (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD particleFromItem (Lnet/minecraft/world/item/Item;)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -123,7 +123,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 	METHOD pattern (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD plant (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 plant
 	METHOD plant (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD plantEmissive (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -132,12 +132,12 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 0 block
 	METHOD put (Lnet/minecraft/client/data/models/model/TextureSlot;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 1 slot
-		ARG 2 texture
+		ARG 2 id
 	METHOD putForced (Lnet/minecraft/client/data/models/model/TextureSlot;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 1 slot
-		ARG 2 texture
+		ARG 2 id
 	METHOD rail (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 rail
 	METHOD rail (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD sculkShrieker (Z)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -146,7 +146,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 0 block
 	METHOD singleSlot (Lnet/minecraft/client/data/models/model/TextureSlot;Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 slot
-		ARG 1 texture
+		ARG 1 id
 	METHOD snifferEgg (Ljava/lang/String;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 name
 	METHOD stem (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -154,7 +154,7 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 	METHOD top (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD torch (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 torch
 	METHOD torch (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block
 	METHOD trialSpawner (Lnet/minecraft/world/level/block/Block;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/client/data/models/model/TextureMapping;
@@ -168,6 +168,6 @@ CLASS net/minecraft/client/data/models/model/TextureMapping
 		ARG 3 topSuffix
 		ARG 4 bottomSuffix
 	METHOD wool (Lnet/minecraft/resources/Identifier;)Lnet/minecraft/client/data/models/model/TextureMapping;
-		ARG 0 texture
+		ARG 0 wool
 	METHOD wool (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/client/data/models/model/TextureMapping;
 		ARG 0 block

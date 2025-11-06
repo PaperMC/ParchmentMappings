@@ -3,7 +3,7 @@ CLASS net/minecraft/client/gui/font/PlainTextRenderable
 		ARG 1 pose
 		ARG 2 consumer
 		ARG 3 packedLight
-		ARG 4 x
-		ARG 5 y
+		ARG 4 offsetX
+		ARG 5 offsetY
 		ARG 6 z
 		ARG 7 color

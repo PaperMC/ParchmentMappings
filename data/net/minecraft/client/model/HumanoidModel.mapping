@@ -30,17 +30,17 @@ CLASS net/minecraft/client/model/HumanoidModel
 		ARG 1 arm
 	METHOD poseBlockingArm (Lnet/minecraft/client/model/geom/ModelPart;Z)V
 		ARG 1 arm
-		ARG 2 isRightArm
+		ARG 2 right
 	METHOD poseLeftArm (Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)V
-		ARG 1 renderState
+		ARG 1 state
 	METHOD poseRightArm (Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)V
-		ARG 1 renderState
+		ARG 1 state
 	METHOD quadraticArmUpdate (F)F
 		ARG 1 limbSwing
 	METHOD setAllVisible (Z)V
 		ARG 1 visible
 	METHOD setupAttackAnimation (Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)V
-		ARG 1 renderState
+		ARG 1 state
 	CLASS ArmPose
 		METHOD <init> (Ljava/lang/String;IZ)V
 			ARG 3 twoHanded
@@ -49,4 +49,4 @@ CLASS net/minecraft/client/model/HumanoidModel
 			ARG 2 poseStack
 			ARG 3 ticksUsingItem
 			ARG 4 arm
-			ARG 5 stack
+			ARG 5 actualItem
