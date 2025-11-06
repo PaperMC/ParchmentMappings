@@ -2,8 +2,6 @@ package org.parchmentmc.enigma
 
 import cuchaz.enigma.api.service.JarIndexerService
 import cuchaz.enigma.api.service.NameProposalService
-import cuchaz.enigma.api.service.ProjectService
-import cuchaz.enigma.api.view.ProjectView
 import cuchaz.enigma.api.view.index.JarIndexView
 import cuchaz.enigma.classprovider.ClassProvider
 import cuchaz.enigma.translation.mapping.EntryRemapper
@@ -23,25 +21,36 @@ import javax.lang.model.SourceVersion
 
 class EnigmaNameProposalService(
     private val unobfuscatedJar: Path?
-) : JarIndexerService, NameProposalService, ProjectService {
+) : JarIndexerService, NameProposalService {
 
-    lateinit var indexer: JarIndexView
+    private var indexer: JarIndexView? = null
 
     // todo cleanup
+    private var expectedJar = true
     private var unobfuscatedClasses: ClassNodeCache? = null
 
     fun getUnobfuscatedNodes(): ClassNodeCache? {
+        if (!expectedJar) {
+            return null
+        }
+
         if (unobfuscatedJar != null && unobfuscatedClasses == null) {
             unobfuscatedClasses = ClassNodeCache.create(unobfuscatedJar.openZip())
         }
         return unobfuscatedClasses
     }
 
-    override fun onProjectClose(project: ProjectView) {
-        unobfuscatedClasses?.close()
-    }
-
     override fun acceptJar(scope: Set<String>, classProvider: ClassProvider, jarIndex: JarIndexView) {
+        if (indexer != null) { // jar swapped invalidate mc related data
+            unobfuscatedClasses?.close()
+            unobfuscatedClasses = null
+            expectedJar = false
+        } else {
+            Runtime.getRuntime().addShutdownHook(Thread.ofPlatform().unstarted {
+                unobfuscatedClasses?.close()
+                unobfuscatedClasses = null
+            })
+        }
         indexer = jarIndex
     }
 
@@ -59,7 +68,7 @@ class EnigmaNameProposalService(
         return false
     }
 
-    private fun isEnumConstructor(method: MethodEntry): Boolean {
+    private fun isEnumConstructor(method: MethodEntry, indexer: JarIndexView): Boolean {
         if (!method.isConstructor) {
             return false
         }
@@ -97,6 +106,7 @@ class EnigmaNameProposalService(
         if (obfEntry is LocalVariableEntry && obfEntry.isArgument) {
             val method = obfEntry.parent
             if (method != null) {
+                val indexer = indexer ?: error("Jar has not been indexed yet!")
                 val isStatic = Opcodes.ACC_STATIC in indexer.entryIndex.getAccess(method)
 
                 var offsetLvtIndex = 0
@@ -104,7 +114,7 @@ class EnigmaNameProposalService(
                     offsetLvtIndex++ // (this, ...)
                 }
                 var descStartIndex = 0 // ignore implicit argument in descriptors for conflict check
-                if (isEnumConstructor(method)) {
+                if (isEnumConstructor(method, indexer)) {
                     descStartIndex += 2 // (name, ordinal, ...)
                 }
 
