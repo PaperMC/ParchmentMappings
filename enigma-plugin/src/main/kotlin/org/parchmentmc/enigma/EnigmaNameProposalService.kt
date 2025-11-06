@@ -76,9 +76,6 @@ class EnigmaNameProposalService(
             if (mojmapMethod.name == method.name && mojmapMethod.desc == method.descriptor) {
                 if (mojmapMethod.parameters == null) { // for lambda search in the lvt directly
                     for (lvt in mojmapMethod.localVariables) {
-                        if (lvt.index > param.index) {
-                            break
-                        }
                         if (lvt.index == param.index) {
                             return lvt.name
                         }
@@ -126,7 +123,7 @@ class EnigmaNameProposalService(
 
                 val unobfuscatedNodes = getUnobfuscatedNodes()
                 val enclosingClass = method.parent
-                if (enclosingClass != null && unobfuscatedNodes != null) { // todo cleanup and support local class types (like FallbackResourceManager)
+                if (enclosingClass != null && unobfuscatedNodes != null) { // todo cleanup
                     val node = unobfuscatedNodes.findClass(enclosingClass.fullName) ?: error("Cannot find ${enclosingClass.fullName}")
                     extractNameFromUnobfuscatedNode(
                         obfEntry, paramIndex,
