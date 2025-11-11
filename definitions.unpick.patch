@@ -197,13 +197,14 @@
  group int max_string_length
  	net.minecraft.network.FriendlyByteBuf.MAX_STRING_LENGTH
  	net.minecraft.network.FriendlyByteBuf.MAX_COMPONENT_STRING_LENGTH
-@@ -1727,18 +_,6 @@
+@@ -1727,18 +_,9 @@
  
  target_annotation net.minecraft.world.level.block.Block$UpdateFlags set_block_state_flags
  
 -target_method net.minecraft.world.level.Level sendBlockUpdated (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;I)V
--	param 3 set_block_state_flags
--
++target_method net.minecraft.server.level.ServerLevel sendBlockUpdated (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;I)V
+ 	param 3 set_block_state_flags
+ 
 -target_method net.minecraft.world.level.redstone.NeighborUpdater shapeUpdate (Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;II)V
 -	param 4 set_block_state_flags
 -
