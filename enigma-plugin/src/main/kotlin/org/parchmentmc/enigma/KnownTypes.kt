@@ -8,6 +8,7 @@ object KnownTypes {
         // client
         "Lcom/mojang/blaze3d/vertex/VertexConsumer;" to "consumer",
         "Lcom/mojang/blaze3d/pipeline/RenderPipeline;" to "pipeline",
+        "Lnet/minecraft/client/gui/GuiGraphics;" to "guiGraphics",
 
         // server
         $$"Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;" to "instance",
