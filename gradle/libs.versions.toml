@@ -6,7 +6,7 @@ asm = "9.9"
 parchment = "0.10.0"
 jammer = "0.1.0" # use patched local version during update!
 
-vineflower = "1.11.1" # sync with mache
+vineflower = "1.11.1" # sync with mache !! Don't update until https://github.com/Vineflower/vineflower/commit/68402cda4d286be8e6c841ac30419f067e10703e is released
 enigma = "4.0.2"
 unpick = "3.0.0-beta.13"
 
@@ -28,7 +28,7 @@ enigma-gui = { module = "cuchaz:enigma-swing", version.ref = "enigma" }
 unpick = { module = "net.fabricmc.unpick:unpick", version.ref = "unpick" }
 unpick-format = { module = "net.fabricmc.unpick:unpick-format-utils", version.ref = "unpick" }
 
-art = "net.neoforged:AutoRenamingTool:2.0.15"
+art = "net.neoforged:AutoRenamingTool:2.0.17"
 mapping-io = "net.fabricmc:mapping-io:0.7.1"
 diffpatch = "io.codechicken:DiffPatch:2.0.1.40"
 
