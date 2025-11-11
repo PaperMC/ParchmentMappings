@@ -229,8 +229,8 @@ CLASS com/mojang/realmsclient/RealmsMainScreen
 			ARG 3 frameItemHeight
 			ARG 4 text
 			ARG 5 url
-		METHOD lambda$renderContent$1 (Lnet/minecraft/client/gui/GuiGraphics;FIILnet/minecraft/client/gui/components/AbstractWidget;)V
-			ARG 5 child
+		METHOD lambda$renderContent$2 (Lnet/minecraft/client/gui/GuiGraphics;IIFLnet/minecraft/client/gui/components/AbstractWidget;)V
+			ARG 4 child
 		METHOD refreshLayout (I)V
 			ARG 1 width
 		METHOD textWidth (I)I

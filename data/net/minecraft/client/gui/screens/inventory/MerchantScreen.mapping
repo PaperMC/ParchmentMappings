@@ -22,19 +22,21 @@ CLASS net/minecraft/client/gui/screens/inventory/MerchantScreen
 		ARG 5 y
 	METHOD renderButtonArrows (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/item/trading/MerchantOffer;II)V
 		ARG 1 guiGraphics
-		ARG 2 merchantOffers
+		ARG 2 offer
 		ARG 3 posX
 		ARG 4 posY
 	METHOD renderProgressBar (Lnet/minecraft/client/gui/GuiGraphics;IILnet/minecraft/world/item/trading/MerchantOffer;)V
 		ARG 1 guiGraphics
-		ARG 2 posX
-		ARG 3 posY
-		ARG 4 merchantOffer
-	METHOD renderScroller (Lnet/minecraft/client/gui/GuiGraphics;IILnet/minecraft/world/item/trading/MerchantOffers;)V
+		ARG 2 offsetX
+		ARG 3 offsetY
+		ARG 4 offer
+	METHOD renderScroller (Lnet/minecraft/client/gui/GuiGraphics;IIIILnet/minecraft/world/item/trading/MerchantOffers;)V
 		ARG 1 guiGraphics
-		ARG 2 posX
-		ARG 3 posY
-		ARG 4 merchantOffers
+		ARG 2 offsetX
+		ARG 3 offsetY
+		ARG 4 mouseX
+		ARG 5 mouseY
+		ARG 6 offers
 	CLASS TradeOfferButton
 		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/MerchantScreen;IIILnet/minecraft/client/gui/components/Button$OnPress;)V
 			ARG 2 x

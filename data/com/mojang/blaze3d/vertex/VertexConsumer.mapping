@@ -43,7 +43,7 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 6 alpha
 		ARG 7 packedLight
 		ARG 8 packedOverlay
-	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;[FFFFF[IIZ)V
+	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;[FFFFF[II)V
 		ARG 1 pose
 		ARG 2 quad
 		ARG 3 brightness
@@ -53,7 +53,6 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 7 alpha
 		ARG 8 lightmap
 		ARG 9 packedOverlay
-		ARG 10 readExistingColor
 	METHOD setColor (FFFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 red
 		ARG 2 green

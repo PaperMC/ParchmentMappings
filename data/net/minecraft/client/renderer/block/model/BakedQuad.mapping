@@ -1,10 +1,5 @@
 CLASS net/minecraft/client/renderer/block/model/BakedQuad
-	FIELD vertices [I
-		COMMENT Joined 4 vertex records, each stores packed data according to the VertexFormat of the quad. Vanilla uses DefaultVertexFormat.BLOCK.
-	METHOD <init> ([IILnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;ZI)V
-		ARG 1 vertices
-		ARG 2 tintIndex
-		ARG 3 direction
-		ARG 4 sprite
-		ARG 5 shade
-		ARG 6 lightEmission
+	METHOD packedUV (I)J
+		ARG 1 vertex
+	METHOD position (I)Lorg/joml/Vector3fc;
+		ARG 1 vertex

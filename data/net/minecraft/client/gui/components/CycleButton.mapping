@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/components/CycleButton
-	METHOD <init> (IIIILnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;ILjava/lang/Object;Ljava/util/function/Supplier;Lnet/minecraft/client/gui/components/CycleButton$ValueListSupplier;Ljava/util/function/Function;Ljava/util/function/Function;Lnet/minecraft/client/gui/components/CycleButton$OnValueChange;Lnet/minecraft/client/OptionInstance$TooltipSupplier;Z)V
+	METHOD <init> (IIIILnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;ILjava/lang/Object;Ljava/util/function/Supplier;Lnet/minecraft/client/gui/components/CycleButton$ValueListSupplier;Ljava/util/function/Function;Ljava/util/function/Function;Lnet/minecraft/client/gui/components/CycleButton$OnValueChange;Lnet/minecraft/client/OptionInstance$TooltipSupplier;Lnet/minecraft/client/gui/components/CycleButton$DisplayState;Lnet/minecraft/client/gui/components/CycleButton$SpriteSupplier;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 width
@@ -14,7 +14,8 @@ CLASS net/minecraft/client/gui/components/CycleButton
 		ARG 12 narrationProvider
 		ARG 13 onValueChange
 		ARG 14 tooltipSupplier
-		ARG 15 displayOnlyValue
+		ARG 15 displayState
+		ARG 16 spriteSupplier
 	METHOD booleanBuilder (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Z)Lnet/minecraft/client/gui/components/CycleButton$Builder;
 		ARG 0 componentOn
 		ARG 1 componentOff
@@ -63,15 +64,17 @@ CLASS net/minecraft/client/gui/components/CycleButton
 		METHOD create (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/components/CycleButton$OnValueChange;)Lnet/minecraft/client/gui/components/CycleButton;
 			ARG 1 message
 			ARG 2 onValueChange
-		METHOD displayOnlyValue (Z)Lnet/minecraft/client/gui/components/CycleButton$Builder;
-			ARG 1 displayOnlyValue
-		METHOD lambda$create$1 (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Object;)V
-			ARG 0 cycleButton
+		METHOD displayState (Lnet/minecraft/client/gui/components/CycleButton$DisplayState;)Lnet/minecraft/client/gui/components/CycleButton$Builder;
+			ARG 1 state
+		METHOD lambda$create$2 (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Object;)V
+			ARG 0 button
 			ARG 1 value
 		METHOD lambda$new$0 (Ljava/lang/Object;)Lnet/minecraft/client/gui/components/Tooltip;
 			ARG 0 tooltip
 		METHOD withCustomNarration (Ljava/util/function/Function;)Lnet/minecraft/client/gui/components/CycleButton$Builder;
 			ARG 1 narrationProvider
+		METHOD withSprite (Lnet/minecraft/client/gui/components/CycleButton$SpriteSupplier;)Lnet/minecraft/client/gui/components/CycleButton$Builder;
+			ARG 1 spriteSupplier
 		METHOD withTooltip (Lnet/minecraft/client/OptionInstance$TooltipSupplier;)Lnet/minecraft/client/gui/components/CycleButton$Builder;
 			ARG 1 tooltipSupplier
 		METHOD withValues (Ljava/util/Collection;)Lnet/minecraft/client/gui/components/CycleButton$Builder;
@@ -90,6 +93,10 @@ CLASS net/minecraft/client/gui/components/CycleButton
 	CLASS OnValueChange
 		METHOD onValueChange (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Object;)V
 			ARG 1 cycleButton
+			ARG 2 value
+	CLASS SpriteSupplier
+		METHOD apply (Lnet/minecraft/client/gui/components/CycleButton;Ljava/lang/Object;)Lnet/minecraft/resources/Identifier;
+			ARG 1 button
 			ARG 2 value
 	CLASS ValueListSupplier
 		METHOD create (Ljava/util/Collection;)Lnet/minecraft/client/gui/components/CycleButton$ValueListSupplier;

@@ -17,6 +17,8 @@ CLASS net/minecraft/client/renderer/block/model/Variant
 		ARG 1 x
 	METHOD withYRot (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant;
 		ARG 1 y
+	METHOD withZRot (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant;
+		ARG 1 z
 	CLASS SimpleModelState
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
@@ -26,3 +28,5 @@ CLASS net/minecraft/client/renderer/block/model/Variant
 			ARG 1 x
 		METHOD withY (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant$SimpleModelState;
 			ARG 1 y
+		METHOD withZ (Lcom/mojang/math/Quadrant;)Lnet/minecraft/client/renderer/block/model/Variant$SimpleModelState;
+			ARG 1 z

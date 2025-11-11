@@ -7,9 +7,6 @@ CLASS com/mojang/math/OctahedralGroup
 		ARG 7 invertZ
 	METHOD compose (Lcom/mojang/math/OctahedralGroup;)Lcom/mojang/math/OctahedralGroup;
 		ARG 1 other
-	METHOD fromXYAngles (Lcom/mojang/math/Quadrant;Lcom/mojang/math/Quadrant;)Lcom/mojang/math/OctahedralGroup;
-		ARG 0 x
-		ARG 1 y
 	METHOD inverts (Lnet/minecraft/core/Direction$Axis;)Z
 		ARG 1 axis
 	METHOD lambda$static$3 (Lcom/mojang/math/OctahedralGroup;)Lcom/mojang/math/OctahedralGroup;

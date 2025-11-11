@@ -97,8 +97,6 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 packet
 	METHOD handleGameEvent (Lnet/minecraft/network/protocol/game/ClientboundGameEventPacket;)V
 		ARG 1 packet
-	METHOD handleHorseScreenOpen (Lnet/minecraft/network/protocol/game/ClientboundHorseScreenOpenPacket;)V
-		ARG 1 packet
 	METHOD handleItemCooldown (Lnet/minecraft/network/protocol/game/ClientboundCooldownPacket;)V
 		ARG 1 packet
 	METHOD handleLevelEvent (Lnet/minecraft/network/protocol/game/ClientboundLevelEventPacket;)V

@@ -12,12 +12,12 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 	METHOD canScroll ()Z
 		COMMENT {@return (if you are not on the TAB_INVENTORY) and (the flag isn't set) and (you have more than 1 page of items)}
 	METHOD checkTabClicked (Lnet/minecraft/world/item/CreativeModeTab;DD)Z
-		ARG 1 creativeModeTab
+		ARG 1 tab
 		ARG 2 relativeMouseX
 		ARG 4 relativeMouseY
 	METHOD checkTabHovering (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/item/CreativeModeTab;II)Z
 		ARG 1 guiGraphics
-		ARG 2 creativeModeTab
+		ARG 2 tab
 		ARG 3 mouseX
 		ARG 4 mouseY
 	METHOD getTabX (Lnet/minecraft/world/item/CreativeModeTab;)I
@@ -46,9 +46,11 @@ CLASS net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen
 		ARG 4 dragY
 	METHOD refreshCurrentTabContents (Ljava/util/Collection;)V
 		ARG 1 items
-	METHOD renderTabButton (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/item/CreativeModeTab;)V
+	METHOD renderTabButton (Lnet/minecraft/client/gui/GuiGraphics;IILnet/minecraft/world/item/CreativeModeTab;)V
 		ARG 1 guiGraphics
-		ARG 2 creativeModeTab
+		ARG 2 mouseX
+		ARG 3 mouseY
+		ARG 4 tab
 	METHOD resize (II)V
 		ARG 1 width
 		ARG 2 height

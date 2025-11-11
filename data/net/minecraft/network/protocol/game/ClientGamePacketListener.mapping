@@ -93,8 +93,6 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleGameTestHighlightPos (Lnet/minecraft/network/protocol/game/ClientboundGameTestHighlightPosPacket;)V
 		ARG 1 packet
-	METHOD handleHorseScreenOpen (Lnet/minecraft/network/protocol/game/ClientboundHorseScreenOpenPacket;)V
-		ARG 1 packet
 	METHOD handleHurtAnimation (Lnet/minecraft/network/protocol/game/ClientboundHurtAnimationPacket;)V
 		ARG 1 packet
 	METHOD handleInitializeBorder (Lnet/minecraft/network/protocol/game/ClientboundInitializeBorderPacket;)V
@@ -118,6 +116,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleMerchantOffers (Lnet/minecraft/network/protocol/game/ClientboundMerchantOffersPacket;)V
 		ARG 1 packet
 	METHOD handleMinecartAlongTrack (Lnet/minecraft/network/protocol/game/ClientboundMoveMinecartPacket;)V
+		ARG 1 packet
+	METHOD handleMountScreenOpen (Lnet/minecraft/network/protocol/game/ClientboundMountScreenOpenPacket;)V
 		ARG 1 packet
 	METHOD handleMoveEntity (Lnet/minecraft/network/protocol/game/ClientboundMoveEntityPacket;)V
 		COMMENT Updates the specified entity's position by the specified relative momentum and absolute rotation. Note that subclassing of the packet allows for the specification of a subset of this data (e.g. only rel. position, abs. rotation or both).

@@ -14,6 +14,8 @@ CLASS net/minecraft/world/entity/animal/nautilus/AbstractNautilus
 		ARG 2 player
 	METHOD getRiddenRotation (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec2;
 		ARG 1 entity
+	METHOD hasInventoryChanged (Lnet/minecraft/world/Container;)Z
+		ARG 1 oldInventory
 	METHOD setDashing (Z)V
 		ARG 1 dash
 	METHOD tryToTame (Lnet/minecraft/world/entity/player/Player;)V

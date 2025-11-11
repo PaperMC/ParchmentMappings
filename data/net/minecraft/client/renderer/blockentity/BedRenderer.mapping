@@ -6,7 +6,7 @@ CLASS net/minecraft/client/renderer/blockentity/BedRenderer
 	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/model/geom/EntityModelSet;)V
 		ARG 1 materials
 		ARG 2 modelSet
-	METHOD getExtents (Ljava/util/Set;)V
+	METHOD getExtents (Ljava/util/function/Consumer;)V
 		ARG 1 output
 	METHOD lambda$extractRenderState$0 (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Z
 		ARG 0 level

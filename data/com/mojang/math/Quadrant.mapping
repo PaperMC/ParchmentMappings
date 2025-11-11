@@ -1,6 +1,16 @@
 CLASS com/mojang/math/Quadrant
-	METHOD <init> (Ljava/lang/String;II)V
+	METHOD <init> (Ljava/lang/String;IILcom/mojang/math/OctahedralGroup;Lcom/mojang/math/OctahedralGroup;Lcom/mojang/math/OctahedralGroup;)V
 		ARG 3 shift
+		ARG 4 rotationX
+		ARG 5 rotationY
+		ARG 6 rotationZ
+	METHOD fromXYAngles (Lcom/mojang/math/Quadrant;Lcom/mojang/math/Quadrant;)Lcom/mojang/math/OctahedralGroup;
+		ARG 0 xRotation
+		ARG 1 yRotation
+	METHOD fromXYZAngles (Lcom/mojang/math/Quadrant;Lcom/mojang/math/Quadrant;Lcom/mojang/math/Quadrant;)Lcom/mojang/math/OctahedralGroup;
+		ARG 0 xRotation
+		ARG 1 yRotation
+		ARG 2 zRotation
 	METHOD parseJson (I)Lcom/mojang/math/Quadrant;
 		ARG 0 rotation
 	METHOD rotateVertexIndex (I)I

@@ -1,6 +1,11 @@
 CLASS net/minecraft/client/resources/model/UnbakedGeometry
 	METHOD bake (Lnet/minecraft/client/renderer/block/model/TextureSlots;Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/resources/model/ModelDebugName;)Lnet/minecraft/client/resources/model/QuadCollection;
 		ARG 1 textureSlots
-		ARG 2 baker
+		ARG 2 modelBaker
 		ARG 3 modelState
 		ARG 4 debugName
+	METHOD lambda$static$0 (Lnet/minecraft/client/renderer/block/model/TextureSlots;Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/resources/model/ModelDebugName;)Lnet/minecraft/client/resources/model/QuadCollection;
+		ARG 0 textureSlots
+		ARG 1 modelBaker
+		ARG 2 modelState
+		ARG 3 debugName

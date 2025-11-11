@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/renderer/block/LiquidBlockRenderer
+	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;)V
+		ARG 1 materials
 	METHOD addWeightedHeight ([FF)V
 		ARG 1 output
 		ARG 2 height
@@ -36,9 +38,6 @@ CLASS net/minecraft/client/renderer/block/LiquidBlockRenderer
 	METHOD isNeighborSameFluid (Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/material/FluidState;)Z
 		ARG 0 firstState
 		ARG 1 secondState
-	METHOD setupSprites (Lnet/minecraft/client/renderer/block/BlockModelShaper;Lnet/minecraft/client/resources/model/MaterialSet;)V
-		ARG 1 blockModelShaper
-		ARG 2 materials
 	METHOD shouldRenderFace (Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/material/FluidState;)Z
 		ARG 0 fluidState
 		ARG 1 state

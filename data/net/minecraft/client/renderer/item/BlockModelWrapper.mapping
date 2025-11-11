@@ -4,7 +4,7 @@ CLASS net/minecraft/client/renderer/item/BlockModelWrapper
 		ARG 2 quads
 		ARG 3 properties
 		ARG 4 renderType
-	METHOD computeExtents (Ljava/util/List;)[Lorg/joml/Vector3f;
+	METHOD computeExtents (Ljava/util/List;)[Lorg/joml/Vector3fc;
 		ARG 0 quads
 	METHOD detectRenderType (Ljava/util/List;)Ljava/util/function/Function;
 		ARG 0 quads

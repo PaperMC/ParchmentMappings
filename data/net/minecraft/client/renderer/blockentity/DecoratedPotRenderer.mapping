@@ -6,7 +6,7 @@ CLASS net/minecraft/client/renderer/blockentity/DecoratedPotRenderer
 		ARG 1 context
 	METHOD <init> (Lnet/minecraft/client/renderer/special/SpecialModelRenderer$BakingContext;)V
 		ARG 1 context
-	METHOD getExtents (Ljava/util/Set;)V
+	METHOD getExtents (Ljava/util/function/Consumer;)V
 		ARG 1 output
 	METHOD getSideMaterial (Ljava/util/Optional;)Lnet/minecraft/client/resources/model/Material;
 		ARG 0 item

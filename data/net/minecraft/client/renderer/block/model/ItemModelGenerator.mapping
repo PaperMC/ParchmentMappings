@@ -4,11 +4,6 @@ CLASS net/minecraft/client/renderer/block/model/ItemModelGenerator
 		ARG 1 baker
 		ARG 2 modelState
 		ARG 3 debugName
-	METHOD bake (Lnet/minecraft/client/renderer/block/model/TextureSlots;Lnet/minecraft/client/resources/model/SpriteGetter;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/resources/model/ModelDebugName;)Lnet/minecraft/client/resources/model/QuadCollection;
-		ARG 0 textureSlots
-		ARG 1 sprites
-		ARG 2 modelState
-		ARG 3 debugName
 	METHOD checkTransition (Lnet/minecraft/client/renderer/block/model/ItemModelGenerator$SideDirection;Ljava/util/List;Lnet/minecraft/client/renderer/texture/SpriteContents;IIIII)V
 		ARG 0 sideDirection
 		ARG 1 listSpans

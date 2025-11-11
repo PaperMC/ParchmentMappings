@@ -5,10 +5,20 @@ CLASS net/minecraft/client/renderer/FaceInfo
 		ARG 0 facing
 	METHOD getVertexInfo (I)Lnet/minecraft/client/renderer/FaceInfo$VertexInfo;
 		ARG 1 index
-	METHOD lambda$static$0 ([Lnet/minecraft/client/renderer/FaceInfo;)V
-		ARG 0 faceInfos
+	METHOD lambda$static$0 (Ljava/util/EnumMap;)V
+		ARG 0 map
+	CLASS Extent
+		METHOD select (FFFFFF)F
+			ARG 1 minX
+			ARG 2 minY
+			ARG 3 minZ
+			ARG 4 maxX
+			ARG 5 maxY
+			ARG 6 maxZ
+		METHOD select (Lorg/joml/Vector3fc;Lorg/joml/Vector3fc;)F
+			ARG 1 min
+			ARG 2 max
 	CLASS VertexInfo
-		METHOD <init> (III)V
-			ARG 1 xFace
-			ARG 2 yFace
-			ARG 3 zFace
+		METHOD select (Lorg/joml/Vector3fc;Lorg/joml/Vector3fc;)Lorg/joml/Vector3f;
+			ARG 1 min
+			ARG 2 max

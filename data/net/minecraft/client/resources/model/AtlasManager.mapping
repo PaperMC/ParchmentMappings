@@ -8,6 +8,8 @@ CLASS net/minecraft/client/resources/model/AtlasManager
 		ARG 1 atlasId
 	METHOD updateMaxMipLevel (I)V
 		ARG 1 maxMipmapLevels
+	METHOD updateSpriteMaps (Lnet/minecraft/client/resources/model/AtlasManager$PendingStitchResults;)V
+		ARG 1 pendingStitches
 	CLASS AtlasEntry
 		METHOD scheduleLoad (Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;I)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 resourceManager

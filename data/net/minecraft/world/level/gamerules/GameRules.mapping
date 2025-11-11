@@ -16,7 +16,7 @@ CLASS net/minecraft/world/level/gamerules/GameRules
 		ARG 1 rule
 	METHOD lambda$codec$0 (Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/world/level/gamerules/GameRuleMap;)Lnet/minecraft/world/level/gamerules/GameRules;
 		ARG 1 rules
-	METHOD lambda$setAll$3 (Lnet/minecraft/world/level/gamerules/GameRuleMap;Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/level/gamerules/GameRule;)V
+	METHOD lambda$setAll$2 (Lnet/minecraft/world/level/gamerules/GameRuleMap;Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/level/gamerules/GameRule;)V
 		ARG 3 rule
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/level/gamerules/GameRuleCategory;Lnet/minecraft/world/level/gamerules/GameRuleType;Lcom/mojang/brigadier/arguments/ArgumentType;Lcom/mojang/serialization/Codec;Ljava/lang/Object;Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/world/level/gamerules/GameRules$VisitorCaller;Ljava/util/function/ToIntFunction;)Lnet/minecraft/world/level/gamerules/GameRule;
 		ARG 0 name
