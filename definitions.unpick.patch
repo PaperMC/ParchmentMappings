@@ -197,7 +197,7 @@
  group int max_string_length
  	net.minecraft.network.FriendlyByteBuf.MAX_STRING_LENGTH
  	net.minecraft.network.FriendlyByteBuf.MAX_COMPONENT_STRING_LENGTH
-@@ -1727,18 +_,9 @@
+@@ -1718,18 +_,9 @@
  
  target_annotation net.minecraft.world.level.block.Block$UpdateFlags set_block_state_flags
  
@@ -217,7 +217,7 @@
  group int trial_spawner_luminance
  	net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState$LightLevel.UNLIT
  	net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState$LightLevel.HALF_LIT
-@@ -1837,3 +_,10 @@
+@@ -1828,3 +_,10 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
  	return world_event
