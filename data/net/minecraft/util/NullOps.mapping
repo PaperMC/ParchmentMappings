@@ -76,3 +76,10 @@ CLASS net/minecraft/util/NullOps
 	CLASS NullMapBuilder
 		METHOD <init> (Lcom/mojang/serialization/DynamicOps;)V
 			ARG 1 ops
+		METHOD append (Lnet/minecraft/util/Unit;Lnet/minecraft/util/Unit;Lnet/minecraft/util/Unit;)Lnet/minecraft/util/Unit;
+			ARG 1 key
+			ARG 2 value
+			ARG 3 builder
+		METHOD build (Lnet/minecraft/util/Unit;Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
+			ARG 1 builder
+			ARG 2 prefix

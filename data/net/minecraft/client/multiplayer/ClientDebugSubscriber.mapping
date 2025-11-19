@@ -25,6 +25,8 @@ CLASS net/minecraft/client/multiplayer/ClientDebugSubscriber
 		ARG 2 type
 	METHOD getValueMaps (Lnet/minecraft/util/debug/DebugSubscription;)Lnet/minecraft/client/multiplayer/ClientDebugSubscriber$ValueMaps;
 		ARG 1 subscription
+	METHOD initializeSubscriptions (Ljava/util/Set;)V
+		ARG 1 newSubscriptions
 	METHOD onSubscriptionsChanged (Ljava/util/Set;)V
 		ARG 1 subscriptions
 	METHOD pushEvent (JLnet/minecraft/util/debug/DebugSubscription$Event;)V

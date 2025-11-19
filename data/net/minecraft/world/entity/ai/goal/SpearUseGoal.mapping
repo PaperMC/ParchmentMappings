@@ -3,5 +3,8 @@ CLASS net/minecraft/world/entity/ai/goal/SpearUseGoal
 		ARG 1 mob
 		ARG 2 speedModifierWhenCharging
 		ARG 4 speedModifierWhenRepositioning
-		ARG 6 attackRadius
-		ARG 7 targetInRange
+		ARG 6 approachDistance
+		ARG 7 targetInRangeRadius
+	CLASS SpearUseState
+		METHOD startEngagement (I)V
+			ARG 1 engageTime

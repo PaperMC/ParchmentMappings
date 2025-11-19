@@ -1,7 +1,7 @@
 CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	COMMENT PacketListener for the client side of the PLAY protocol.
 	METHOD handleAddEntity (Lnet/minecraft/network/protocol/game/ClientboundAddEntityPacket;)V
-		COMMENT Spawns an instance of the objecttype indicated by the packet and sets its position and momentum
+		COMMENT Spawns an instance of the {@link net.minecraft.world.entity.EntityType} indicated by the packet and sets its position and momentum
 		ARG 1 packet
 	METHOD handleAddObjective (Lnet/minecraft/network/protocol/game/ClientboundSetObjectivePacket;)V
 		COMMENT May create a scoreboard objective, remove an objective from the scoreboard or update an objective's displayname
@@ -15,7 +15,7 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleBlockChangedAck (Lnet/minecraft/network/protocol/game/ClientboundBlockChangedAckPacket;)V
 		ARG 1 packet
 	METHOD handleBlockDestruction (Lnet/minecraft/network/protocol/game/ClientboundBlockDestructionPacket;)V
-		COMMENT Updates all registered LevelAccessor instances with destroyBlockProgress
+		COMMENT Updates all registered {@link net.minecraft.world.level.Level} instances with destroyBlockProgress
 		ARG 1 packet
 	METHOD handleBlockEntityData (Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;)V
 		COMMENT Updates the CompoundTag metadata of instances of the following entity types: Mob spawners, command blocks, beacons, skulls, flowerpot
@@ -106,7 +106,7 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleLightUpdatePacket (Lnet/minecraft/network/protocol/game/ClientboundLightUpdatePacket;)V
 		ARG 1 packet
 	METHOD handleLogin (Lnet/minecraft/network/protocol/game/ClientboundLoginPacket;)V
-		COMMENT Registers some server properties (gametype, hardcore-mode, terraintype, difficulty, player limit), creates a new ClientLevel and sets the player initial dimension
+		COMMENT Registers some server properties (gametype, hardcore-mode, terraintype, difficulty, player limit), creates a new {@link net.minecraft.client.multiplayer.ClientLevel} and sets the player initial dimension
 		ARG 1 packet
 	METHOD handleLookAt (Lnet/minecraft/network/protocol/game/ClientboundPlayerLookAtPacket;)V
 		ARG 1 packet

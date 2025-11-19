@@ -59,6 +59,12 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 1 data
 	METHOD lambda$converter$1 (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/Dynamic;
 		ARG 1 value
+	METHOD lambda$gameProfileCodec$105 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 1 instance
+	METHOD lambda$static$104 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 value
+	METHOD lambda$static$107 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 value
 	METHOD lambda$static$12 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
 	METHOD lambda$static$15 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;

@@ -6,6 +6,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 gameProfile
 	METHOD addItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
+	METHOD applyPostImpulseGraceTime (I)V
+		ARG 1 ticks
 	METHOD attack (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Attacks for the player the targeted entity with the currently equipped item. The equipped item has hurtEnemy called on it.
 		ARG 1 target
@@ -161,6 +163,18 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 isStrong
 		ARG 2 isCritical
 		ARG 3 extraKnockback
+	METHOD isWithinAttackRange (Lnet/minecraft/world/phys/AABB;D)Z
+		ARG 1 aabb
+		ARG 2 buffer
+	METHOD isWithinBlockInteractionRange (Lnet/minecraft/core/BlockPos;D)Z
+		ARG 1 pos
+		ARG 2 buffer
+	METHOD isWithinEntityInteractionRange (Lnet/minecraft/world/entity/Entity;D)Z
+		ARG 1 entity
+		ARG 2 buffer
+	METHOD isWithinEntityInteractionRange (Lnet/minecraft/world/phys/AABB;D)Z
+		ARG 1 aabb
+		ARG 2 buffer
 	METHOD itemAttackInteraction (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/damagesource/DamageSource;Z)V
 		ARG 1 target
 		ARG 2 stack

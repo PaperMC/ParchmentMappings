@@ -1,0 +1,10 @@
+CLASS net/minecraft/client/renderer/GlobalSettingsUniform
+	METHOD update (IIDJLnet/minecraft/client/DeltaTracker;ILnet/minecraft/client/Camera;Z)V
+		ARG 1 width
+		ARG 2 height
+		ARG 3 glintAlpha
+		ARG 5 gameTime
+		ARG 7 deltaTracker
+		ARG 8 menuBlurRadius
+		ARG 9 mainCamera
+		ARG 10 useRgss

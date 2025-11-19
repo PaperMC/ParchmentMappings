@@ -23,6 +23,8 @@ CLASS net/minecraft/world/entity/animal/fox/Fox
 		ARG 1 partialTick
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
+	METHOD isConsumableFood (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
 	METHOD isFood (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
 		ARG 1 stack

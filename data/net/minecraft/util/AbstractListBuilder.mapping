@@ -12,7 +12,7 @@ CLASS net/minecraft/util/AbstractListBuilder
 		ARG 1 prefix
 	METHOD build (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
 		ARG 1 builder
-		ARG 2 value
+		ARG 2 prefix
 	METHOD mapError (Ljava/util/function/UnaryOperator;)Lcom/mojang/serialization/ListBuilder;
 		ARG 1 onError
 	METHOD withErrorsFrom (Lcom/mojang/serialization/DataResult;)Lcom/mojang/serialization/ListBuilder;

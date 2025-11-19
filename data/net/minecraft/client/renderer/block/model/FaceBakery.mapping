@@ -52,9 +52,9 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 		ARG 2 transform
 	METHOD swap ([JII)V
 		ARG 0 array
-		ARG 1 indexA
-		ARG 2 indexB
+		ARG 1 index1
+		ARG 2 index2
 	METHOD swap ([Lorg/joml/Vector3fc;II)V
 		ARG 0 array
-		ARG 1 indexA
-		ARG 2 indexB
+		ARG 1 index1
+		ARG 2 index2

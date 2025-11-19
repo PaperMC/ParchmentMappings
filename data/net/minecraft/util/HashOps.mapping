@@ -104,3 +104,11 @@ CLASS net/minecraft/util/HashOps
 		ARG 1 input
 		ARG 2 key
 		ARG 3 function
+	CLASS MapHashBuilder
+		METHOD append (Lcom/google/common/hash/HashCode;Lcom/google/common/hash/HashCode;Ljava/util/List;)Ljava/util/List;
+			ARG 1 key
+			ARG 2 value
+			ARG 3 builder
+		METHOD build (Ljava/util/List;Lcom/google/common/hash/HashCode;)Lcom/mojang/serialization/DataResult;
+			ARG 1 builder
+			ARG 2 prefix
