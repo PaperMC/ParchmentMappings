@@ -8,12 +8,15 @@ object KnownTypes {
         // client
         "Lcom/mojang/blaze3d/vertex/VertexConsumer;" to "consumer",
         "Lcom/mojang/blaze3d/pipeline/RenderPipeline;" to "pipeline",
+        "Lcom/mojang/blaze3d/systems/GpuDevice;" to "device",
         "Lnet/minecraft/client/gui/GuiGraphics;" to "guiGraphics",
+        "Lnet/minecraft/client/renderer/texture/MipmapStrategy;" to "strategy",
 
         // server
         $$"Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;" to "instance",
         "Lcom/mojang/brigadier/context/CommandContext;" to "context",
         "Lnet/minecraft/world/attribute/EnvironmentAttributeMap;" to "attributes",
+        "Lnet/minecraft/world/level/gamerules/GameRule;" to "rule",
 
         // libraries
         "Lio/netty/buffer/ByteBuf;" to "buffer",
@@ -40,7 +43,6 @@ object KnownTypes {
         "Lnet/minecraft/client/resources/model/MaterialSet;" to "materials",
         "Lnet/minecraft/client/particle/SpriteSet;" to "sprites",
         "Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;" to "sprite",
-        "Lnet/minecraft/client/renderer/texture/MipmapStrategy;" to "strategy",
         "Lnet/minecraft/client/multiplayer/ClientLevel;" to "level",
         "Lnet/minecraft/client/player/AbstractClientPlayer;" to "player",
         "Lnet/minecraft/client/input/KeyEvent;" to "event",
@@ -99,7 +101,6 @@ object KnownTypes {
         "Lnet/minecraft/CrashReportCategory;" to "category",
         "Lnet/minecraft/world/entity/EntityProcessor;" to "processor",
         "Lnet/minecraft/world/entity/EntitySpawnReason;" to "spawnReason",
-        "Lnet/minecraft/world/level/gamerules/GameRule;" to "rule",
         "Lnet/minecraft/world/level/gamerules/GameRuleMap;" to "rules",
         "Lnet/minecraft/world/level/gamerules/GameRuleCategory;" to "category",
         "Lnet/minecraft/world/level/gamerules/GameRuleType;" to "type",
