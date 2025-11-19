@@ -197,6 +197,26 @@
  group int max_string_length
  	net.minecraft.network.FriendlyByteBuf.MAX_STRING_LENGTH
  	net.minecraft.network.FriendlyByteBuf.MAX_COMPONENT_STRING_LENGTH
+@@ -1585,6 +_,19 @@
+ target_method net.minecraft.network.FriendlyByteBuf writeUtf (Ljava/lang/String;I)Lnet/minecraft/network/FriendlyByteBuf;
+ 	param 1 max_string_length
+ 
++group long max_nbt_size
++	net.minecraft.nbt.NbtAccounter.DEFAULT_NBT_QUOTA
++	net.minecraft.nbt.NbtAccounter.UNCOMPRESSED_NBT_QUOTA
++
++group int max_stack_depth
++	net.minecraft.nbt.NbtAccounter.MAX_STACK_DEPTH
++
++target_method net.minecraft.nbt.NbtAccounter <init> (JI)V
++	param 0 max_nbt_size
++	param 1 max_stack_depth
++target_method net.minecraft.nbt.NbtAccounter create (J)Lnet/minecraft/nbt/NbtAccounter;
++	param 0 max_nbt_size
++
+ target_method net.minecraft.network.VarInt getByteSize (I)I
+ 	return max_var_int_length
+ 
 @@ -1718,18 +_,9 @@
  
  target_annotation net.minecraft.world.level.block.Block$UpdateFlags set_block_state_flags
