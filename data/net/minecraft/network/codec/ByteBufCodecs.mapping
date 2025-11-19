@@ -44,18 +44,6 @@ CLASS net/minecraft/network/codec/ByteBufCodecs
 		ARG 1 idGetter
 	METHOD idMapper (Lnet/minecraft/core/IdMap;)Lnet/minecraft/network/codec/StreamCodec;
 		ARG 0 idMap
-	METHOD lambda$collection$9 (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
-		ARG 1 size
-	METHOD lambda$compoundTagCodec$3 (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/CompoundTag;
-		ARG 0 tag
-	METHOD lambda$compoundTagCodec$4 (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/Tag;
-		ARG 0 tag
-	METHOD lambda$lengthPrefixed$12 (ILjava/util/function/BiFunction;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
-		ARG 2 codec
-	METHOD lambda$list$10 (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
-		ARG 0 size
-	METHOD lambda$list$11 (ILnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
-		ARG 1 size
 	METHOD lambda$static$0 (Ljava/lang/Integer;)Ljava/util/OptionalInt;
 		ARG 0 value
 	METHOD lengthPrefixed (I)Lnet/minecraft/network/codec/StreamCodec$CodecOperation;

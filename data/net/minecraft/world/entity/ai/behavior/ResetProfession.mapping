@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/ai/behavior/ResetProfession
-	METHOD lambda$create$0 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)Z
+	METHOD lambda$create$0 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)Z
 		ARG 0 level
 		ARG 1 villager
 		ARG 2 gameTime

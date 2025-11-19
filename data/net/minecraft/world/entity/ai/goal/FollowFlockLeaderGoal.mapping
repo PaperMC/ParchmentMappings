@@ -1,15 +1,15 @@
 CLASS net/minecraft/world/entity/ai/goal/FollowFlockLeaderGoal
-	METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractSchoolingFish;)V
+	METHOD <init> (Lnet/minecraft/world/entity/animal/fish/AbstractSchoolingFish;)V
 		ARG 1 mob
 	METHOD canContinueToUse ()Z
 		COMMENT {@return whether an in-progress Goal should continue executing}
 	METHOD canUse ()Z
 		COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	METHOD lambda$canUse$0 (Lnet/minecraft/world/entity/animal/AbstractSchoolingFish;)Z
+	METHOD lambda$canUse$0 (Lnet/minecraft/world/entity/animal/fish/AbstractSchoolingFish;)Z
 		ARG 0 fish
-	METHOD lambda$canUse$1 (Lnet/minecraft/world/entity/animal/AbstractSchoolingFish;)Z
+	METHOD lambda$canUse$1 (Lnet/minecraft/world/entity/animal/fish/AbstractSchoolingFish;)Z
 		ARG 0 fish
-	METHOD nextStartTick (Lnet/minecraft/world/entity/animal/AbstractSchoolingFish;)I
+	METHOD nextStartTick (Lnet/minecraft/world/entity/animal/fish/AbstractSchoolingFish;)I
 		ARG 1 taskOwner
 	METHOD start ()V
 		COMMENT Execute a one shot task or start executing a continuous task

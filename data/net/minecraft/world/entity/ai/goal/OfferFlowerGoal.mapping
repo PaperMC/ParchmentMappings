@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/ai/goal/OfferFlowerGoal
-	METHOD <init> (Lnet/minecraft/world/entity/animal/IronGolem;)V
+	METHOD <init> (Lnet/minecraft/world/entity/animal/golem/IronGolem;)V
 		ARG 1 golem
 	METHOD canContinueToUse ()Z
 		COMMENT {@return whether an in-progress Goal should continue executing}

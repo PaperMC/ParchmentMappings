@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/entity/npc/villager/VillagerDataHolder
+	METHOD setVillagerData (Lnet/minecraft/world/entity/npc/villager/VillagerData;)V
+		ARG 1 data

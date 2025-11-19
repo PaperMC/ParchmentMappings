@@ -3,13 +3,6 @@ CLASS net/minecraft/client/renderer/texture/SpriteContents
 		ARG 1 name
 		ARG 2 frameSize
 		ARG 3 originalImage
-	METHOD <init> (Lnet/minecraft/resources/Identifier;Lnet/minecraft/client/resources/metadata/animation/FrameSize;Lcom/mojang/blaze3d/platform/NativeImage;Ljava/util/Optional;Ljava/util/List;Lnet/minecraft/client/renderer/texture/MipmapStrategy;)V
-		ARG 1 name
-		ARG 2 frameSize
-		ARG 3 originalImage
-		ARG 4 animationMetadata
-		ARG 5 additionalMetadata
-		ARG 6 mipmapStrategy
 	METHOD createAnimatedTexture (Lnet/minecraft/client/resources/metadata/animation/FrameSize;IILnet/minecraft/client/resources/metadata/animation/AnimationMetadataSection;)Lnet/minecraft/client/renderer/texture/SpriteContents$AnimatedTexture;
 		ARG 1 frameSize
 		ARG 2 fullWidth

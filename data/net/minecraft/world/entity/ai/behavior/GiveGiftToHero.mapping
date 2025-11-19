@@ -3,37 +3,37 @@ CLASS net/minecraft/world/entity/ai/behavior/GiveGiftToHero
 		ARG 1 duration
 	METHOD calculateTimeUntilNextGift (Lnet/minecraft/server/level/ServerLevel;)I
 		ARG 0 level
-	METHOD canStillUse (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)Z
+	METHOD canStillUse (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)Z
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
-	METHOD checkExtraStartConditions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;)Z
+	METHOD checkExtraStartConditions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;)Z
 		ARG 1 level
 		ARG 2 owner
-	METHOD getLootTableToThrow (Lnet/minecraft/world/entity/npc/Villager;)Lnet/minecraft/resources/ResourceKey;
+	METHOD getLootTableToThrow (Lnet/minecraft/world/entity/npc/villager/Villager;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 villager
-	METHOD getNearestTargetableHero (Lnet/minecraft/world/entity/npc/Villager;)Ljava/util/Optional;
+	METHOD getNearestTargetableHero (Lnet/minecraft/world/entity/npc/villager/Villager;)Ljava/util/Optional;
 		ARG 1 villager
 	METHOD isHero (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
-	METHOD isHeroVisible (Lnet/minecraft/world/entity/npc/Villager;)Z
+	METHOD isHeroVisible (Lnet/minecraft/world/entity/npc/villager/Villager;)Z
 		ARG 1 villager
-	METHOD isWithinThrowingDistance (Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/entity/player/Player;)Z
+	METHOD isWithinThrowingDistance (Lnet/minecraft/world/entity/npc/villager/Villager;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 villager
 		ARG 2 hero
-	METHOD start (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+	METHOD start (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
-	METHOD stop (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+	METHOD stop (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
-	METHOD throwGift (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;Lnet/minecraft/world/entity/LivingEntity;)V
+	METHOD throwGift (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 villager
 		ARG 3 target
-	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V
 		ARG 1 level
 		ARG 2 owner
 		ARG 3 gameTime

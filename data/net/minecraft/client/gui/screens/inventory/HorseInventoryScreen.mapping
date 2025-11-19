@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/screens/inventory/HorseInventoryScreen
-	METHOD <init> (Lnet/minecraft/world/inventory/HorseInventoryMenu;Lnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/animal/horse/AbstractHorse;I)V
+	METHOD <init> (Lnet/minecraft/world/inventory/HorseInventoryMenu;Lnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/entity/animal/equine/AbstractHorse;I)V
 		ARG 1 menu
 		ARG 2 inventory
 		ARG 3 horse

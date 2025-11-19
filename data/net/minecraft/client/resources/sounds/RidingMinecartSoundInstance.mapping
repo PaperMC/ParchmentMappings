@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/resources/sounds/RidingMinecartSoundInstance
-	METHOD <init> (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/vehicle/AbstractMinecart;ZLnet/minecraft/sounds/SoundEvent;FFF)V
+	METHOD <init> (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/vehicle/minecart/AbstractMinecart;ZLnet/minecraft/sounds/SoundEvent;FFF)V
 		ARG 1 player
 		ARG 2 minecart
 		ARG 3 underwaterSound

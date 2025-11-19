@@ -31,7 +31,7 @@ CLASS net/minecraft/world/entity/raid/Raider
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
 	CLASS HoldGroundAttackGoal
-		METHOD <init> (Lnet/minecraft/world/entity/monster/AbstractIllager;F)V
+		METHOD <init> (Lnet/minecraft/world/entity/monster/illager/AbstractIllager;F)V
 			ARG 1 mob
 			ARG 2 radius
 		METHOD canUse ()Z

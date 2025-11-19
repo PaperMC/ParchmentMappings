@@ -45,15 +45,6 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 5 distance
 	METHOD canHarmPlayer (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 other
-	METHOD canInteractWithBlock (Lnet/minecraft/core/BlockPos;D)Z
-		ARG 1 pos
-		ARG 2 distance
-	METHOD canInteractWithEntity (Lnet/minecraft/world/entity/Entity;D)Z
-		ARG 1 entity
-		ARG 2 distance
-	METHOD canInteractWithEntity (Lnet/minecraft/world/phys/AABB;D)Z
-		ARG 1 boundingBox
-		ARG 2 distance
 	METHOD canPlayerFitWithinBlocksAndEntitiesWhen (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
 	METHOD cannotAttack (Lnet/minecraft/world/entity/Entity;)Z
@@ -203,7 +194,7 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 commandBlockEntity
 	METHOD openDialog (Lnet/minecraft/core/Holder;)V
 		ARG 1 dialog
-	METHOD openHorseInventory (Lnet/minecraft/world/entity/animal/horse/AbstractHorse;Lnet/minecraft/world/Container;)V
+	METHOD openHorseInventory (Lnet/minecraft/world/entity/animal/equine/AbstractHorse;Lnet/minecraft/world/Container;)V
 		ARG 1 horse
 		ARG 2 inventory
 	METHOD openItemGui (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
@@ -213,7 +204,7 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 jigsawBlockEntity
 	METHOD openMenu (Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;
 		ARG 1 menu
-	METHOD openMinecartCommandBlock (Lnet/minecraft/world/entity/vehicle/MinecartCommandBlock;)V
+	METHOD openMinecartCommandBlock (Lnet/minecraft/world/entity/vehicle/minecart/MinecartCommandBlock;)V
 		ARG 1 minecart
 	METHOD openNautilusInventory (Lnet/minecraft/world/entity/animal/nautilus/AbstractNautilus;Lnet/minecraft/world/Container;)V
 		ARG 1 nautilus
@@ -251,8 +242,6 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 4 villagerXp
 		ARG 5 showProgress
 		ARG 6 canRestock
-	METHOD setClientLoaded (Z)V
-		ARG 1 clientLoaded
 	METHOD setIgnoreFallDamageFromCurrentImpulse (Z)V
 		ARG 1 ignoreFallDamageFromCurrentImpulse
 	METHOD setLastDeathLocation (Ljava/util/Optional;)V

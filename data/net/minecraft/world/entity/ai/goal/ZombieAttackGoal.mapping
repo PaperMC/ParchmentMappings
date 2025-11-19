@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/ai/goal/ZombieAttackGoal
-	METHOD <init> (Lnet/minecraft/world/entity/monster/Zombie;DZ)V
+	METHOD <init> (Lnet/minecraft/world/entity/monster/zombie/Zombie;DZ)V
 		ARG 1 zombie
 		ARG 2 speedModifier
 		ARG 4 followingTargetEvenIfNotSeen

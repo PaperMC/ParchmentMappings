@@ -566,7 +566,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 positioner
 		ARG 6 style
 		ARG 7 focused
-	METHOD submitBannerPatternRenderState (Lnet/minecraft/client/model/BannerFlagModel;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;IIII)V
+	METHOD submitBannerPatternRenderState (Lnet/minecraft/client/model/object/banner/BannerFlagModel;Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;IIII)V
 		ARG 1 flag
 		ARG 2 baseColor
 		ARG 3 resultBannerPatterns
@@ -587,7 +587,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 10 v0
 		ARG 11 v1
 		ARG 12 color
-	METHOD submitBookModelRenderState (Lnet/minecraft/client/model/BookModel;Lnet/minecraft/resources/Identifier;FFFIIII)V
+	METHOD submitBookModelRenderState (Lnet/minecraft/client/model/object/book/BookModel;Lnet/minecraft/resources/Identifier;FFFIIII)V
 		ARG 1 bookModel
 		ARG 2 texture
 		ARG 3 scale
@@ -632,7 +632,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 5 y0
 		ARG 6 x1
 		ARG 7 y1
-	METHOD submitSkinRenderState (Lnet/minecraft/client/model/PlayerModel;Lnet/minecraft/resources/Identifier;FFFFIIII)V
+	METHOD submitSkinRenderState (Lnet/minecraft/client/model/player/PlayerModel;Lnet/minecraft/resources/Identifier;FFFFIIII)V
 		ARG 1 playerModel
 		ARG 2 texture
 		ARG 3 scale

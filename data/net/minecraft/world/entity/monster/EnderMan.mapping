@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/entity/monster/EnderMan
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD hurtWithCleanWater (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/entity/projectile/AbstractThrownPotion;F)Z
+	METHOD hurtWithCleanWater (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/entity/projectile/throwableitemprojectile/AbstractThrownPotion;F)Z
 		ARG 1 level
 		ARG 2 damageSource
 		ARG 3 potion

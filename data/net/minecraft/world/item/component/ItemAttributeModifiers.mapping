@@ -1,7 +1,4 @@
 CLASS net/minecraft/world/item/component/ItemAttributeModifiers
-	METHOD compute (DLnet/minecraft/world/entity/EquipmentSlot;)D
-		ARG 1 baseValue
-		ARG 3 slot
 	METHOD forEach (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
 		ARG 1 slot
 		ARG 2 action

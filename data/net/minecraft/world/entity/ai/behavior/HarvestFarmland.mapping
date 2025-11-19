@@ -1,22 +1,22 @@
 CLASS net/minecraft/world/entity/ai/behavior/HarvestFarmland
-	METHOD canStillUse (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)Z
+	METHOD canStillUse (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)Z
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
-	METHOD checkExtraStartConditions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;)Z
+	METHOD checkExtraStartConditions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;)Z
 		ARG 1 level
 		ARG 2 owner
 	METHOD getValidFarmland (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/core/BlockPos;
 		ARG 1 level
-	METHOD start (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+	METHOD start (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
-	METHOD stop (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+	METHOD stop (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 gameTime
-	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;J)V
+	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/villager/Villager;J)V
 		ARG 1 level
 		ARG 2 owner
 		ARG 3 gameTime

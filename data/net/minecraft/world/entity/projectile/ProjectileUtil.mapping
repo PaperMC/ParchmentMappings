@@ -33,12 +33,6 @@ CLASS net/minecraft/world/entity/projectile/ProjectileUtil
 		ARG 4 maxReachVec
 		ARG 5 margin
 		ARG 6 clipContext
-	METHOD getHitEntitiesAlong (Lnet/minecraft/world/entity/LivingEntity;FFFLjava/util/function/Predicate;)Ljava/util/Collection;
-		ARG 0 source
-		ARG 1 minReach
-		ARG 2 maxReach
-		ARG 3 margin
-		ARG 4 filter
 	METHOD getHitResult (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Ljava/util/function/Predicate;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/Level;FLnet/minecraft/world/level/ClipContext$Block;)Lnet/minecraft/world/phys/HitResult;
 		ARG 0 pos
 		ARG 1 source
@@ -76,7 +70,7 @@ CLASS net/minecraft/world/entity/projectile/ProjectileUtil
 		ARG 4 boundingBox
 		ARG 5 filter
 		ARG 6 includeFromEntity
-	METHOD getMobArrow (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;FLnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/AbstractArrow;
+	METHOD getMobArrow (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;FLnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/arrow/AbstractArrow;
 		ARG 0 shooter
 		ARG 1 arrow
 		ARG 2 velocity

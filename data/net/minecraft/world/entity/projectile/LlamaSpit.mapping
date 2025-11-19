@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/projectile/LlamaSpit
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/animal/horse/Llama;)V
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/animal/equine/Llama;)V
 		ARG 1 level
 		ARG 2 spitter
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V

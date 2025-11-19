@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/renderer/special/ChestSpecialRenderer
-	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/model/ChestModel;Lnet/minecraft/client/resources/model/Material;F)V
+	METHOD <init> (Lnet/minecraft/client/resources/model/MaterialSet;Lnet/minecraft/client/model/object/chest/ChestModel;Lnet/minecraft/client/resources/model/Material;F)V
 		ARG 1 materials
 		ARG 2 model
 		ARG 3 material

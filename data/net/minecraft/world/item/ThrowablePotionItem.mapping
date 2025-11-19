@@ -1,9 +1,9 @@
 CLASS net/minecraft/world/item/ThrowablePotionItem
-	METHOD createPotion (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/AbstractThrownPotion;
+	METHOD createPotion (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/throwableitemprojectile/AbstractThrownPotion;
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 stack
-	METHOD createPotion (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Position;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/AbstractThrownPotion;
+	METHOD createPotion (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Position;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/throwableitemprojectile/AbstractThrownPotion;
 		ARG 1 level
 		ARG 2 position
 		ARG 3 stack

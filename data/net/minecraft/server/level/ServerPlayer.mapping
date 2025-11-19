@@ -55,7 +55,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 target
-	METHOD deregisterEnderPearl (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)V
+	METHOD deregisterEnderPearl (Lnet/minecraft/world/entity/projectile/throwableitemprojectile/ThrownEnderpearl;)V
 		ARG 1 enderPearl
 	METHOD didNotMove (DDD)Z
 		ARG 0 dx
@@ -152,7 +152,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 		COMMENT Sends the player's abilities to the server (if there is one).
 	METHOD openCommandBlock (Lnet/minecraft/world/level/block/entity/CommandBlockEntity;)V
 		ARG 1 commandBlock
-	METHOD openHorseInventory (Lnet/minecraft/world/entity/animal/horse/AbstractHorse;Lnet/minecraft/world/Container;)V
+	METHOD openHorseInventory (Lnet/minecraft/world/entity/animal/equine/AbstractHorse;Lnet/minecraft/world/Container;)V
 		ARG 1 horse
 		ARG 2 inventory
 	METHOD openItemGui (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
@@ -168,9 +168,9 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD readPlayerMode (Lnet/minecraft/world/level/storage/ValueInput;Ljava/lang/String;)Lnet/minecraft/world/level/GameType;
 		ARG 0 input
 		ARG 1 key
-	METHOD registerAndUpdateEnderPearlTicket (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)J
+	METHOD registerAndUpdateEnderPearlTicket (Lnet/minecraft/world/entity/projectile/throwableitemprojectile/ThrownEnderpearl;)J
 		ARG 1 enderPearl
-	METHOD registerEnderPearl (Lnet/minecraft/world/entity/projectile/ThrownEnderpearl;)V
+	METHOD registerEnderPearl (Lnet/minecraft/world/entity/projectile/throwableitemprojectile/ThrownEnderpearl;)V
 		ARG 1 enderPearl
 	METHOD requestDebugSubscriptions (Ljava/util/Set;)V
 		ARG 1 subscriptions

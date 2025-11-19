@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/ai/goal/DolphinJumpGoal
-	METHOD <init> (Lnet/minecraft/world/entity/animal/Dolphin;I)V
+	METHOD <init> (Lnet/minecraft/world/entity/animal/dolphin/Dolphin;I)V
 		ARG 1 dolphin
 		ARG 2 interval
 	METHOD canContinueToUse ()Z

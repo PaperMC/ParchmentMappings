@@ -17,10 +17,6 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 stack
 	METHOD extractCamera (F)V
 		ARG 1 partialTick
-	METHOD filterHitResult (Lnet/minecraft/world/phys/HitResult;Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/HitResult;
-		ARG 0 hitResult
-		ARG 1 from
-		ARG 2 maxRange
 	METHOD getDarkenWorldAmount (F)F
 		ARG 1 partialTick
 	METHOD getFov (Lnet/minecraft/client/Camera;FZ)F
@@ -37,11 +33,6 @@ CLASS net/minecraft/client/renderer/GameRenderer
 	METHOD pick (F)V
 		COMMENT Gets the block or object that is being moused over.
 		ARG 1 partialTick
-	METHOD pick (Lnet/minecraft/world/entity/Entity;DDF)Lnet/minecraft/world/phys/HitResult;
-		ARG 1 entity
-		ARG 2 blockInteractionRange
-		ARG 4 entityInteractionRange
-		ARG 6 partialTick
 	METHOD preloadUiShader (Lnet/minecraft/server/packs/resources/ResourceProvider;)V
 		ARG 1 resourceProvider
 	METHOD render (Lnet/minecraft/client/DeltaTracker;Z)V

@@ -1,12 +1,12 @@
 CLASS net/minecraft/world/entity/ai/goal/LlamaFollowCaravanGoal
-	METHOD <init> (Lnet/minecraft/world/entity/animal/horse/Llama;D)V
+	METHOD <init> (Lnet/minecraft/world/entity/animal/equine/Llama;D)V
 		ARG 1 llama
 		ARG 2 speedModifier
 	METHOD canContinueToUse ()Z
 		COMMENT {@return whether an in-progress Goal should continue executing}
 	METHOD canUse ()Z
 		COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	METHOD firstIsLeashed (Lnet/minecraft/world/entity/animal/horse/Llama;I)Z
+	METHOD firstIsLeashed (Lnet/minecraft/world/entity/animal/equine/Llama;I)Z
 		ARG 1 llama
 		ARG 2 leashedQueuePosition
 	METHOD lambda$canUse$0 (Lnet/minecraft/world/entity/Entity;)Z
