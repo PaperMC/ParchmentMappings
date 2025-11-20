@@ -144,7 +144,11 @@ tasks.withType<ValidateData>().configureEach {
 }
 
 tasks.withType<SanitizeData>().configureEach {
-    //sanitizers.add(DuplicateData.DataSanitizer())
+    if (project.hasProperty("compass.dryRun")) { // convenient for large renames, use this before sanitizeData allow for a clean commits tree
+        sanitizers.clear()
+    } else {
+        //sanitizers.add(DuplicateData.DataSanitizer())
+    }
 }
 
 tasks.withType<GenerateExport>().configureEach {
