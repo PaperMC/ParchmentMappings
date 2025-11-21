@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/resources/model/BlockModelRotation
 	METHOD <init> (Lcom/mojang/math/OctahedralGroup;)V
-		ARG 1 group
+		ARG 1 orientation
 	METHOD get (Lcom/mojang/math/OctahedralGroup;)Lnet/minecraft/client/resources/model/BlockModelRotation;
 		ARG 0 group

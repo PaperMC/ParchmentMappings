@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/structure/LegacyStructureDataHandler
 	METHOD <init> (Lnet/minecraft/world/level/storage/DimensionDataStorage;Ljava/util/List;Ljava/util/List;Lcom/mojang/datafixers/DataFixer;)V
-		ARG 1 storage
+		ARG 1 dimensionDataStorage
 		ARG 2 legacyKeys
 		ARG 3 currentKeys
 		ARG 4 dataFixer

@@ -25,10 +25,11 @@ CLASS net/minecraft/world/entity/projectile/ProjectileUtil
 		ARG 3 endVec
 		ARG 4 boundingBox
 		ARG 5 filter
-	METHOD getHitEntitiesAlong (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/component/AttackRange;Ljava/util/function/Predicate;)Lcom/mojang/datafixers/util/Either;
+	METHOD getHitEntitiesAlong (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/component/AttackRange;Ljava/util/function/Predicate;Lnet/minecraft/world/level/ClipContext$Block;)Lcom/mojang/datafixers/util/Either;
 		ARG 0 attacker
 		ARG 1 attackRange
 		ARG 2 filter
+		ARG 3 clipContext
 	METHOD getHitEntitiesAlong (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Ljava/util/function/Predicate;Lnet/minecraft/world/phys/Vec3;FLnet/minecraft/world/level/ClipContext$Block;)Lcom/mojang/datafixers/util/Either;
 		ARG 0 source
 		ARG 1 startVec
