@@ -184,7 +184,7 @@
  	net.minecraft.world.entity.monster.Vex.FLAG_IS_CHARGING
  
  target_method net.minecraft.world.entity.monster.Vex getVexFlag (I)Z
-@@ -1569,6 +_,12 @@
+@@ -1543,6 +_,12 @@
  target_method net.minecraft.nbt.TagTypes getType (I)Lnet/minecraft/nbt/TagType;
  	param 0 nbt_type_id
  
@@ -197,7 +197,7 @@
  group int max_string_length
  	net.minecraft.network.FriendlyByteBuf.MAX_STRING_LENGTH
  	net.minecraft.network.FriendlyByteBuf.MAX_COMPONENT_STRING_LENGTH
-@@ -1585,6 +_,19 @@
+@@ -1559,6 +_,19 @@
  target_method net.minecraft.network.FriendlyByteBuf writeUtf (Ljava/lang/String;I)Lnet/minecraft/network/FriendlyByteBuf;
  	param 1 max_string_length
  
@@ -217,7 +217,7 @@
  target_method net.minecraft.network.VarInt getByteSize (I)I
  	return max_var_int_length
  
-@@ -1718,18 +_,9 @@
+@@ -1692,18 +_,9 @@
  
  target_annotation net.minecraft.world.level.block.Block$UpdateFlags set_block_state_flags
  
@@ -237,7 +237,7 @@
  group int trial_spawner_luminance
  	net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState$LightLevel.UNLIT
  	net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState$LightLevel.HALF_LIT
-@@ -1828,3 +_,10 @@
+@@ -1802,3 +_,10 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
  	return world_event

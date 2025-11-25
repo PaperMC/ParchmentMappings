@@ -1,5 +1,5 @@
 CLASS com/mojang/blaze3d/systems/GpuDevice
-	METHOD createBuffer (Ljava/util/function/Supplier;II)Lcom/mojang/blaze3d/buffers/GpuBuffer;
+	METHOD createBuffer (Ljava/util/function/Supplier;IJ)Lcom/mojang/blaze3d/buffers/GpuBuffer;
 		ARG 1 label
 		ARG 2 usage
 		ARG 3 size

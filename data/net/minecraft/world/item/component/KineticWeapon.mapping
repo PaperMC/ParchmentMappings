@@ -8,7 +8,7 @@ CLASS net/minecraft/world/item/component/KineticWeapon
 		ARG 0 entity
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
-	METHOD makeHitSound (Lnet/minecraft/world/entity/Entity;)V
+	METHOD makeLocalHitSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD makeSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity

@@ -1,9 +1,7 @@
 CLASS net/minecraft/client/renderer/texture/SpriteLoader
-	METHOD <init> (Lnet/minecraft/resources/Identifier;III)V
+	METHOD <init> (Lnet/minecraft/resources/Identifier;I)V
 		ARG 1 location
 		ARG 2 maxSupportedTextureSize
-		ARG 3 minWidth
-		ARG 4 minHeight
 	METHOD create (Lnet/minecraft/client/renderer/texture/TextureAtlas;)Lnet/minecraft/client/renderer/texture/SpriteLoader;
 		ARG 0 atlas
 	METHOD getStitchedSprites (Lnet/minecraft/client/renderer/texture/Stitcher;II)Ljava/util/Map;

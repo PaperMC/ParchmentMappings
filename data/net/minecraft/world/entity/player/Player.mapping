@@ -11,12 +11,13 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD attack (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Attacks for the player the targeted entity with the currently equipped item. The equipped item has hurtEnemy called on it.
 		ARG 1 target
-	METHOD attackVisualEffects (Lnet/minecraft/world/entity/Entity;ZZZF)V
+	METHOD attackVisualEffects (Lnet/minecraft/world/entity/Entity;ZZZZF)V
 		ARG 1 target
 		ARG 2 isCritical
 		ARG 3 isSweep
 		ARG 4 isStrong
-		ARG 5 damageAmount
+		ARG 5 isStab
+		ARG 6 damageAmount
 	METHOD awardRecipes (Ljava/util/Collection;)I
 		ARG 1 recipes
 	METHOD awardRecipesByKey (Ljava/util/List;)V
