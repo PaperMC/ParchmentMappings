@@ -3,6 +3,6 @@ root = true
 [buildSrc/src/main/kotlin/**/*.kt]
 insert_final_newline = true
 
-[data/**/*.mapping]
+[{data/**/*.mapping,*.unpick}]
 indent_size = 4
 indent_style = tab
