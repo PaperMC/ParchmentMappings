@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/animal/pig/Pig
-	METHOD getDismountLocationForPassenger (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/phys/Vec3;
-		ARG 1 livingEntity
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD isFood (Lnet/minecraft/world/item/ItemStack;)Z

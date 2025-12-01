@@ -17,7 +17,7 @@ CLASS com/mojang/blaze3d/opengl/BufferStorage
 		ARG 2 buffer
 		ARG 3 offset
 		ARG 5 length
-		ARG 7 usage
+		ARG 7 flags
 	CLASS Immutable
 		METHOD tryMapBufferPersistent (Lcom/mojang/blaze3d/opengl/DirectStateAccess;IIJ)Ljava/nio/ByteBuffer;
 			ARG 1 dsa
