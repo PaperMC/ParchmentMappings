@@ -22,7 +22,7 @@ CLASS net/minecraft/server/commands/RaidCommand
 		ARG 1 type
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD setRaidOmenLevel (Lnet/minecraft/commands/CommandSourceStack;I)I
 		ARG 0 source
 		ARG 1 level

@@ -8,6 +8,6 @@ CLASS net/minecraft/client/animation/AnimationDefinition
 			ARG 1 bone
 			ARG 2 animationChannel
 		METHOD lambda$addAnimation$0 (Ljava/lang/String;)Ljava/util/List;
-			ARG 0 bone
+			ARG 0 key
 		METHOD withLength (F)Lnet/minecraft/client/animation/AnimationDefinition$Builder;
 			ARG 0 lengthInSeconds

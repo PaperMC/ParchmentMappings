@@ -17,7 +17,7 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 1 posToTest
 		ARG 2 level
 	METHOD findNearestTest (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/Optional;
-		ARG 0 pos
+		ARG 0 relativeToPos
 		ARG 1 radius
 		ARG 2 level
 	METHOD findTestBlocks (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
@@ -46,8 +46,6 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 entity
 	METHOD lambda$findNearestTest$3 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 pos
-	METHOD lambda$findTestContainingPos$2 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z
-		ARG 2 pos
 	METHOD lookedAtTestPos (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
 		ARG 0 pos
 		ARG 1 entity

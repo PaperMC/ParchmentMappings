@@ -15,8 +15,8 @@ CLASS net/minecraft/client/StringSplitter
 		ARG 2 maxWidth
 		ARG 3 style
 	METHOD lambda$plainTailByWidth$3 (Lorg/apache/commons/lang3/mutable/MutableFloat;ILorg/apache/commons/lang3/mutable/MutableInt;ILnet/minecraft/network/chat/Style;I)Z
-		ARG 4 maxWidth
-		ARG 5 style
+		ARG 4 position
+		ARG 5 s
 		ARG 6 codePoint
 	METHOD lambda$splitLines$4 (Ljava/util/List;Ljava/lang/String;Lnet/minecraft/network/chat/Style;II)V
 		ARG 2 style
@@ -55,21 +55,21 @@ CLASS net/minecraft/client/StringSplitter
 	METHOD splitLines (Ljava/lang/String;ILnet/minecraft/network/chat/Style;)Ljava/util/List;
 		ARG 1 content
 		ARG 2 maxWidth
-		ARG 3 style
+		ARG 3 initialStyle
 	METHOD splitLines (Ljava/lang/String;ILnet/minecraft/network/chat/Style;ZLnet/minecraft/client/StringSplitter$LinePosConsumer;)V
 		ARG 1 content
 		ARG 2 maxWidth
-		ARG 3 style
+		ARG 3 initialStyle
 		ARG 4 withNewLines
 		ARG 5 linePos
 	METHOD splitLines (Lnet/minecraft/network/chat/FormattedText;ILnet/minecraft/network/chat/Style;)Ljava/util/List;
 		ARG 1 content
 		ARG 2 maxWidth
-		ARG 3 style
+		ARG 3 initialStyle
 	METHOD splitLines (Lnet/minecraft/network/chat/FormattedText;ILnet/minecraft/network/chat/Style;Ljava/util/function/BiConsumer;)V
 		ARG 1 content
 		ARG 2 maxWidth
-		ARG 3 style
+		ARG 3 initialStyle
 		ARG 4 splitter
 	METHOD stringWidth (Ljava/lang/String;)F
 		ARG 1 content

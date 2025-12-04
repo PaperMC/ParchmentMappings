@@ -114,7 +114,7 @@ CLASS net/minecraft/server/commands/LootCommand
 		ARG 2 callback
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD setSlots (Lnet/minecraft/world/entity/Entity;Ljava/util/List;IILjava/util/List;)V
 		ARG 0 target
 		ARG 1 items

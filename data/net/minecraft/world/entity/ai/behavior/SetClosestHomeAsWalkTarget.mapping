@@ -17,7 +17,4 @@ CLASS net/minecraft/world/entity/ai/behavior/SetClosestHomeAsWalkTarget
 		ARG 3 walkTarget
 		ARG 4 home
 	METHOD lambda$create$6 (Lorg/apache/commons/lang3/mutable/MutableLong;Lit/unimi/dsi/fastutil/longs/Long2LongMap;FLnet/minecraft/world/entity/ai/behavior/declarative/BehaviorBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 startTime
-		ARG 1 posTimeDelay
-		ARG 2 speedModifier
 		ARG 3 instance

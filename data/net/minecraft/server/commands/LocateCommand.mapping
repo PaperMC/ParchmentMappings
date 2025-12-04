@@ -30,7 +30,7 @@ CLASS net/minecraft/server/commands/LocateCommand
 		ARG 1 structure
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD showLocateResult (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/commands/arguments/ResourceOrTagArgument$Result;Lnet/minecraft/core/BlockPos;Lcom/mojang/datafixers/util/Pair;Ljava/lang/String;ZLjava/time/Duration;)I
 		ARG 0 source
 		ARG 1 result

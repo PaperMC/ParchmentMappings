@@ -14,7 +14,7 @@ CLASS net/minecraft/server/commands/TitleCommand
 		ARG 0 context
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD resetTitle (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;)I
 		ARG 0 source
 		ARG 1 targets

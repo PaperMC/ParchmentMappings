@@ -71,7 +71,7 @@ CLASS net/minecraft/server/commands/ScoreboardCommand
 		ARG 5 sourceObjective
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD removeObjective (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/scores/Objective;)I
 		ARG 0 source
 		ARG 1 objective

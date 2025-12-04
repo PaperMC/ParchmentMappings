@@ -36,8 +36,6 @@ CLASS net/minecraft/world/entity/ai/util/LandRandomPos
 		ARG 1 radius
 		ARG 2 yRange
 		ARG 3 vectorPosition
-	METHOD lambda$movePosUpOutOfSolid$2 (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/core/BlockPos;)Z
-		ARG 1 pos
 	METHOD movePosUpOutOfSolid (Lnet/minecraft/world/entity/PathfinderMob;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
 		ARG 0 mob
 		ARG 1 pos

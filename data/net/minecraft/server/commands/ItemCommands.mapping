@@ -123,7 +123,7 @@ CLASS net/minecraft/server/commands/ItemCommands
 		ARG 3 modifier
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD setBlockItem (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILnet/minecraft/world/item/ItemStack;)I
 		ARG 0 source
 		ARG 1 pos

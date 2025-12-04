@@ -9,7 +9,7 @@ CLASS net/minecraft/commands/execution/tasks/BuildContexts
 		ARG 4 frame
 		ARG 5 chainModifiers
 	METHOD lambda$execute$3 (Lnet/minecraft/commands/execution/tasks/ExecuteCommand;Lnet/minecraft/commands/execution/Frame;Lnet/minecraft/commands/ExecutionCommandSource;)Lnet/minecraft/commands/execution/CommandQueueEntry;
-		ARG 1 frame
+		ARG 1 frame1
 		ARG 2 argument
 	METHOD lambda$static$0 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 forkLimit

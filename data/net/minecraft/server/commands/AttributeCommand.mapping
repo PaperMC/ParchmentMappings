@@ -74,7 +74,7 @@ CLASS net/minecraft/server/commands/AttributeCommand
 		ARG 2 attributeUuid
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
-		ARG 1 context
+		ARG 1 buildContext
 	METHOD removeModifier (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/Holder;Lnet/minecraft/resources/Identifier;)I
 		ARG 0 source
 		ARG 1 entity
