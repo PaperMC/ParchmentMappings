@@ -8,8 +8,16 @@ CLASS net/minecraft/util/Mth
 		ARG 0 value
 	METHOD absMax (DD)D
 		COMMENT {@return the maximum of the absolute value of two numbers}
-		ARG 0 x
-		ARG 2 y
+		ARG 0 a
+		ARG 2 b
+	METHOD absMax (FF)F
+		COMMENT {@return the maximum of the absolute value of two numbers}
+		ARG 0 a
+		ARG 1 b
+	METHOD absMax (II)I
+		COMMENT {@return the maximum of the absolute value of two numbers}
+		ARG 0 a
+		ARG 1 b
 	METHOD approach (FFF)F
 		COMMENT Changes {@code value} by {@code stepSize} towards the {@code limit} and returns the result.
 		COMMENT If {@code value} is smaller than {@code limit}, the result will never be bigger than {@code limit}.
@@ -45,6 +53,11 @@ CLASS net/minecraft/util/Mth
 	METHOD ceillog2 (I)I
 		COMMENT Uses a B(2, 5) De Bruijn sequence and a lookup table to efficiently calculate the log-base-two of the given value. Optimized for cases where the input value is a power-of-two. If the input value is not a power-of-two, then subtract 1 from the return value.
 		ARG 0 value
+	METHOD chessboardDistance (IIII)I
+		ARG 0 x1
+		ARG 1 z1
+		ARG 2 x2
+		ARG 3 z2
 	METHOD clamp (DDD)D
 		COMMENT If the value is less than the lower bound, returns the lower bound.
 		COMMENT If the value is greater than the upper bound, returns the upper bound.
@@ -317,8 +330,8 @@ CLASS net/minecraft/util/Mth
 		ARG 0 numerator
 		ARG 1 denominator
 	METHOD positiveModulo (II)I
-		ARG 0 x
-		ARG 1 y
+		ARG 0 input
+		ARG 1 mod
 	METHOD quantize (DI)I
 		COMMENT Gets the value closest to zero that is not closer to zero than the given value and is a multiple of the factor.
 		ARG 0 value
