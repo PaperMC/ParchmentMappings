@@ -25,7 +25,7 @@ CLASS net/minecraft/nbt/NbtUtils
 		ARG 0 tag
 	METHOD getDataVersion (Lnet/minecraft/nbt/CompoundTag;I)I
 		ARG 0 tag
-		ARG 1 defaultValue
+		ARG 1 fallbackVersion
 	METHOD getName (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/String;
 		ARG 0 property
 		ARG 1 value

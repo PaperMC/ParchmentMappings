@@ -245,7 +245,7 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 chunk
 	METHOD tick (Ljava/util/function/BooleanSupplier;)V
 		COMMENT Runs a single tick for the world
-		ARG 1 hasTimeLeft
+		ARG 1 haveTime
 	METHOD tickBlock (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 pos
 		ARG 2 block

@@ -58,7 +58,7 @@ CLASS net/minecraft/world/level/border/WorldBorder
 	METHOD lerpSizeBetween (DDJJ)V
 		ARG 1 oldSize
 		ARG 3 newSize
-		ARG 5 time
+		ARG 5 duration
 		ARG 7 startTime
 	METHOD removeListener (Lnet/minecraft/world/level/border/BorderChangeListener;)V
 		ARG 1 listener

@@ -3,7 +3,7 @@ CLASS net/minecraft/world/level/border/BorderChangeListener
 		ARG 1 border
 		ARG 2 oldSize
 		ARG 4 newSize
-		ARG 6 time
+		ARG 6 duration
 		ARG 8 startTime
 	METHOD onSetCenter (Lnet/minecraft/world/level/border/WorldBorder;DD)V
 		ARG 1 border

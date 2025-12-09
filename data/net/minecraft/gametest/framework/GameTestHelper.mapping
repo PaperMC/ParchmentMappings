@@ -78,7 +78,7 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 pos
 		ARG 2 type
 		ARG 3 entityDataGetter
-		ARG 4 testEntityData
+		ARG 4 expectedData
 	METHOD assertEntityData (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/EntityType;Ljava/util/function/Predicate;)V
 		ARG 1 pos
 		ARG 2 type
@@ -87,7 +87,7 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 box
 		ARG 2 type
 		ARG 3 entityDataGetter
-		ARG 4 testEntityData
+		ARG 4 expectedData
 	METHOD assertEntityInstancePresent (Lnet/minecraft/world/entity/Entity;III)V
 		ARG 1 entity
 		ARG 2 x
@@ -472,7 +472,7 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 pos
 		ARG 2 type
 		ARG 3 entityDataGetter
-		ARG 4 testEntityData
+		ARG 4 expectedData
 	METHOD succeedWhenEntityNotPresent (Lnet/minecraft/world/entity/EntityType;III)V
 		ARG 1 type
 		ARG 2 x

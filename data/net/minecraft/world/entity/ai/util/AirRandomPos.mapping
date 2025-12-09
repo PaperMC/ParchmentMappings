@@ -4,5 +4,5 @@ CLASS net/minecraft/world/entity/ai/util/AirRandomPos
 		ARG 1 radius
 		ARG 2 yRange
 		ARG 3 y
-		ARG 4 vectorPosition
+		ARG 4 pos
 		ARG 5 amplifier

@@ -25,7 +25,7 @@ CLASS net/minecraft/world/level/chunk/ChunkSource
 	METHOD setSpawnSettings (Z)V
 		ARG 1 spawnSettings
 	METHOD tick (Ljava/util/function/BooleanSupplier;Z)V
-		ARG 1 hasTimeLeft
+		ARG 1 haveTime
 		ARG 2 tickChunks
 	METHOD updateChunkForced (Lnet/minecraft/world/level/ChunkPos;Z)Z
 		ARG 1 chunkPos

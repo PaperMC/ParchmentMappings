@@ -4,7 +4,7 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD <init> (Ljava/lang/Void;)V
 		ARG 1 unused
 	METHOD <init> (Lnet/minecraft/core/Holder;)V
-		ARG 1 tag
+		ARG 1 item
 	METHOD <init> (Lnet/minecraft/core/Holder;I)V
 		ARG 1 item
 		ARG 2 count

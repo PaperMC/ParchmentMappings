@@ -196,7 +196,7 @@ CLASS net/minecraft/client/multiplayer/ClientLevel
 		ARG 3 playerPos
 	METHOD tick (Ljava/util/function/BooleanSupplier;)V
 		COMMENT Runs a single tick for the world
-		ARG 1 hasTimeLeft
+		ARG 1 haveTime
 	METHOD tickNonPassenger (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD tickPassenger (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)V
