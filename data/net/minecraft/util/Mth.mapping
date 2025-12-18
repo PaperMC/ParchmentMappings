@@ -94,20 +94,20 @@ CLASS net/minecraft/util/Mth
 		ARG 4 max
 	METHOD clampedLerp (DDD)D
 		COMMENT Method for linear interpolation of doubles.
-		ARG 0 start
+		ARG 0 delta
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value). If the value is not between 0 and 1, it is clamped.
+		ARG 2 start
+			COMMENT start value for the interpolation
+		ARG 4 end
+			COMMENT end value for the interpolation
+	METHOD clampedLerp (FFF)F
+		COMMENT Method for linear interpolation of floats.
+		ARG 0 delta
+			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value). If the value is not between 0 and 1, it is clamped.
+		ARG 1 start
 			COMMENT start value for the interpolation
 		ARG 2 end
 			COMMENT end value for the interpolation
-		ARG 4 delta
-			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value). If the value is not between 0 and 1, it is clamped.
-	METHOD clampedLerp (FFF)F
-		COMMENT Method for linear interpolation of floats.
-		ARG 0 start
-			COMMENT start value for the interpolation
-		ARG 1 end
-			COMMENT end value for the interpolation
-		ARG 2 delta
-			COMMENT a value between 0 and 1 that indicates the percentage of the interpolation (0 will give the start value and 1 will give the end value). If the value is not between 0 and 1, it is clamped.
 	METHOD clampedMap (DDDDD)D
 		ARG 0 input
 		ARG 2 inputMin
