@@ -3,7 +3,9 @@ CLASS net/minecraft/server/commands/DamageCommand
 		ARG 0 source
 		ARG 1 target
 		ARG 2 amount
-		ARG 3 damageType
+		ARG 3 damageSource
+	METHOD lambda$register$0 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
 	METHOD lambda$register$1 (Lcom/mojang/brigadier/context/CommandContext;)I
 		ARG 0 context
 	METHOD lambda$register$2 (Lcom/mojang/brigadier/context/CommandContext;)I
