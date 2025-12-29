@@ -270,6 +270,15 @@
  group int trial_spawner_luminance
  	net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState$LightLevel.UNLIT
  	net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerState$LightLevel.HALF_LIT
+@@ -1728,7 +_,7 @@
+ 	return trial_spawner_display_rotation_speed
+ 
+ target_method net.minecraft.world.level.block.entity.trialspawner.TrialSpawnerStateData isReadyToOpenShutter (Lnet/minecraft/server/level/ServerLevel;FI)Z
+-	param 2 trial_spawner_cooldown
++	param 1 trial_spawner_cooldown
+ 
+ group int glfw_window_hint
+ 	org.lwjgl.glfw.GLFW.GLFW_CLIENT_API
 @@ -1802,3 +_,13 @@
  
  target_method net.minecraft.network.protocol.game.ClientboundLevelEventPacket getType ()I
