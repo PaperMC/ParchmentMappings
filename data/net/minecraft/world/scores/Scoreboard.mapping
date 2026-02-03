@@ -30,7 +30,7 @@ CLASS net/minecraft/world/scores/Scoreboard
 	METHOD getOrCreatePlayerScore (Lnet/minecraft/world/scores/ScoreHolder;Lnet/minecraft/world/scores/Objective;Z)Lnet/minecraft/world/scores/ScoreAccess;
 		ARG 1 scoreHolder
 		ARG 2 objective
-		ARG 3 readOnly
+		ARG 3 forceWritable
 	METHOD getPlayerScoreInfo (Lnet/minecraft/world/scores/ScoreHolder;Lnet/minecraft/world/scores/Objective;)Lnet/minecraft/world/scores/ReadOnlyScoreInfo;
 		ARG 1 scoreHolder
 		ARG 2 objective
