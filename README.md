@@ -12,6 +12,14 @@ Parchment Mappings
 ![Latest bleeding version badge](https://img.shields.io/maven-metadata/v?color=red&label=bleeding&metadataUrl=https%3A%2F%2Fldtteam.jfrog.io%2Fartifactory%2Fparchmentmc-bleeding%2Forg%2Fparchmentmc%2Fdata%2Fparchment-1.21%2Fmaven-metadata.xml)
 ![CI bleeding build status](https://github.com/ParchmentMC/Parchment/actions/workflows/bleeding.yml/badge.svg)
 
+> [!CAUTION]
+> Since 26.1, the client is no longer obfuscated at all leading all the parameters and local variables readable.
+> Therefore Parchment is not needed anymore for Paper uses. It's only viable to depends on it for older versions
+> but be aware that this repository is no longer maintained.
+>
+> The unpick definitions provided by this fork are still updated at https://github.com/PaperMC/unpick-definitions
+> but it doesn't include the javadocs.
+
 Welcome to the Parchment mappings repository!
 
 Parchment is an open community-sourced modloader-neutral set of mappings of parameter names and javadocs, to augment
